@@ -1,5 +1,5 @@
 # voice_modeling
-Master repository for modeling voice files.
+Master repository for modeling voice files. Transformed from NLX-model.
 
 ## labeling
 * [sound_event_detection]
@@ -9,6 +9,7 @@ Master repository for modeling voice files.
 
 ## modeling 
 * [TPOT]()
+* [Ludwig]()
 
 ## visualization
 * [Yellowbrick]()

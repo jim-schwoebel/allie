@@ -1,14 +1,14 @@
 # voice_modeling
 Master repository for modeling voice files.
 
-# labeling
+## labeling
 * [sound_event_detection]
 
-# featurization scripts (parallel)
+## featurization scripts (parallel)
 * [DisVoice](https://github.com/jcvasquezc/DisVoice)
 
-# modeling 
+## modeling 
 * [TPOT]()
 
-# visualization
+## visualization
 * [Yellowbrick]()

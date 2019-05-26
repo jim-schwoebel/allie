@@ -5,7 +5,16 @@ Master repository for modeling voice files. Transformed from NLX-model.
 * [sound_event_detection]
 
 ## featurization scripts (parallel)
+### Audio
 * [DisVoice](https://github.com/jcvasquezc/DisVoice)
+### Text
+* []()
+
+### Image
+* []()
+
+### Video 
+* []()
 
 ## modeling 
 * [TPOT]()

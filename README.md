@@ -18,6 +18,8 @@ Master repository for modeling voice files. Transformed from NLX-model.
 * video data
 * other data (numerical / categorical variables)
 
+(auto detect input from file type, then apply various algorithms). 
+
 ## problems looked at 
 * accent detection
 * race detection 
@@ -25,6 +27,9 @@ Master repository for modeling voice files. Transformed from NLX-model.
 * age detection
 * stress detection
 * emotion detection (face images) 
+
+## list of all applicable models now
+* accuracies, standard deviations (TPOT) 
 
 ## labeling
 * [sound_event_detection]

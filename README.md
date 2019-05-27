@@ -8,10 +8,23 @@ Master repository for modeling voice files. Transformed from NLX-model.
 
 # types of data
 * voice data
+** features in voicebook
 * text data
+** nltk featurize
+** spacy featurize 
+** word2vec featurize 
 * image data 
+** edge detection 
 * video data
 * other data (numerical / categorical variables)
+
+## problems looked at 
+* accent detection
+* race detection 
+* gender detection
+* age detection
+* stress detection
+* emotion detection (face images) 
 
 ## labeling
 * [sound_event_detection]

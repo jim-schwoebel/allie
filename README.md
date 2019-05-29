@@ -37,6 +37,8 @@ Master repository for modeling voice files. Transformed from NLX-model.
 ## featurization scripts (parallel)
 ### Audio
 * [DisVoice](https://github.com/jcvasquezc/DisVoice)
+* [AudioOwl](https://github.com/dodiku/AudioOwl)
+
 ### Text
 * []()
 

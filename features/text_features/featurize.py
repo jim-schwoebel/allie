@@ -104,7 +104,7 @@ print('loaded Google W2V model...')
 
 if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 	print('downloading Facebook FastText model...')
-	wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip")
+	wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
 	zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
 	zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
 	zip_ref.close()

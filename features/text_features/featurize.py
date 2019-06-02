@@ -66,39 +66,39 @@ def make_features():
 ##				Load ML models					##
 ##################################################
 
-# load GloVE model
+# # load GloVE model
 
-if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
-	curdir=os.getcwd()
-	print('downloading GloVe model...')
-	wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
-	print('extracting GloVe model')
-	zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
-	zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
-	zip_ref.close()
-	os.chdir(os.getcwd()+'/helpers/glove.6B')
-	glove_input_file = 'glove.6B.100d.txt'
-	word2vec_output_file = 'glove.6B.100d.txt.word2vec'
-	glove2word2vec(glove_input_file, word2vec_output_file)
-	os.chdir(curdir)
+# if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
+# 	curdir=os.getcwd()
+# 	print('downloading GloVe model...')
+# 	wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
+# 	print('extracting GloVe model')
+# 	zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
+# 	zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
+# 	zip_ref.close()
+# 	os.chdir(os.getcwd()+'/helpers/glove.6B')
+# 	glove_input_file = 'glove.6B.100d.txt'
+# 	word2vec_output_file = 'glove.6B.100d.txt.word2vec'
+# 	glove2word2vec(glove_input_file, word2vec_output_file)
+# 	os.chdir(curdir)
 
-glovemodelname = 'glove.6B.100d.txt.word2vec'
-print('-----------------')
-print('loading GloVe model...')
-glovemodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/glove.6B/'+glovemodelname, binary=False)
-print('loaded GloVe model...')
+# glovemodelname = 'glove.6B.100d.txt.word2vec'
+# print('-----------------')
+# print('loading GloVe model...')
+# glovemodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/glove.6B/'+glovemodelname, binary=False)
+# print('loaded GloVe model...')
 
-# load Google W2V model
+# # load Google W2V model
 
-if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
-	print('downloading Google W2V model...')
-	wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
+# if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
+# 	print('downloading Google W2V model...')
+# 	wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
 
-w2vmodelname = 'GoogleNews-vectors-negative300.bin'
-print('-----------------')
-print('loading Google W2V model...')
-w2vmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/'+w2vmodelname, binary=True)
-print('loaded Google W2V model...')
+# w2vmodelname = 'GoogleNews-vectors-negative300.bin'
+# print('-----------------')
+# print('loading Google W2V model...')
+# w2vmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/'+w2vmodelname, binary=True)
+# print('loaded Google W2V model...')
 
 # load facebook FastText model
 

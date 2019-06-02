@@ -13,10 +13,9 @@ def fast_featurize(sentence,model):
     w2v_embed=list()
     for i in range(len(sentences2)):
         try:
-            print(len(model[sentences2[i]]))
-            #print(sentences2[i])
-            w2v_embed.append(model[sentences2[i]])
-            #print(model[sentences2[i]])
+            feature=model[sentences2[i]]
+            print(feature)
+            w2v_embed.append(feature)
         except:
             #pass if there is an error to not distort averages... :)
             pass
@@ -26,11 +25,11 @@ def fast_featurize(sentence,model):
         out_embed=out_embed+np.array(w2v_embed[j])
 
     out_embed=(1/len(w2v_embed))*out_embed
-
+    print(len(w2v_embed))
     features=out_embed
     labels=list()
     for i in range(len(features)):
         labels.append('fast_feature_%s'%(str(i+1)))
 
-    return out_embed
+    return features, labels
 

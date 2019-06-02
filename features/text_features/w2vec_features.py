@@ -31,6 +31,6 @@ def w2v_featurize(transcript,model):
     for i in range(len(features)):
         labels.append('w2v_feature_%s'%(str(i+1)))
 
-    return out_embed
+    return features, labels 
 
 

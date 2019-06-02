@@ -69,18 +69,18 @@ def make_features():
 # load GloVE model
 
 if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
-    curdir=os.getcwd()
-    print('downloading GloVe model...')
-    wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
-    print('extracting GloVe model')
-    zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
-    zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
-    zip_ref.close()
-    os.chdir(os.getcwd()+'/helpers/glove.6B')
-    glove_input_file = 'glove.6B.100d.txt'
-    word2vec_output_file = 'glove.6B.100d.txt.word2vec'
-    glove2word2vec(glove_input_file, word2vec_output_file)
-    os.chdir(curdir)
+	curdir=os.getcwd()
+	print('downloading GloVe model...')
+	wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
+	print('extracting GloVe model')
+	zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
+	zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
+	zip_ref.close()
+	os.chdir(os.getcwd()+'/helpers/glove.6B')
+	glove_input_file = 'glove.6B.100d.txt'
+	word2vec_output_file = 'glove.6B.100d.txt.word2vec'
+	glove2word2vec(glove_input_file, word2vec_output_file)
+	os.chdir(curdir)
 
 glovemodelname = 'glove.6B.100d.txt.word2vec'
 print('-----------------')
@@ -92,7 +92,7 @@ print('loaded GloVe model...')
 
 if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
 	print('downloading Google W2V model...')
-    wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
+	wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
 
 w2vmodelname = 'GoogleNews-vectors-negative300.bin'
 print('-----------------')
@@ -104,10 +104,10 @@ print('loaded Google W2V model...')
 
 if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 	print('downloading Facebook FastText model...')
-    wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip")
-    zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
-    zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
-    zip_ref.close()
+	wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip")
+	zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
+	zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
+	zip_ref.close()
 
 print('-----------------')
 print('loading Facebook FastText model...')

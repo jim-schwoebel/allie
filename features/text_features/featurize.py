@@ -112,7 +112,7 @@ if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 print('-----------------')
 print('loading Facebook FastText model...')
 # Loading fasttext model 
-fastmodel = KeyedVectors.load_word2vec_format('/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
+fastmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
 print('loaded Facebook FastText model...')
 
 ##################################################

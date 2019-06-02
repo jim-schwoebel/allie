@@ -80,14 +80,10 @@ from nltk import word_tokenize
 import speech_recognition as sr_audio 
 import numpy as np
 from textblob import TextBlob
-import transcribe as ts
+import helpers.transcribe as ts
 
-def nltk_featurize(file):
-	# get transcript 
-	if file[-4:]=='.wav':
-		transcript=ts.transcribe_sphinx('test.wav')
-	else:
-		transcript=file
+def nltk_featurize(transcript):
+
 	#alphabetical features 
 	a=transcript.count('a')
 	b=transcript.count('b')

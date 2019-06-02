@@ -142,7 +142,13 @@ def stats(matrix):
 
     
 def spacy_featurize(transcript):
-    nlp=spacy.load('en_core_web_sm')
+    
+    try:
+        nlp=spacy.load('en_core_web_sm')
+    except:
+        os.system('python3 -m spacy download en_core_web_sm')
+        nlp=spacy.load('en_core_web_sm')
+
     doc=nlp(transcript)
     
     # initialize lists 

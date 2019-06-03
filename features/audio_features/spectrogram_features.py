@@ -19,8 +19,8 @@ def spectrogram_featurize(file_path):
 	fmax = None
 
 	if mono:
-	    sig, sr = librosa.load(file_path, sr=sr, mono=True)
-	    sig = sig[np.newaxis]
+		sig, sr = librosa.load(file_path, sr=sr, mono=True)
+		sig = sig[np.newaxis]
 	else:
 		sig, sr = librosa.load(file_path, sr=sr, mono=False)
 

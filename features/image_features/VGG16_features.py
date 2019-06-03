@@ -8,7 +8,6 @@ import numpy as np
 def VGG16_featurize(file):
     # load model 
     model = VGG16(weights='imagenet', include_top=False)
-    cur_dir=dir3
     testing_set=0.33
     img_path = file 
     img = load_img(img_path, target_size=(224, 224))

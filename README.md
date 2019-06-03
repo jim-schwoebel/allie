@@ -27,6 +27,8 @@ Master repository for modeling voice files. Transformed from NLX-model.
 * age detection
 * stress detection
 * emotion detection (face images) 
+* number of speakers 
+* image transcription
 
 ## list of all applicable models now
 * accuracies, standard deviations (TPOT) 

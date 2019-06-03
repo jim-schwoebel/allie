@@ -1,5 +1,9 @@
-import VGG16_features as vf
+import VGG16_features as v16f
 import image_features as imf 
+import Inception_features as incf 
+import Xception_features as xf 
+import Resnet_features as rf 
+import VGG19_features as v19f
 import helpers.audio_plot as ap 
 import os, json
 
@@ -50,7 +54,11 @@ cur_dir=os.getcwd()
 listdir=os.listdir() 
 
 # feature_set='image_features'
-feature_set='VGG16_features'
+# feature_set='VGG16_features'
+# feature_set='Inception_features'
+# feature_set='Xception_features'
+# feature_set='Resnet50_features'
+feature_set='VGG19_features'
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
@@ -70,7 +78,12 @@ for i in range(len(listdir)):
 				image_features=basearray['features']['image']
 
 				# features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-				features, labels=vf.VGG16_featurize(imgfile)
+				# features, labels=v16f.VGG16_featurize(imgfile)
+				# features, labels=incf.inception_featurize(imgfile)
+				# features, labels=xf.xception_featurize(imgfile)
+				# features, labels=rf.resnet_featurize(imgfile)
+				features, labels=v16f.VGG16_featurize(imgfile)
+
 				print(features)
 
 				try:
@@ -91,7 +104,12 @@ for i in range(len(listdir)):
 				basearray=json.load(open(listdir[i][0:-4]+'.json'))
 
 				# features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-				features, labels=vf.VGG16_featurize(imgfile)
+				# features, labels=v16f.VGG16_featurize(imgfile)
+				# features, labels=incf.inception_featurize(imgfile)
+				# features, labels=xf.xception_featurize(imgfile)
+				# features, labels=rf.resnet_featurize(imgfile)
+				features, labels=v16f.VGG16_featurize(imgfile)
+
 				print(features)
 
 				try:
@@ -121,7 +139,11 @@ for i in range(len(listdir)):
 			image_features=basearray['features']['image']
 
 			# features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-			features, labels=vf.VGG16_featurize(imgfile)
+			# features, labels=v16f.VGG16_featurize(imgfile)
+			# features, labels=incf.inception_featurize(imgfile)
+			# features, labels=xf.xception_featurize(imgfile)
+			# features, labels=rf.resnet_featurize(imgfile)
+			features, labels=v16f.VGG16_featurize(imgfile)
 
 			print(features)
 
@@ -143,7 +165,11 @@ for i in range(len(listdir)):
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 			
 			# features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-			features, labels=vf.VGG16_featurize(imgfile)
+			# features, labels=v16f.VGG16_featurize(imgfile)
+			# features, labels=incf.inception_featurize(imgfile)
+			# features, labels=xf.xception_featurize(imgfile)
+			# features, labels=rf.resnet_featurize(imgfile)
+			features, labels=v16f.VGG16_featurize(imgfile)
 
 			# print(features)
 

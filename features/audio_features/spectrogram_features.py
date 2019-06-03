@@ -19,8 +19,8 @@ def spectrogram_featurize(file_path):
 	fmax = None
 
 	if mono:
-		sig, sr = librosa.load(file_path, sr=sr, mono=True)
-		sig = sig[np.newaxis]
+	    sig, sr = librosa.load(file_path, sr=sr, mono=True)
+	    sig = sig[np.newaxis]
 	else:
 		sig, sr = librosa.load(file_path, sr=sr, mono=False)
 
@@ -42,14 +42,15 @@ def spectrogram_featurize(file_path):
 		# keep spectrogram
 		spectrograms.append(np.asarray(spectrogram))
 
-	# np.ndarray.flatten(
-	features=np.ndarray.flatten(np.asarray(spectrograms))
-
-	# need to load a dimensionality reduction algorithm here (PCA load) to get down to 100 dimensions.
-
 	labels=list()
-	for i in range(len(features)):
-		labels.append('log_spectrogram_feature_%s'%(str(i+1)))
+	mean_features=np.mean(np.array(spectrograms), axis=2)[0]
+	for i in range(len(mean_features)):
+		labels.append('log_spectrogram_mean_feature_%s'%(str(i+1)))
+	std_features=np.std(np.array(spectrograms), axis=2)[0]
+	for i in range(len(std_features)):
+		labels.append('log_spectrogram_std_feature_%s'%(str(i+1)))
+	# np.ndarray.flatten
+	features=np.append(mean_features, std_features)
 
 	return features, labels 
 

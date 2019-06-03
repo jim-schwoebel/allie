@@ -14,6 +14,7 @@ import audioset_features as af
 import sox_features as soxf 
 import pyaudio_features as pf 
 import sa_features as saf
+import spectrogram_features as specf
 import json, os, sys
 
 
@@ -42,7 +43,8 @@ listdir=os.listdir()
 # feature_set='audioset_features'
 # feature_set='sox_features'
 # feature_set='sa_features'
-feature_set='pyaudio_features'
+# feature_set='pyaudio_features'
+feature_set='spectrogram_features'
 
 
 # featurize all files accoridng to librosa featurize
@@ -57,8 +59,8 @@ for i in range(len(listdir)):
 		# features, labels = af.audioset_featurize(listdir[i], basedir, foldername)
 		# features, labels = soxf.sox_featurize(listdir[i])
 		# features, labels = saf.sa_featurize(listdir[i])
-		
-		features, labels = pf.pyaudio_featurize(listdir[i], basedir)
+		# features, labels = pf.pyaudio_featurize(listdir[i], basedir)
+		features, labels=specf.spectrogram_featurize(listdir[i])
 		print(features)
 
 		try:

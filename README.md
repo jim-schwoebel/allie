@@ -6,19 +6,31 @@ Master repository for modeling voice files. Transformed from NLX-model.
 3. modeling (if < 1000 then simple classification, if >1000 deep learning techniques - iterate through various architectures).
 4. apply models. 
 
-# types of data
-* voice data
-** features in voicebook
-* text data
-** nltk featurize
-** spacy featurize 
-** word2vec featurize 
-* image data 
-** edge detection 
-* video data
-* other data (numerical / categorical variables)
+## types of data
+* audio
+* text
+* image
+* videos 
 
-(auto detect input from file type, then apply various algorithms). 
+## features 
+### audio
+* test
+
+### text
+* test 
+### image
+* test 
+### video
+* test 
+
+## Features to add
+### Videos 
+* [Video Features](https://github.com/corenel/yt8m-feature-extractor)
+* [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
+* [GMM Video features](https://github.com/jonasrothfuss/videofeatures)
+### Text
+* [BERT](https://github.com/huggingface/pytorch-pretrained-BERT)
+* [AllenNLP](https://github.com/allenai/allennlp)
 
 ## problems looked at 
 * accent detection

@@ -36,6 +36,8 @@ Load folders and data script type based on principal type of file.
 * Images --> .PNG / .JPG --> .PNG 
 * Video --> .MP4 / .M4A --> .MP4 
 
+This aligns well with how we define 'samples' in our pipeline.
+
 ## Features to add
 ### Datasets
 * [PyDataset](https://github.com/iamaziz/PyDataset) - numerical datasets

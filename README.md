@@ -30,19 +30,6 @@ Load folders and data script type based on principal type of file.
 * [CommonVoice]() - download link to Common Voice 
 * [Training datasets - .JSON]() - accent detection, etc. 
 
-### Audio features
-* [Prosody Aligner](https://github.com/prosodylab/Prosodylab-Aligner)
-* [Parselmouth features](https://github.com/drfeinberg/genderless)
-* [DisVoice](https://github.com/jcvasquezc/DisVoice)
-
-### Video features 
-* [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
-* [GMM Video features](https://github.com/jonasrothfuss/videofeatures) - this would be useful if we have a custom video embedding (to train new models), but not great as a general feature extractor - pipeline.
-
-### Text features 
-* [BERT](https://github.com/huggingface/pytorch-pretrained-BERT)
-* [AllenNLP](https://github.com/allenai/allennlp)
-
 ### Visualization
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)
 

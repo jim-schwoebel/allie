@@ -10,5 +10,5 @@ Files can take form:
 | text file | .TXT |
 | image file | .PNG, .JPG |
 | video file | .MP4 |
-| numerical data | .JSON |
+| numerical data / categorical data | .JSON, .CSV |
 

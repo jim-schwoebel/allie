@@ -281,13 +281,19 @@ def csv_featurize(csv_file, cur_dir):
 
 			# if it's a text string | numerical, we need to characterize the string with features, added NLTK feautrize here.
 			elif labeltypes[j] == 'numerical':
-				tfeatures, tlabels=nltk_featurize(labeltypes[j])
-				features=np.append(features, np.array(tfeatures))
-				tlabels2=list()
-				for k in range(len(tlabels)):
-					tlabels2.append(labels[j].replace(' ','_')+'_'+tlabels[k])
+				try:
+					# try to make into an integer or float if fail them assume string
+					value=float(g_[i][j])
+					tlabel=labels[j]
+					labels_=labels_+[tlabel+'_float']
+				except:
+					tfeatures, tlabels=nltk_featurize(labeltypes[j])
+					features=np.append(features, np.array(tfeatures))
+					tlabels2=list()
+					for k in range(len(tlabels)):
+						tlabels2.append(labels[j].replace(' ','_')+'_'+tlabels[k])
 
-				labels_=labels_+tlabels2 
+					labels_=labels_+tlabels2 
 
 		# feature array per sample (output as .JSON)
 		filename=str(i)+'.json'

@@ -17,15 +17,16 @@ Load folders and data script type based on principal type of file.
 
 ## Features to add
 
-### Audio
+### Audio features
 * [Prosode Aligner](https://github.com/prosodylab/Prosodylab-Aligner)
 * [Parselmouth features](https://github.com/drfeinberg/genderless)
 * [DisVoice](https://github.com/jcvasquezc/DisVoice)
 
-### Videos 
+### Video features 
 * [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
 * [GMM Video features](https://github.com/jonasrothfuss/videofeatures)
-### Text
+
+### Text features 
 * [BERT](https://github.com/huggingface/pytorch-pretrained-BERT)
 * [AllenNLP](https://github.com/allenai/allennlp)
 

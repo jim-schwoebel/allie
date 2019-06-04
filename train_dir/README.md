@@ -12,3 +12,13 @@ Files can take form:
 | video file | .MP4 | classify multiple folders of video files (e.g. walking vs. running) | 
 | numerical data / categorical data | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate) | 
 
+This falls in line with Ludwig data types.
+- binary
+- numerical
+- category
+- set
+- bag
+- sequence
+- text
+- timeseries
+- image

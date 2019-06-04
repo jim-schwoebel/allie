@@ -111,10 +111,10 @@ def setup_audioset(curdir):
     # go back to main directory
     os.chdir(curdir)
     
-def audioset_featurize(filename, basedir, foldername):
+def audioset_featurize(filename, audioset_dir, process_dir):
 
     # get current directory 
-    os.chdir(basedir)
+    os.chdir(audioset_dir)
     curdir=os.getcwd()
 
     # download audioset files if audioset not in current directory 
@@ -124,7 +124,6 @@ def audioset_featurize(filename, basedir, foldername):
         #except:
             #print('there was an error installing audioset')
 
-    audiosetdir=basedir+'/'+foldername
     # textfile definition to dump terminal outputs
     jsonfile=filename[0:-4]+'.json'
     # audioset folder
@@ -134,9 +133,9 @@ def audioset_featurize(filename, basedir, foldername):
         os.mkdir('processdir')
     # need a .wav file here 
     if filename[-4:]=='.mp3':
-        os.system('python3 vggish_inference_demo.py --mp3_file %s/%s'%(basedir+'/'+foldername, filename))
+        os.system('python3 vggish_inference_demo.py --mp3_file %s/%s'%(process_dir, filename))
     elif filename[-4:]=='.wav':
-        os.system('python3 vggish_inference_demo.py --wav_file %s/%s'%(basedir+'/'+foldername, filename))
+        os.system('python3 vggish_inference_demo.py --wav_file %s/%s'%(process_dir, filename))
     # now reference this .JSON file
     os.chdir(os.getcwd()+'/processdir')
     datafile=json.load(open(jsonfile))
@@ -145,7 +144,7 @@ def audioset_featurize(filename, basedir, foldername):
 
     # output VGGish feature array and compressed means/stds 
     labels='audioset_embedding'
-    os.chdir(basedir+'/'+foldername)
+    os.chdir(process_dir)
 
     return features, labels 
 

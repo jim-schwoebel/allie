@@ -39,4 +39,5 @@ Load folders and data script type based on principal type of file.
 
 ### Model compression
 * [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration)
-* [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor)
+* [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor) - should be good for Keras.
+* [Scikit-small-compression](https://github.com/stewartpark/scikit-small-ensemble) - should be good for TPOT I believe.

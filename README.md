@@ -37,7 +37,7 @@ Load folders and data script type based on principal type of file.
 
 ### Video features 
 * [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
-* [GMM Video features](https://github.com/jonasrothfuss/videofeatures)
+* [GMM Video features](https://github.com/jonasrothfuss/videofeatures) - this would be useful if we have a custom video embedding (to train new models), but not great as a general feature extractor - pipeline.
 
 ### Text features 
 * [BERT](https://github.com/huggingface/pytorch-pretrained-BERT)

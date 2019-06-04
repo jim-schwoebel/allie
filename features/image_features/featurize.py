@@ -34,8 +34,9 @@ def make_features():
 			  'text': dict(),
 			  'image':dict(),
 			  'video':dict(),
+			  'csv': dict(),
 			  }
-
+			  
 	data={'features': features,
 		  'labels': []}
 

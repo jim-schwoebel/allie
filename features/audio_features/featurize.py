@@ -15,6 +15,7 @@ import sox_features as soxf
 import pyaudio_features as pf 
 import sa_features as saf
 import spectrogram_features as specf
+import meta_features as mf 
 import helpers.audio_plot as ap 
 import json, os, sys
 
@@ -55,6 +56,7 @@ foldername=input('what is the name of the folder?')
 os.chdir(foldername)
 listdir=os.listdir() 
 cur_dir=os.getcwd()
+help_dir=basedir+'/helpers/'
 
 # feature_set='librosa_features'
 # feature_set='standard_features'
@@ -63,7 +65,8 @@ cur_dir=os.getcwd()
 # feature_set='sa_features'
 # feature_set='pyaudio_features'
 # feature_set='spectrogram_features'
-feature_set='specimage_features'
+# feature_set='specimage_features'
+feature_set = 'meta_features'
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
@@ -79,7 +82,8 @@ for i in range(len(listdir)):
 		# features, labels = saf.sa_featurize(listdir[i])
 		# features, labels = pf.pyaudio_featurize(listdir[i], basedir)
 		# features, labels= specf.spectrogram_featurize(listdir[i])
-
+		features, labels = mf.meta_featurize(listdir[i], cur_dir, help_dir)
+		
 		# print(features)
 
 		try:

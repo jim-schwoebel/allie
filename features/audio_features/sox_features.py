@@ -87,8 +87,8 @@ def clean_text(text):
 
 def sox_featurize(filename):
     # soxi and stats files 
-    soxifile=filename[0:-4]+'_soxi.txt'
-    statfile=filename[0:-4]+'_stats.txt'
+    soxifile=filename[0:-4].replace(' ','_')+'_soxi.txt'
+    statfile=filename[0:-4].replace(' ','_')+'_stats.txt'
     os.system('soxi %s > %s'%(filename, soxifile))
     os.system('sox %s -n stat > %s 2>&1'%(filename, statfile))
     # get basic info 

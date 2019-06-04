@@ -143,7 +143,9 @@ def audioset_featurize(filename, audioset_dir, process_dir):
     features=datafile['features']
 
     # output VGGish feature array and compressed means/stds 
-    labels='audioset_embedding'
+    labels=list()
+    for i in range(len(features)):
+        labels.append('audioset_feature_%s'%(str(i+1)))
     os.chdir(process_dir)
 
     return features, labels 

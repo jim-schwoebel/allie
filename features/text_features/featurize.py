@@ -1,29 +1,7 @@
-'''
-Import all the featurization scripts and allow the user to customize what embedding that
-they would like to use for modeling purposes.
-
-AudioSet is the only embedding that is a little bit wierd, as it is normalized to the length
-of each audio file. There are many ways around this issue (such as normalizing to the length 
-of each second), however, I included all the original embeddings here in case the time series
-information is useful to you.
-'''
-##################################################
-##				Import statements   			##
-##################################################
-
-# scripts 
-import nltk_features as nf
-import spacy_features as sf
-import glove_features as gf 
-import fast_features as ff
-import helpers.transcribe as ts
-
-# other import stuff 
-import json, os, sys
-from gensim.scripts.glove2word2vec import glove2word2vec
+import os, json, wget
+# import video_features as vf 
+import y8m_features as yf
 from gensim.models import KeyedVectors
-from gensim.models import Word2Vec
-from gensim.models.fasttext import FastText
 import os, wget, zipfile 
 import shutil
 
@@ -62,47 +40,51 @@ def make_features():
 
 	return data
 
+def prev_dir(directory):
+	g=directory.split('/')
+	# print(g)
+	lastdir=g[len(g)-1]
+	i1=directory.find(lastdir)
+	directory=directory[0:i1]
+	return directory
 
 ##################################################
-##				Load ML models					##
+##				   Main script  		    	##
 ##################################################
 
-# # load GloVE model
+# directory=sys.argv[1]
+basedir=os.getcwd()
+help_dir=basedir+'/helpers'
+prevdir=prev_dir(basedir)
 
-# if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
-# 	curdir=os.getcwd()
-# 	print('downloading GloVe model...')
-# 	wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
-# 	print('extracting GloVe model')
-# 	zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
-# 	zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
-# 	zip_ref.close()
-# 	os.chdir(os.getcwd()+'/helpers/glove.6B')
-# 	glove_input_file = 'glove.6B.100d.txt'
-# 	word2vec_output_file = 'glove.6B.100d.txt.word2vec'
-# 	glove2word2vec(glove_input_file, word2vec_output_file)
-# 	os.chdir(curdir)
+audioset_dir=prevdir+'audio_features'
+os.chdir(audioset_dir)
+import audioset_features as af 
+os.chdir(basedir)
 
-# glovemodelname = 'glove.6B.100d.txt.word2vec'
-# print('-----------------')
-# print('loading GloVe model...')
-# glovemodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/glove.6B/'+glovemodelname, binary=False)
-# print('loaded GloVe model...')
+haar_dir=prevdir+'image_features/helpers/haarcascades/'  
+foldername=input('what is the name of the folder?')
+os.chdir(foldername)
+cur_dir=os.getcwd()
+listdir=os.listdir() 
 
-# # load Google W2V model
+# feature_set='video_features'
+feature_set='y8m_features'
 
-# if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
-# 	print('downloading Google W2V model...')
-# 	wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
+##################################################
+##				Download inception 		    	##
+##################################################
 
-# w2vmodelname = 'GoogleNews-vectors-negative300.bin'
-# print('-----------------')
-# print('loading Google W2V model...')
-# w2vmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/'+w2vmodelname, binary=True)
-# print('loaded Google W2V model...')
+if 'inception-2015-12-05.tgz' not in os.listdir(basedir+'/helpers'):
+    os.chdir(basedir+'/helpers')
+    filename = wget.download('http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz')
+    filename=wget.download('http://data.yt8m.org/yt8m_pca.tgz')
+    os.system('tar zxvf inception-2015-12-05.tgz')
+    os.system('tar zxvf yt8m_pca.tgz')
+    os.chdir(cur_dir)
 
-# load facebook FastText model
-
+# load in FAST model 
+os.chdir(prevdir+'text_features')
 if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 	print('downloading Facebook FastText model...')
 	wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
@@ -113,46 +95,27 @@ if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 print('-----------------')
 print('loading Facebook FastText model...')
 # Loading fasttext model 
-fastmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
+fast_model = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
 print('loaded Facebook FastText model...')
+os.chdir(cur_dir)
 
-##################################################
-##				   Main script  		    	##
-##################################################
-
-# directory=sys.argv[1]
-basedir=os.getcwd()
-foldername=input('what is the name of the folder?')
-os.chdir(foldername)
-listdir=os.listdir() 
-
-# feature_set='nltk_features'
-# feature_set='spacy_features'
-# feature_set='glove_features'
-# feature_set='w2vec_features'
-feature_set='fast_features'
+###################################################
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
-	if listdir[i][-4:] in ['.wav', '.mp3']:
-		#try:
 
+	# make audio file into spectrogram and analyze those images if audio file
+	if listdir[i][-4:] in ['.mp4']:
+		#try:
+		videofile=listdir[i]
+			
 		# I think it's okay to assume audio less than a minute here...
 		if listdir[i][0:-4]+'.json' not in listdir:
 			# make new .JSON if it is not there with base array schema.
 			basearray=make_features()
-			text_features=basearray['features']['text']
-			transcript=transcribe(listdir[i])
-			basearray['transcript']=transcript
-			transcript=transcript['transcript']
-			
-			# features, labels = nf.nltk_featurize(transcript)
-			# features, labels = sf.spacy_featurize(transcript)
-			# features, labels=gf.glove_featurize(transcript, glovemodel)
-			# features, labels=w2v.w2v_featurize(transcript, w2vmodel)
-			features, labels=ff.fast_featurize(transcript, fastmodel)
-
-			print(features)
+			video_features=basearray['features']['video']
+			# features, labels, transcript = vf.video_featurize(videofile, cur_dir, haar_dir)
+			features, labels, transcript = yf.y8m_featurize(videofile, cur_dir, help_dir, fast_model)
 
 			try:
 				data={'features':features.tolist(),
@@ -161,8 +124,8 @@ for i in range(len(listdir)):
 				data={'features':features,
 					  'labels': labels}
 
-			text_features[feature_set]=data
-			basearray['features']['text']=text_features
+			video_features[feature_set]=data
+			basearray['features']['video']=video_features
 			basearray['labels']=[foldername]
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
@@ -170,21 +133,14 @@ for i in range(len(listdir)):
 		elif listdir[i][0:-4]+'.json' in listdir:
 			# overwrite existing .JSON if it is there.
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-
-			try: 
-				transcript=basearray['transcript']['transcript']
-			except:
-				transcript=transcribe(listdir[i])
-				basearray['transcript']=transcript
-				transcript=transcript['transcript']
-
-
-			# features, labels = nf.nltk_featurize(transcript)
-			# features, labels = sf.spacy_featurize(transcript)
-			# features, labels=gf.glove_featurize(transcript, glovemodel)
-			# features, labels=w2v.w2v_featurize(transcript, w2vmodel)
-			features, labels=ff.fast_featurize(transcript, fastmodel)
-
+			
+			# probably makes sense just to transcribe here and push through all - something like this 
+			# os.system('ffmpeg -i %s %s'%(listdir[i], listdir[i][0:-4]+'.wav'))
+			# transcript=transcribe(listdir[i][0:-4]+'.wav')
+			# os.remove(listdir[i][0:-4]+'.wav')
+			
+			# features, labels, transcript = vf.video_featurize(videofile, cur_dir, haar_dir)
+			features, labels, transcript = vf.video_featurize(videofile, cur_dir, haar_dir)
 			print(features)
 
 			try:
@@ -194,7 +150,7 @@ for i in range(len(listdir)):
 				data={'features':features,
 					  'labels': labels}
 
-			basearray['features']['text'][feature_set]=data
+			basearray['features']['video'][feature_set]=data
 			basearray['labels']=[foldername]
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
@@ -202,8 +158,3 @@ for i in range(len(listdir)):
 
 		#except:
 			#print('error')
-
-
-
-
-

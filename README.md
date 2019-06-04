@@ -10,10 +10,10 @@ Master repository for modeling voice files. Transformed from NLX-model.
 
 Load folders and data script type based on principal type of file.
 
-* Audio --> .WAV / .MP3
-* Text --> .TXT / .PPT / .DOCX
-* Images --> .PNG / .JPG 
-* Video --> .MP4 / .M4A
+* Audio --> .WAV / .MP3 --> .WAV 
+* Text --> .TXT / .PPT / .DOCX --> .TXT
+* Images --> .PNG / .JPG --> .PNG 
+* Video --> .MP4 / .M4A --> .MP4 
 
 ## Features to add
 

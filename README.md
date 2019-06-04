@@ -20,7 +20,7 @@ Load folders and data script type based on principal type of file.
 ## Features to add
 
 ### Audio features
-* [Prosode Aligner](https://github.com/prosodylab/Prosodylab-Aligner)
+* [Prosody Aligner](https://github.com/prosodylab/Prosodylab-Aligner)
 * [Parselmouth features](https://github.com/drfeinberg/genderless)
 * [DisVoice](https://github.com/jcvasquezc/DisVoice)
 

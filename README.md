@@ -7,21 +7,13 @@ Master repository for modeling voice files. Transformed from NLX-model.
 4. apply models. 
 
 ## types of data
-* audio
-* text
-* image
-* videos 
 
-## features 
-### audio
-* test
+Load folders and data script type based on principal type of file.
 
-### text
-* test 
-### image
-* test 
-### video
-* test 
+Audio --> .WAV / .MP3
+Text --> .TXT / .PPT / .DOCX
+Images --> .PNG / .JPG 
+Video --> .MP4 / .M4A
 
 ## Features to add
 ### Videos 

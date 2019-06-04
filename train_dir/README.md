@@ -12,17 +12,10 @@ Files can take form:
 | video file | .MP4 | classify multiple folders of video files (e.g. walking vs. running) | 
 | CSV file | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate). You can input any of the Ludwig data types. (binary, numerical, category, set, bag, sequence, text, timeseries, image) | 
 
-## Audio file training example
-* SC 
+## Tutorials (Readmes)
+* Audio file training example
+* Text file training example 
+* Image file training example
+* Video file training example 
+* CSV file training example
 
-## Text file training example 
-* SC
-
-## Image file training example
-* SC 
-
-## Video file training example 
-* SC
-
-## .CSV file training example
-* SC 

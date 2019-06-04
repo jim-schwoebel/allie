@@ -20,6 +20,7 @@ Load folders and data script type based on principal type of file.
 ### Audio
 * [Prosode Aligner](https://github.com/prosodylab/Prosodylab-Aligner)
 * [Parselmouth features](https://github.com/drfeinberg/genderless)
+* [DisVoice](https://github.com/jcvasquezc/DisVoice)
 
 ### Videos 
 * [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
@@ -27,6 +28,14 @@ Load folders and data script type based on principal type of file.
 ### Text
 * [BERT](https://github.com/huggingface/pytorch-pretrained-BERT)
 * [AllenNLP](https://github.com/allenai/allennlp)
+
+### Visualization
+* [Yellowbrick]()
+
+### Modeling 
+* TPOT
+* AutoKeras
+* Luwdig 
 
 ## problems looked at 
 * accent detection
@@ -40,27 +49,3 @@ Load folders and data script type based on principal type of file.
 
 ## list of all applicable models now
 * accuracies, standard deviations (TPOT) 
-
-## labeling
-* [sound_event_detection]
-
-## featurization scripts (parallel)
-### Audio
-* [DisVoice](https://github.com/jcvasquezc/DisVoice)
-* [AudioOwl](https://github.com/dodiku/AudioOwl)
-
-### Text
-* []()
-
-### Image
-* []()
-
-### Video 
-* []()
-
-## modeling 
-* [TPOT]()
-* [Ludwig]()
-
-## visualization
-* [Yellowbrick]()

@@ -8,6 +8,12 @@ Master repository for modeling voice files. Transformed from NLX-model.
 5. compress models for production 
 6. server deployment 
 
+## getting started 
+```
+git clone
+cd voice_modeling 
+python3 setup.py 
+```
 ## types of data
 
 Load folders and data script type based on principal type of file.

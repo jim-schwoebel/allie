@@ -40,6 +40,9 @@ Load folders and data script type based on principal type of file.
 This aligns well with how we define 'samples' in our pipeline.
 
 ## Features to add
+### Bias discovery
+* apply machine learning models for each types of data (audio, text, images, video, .CSV) to auto detect things like ages, genders, etc. 
+
 ### Datasets
 * [PyDataset](https://github.com/iamaziz/PyDataset) - numerical datasets
 * [AudioSet_download]() - download link to AudioSet 

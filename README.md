@@ -36,3 +36,6 @@ Load folders and data script type based on principal type of file.
 * TPOT
 * AutoKeras
 * Luwdig  
+
+### Model compression
+* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration)

@@ -18,6 +18,10 @@ Load folders and data script type based on principal type of file.
 * Video --> .MP4 / .M4A --> .MP4 
 
 ## Features to add
+### Datasets
+* [PyDataset](https://github.com/iamaziz/PyDataset)
+* [AudioSet_download]() - download link to AudioSet 
+* [CommonVoice]() - download link to Common Voice 
 
 ### Audio features
 * [Prosody Aligner](https://github.com/prosodylab/Prosodylab-Aligner)

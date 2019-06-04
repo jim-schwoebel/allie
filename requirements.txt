@@ -5,4 +5,5 @@ tensorflow
 six
 luwdwig 
 spacy 
+scikit-small-ensemble
 wget 

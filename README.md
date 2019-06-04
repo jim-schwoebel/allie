@@ -25,7 +25,6 @@ Master repository for modeling voice files. Transformed from NLX-model.
 
 ## Features to add
 ### Videos 
-* [Video Features](https://github.com/corenel/yt8m-feature-extractor)
 * [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
 * [GMM Video features](https://github.com/jonasrothfuss/videofeatures)
 ### Text

@@ -22,3 +22,6 @@
 [submodule "training/scikit-small-ensemble"]
 	path = training/scikit-small-ensemble
 	url = https://github.com/stewartpark/scikit-small-ensemble
+[submodule "labeling/sound_event_detection"]
+	path = labeling/sound_event_detection
+	url = https://github.com/jim-schwoebel/sound_event_detection

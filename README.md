@@ -19,7 +19,7 @@ Load folders and data script type based on principal type of file.
 
 ## Features to add
 ### Datasets
-* [PyDataset](https://github.com/iamaziz/PyDataset)
+* [PyDataset](https://github.com/iamaziz/PyDataset) - text datasets
 * [AudioSet_download]() - download link to AudioSet 
 * [CommonVoice]() - download link to Common Voice 
 

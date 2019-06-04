@@ -1,0 +1,12 @@
+[submodule "datasets/augmentation/eda_nlp"]
+	path = datasets/augmentation/eda_nlp
+	url = https://github.com/jasonwei20/eda_nlp
+[submodule "datasets/augmentation/imgaug"]
+	path = datasets/augmentation/imgaug
+	url = https://github.com/aleju/imgaug
+[submodule "datasets/augmentation/vidaug"]
+	path = datasets/augmentation/vidaug
+	url = https://github.com/okankop/vidaug
+[submodule "datasets/augmentation/audio_augmentation"]
+	path = datasets/augmentation/audio_augmentation
+	url = https://github.com/jim-schwoebel/audio_augmentation

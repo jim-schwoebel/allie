@@ -19,9 +19,10 @@ Load folders and data script type based on principal type of file.
 
 ## Features to add
 ### Datasets
-* [PyDataset](https://github.com/iamaziz/PyDataset) - text datasets
+* [PyDataset](https://github.com/iamaziz/PyDataset) - numerical datasets
 * [AudioSet_download]() - download link to AudioSet 
 * [CommonVoice]() - download link to Common Voice 
+* [Training datasets - .JSON]() - accent detection, etc. 
 
 ### Audio features
 * [Prosody Aligner](https://github.com/prosodylab/Prosodylab-Aligner)

@@ -274,6 +274,9 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
 
   # average all the audioset features
   audio_features=(1/len(audio_features[0]))*a_features
+  audio_labels=list()
+  for i in range(len(audio_features)):
+    audio_labels.append('audioset_feature_%s'%(str(i+1)))
 
   # extract text and get using FastText model 
   transcript = transcribe(wavfile)

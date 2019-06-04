@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8547619047619047 (+/- 0.08850540863143269) 
+
+MODEL FILE NAME: 
+
+ Accelerating,revving,vroom_Accelerating,revving,vroom_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 14:59:53.148763
+
+EXECUTION TIME: 
+
+ 2.1657018661499023
+
+GROUPS: 
+
+['Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls']
+
+test labels
+
+['Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom', 'Accelerating,revving,vroom_controls', 'Accelerating,revving,vroom']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gradient boosting: 0.6365079365079366 (+/- 0.13150676302989192)
+decision-tree: 0.6523809523809524 (+/- 0.12009066869446182)
+knn: 0.657936507936508 (+/- 0.1423359097764586)
+adaboost: 0.7218253968253968 (+/- 0.12748166418726914)
+random forest: 0.7281746031746033 (+/- 0.08211505548996743)
+logistic regression: 0.7916666666666666 (+/- 0.22117810263771537)
+hard voting: 0.8075396825396824 (+/- 0.12214231566450723)
+gaussian-nb: 0.8547619047619047 (+/- 0.08850540863143269)
+
+
+(C) 2018, NeuroLex Laboratories

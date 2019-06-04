@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.6996031746031747 (+/- 0.051367051191379076) 
+
+MODEL FILE NAME: 
+
+ Acapella_Acapella_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 14:58:36.330061
+
+EXECUTION TIME: 
+
+ 4.093444108963013
+
+GROUPS: 
+
+['Acapella', 'Acapella_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls']
+
+test labels
+
+['Acapella', 'Acapella', 'Acapella', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella_controls', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella_controls', 'Acapella', 'Acapella', 'Acapella_controls', 'Acapella']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.5349206349206349 (+/- 0.10109005287676609)
+knn: 0.5412698412698413 (+/- 0.18086881946976657)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.5821428571428571 (+/- 0.08840927866630173)
+hard voting: 0.5821428571428571 (+/- 0.08840927866630173)
+gaussian-nb: 0.5916666666666667 (+/- 0.15556567832304413)
+random forest: 0.632936507936508 (+/- 0.11496984388864448)
+logistic regression: 0.6515873015873016 (+/- 0.07679981208509806)
+adaboost: 0.6996031746031747 (+/- 0.051367051191379076)
+
+
+(C) 2018, NeuroLex Laboratories

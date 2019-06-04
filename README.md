@@ -35,6 +35,7 @@ Load folders and data script type based on principal type of file.
 * Text --> .WAV (transcribes) / .TXT / .PPT / .DOCX --> .TXT
 * Images --> .PNG / .JPG --> .PNG 
 * Video --> .MP4 / .M4A --> .MP4 
+* CSV --> .CSV --> loads categorical and numerical data into .JSON 
 
 This aligns well with how we define 'samples' in our pipeline.
 

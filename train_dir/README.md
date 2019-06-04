@@ -10,9 +10,7 @@ Files can take form:
 | text file | .TXT | classify multiple folders of .TXT files (e.g. wiki vs. transcription) | 
 | image file | .PNG, .JPG | classify multiple folders of image files (e.g. dog vs. cat) | 
 | video file | .MP4 | classify multiple folders of video files (e.g. walking vs. running) | 
-| many data types | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate) | 
-
-With .CSV, you can input any of the Ludwig data types.
+| many data types | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate) With .CSV, you can input any of the Ludwig data types.
 - binary
 - numerical
 - category
@@ -21,4 +19,6 @@ With .CSV, you can input any of the Ludwig data types.
 - sequence
 - text
 - timeseries
-- image
+- image | 
+
+

@@ -16,3 +16,9 @@
 [submodule "datasets/youtube_scrape"]
 	path = datasets/youtube_scrape
 	url = https://github.com/jim-schwoebel/youtube_scrape
+[submodule "training/keras_compressor"]
+	path = training/keras_compressor
+	url = https://github.com/DwangoMediaVillage/keras_compressor
+[submodule "training/scikit-small-ensemble"]
+	path = training/scikit-small-ensemble
+	url = https://github.com/stewartpark/scikit-small-ensemble

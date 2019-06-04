@@ -197,6 +197,7 @@ def meta_featurize(filename, file_dir, help_dir):
             features.append(1)
     features=np.array(features)
     labels=class_list
+    os.chdir(file_dir)
 
     return features, labels 
 

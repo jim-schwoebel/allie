@@ -35,17 +35,4 @@ Load folders and data script type based on principal type of file.
 ### Modeling 
 * TPOT
 * AutoKeras
-* Luwdig 
-
-## problems looked at 
-* accent detection
-* race detection 
-* gender detection
-* age detection
-* stress detection
-* emotion detection (face images) 
-* number of speakers 
-* image transcription
-
-## list of all applicable models now
-* accuracies, standard deviations (TPOT) 
+* Luwdig  

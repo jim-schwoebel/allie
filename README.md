@@ -4,7 +4,9 @@ Master repository for modeling voice files. Transformed from NLX-model.
 1. Get dataset
 2. feature selection (https://machinelearningmastery.com/feature-selection-machine-learning-python/) 
 3. modeling (if < 1000 then simple classification, if >1000 deep learning techniques - iterate through various architectures).
-4. apply models. 
+4. apply models
+5. visualize models (Yellowbrick) - feature selection / etc. 
+6. compress models for production 
 
 ## types of data
 

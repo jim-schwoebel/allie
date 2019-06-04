@@ -1,0 +1,8 @@
+numpy 
+scipy
+resampy 
+tensorflow 
+six
+luwdwig 
+spacy 
+wget 

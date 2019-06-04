@@ -19,3 +19,7 @@ Files can take form:
 * Video file training example 
 * CSV file training example
 
+## Additional documentation
+* [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)
+* [TPOT](https://epistasislab.github.io/tpot/)
+* [Voicebook modeling chapter](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_4_modeling)

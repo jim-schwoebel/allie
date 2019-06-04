@@ -16,6 +16,11 @@ Load folders and data script type based on principal type of file.
 * Video --> .MP4 / .M4A
 
 ## Features to add
+
+### Audio
+* [Prosode Aligner](https://github.com/prosodylab/Prosodylab-Aligner)
+* [Parselmouth features](https://github.com/drfeinberg/genderless)
+
 ### Videos 
 * [Semantic video features](https://github.com/JunweiLiang/Semantic_Features)
 * [GMM Video features](https://github.com/jonasrothfuss/videofeatures)

@@ -5,7 +5,7 @@ Use this directory to train machine learning models based on folders of files.
 Files can take form:
 
 | File type | extension | how to train | 
-| ------------- |-------------| 
+| ------------- |-------------| -------------| 
 | audio file | .WAV, .MP3 | classify multiple folders of .WAV files (e.g. male and female folders) | 
 | text file | .TXT | classify multiple folders of .TXT files (e.g. wiki vs. transcription) | 
 | image file | .PNG, .JPG | classify multiple folders of image files (e.g. dog vs. cat) | 

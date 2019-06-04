@@ -33,6 +33,7 @@ def nltk_featurize(transcript):
 	x=transcript.count('x')
 	y=transcript.count('y')
 	z=transcript.count('z')
+	atsymbol=transcript.count('@')
 	space=transcript.count(' ')
 
 	#numerical features and capital letters 
@@ -164,7 +165,7 @@ def nltk_featurize(transcript):
 	m,n,o,p,
 	q,r,s,t,
 	u,v,w,x,
-	y,z,space,number,
+	y,z,atsymbol,space,number,
 	capletter,cc,cd,dt,
 	ex,in_,jj,jjr,
 	jjs,ls,md,nn,
@@ -181,7 +182,7 @@ def nltk_featurize(transcript):
 			'm','n','o', 'p',
 			'q','r','s','t',
 			'u','v','w','x',
-			'y','z','space', 'numbers',
+			'y','z','atsymbol','space', 'numbers',
 			'capletters','cc','cd','dt',
 			'ex','in','jj','jjr',
 			'jjs','ls','md','nn',

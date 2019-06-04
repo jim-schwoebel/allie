@@ -38,7 +38,7 @@ Load folders and data script type based on principal type of file.
 * [AllenNLP](https://github.com/allenai/allennlp)
 
 ### Visualization
-* [Yellowbrick]()
+* [Yellowbrick](https://www.scikit-yb.org/en/latest/)
 
 ### Modeling 
 * TPOT

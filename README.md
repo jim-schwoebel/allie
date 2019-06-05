@@ -37,6 +37,8 @@ model_compress=True
 ```
 
 Bias discovery looks at all the audio files and plots out a bias assessment before modeling. This can help identify areas of the dataset that may need to be augmented before modeling and can work across any type. 
+* solution = class pairing (equal delete)
+* solution = data augmentation (to make one class more represented) / combining with other datasets 
 
 Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
 

@@ -18,7 +18,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 ## Not Implemented / Work in progress
 ### Audio
-* [Pause features](https://github.com/jim-schwoebel/pauses)
+* [Pause features](https://github.com/jim-schwoebel/pauses) - retrain a classifier on Common Voice Dataset (100 files)
 * [Python-speech-features](https://github.com/jameslyons/python_speech_features)
 * [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental frequency estimation.
 * [DeepFormants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction.

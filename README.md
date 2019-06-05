@@ -13,12 +13,12 @@ Master repository for modeling voice files. Transformed from NLX-model.
 settings.json
 
 ```
-audio_files=
 default_audio_features=audio_features
 default_text_features=text_features
 default_image_features=image_features
 default_video_features=video_features
 default_training_script=keras
+augment_data=True 
 model_compress=True
 ```
 

@@ -50,6 +50,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Audio
 * Add in transcription to standard audio array if settings.JSON audio transcript == True; customize transcription types.
 * [Pause features](https://github.com/jim-schwoebel/pauses) - retrain a classifier on Common Voice Dataset (100 files).
+* [Praat_features_2](https://shahabks.github.io/my-voice-analysis/) - https://shahabks.github.io/my-voice-analysis/
 * [Python-speech-features](https://github.com/jameslyons/python_speech_features) - another feature extraction library.
 * [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental frequency estimation.
 * [DeepFormants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction.

@@ -17,6 +17,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [librosa_features]()
 * [meta_features]()
 * [praat_features]()
+* [pspeech_features]() 
 * [pyaudio_features]()
 * [sa_features]()
 * [sox_features]()
@@ -51,7 +52,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 * Add in transcription to standard audio array if settings.JSON audio transcript == True; customize transcription types.
 * [Pause features](https://github.com/jim-schwoebel/pauses) - retrain a classifier on Common Voice Dataset (100 files).
 * [Praat_features_2](https://github.com/Shahabks/myprosody) - prosodic features using Praat, alternative implementation.
-* [Python-speech-features](https://github.com/jameslyons/python_speech_features) - another feature extraction library.
 * [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental frequency estimation.
 * [DeepFormants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction.
 * [Pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - PyWorldVocoder - A Python wrapper for World Vocoder, fundamental frequency determination.

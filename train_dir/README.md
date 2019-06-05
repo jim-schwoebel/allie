@@ -12,6 +12,18 @@ Files can take form:
 | video file | .MP4 | classify multiple folders of video files (e.g. walking vs. running) | 
 | CSV file | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate). You can input any of the Ludwig data types. (binary, numerical, category, set, bag, sequence, text, timeseries, image) | 
 
+## scripts to build
+* [create-controls.py]() - given a group of folders, you can create a control with equal mixture of speakers 
+* [gender-controls]() - create a group of female controls or male controls
+* [age-controls]() - create a group of age-based controls 
+* [accent-controls]() - create a group of accented controls 
+* [microphone-controls]() - create a group of microphone controls. 
+
+Note all these would output the composition randomness from all the datasets 
+```
+5 AudioSet, 10 train-diseases, 5 TIMIT, etc.
+```
+
 ## Tutorials (Readmes)
 * Audio file training example
 * Text file training example 
@@ -23,3 +35,9 @@ Files can take form:
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)
 * [TPOT](https://epistasislab.github.io/tpot/)
 * [Voicebook modeling chapter](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_4_modeling)
+
+## Tutorials
+* [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
+* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
+* [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
+

@@ -2,6 +2,12 @@
 
 This is a folder for extracting features from audio, text, image, video, or .CSV files. 
 
+## Standard feature dictionary (.JSON)
+
+Show outline for this below. This makes it flexible to any featurization and transcript type.
+
+Note that there can be audio transcripts, image transcripts, and video transcripts. The image and video transcripts use OCR to characterize text in the image, whereas audio transcripts are transcipts done by traditional speech-to-text systems (e.g. Pocketsphinx). The schema above allows for a flexible definition for transcripts that can accomodate all forms. 
+
 ## Implemented 
 
 Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).
@@ -60,7 +66,4 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Videos 
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 
-### transcripts
-* change transcript array to have audio_transcript, image_transcript, and video_transcript
-* all of these transcript types are different
-* image transcript = pytesseract, video transcript = pytesseract + all images cut at interval, audio transcript = transcription engine.
+

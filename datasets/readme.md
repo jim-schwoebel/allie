@@ -55,8 +55,8 @@ At least 3 questions (5.4 questions on average) per image, 10 ground truth answe
 For a list of all the open source videos + papers below, check out: https://www.di.ens.fr/~miech/datasetviz/
 
 ### Open source 
-* [VoxCeleb](https://github.com/andabi/voice-vector) - VoxCeleb videos. 
-* [Lip reading dataset](http://www.robots.ox.ac.uk/~vgg/data/lip_reading/) - lip reading dataset. 
+* [VoxCeleb](https://github.com/andabi/voice-vector) - VoxCeleb videos.  1,251 Hollywood stars' 145,379 utterances
+* [Lip reading dataset](http://www.robots.ox.ac.uk/~vgg/data/lip_reading/) - LRW, LRS2 and LRS3 are audio-visual speech recognition datasets collected from in the wild videos. 6M+ word instances, 800+ hours, 5,000+ identities
 * [HMDB51](http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) - HMDB: A Large Video Database for Human Motion Recognition - Action recognition	6766 videos,	51 action classes	pre-defined classes.
 * [UCF101](https://www.crcv.ucf.edu/data/UCF101.php) - UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild. 	13320	videos, 101 action classes	pre-defined classes
 * [Sports-1M](http://cs.stanford.edu/people/karpathy/deepvideo/) - The YouTube Sports-1M Dataset. 1100000	videos, 487 sports classes pre-defined classes.

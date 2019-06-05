@@ -5,7 +5,7 @@ You can quickly download any of these datasets with the datasets.py script. This
 Note you can search for more datasets using Google DataSet search @ https://toolbox.google.com/datasetsearch or Kaggle @ https://www.kaggle.com/datasets.
 
 ## Audio datasets 
-* [AudioSet](https://research.google.com/audioset/)
+* [AudioSet](https://research.google.com/audioset/) - A large-scale dataset of manually annotated audio events
 * [Common Voice](https://voice.mozilla.org/)
 * [LJ speech](https://keithito.com/LJ-Speech-Dataset/)
 * [CMU Wilderness](http://festvox.org/cmu_wilderness/) - (noncommercial)

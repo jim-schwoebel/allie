@@ -151,6 +151,19 @@ Text datasets mostly separated by language.
 *   [NEGRA](http://www.coli.uni-saarland.de/projects/sfb378/negra-corpus/negra-corpus.html): A Syntactically Annotated Corpus of German Newspaper Texts. Available for free for all Universities and non-profit organizations. Need to sign and send form to obtain. (on request)
 *   [Ten Thousand German News Articles Dataset](https://tblock.github.io/10kGNAD/): 10273 german language news articles categorized into nine classes for topic classification. (26.1 MB)
 
+### Other datasets
+*   [Awesome public datasets/NLP](https://github.com/caesar0301/awesome-public-datasets#natural-language) (includes more lists)
+*   [AWS Public Datasets](http://aws.amazon.com/de/datasets/)
+*   [CrowdFlower: Data for Everyone](https://www.crowdflower.com/data-for-everyone/) (lots of little surveys they conducted and data obtained by crowdsourcing for a specific task)
+*   [Kaggle 1](https://www.kaggle.com/datasets), [2](https://www.kaggle.com/competitions) (make sure though that the kaggle competition data can be used outside of the competition!)
+*   [Open Library](https://openlibrary.org/developers/dumps)
+*   [Quora](https://www.quora.com/Datasets-What-are-the-major-text-corpora-used-by-computational-linguists-and-natural-language-processing-researchers-and-what-are-the-characteristics-biases-of-each-corpus) (mainly annotated corpora)
+*   [/r/datasets](https://www.reddit.com/r/datasets) (endless list of datasets, most is scraped by amateurs though and not properly documented or licensed)
+*   [rs.io](http://rs.io/100-interesting-data-sets-for-statistics/) (another big list)
+*   [Stackexchange: Opendata](http://opendata.stackexchange.com/)
+*   [Stanford NLP group](http://www-nlp.stanford.edu/links/statnlp.html) (mainly annotated corpora and TreeBanks or actual NLP tools)
+*   [Yahoo! Webscope](http://webscope.sandbox.yahoo.com/) (also includes papers that use the data that is provided)
+
 
 ## Image datasets
 * [MNIST](http://yann.lecun.com/exdb/mnist/) - hand-written image dataset, standard to measure accuracy from Yan Lecun @ NYU.
@@ -200,19 +213,6 @@ At least 3 questions (5.4 questions on average) per image, 10 ground truth answe
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
 ## References
-
-### NLP datasets 
-*   [Awesome public datasets/NLP](https://github.com/caesar0301/awesome-public-datasets#natural-language) (includes more lists)
-*   [AWS Public Datasets](http://aws.amazon.com/de/datasets/)
-*   [CrowdFlower: Data for Everyone](https://www.crowdflower.com/data-for-everyone/) (lots of little surveys they conducted and data obtained by crowdsourcing for a specific task)
-*   [Kaggle 1](https://www.kaggle.com/datasets), [2](https://www.kaggle.com/competitions) (make sure though that the kaggle competition data can be used outside of the competition!)
-*   [Open Library](https://openlibrary.org/developers/dumps)
-*   [Quora](https://www.quora.com/Datasets-What-are-the-major-text-corpora-used-by-computational-linguists-and-natural-language-processing-researchers-and-what-are-the-characteristics-biases-of-each-corpus) (mainly annotated corpora)
-*   [/r/datasets](https://www.reddit.com/r/datasets) (endless list of datasets, most is scraped by amateurs though and not properly documented or licensed)
-*   [rs.io](http://rs.io/100-interesting-data-sets-for-statistics/) (another big list)
-*   [Stackexchange: Opendata](http://opendata.stackexchange.com/)
-*   [Stanford NLP group](http://www-nlp.stanford.edu/links/statnlp.html) (mainly annotated corpora and TreeBanks or actual NLP tools)
-*   [Yahoo! Webscope](http://webscope.sandbox.yahoo.com/) (also includes papers that use the data that is provided)
 
 ### Everything else
 * [Audio datasets](https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 

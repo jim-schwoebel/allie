@@ -5,6 +5,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 ## Work in progress
 ### Audio
 * [Pause features](https://github.com/jim-schwoebel/pauses)
+* [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental freuqency estimation
 * [DeepFormants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction.
 * [Pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - PyWorldVocoder - A Python wrapper for World Vocoder, fundamental frequency determination.
 * [Noise separation](https://github.com/seanwood/gcc-nmf)

@@ -18,7 +18,7 @@ Here are a list of active models:
 * object detection
 
 ## Video models
-* asf
+* [YouTube disease dataset]() - >30 people in each category using YouTube videos (videos). 
 
 ## CSV models 
 * TRIBE 4 application.

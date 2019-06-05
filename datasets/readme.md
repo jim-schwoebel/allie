@@ -14,6 +14,7 @@ You can quickly download any of these datasets with the datasets.py script. This
 
 ## Video datasets
 * VoxCeleb - https://github.com/andabi/voice-vector
+* Lip reading dataset - http://www.robots.ox.ac.uk/~vgg/data/lip_reading/
 
 ## CSV datasets 
 * TRIBE 4 application - test 

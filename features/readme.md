@@ -34,11 +34,11 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [xception_features]() 
 
 ### Videos 
-* [video_features]() - standard video feature array 
+* [video_features]() - standard video feature array
 * [y8m_features]() 
 
 ### CSV 
-* []() 
+* [csv_features]() - standard CSV feature array
 
 ## Not Implemented / Work in progress
 ### Audio

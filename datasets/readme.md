@@ -21,7 +21,7 @@ Lots of audio datasets on here. https://towardsdatascience.com/a-data-lakes-wort
 * [Freesound dataset](https://www.kaggle.com/c/freesound-audio-tagging-2019/data) - many different sound events. https://annotator.freesound.org/ and https://annotator.freesound.org/fsd/explore/
 * [Karoldvl-ESC](https://github.com/karoldvl/ESC-50) - The ESC-50 dataset is a labeled collection of 2000 environmental audio recordings suitable for benchmarking methods of environmental sound classification.
 * [Librispeech](https://www.openslr.org/12) - LibriSpeech is a corpus of approximately 1000 hours of 16Khz read English speech derived from read audiobooks from the LibriVox project.
-* [TedLIUM](https://www.openslr.org/51/) - The TED-LIUM corpus was made from audio talks and their transcriptions available on the TED website (noncommercial)
+* [TedLIUM](https://www.openslr.org/51/) - The TED-LIUM corpus was made from audio talks and their transcriptions available on the TED website (noncommercial).
 * [VoxForge](http://www.repository.voxforge1.org/downloads/SpeechCorpus/Trunk/) - VoxForge was set up to collect transcribed speech for use with Free and Open Source Speech Recognition Engines.
 * [Tatoeba](https://tatoeba.org/eng/downloads) - Tatoeba is a large database of sentences, translations, and spoken audio for use in language learning. This download contains spoken English recorded by their community.
 * [Speech accent archive](https://www.kaggle.com/rtatman/speech-accent-archive/version/1) - For various accent detection tasks.

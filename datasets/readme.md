@@ -50,6 +50,23 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 ### Open source
 * []()
 
+
+
+========
+stuff to do
+
+## scripts to build
+* [create-controls.py]() - given a group of folders, you can create a control with equal mixture of speakers 
+* [gender-controls]() - create a group of female controls or male controls
+* [age-controls]() - create a group of age-based controls 
+* [accent-controls]() - create a group of accented controls 
+* [microphone-controls]() - create a group of microphone controls. 
+
+Note all these would output the composition randomness from all the datasets 
+```
+5 AudioSet, 10 train-diseases, 5 TIMIT, etc.
+```
+
 ### NeuroLex datasets
 * TRIBE 4 application - test 
 

@@ -106,6 +106,7 @@ For a list of all the open source videos + papers below, check out: https://www.
 * [Google Dataset Search](https://toolbox.google.com/datasetsearch)
 * [Kaggle](https://kaggle.com)
 * [NP Datasets](https://github.com/niderhoff/nlp-datasets)
+* [PyDataset](https://github.com/iamaziz/PyDataset)
 * [Video datasets](https://www.di.ens.fr/~miech/datasetviz/)
 
 

@@ -1,9 +1,6 @@
 '''
-Simple unit test / integration testing the default parameters 
+Simple unit test the default parameters 
 of the repository. 
-
-For convenience, I have put both unit and integration tests both in 
-this repository.
 
 Note this unit_testing requires the settings.json
 to defined in the base directory.

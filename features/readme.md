@@ -4,19 +4,20 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 ## Implemented 
 ### Audio
-* [librosa_features]()
+* [audio_features]() - standard audio array 
+* [librosa_features]() 
 * [audioset_features]()
 * [praat_features]()
 
 ### Text
-* [NLTK]()
-* [SpaCy]()
+* [nltk_features]() - standard text array 
+* [spacy_features]()
 
 ### Images 
-* [OpenCV]()
+* [image_features]() - standard image array 
 
 ### Videos 
-* [Scikit-Video]()
+* [video_features]() - standard video array 
 
 ## Not Implemented / Work in progress
 ### Audio

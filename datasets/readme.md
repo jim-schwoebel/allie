@@ -51,6 +51,8 @@ many listed https://machinelearningmastery.com/datasets-natural-language-process
 * [CIFAR-10]()
 
 ## Video datasets
+Large list of video datasets here: https://www.di.ens.fr/~miech/datasetviz/
+
 ### Open source 
 * VoxCeleb - https://github.com/andabi/voice-vector
 * Lip reading dataset - http://www.robots.ox.ac.uk/~vgg/data/lip_reading/

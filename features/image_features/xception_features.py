@@ -19,7 +19,7 @@ def xception_featurize(file):
     # feature shape = (25088,)
     labels=list()
     for i in range(len(features)):
-    	labels.append('Xception_feature_%s'%(str(i+1)))
+    	labels.append('xception_feature_%s'%(str(i+1)))
     return features, labels 
 
 

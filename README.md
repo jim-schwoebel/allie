@@ -24,6 +24,7 @@ default_audio_features=audio_features
 default_text_features=text_features
 default_image_features=image_features
 default_video_features=video_features
+bias_discovery=True 
 transcribe_audio=True 
 default_audio_transcriber=pocketsphinx
 transcribe_images=True 
@@ -34,6 +35,8 @@ visualize_data=True
 create_YAML=True 
 model_compress=True
 ```
+
+Bias discovery looks at all the audio files and plots out a bias assessment before modeling. This can help identify areas of the dataset that may need to be augmented before modeling and can work across any type. 
 
 Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
 

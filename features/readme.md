@@ -2,7 +2,16 @@
 
 This is a folder for extracting features from audio, text, image, video, or .CSV files. 
 
-## Work in progress
+## Implemented 
+### Audio
+
+### Text
+
+### Images 
+
+### Videos 
+
+## Not Implemented / Work in progress
 ### Audio
 * [Pause features](https://github.com/jim-schwoebel/pauses)
 * [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental freuqency estimation

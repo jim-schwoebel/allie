@@ -13,6 +13,9 @@ class SimplisticTest(unittest.TestCase):
         a = 'a'
         b = 'a'
         self.assertEqual(a, b)
+    
+    # confirm that all the modules are installed correctly 
+    # {} - list of modules imported requirements.txt 
           
     # can read audio files
     # can read text files 

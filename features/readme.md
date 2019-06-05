@@ -3,6 +3,9 @@
 This is a folder for extracting features from audio, text, image, video, or .CSV files. 
 
 ## Implemented 
+
+Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).
+
 ### Audio
 * [audio_features]() - standard audio array 
 * [librosa_features]() 

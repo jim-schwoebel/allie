@@ -11,7 +11,7 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak
 * [LJ speech](https://keithito.com/LJ-Speech-Dataset/) - This is a public domain speech dataset consisting of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours.
 * [CMU Wilderness](http://festvox.org/cmu_wilderness/) - (noncommercial) - not available but a great one. 
-* [Urban Sound Dataset](https://urbansounddataset.weebly.com/) - TWO DATASETS AND A TAXONOMY FOR URBAN SOUND RESEARCH
+* [Urban Sound Dataset](https://urbansounddataset.weebly.com/) - two datasets and a taxonomy for urban sound research.
 * [Noisy dataset](https://datashare.is.ed.ac.uk/handle/10283/2791)- Clean and noisy parallel speech database. The database was designed to train and test speech enhancement methods that operate at 48kHz. 
 * [spoken-command-recognition](https://github.com/JohannesBuchner/spoken-command-recognition) - A large database of free audio samples (10M words), a test bed for voice activity detection algorithms and for recognition of syllables (single-word commands).
 * [Freesound dataset](https://www.kaggle.com/c/freesound-audio-tagging-2019/data) - many different sound events. https://annotator.freesound.org/ and https://annotator.freesound.org/fsd/explore/

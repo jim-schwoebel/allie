@@ -19,6 +19,6 @@ def vgg16_featurize(file):
     # feature shape = (25088,)
     labels=list()
     for i in range(len(features)):
-    	labels.append('VGG16_feature_%s'%(str(i+1)))
+    	labels.append('vgg16_feature_%s'%(str(i+1)))
     return features, labels 
 

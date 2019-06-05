@@ -42,20 +42,51 @@ many listed https://machinelearningmastery.com/datasets-natural-language-process
 * [Sarcasm detection]() - Kaggle dataset off Redditt. 
 
 ## Image datasets
-* [MNIST]()
-* [MS-COCO]()
-* [ImageNet]()
-* [Open Images Dataset]()
-* [VisualQA]()
-* [The Street View House Numbers (SVHN)]()
-* [CIFAR-10]()
+* [MNIST](http://yann.lecun.com/exdb/mnist/) - hand-written image dataset 
+* [MS-COCO](http://cocodataset.org/#download) - COCO is a large-scale object detection, segmentation, and captioning dataset. 330K images (>200K labeled), 1.5 million object instances, 80 object categories, 91 stuff categories, 5 captions per image, 250,000 people with keypoints.
+* [ImageNet](http://www.image-net.org/) - ImageNet is an image database organized according to the WordNet hierarchy (currently only the nouns), in which each node of the hierarchy is depicted by hundreds and thousands of images. 
+* [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html) - 15,851,536 boxes on 600 categories, 2,785,498 instance segmentations on 350 categories, 36,464,560 image-level labels on 19,959 categories, 391,073 relationship annotations of 329 relationships, Extension - 478,000 crowdsourced images with 6,000+ categories.
+* [VisualQA](https://visualqa.org/) - VQA is a new dataset containing open-ended questions about images. These questions require an understanding of vision, language and commonsense knowledge to answer. 265,016 images (COCO and abstract scenes)
+At least 3 questions (5.4 questions on average) per image, 10 ground truth answers per question, 3 plausible (but likely incorrect) answers per question, Automatic evaluation metric.
+* [The Street View House Numbers (SVHN)](http://ufldl.stanford.edu/housenumbers/) - 10 classes, 1 for each digit. Digit '1' has label 1, '9' has label 9 and '0' has label 10. 73257 digits for training, 26032 digits for testing, and 531131 additional, somewhat less difficult samples, to use as extra training data.
+* [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) - The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. 
 
 ## Video datasets
-Large list of video datasets here: https://www.di.ens.fr/~miech/datasetviz/
+For a list of all the open source videos + papers below, check out: https://www.di.ens.fr/~miech/datasetviz/
 
 ### Open source 
-* VoxCeleb - https://github.com/andabi/voice-vector
-* Lip reading dataset - http://www.robots.ox.ac.uk/~vgg/data/lip_reading/
+* [VoxCeleb](https://github.com/andabi/voice-vector) - VoxCeleb videos. 
+* [Lip reading dataset](http://www.robots.ox.ac.uk/~vgg/data/lip_reading/) - lip reading dataset. 
+* [HMDB51](http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) - HMDB: A Large Video Database for Human Motion Recognition - Action recognition	6766 videos,	51 action classes	pre-defined classes.
+* [UCF101](https://www.crcv.ucf.edu/data/UCF101.php) - UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild. 	13320	videos, 101 action classes	pre-defined classes
+* [Sports-1M](http://cs.stanford.edu/people/karpathy/deepvideo/) - The YouTube Sports-1M Dataset. 1100000	videos, 487 sports classes pre-defined classes.
+* [Charades](http://allenai.org/plato/charades/) - This dataset guides our research into unstructured video activity recognition and commonsense reasoning for daily human activities. 9848	 videos, 157 action labels, 27847 Free-text descriptions, action intervals, classes of interacted objects	pre-defined classes, text, intervals.
+* [ActivityNet](http://activity-net.org/) - A Large-Scale Video Benchmark for Human Activity Understanding. 28000 videos,	203 classes	pre-defined classes.
+* [Kinetics](https://deepmind.com/research/open-source/open-source-datasets/kinetics/) - Kinetics is a large-scale, high-quality dataset of YouTube video URLs which include a diverse range of human focused actions. 500000	videos, 600 action classes	pre-defined classes.
+* [YouTube 8M](https://research.google.com/youtube8m/download.html) - YouTube-8M is a large-scale labeled video dataset that consists of millions of YouTube video IDs and associated labels from a diverse vocabulary of 4700+ visual entities. 8000000 videos,	4716 classes	pre-defined classes.
+* [AVA](https://research.google.com/ava/) - A Video Dataset of Spatio-temporally Localized Atomic Visual Actions. 57600 videos, 210k action labels, 80 atomic visual actions, spatio-temporal annotations	pre-defined classes, text, spatio-temporal annotation.
+* [20BN-SOMETHING-SOMETHING](https://www.twentybn.com/datasets/something-something) - The 20BN-SOMETHING-SOMETHING dataset is a large collection of densly-labeled video clips that show humans performing predefined basic actions with every day objects. 108000 videos, 174 classes	pre-defined classes.
+* [20BN-JESTER](https://www.twentybn.com/datasets/jester) - Human Hand Gestures Dataset. 148000 videos	27 classes	pre-defined classes.
+* [LSMDC](http://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/vision-and-language/mpii-movie-description-dataset/) - Large-Scale Movie Understanding Dataset. 118000 videos, Aligned captions	text.
+* [DALY](http://thoth.inrialpes.fr/daly/) - Daily Action Localization in Youtube videos. 8100 videos, 3.6k spatio-temporal action annotation	pre-defined classes, spatio-temporal annotation
+* [MPII-Cooking](https://www.mpi-inf.mpg.de/departments/computer-vision-and-multimodal-computing/research/human-activity-recognition/mpii-cooking-2-dataset/) - MPII Cooking dataset. 273	videos, 78 classes, 13k labelled instances	pre-defined classes, text.
+* [Hollywood2](http://www.di.ens.fr/~laptev/actions/hollywood2/) - Human actions and scenes dataset. 3669 videos, 12 human action classes, 10 classes of scene	pre-defined classes
+* [VideoMCC](http://videomcc.org/) - 272000	videos, 10 topics and Video captions	Question-Answer, text.
+* [MovieQA](http://movieqa.cs.toronto.edu/home/) - Movie Understanding	140	15k Question-Answer, 408 movie plots, 408 subtitles	Question-Answer, text.
+* [ActivityNet Captions](http://cs.stanford.edu/people/ranjaykrishna/densevid/) - a large-scale benchmark for dense-captioning events.	20000	videos, 100k Aligned captions	text.
+* [Youtube BoundingBoxes](https://research.google.com/youtube-bb/) - YouTube-BoundingBoxes Dataset. 240000 videos 5.6M Bouding boxes, 23 objects	Bounding boxes.
+* [DAVIS](http://davischallenge.org/) - Densely Annotated VIdeo Segmentation. 50	videos 3455 annotated frames	Segmentation mask.
+* [FCVID](http://bigvid.fudan.edu.cn/FCVID/) - Fudan-Columbia Video Dataset - 91223 videos 239 classes	pre-defined classes
+* [VGG Human Pose](https://www.robots.ox.ac.uk/~vgg/data/pose/index.html) - The VGG Human Pose Estimation datasets is a set of large video datasets annotated with human upper-body pose. 152	videos Hours of human upper-body pose	human pose.
+* [YFCC100M](http://yfcc100m.appspot.com/?) - YFCC100M: The New Data in Multimedia Research. 800000	videos, 1570 tags, captions and diverse metadata	Captions, pre-defined classes.
+* [ASLAN](http://www.openu.ac.il/home/hassner/data/ASLAN/ASLAN.html) - ASLAN. The Action Similarity Labeling dataset. 1571	videos, 432 action classes, 3697 action samples	pre-defined classes
+* [Instruction Video Dataset](http://www.di.ens.fr/willow/research/instructionvideos/) - A new challenging dataset of real-world instruction videos from the Internet. 150	videos, 5 different instructional tasks with subtitles	pre-defined classes, captions
+* [DiDeMo dataset](https://people.eecs.berkeley.edu/~lisa_anne/didemo.html) - the Distinct Describable Moments (DiDeMo) dataset consists of over 10,000 unedited, personal videos in diverse visual settings with pairs of localized video segments and referring expressions. 10000 videos,	40000 aligned captions	captions
+* [MSR-VTT](https://www.microsoft.com/en-us/research/publication/msr-vtt-a-large-video-description-dataset-for-bridging-video-and-language/) - A Large Video Description Dataset for Bridging Video and Language. 10000	videos, 200000 aligned captions	captions.
+* [SLAC](http://slac.csail.mit.edu/) - A Sparsely Labeled ACtions Dataset. 520000	videos, 200 action classes, 1.75M clip annotations	pre-defined classes.
+* [VLOG](https://people.eecs.berkeley.edu/~dfouhey/2017/VLOG/index.html) - VLOG From Lifestyle VLOGs to Everyday Interactions: The VLOG Dataset. 114000 videos	pre-defined classes.
+* [Moments in Time](http://moments.csail.mit.edu/) - Moments in Time Dataset: one million videos for event understanding. 1000000	videos, 339 action classes	pre-defined classes
+* [TGIF](http://raingo.github.io/TGIF-Release/) - TUMBLR GIF captioning	125781	videos, 125781 captions	
 
 ### NeuroLex datasets
 * [YouTube disease dataset]() - >30 people in each category using YouTube videos (videos). 

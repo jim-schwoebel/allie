@@ -29,6 +29,7 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * [Voiceome dataset]() - working on creating the world's largest dataset to tie voice information to health traits.
 * [Framingham Heart Study dataset]() - 200 patients with transcriptions (manual) and neuropsychological testing for Alzheimer's and other areas. 
 * [UW research dataset]() - some data associated labels from research assistants collecting data with disease labels (through REDCAP). 
+* [Train-emotions]() - emotion labels using deep learning models + audio. 
 
 ## Text datasets
 * 
@@ -37,8 +38,12 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * 
 
 ## Video datasets
+### Open source 
 * VoxCeleb - https://github.com/andabi/voice-vector
 * Lip reading dataset - http://www.robots.ox.ac.uk/~vgg/data/lip_reading/
+
+### NeuroLex datasets
+* [YouTube disease dataset]() - >30 people in each category using YouTube videos (videos). 
 
 ## CSV datasets 
 ### Open source

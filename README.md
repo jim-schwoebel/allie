@@ -19,6 +19,8 @@ python3 setup.py
 
 settings.json
 
+default_audio_features --> can be 'all' or any specific featurizer ('standard_features')
+
 ```
 default_audio_features=audio_features
 default_text_features=text_features
@@ -39,6 +41,10 @@ model_compress=True
 Bias discovery looks at all the audio files and plots out a bias assessment before modeling. This can help identify areas of the dataset that may need to be augmented before modeling and can work across any type. 
 * solution = class pairing (equal delete)
 * solution = data augmentation (to make one class more represented) / combining with other datasets 
+
+Transcription can happen for audio, image, or video datasets. For audio a standard speech-to-text model (e.g. pocketsphinx) can be used. For image and video, it is assumed an OCR transcription can happen (videos are sampled at some frequency then transcripts are stitched together). 
+
+Default_training script = the type of script used for training. Can be simple, tpot, autokeras, or ludwig.  
 
 Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
 

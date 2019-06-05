@@ -12,10 +12,10 @@ Here are a list of active models:
 * [Train-emotions]() - emotion labels using deep learning models + audio. 
 
 ## Text models 
-* sentiment analysis 
+* Sentiment analysis 
 
 ## Image models
-* object detection
+* Object detection
 
 ## Video models
 * [YouTube disease dataset]() - >30 people in each category using YouTube videos (videos). 

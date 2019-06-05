@@ -15,7 +15,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [sa_features]()
 * [sox_features]()
 * [standard_features]() - standard audio feature array 
-* [spectrogram_features]() - 
+* [spectrogram_features]() 
 
 ### Text
 * [fast_features]()

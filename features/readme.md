@@ -18,8 +18,11 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [spectrogram_features]() - 
 
 ### Text
-* [nltk_features]() - standard text array 
-* [spacy_features]()
+* [fast_features]()
+* [glove_features]() 
+* [nltk_features]() - standard feature array 
+* [spacy_features]() 
+* [w2vec_features]() 
 
 ### Images 
 * [image_features]() - standard image array 

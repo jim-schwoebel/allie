@@ -1,3 +1,11 @@
+'''
+Inspired by https://github.com/drfeinberg/genderless - 
+Praat features that are not affected by changing genders.
+
+David R. Feinberg - Associate Professor in the Department of Psychology, Neuroscience, & Behaviour, McMaster University
+Mcmaster University
+Hamilton, Ontario feinberg@mcmaster.ca http://www.voiceresearch.org
+'''
 import glob, os, json
 import parselmouth
 from parselmouth.praat import call

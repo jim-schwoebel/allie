@@ -22,7 +22,7 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * [Tatoeba](https://tatoeba.org/eng/downloads) - Tatoeba is a large database of sentences, translations, and spoken audio for use in language learning. This download contains spoken English recorded by their community.
 * [Speech accent archive](https://www.kaggle.com/rtatman/speech-accent-archive/version/1) - For various accent detection tasks.
 * [The Emotional Voices Database](https://github.com/numediart/EmoV-DB) - various emotions with 5 voice actors (amused, angry, disgusted, neutral, sleepy).
-* [TIMIT dataset](https://catalog.ldc.upenn.edu/LDC93S1) - Linguistic data consortium dataset for speech recogniition. 
+* [TIMIT dataset](https://catalog.ldc.upenn.edu/LDC93S1) - Linguistic data consortium dataset for speech recogniition. Costs money and is not free, so may skip this one.
 
 ### NeuroLex datasets
 * [JamesVM dataset]() - 170,000+ voicemails left for loved ones around key events like anniversaries or birthdays. 1,000 of these files are annotated. 

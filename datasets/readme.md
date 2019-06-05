@@ -52,3 +52,24 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 
 ### NeuroLex datasets
 * TRIBE 4 application - test 
+
+## repositories
+* [Deepformants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction
+* [Pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - PyWorldVocoder - A Python wrapper for World Vocoder, fundamental frequency determination.
+* [Parselmouth](https://parselmouth.readthedocs.io/en/latest/examples/psychopy_experiments.html)
+* [Genderless](https://github.com/drfeinberg/genderless) - Praat features that are not affected by changing genders.
+* [Noise separation](https://github.com/seanwood/gcc-nmf)
+* [Python-audio-effects](https://github.com/carlthome/python-audio-effects)
+* [Librosa]()
+* [Auditok](https://github.com/amsehili/auditok) - for audio event detection
+* [Age](https://github.com/deepinsight/insightface) - age/gender with video 
+* [Create-noisy](https://github.com/Sato-Kunihiko/audio-SNR/blob/master/create_noisy_minumum_code.py)
+
+## Tutorials
+* [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
+* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
+* [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
+
+
+## modeled after...
+* [PyDataset](https://github.com/iamaziz/PyDataset)

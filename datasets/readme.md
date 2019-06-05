@@ -5,6 +5,8 @@ You can quickly download any of these datasets with the datasets.py script. This
 Note you can search for more datasets using Google DataSet search @ https://toolbox.google.com/datasetsearch or Kaggle @ https://www.kaggle.com/datasets.
 
 ## Audio datasets 
+
+### Open source 
 * [AudioSet](https://research.google.com/audioset/) - A large-scale dataset of manually annotated audio events
 * [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak
 * [LJ speech](https://keithito.com/LJ-Speech-Dataset/) - This is a public domain speech dataset consisting of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours.
@@ -20,6 +22,11 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * [Tatoeba](https://tatoeba.org/eng/downloads) - Tatoeba is a large database of sentences, translations, and spoken audio for use in language learning. This download contains spoken English recorded by their community.
 * [Speech accent archive](https://www.kaggle.com/rtatman/speech-accent-archive/version/1) - For various accent detection tasks.
 * [The Emotional Voices Database](https://github.com/numediart/EmoV-DB) - various emotions with 5 voice actors (amused, angry, disgusted, neutral, sleepy).
+
+### NeuroLex datasets
+* [MHA dataset]()
+* [YouTube disease dataset]()
+* [Voiceome dataset]()
 
 ## Text datasets
 * 

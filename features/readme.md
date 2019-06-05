@@ -71,4 +71,5 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### CSV 
 * be able to determine file type and featurize accordingly on local path ./img.jpg ,./audio.wav, ./video.mp4, ./text.txt, etc.; these will then be featurized with default featurizers for images, audio, video, and text accordingly.
+* accomodate all types on ludwig (https://uber.github.io/ludwig/getting_started/)
 

@@ -48,7 +48,7 @@ There are two main types of audio datasets: speech datasets and audio event/musi
 * [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) - The Million Song Dataset is a freely-available collection of audio features and meta-data for a million contemporary popular music tracks. 280 GB in size.
 * [Urban Sound Dataset](https://urbansounddataset.weebly.com/) - two datasets and a taxonomy for urban sound research.
 
-### NeuroLex voice datasets (not public)
+### NeuroLex voice datasets (not all are public)
 * [JamesVM dataset]() - 170,000+ voicemails left for loved ones around key events like anniversaries or birthdays. 1,000 of these files are annotated. 
 * [MHA dataset]() - 350 self-reported patients with voice tasks and PHQ-9 depression labels.
 * [YouTube disease dataset]() - >30 people in each category using YouTube videos (audio only).

@@ -6,6 +6,8 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 
 ## Audio datasets 
 
+Lots of audio datasets on here. https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad
+
 ### Open source 
 * [AudioSet](https://research.google.com/audioset/) - A large-scale dataset of manually annotated audio events
 * [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak

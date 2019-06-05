@@ -27,6 +27,8 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * [MHA dataset]() - 350 self-reported patients with voice tasks and PHQ-9 depression labels.
 * [YouTube disease dataset]() - >30 people in each category using YouTube videos (audio only).
 * [Voiceome dataset]() - working on creating the world's largest dataset to tie voice information to health traits.
+* [Framingham Heart Study dataset]() - 200 patients with transcriptions (manual) and neuropsychological testing for Alzheimer's and other areas. 
+* [UW research dataset]() - some data associated labels from research assistants collecting data with disease labels (through REDCAP). 
 
 ## Text datasets
 * 

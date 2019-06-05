@@ -24,8 +24,8 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 * [The Emotional Voices Database](https://github.com/numediart/EmoV-DB) - various emotions with 5 voice actors (amused, angry, disgusted, neutral, sleepy).
 
 ### NeuroLex datasets
-* [MHA dataset]()
-* [YouTube disease dataset]()
+* [MHA dataset]() - 350 self-reported patients with voice tasks and PHQ-9 depression labels.
+* [YouTube disease dataset]() - >30 people in each category using YouTube videos (audio only).
 * [Voiceome dataset]()
 
 ## Text datasets

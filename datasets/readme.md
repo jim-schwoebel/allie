@@ -38,7 +38,8 @@ Lots of audio datasets on here. https://towardsdatascience.com/a-data-lakes-wort
 * [Train-emotions]() - emotion labels using deep learning models + audio. 
 
 ## Text datasets
-* 
+many listed https://machinelearningmastery.com/datasets-natural-language-processing/
+* [Sarcasm detection]() - Kaggle dataset off Redditt. 
 
 ## Image datasets
 * 

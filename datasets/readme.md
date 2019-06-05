@@ -7,12 +7,9 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180) and/or [SurveyLex](https://surveylex.com) as well.
 
 ## Audio datasets 
+A larger description of these datasets can be found [https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad](here).
 
-A larger description of these dataset can be found [https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad](here).
-
-### Open source 
-
-#### Speech datasets 
+### Speech datasets 
 * [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak. 12GB in size; spoken text based on text from a number of public domain sources like user-submitted blog posts, old books, movies, and other public speech corpora.
 * [LJ speech](https://keithito.com/LJ-Speech-Dataset/) - This is a public domain speech dataset consisting of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours.
 * [CMU Wilderness](http://festvox.org/cmu_wilderness/) - (noncommercial) - not available but a great speech dataset many accents reciting passages from the Bible.
@@ -39,7 +36,7 @@ A larger description of these dataset can be found [https://towardsdatascience.c
 * [Arabic Speech Corpus](http://en.arabicspeechcorpus.com/) - The Arabic Speech Corpus (1.5 GB) is a Modern Standard Arabic (MSA) speech corpus for speech synthesis. The corpus contains phonetic and orthographic transcriptions of more than 3.7 hours of MSA speech aligned with recorded speech on the phoneme level. The annotations include word stress marks on the individual phonemes. 
 * [Multimodal EmotionLines Dataset (MELD)](https://github.com/SenticNet/MELD) - Multimodal EmotionLines Dataset (MELD) has been created by enhancing and extending EmotionLines dataset. MELD contains the same dialogue instances available in EmotionLines, but it also encompasses audio and visual modality along with text. MELD has more than 1400 dialogues and 13000 utterances from Friends TV series. Each utterance in a dialogue has been labeled with— Anger, Disgust, Sadness, Joy, Neutral, Surprise and Fear. 
 
-#### Audio events and music 
+### Audio events and music 
 * [AudioSet](https://research.google.com/audioset/) - An expanding ontology of 632 audio event classes and a collection of 2,084,320 human-labeled 10-second sound clips drawn from YouTube videos. 
 * [Bird audio detection challenge](http://machine-listening.eecs.qmul.ac.uk/bird-audio-detection-challenge/) -  This challenge contained new datasets (5.4 GB) collected in real live bio-acoustics monitoring projects, and an objective, standardized evaluation framework.
 * [Environmental audio dataset](http://www.cs.tut.fi/~heittolt/datasets) - Audio data collection and manual data annotation both are tedious processes, and lack of proper development dataset limits fast development in the environmental audio research.

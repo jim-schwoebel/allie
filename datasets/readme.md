@@ -48,7 +48,9 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 
 ## CSV datasets 
 ### Open source
-* []()
+* [](see pydataset)
+### NeuroLex datasets
+* TRIBE 4 application - test 
 
 
 
@@ -66,9 +68,6 @@ Note all these would output the composition randomness from all the datasets
 ```
 5 AudioSet, 10 train-diseases, 5 TIMIT, etc.
 ```
-
-### NeuroLex datasets
-* TRIBE 4 application - test 
 
 ## repositories
 * [Deepformants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction

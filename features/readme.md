@@ -14,18 +14,24 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [pyaudio_features]()
 * [sa_features]()
 * [sox_features]()
-* [standard_features]() - standard audio array 
+* [standard_features]() - standard audio feature array 
 * [spectrogram_features]() - 
 
 ### Text
 * [fast_features]()
 * [glove_features]() 
-* [nltk_features]() - standard feature array 
+* [nltk_features]() - standard text feature array 
 * [spacy_features]() 
 * [w2vec_features]() 
 
 ### Images 
-* [image_features]() - standard image array 
+* [image_features]() - standard image feature array
+* [inception_features]() 	
+* [resnet_features]()
+* [tesseract_features]()	
+* [vgg16_features]() 
+* [vgg19_features]() 
+* [xception_features]() 
 
 ### Videos 
 * [video_features]() - standard video array 

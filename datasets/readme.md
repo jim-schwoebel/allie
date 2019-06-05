@@ -42,7 +42,7 @@ many listed https://machinelearningmastery.com/datasets-natural-language-process
 * [Sarcasm detection]() - Kaggle dataset off Redditt. 
 
 ## Image datasets
-* [MNIST](http://yann.lecun.com/exdb/mnist/) - hand-written image dataset 
+* [MNIST](http://yann.lecun.com/exdb/mnist/) - hand-written image dataset, standard to measure accuracy from Yan Lecun @ NYU.
 * [MS-COCO](http://cocodataset.org/#download) - COCO is a large-scale object detection, segmentation, and captioning dataset. 330K images (>200K labeled), 1.5 million object instances, 80 object categories, 91 stuff categories, 5 captions per image, 250,000 people with keypoints.
 * [ImageNet](http://www.image-net.org/) - ImageNet is an image database organized according to the WordNet hierarchy (currently only the nouns), in which each node of the hierarchy is depicted by hundreds and thousands of images. 
 * [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html) - 15,851,536 boxes on 600 categories, 2,785,498 instance segmentations on 350 categories, 36,464,560 image-level labels on 19,959 categories, 391,073 relationship annotations of 329 relationships, Extension - 478,000 crowdsourced images with 6,000+ categories.

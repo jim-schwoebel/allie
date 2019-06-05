@@ -23,10 +23,10 @@ class SimplisticTest(unittest.TestCase):
     # can transcribe image files 
     # can transcribe video files 
 
-    # can featurize audio files via specified featurizer 
-    # can featurize text files via specified featurizer 
-    # can featurize image files via specified featurizer 
-    # can featurize video files via specified featurizer 
+    # can featurize audio files via specified featurizer (can be all featurizers) 
+    # can featurize text files via specified featurizer (can be all featurizers)
+    # can featurize image files via specified featurizer (can be all featurizers) 
+    # can featurize video files via specified featurizer (can be all featurizers) 
 
     # can load machine learning models
      

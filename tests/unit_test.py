@@ -23,6 +23,8 @@ class SimplisticTest(unittest.TestCase):
     # can transcribe image files 
     # can transcribe video files 
 
+    # can fetch dataset (common_voice) in folder 
+
     # can featurize audio files via specified featurizer (can be all featurizers) 
     # can featurize text files via specified featurizer (can be all featurizers)
     # can featurize image files via specified featurizer (can be all featurizers) 
@@ -31,6 +33,11 @@ class SimplisticTest(unittest.TestCase):
     # can load machine learning models
      
     # can train machine learning model via specified trainer 
+
+    # can augment dataset - audio files (audio_augmentation) 
+    # can augment dataset - text files (text_augmentation) 
+    # can augment dataset - image files (image_augmentation)
+    # can augment dataset - video files (video_augmentation) 
 
     # if applicable, can compress audio models 
      

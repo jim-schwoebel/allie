@@ -212,8 +212,6 @@ At least 3 questions (5.4 questions on average) per image, 10 ground truth answe
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
 ## References
-
-### Everything else
 * [Audio datasets](https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
 * [Datasets-natural-language-processing](https://machinelearningmastery.com/datasets-natural-language-processing/) 
 * [Google Dataset Search](https://toolbox.google.com/datasetsearch)

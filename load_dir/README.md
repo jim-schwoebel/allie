@@ -12,3 +12,6 @@ Specifically, just drag and drop sample data in here and predictions will be mad
 4. See predictions for each file in a .JSON format. The feature array will follow the standard feature array vector along with any audio, image, or video transcripts that were made. 
 
 ## detailed instructions (regression)  
+
+1. convert to .CSV file format 
+2. run load_regression script (TPOT)

@@ -55,7 +55,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * BERT pre-trained model 
 
 ### Images 
-* ??
+* Add in transcription to standard image array 
 
 ### Videos 
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 

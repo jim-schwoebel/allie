@@ -19,6 +19,6 @@ def inception_featurize(file):
     # feature shape = (25088,)
     labels=list()
     for i in range(len(features)):
-    	labels.append('Inception_feature_%s'%(str(i+1)))
+    	labels.append('inception_feature_%s'%(str(i+1)))
     return features, labels 
 

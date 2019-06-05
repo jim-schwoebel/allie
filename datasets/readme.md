@@ -7,7 +7,7 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180) and/or [SurveyLex](https://surveylex.com) as well.
 
 ## Audio datasets 
-A larger description of these datasets can be found [https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad](here).
+There are two main types of audio datasets: speech datasets and audio event/music datasets.
 
 ### Speech datasets 
 * [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak. 12GB in size; spoken text based on text from a number of public domain sources like user-submitted blog posts, old books, movies, and other public speech corpora.
@@ -99,4 +99,10 @@ For a list of all the open source videos + papers below, check out: https://www.
 ## CSV datasets 
 ### Open source
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
+
+## References
+* [Audio datasets][https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
+* [NP Datasets](https://github.com/niderhoff/nlp-datasets)
+* [Datasets-natural-language-processing](https://machinelearningmastery.com/datasets-natural-language-processing/) 
+* [Video datasets](https://www.di.ens.fr/~miech/datasetviz/)
 

@@ -60,9 +60,8 @@ This aligns well with how we define 'samples' in our pipeline.
 
 ### Datasets
 * [PyDataset](https://github.com/iamaziz/PyDataset) - numerical datasets
+* [CommonVoice]() - download link to Common Voice - standard dataset 
 * [AudioSet_download]() - download link to AudioSet 
-* [CommonVoice]() - download link to Common Voice 
-* [Training datasets - .JSON]() - accent detection, etc. 
 
 ### Visualization
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)

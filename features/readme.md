@@ -4,6 +4,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 ## Implemented 
 ### Audio
+* [Librosa]()
 
 ### Text
 
@@ -14,14 +15,13 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 ## Not Implemented / Work in progress
 ### Audio
 * [Pause features](https://github.com/jim-schwoebel/pauses)
+* [Python-speech-features]()
 * [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental freuqency estimation
 * [DeepFormants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction.
 * [Pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - PyWorldVocoder - A Python wrapper for World Vocoder, fundamental frequency determination.
 * [Noise separation](https://github.com/seanwood/gcc-nmf)
 * [Python-audio-effects](https://github.com/carlthome/python-audio-effects)
-* [Librosa]()
 * [Auditok](https://github.com/amsehili/auditok) - for audio event detection
-* [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * [Create-noisy](https://github.com/Sato-Kunihiko/audio-SNR/blob/master/create_noisy_minumum_code.py)
 
 ### Text
@@ -31,7 +31,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 * ??
 
 ### Videos 
-* Scene detection annotation models 
+* [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 
 ### transcripts
 * change transcript array to have audio_transcript, image_transcript, and video_transcript

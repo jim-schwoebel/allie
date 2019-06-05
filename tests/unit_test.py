@@ -13,6 +13,28 @@ class SimplisticTest(unittest.TestCase):
         a = 'a'
         b = 'a'
         self.assertEqual(a, b)
- 
+          
+    # can read audio files
+    # can read text files 
+    # can read image files 
+    # can read video files 
+     
+    # can transcribe audio files 
+    # can transcribe image files 
+    # can transcribe video files 
+
+    # can featurize audio files via specified featurizer 
+    # can featurize text files via specified featurizer 
+    # can featurize image files via specified featurizer 
+    # can featurize video files via specified featurizer 
+
+    # can load machine learning models
+     
+    # can train machine learning model via specified trainer 
+
+    # if applicable, can compress audio models 
+     
+    # if applicable, can create YAML files (for production) 
+     
 if __name__ == '__main__':
     unittest.main()

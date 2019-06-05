@@ -7,10 +7,15 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).
 
 ### Audio
-* [audio_features]() - standard audio array 
-* [librosa_features]() 
 * [audioset_features]()
+* [librosa_features]()
+* [meta_features]()
 * [praat_features]()
+* [pyaudio_features]()
+* [sa_features]()
+* [sox_features]()
+* [standard_features]() - standard audio array 
+* [spectrogram_features]() - 
 
 ### Text
 * [nltk_features]() - standard text array 

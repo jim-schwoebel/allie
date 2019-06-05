@@ -49,15 +49,6 @@ A larger description of these dataset can be found [https://towardsdatascience.c
 * [Million Song Dataset](https://labrosa.ee.columbia.edu/millionsong/) - The Million Song Dataset is a freely-available collection of audio features and meta-data for a million contemporary popular music tracks. 280 GB in size.
 * [Urban Sound Dataset](https://urbansounddataset.weebly.com/) - two datasets and a taxonomy for urban sound research.
 
-### NeuroLex datasets (need IRB access)
-* [JamesVM dataset]() - 170,000+ voicemails left for loved ones around key events like anniversaries or birthdays. 1,000 of these files are annotated. 
-* [MHA dataset]() - 350 self-reported patients with voice tasks and PHQ-9 depression labels.
-* [YouTube disease dataset]() - >30 people in each category using YouTube videos (audio only).
-* [Voiceome dataset]() - working on creating the world's largest dataset to tie voice information to health traits.
-* [Framingham Heart Study dataset]() - 200 patients with transcriptions (manual) and neuropsychological testing for Alzheimer's and other areas. 
-* [UW research dataset]() - some data associated labels from research assistants collecting data with disease labels (through REDCAP). 
-* [Train-emotions]() - emotion labels using deep learning models + audio. 
-
 ## Text datasets
 many listed https://machinelearningmastery.com/datasets-natural-language-processing/ and https://github.com/niderhoff/nlp-datasets
 * [Sarcasm detection]() - Kaggle dataset off Redditt. 

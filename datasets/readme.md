@@ -11,8 +11,8 @@ You can always create datasets with [mTurk](https://towardsdatascience.com/how-i
 Lots of audio datasets on here. https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad
 
 ### Open source 
-* [AudioSet](https://research.google.com/audioset/) - A large-scale dataset of manually annotated audio events
-* [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak
+* [AudioSet](https://research.google.com/audioset/) - A large-scale dataset of manually annotated audio events.
+* [Common Voice](https://voice.mozilla.org/) - Common Voice is Mozilla's initiative to help teach machines how real people speak.
 * [LJ speech](https://keithito.com/LJ-Speech-Dataset/) - This is a public domain speech dataset consisting of 13,100 short audio clips of a single speaker reading passages from 7 non-fiction books. A transcription is provided for each clip. Clips vary in length from 1 to 10 seconds and have a total length of approximately 24 hours.
 * [CMU Wilderness](http://festvox.org/cmu_wilderness/) - (noncommercial) - not available but a great one. 
 * [Urban Sound Dataset](https://urbansounddataset.weebly.com/) - two datasets and a taxonomy for urban sound research.

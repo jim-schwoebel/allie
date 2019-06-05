@@ -48,6 +48,10 @@ Default_training script = the type of script used for training. Can be simple, t
 
 Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
 
+Create YAML means that the entire repository will be generated to host the model for production. 
+
+Model compression if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.
+
 ## types of data
 
 Load folders and data script type based on principal type of file.

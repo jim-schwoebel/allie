@@ -3,7 +3,9 @@
 Here are a list of active models:
 
 ## Audio models
-* Gender detection --> {feature array} --> 98% +/- 0.002. 
+* NLX-model-gender --> Gender detection --> {feature array} --> 98% +/- 0.002. 
+* Age 
+* Stress
 
 ## Text models 
 * TBA 

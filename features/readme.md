@@ -14,3 +14,9 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 * [Auditok](https://github.com/amsehili/auditok) - for audio event detection
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * [Create-noisy](https://github.com/Sato-Kunihiko/audio-SNR/blob/master/create_noisy_minumum_code.py)
+
+
+### transcripts
+* change transcript array to have audio_transcript, image_transcript, and video_transcript
+* all of these transcript types are different
+* image transcript = pytesseract, video transcript = pytesseract + all images cut at interval, audio transcript = transcription engine.

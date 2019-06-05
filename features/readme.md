@@ -23,9 +23,9 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 * [Parselmouth image features](https://github.com/YannickJadoul/Parselmouth) - fundamental frequency estimation.
 * [DeepFormants](https://github.com/MLSpeech/DeepFormants) - formant frequency extraction.
 * [Pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - PyWorldVocoder - A Python wrapper for World Vocoder, fundamental frequency determination.
-* [Auditok](https://github.com/amsehili/auditok) - for audio event detection
-* [Noise separation](https://github.com/seanwood/gcc-nmf) - noise separation technique 
-* [Make noisy](https://github.com/Sato-Kunihiko/audio-SNR/) - noisy add-on 
+* [Auditok](https://github.com/amsehili/auditok) - for audio event detection.
+* [Noise separation](https://github.com/seanwood/gcc-nmf) - noise separation technique.
+* [Make noisy](https://github.com/Sato-Kunihiko/audio-SNR/) - noisy add-on.
 
 ### Text
 * BERT pre-trained model 

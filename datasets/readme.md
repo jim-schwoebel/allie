@@ -163,9 +163,7 @@ At least 3 questions (5.4 questions on average) per image, 10 ground truth answe
 * [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) - The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images. 
 
 ## Video datasets
-For a list of all the open source videos + papers below, check out: https://www.di.ens.fr/~miech/datasetviz/
 
-### Open source 
 * [Lip reading dataset](http://www.robots.ox.ac.uk/~vgg/data/lip_reading/) - LRW, LRS2 and LRS3 are audio-visual speech recognition datasets collected from in the wild videos. 6M+ word instances, 800+ hours, 5,000+ identities
 * [HMDB51](http://serre-lab.clps.brown.edu/resource/hmdb-a-large-human-motion-database/) - HMDB: A Large Video Database for Human Motion Recognition - Action recognition	6766 videos,	51 action classes	pre-defined classes.
 * [UCF101](https://www.crcv.ucf.edu/data/UCF101.php) - UCF101: A Dataset of 101 Human Actions Classes From Videos in The Wild. 	13320	videos, 101 action classes	pre-defined classes
@@ -199,7 +197,6 @@ For a list of all the open source videos + papers below, check out: https://www.
 * [TGIF](http://raingo.github.io/TGIF-Release/) - TUMBLR GIF captioning	125781	videos, 125781 captions	
 
 ## CSV datasets 
-### Open source
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
 ## References

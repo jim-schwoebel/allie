@@ -5,7 +5,7 @@ from keras.applications.vgg16 import decode_predictions
 from keras.applications.vgg16 import VGG16
 import numpy as np
 
-def VGG16_featurize(file):
+def vgg16_featurize(file):
     # load model 
     model = VGG16(weights='imagenet', include_top=False)
     img_path = file 

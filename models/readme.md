@@ -3,7 +3,6 @@
 Here are a list of active models:
 
 ## Audio models
-### NeuroLex datasets (need IRB access)
 * [JamesVM dataset]() - 170,000+ voicemails left for loved ones around key events like anniversaries or birthdays. 1,000 of these files are annotated. 
 * [MHA dataset]() - 350 self-reported patients with voice tasks and PHQ-9 depression labels.
 * [YouTube disease dataset]() - >30 people in each category using YouTube videos (audio only).
@@ -22,4 +21,4 @@ Here are a list of active models:
 * asf
 
 ## CSV models 
-* asf
+* TRIBE 4 application.

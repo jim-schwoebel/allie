@@ -4,6 +4,8 @@ You can quickly download any of these datasets with the datasets.py script. This
 
 Note you can search for more datasets using Google DataSet search @ https://toolbox.google.com/datasetsearch or Kaggle @ https://www.kaggle.com/datasets.
 
+You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180) and/or [SurveyLex](https://surveylex.com) as well.
+
 ## Audio datasets 
 
 Lots of audio datasets on here. https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad

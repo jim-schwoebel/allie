@@ -96,9 +96,6 @@ For a list of all the open source videos + papers below, check out: https://www.
 * [Moments in Time](http://moments.csail.mit.edu/) - Moments in Time Dataset: one million videos for event understanding. 1000000	videos, 339 action classes	pre-defined classes
 * [TGIF](http://raingo.github.io/TGIF-Release/) - TUMBLR GIF captioning	125781	videos, 125781 captions	
 
-### NeuroLex datasets
-* [YouTube disease dataset]() - >30 people in each category using YouTube videos (videos). 
-
 ## CSV datasets 
 ### Open source
 * see [PyDataset](https://github.com/iamaziz/PyDataset)

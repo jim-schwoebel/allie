@@ -1,9 +1,9 @@
-import VGG16_features as v16f
+import vgg16_features as v16f
 import image_features as imf 
-import Inception_features as incf 
-import Xception_features as xf 
-import Resnet_features as rf 
-import VGG19_features as v19f
+import inception_features as incf 
+import xception_features as xf 
+import resnet_features as rf 
+import vgg19_features as v19f
 import tesseract_features as tf
 import helpers.audio_plot as ap 
 import os, json
@@ -68,11 +68,11 @@ for i in range(len(listdir)):
 			image_features=basearray['features']['image']
 
 			# features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-			# features, labels=v16f.VGG16_featurize(imgfile)
+			# features, labels=v16f.vgg16_featurize(imgfile)
 			# features, labels=incf.inception_featurize(imgfile)
 			# features, labels=xf.xception_featurize(imgfile)
 			# features, labels=rf.resnet_featurize(imgfile)
-			# features, labels=v16f.VGG16_featurize(imgfile)
+			# features, labels=v16f.vgg16_featurize(imgfile)
 
 			# specialty feature script for pytesseract 
 			transcript, features, labels = tf.tesseract_featurize(imgfile)
@@ -99,11 +99,11 @@ for i in range(len(listdir)):
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 			
 			# features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-			# features, labels=v16f.VGG16_featurize(imgfile)
+			# features, labels=v16f.vgg16_featurize(imgfile)
 			# features, labels=incf.inception_featurize(imgfile)
 			# features, labels=xf.xception_featurize(imgfile)
 			# features, labels=rf.resnet_featurize(imgfile)
-			# features, labels=v16f.VGG16_featurize(imgfile)
+			# features, labels=v16f.vgg16_featurize(imgfile)
 
 			# specialty feature script for pytesseract 
 			transcript, features, labels = tf.tesseract_featurize(imgfile)

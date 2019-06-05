@@ -146,7 +146,7 @@ Text datasets mostly separated by language.
 ### Arabic datasets
 *   [SaudiNewsNet](https://github.com/ParallelMazen/SaudiNewsNet): 31,030 Arabic newspaper articles alongwith metadata, extracted from various online Saudi newspapers. (2 MB)
 
-### German Datasets 
+### German datasets 
 *   [German Political Speeches Corpus](http://purl.org/corpus/german-speeches): collection of recent speeches held by top German representatives (25 MB, 11 MTokens)
 *   [NEGRA](http://www.coli.uni-saarland.de/projects/sfb378/negra-corpus/negra-corpus.html): A Syntactically Annotated Corpus of German Newspaper Texts. Available for free for all Universities and non-profit organizations. Need to sign and send form to obtain. (on request)
 *   [Ten Thousand German News Articles Dataset](https://tblock.github.io/10kGNAD/): 10273 german language news articles categorized into nine classes for topic classification. (26.1 MB)

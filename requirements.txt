@@ -6,4 +6,5 @@ six
 luwdwig 
 spacy 
 scikit-small-ensemble
+parselmouth-praat
 wget 

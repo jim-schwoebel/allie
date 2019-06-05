@@ -13,15 +13,6 @@
 [submodule "datasets/PyDataset"]
 	path = datasets/PyDataset
 	url = https://github.com/iamaziz/PyDataset
-[submodule "datasets/labeling/sound_event_detection"]
-	path = labeling/sound_event_detection
-	url = https://github.com/jim-schwoebel/sound_event_detection
-[submodule "datasets/labeling/labelImg"]
-	path = labeling/labelImg
-	url = https://github.com/tzutalin/labelImg
-[submodule "datasets/labeling/labelme"]
-	path = labeling/labelme
-	url = https://github.com/wkentaro/labelme
 [submodule "datasets/youtube_scrape"]
 	path = datasets/youtube_scrape
 	url = https://github.com/jim-schwoebel/youtube_scrape

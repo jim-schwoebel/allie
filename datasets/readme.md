@@ -42,7 +42,13 @@ many listed https://machinelearningmastery.com/datasets-natural-language-process
 * [Sarcasm detection]() - Kaggle dataset off Redditt. 
 
 ## Image datasets
-* 
+* [MNIST]()
+* [MS-COCO]()
+* [ImageNet]()
+* [Open Images Dataset]()
+* [VisualQA]()
+* [The Street View House Numbers (SVHN)]()
+* [CIFAR-10]()
 
 ## Video datasets
 ### Open source 

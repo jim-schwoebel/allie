@@ -8,7 +8,7 @@ You can always create datasets with [mTurk](https://towardsdatascience.com/how-i
 
 ## Audio datasets 
 
-Lots of audio datasets on here. https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad
+A larger description of these dataset can be found [https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad](here).
 
 ### Open source 
 * [AudioSet](https://research.google.com/audioset/) - A large-scale dataset of manually annotated audio events.

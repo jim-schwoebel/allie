@@ -7,10 +7,14 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 * [Librosa]()
 
 ### Text
+* [NLTK]()
+* [SpaCy]()
 
 ### Images 
+* [OpenCV]()
 
 ### Videos 
+* [Scikit-Video]()
 
 ## Not Implemented / Work in progress
 ### Audio

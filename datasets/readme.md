@@ -106,5 +106,3 @@ For a list of all the open source videos + papers below, check out: https://www.
 ### Open source
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
-### NeuroLex datasets
-* TRIBE 4 application.

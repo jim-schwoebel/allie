@@ -13,6 +13,11 @@ Files can take form:
 | CSV file | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate). You can input any of the Ludwig data types. (binary, numerical, category, set, bag, sequence, text, timeseries, image) | 
 
 ## scripts to build
+
+If augment == True, can augment.
+
+### Audio augmentation 
+
 * [create-controls.py]() - given a group of folders, you can create a control with equal mixture of speakers 
 * [gender-controls]() - create a group of female controls or male controls
 * [age-controls]() - create a group of age-based controls 
@@ -23,6 +28,15 @@ Note all these would output the composition randomness from all the datasets
 ```
 5 AudioSet, 10 train-diseases, 5 TIMIT, etc.
 ```
+
+### Text augmentatin
+* text augmentation library
+
+### Image augmentation 
+* image augmentation library
+
+### Video augmentation
+* video augmentation library 
 
 ## Tutorials (Readmes)
 * Audio file training example

@@ -18,6 +18,21 @@ from moviepy.editor import VideoFileClip
 from matplotlib import pyplot as plt
 from pydub import AudioSegment
 
+def prev_dir(directory):
+    g=directory.split('/')
+    # print(g)
+    lastdir=g[len(g)-1]
+    i1=directory.find(lastdir)
+    directory=directory[0:i1]
+    return directory
+
+#### to extract tesseract features 
+curdir=os.getcwd()
+prevdir=prev_dir(os.getcwd())
+sys.path.append(prevdir+ '/image_features')
+import tesseract_features as tf 
+os.chdir(curdir)
+
 # DEFINE HELPER FUNCTIONS
 #############################################################
 def convert(file):
@@ -585,6 +600,9 @@ def video_featurize(videofile, cur_dir,haar_dir):
     #take first image as a background image 
     background=cv2.imread(listdir[1])
     image_features=np.zeros(160)
+    image_features2=np.zeros(63)
+
+    image_transcript=''
     for i in range(len(listdir)):
         if listdir[i][-4:]=='.png':
             os.chdir(outputdir)
@@ -594,19 +612,22 @@ def video_featurize(videofile, cur_dir,haar_dir):
             print(frame)
             img=img+frame_new
             iterations=iterations+1
-            image_features_temp, image_labels =image_featurize(cur_dir,haar_dir,listdir[i])
+            image_features_temp, image_labels = image_featurize(cur_dir,haar_dir,listdir[i])
+            os.chdir(outputdir)
+            ttranscript, tfeatures, tlabels = tf.tesseract_featurize(listdir[i])
+            image_transcript=image_transcript+ttranscript 
+            image_features2=image_features2+tfeatures 
             image_features=image_features+image_features_temp
             #os.remove(listdir[i])
 
     # averaged image features
     image_features=(1/iterations)*image_features
+    image_features2=(1/iterations)*image_features2
 
     # averaged image over background             
     img=(1/iterations)*img-background
     skvideo.io.vwrite("output.png", img)
     avg_image_features, image_labels =image_featurize(cur_dir,haar_dir, "output.png")
-    os.remove('output.png')
-
     # remove temp directory 
     os.chdir(now)
     
@@ -680,7 +701,12 @@ def video_featurize(videofile, cur_dir,haar_dir):
     avg_image_labels=list()
     for i in range(len(image_labels)):
         avg_image_labels.append('avg_'+image_labels[i])
-    video_labels=image_labels + avg_image_labels 
+
+    avg_image_labels2=list()
+    for i in range(len(tlabels)):
+        avg_image_labels2.append('avg_imgtranscript_'+tlabels[i])
+
+    video_labels=image_labels + avg_image_labels + avg_image_labels2
     labels=labels+video_labels 
     # other features
     other_features = [frames,duration]
@@ -690,6 +716,7 @@ def video_featurize(videofile, cur_dir,haar_dir):
     # append all the features together
     features = np.append(audio_features, text_features)
     features = np.append(features, image_features)
+    features = np.append(features, image_features2)
     features = np.append(features, video_features)
     features = np.append(features, other_features)
 
@@ -698,4 +725,4 @@ def video_featurize(videofile, cur_dir,haar_dir):
     shutil.rmtree('output')
     os.chdir(cur_dir)
 
-    return features, labels, transcript 
+    return features, labels, transcript, image_transcript 

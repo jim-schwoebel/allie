@@ -26,6 +26,7 @@ default_image_features=image_features
 default_video_features=video_features
 default_training_script=keras
 augment_data=True 
+visualize_data=True 
 model_compress=True
 ```
 

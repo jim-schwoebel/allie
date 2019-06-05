@@ -101,8 +101,11 @@ For a list of all the open source videos + papers below, check out: https://www.
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
 ## References
-* [Audio datasets][https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
-* [NP Datasets](https://github.com/niderhoff/nlp-datasets)
+* [Audio datasets](https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
 * [Datasets-natural-language-processing](https://machinelearningmastery.com/datasets-natural-language-processing/) 
+* [Google Dataset Search](https://toolbox.google.com/datasetsearch)
+* [Kaggle](https://kaggle.com)
+* [NP Datasets](https://github.com/niderhoff/nlp-datasets)
 * [Video datasets](https://www.di.ens.fr/~miech/datasetviz/)
+
 

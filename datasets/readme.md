@@ -65,5 +65,4 @@ Large list of video datasets here: https://www.di.ens.fr/~miech/datasetviz/
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
 ### NeuroLex datasets
-* TRIBE 4 application - test 
-
+* TRIBE 4 application.

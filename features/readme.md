@@ -61,9 +61,10 @@ Note that all scripts implemented have features and their corresponding labels. 
 * BERT pre-trained model 
 
 ### Images 
-* Add in transcription to standard image array 
+* Add in transcription to standard image array if settings.JSON image transcript == True.
 
 ### Videos 
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 
+* add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.
 
 

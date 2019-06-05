@@ -4,7 +4,9 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 ## Implemented 
 ### Audio
-* [Librosa]()
+* [librosa_features]()
+* [audioset_features]()
+* [praat_features]()
 
 ### Text
 * [NLTK]()

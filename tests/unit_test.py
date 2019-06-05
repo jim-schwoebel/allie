@@ -33,9 +33,12 @@ class SimplisticTest(unittest.TestCase):
     # can featurize image files via specified featurizer (can be all featurizers) 
     # can featurize video files via specified featurizer (can be all featurizers) 
 
-    # can load machine learning models
+    # can load SC machine learning models
+    # can load TPOT models 
+    # can load keras deep learning models 
+    # can load ludwig deep learning models 
      
-    # can train machine learning model via specified trainer 
+    # can train machine learning model via specified trainer (test)
 
     # can augment dataset - audio files (audio_augmentation) 
     # can augment dataset - text files (text_augmentation) 

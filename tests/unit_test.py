@@ -3,7 +3,7 @@ Simple unit test testing the default parameters
 of the repository. 
 
 Note this unit_testing requires the settings.json
-to defined.
+to defined in the base directory.
 '''
 import unittest
 

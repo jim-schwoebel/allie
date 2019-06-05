@@ -169,6 +169,11 @@ Text datasets mostly separated by language.
 
 
 ## Image datasets
+
+Standard image datasets, alphabetized. 
+* [MNIST](http://yann.lecun.com/exdb/mnist/) - standard dataset used for image classification / regression. 
+
+### Common image datasets 
 * [MNIST](http://yann.lecun.com/exdb/mnist/) - hand-written image dataset, standard to measure accuracy from Yan Lecun @ NYU.
 * [MS-COCO](http://cocodataset.org/#download) - COCO is a large-scale object detection, segmentation, and captioning dataset. 330K images (>200K labeled), 1.5 million object instances, 80 object categories, 91 stuff categories, 5 captions per image, 250,000 people with keypoints.
 * [ImageNet](http://www.image-net.org/) - ImageNet is an image database organized according to the WordNet hierarchy (currently only the nouns), in which each node of the hierarchy is depicted by hundreds and thousands of images. 
@@ -180,6 +185,10 @@ At least 3 questions (5.4 questions on average) per image, 10 ground truth answe
 
 ## Video datasets
 
+Standard video datasets, alphabetized. 
+* [MNIST](http://yann.lecun.com/exdb/mnist/) - standard dataset used for video classification / regression. 
+
+### Common video datasets 
 * [20BN-JESTER](https://www.twentybn.com/datasets/jester) - Human Hand Gestures Dataset. 148000 videos	27 classes	pre-defined classes.
 * [20BN-SOMETHING-SOMETHING](https://www.twentybn.com/datasets/something-something) - The 20BN-SOMETHING-SOMETHING dataset is a large collection of densly-labeled video clips that show humans performing predefined basic actions with every day objects. 108000 videos, 174 classes	pre-defined classes.
 * [ActivityNet](http://activity-net.org/) - A Large-Scale Video Benchmark for Human Activity Understanding. 28000 videos,	203 classes	pre-defined classes.

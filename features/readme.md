@@ -20,18 +20,18 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [pyaudio_features]()
 * [sa_features]()
 * [sox_features]()
-* [standard_features]() - standard audio feature array 
+* [standard_features]() - standard audio feature array (default)
 * [spectrogram_features]() 
 
 ### Text
 * [fast_features]()
 * [glove_features]() 
-* [nltk_features]() - standard text feature array 
+* [nltk_features]() - standard text feature array (default)
 * [spacy_features]() 
 * [w2vec_features]() 
 
 ### Images 
-* [image_features]() - standard image feature array
+* [image_features]() - standard image feature array (default)
 * [inception_features]() 	
 * [resnet_features]()
 * [tesseract_features]()	
@@ -40,7 +40,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [xception_features]() 
 
 ### Videos 
-* [video_features]() - standard video feature array
+* [video_features]() - standard video feature array (default)
 * [y8m_features]() 
 
 ### CSV 

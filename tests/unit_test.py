@@ -23,7 +23,7 @@ class SimplisticTest(unittest.TestCase):
     # can transcribe image files 
     # can transcribe video files 
 
-    # can fetch dataset (common_voice) in folder 
+    # can fetch dataset (common_voice) in folder (internet connection exists) 
 
     # can featurize audio files via specified featurizer (can be all featurizers) 
     # can featurize text files via specified featurizer (can be all featurizers)

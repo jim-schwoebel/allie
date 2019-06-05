@@ -51,6 +51,7 @@ There are two main types of audio datasets: speech datasets and audio event/musi
 ## Text datasets
 
 Text datasets mostly separated by language.
+* [TBA] - standard dataset used for text classification 
 
 ### Datasets (English, multilang)
 *   [Apache Software Foundation Public Mail Archives](http://aws.amazon.com/de/datasets/apache-software-foundation-public-mail-archives/): all publicly available Apache Software Foundation mail archives as of July 11, 2011 (200 GB)

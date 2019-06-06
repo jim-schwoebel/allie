@@ -11,21 +11,21 @@ def make_features(sampletype):
 
 	# only add labels when we have actual labels.
 	features={'audio':dict(),
-            'text': dict(),
-            'image':dict(),
-            'video':dict(),
-            'csv': dict(),
-            }
+		    'text': dict(),
+		    'image':dict(),
+		    'video':dict(),
+		    'csv': dict(),
+		    }
             
  	transcripts={'audio':dict(),
-              'text': dict(),
-              'video':dict(),
-              }
+		      'text': dict(),
+		      'video':dict(),
+		      }
 
 	data={'sampletype': sampletype,
-        'features': features,
-        'transcripts': transcripts,
-        'labels': []}
+		'features': features,
+		'transcripts': transcripts,
+		'labels': []}
         
 ```
 

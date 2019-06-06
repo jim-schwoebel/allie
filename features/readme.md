@@ -87,6 +87,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [Noise separation](https://github.com/seanwood/gcc-nmf) - noise separation technique.
 * [Make noisy](https://github.com/Sato-Kunihiko/audio-SNR/) - noisy add-on.
 * [Speaker diarization](https://github.com/faroit/CountNet) - counting # of speakers and shifts (CountNet). 
+* [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for speech mfcc coefficients in window lengths for speaker recognition / i Vectors. 
 
 ### Text
 * BERT pre-trained model 

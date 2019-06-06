@@ -19,6 +19,7 @@ def make_features(sampletype):
             
  	transcripts={'audio':dict(),
 		      'text': dict(),
+		      'image': dict(),
 		      'video':dict(),
 		      }
 

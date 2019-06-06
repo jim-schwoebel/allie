@@ -86,6 +86,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [Auditok](https://github.com/amsehili/auditok) - for audio event detection.
 * [Noise separation](https://github.com/seanwood/gcc-nmf) - noise separation technique.
 * [Make noisy](https://github.com/Sato-Kunihiko/audio-SNR/) - noisy add-on.
+* [Speaker diarization](https://github.com/faroit/CountNet) - counting # of speakers and shifts (CountNet). 
 
 ### Text
 * BERT pre-trained model 

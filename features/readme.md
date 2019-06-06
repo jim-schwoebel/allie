@@ -34,7 +34,7 @@ Note that there can be audio transcripts, image transcripts, and video transcrip
 
 Sampletype = 'audio', 'text', 'image', 'video', 'csv'
 
-Note that only .CSV files may have audio, text, image, video features all-together. Otherwise, audio files likely will have audio features, text files will have text features, image files will have image features, and video files will have video features. 
+Note that only .CSV files may have audio, text, image, video features all-together (as the .CSV can contain files in a current directory that need to be featurized together). Otherwise, audio files likely will have audio features, text files will have text features, image files will have image features, and video files will have video features. 
 
 ## Implemented 
 

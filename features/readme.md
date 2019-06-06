@@ -6,6 +6,29 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 Show outline for this below. This makes it flexible to any featurization and transcript type.
 
+```
+def make_features(sampletype):
+
+	# only add labels when we have actual labels.
+	features={'audio':dict(),
+            'text': dict(),
+            'image':dict(),
+            'video':dict(),
+            'csv': dict(),
+            }
+            
+ 	transcripts={'audio':dict(),
+              'text': dict(),
+              'video':dict(),
+              }
+
+	data={'sampletype': sampletype,
+        'features': features,
+        'transcripts': transcripts,
+        'labels': []}
+        
+```
+
 Note that there can be audio transcripts, image transcripts, and video transcripts. The image and video transcripts use OCR to characterize text in the image, whereas audio transcripts are transcipts done by traditional speech-to-text systems (e.g. Pocketsphinx). The schema above allows for a flexible definition for transcripts that can accomodate all forms. 
 
 ## Implemented 

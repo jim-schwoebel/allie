@@ -21,6 +21,7 @@ def make_features(sampletype):
 		      'text': dict(),
 		      'image': dict(),
 		      'video':dict(),
+		      'csv': dict(),
 		      }
 
 	data={'sampletype': sampletype,

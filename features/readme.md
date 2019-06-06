@@ -34,6 +34,8 @@ Note that there can be audio transcripts, image transcripts, and video transcrip
 
 Sampletype = 'audio', 'text', 'image', 'video', 'csv'
 
+Note that only .CSV files may have audio, text, image, video features all-together. Otherwise, audio files likely will have audio features, text files will have text features, image files will have image features, and video files will have video features. 
+
 ## Implemented 
 
 Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).

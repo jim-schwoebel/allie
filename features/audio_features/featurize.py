@@ -21,23 +21,36 @@ import pspeech_features as psf
 import specimage_features as sif
 import specimage2_features as sif2
 import myprosody_features as mpf
+import helpers.transcribe as ts
 import json, os, sys
+
+def transcribe(file):
+	# get transcript 
+	if file[-4:]=='.wav':
+		transcript=ts.transcribe_sphinx(file)
+	elif file[-4] == '.mp3':
+		os.system('ffmpeg -i %s %s'%(file, file[0:-4]+'.wav'))
+		transcript=ts.transcribe_sphinx(file)
+		os.remove(file[-4:]+'.wav')
+	else:
+		transcript=file
+
+	transcript={'transcript': transcript,
+				'transcript_type': 'pocketsphinx'}
+
+	return transcript 
 
 def prev_dir(directory):
 	g=directory.split('/')
-	# print(g)
-	lastdir=g[len(g)-1]
-	i1=directory.find(lastdir)
-	directory=directory[0:i1]
-	return directory
-
-# import to get image feature script 
-directory=os.getcwd()
-prevdir=prev_dir(directory)
-sys.path.append(prevdir+'/image_features')
-haar_dir=prevdir+'image_features/helpers/haarcascades'
-# import image_features as imf
-os.chdir(directory)
+	dir_=''
+	for i in range(len(g)):
+		if i != len(g)-1:
+			if i==0:
+				dir_=dir_+g[i]
+			else:
+				dir_=dir_+'/'+g[i]
+	# print(dir_)
+	return dir_
 
 def make_features():
 
@@ -54,8 +67,21 @@ def make_features():
 
 	return data
 
+# import to get image feature script 
+directory=os.getcwd()
+prevdir=prev_dir(directory)
+sys.path.append(prevdir+'/image_features')
+haar_dir=prevdir+'image_features/helpers/haarcascades'
+# import image_features as imf
+os.chdir(directory)
+
 # directory=sys.argv[1]
 basedir=os.getcwd()
+settingsdir=prev_dir(basedir)
+settingsdir=prev_dir(settingsdir)
+settings=json.load(open(settingsdir+'/settings.json'))
+os.chdir(basedir)
+audio_transcribe=settings['transcribe_audio']
 foldername=input('what is the name of the folder?')
 os.chdir(foldername)
 listdir=os.listdir() 
@@ -80,6 +106,9 @@ feature_set='myprosody_features'
 for i in range(len(listdir)):
 	if listdir[i][-4:] in ['.wav', '.mp3']:
 		#try:
+
+		if audio_transcribe==True:
+			transcript=transcribe(listdir[i])
 
 		# I think it's okay to assume audio less than a minute here...
 
@@ -113,6 +142,7 @@ for i in range(len(listdir)):
 			audio_features[feature_set]=data
 			basearray['features']['audio']=audio_features
 			basearray['labels']=[foldername]
+			basearray['transcript']=transcript
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
@@ -121,6 +151,7 @@ for i in range(len(listdir)):
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 			basearray['features']['audio'][feature_set]=data
 			basearray['labels']=[foldername]
+			basearray['transcript']=transcript
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

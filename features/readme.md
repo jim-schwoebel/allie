@@ -87,14 +87,15 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for speech mfcc coefficients in window lengths for speaker recognition / i Vectors. - noise (https://www.isca-speech.org/archive/interspeech_2015/papers/i15_2317.pdf)
 
 ### Text
+* add in text transcriptoin (default value) 
 * BERT pre-trained model 
 
 ### Images 
 * Add in transcription to standard image array if settings.JSON image transcript == True.
 
 ### Videos 
-* [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.
+* [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * [Near duplicate](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
 
 ### CSV 

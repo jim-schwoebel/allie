@@ -19,8 +19,8 @@ def myprosody_featurize(wavfile):
 	path=os.getcwd()
 	sourcerun=prev_dir(os.getcwd())+"helpers/myprosody/myprosody/"+"dataset"+"/"+"essen"+"/"+"myspsolution.praat"
 	objects= run_file(sourcerun, -20, 2, 0.3, "yes",sound,path, 80, 400, 0.01, capture_output=True)
-	print (objects[0]) # This will print the info from the sound object, and objects[0] is a parselmouth.Sound object
-	z1=str( objects[1]) # This will print the info from the textgrid object, and objects[1] is a parselmouth.Data object with a TextGrid inside
+	print(objects[0]) # This will print the info from the sound object, and objects[0] is a parselmouth.Sound object
+	z1=str(objects[1]) # This will print the info from the textgrid object, and objects[1] is a parselmouth.Data object with a TextGrid inside
 	z2=z1.strip().split()
 	z3=np.array(z2)
 	z4=np.array(z3)[np.newaxis]
@@ -30,7 +30,7 @@ def myprosody_featurize(wavfile):
 			 "balance":float(z5[6,:]),"f0_mean":float(z5[7,:]),"f0_std":float(z5[8,:]),"f0_median":float(z5[9,:]),
 			 "f0_min":float(z5[10,:]),"f0_max":float(z5[11,:]),"f0_quantile25":float(z5[12,:]),"f0_quan75":float(z5[13,:])}
 
-
+	os.remove(wavfile[0:-4]+'.TextGrid')
 	# sound = parselmouth.Sound(wavfile)
 	# formant = sound.to_formant_burg(max_number_of_formants=5, maximum_formant=5500)
 	# zero=formant.get_value_at_time(3, 0.5) # For the value of formant 3 at 0.5 seconds

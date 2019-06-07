@@ -18,7 +18,9 @@ import spectrogram_features as specf
 import meta_features as mf 
 import praat_features as prf
 import pspeech_features as psf
-import helpers.audio_plot as ap 
+import specimage_features as sif
+import specimage2_features as sif2
+import myprosody_features as mpf
 import json, os, sys
 
 def prev_dir(directory):
@@ -34,7 +36,7 @@ directory=os.getcwd()
 prevdir=prev_dir(directory)
 sys.path.append(prevdir+'/image_features')
 haar_dir=prevdir+'image_features/helpers/haarcascades'
-import image_features as imf
+# import image_features as imf
 os.chdir(directory)
 
 def make_features():
@@ -67,14 +69,16 @@ help_dir=basedir+'/helpers/'
 # feature_set='sa_features'
 # feature_set='pyaudio_features'
 # feature_set='spectrogram_features'
-# feature_set='specimage_features'
 # feature_set = 'meta_features'
 # feature_set='praat_features'
-feature_set='pspeech_features'
+# feature_set='pspeech_features'
+# feature_set='specimage_features'
+# feature_set='specimage2_features'
+feature_set='myprosody_features'
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
-	if listdir[i][-4:] in ['.wav', '.mp3'] and feature_set not in ['specimage_features']:
+	if listdir[i][-4:] in ['.wav', '.mp3']:
 		#try:
 
 		# I think it's okay to assume audio less than a minute here...
@@ -88,7 +92,10 @@ for i in range(len(listdir)):
 		# features, labels= specf.spectrogram_featurize(listdir[i])
 		# features, labels = mf.meta_featurize(listdir[i], cur_dir, help_dir)
 		# features, labels = prf.praat_featurize(listdir[i])
-		features, labels = psf.pspeech_featurize(listdir[i])
+		# features, labels = psf.pspeech_featurize(listdir[i])
+		# features, labels = sif.specimage_featurize(listdir[i],cur_dir, haar_dir)
+		# features, labels = sif2.specimage2_featurize(listdir[i],cur_dir, haar_dir)
+		features, labels = mpf.myprosody_featurize(listdir[i])
 		
 		# print(features)
 
@@ -120,55 +127,6 @@ for i in range(len(listdir)):
 
 		#except:
 			#print('error')
-	elif listdir[i][-4:] in ['.wav', '.mp3'] and feature_set in ['specimage_features']:
-
-		# make audio file into spectrogram and analyze those images if audio file
-		try:
-			if listdir[i][0:-4]+'.png' not in listdir:
-				imgfile=ap.plot_spectrogram(listdir[i])
-			else:
-				imgfile=listdir[i][0:-4]+'.png'
-				
-			# I think it's okay to assume audio less than a minute here...
-			if listdir[i][0:-4]+'.json' not in listdir:
-				# make new .JSON if it is not there with base array schema.
-				basearray=make_features()
-				audio_features=basearray['features']['audio']
-				features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-				print(features)
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-
-				audio_features[feature_set]=data
-				basearray['features']['audio']=audio_features
-				basearray['labels']=[foldername]
-				jsonfile=open(listdir[i][0:-4]+'.json','w')
-				json.dump(basearray, jsonfile)
-				jsonfile.close()
-
-			elif listdir[i][0:-4]+'.json' in listdir:
-				# overwrite existing .JSON if it is there.
-				basearray=json.load(open(listdir[i][0:-4]+'.json'))
-				features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
-
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-
-				basearray['features']['audio'][feature_set]=data
-				basearray['labels']=[foldername]
-				jsonfile=open(listdir[i][0:-4]+'.json','w')
-				json.dump(basearray, jsonfile)
-				jsonfile.close()
-
-		except:
-			print('error')
+	
 
 

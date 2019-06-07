@@ -81,6 +81,9 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 ### Audio
 * Add in transcription to standard audio array if settings.JSON audio transcript == True; customize transcription types.
+* [text_classify]() - transcript_features() - text features (nltk) 
+* [mixed_features]() - mixed_features() - ratios 
+* [audiotext_classify]() - audiotext_classify() - audio and text embeddings together 
 * [Noise separation](https://github.com/seanwood/gcc-nmf) - noise separation technique.
 * [Make noisy](https://github.com/Sato-Kunihiko/audio-SNR/) - noisy add-on.
 * [Speaker diarization](https://github.com/faroit/CountNet) - counting # of speakers and shifts (CountNet). 
@@ -88,6 +91,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Text
 * add in text transcriptoin (default value) 
+* input text files 
 * BERT pre-trained model 
 
 ### Images 

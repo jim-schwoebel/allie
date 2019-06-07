@@ -52,8 +52,8 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [sox_features]()
 * [standard_features]() - standard audio feature array (default)
 * [spectrogram_features]() 
-* [spectrogram_image_features]()
-* [spectrogram_image_features2]()
+* [specimage_features]()
+* [specimage2_features2]()
 
 ### Text
 * [fast_features]()

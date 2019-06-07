@@ -47,7 +47,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [praat_features]()
 * [pspeech_features]() 
 * [pyaudio_features]()
-* [pyworld_features]()
 * [sa_features]()
 * [sox_features]()
 * [standard_features]() - standard audio feature array (default)

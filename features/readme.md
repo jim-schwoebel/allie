@@ -53,7 +53,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [standard_features]() - standard audio feature array (default)
 * [spectrogram_features]() 
 * [specimage_features]()
-* [specimage2_features2]()
+* [specimage2_features]()
 
 ### Text
 * [fast_features]()

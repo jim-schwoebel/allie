@@ -80,8 +80,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 ### Audio
 * Add in transcription to standard audio array if settings.JSON audio transcript == True; customize transcription types.
-* [Pause features](https://github.com/jim-schwoebel/pauses) - retrain a classifier on Common Voice Dataset (100 files).
-* [Praat_features_2](https://github.com/Shahabks/myprosody) - prosodic features using Praat, alternative implementation.
 * [Auditok](https://github.com/amsehili/auditok) - for audio event detection.
 * [Noise separation](https://github.com/seanwood/gcc-nmf) - noise separation technique.
 * [Make noisy](https://github.com/Sato-Kunihiko/audio-SNR/) - noisy add-on.

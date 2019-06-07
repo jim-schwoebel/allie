@@ -93,7 +93,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Text
 * add in text transcriptoin (default value) 
 * input text files 
-* BERT pre-trained model 
+* BERT pre-trained model - https://github.com/huggingface/pytorch-pretrained-BERT
 
 ### Images 
 * Add in transcription to standard image array if settings.JSON image transcript == True.

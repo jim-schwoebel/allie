@@ -68,4 +68,4 @@ def specimage2_featurize(wavfile, cur_dir, haar_dir):
 	# remove temporary image file 
 	os.remove(wavfile[0:-4]+'.png')
 
-	return filename
+	return features, labels 

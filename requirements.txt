@@ -1,13 +1,8 @@
-numpy 
-scipy
-resampy 
-tensorflow 
 six
 luwdwig 
 spacy 
 scikit-small-ensemble
 praat-parselmouth
-wget 
 audioread==2.1.5
 bleach==1.5.0
 decorator==4.1.2
@@ -29,4 +24,5 @@ scipy==1.0.0
 sklearn==0.0
 SoundFile==0.9.0.post1
 tensorflow==1.4.0
+wget 
 Werkzeug==0.12.2

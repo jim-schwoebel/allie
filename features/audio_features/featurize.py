@@ -27,6 +27,7 @@ import pspeech_features as psf
 import specimage_features as sif
 import specimage2_features as sif2
 import myprosody_features as mpf
+import mixed_features as mixf
 import helpers.transcribe as ts
 
 def prev_dir(directory):
@@ -104,6 +105,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = mpf.myprosody_featurize(audiofile)
 	elif feature_set == 'nltk_features':
 		features, labels = nf.nltk_featurize(transcript)
+	elif feature_set == 'mixed_features':
+		features, labels = mixf.mixed_featurize(audiofile, transcript)
 
 	return features, labels 
 
@@ -170,6 +173,7 @@ help_dir=basedir+'/helpers/'
 # feature_set='specimage2_features'
 # feature_set='myprosody_features'
 # feature_set = 'nltk_features'
+feature_set='mixed_features'
 
 # all_ features ..
 # feature_set=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
@@ -218,7 +222,8 @@ for i in range(len(listdir)):
 			basearray['features']['audio']=audio_features
 			basearray['labels']=[foldername]
 			transcript_list=basearray['transcripts']
-			basearray['transcripts']=transcript_dict
+			transcript_list.append(transcript_dict)
+			basearray['transcripts']=transcript_list
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

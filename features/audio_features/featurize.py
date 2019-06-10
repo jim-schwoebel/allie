@@ -28,6 +28,7 @@ import specimage_features as sif
 import specimage2_features as sif2
 import myprosody_features as mpf
 import mixed_features as mixf
+import audiotext_features as atf
 import helpers.transcribe as ts
 
 def prev_dir(directory):
@@ -107,6 +108,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = nf.nltk_featurize(transcript)
 	elif feature_set == 'mixed_features':
 		features, labels = mixf.mixed_featurize(audiofile, transcript)
+	elif feature_set == 'audiotext_features':
+		features, labels = atf.audiotext_featurize(audiofile, transcript)
 
 	return features, labels 
 
@@ -174,19 +177,19 @@ help_dir=basedir+'/helpers/'
 # feature_set='myprosody_features'
 # feature_set = 'nltk_features'
 # feature_set='mixed_features'
+feature_set='audiotext_features'
 
 # all_ features ..
 # feature_set=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
 		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
 		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
-		# 	  'myprosody_features', 'nltk_features', 'mixed_features]
+		# 	  'myprosody_features', 'nltk_features', 'mixed_features', 'audiotext_features']
 
 # for i in range(len(feature_set)):
 # 	audio_featurize(all_[i], audiofile, transcript)
 
 ## can also do custom multi-featurizations
 # feature_set= ['meta_features', 'librosa_features']
-# ---> will iteratuer through ehre 
 
 ################################################
 ##	    	Now go featurize!                 ##

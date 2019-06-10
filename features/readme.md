@@ -45,6 +45,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [librosa_features]()
 * [meta_features]()
 * [myprosody_features]() - sometimes unstable 
+* [nltk_features]() - text feature array 
 * [praat_features]()
 * [pspeech_features]() 
 * [pyaudio_features]()

@@ -53,12 +53,12 @@ for i in range(5):
             mixed_labels.append(mixed_label)
             print(mixed_feature)
             mixed_features.append(mixed_feature)
-            mixed_inds.append([i1,i2])
+            mixed_inds.append([i2,i1])
 
     data={'labels': mixed_labels,
           'mixed_inds': mixed_inds,
-          'first_ind': 'librosa_features',
-          'second_ind':'nltk_features'}
+          'first_ind': 'nltk_features',
+          'second_ind':'librosa_features'}
 
     jsonfile=open('mixed_feature_%s.json'%(str(i)),'w')
     json.dump(data,jsonfile)

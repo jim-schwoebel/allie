@@ -303,4 +303,4 @@ def csv_featurize(csv_file, cur_dir):
 		json.dump(data,jsonfile)
 		jsonfile.close()
 	
-csv_featurize('test.csv', os.getcwd()+'/test')
+# csv_featurize('test.csv', os.getcwd()+'/test')

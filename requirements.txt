@@ -20,3 +20,4 @@ sklearn==0.0
 SoundFile==0.9.0.post1
 tensorflow
 Werkzeug==0.12.2
+webrtcvad

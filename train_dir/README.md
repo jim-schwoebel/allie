@@ -18,29 +18,7 @@ Files can take form:
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for features (help with classification accuracy - dimensionality reduction technique). 
 
-## Data augmentation 
-
-* [create-controls.py]() - given a group of folders, you can create a control with equal mixture of speakers 
-* [gender-controls]() - create a group of female controls or male controls
-* [age-controls]() - create a group of age-based controls 
-* [accent-controls]() - create a group of accented controls 
-* [microphone-controls]() - create a group of microphone controls. 
-
-Note all these would output the composition randomness from all the datasets 
-```
-5 AudioSet, 10 train-diseases, 5 TIMIT, etc.
-```
-
-### Text augmentation
-* text augmentation library
-
-### Image augmentation 
-* image augmentation library
-
-### Video augmentation
-* video augmentation library 
-
-## Tutorials (Readmes)
+## Data modeling tutorials (Readmes)
 * Audio file training example
 * Text file training example 
 * Image file training example

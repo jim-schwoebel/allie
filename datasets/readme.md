@@ -15,7 +15,7 @@ You can also augment datasets with any of the augmentation libraries attached to
 
 Some things you can do to clean datasets include:
 
-- file de duplication (use from a prior script)
+- file de duplication (use from a prior script) - cleaning/delete_duplicates.py
 - speaker uniqueness / identity uniqueness
 - noise removal / normalization, etc. 
 

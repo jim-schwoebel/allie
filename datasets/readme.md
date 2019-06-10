@@ -6,6 +6,13 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 
 You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180), [YouTube Scrape](https://github.com/jim-schwoebel/youtube_scrape/tree/b030d65277626ee01bea0fd98cee2d1ffafee8bb), and/or [SurveyLex](https://surveylex.com) as well.
 
+You can also augment datasets with any of the augmentation libraries attached to this repository:
+
+- [audio augmentation]()
+- [text augmentation]()
+- [image augmentation]()
+- [video augmentation]()
+
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 
 * get_commonvoice.py - standard dataset used for speech 

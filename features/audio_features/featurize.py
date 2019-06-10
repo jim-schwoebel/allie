@@ -173,13 +173,13 @@ help_dir=basedir+'/helpers/'
 # feature_set='specimage2_features'
 # feature_set='myprosody_features'
 # feature_set = 'nltk_features'
-feature_set='mixed_features'
+# feature_set='mixed_features'
 
 # all_ features ..
 # feature_set=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
 		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
 		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
-		# 	  'myprosody_features', 'nltk_features']
+		# 	  'myprosody_features', 'nltk_features', 'mixed_features]
 
 # for i in range(len(feature_set)):
 # 	audio_featurize(all_[i], audiofile, transcript)

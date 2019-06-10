@@ -56,10 +56,10 @@ Model compression if True compresses the model for production purposes to reduce
 
 Load folders and data script type based on principal type of file.
 
-* Audio --> .WAV / .MP3 --> .WAV 
-* Text --> .WAV (transcribes) / .TXT / .PPT / .DOCX --> .TXT
-* Images --> .PNG / .JPG --> .PNG 
-* Video --> .MP4 / .M4A --> .MP4 
+* Audio --> .WAV / .MP3 (can transcribe) --> .WAV 
+* Text --> .TXT / .PPT / .DOCX --> .TXT
+* Images --> .PNG / .JPG (can transcribe images) --> .PNG 
+* Video --> .MP4 / .M4A (can transcribe video, audio, and images) --> .MP4 
 * CSV --> .CSV --> loads categorical and numerical data into .JSON 
 
 This aligns well with how we define 'samples' in our pipeline.

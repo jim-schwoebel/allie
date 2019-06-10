@@ -13,6 +13,12 @@ You can also augment datasets with any of the augmentation libraries attached to
 - [image augmentation](https://github.com/aleju/imgaug/tree/0a367d198b771dbfa10936820a4d7d4cc4f8bc6b)
 - [video augmentation](https://github.com/okankop/vidaug/tree/14aad8fc0e58ac27966a113768a33610c8ece4db)
 
+Some things you can do to clean datasets include:
+
+- file de duplication (use from a prior script)
+- speaker uniqueness / identity uniqueness
+- noise removal / normalization, etc. 
+
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 
 * get_commonvoice.py - standard dataset used for speech 

@@ -74,7 +74,9 @@ This aligns well with how we define 'samples' in our pipeline.
 * [AudioSet_download]() - download link to AudioSet 
 
 ### Visualization
-* [Yellowbrick](https://www.scikit-yb.org/en/latest/)
+* [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for features. 
+* [Bokeh]() - for features.
+* [Matplotlib]() - for features. 
 
 ### Modeling 
 * TPOT

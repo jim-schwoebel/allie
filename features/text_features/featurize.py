@@ -205,7 +205,7 @@ for i in range(len(listdir)):
 		elif listdir[i][0:-4]+'.json' in listdir:
 			# overwrite existing .JSON if it is there.
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			transcript_list=basearray['transcript']
+			transcript_list=basearray['transcripts']
 			transcript_list.append(transcript_dict)
 			basearray['transcripts']=transcript_list
 

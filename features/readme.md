@@ -39,6 +39,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [audioset_features]()
 * [librosa_features]()
 * [meta_features]()
+* [mixed_features]() - random combinations of audio and text features (via ratios)
 * [myprosody_features]() - sometimes unstable 
 * [nltk_features]() - text feature array 
 * [praat_features]()

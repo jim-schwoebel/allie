@@ -18,9 +18,9 @@ def make_features():
 		  }
 
 	data={'sampletype': sampletype,
-		  'transcripts': [],
-		  'features': features,
-		  'labels': []}
+ 	      'transcripts': [],
+	      'features': features,
+	      'labels': []}
 
 	return data
 ```

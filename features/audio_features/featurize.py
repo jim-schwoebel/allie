@@ -138,7 +138,7 @@ os.chdir(basedir)
 
 audio_transcribe=settings['transcribe_audio']
 default_audio_transcriber=settings['default_audio_transcriber']
-default_audio_features=settings['default_audio_features']
+feature_set=settings['default_audio_features']
 
 ################################################
 ##	   		Get featurization folder     	  ##
@@ -169,15 +169,20 @@ help_dir=basedir+'/helpers/'
 # feature_set='specimage_features'
 # feature_set='specimage2_features'
 # feature_set='myprosody_features'
-feature_set = 'nltk_features'
+# feature_set = 'nltk_features'
 
-# all_=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
-# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
-# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
-# 	  'myprosody_features', 'nltk_features']
+# all_ features ..
+# feature_set=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
+		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
+		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
+		# 	  'myprosody_features', 'nltk_features']
 
-# for i in range(len(all_)):
+# for i in range(len(feature_set)):
 # 	audio_featurize(all_[i], audiofile, transcript)
+
+## can also do custom multi-featurizations
+# feature_set= ['meta_features', 'librosa_features']
+# ---> will iteratuer through ehre 
 
 ################################################
 ##	    	Now go featurize!                 ##
@@ -189,6 +194,8 @@ for i in range(len(listdir)):
 		#try:
 
 		sampletype='audio'
+
+		# may want to determine if transcript exists if doesn't then transcribe...
 		if audio_transcribe==True:
 			transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
 
@@ -210,6 +217,7 @@ for i in range(len(listdir)):
 			audio_features[feature_set]=data
 			basearray['features']['audio']=audio_features
 			basearray['labels']=[foldername]
+			transcript_list=basearray['transcripts']
 			basearray['transcripts']=transcript_dict
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
@@ -219,7 +227,9 @@ for i in range(len(listdir)):
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 			basearray['features']['audio'][feature_set]=data
 			basearray['labels']=[foldername]
-			basearray['transcripts']=dict(basearray['transcripts'].items()+transcript_dict.items())
+			transcript_list=basearray['transcripts']
+			transcript_list.append(transcript_dict)
+			basearray['transcripts']=transcript_list
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

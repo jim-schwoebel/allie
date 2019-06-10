@@ -96,6 +96,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Images 
 * Add in transcription to standard image array if settings.JSON image transcript == True.
+* [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html
 
 ### Videos 
 * add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.

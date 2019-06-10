@@ -1,6 +1,6 @@
 # Models
 
-Here are a list of active models:
+Here are a list of active models: model name, accuracy, etc. 
 
 ## Audio models
 * NLX-model-gender --> Gender detection --> {feature array} --> 98% +/- 0.002. 

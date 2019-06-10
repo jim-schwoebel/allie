@@ -81,7 +81,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [kaldi features](https://github.com/pykaldi/pykaldi)  - GMM and other such features. https://pykaldi.github.io/api/kaldi.feat.html#module-kaldi.feat.fbank
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 * [Speaker diarization](https://github.com/faroit/CountNet) - counting # of speakers and shifts (CountNet). 
-* [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for speech mfcc coefficients in window lengths for speaker recognition / i Vectors. - noise (https://www.isca-speech.org/archive/interspeech_2015/papers/i15_2317.pdf) - implement with librosa in 20 ms timescale (frames).
 
 ### Text
 * add in text transcriptoin (default value) 

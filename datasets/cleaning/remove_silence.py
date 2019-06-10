@@ -132,13 +132,11 @@ def vad_collector(sample_rate, frame_duration_ms,
         yield b''.join([f.bytes for f in voiced_frames])
 
 
-def main(args):
-    if len(args) != 2:
-        sys.stderr.write(
-            'Usage: example.py <aggressiveness> <path to wav file>\n')
-        sys.exit(1)
-    audio, sample_rate = read_wave(args[1])
-    vad = webrtcvad.Vad(int(args[0]))
+def remove_silence(wavfile):
+    # note you need to convert to a mono file if the file is not already mono. I have not done this.
+    audio, sample_rate = read_wave(wavfile)
+    # set aggressiveness here. [1,3]
+    vad = webrtcvad.Vad(int(1))
     frames = frame_generator(30, audio, sample_rate)
     frames = list(frames)
     segments = vad_collector(sample_rate, 30, 300, vad, frames)
@@ -152,14 +150,19 @@ def main(args):
     soxcmd='sox'
     for i in range(len(framelist)):
         soxcmd=soxcmd+' %s'%(framelist[i])
-    soxcmd=soxcmd+' %s'%(args[1])
+    soxcmd=soxcmd+' %s'%(wavfile)
     print(soxcmd)
-    os.rename(args[1],args[1][0:-4]+'_temp.wav')
+    os.rename(wavfile,wavfile[0:-4]+'_temp.wav')
     os.system(soxcmd)
     # remove temporary files and leave only cleaned files 
-    os.remove(args[1][0:-4]+'_temp.wav')
+    os.remove(wavfile[0:-4]+'_temp.wav')
     for i in range(len(framelist)):
         os.remove(framelist[i])
 
-if __name__ == '__main__':
-    main(sys.argv[1:])
+folder=input('what folder would you like to remove silence?')
+os.chdir(folder)
+
+listdir=os.listdir()
+for i in range(len(listdir)):
+    if listdir[i][-4:]=='.wav':
+        remove_silence(listdir[i])

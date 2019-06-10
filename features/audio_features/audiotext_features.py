@@ -5,6 +5,7 @@ Create a random set of features.
 import librosa_features as lf 
 import helpers.transcribe as ts
 import random, math, os, sys, json
+import numpy as np
 
 def prev_dir(directory):
     g=directory.split('/')
@@ -23,13 +24,13 @@ prevdir=prev_dir(directory)
 sys.path.append(prevdir+'/text_features')
 import nltk_features as nf 
 
-def mixed_featurize(wavfile, transcript):
+def audiotext_featurize(wavfile, transcript):
 
     # get features 
     librosa_features, librosa_labels=lf.librosa_featurize(wavfile, False)
     nltk_features, nltk_labels=nf.nltk_featurize(transcript)
 
-    features=librosa_features+nltk_features
+    features=np.append(np.array(librosa_features), np.array(nltk_features))
     labels=librosa_labels+nltk_labels 
 
     return features, labels 

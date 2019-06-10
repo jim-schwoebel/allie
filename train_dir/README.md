@@ -14,7 +14,9 @@ Files can take form:
 
 ## Data augmentation
 
-If augment == True, can augment.
+* If augment == True, can augment (audio, text, image, and video data)
+* [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
+* [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for features (help with classification accuracy - dimensionality reduction technique). 
 
 ### Audio augmentation 
 

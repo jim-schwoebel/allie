@@ -8,6 +8,12 @@ of each second), however, I included all the original embeddings here in case th
 information is useful to you.
 '''
 
+import json, os, sys
+
+################################################
+##	    	Import According to settings      ##
+################################################
+
 import librosa_features as lf 
 import standard_features as sf 
 import audioset_features as af 
@@ -22,23 +28,6 @@ import specimage_features as sif
 import specimage2_features as sif2
 import myprosody_features as mpf
 import helpers.transcribe as ts
-import json, os, sys
-
-def transcribe(file):
-	# get transcript 
-	if file[-4:]=='.wav':
-		transcript=ts.transcribe_sphinx(file)
-	elif file[-4] == '.mp3':
-		os.system('ffmpeg -i %s %s'%(file, file[0:-4]+'.wav'))
-		transcript=ts.transcribe_sphinx(file)
-		os.remove(file[-4:]+'.wav')
-	else:
-		transcript=file
-
-	transcript={'transcript': transcript,
-				'transcript_type': 'pocketsphinx'}
-
-	return transcript 
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -51,8 +40,74 @@ def prev_dir(directory):
 				dir_=dir_+'/'+g[i]
 	# print(dir_)
 	return dir_
+	
+# import to get image feature script 
+directory=os.getcwd()
+prevdir=prev_dir(directory)
+sys.path.append(prevdir+'/image_features')
+haar_dir=prevdir+'image_features/helpers/haarcascades'
+import image_features as imf
+sys.path.append(prevdir+'/text_features')
+import nltk_features as nf 
+os.chdir(directory)
 
-def make_features():
+################################################
+##	    		Helper functions      		  ##
+################################################
+
+def transcribe(file, default_audio_transcriber):
+	# get transcript 
+	if file[-4:]=='.wav':
+		transcript=ts.transcribe_sphinx(file)
+	elif file[-4] == '.mp3':
+		os.system('ffmpeg -i %s %s'%(file, file[0:-4]+'.wav'))
+		transcript=ts.transcribe_sphinx(file)
+		os.remove(file[-4:]+'.wav')
+	else:
+		transcript=file
+
+	# 3 types of transcripts = audio, text, and image 
+	transcript_dict={'transcript': transcript,
+					'transcript_type': 'audio',
+					'audio_transcriber': default_audio_transcriber}
+
+	return transcript_dict, transcript 
+
+def audio_featurize(feature_set, audiofile, transcript):
+
+	# long conditional on all the types of features that can happen and featurizes accordingly.
+	if feature_set == 'librosa_features':
+		features, labels = lf.librosa_featurize(audiofile, False)
+	elif feature_set == 'standard_features':
+		features, labels = sf.standard_featurize(audiofile)
+	elif feature_set == 'audioset_features':
+		features, labels = af.audioset_featurize(audiofile, basedir, foldername)
+	elif feature_set == 'sox_features':
+		features, labels = soxf.sox_featurize(audiofile)
+	elif feature_set == 'sa_features':
+		features, labels = saf.sa_featurize(audiofile)
+	elif feature_set == 'pyaudio_features':
+		features, labels = pf.pyaudio_featurize(audiofile, basedir)
+	elif feature_set == 'spectrogram_features':
+		features, labels= specf.spectrogram_featurize(audiofile)
+	elif feature_set == 'meta_features':
+		features, labels = mf.meta_featurize(audiofile, cur_dir, help_dir)
+	elif feature_set == 'praat_features':
+		features, labels = prf.praat_featurize(audiofile)
+	elif feature_set == 'pspeech_features':
+		features, labels = psf.pspeech_featurize(audiofile)
+	elif feature_set == 'specimage_features':
+		features, labels = sif.specimage_featurize(audiofile,cur_dir, haar_dir)
+	elif feature_set == 'specimage2_features':
+		features, labels = sif2.specimage2_featurize(audiofile,cur_dir, haar_dir)
+	elif feature_set == 'myprosody_features':
+		features, labels = mpf.myprosody_featurize(audiofile)
+	elif feature_set == 'nltk_features':
+		features, labels = nf.nltk_featurize(transcript)
+
+	return features, labels 
+
+def make_features(sampletype):
 
 	# only add labels when we have actual labels.
 	features={'audio':dict(),
@@ -62,18 +117,17 @@ def make_features():
 			  'csv': dict(),
 			  }
 
-	data={'features': features,
+	data={'sampletype': sampletype,
+		  'transcripts': [],
+		  'features': features,
 		  'labels': []}
 
 	return data
 
-# import to get image feature script 
-directory=os.getcwd()
-prevdir=prev_dir(directory)
-sys.path.append(prevdir+'/image_features')
-haar_dir=prevdir+'image_features/helpers/haarcascades'
-# import image_features as imf
-os.chdir(directory)
+
+################################################
+##	    		Load main settings    		  ##
+################################################
 
 # directory=sys.argv[1]
 basedir=os.getcwd()
@@ -81,12 +135,26 @@ settingsdir=prev_dir(basedir)
 settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
+
 audio_transcribe=settings['transcribe_audio']
+default_audio_transcriber=settings['default_audio_transcriber']
+default_audio_features=settings['default_audio_features']
+
+################################################
+##	   		Get featurization folder     	  ##
+################################################
+
 foldername=input('what is the name of the folder?')
 os.chdir(foldername)
 listdir=os.listdir() 
 cur_dir=os.getcwd()
 help_dir=basedir+'/helpers/'
+
+################################################
+##	    	Load feature set                  ##
+################################################
+
+# if set to 'all', then featurizes all audio features...
 
 # feature_set='librosa_features'
 # feature_set='standard_features'
@@ -100,33 +168,33 @@ help_dir=basedir+'/helpers/'
 # feature_set='pspeech_features'
 # feature_set='specimage_features'
 # feature_set='specimage2_features'
-feature_set='myprosody_features'
+# feature_set='myprosody_features'
+feature_set = 'nltk_features'
+
+# all_=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
+# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
+# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
+# 	  'myprosody_features', 'nltk_features']
+
+# for i in range(len(all_)):
+# 	audio_featurize(all_[i], audiofile, transcript)
+
+################################################
+##	    	Now go featurize!                 ##
+################################################
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
 	if listdir[i][-4:] in ['.wav', '.mp3']:
 		#try:
 
+		sampletype='audio'
 		if audio_transcribe==True:
-			transcript=transcribe(listdir[i])
+			transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
 
 		# I think it's okay to assume audio less than a minute here...
-
-		# features, labels = lf.librosa_featurize(listdir[i], False)
-		# features, labels = sf.standard_featurize(listdir[i])
-		# features, labels = af.audioset_featurize(listdir[i], basedir, foldername)
-		# features, labels = soxf.sox_featurize(listdir[i])
-		# features, labels = saf.sa_featurize(listdir[i])
-		# features, labels = pf.pyaudio_featurize(listdir[i], basedir)
-		# features, labels= specf.spectrogram_featurize(listdir[i])
-		# features, labels = mf.meta_featurize(listdir[i], cur_dir, help_dir)
-		# features, labels = prf.praat_featurize(listdir[i])
-		# features, labels = psf.pspeech_featurize(listdir[i])
-		# features, labels = sif.specimage_featurize(listdir[i],cur_dir, haar_dir)
-		# features, labels = sif2.specimage2_featurize(listdir[i],cur_dir, haar_dir)
-		features, labels = mpf.myprosody_featurize(listdir[i])
-		
-		# print(features)
+		features, labels = audio_featurize(feature_set, listdir[i], transcript)
+		print(features)
 
 		try:
 			data={'features':features.tolist(),
@@ -137,12 +205,12 @@ for i in range(len(listdir)):
 
 		if listdir[i][0:-4]+'.json' not in listdir:
 			# make new .JSON if it is not there with base array schema.
-			basearray=make_features()
+			basearray=make_features(sampletype)
 			audio_features=basearray['features']['audio']
 			audio_features[feature_set]=data
 			basearray['features']['audio']=audio_features
 			basearray['labels']=[foldername]
-			basearray['transcript']=transcript
+			basearray['transcripts']=transcript_dict
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
@@ -151,7 +219,7 @@ for i in range(len(listdir)):
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 			basearray['features']['audio'][feature_set]=data
 			basearray['labels']=[foldername]
-			basearray['transcript']=transcript
+			basearray['transcripts']=dict(basearray['transcripts'].items()+transcript_dict.items())
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

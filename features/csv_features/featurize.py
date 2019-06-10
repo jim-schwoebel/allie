@@ -9,7 +9,7 @@ import shutil
 ##				Helper functions.    			##
 ##################################################
 
-def make_features():
+def make_features(sampletype):
 
 	# only add labels when we have actual labels.
 	features={'audio':dict(),
@@ -19,7 +19,9 @@ def make_features():
 			  'csv': dict(),
 			  }
 
-	data={'features': features,
+	data={'sampletype': sampletype,
+		  'transcripts': [],
+		  'features': features,
 		  'labels': []}
 
 	return data
@@ -92,11 +94,11 @@ for i in range(len(listdir)):
 	if listdir[i][-4:] in ['.mp4']:
 		#try:
 		videofile=listdir[i]
-			
+		sampletype='csv'
 		# I think it's okay to assume audio less than a minute here...
 		if listdir[i][0:-4]+'.json' not in listdir:
 			# make new .JSON if it is not there with base array schema.
-			basearray=make_features()
+			basearray=make_features(sampletype)
 			video_features=basearray['features']['video']
 			# features, labels, transcript = vf.video_featurize(videofile, cur_dir, haar_dir)
 			features, labels, transcript = yf.y8m_featurize(videofile, cur_dir, help_dir, fast_model)

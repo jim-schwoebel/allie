@@ -6,12 +6,12 @@ Note you can search for more datasets using Google DataSet search @ https://tool
 
 You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180), [YouTube Scrape](https://github.com/jim-schwoebel/youtube_scrape/tree/b030d65277626ee01bea0fd98cee2d1ffafee8bb), and/or [SurveyLex](https://surveylex.com) as well.
 
-You can also augment datasets with any of the augmentation libraries attached to this repository:
+You can also augment datasets with any of the augmentation libraries attached to this repository (can be useful if you do not have enough data points):
 
-- [audio augmentation]()
-- [text augmentation]()
-- [image augmentation]()
-- [video augmentation]()
+- [audio augmentation](https://github.com/jim-schwoebel/audio_augmentation/tree/e1f4c0d3d58479bef21a72040b2417ab2ba53f83)
+- [text augmentation](https://github.com/jasonwei20/eda_nlp/tree/c47ff1c7c1d7966aaed54d4266c94e9f70b9d422)
+- [image augmentation](https://github.com/aleju/imgaug/tree/0a367d198b771dbfa10936820a4d7d4cc4f8bc6b)
+- [video augmentation](https://github.com/okankop/vidaug/tree/14aad8fc0e58ac27966a113768a33610c8ece4db)
 
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 

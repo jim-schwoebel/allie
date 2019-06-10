@@ -1,7 +1,7 @@
 '''
 Custom setup script for MacOSX.
 '''
-import os 
+import os, json
 
 def brew_install(modules):
   for i in range(len(modules)):
@@ -10,3 +10,24 @@ def brew_install(modules):
 brew_modules=['sox']
 brew_install(brew_modules)
 os.system('pip3 install -r requirements.txt')
+
+# create settings.json (if it does not exist)
+listdir=os.listdir()
+if 'settings.json' not in listdir:
+    data = {"default_audio_features": "audio_features", 
+            "default_text_features": "text_features", 
+            "default_image_features": "image_features", 
+            "default_video_features": "video_features", 
+            "bias_discovery": true, 
+            "transcribe_audio": true, 
+            "default_audio_transcriber": "pocketsphinx", 
+            "transcribe_images": true, 
+            "transcribe_videos": true, 
+            "default_training_script": "keras", 
+            "augment_data": true, 
+            "visualize_data": true, 
+            "create_YAML": true, 
+            "model_compress": true}
+    jsonfile=open('settings.json','w')
+    json.dump(data,jsonfile)
+    jsonfile.close()

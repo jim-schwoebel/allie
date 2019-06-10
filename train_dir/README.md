@@ -12,13 +12,13 @@ Files can take form:
 | video file | .MP4 | classify multiple folders of video files (e.g. walking vs. running) | 
 | CSV file | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate). You can input any of the Ludwig data types. (binary, numerical, category, set, bag, sequence, text, timeseries, image) | 
 
-## Data augmentation
+## Things to do 
 
 * If augment == True, can augment (audio, text, image, and video data)
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for features (help with classification accuracy - dimensionality reduction technique). 
 
-### Audio augmentation 
+## Data augmentation 
 
 * [create-controls.py]() - given a group of folders, you can create a control with equal mixture of speakers 
 * [gender-controls]() - create a group of female controls or male controls
@@ -31,7 +31,7 @@ Note all these would output the composition randomness from all the datasets
 5 AudioSet, 10 train-diseases, 5 TIMIT, etc.
 ```
 
-### Text augmentatin
+### Text augmentation
 * text augmentation library
 
 ### Image augmentation 

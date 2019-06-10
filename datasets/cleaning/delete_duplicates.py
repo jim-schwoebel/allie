@@ -1,6 +1,6 @@
 import filecmp, os,time, platform, json, datetime 
 
-foldername='voice_samples'
+foldername=input('what folder would you like to delete duplicates?')
 directory=os.getcwd()
 os.chdir(directory+'/%s'%(foldername))
 
@@ -29,27 +29,4 @@ for i in range(len(listdir)):
                     pass
         except:
             print('error, moving on...')
-            
-#calculate metadata
-processtime=time.time()-start 
-clean_filelist=os.listdir()
-
-#write .json output of the session in the crypto-cli folder as a new folder: 'decrypted_processed_metadata'
-os.chdir(directory)
-
-data={
-    'date':str(datetime.datetime.now()),
-    'downloaded AWS folder':bucket,
-    'processtime':str(processtime),
-    'clean filelist':clean_filelist,
-    'unclean filelist':unclean_filelist,
-    'deleted files':deleted_files,
-    'operating system':platform.system(),
-    'os release':platform.release(),
-    'os version':platform.version(),
-    }
-
-jsonfilename=foldername+'.json'
-jsonfile=open(jsonfilename,'w')
-json.dump(data,jsonfile)
-jsonfile.close()
+ 

@@ -177,7 +177,7 @@ help_dir=basedir+'/helpers/'
 # feature_set='myprosody_features'
 # feature_set = 'nltk_features'
 # feature_set='mixed_features'
-feature_set='audiotext_features'
+# feature_set='audiotext_features'
 
 # all_ features ..
 # feature_set=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',

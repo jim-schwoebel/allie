@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from tpot import TPOTClassifier
 from tpot import TPOTRegressor
 from sklearn.model_selection import train_test_split
+from sklearn.model_selection import cross_val_score
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -147,18 +148,23 @@ for i in range(len(classes)):
 	if problemtype == 'audio':
 		# featurize audio 
 		os.chdir(prevdir+'/features/audio_features')
+		default_features=default_audio_features
 	elif problemtype == 'text':
 		# featurize text
 		os.chdir(prevdir+'/features/text_features')
+		default_features=default_text_features
 	elif problemtype == 'image':
 		# featurize images
 		os.chdir(prevdir+'/features/image_features')
+		default_features=default_image_features
 	elif problemtype == 'video':
 		# featurize video 
 		os.chdir(prevdir+'/features/video_features')
+		default_features=default_video_features
 	elif problemtype == '.csv':
 		# featurize .CSV 
 		os.chdir(prevdir+'/features/csv_features')
+		default_features=default_csv_features
 
 	os.system('python3 featurize.py %s'%(data_dir+'/'+classes[i]))
 	os.chdir(data_dir+'/'+classes[i])
@@ -169,8 +175,8 @@ for i in range(len(classes)):
 	for i in range(len(listdir)):
 		if listdir[i][-5:]=='.json':
 			g=json.load(open(listdir[i]))
-			feature_list.append(g['features'][problemtype][default_audio_features]['features'])
-			print(g['features'][problemtype][default_audio_features]['features'])
+			feature_list.append(g['features'][problemtype][default_features]['features'])
+			print(g['features'][problemtype][default_features]['features'])
 	
 	data[class_type]=feature_list
 

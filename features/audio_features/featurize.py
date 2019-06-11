@@ -47,7 +47,7 @@ def prev_dir(directory):
 directory=os.getcwd()
 prevdir=prev_dir(directory)
 sys.path.append(prevdir+'/image_features')
-haar_dir=prevdir+'image_features/helpers/haarcascades'
+haar_dir=prevdir+'/image_features/helpers/haarcascades'
 import image_features as imf
 sys.path.append(prevdir+'/text_features')
 import nltk_features as nf 

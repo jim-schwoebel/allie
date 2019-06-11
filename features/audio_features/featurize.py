@@ -68,12 +68,7 @@ def transcribe(file, default_audio_transcriber):
 	else:
 		transcript=file
 
-	# 3 types of transcripts = audio, text, and image 
-	transcript_dict={'transcript': transcript,
-					'transcript_type': 'audio',
-					'audio_transcriber': default_audio_transcriber}
-
-	return transcript_dict, transcript 
+	return transcript 
 
 def audio_featurize(feature_set, audiofile, transcript):
 
@@ -123,8 +118,14 @@ def make_features(sampletype):
 			  'csv': dict(),
 			  }
 
+	transcripts={'audio': dict(),
+				 'text': dict(),
+				 'image': dict(),
+				 'video': dict(),
+				 'csv': dict()}
+
 	data={'sampletype': sampletype,
-		  'transcripts': [],
+		  'transcripts': transcripts,
 		  'features': features,
 		  'labels': []}
 
@@ -211,11 +212,17 @@ for i in range(len(listdir)):
 
 		if listdir[i][0:-4]+'.json' not in listdir:
 
-			# may want to determine if transcript exists if doesn't then transcribe...
-			if audio_transcribe==True:
-				transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
+			# make new .JSON if it is not there with base array schema.
+			basearray=make_features(sampletype)
 
-			# I think it's okay to assume audio less than a minute here...
+			# get the audio transcript  
+			if audio_transcribe==True:
+				transcript = transcribe(listdir[i], default_audio_transcriber)
+				transcript_list=basearray['transcripts']
+				transcript_list['audio'][default_audio_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
+
+			# featurize the audio file 
 			features, labels = audio_featurize(feature_set, listdir[i], transcript)
 			try:
 				data={'features':features.tolist(),
@@ -224,52 +231,48 @@ for i in range(len(listdir)):
 				data={'features':features,
 					  'labels': labels}
 			print(features)
-
-			# make new .JSON if it is not there with base array schema.
-			basearray=make_features(sampletype)
 			audio_features=basearray['features']['audio']
 			audio_features[feature_set]=data
 			basearray['features']['audio']=audio_features
 			basearray['labels']=[labelname]
-			transcript_list=basearray['transcripts']
-			transcript_list.append(transcript_dict)
-			basearray['transcripts']=transcript_list
+
+			# write to .JSON 
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
-		elif listdir[i][0:-4]+'.json' in listdir:
-			# overwrite existing .JSON if it is there.
-			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 
+		elif listdir[i][0:-4]+'.json' in listdir:
+			# load the .JSON file if it is there 
+			basearray=json.load(open(listdir[i][0:-4]+'.json'))
+			transcript_list=basearray['transcripts']
+
+			# only transcribe if you need to (checks within schema)
+			if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
+				transcript = transcribe(listdir[i], default_audio_transcriber)
+				transcript_list['audio'][default_audio_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
+
+			# only re-featurize if necessary (checks if relevant feature embedding exists)
 			if feature_set not in list(basearray['features']['audio']):
-				# only re-featurize if necessary 
 				features, labels = audio_featurize(feature_set, listdir[i], transcript)
+				print(features)
 				try:
 					data={'features':features.tolist(),
 						  'labels': labels}
 				except:
 					data={'features':features,
 						  'labels': labels}
-				print(features)
-
+				
 				basearray['features']['audio'][feature_set]=data
 
+			# only add the label if necessary 
 			label_list=basearray['labels']
 			if labelname not in label_list:
 				label_list.append(labelname)
 			basearray['labels']=label_list
 			transcript_list=basearray['transcripts']
 
-			# may want to determine if transcript exists if doesn't then transcribe...
-			if audio_transcribe==True:
-				transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
-
-			# I think it's okay to assume audio less than a minute here...
-			if list(transcript_list)
-
-
-			transcript_list.append(transcript_dict)
-			basearray['transcripts']=transcript_list
+			# overwrite .JSON 
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

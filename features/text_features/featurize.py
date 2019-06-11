@@ -52,21 +52,18 @@ def make_features(sampletype):
 			  'csv': dict(),
 			  }
 
+	transcripts={'audio': dict(),
+				 'text': dict(),
+				 'image': dict(),
+				 'video': dict(),
+				 'csv': dict()}
+
 	data={'sampletype': sampletype,
-		  'transcripts': [],
+		  'transcripts': transcripts,
 		  'features': features,
 		  'labels': []}
 
 	return data
-
-def transcribe(transcript):
-
-	# 3 types of transcripts = audio, text, and image 
-	transcript_dict={'transcript': transcript,
-					'transcript_type': 'text',
-					'text_transcriber': 'raw text'}
-
-	return transcript_dict, transcript 
 
 def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel):
 
@@ -111,6 +108,7 @@ listdir=os.listdir()
 cur_dir=os.getcwd()
 
 feature_set=settings['default_text_features']
+default_text_transcriber='raw_text'
 
 # can specify many types of features...
 if feature_set in ['nltk_features', 'spacy_features']:
@@ -185,16 +183,21 @@ for i in range(len(listdir)):
 		sampletype='text'
 		os.chdir(cur_dir)
 		transcript=open(listdir[i]).read()
-		transcript_dict, transcript = transcribe(transcript)
-		features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
-		print(features)
 
 		# I think it's okay to assume audio less than a minute here...
 		if listdir[i][0:-4]+'.json' not in listdir:
+
 			# make new .JSON if it is not there with base array schema.
 			basearray=make_features(sampletype)
-			text_features=basearray['features']['text']
-			basearray['transcripts']=[transcript_dict]
+
+			# assume text_transcribe==True and add to transcript list 
+			transcript_list=basearray['transcripts']
+			transcript_list['text'][default_text_transcriber]=transcript 
+			basearray['transcripts']=transcript_list
+
+			# featurize the text file 
+			features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+			print(features)
 
 			try:
 				data={'features':features.tolist(),
@@ -203,6 +206,7 @@ for i in range(len(listdir)):
 				data={'features':features,
 					  'labels': labels}
 
+			text_features=basearray['features']['text']
 			text_features[feature_set]=data
 			basearray['features']['text']=text_features
 			basearray['labels']=[foldername]
@@ -211,24 +215,40 @@ for i in range(len(listdir)):
 			jsonfile.close()
 
 		elif listdir[i][0:-4]+'.json' in listdir:
-			# overwrite existing .JSON if it is there.
+			
+			# load base array 
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
+
+			# get transcript and update if necessary 
 			transcript_list=basearray['transcripts']
-			transcript_list.append(transcript_dict)
-			basearray['transcripts']=transcript_list
 
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+			if default_text_transcriber not in list(transcript_list['text']):
+				transcript_list['text'][default_audio_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
 
-			basearray['features']['text'][feature_set]=data
+
+			# re-featurize only if necessary 
+			if feature_set not in list(basearray['features']['text']):
+
+				features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+				print(features)
+
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
+
+				basearray['features']['text'][feature_set]=data
+
+			# only add the label if necessary 
 			label_list=basearray['labels']
 			if labelname not in label_list:
 				label_list.append(labelname)
 			basearray['labels']=label_list
+
+			# overwrite existing .JSON
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

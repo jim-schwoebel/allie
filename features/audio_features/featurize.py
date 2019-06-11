@@ -255,7 +255,6 @@ for i in range(len(listdir)):
 				transcript = transcript_list['audio'][default_audio_transcriber]
 				
 			# only re-featurize if necessary (checks if relevant feature embedding exists)
-			print(list(basearray['features']['audio']))
 			if feature_set not in list(basearray['features']['audio']):
 				features, labels = audio_featurize(feature_set, listdir[i], transcript)
 				print(features)

@@ -299,7 +299,7 @@ except:
 # now move all the files over to proper model directory 
 shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
 shutil.move(cur_dir2+'/'+tpotname, os.getcwd()+'/'+tpotname)
-shutil.move(cur_dir2+'/'+jsonfilename[0:-6]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-6]+'.pickle')
+shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-5]+'.pickle')
                         
 #except:    
     #print('error, please put %s in %s'%(jsonfile, data_dir))

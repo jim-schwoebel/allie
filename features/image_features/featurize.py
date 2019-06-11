@@ -76,7 +76,7 @@ def make_features(sampletype):
 # directory=sys.argv[1]
 basedir=os.getcwd()
 haar_dir=basedir+'/helpers/haarcascades'
-foldername=input('what is the name of the folder?')
+foldername=sys.argv[1]
 os.chdir(foldername)
 cur_dir=os.getcwd()
 listdir=os.listdir() 
@@ -89,6 +89,13 @@ os.chdir(basedir)
 image_transcribe=settings['transcribe_image']
 default_image_transcriber=settings['default_image_transcriber']
 feature_set=settings['default_image_features']
+
+# get class label from folder name 
+labelname=foldername.split('/')
+if labelname[-1]=='':
+	labelname=labelname[-2]
+else:
+	labelname=labelname[-1]
 
 #### Can specify a few feature sets here (customizable in settings.json)
 # feature_set='image_features'
@@ -131,7 +138,7 @@ for i in range(len(listdir)):
 
 			image_features[feature_set]=data
 			basearray['features']['image']=image_features
-			basearray['labels']=[foldername]
+			basearray['labels']=[labelname]
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
@@ -151,7 +158,10 @@ for i in range(len(listdir)):
 					  'labels': labels}
 
 			basearray['features']['image'][feature_set]=data
-			basearray['labels']=[foldername]
+			label_list=basearray['labels']
+			if labelname not in label_list:
+				label_list.append(labelname)
+			basearray['labels']=label_list
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

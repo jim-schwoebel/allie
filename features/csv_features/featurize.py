@@ -1,5 +1,5 @@
 import os, json, wget
-# import video_features as vf 
+import video_features as vf 
 import y8m_features as yf
 from gensim.models import KeyedVectors
 import os, wget, zipfile 
@@ -49,13 +49,20 @@ import audioset_features as af
 os.chdir(basedir)
 
 haar_dir=prevdir+'image_features/helpers/haarcascades/'  
-foldername=input('what is the name of the folder?')
+foldername=sys.argv[1]
 os.chdir(foldername)
 cur_dir=os.getcwd()
 listdir=os.listdir() 
 
 # feature_set='video_features'
 feature_set='y8m_features'
+
+# get class label from folder name 
+labelname=foldername.split('/')
+if labelname[-1]=='':
+	labelname=labelname[-2]
+else:
+	labelname=labelname[-1]
 
 ##################################################
 ##				Download inception 		    	##
@@ -112,7 +119,7 @@ for i in range(len(listdir)):
 
 			video_features[feature_set]=data
 			basearray['features']['video']=video_features
-			basearray['labels']=[foldername]
+			basearray['labels']=[labelname]
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
@@ -137,7 +144,10 @@ for i in range(len(listdir)):
 					  'labels': labels}
 
 			basearray['features']['video'][feature_set]=data
-			basearray['labels']=[foldername]
+			label_list=basearray['labels']
+			if labelname not in label_list:
+				label_list.append(labelname)
+			basearray['labels']=label_list
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

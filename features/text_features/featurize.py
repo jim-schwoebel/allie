@@ -84,23 +84,31 @@ def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel):
 	return features, labels 
 
 # type in folder before downloading and loading large files.
-foldername=input('what is the name of the folder?')
+foldername=sys.argv[1]
+
+# get class label from folder name 
+labelname=foldername.split('/')
+if labelname[-1]=='':
+	labelname=labelname[-2]
+else:
+	labelname=labelname[-1]
 
 ##################################################
 ##				   Main script  		    	##
 ##################################################
 
-# directory=sys.argv[1]
 basedir=os.getcwd()
-os.chdir(foldername)
-listdir=os.listdir() 
-cur_dir=os.getcwd()
 
 # directory=sys.argv[1]
 settingsdir=prev_dir(basedir)
 settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
+
+# change to folder directory 
+os.chdir(foldername)
+listdir=os.listdir() 
+cur_dir=os.getcwd()
 
 feature_set=settings['default_text_features']
 
@@ -217,7 +225,10 @@ for i in range(len(listdir)):
 					  'labels': labels}
 
 			basearray['features']['text'][feature_set]=data
-			basearray['labels']=[foldername]
+			label_list=basearray['labels']
+			if labelname not in label_list:
+				label_list.append(labelname)
+			basearray['labels']=label_list
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

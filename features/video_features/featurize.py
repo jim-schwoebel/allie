@@ -81,7 +81,7 @@ prevdir=prev_dir(basedir)
 # os.chdir(basedir)
 
 haar_dir=prevdir+'/image_features/helpers/haarcascades/'  
-foldername=input('what is the name of the folder?')
+foldername=sys.argv[1]
 os.chdir(foldername)
 cur_dir=os.getcwd()
 listdir=os.listdir() 
@@ -98,6 +98,13 @@ default_video_transcriber=settings['default_video_transcriber']
 feature_set=settings['default_video_features']
 os.chdir(cur_dir)
 
+# get class label from folder name 
+labelname=foldername.split('/')
+if labelname[-1]=='':
+	labelname=labelname[-2]
+else:
+	labelname=labelname[-1]
+	
 ##################################################
 ##				Download inception 		    	##
 ##################################################
@@ -179,7 +186,10 @@ for i in range(len(listdir)):
 					  'labels': labels}
 
 			basearray['features']['video'][feature_set]=data
-			basearray['labels']=[foldername]
+			label_list=basearray['labels']
+			if labelname not in label_list:
+				label_list.append(labelname)
+			basearray['labels']=label_list
 			transcript_list=basearray['transcripts']
 			transcript_list.append(audio_transcript_dict)
 			transcript_list.append(video_transcript_dict)

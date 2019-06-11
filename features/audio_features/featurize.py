@@ -156,6 +156,13 @@ listdir=os.listdir()
 cur_dir=os.getcwd()
 help_dir=basedir+'/helpers/'
 
+# get class label from folder name 
+labelname=foldername.split('/')
+if labelname[-1]=='':
+	labelname=labelname[-2]
+else:
+	labelname=labelname[-1]
+
 ################################################
 ##	    	Load feature set                  ##
 ################################################
@@ -223,7 +230,7 @@ for i in range(len(listdir)):
 			audio_features=basearray['features']['audio']
 			audio_features[feature_set]=data
 			basearray['features']['audio']=audio_features
-			basearray['labels']=[foldername]
+			basearray['labels']=[labelname]
 			transcript_list=basearray['transcripts']
 			transcript_list.append(transcript_dict)
 			basearray['transcripts']=transcript_list
@@ -234,7 +241,10 @@ for i in range(len(listdir)):
 			# overwrite existing .JSON if it is there.
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
 			basearray['features']['audio'][feature_set]=data
-			basearray['labels']=[foldername]
+			label_list=basearray['labels']
+			if labelname not in label_list:
+				label_list.append(labelname)
+			basearray['labels']=label_list
 			transcript_list=basearray['transcripts']
 			transcript_list.append(transcript_dict)
 			basearray['transcripts']=transcript_list

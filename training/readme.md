@@ -1,10 +1,10 @@
 ## Settings
 
 Training scripts here. 3 types
-* TPOT 
-* SC / SR
-* Ludwig
-* Keras 
+* TPOT - TPOT classification / regression (autoML).
+* SCSR - simple classification / regression.
+* Ludwig - deep learning. 
+* Keras - automatic optimization of a neural network.
 
 ## Things to do 
 

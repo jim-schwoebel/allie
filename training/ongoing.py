@@ -3,7 +3,7 @@ PLDA implementation from
 https://github.com/RaviSoji/plda/blob/master/mnist_demo/mnist_demo.ipynb
 '''
 
-import os, sys, pickle, json, random
+import os, sys, pickle, json, random, shutil
 import numpy as np
 import matplotlib.pyplot as plt
 from tpot import TPOTClassifier
@@ -272,13 +272,15 @@ jsonfilename='%s.json'%(tpotname[0:-3])
 print('saving .JSON file (%s)'%(jsonfilename))
 jsonfile=open(jsonfilename,'w')
 if mtype in ['classification', 'c']:
-    data={
+    data={'sample type': problemtype,
+        'feature_set':default_features,
         'model name':jsonfilename[0:-5]+'.pickle',
         'accuracy':accuracy,
         'model type':'TPOTclassification_'+modeltype,
     }
 elif mtype in ['regression', 'r']:
-    data={
+    data={'sample type': problemtype,
+        'feature_set':default_features,
         'model name':jsonfilename[0:-5]+'.pickle',
         'accuracy':accuracy,
         'model type':'TPOTregression_'+modeltype,
@@ -286,6 +288,18 @@ elif mtype in ['regression', 'r']:
 
 json.dump(data,jsonfile)
 jsonfile.close()
+
+cur_dir2=os.getcwd()
+try:
+	os.chdir(problemtype+'_models')
+except:
+	os.mkdir(problemtype+'_models')
+	os.chdir(problemtype+'_models')
+
+# now move all the files over to proper model directory 
+shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
+shutil.move(cur_dir2+'/'+tpotname, os.getcwd()+'/'+tpotname)
+shutil.move(cur_dir2+'/'+jsonfilename[0:-6]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-6]+'.pickle')
                         
 #except:    
     #print('error, please put %s in %s'%(jsonfile, data_dir))

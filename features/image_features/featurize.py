@@ -24,15 +24,6 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def transcribe(file, default_image_transcriber):
-
-	# 3 types of transcripts = audio, text, and image 
-	transcript_dict={'transcript': transcript,
-					'transcript_type': 'image',
-					'audio_transcriber': default_image_transcriber}
-
-	return transcript_dict, transcript 
-
 def image_featurize(feature_set, imgfile, cur_dir, haar_dir):
 
 	if feature_set == 'image_features':
@@ -62,8 +53,14 @@ def make_features(sampletype):
 			  'csv': dict(),
 			  }
 
+	transcripts={'audio': dict(),
+				 'text': dict(),
+				 'image': dict(),
+				 'video': dict(),
+				 'csv': dict()}
+
 	data={'sampletype': sampletype,
-		  'transcripts': [],
+		  'transcripts': transcripts,
 		  'features': features,
 		  'labels': []}
 
@@ -114,21 +111,21 @@ for i in range(len(listdir)):
 		imgfile=listdir[i]
 		sampletype='image'
 
-		if image_transcribe==True:
-			transcript, features, labels = tf.tesseract_featurize(imgfile)
-			transcript_dict, transcript =transcribe(transcript, default_image_transcriber)
-		
-		# get the features and labels according to specified feature_set 
-		features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
-
 		# I think it's okay to assume audio less than a minute here...
 		if listdir[i][0:-4]+'.json' not in listdir:
+
 			# make new .JSON if it is not there with base array schema.
 			basearray=make_features(sampletype)
-			image_features=basearray['features']['image']
-			basearray['transcript']=[transcript_dict]
-			print(features)
 
+			if image_transcribe==True:
+				transcript, features, labels = tf.tesseract_featurize(imgfile)
+				transcript_list=basearray['transcripts']
+				transcript_list['image'][default_image_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
+			
+			# featurize the image file 
+			features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
+			print(features)
 			try:
 				data={'features':features.tolist(),
 					  'labels': labels}
@@ -136,32 +133,46 @@ for i in range(len(listdir)):
 				data={'features':features,
 					  'labels': labels}
 
+			image_features=basearray['features']['image']
 			image_features[feature_set]=data
 			basearray['features']['image']=image_features
 			basearray['labels']=[labelname]
+
+			# write to .JSON 
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
+
 		elif listdir[i][0:-4]+'.json' in listdir:
 			# overwrite existing .JSON if it is there.
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			transcript_list=basearray['transcript']
-			transcript_list.append(transcript_dict)
-			basearray['transcript']=transcript_list
-			print(features)
+			transcript_list=basearray['transcripts']
 
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+			# only re-transcribe if necessary 
+			if image_transcribe==True and default_image_transcriber not in list(transcript_list['image']):
+				transcript, features, labels = tf.tesseract_featurize(imgfile)
+				transcript_list['image'][default_image_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
 
-			basearray['features']['image'][feature_set]=data
+			# only re-featurize if necessary (checks if relevant feature embedding exists)
+			if feature_set not in list(basearray['features']['image']):
+				features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
+				print(features)
+				basearray['features']['image'][feature_set]=data
+
+			# only add label if necessary 
 			label_list=basearray['labels']
 			if labelname not in label_list:
 				label_list.append(labelname)
 			basearray['labels']=label_list
+
+			# overwrite .JSON file 
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

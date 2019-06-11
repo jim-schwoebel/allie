@@ -7,7 +7,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 Show outline for this below. This makes it flexible to any featurization and transcript type.
 
 ```
-def make_features():
+def make_features(sampletype):
 
 	# only add labels when we have actual labels.
 	features={'audio':dict(),
@@ -17,10 +17,16 @@ def make_features():
 		  'csv': dict(),
 		  }
 
+	transcripts={'audio': dict(),
+			 'text': dict(),
+			 'image': dict(),
+			 'video': dict(),
+			 'csv': dict()}
+
 	data={'sampletype': sampletype,
- 	      'transcripts': [],
-	      'features': features,
-	      'labels': []}
+		  'transcripts': transcripts,
+		  'features': features,
+		  'labels': []}
 
 	return data
 ```

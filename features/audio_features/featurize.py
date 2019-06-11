@@ -150,7 +150,7 @@ feature_set=settings['default_audio_features']
 ##	   		Get featurization folder     	  ##
 ################################################
 
-foldername=input('what is the name of the folder?')
+foldername=sys.argv[1]
 os.chdir(foldername)
 listdir=os.listdir() 
 cur_dir=os.getcwd()
@@ -199,7 +199,7 @@ help_dir=basedir+'/helpers/'
 for i in range(len(listdir)):
 	if listdir[i][-4:] in ['.wav', '.mp3']:
 		#try:
-
+		os.chdir(foldername)
 		sampletype='audio'
 
 		# may want to determine if transcript exists if doesn't then transcribe...

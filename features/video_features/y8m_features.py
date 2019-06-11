@@ -39,6 +39,11 @@ import audioset_features as af
 print('imported audioset features!')
 os.chdir(basedir)
 
+#### to extract tesseract features 
+sys.path.append(prevdir+ '/image_features')
+import tesseract_features as tf 
+os.chdir(basedir)
+
 # import fast featurize
 text_dir=prevdir+'text_features'
 os.chdir(text_dir)
@@ -229,6 +234,8 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
   #take first image as a background image 
   background=cv2.imread(listdir[1])
   image_features=numpy.zeros(1024)
+  image_features2=np.zeros(63)
+  image_transcript=''
   for i in range(len(listdir)):
       if listdir[i][-4:]=='.png':
           os.chdir(outputdir)
@@ -244,10 +251,14 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
           im = numpy.array(Image.open(listdir[i]))
           image_features_temp = extractor.extract_rgb_frame_features(im)
           image_features=image_features+image_features_temp
+          ttranscript, tfeatures, tlabels = tf.tesseract_featurize(listdir[i])
+          image_transcript=image_transcript+ttranscript 
+          image_features2=image_features2+tfeatures 
           #os.remove(listdir[i])
 
   # averaged image features
   image_features=(1/iterations)*image_features
+  image_features2=(1/iterations)*image_features2
 
   # averaged image over background             
   img=(1/iterations)*img-background
@@ -262,6 +273,10 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
   video_labels=list()
   for i in range(len(video_features)):
       video_labels.append('Y8M_feature_%s'%(str(i+1)))
+
+  avg_image_labels2=list()
+  for i in range(len(tlabels)):
+      avg_image_labels2.append('avg_imgtranscript_'+tlabels[i])
 
   # make wavfile from video file and get average AudioSet embedding features 
   wavfile = videofile[0:-4]+'.wav'
@@ -282,11 +297,12 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
   transcript = transcribe(wavfile)
   text_features, text_labels = ff.fast_featurize(transcript, fast_model)
 
-  features=numpy.append(video_features,audio_features)
+  features=numpy.append(video_features,image_features2)
+  features=numpy.append(features, audio_features)
   features=numpy.append(features,text_features)
-  labels=video_labels+audio_labels+text_labels 
+  labels=video_labels+avg_image_labels2+audio_labels+text_labels 
 
-  return features, labels, transcript 
+  return features, labels, transcript, image_transcript
 
 
 

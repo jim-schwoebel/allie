@@ -21,24 +21,6 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def audio_transcribe(transcript, default_audio_transcriber):
-
-	# 3 types of transcripts = audio, text, and image 
-	transcript_dict={'transcript': transcript,
-					'transcript_type': 'audio',
-					'audio_transcriber': default_audio_transcriber}
-
-	return transcript_dict, transcript 
-
-def video_transcribe2(transcript, default_video_transcriber):
-
-	# 3 types of transcripts = audio, text, and image 
-	transcript_dict={'transcript': str(transcript),
-					'transcript_type': 'video',
-					'video_transcriber': default_video_transcriber}
-
-	return transcript_dict, transcript 
-
 def make_features(sampletype):
 
 	# only add labels when we have actual labels.
@@ -49,8 +31,14 @@ def make_features(sampletype):
 			  'csv': dict(),
 			  }
 
+	transcripts={'audio': dict(),
+				 'text': dict(),
+				 'image': dict(),
+				 'video': dict(),
+				 'csv': dict()}
+
 	data={'sampletype': sampletype,
-		  'transcripts': [],
+		  'transcripts': transcripts,
 		  'features': features,
 		  'labels': []}
 
@@ -92,7 +80,8 @@ settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
 
-video_transcribe=settings['transcribe_videos']
+audio_transcribe_setting=settings['transcribe_audio']
+video_transcribe_setting=settings['transcribe_videos']
 default_audio_transcriber=settings['default_audio_transcriber']
 default_video_transcriber=settings['default_video_transcriber']
 feature_set=settings['default_video_features']
@@ -148,17 +137,17 @@ for i in range(len(listdir)):
 		#try:
 		sampletype='video'
 		videofile=listdir[i]
-		features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
-		audio_transcript_dict, audio_transcript = audio_transcribe(audio_transcript, default_audio_transcriber)
-		video_transcript_dict, video_transcript = video_transcribe2(video_transcript, default_video_transcriber)
-
+		
 		# I think it's okay to assume audio less than a minute here...
 		if listdir[i][0:-4]+'.json' not in listdir:
+
 			# make new .JSON if it is not there with base array schema.
 			basearray=make_features(sampletype)
-			video_features=basearray['features']['video']
-			transcripts=[audio_transcript_dict, video_transcript_dict]
 
+			# get features and add label 
+			video_features=basearray['features']['video']
+			features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
+			
 			try:
 				data={'features':features.tolist(),
 					  'labels': labels}
@@ -168,32 +157,56 @@ for i in range(len(listdir)):
 
 			video_features[feature_set]=data
 			basearray['features']['video']=video_features
-			basearray['labels']=[foldername]
-			basearray['transcripts']=transcripts
+			basearray['labels']=[labelname]
+
+			# only add transcripts in schema if they are true 
+			transcript_list=basearray['transcripts']
+
+			if video_transcribe_setting == True:	
+				transcript_list['video'][default_video_transcriber] = video_transcript
+			if audio_transcribe_setting == True:
+				transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+			basearray['transcripts']=transcript_list
+
+			# write to .JSON 
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
+
 		elif listdir[i][0:-4]+'.json' in listdir:
-			# overwrite existing .JSON if it is there.
+			# load the .JSON file if it is there 
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			print(features)
+			video_features=basearray['features']['video']
 
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+			# featurizes/labels only if necessary (skips if feature embedding there)
+			if feature_set not in list(video_features):
+				features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
+				print(features)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
 
-			basearray['features']['video'][feature_set]=data
+				video_features[feature_set]=data
+				basearray['features']['video']=video_features
+
+			# make transcript additions, as necessary 
+			transcript_list=basearray['transcripts']
+			if video_transcribe_setting == True and default_video_transcriber not in list(transcript_list):	
+				transcript_list['video'][default_video_transcriber] = video_transcript
+			if audio_transcribe_setting == True and default_audio_transcriber not in list(transcript_list):	
+				transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+			basearray['transcripts']=transcript_list
+
+			# add appropriate labels only if they are new labels 
 			label_list=basearray['labels']
 			if labelname not in label_list:
 				label_list.append(labelname)
 			basearray['labels']=label_list
-			transcript_list=basearray['transcripts']
-			transcript_list.append(audio_transcript_dict)
-			transcript_list.append(video_transcript_dict)
-			basearray['transcripts']=transcript_list
+
+			# overwrite .JSON 
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()

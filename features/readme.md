@@ -79,6 +79,9 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [csv_features]() - standard CSV feature array
 
 ## Not Implemented / Work in progress
+
+- Reduce redundnacy; if already in schema, do not re-featurize (to reduce computational overhead again).
+
 ### Audio
 * [kaldi features](https://github.com/pykaldi/pykaldi)  - GMM and other such features. https://pykaldi.github.io/api/kaldi.feat.html#module-kaldi.feat.fbank
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 

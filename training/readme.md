@@ -1,10 +1,11 @@
 ## Settings
 
-Training scripts here. 3 types
+Training scripts here. 5 types
 * TPOT - TPOT classification / regression (autoML).
 * SCSR - simple classification / regression.
 * Ludwig - deep learning (simple ludwig).
 * Keras - automatic optimization of a neural network.
+* pLDA - probabilistic LDA modeling.
 
 ## Things to do 
 

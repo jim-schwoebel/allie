@@ -209,22 +209,22 @@ for i in range(len(listdir)):
 		os.chdir(foldername)
 		sampletype='audio'
 
-		# may want to determine if transcript exists if doesn't then transcribe...
-		if audio_transcribe==True:
-			transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
-
-		# I think it's okay to assume audio less than a minute here...
-		features, labels = audio_featurize(feature_set, listdir[i], transcript)
-		print(features)
-
-		try:
-			data={'features':features.tolist(),
-				  'labels': labels}
-		except:
-			data={'features':features,
-				  'labels': labels}
-
 		if listdir[i][0:-4]+'.json' not in listdir:
+
+			# may want to determine if transcript exists if doesn't then transcribe...
+			if audio_transcribe==True:
+				transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
+
+			# I think it's okay to assume audio less than a minute here...
+			features, labels = audio_featurize(feature_set, listdir[i], transcript)
+			try:
+				data={'features':features.tolist(),
+					  'labels': labels}
+			except:
+				data={'features':features,
+					  'labels': labels}
+			print(features)
+
 			# make new .JSON if it is not there with base array schema.
 			basearray=make_features(sampletype)
 			audio_features=basearray['features']['audio']
@@ -240,12 +240,34 @@ for i in range(len(listdir)):
 		elif listdir[i][0:-4]+'.json' in listdir:
 			# overwrite existing .JSON if it is there.
 			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			basearray['features']['audio'][feature_set]=data
+
+			if feature_set not in list(basearray['features']['audio']):
+				# only re-featurize if necessary 
+				features, labels = audio_featurize(feature_set, listdir[i], transcript)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
+				print(features)
+
+				basearray['features']['audio'][feature_set]=data
+
 			label_list=basearray['labels']
 			if labelname not in label_list:
 				label_list.append(labelname)
 			basearray['labels']=label_list
 			transcript_list=basearray['transcripts']
+
+			# may want to determine if transcript exists if doesn't then transcribe...
+			if audio_transcribe==True:
+				transcript_dict, transcript = transcribe(listdir[i], default_audio_transcriber)
+
+			# I think it's okay to assume audio less than a minute here...
+			if list(transcript_list)
+
+
 			transcript_list.append(transcript_dict)
 			basearray['transcripts']=transcript_list
 			jsonfile=open(listdir[i][0:-4]+'.json','w')

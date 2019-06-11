@@ -100,7 +100,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * BERT pre-trained model - https://github.com/huggingface/pytorch-pretrained-BERT
 
 ### Images 
-* allow Ludwig model type to dictate featurization.
+* allow Ludwig model type to dictate featurization (.JSON files --> .CSV).
 * Add in transcription to standard image array if settings.JSON image transcript == True.
 * [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html
 

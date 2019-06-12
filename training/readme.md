@@ -2,7 +2,7 @@
 
 Training scripts here. 5 types
 * 'tpot' - TPOT classification / regression (autoML). &#x2611;
-* 'scsr' - simple classification / regression. &#x2611;
+* 'scsr' - simple classification / regression (built by Jim from NLX-model). &#x2611;
 * 'plda' - probabilistic LDA modeling. &#x2611; (unstable)
 * 'keras' - simple MLP network architecture (quick prototype - if works may want to use autoML settings) &#x2611;
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search &#x2611;

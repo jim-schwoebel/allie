@@ -6,7 +6,7 @@ Training scripts here. 5 types
 * 'plda' - probabilistic LDA modeling. &#x2611; (unstable)
 * 'keras' - simple MLP network architecture (quick prototype) &#x2611;
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search 
-* 'ludwig' - deep learning (simple ludwig).
+* 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.
 
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)

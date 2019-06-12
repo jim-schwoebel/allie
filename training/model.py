@@ -121,7 +121,7 @@ stillavailable=list()
 for i in range(int(classnum)):
 	class_=input('what is class #%s \n'%(str(i+1)))
 
-	while class_ not in availableclasses and class_ not in '':
+	while class_ not in availableclasses and class_ not in '' and class_ not in classes:
 		print('\n')
 		print('------------------ERROR------------------')
 		print('the input class does not exist (for %s files).'%(problemtype))
@@ -242,7 +242,7 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='ludwig'
+default_training_script='plda'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)

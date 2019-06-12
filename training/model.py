@@ -11,6 +11,7 @@ import train_scsr as scsr
 import train_keras as tk
 import train_autokeras as tak 
 import train_devol as td 
+import train_ludwig as tl
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -153,7 +154,7 @@ default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
 default_csv_features='n/a'
 
-# now featurize each class 
+# now featurize each class (in proper folder)
 data={}
 for i in range(len(classes)):
 	class_type=classes[i]
@@ -192,6 +193,9 @@ for i in range(len(classes)):
 	
 	data[class_type]=feature_list
 
+# get feature labels (for ludwig) - should be the same for all files
+feature_labels=g['features'][problemtype][default_features]['labels']
+
 # now that we have featurizations, we can load them in and train model
 os.chdir(prevdir+'/training/')
 
@@ -226,7 +230,7 @@ for i in range(len(classes)):
     random.shuffle(class_)
 
     if len(class_) > minlength:
-        print('%s greater than class, equalizing...')
+        print('%s greater than class, equalizing...'%(class_))
         class_=class_[0:minlength]
 
     for j in range(len(class_)):
@@ -238,7 +242,7 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='devol'
+default_training_script='ludwig'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
@@ -257,7 +261,7 @@ elif default_training_script=='autokeras':
 elif default_training_script=='devol':
 	td.train_devol(classes, alldata, labels, mtype)
 elif default_training_script=='ludwig':
-	pass
+	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype)
                        
 #except:    
 # print('error, please put %s in %s'%(jsonfile, data_dir))

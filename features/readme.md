@@ -90,6 +90,8 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Audio
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV).
+* [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
+* [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
 * [kaldi features](https://github.com/pykaldi/pykaldi)  - GMM and other such features. https://pykaldi.github.io/api/kaldi.feat.html#module-kaldi.feat.fbank
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 

@@ -14,7 +14,7 @@ Other things.
 * If augment == True, can augment (audio, text, image, and video data)
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for features (help with classification accuracy - dimensionality reduction technique). 
-* Compress models? --> if True, compress with AutoKeras or scikit-learn compress (faster predictions from features) 
+* Compress models? --> if True, compress with AutoKeras or scikit-learn compress (faster predictions from features) - https://github.com/Tencent/PocketFlow
 * Create YAML file (for GitHub repository) - if True, select a cool .GIF to put in repo readme (docker container, featurizers, automated testing w/ test file) 
 
 ## Data modeling tutorials (Readmes)

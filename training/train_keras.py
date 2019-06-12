@@ -1,4 +1,4 @@
-import os, sys, pickle, json, random, shutil, time 
+import os, sys, pickle, json, random, shutil, time, datetime, math 
 import numpy as np
 import matplotlib.pyplot as plt
 import keras.models
@@ -6,7 +6,6 @@ from keras import layers
 from keras.models import Sequential,model_from_json
 from keras.layers import Dense, Dropout
 from sklearn.model_selection import train_test_split
-import datetime 
 
 def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
     # get train and test data 
@@ -77,7 +76,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     g.write('EXECUTION TIME: \n\n %s\n\n'%(str(execution)))
     g.write('GROUPS: \n\n')
     for i in range(len(classes)):
-        g.write('Group %s: %s (%s training, %s testing)'%(str(i+1), classes[i],str(int(len(x_train/len(classes))),str(int(len(x_test)/len(classes))))))
+        g.write('Group %s: %s (%s training, %s testing)'%(str(i+1), classes[i], str(math.floor(len(x_train)/len(classes))), str(math.floor(len(x_test)/len(classes)))))
         g.write('\n')
     g.write('\n')
     g.write('FEATURES: \n\n %s'%(default_features))

@@ -8,7 +8,6 @@ Training scripts here. 5 types
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search 
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). 
-* 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)
@@ -28,6 +27,9 @@ Other things.
 * [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
 * [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
 * [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
+
+## Future additions
+* 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 
 ## Additional documentation
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)

@@ -8,6 +8,7 @@ Training scripts here. 5 types
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search 
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). 
+* 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)

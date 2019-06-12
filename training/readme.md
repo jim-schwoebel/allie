@@ -25,13 +25,9 @@ Other things.
 * Video file training example 
 * CSV file training example
 
-## Tutorials
-* [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
-* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
-* [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
-
 ## Future additions
 * 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
+* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
 
 ## Additional documentation
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)

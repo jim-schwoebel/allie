@@ -1,6 +1,6 @@
 ## Settings
 
-Training scripts here. 5 types
+Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'tpot' - TPOT classification / regression (autoML). &#x2611;
 * 'scsr' - simple classification / regression (built by Jim from NLX-model). &#x2611;
 * 'plda' - probabilistic LDA modeling. &#x2611; (unstable)

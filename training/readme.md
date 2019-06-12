@@ -9,6 +9,8 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). 
 
+Note that the autoML techniques are expensive and can take up to 1-2 days to fully train a model.
+
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.

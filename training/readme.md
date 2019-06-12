@@ -19,6 +19,7 @@ Other things.
 * hyperparameter optimization - https://github.com/autonomio/talos
 * Compress models? --> if True, compress with AutoKeras or scikit-learn compress (faster predictions from features) - https://github.com/Tencent/PocketFlow
 * Create YAML file (for GitHub repository) - if True, select a cool .GIF to put in repo readme (docker container, featurizers, automated testing w/ test file) 
+* Clustering algorithms 
 
 ## Data modeling tutorials (Readmes)
 * Audio file training example

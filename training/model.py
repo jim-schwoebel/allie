@@ -122,6 +122,11 @@ for i in range(int(classnum)):
 		stillavailable=list()
 		if availableclasses[j] not in classes:
 			stillavailable.append(availableclasses[j])
+	while class_ not in availableclasses:
+		print('the input class does not exist (for %s files).'%(problemtype))
+		print('these are the available classes: ')
+		print(stillavailable)
+		class_=input('what is class #%s \n'%(str(i+1)))
 	
 	if class_ == '':
 		class_=stillavailable[0]

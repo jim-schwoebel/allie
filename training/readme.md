@@ -1,11 +1,11 @@
 ## Settings
 
 Training scripts here. 5 types
-* 'tpot' - TPOT classification / regression (autoML).
-* 'scsr' - simple classification / regression.
-* 'ludwig' - deep learning (simple ludwig).
+* 'tpot' - TPOT classification / regression (autoML). &#x2611;
+* 'scsr' - simple classification / regression. &#x2611;
+* 'plda' - probabilistic LDA modeling. &#x2611;
 * 'keras' - automatic optimization of a neural network.
-* 'plda' - probabilistic LDA modeling.
+* 'ludwig' - deep learning (simple ludwig).
 
 ## Things to do 
 

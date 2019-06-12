@@ -8,7 +8,7 @@ from keras.layers import Dense, Dropout
 from sklearn.model_selection import train_test_split
 import datetime 
 
-def train_keras(alldata, labels, mtype, jsonfile, problemtype, default_features):
+def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
     # get train and test data 
     start=time.time()
     x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
@@ -76,10 +76,10 @@ def train_keras(alldata, labels, mtype, jsonfile, problemtype, default_features)
     g.write('\n\n')
     g.write('EXECUTION TIME: \n\n %s\n\n'%(str(execution)))
     g.write('GROUPS: \n\n')
-    g.write('Group 1: %s (%s training, %s testing)'%(name1,str(int(len(x_train/2)),str(int(len(x_test)/2)))))
+    for i in range(len(classes)):
+        g.write('Group %s: %s (%s training, %s testing)'%(str(i+1), classes[i],str(int(len(x_train/len(classes))),str(int(len(x_test)/len(classes))))))
+        g.write('\n')
     g.write('\n')
-    g.write('Group 2: %s (%s training, %s testing)'%(name2,str(int(len(y_train)/2)),str(int(len(y_test)/2))))
-    g.write('\n\n')
     g.write('FEATURES: \n\n %s'%(default_features))
     g.write('\n\n')
     g.write('MODEL ACCURACY: \n\n')

@@ -4,7 +4,8 @@ Training scripts here. 5 types
 * 'tpot' - TPOT classification / regression (autoML). &#x2611;
 * 'scsr' - simple classification / regression. &#x2611;
 * 'plda' - probabilistic LDA modeling. &#x2611; (unstable)
-* 'keras' - automatic optimization of a neural network.
+* 'keras' - simple MLP network architecture (quick prototype) &#x2611;
+* 'autokeras' - automatic optimization of a neural network.
 * 'ludwig' - deep learning (simple ludwig).
 
 ## Things to do 

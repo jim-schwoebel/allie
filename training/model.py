@@ -2,13 +2,12 @@
 PLDA implementation from
 https://github.com/RaviSoji/plda/blob/master/mnist_demo/mnist_demo.ipynb
 '''
-
 import os, sys, pickle, json, random, shutil
 import numpy as np
 import matplotlib.pyplot as plt
 import train_TPOT as tt
 import train_pLDA as tp
-import train_sc as sc
+import train_scsr as scsr
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -225,15 +224,18 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='sc'
+default_training_script='scsr'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
 elif default_training_script=='plda':
 	# currently does not work very well...
 	tp.train_pLDA(alldata,labels)
-elif default_training_script=='sc':
-	sc.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
+elif default_training_script=='scsr':
+	if mtype == 'c':
+		scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
+	elif mtype == 'r':
+		scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
 elif default_training_script=='keras':
 	pass
 elif default_training_script=='ludwig':

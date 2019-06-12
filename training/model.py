@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 import train_TPOT as tt
 import train_pLDA as tp
 import train_scsr as scsr
+import train_keras as tk
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -224,7 +225,7 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='scsr'
+default_training_script='keras'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
@@ -237,7 +238,7 @@ elif default_training_script=='scsr':
 	elif mtype == 'r':
 		scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
 elif default_training_script=='keras':
-	pass
+	tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='ludwig':
 	pass
                        

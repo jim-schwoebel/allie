@@ -116,18 +116,25 @@ classnum=input('how many classes would you like to model? (%s available) \n'%(st
 print('these are the available classes: ')
 print(availableclasses)
 classes=list()
+stillavailable=list()
 for i in range(int(classnum)):
 	class_=input('what is class #%s \n'%(str(i+1)))
+	
+	while class_ not in availableclasses:
+		print('\n')
+		print('------------------ERROR------------------')
+		print('the input class does not exist (for %s files).'%(problemtype))
+		print('these are the available classes: ')
+		if len(stillavailable)==0:
+			print(availableclasses)
+		else:
+			print(stillavailable)
+		print('------------------------------------')
+		class_=input('what is class #%s \n'%(str(i+1)))
 	for j in range(len(availableclasses)):
 		stillavailable=list()
 		if availableclasses[j] not in classes:
 			stillavailable.append(availableclasses[j])
-	while class_ not in availableclasses:
-		print('the input class does not exist (for %s files).'%(problemtype))
-		print('these are the available classes: ')
-		print(stillavailable)
-		class_=input('what is class #%s \n'%(str(i+1)))
-	
 	if class_ == '':
 		class_=stillavailable[0]
 

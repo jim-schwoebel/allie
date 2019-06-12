@@ -11,6 +11,7 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 
 Note that the autoML techniques are expensive and can take up to 1-2 days to fully train a model.
 
+## Things to finish (before production build)
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.

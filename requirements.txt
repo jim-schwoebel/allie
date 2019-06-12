@@ -25,3 +25,4 @@ xgboost
 tpot
 beautifultable
 autokeras 
+autokeras-pretrained

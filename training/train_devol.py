@@ -3,21 +3,30 @@ import numpy as np
 from keras import backend as K
 from helpers.devol.devol import DEvol, GenomeHandler
 from sklearn.model_selection import train_test_split
+import time 
 
 def train_devol(classes, alldata, labels, mtype):
-	print('trainiing DEVOL CNN network (may take up to 1 day)')
+	print('training DEVOL CNN network (may take up to 1 day)')
 	x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 
-	'''
-	This problem uses mnist, a handwritten digit classification problem used for many introductory deep learning examples. 
-	Here, we load the data and prepare it for use by the GPU. We also do a one-hot encoding of the labels.
-	'''
-
-	x_train = x_train.reshape(x_train.shape[0], 28, 28, 1)
-	x_test = x_test.reshape(x_test.shape[0], 28, 28, 1)
+	# reshape the data (to accomodate library needs)
+	x_train=x_train.reshape(x_train.shape+ (1,)+ (1,))
+	x_test=x_test.reshape(x_test.shape+ (1,)+ (1,))
 	y_train = to_categorical(y_train)
 	y_test = to_categorical(y_test)
 	dataset = ((x_train, y_train), (x_test, y_test))
+	# print(dataset)
+	# time.sleep(10)
+	print(x_train.shape)
+	print(x_train[0].shape)
+	print(x_test.shape)
+	print(x_test[0])
+	# time.sleep(10)
+	# print(x_train)
+	# time.sleep(10)
+	# print(y_train.shape)
+	# time.sleep(10)
+	# print(y_train)
 
 	'''
 	The GenomeHandler class handles the constraints that are imposed upon models in a particular genetic program. 
@@ -30,8 +39,8 @@ def train_devol(classes, alldata, labels, mtype):
 	                               max_dense_layers=2, # includes final dense layer
 	                               max_filters=256,
 	                               max_dense_nodes=1024,
-	                               input_shape=x_train.shape[1:],
-	                               n_classes=10)
+	                               input_shape=x_train[0].shape,
+	                               n_classes=len(classes))
 
 
 	'''

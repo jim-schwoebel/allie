@@ -119,8 +119,8 @@ classes=list()
 stillavailable=list()
 for i in range(int(classnum)):
 	class_=input('what is class #%s \n'%(str(i+1)))
-	
-	while class_ not in availableclasses:
+
+	while class_ not in availableclasses and class_ not in '':
 		print('\n')
 		print('------------------ERROR------------------')
 		print('the input class does not exist (for %s files).'%(problemtype))
@@ -138,7 +138,6 @@ for i in range(int(classnum)):
 	if class_ == '':
 		class_=stillavailable[0]
 
-	print('available classes: %s'%(str(stillavailable)))
 	classes.append(class_)
 
 mtype=input('is this a classification (c) or regression (r) problem? \n')

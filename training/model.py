@@ -242,7 +242,7 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='ludwig'
+default_training_script='scsr'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)

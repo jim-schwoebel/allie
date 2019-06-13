@@ -88,7 +88,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
         else:
             foldername=foldername+'_'+classes[i]
 
-    foldername=foldername+'_scregression_%s'%(default_features)
+    foldername=foldername+'_sc_regression_%s'%(default_features)
     tempdir=os.getcwd()+'/'+foldername 
 
     try:

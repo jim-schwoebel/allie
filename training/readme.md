@@ -18,6 +18,7 @@ Note that the autoML techniques are expensive and can take up to 1-2 days to ful
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
+* add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.
 * [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for features (help with classification accuracy - dimensionality reduction technique). 
 * hyperparameter optimization - https://github.com/autonomio/talos
 * Compress models? --> if True, compress with AutoKeras or scikit-learn compress (faster predictions from features) - https://github.com/Tencent/PocketFlow

@@ -121,7 +121,7 @@ stillavailable=list()
 for i in range(int(classnum)):
 	class_=input('what is class #%s \n'%(str(i+1)))
 
-	while class_ not in availableclasses and class_ not in '' and class_ not in classes:
+	while class_ not in availableclasses and class_ not in '' or class_ in classes:
 		print('\n')
 		print('------------------ERROR------------------')
 		print('the input class does not exist (for %s files).'%(problemtype))
@@ -242,7 +242,7 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='plda'
+default_training_script='ludwig'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
@@ -259,9 +259,9 @@ elif default_training_script=='keras':
 elif default_training_script=='autokeras':
 	tak.train_autokeras(classes, alldata, labels, mtype)
 elif default_training_script=='devol':
-	td.train_devol(classes, alldata, labels, mtype)
+	td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='ludwig':
-	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype)
+	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
                        
 #except:    
 # print('error, please put %s in %s'%(jsonfile, data_dir))

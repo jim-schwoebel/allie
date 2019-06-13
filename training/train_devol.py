@@ -3,9 +3,9 @@ import numpy as np
 from keras import backend as K
 from helpers.devol.devol import DEvol, GenomeHandler
 from sklearn.model_selection import train_test_split
-import time 
+import time, os, shutil 
 
-def train_devol(classes, alldata, labels, mtype):
+def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
 	print('training DEVOL CNN network (may take up to 1 day)')
 	x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 
@@ -51,8 +51,38 @@ def train_devol(classes, alldata, labels, mtype):
 
 	devol = DEvol(genome_handler)
 	model = devol.run(dataset=dataset,
-	                  num_generations=20,
-	                  pop_size=20,
-	                  epochs=5)
+	                  num_generations=1,
+	                  pop_size=10,
+	                  epochs=10)
 	model.summary()
 
+	os.remove('best-model.h5')
+	
+	# pickle the model 
+	modelname=jsonfile[0:-5]+'_devol_%s'%(default_features)
+
+	# serialize model to JSON
+	model_json = model.to_json()
+	print(model_json)
+	with open(modelname+".json", "w") as json_file:
+	    json_file.write(model_json)
+	# serialize weights to HDF5
+	model.save_weights(modelname+".h5")
+	print("\n Saved %s.json model to disk"%(modelname))
+
+	listdir=os.listdir()
+	for i in range(len(listdir)):
+		if listdir[i][-4:]=='.csv':
+			os.rename(listdir[i], modelname+'.csv')
+
+	cur_dir2=os.getcwd()
+	try:
+	    os.chdir(problemtype+'_models')
+	except:
+	    os.mkdir(problemtype+'_models')
+	    os.chdir(problemtype+'_models')
+
+	# now move all the files over to proper model directory 
+	shutil.move(cur_dir2+'/'+modelname+'.json', os.getcwd()+'/'+modelname+'.json')
+	shutil.move(cur_dir2+'/'+modelname+'.csv', os.getcwd()+'/'+modelname+'.csv')
+	shutil.move(cur_dir2+'/'+modelname+'.h5', os.getcwd()+'/'+modelname+'.h5')

@@ -12,10 +12,12 @@ into the future.
 Note that grid search can be expensive + take up to 24 hours on most 
 GPUs / CPUs to optimize a model.
 '''
-from autokeras import MlpModule
+from autokeras import MlpModule, CnnModule
 from autokeras.backend.torch.loss_function import classification_loss
 from autokeras.backend.torch.loss_function import regression_loss
 from autokeras.nn.metric import Accuracy
+from autokeras.utils import pickle_from_file
+
 from sklearn.model_selection import train_test_split
 
 # pre processing
@@ -43,7 +45,7 @@ import torch, time, shutil, os
 import torch.utils.data as utils
 
 # skip the CNN for neural architecture search because it doesn't work unless an image type really.
-def train_autokeras(classes, alldata, labels, mtype, jsonfile, default_features):
+def train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
 
 	## this is a CNN architecture 
 	modelname=jsonfile[0:-5]+'_autokeras_%s'%(default_features)
@@ -86,18 +88,19 @@ def train_autokeras(classes, alldata, labels, mtype, jsonfile, default_features)
 		# loss = regression_loss for regression
 		mlpModule = MlpModule(loss=regression_loss, metric=MSE, searcher_args={}, path=TEST_FOLDER, verbose=True)
 
-	timelimit=60*2
+	timelimit=60
 	print('training MLP model for %s hours'%(timelimit/(60*60)))
 	mlpModule.fit(n_output_node, input_shape, training_data, test_data, time_limit=timelimit)
-	mlpModule.final_fit(x_train, y_train, retrain=True)
+	mlpModule.final_fit(training_data, test_data, trainer_args=None, retrain=False)
 	
-	# serialize model to JSON
-	model_json = model.to_json()
-	with open(modelname+".json", "w") as json_file:
-	    json_file.write(model_json)
-	# serialize weights to HDF5
-	model.save_weights(modelname+".h5")
-	print("\n Saved %s.json model to disk"%(modelname))
+	# # serialize model to JSON
+	# mlpModule.export_autokeras_model(modelname+'.pickle')
+	# print("\n Saved %s.pickle model to disk"%(modelname))
+
+	# # test opening model and making predictions
+	# model=pickle_from_file(modelname+'.pickle')
+	# results=model.evaluate(x_test, y_test)
+	# print(results)
 
 	cur_dir2=os.getcwd()
 

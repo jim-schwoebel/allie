@@ -242,7 +242,7 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='scsr'
+default_training_script='autokeras'
 
 if default_training_script=='tpot':
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
@@ -257,7 +257,7 @@ elif default_training_script=='scsr':
 elif default_training_script=='keras':
 	tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='autokeras':
-	tak.train_autokeras(classes, alldata, labels, mtype)
+	tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='devol':
 	td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='ludwig':

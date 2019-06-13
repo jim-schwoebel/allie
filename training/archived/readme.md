@@ -10,7 +10,7 @@ Note that as the documentation and support for these libraries becomes better ov
 
 They just don't work now :-) 
 
-## Other (nice-to-have) things dsafdsa
+## Other (nice-to-have) things to incorporate
 
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.

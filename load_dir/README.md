@@ -20,7 +20,5 @@ Specifically, just drag and drop sample data in here and predictions will be mad
 3. Run load_classify.py (runs all models in ./models/ directory + makes predictions) 
 4. See predictions for each file in a .JSON format. The feature array will follow the standard feature array vector along with any audio, image, or video transcripts that were made. 
 
-## detailed instructions (regression predictions)  
-
-1. convert to .CSV file format 
-2. run load_regression script (TPOT)
+## Future additions
+* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 

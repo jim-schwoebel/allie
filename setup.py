@@ -11,6 +11,13 @@ brew_modules=['sox']
 brew_install(brew_modules)
 os.system('pip3 install -r requirements.txt')
 
+##################################################
+##  ARCHIVED TRAINING REPOS (MAY ADD IN LATER)  ##
+##################################################
+# autokeras 
+# autokeras-pretrained
+# auto-sklearn
+
 # create settings.json (if it does not exist)
 listdir=os.listdir()
 if 'settings.json' not in listdir:

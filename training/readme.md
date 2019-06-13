@@ -14,8 +14,8 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ## Things to finish (before production build)
 Other things. 
 
-* If clean == True, then clean each folder. This will remove any duplicate files. 
-* If augment == True, can augment (audio, text, image, and video data)
+* If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
+* If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.

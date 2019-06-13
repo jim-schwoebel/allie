@@ -1,6 +1,16 @@
 '''
-PLDA implementation from
-https://github.com/RaviSoji/plda/blob/master/mnist_demo/mnist_demo.ipynb
+model.py
+
+Once run, can classify folders with machine learning models via
+a range of different types of machine learning model back-ends.
+
+Currently supports these machine learning engines:
+'tpot', 'scsr', 'keras', 'devol', 'ludwig', 'adanet':
+
+These have been discarded due to instability:
+'plda', 'autosklearn', 'autokeras'
+
+Note that many settings can be set during model training.
 '''
 import os, sys, pickle, json, random, shutil
 import numpy as np

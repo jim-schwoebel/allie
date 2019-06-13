@@ -9,3 +9,8 @@ I tried a wide range of autoML libraries. These did not make the cut for these r
 Note that as the documentation and support for these libraries becomes better over time, it may make sense to move them into production.
 
 They just don't work now :-) 
+
+## Resources
+* [autokeras](https://autokeras.com/)
+* [autosklearn](https://github.com/automl/auto-sklearn)
+* [plda](https://github.com/RaviSoji/plda)

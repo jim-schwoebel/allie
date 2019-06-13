@@ -3,7 +3,6 @@
 Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * **'tpot'** - TPOT classification / regression (autoML). &#x2611;
 * 'scsr' - simple classification / regression (built by Jim from NLX-model). &#x2611;
-* 'plda' - probabilistic LDA modeling. &#x2611; (unstable)
 * 'keras' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). &#x2611;
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.&#x2611; (need to be able to featurize according to image - path to image and text types - transcripts). 

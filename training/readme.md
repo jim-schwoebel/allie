@@ -12,6 +12,7 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 Archived modeling techniques (in archived folder):
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search (takes a very long time). (cannot make predictions from MLP models trained... WTF?) 👎 
 * 'autosklearn' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). 👎 
+* [pLDA](https://github.com/RaviSoji/plda) - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 👎 
 
 Note that the autoML techniques are expensive and can take up to 1-2 days to fully train a model.
 
@@ -20,7 +21,6 @@ Other things.
 * If augment == True, can augment (audio, text, image, and video data)
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.
-* [pLDA](https://github.com/RaviSoji/plda) - implement pLDA for features (help with classification accuracy - dimensionality reduction technique). 
 * hyperparameter optimization - https://github.com/autonomio/talos
 * Compress models? --> if True, compress with AutoKeras or scikit-learn compress (faster predictions from features) - https://github.com/Tencent/PocketFlow
 * Create YAML file (for GitHub repository) - if True, select a cool .GIF to put in repo readme (docker container, featurizers, automated testing w/ test file) 

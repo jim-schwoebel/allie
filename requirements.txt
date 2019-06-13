@@ -26,3 +26,4 @@ tpot
 beautifultable
 autokeras 
 autokeras-pretrained
+auto-sklearn

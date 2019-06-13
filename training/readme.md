@@ -9,6 +9,8 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * 'alphapy' - keras, scikit-learn, xgboost (https://github.com/ScottfreeLLC/AlphaPy).
 
+Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
+
 ## Things to finish (before production build)
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)

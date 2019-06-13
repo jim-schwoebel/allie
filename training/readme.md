@@ -19,7 +19,7 @@ Other things (in model.py).
 * compress == True, compress ML models with Keras ([PocketFlow](https://github.com/Tencent/PocketFlow)) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
 * production == True, create a folder for GitHub (Docker container, featurizers, automated testing w/ test file, YAML files)  and select a cool .GIF to put in repo readme (model accuracies + performance). 
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
-* Add in hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
+* Add in RFE and hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
 
 ## Data modeling tutorials (Readmes)
 * Audio file training example

@@ -17,7 +17,7 @@ Other things (in model.py).
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
 * compress == True, compress ML models with Keras ([PocketFlow](https://github.com/Tencent/PocketFlow)) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
-* Create YAML file (for GitHub repository) - if True, select a cool .GIF to put in repo readme (docker container, featurizers, automated testing w/ test file) 
+* production == True, create a folder for GitHub (Docker container, featurizers, automated testing w/ test file, YAML files)  and select a cool .GIF to put in repo readme (model accuracies + performance). 
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
 
 ## Data modeling tutorials (Readmes)

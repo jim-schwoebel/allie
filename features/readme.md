@@ -107,7 +107,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html
 
 ### Videos 
-* allow Ludwig model type to dictate featurization (.JSON files --> .CSV) - 'video_ludwig_features'
 * add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * [Near duplicate](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)

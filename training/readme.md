@@ -6,10 +6,9 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'keras' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). &#x2611;
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.&#x2611; (need to be able to featurize according to image - path to image and text types - transcripts). 
-* 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search (takes a very long time). &#x2611;
 
 Archived modeling techniques:
-- train_pLDA
+* 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search (takes a very long time). &#x2611; (cannot make predictions from MLP models trained... WTF?)
 
 Note that the autoML techniques are expensive and can take up to 1-2 days to fully train a model.
 

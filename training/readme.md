@@ -12,7 +12,7 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
 
 ## Things to finish (before production build)
-Other things. 
+Other things (in model.py). 
 
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).

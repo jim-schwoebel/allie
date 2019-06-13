@@ -27,9 +27,6 @@ Other things (in model.py).
 * Video file training example 
 * CSV file training example
 
-## Future additions
-* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
-
 ## Additional documentation
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)
 * [TPOT](https://epistasislab.github.io/tpot/)

@@ -5,13 +5,6 @@ https://github.com/RaviSoji/plda/blob/master/mnist_demo/mnist_demo.ipynb
 import os, sys, pickle, json, random, shutil
 import numpy as np
 import matplotlib.pyplot as plt
-import train_TPOT as tt
-import train_pLDA as tp
-import train_scsr as scsr
-import train_keras as tk
-import train_autokeras as tak 
-import train_devol as td 
-import train_ludwig as tl
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -242,27 +235,42 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='autokeras'
+default_training_script='autosklearn'
 
+## bring main imports down here to speed up things.
+## only import the training scripts that are necessary.
 if default_training_script=='tpot':
+	import train_TPOT as tt
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
 elif default_training_script=='plda':
 	# currently does not work very well...
+	import train_pLDA as tp
 	tp.train_pLDA(alldata,labels)
 elif default_training_script=='scsr':
+	import train_scsr as scsr
 	if mtype == 'c':
 		scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
 	elif mtype == 'r':
 		scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
+elif default_training_script=='autosklearn':
+	import train_autosklearn as taskl
+	taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='keras':
+	import train_keras as tk
 	tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='autokeras':
+	import train_autokeras as tak 
 	tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='devol':
+	import train_devol as td 
 	td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='ludwig':
+	import train_ludwig as tl
 	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
-                       
+elif default_training_script=='adanet':
+	import train_adanet as ta 
+	ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+
 #except:    
 # print('error, please put %s in %s'%(jsonfile, data_dir))
 # print('note this can be done with train_audioclassify.py script')

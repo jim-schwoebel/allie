@@ -9,3 +9,10 @@ I tried a wide range of autoML libraries. These did not make the cut for these r
 Note that as the documentation and support for these libraries becomes better over time, it may make sense to move them into production.
 
 They just don't work now :-) 
+
+## Other (nice-to-have) things dsafdsa
+
+* [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
+* add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.
+* hyperparameter optimization - https://github.com/autonomio/talos
+* Clustering algorithms 

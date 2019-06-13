@@ -17,12 +17,8 @@ Other things.
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
-* [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
-* add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.
-* hyperparameter optimization - https://github.com/autonomio/talos
 * Compress models? --> if True, compress with AutoKeras or scikit-learn compress (faster predictions from features) - https://github.com/Tencent/PocketFlow
 * Create YAML file (for GitHub repository) - if True, select a cool .GIF to put in repo readme (docker container, featurizers, automated testing w/ test file) 
-* Clustering algorithms 
 
 ## Data modeling tutorials (Readmes)
 * Audio file training example

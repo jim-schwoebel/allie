@@ -21,6 +21,10 @@ from sklearn.preprocessing import Normalizer
 from sklearn.preprocessing.data import QuantileTransformer
 import numpy as np
 from keras.utils import to_categorical
+import keras.models
+from keras import layers 
+from keras.models import Sequential,model_from_json
+from keras.layers import Dense, Dropout
 
 def transform_data(features, labels, normalize):
 
@@ -118,21 +122,23 @@ def transform_data(features, labels, normalize):
 	return features, labels 
 
 # skip the CNN for neural architecture search because it doesn't work unless an image type really.
-def train_autokeras(classes, alldata, labels, mtype):
+def train_autokeras(classes, alldata, labels, mtype, jsonfile, default_features):
 
 	## this is a CNN architecture 
-	TEST_FOLDER = "test"
+	modelname=jsonfile[0:-5]+'_autokeras_%s'%(default_features)
+	TEST_FOLDER = modelname
+
 	# features, labels = transform_data(alldata, labels, True)
 	# print(features)
 	# print(labels)
 	x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 	x_train=x_train.reshape(x_train.shape + (1,))
-	x_test=x_train.reshape(x_train.shape + (1,))
-
-	output_node=2
+	#x_test=y_train.reshape(x_test.shape + (1,))
+	print(x_train.shape)
+	print(y_train.shape)
 	input_shape=x_train[0].shape
 	print(input_shape)
-	n_output_node=(len(classes),1)
+	n_output_node=len(classes)
 
 	# cnnModule = CnnModule(loss=classification_loss, metric=Accuracy, searcher_args={}, path=TEST_FOLDER, verbose=False)
 	if mtype == 'c':
@@ -143,9 +149,33 @@ def train_autokeras(classes, alldata, labels, mtype):
 		# metric = MSE for regression
 		# loss = regression_loss for regression
 		mlpModule = MlpModule(loss=regression_loss, metric=MSE, searcher_args={}, path=TEST_FOLDER, verbose=False)
-	
-	print('training MLP model for 1 hour')
-	mlpModule.fit(n_output_node, input_shape, x_train, x_test, time_limit=60*60)
-	mlpModule.final_fit(x_train, y_train, x_test, y_test, retrain=True)
+
+	timelimit=60*2
+	print('training MLP model for %s hours'%(timelimit/(60*60)))
+	mlpModule.fit(n_output_node, input_shape, x_train, y_train, time_limit=timelimit)
+	mlpModule.final_fit(x_train, y_train, retrain=True)
 	y = mlpModule.evaluate(x_test, y_test)
 	print(y * 100)
+
+	# serialize model to JSON
+	model_json = model.to_json()
+	with open(modelname+".json", "w") as json_file:
+	    json_file.write(model_json)
+	# serialize weights to HDF5
+	model.save_weights(modelname+".h5")
+	print("\n Saved %s.json model to disk"%(modelname))
+
+	cur_dir2=os.getcwd()
+
+	try:
+		os.chdir(problemtype+'_models')
+	except:
+		os.mkdir(problemtype+'_models')
+		os.chdir(problemtype+'_models')
+
+	# now move all the files over to proper model directory 
+	shutil.copytree(cur_dir2+'/'+TEST_FOLDER, os.getcwd() + '/'+TEST_FOLDER)
+	shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
+	shutil.move(cur_dir2+'/'+modelname+".h5", os.getcwd()+'/'+modelname+".h5")
+	shutil.move(cur_dir2+'/'+modelname+".json", os.getcwd()+'/'+modelname+".json")
+	shutil.rmtree(cur_dir2+'/'+TEST_FOLDER)

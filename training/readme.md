@@ -6,6 +6,7 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'keras' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). &#x2611;
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.&#x2611; (need to be able to featurize according to image - path to image and text types - transcripts). 
+* 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 
 Archived modeling techniques:
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search (takes a very long time). &#x2611; (cannot make predictions from MLP models trained... WTF?)
@@ -30,7 +31,6 @@ Other things.
 * CSV file training example
 
 ## Future additions
-* 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
 
 ## Additional documentation

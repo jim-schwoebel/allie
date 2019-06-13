@@ -1,13 +1,13 @@
 ## Settings
 
 Training scripts here. 7 potential settings. Recommended setting is TPOT.
-* **'tpot'** - TPOT classification / regression (autoML). &#x2611;
-* 'scsr' - simple classification / regression (built by Jim from NLX-model). &#x2611;
-* 'keras' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
-* 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). &#x2611;
-* 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.&#x2611; (need to be able to featurize according to image - path to image and text types - transcripts). 
-* 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
-* 'alphapy' - keras, scikit-learn, xgboost (https://github.com/ScottfreeLLC/AlphaPy).
+* **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
+* '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
+* '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
+* '[devol](https://github.com/joeddav/devol)' - genetic programming keras (https://github.com/joeddav/devol.git). &#x2611;
+* '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data.&#x2611; (need to be able to featurize according to image - path to image and text types - transcripts). 
+* '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
+* '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost (https://github.com/ScottfreeLLC/AlphaPy).
 
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
 

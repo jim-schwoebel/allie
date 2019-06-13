@@ -9,7 +9,7 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * 'alphapy' - keras, scikit-learn, xgboost (https://github.com/ScottfreeLLC/AlphaPy).
 
-Archived modeling techniques:
+Archived modeling techniques (in archived folder):
 * 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search (takes a very long time). (cannot make predictions from MLP models trained... WTF?) 👎 
 * 'autosklearn' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). 👎 
 

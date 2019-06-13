@@ -9,13 +9,6 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * 'adanet' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * 'alphapy' - keras, scikit-learn, xgboost (https://github.com/ScottfreeLLC/AlphaPy).
 
-Archived modeling techniques (in archived folder):
-* 'autokeras' - automatic optimization of a neural network. (https://autokeras.com/) - neural architecture search (takes a very long time). (cannot make predictions from MLP models trained... WTF?) 👎 
-* 'autosklearn' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). 👎 
-* [pLDA](https://github.com/RaviSoji/plda) - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 👎 
-
-Note that the autoML techniques are expensive and can take up to 1-2 days to fully train a model.
-
 ## Things to finish (before production build)
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)

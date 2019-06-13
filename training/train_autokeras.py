@@ -17,7 +17,6 @@ from autokeras.backend.torch.loss_function import classification_loss
 from autokeras.backend.torch.loss_function import regression_loss
 from autokeras.nn.metric import Accuracy
 from autokeras.utils import pickle_from_file
-
 from sklearn.model_selection import train_test_split
 
 # pre processing
@@ -112,7 +111,4 @@ def train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, defa
 
 	# now move all the files over to proper model directory 
 	shutil.copytree(cur_dir2+'/'+TEST_FOLDER, os.getcwd() + '/'+TEST_FOLDER)
-	shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
-	shutil.move(cur_dir2+'/'+modelname+".h5", os.getcwd()+'/'+modelname+".h5")
-	shutil.move(cur_dir2+'/'+modelname+".json", os.getcwd()+'/'+modelname+".json")
 	shutil.rmtree(cur_dir2+'/'+TEST_FOLDER)

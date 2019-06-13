@@ -14,6 +14,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ## Things to finish (before production build)
 Other things. 
 * If augment == True, can augment (audio, text, image, and video data)
+* Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
 * [recursive feature elimination]() - can help select appropriate features / show feature importances (sc_ script) - use Yellowbrick for this.
 * add in [featuretools](https://github.com/Featuretools/featuretools) to create higher-order features to get better accuracy.
 * hyperparameter optimization - https://github.com/autonomio/talos

@@ -7,7 +7,7 @@ Training scripts here. 7 potential settings. Recommended setting is TPOT.
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data. &#x2611; 
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
-* '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost (https://github.com/ScottfreeLLC/AlphaPy).
+* '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines and feature selection. 
 
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
 

@@ -24,6 +24,5 @@ webrtcvad
 xgboost
 tpot
 beautifultable
-autokeras 
-autokeras-pretrained
-auto-sklearn
+alphapy
+

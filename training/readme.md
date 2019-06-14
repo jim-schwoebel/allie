@@ -1,6 +1,6 @@
 ## Training scripts 
 
-Training scripts here. 7 potential settings. Recommended setting is TPOT.
+Training scripts here. 8 potential settings. Recommended setting is TPOT.
 * **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
 * '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;

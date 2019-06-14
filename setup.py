@@ -11,9 +11,18 @@ brew_modules=['sox']
 brew_install(brew_modules)
 os.system('pip3 install -r requirements.txt')
 
+curdir=os.getcwd()
 # install hyperopt-sklearn
 os.chdir('training/helpers/hyperopt-sklearn')
 os.system('pip3 install -e .')
+
+# install keras-compressor
+os.chdir(curdir)
+os.chdir('training/keras-compressor')
+os.system('pip3 install .')
+
+# go back to host directory
+os.chdir(curdir)
 
 ##################################################
 ##  ARCHIVED TRAINING REPOS (MAY ADD IN LATER)  ##

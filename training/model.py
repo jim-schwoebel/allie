@@ -242,7 +242,7 @@ labels=np.asarray(labels)
 ## 					TRAIN THE MODEL 					  ##
 ############################################################
 
-default_training_script='tpot'
+default_training_script='keras'
 model_compress=True
 
 if default_training_script=='adanet':
@@ -320,15 +320,13 @@ if model_compress == True:
 		from keras.models import load_model
 		from keras_compressor.compressor import compress
 
-		os.chdir(modeldir)
-
 		logging.basicConfig(
 		    level=logging.INFO,
 		)
 
-		model = load_model('./'+modelname)
+		model = load_model(modelname)
 		model = compress(model, 7e-1)
-		model.save('./'+modelname[0:-3]+'_compressed.h5')
+		model.save(modelname[0:-3]+'_compressed.h5')
 
 	else:
 		# for everything else, we can compress pocketflow models in the future.

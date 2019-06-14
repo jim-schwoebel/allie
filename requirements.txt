@@ -26,4 +26,3 @@ tpot
 beautifultable
 alphapy
 hyperopt 
-scikit-small-ensemble

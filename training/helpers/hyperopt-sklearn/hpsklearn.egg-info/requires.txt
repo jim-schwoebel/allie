@@ -1,0 +1,8 @@
+hyperopt
+nose
+numpy
+scikit-learn
+scipy
+
+[xgboost]
+xgboost==0.6a2

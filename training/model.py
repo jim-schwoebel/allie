@@ -241,11 +241,13 @@ default_training_script='hypsklearn'
 ## only import the training scripts that are necessary.
 
 if default_training_script=='adanet':
-	import train_adanet as ta 
-	ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+	print('Adanet training is coming soon! Please use a different model setting for now.') 
+	# import train_adanet as ta 
+	# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
 elif default_training_script=='alphapy':
-	import train_alphapy as talpy
-	talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features)
+	print('Alphapy training is coming soon! Please use a different model setting for now.') 
+	# import train_alphapy as talpy
+	# talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='autokeras':
 	import train_autokeras as tak 
 	tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
@@ -277,11 +279,6 @@ elif default_training_script=='scsr':
 elif default_training_script=='tpot':
 	import train_TPOT as tt
 	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
-
-
-
-
-
 
 #except:    
 # print('error, please put %s in %s'%(jsonfile, data_dir))

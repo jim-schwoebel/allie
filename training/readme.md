@@ -13,8 +13,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ## Settings to finish (before production build)
 Other things (in model.py). 
 * compress == True, compress ML models with Keras ([PocketFlow](https://github.com/Tencent/PocketFlow)) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
-* production == True, create a folder for GitHub (Docker container, featurizers, automated testing w/ test file, YAML files)  and select a cool .GIF to put in repo readme (model accuracies + performance). 
-* Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
 
 ## Actively working on (in future)
 
@@ -22,9 +20,12 @@ Other things (in model.py).
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines and feature selection. 
 * Add in RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) and hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
+* Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
+
 ### additional settings
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
+* production == True, create a folder for GitHub (Docker container, featurizers, automated testing w/ test file, YAML files)  and select a cool .GIF to put in repo readme (model accuracies + performance). 
 
 ## Data modeling tutorials (Readmes)
 * Audio file training example

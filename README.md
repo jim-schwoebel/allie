@@ -1,12 +1,12 @@
 # voice_modeling
 Master repository for modeling voice files. Transformed from NLX-model.
 
-1. Get dataset (assess bias).
-2. Clean dataset (if True, clean according to data type).
-3. feature selection (https://machinelearningmastery.com/feature-selection-machine-learning-python/). 
-4. modeling - SC, TPOT, Keras, Ludwig.
-5. visualize models (Yellowbrick) - feature selection / etc. 
-6. compress models for production.
+1. Get dataset (assess bias). &#x2611; &#x2611;
+2. Clean dataset (if True, clean according to data type). &#x2611;
+3. feature selection (https://machinelearningmastery.com/feature-selection-machine-learning-python/). &#x2611;
+4. modeling - SC, TPOT, Keras, Ludwig. &#x2611;
+5. visualize models (Yellowbrick) - feature selection / etc. [only Ludwig]
+6. compress models for production. &#x2611;
 7. server deployment (model compression, etc.). 
 
 ## getting started 

@@ -7,7 +7,8 @@ Master repository for modeling voice files. Transformed from NLX-model.
 4. modeling - SC, TPOT, Keras, Ludwig. &#x2611;
 5. visualize models (Yellowbrick) - feature selection / etc. [only Ludwig] &#x2611;
 6. compress models for production. &#x2611;
-7. server deployment (model compression, etc.). 
+7. make predictions from all models (either compressed or not compressed).
+8. server deployment (model compression, etc.). 
 
 ## getting started 
 ```

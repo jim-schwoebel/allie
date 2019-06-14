@@ -86,6 +86,7 @@ This aligns well with how we define 'samples' in our pipeline.
 * Luwdig  
 
 ### Model compression
-* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration)
 * [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor) - should be good for Keras.
+* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration) - good papers
+* [PocketFlow]() - everything else (Tencent's data science team).
 * [Scikit-small-compression](https://github.com/stewartpark/scikit-small-ensemble) - should be good for TPOT I believe.

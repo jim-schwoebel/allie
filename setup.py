@@ -11,6 +11,9 @@ brew_modules=['sox']
 brew_install(brew_modules)
 os.system('pip3 install -r requirements.txt')
 
+import nltk
+nltk.download('punkt')
+
 curdir=os.getcwd()
 # install hyperopt-sklearn
 os.chdir('training/helpers/hyperopt-sklearn')

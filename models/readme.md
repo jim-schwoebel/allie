@@ -2,6 +2,9 @@
 
 Here are a list of active models: model name, accuracy, etc. 
 
+## Settings
+* if compress=True, only use compressed model (if available).
+
 ## Audio models
 * NLX-model-gender --> Gender detection --> {feature array} --> 98% +/- 0.002. 
 * Age 

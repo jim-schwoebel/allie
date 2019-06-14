@@ -117,3 +117,8 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     shutil.move(cur_dir2+'/'+modelname+".h5", os.getcwd()+'/'+modelname+".h5")
     shutil.move(cur_dir2+'/'+modelname+".json", os.getcwd()+'/'+modelname+".json")
     shutil.move(cur_dir2+'/'+modelname+".txt", os.getcwd()+'/'+modelname+".txt")
+
+    model_name=modelname+".h5"
+    model_dir=os.getcwd()
+
+    return model_name, model_dir 

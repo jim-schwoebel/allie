@@ -12,7 +12,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## Settings to finish (before production build)
 Other things (in model.py). 
-* compress == True, compress ML models with Keras-compressor ([]()) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
+* compress == True, compress ML models with Keras-compressor ([keras_compressor](https://github.com/DwangoMediaVillage/keras_compressor)) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
 
 ## Actively working on (in future)
 

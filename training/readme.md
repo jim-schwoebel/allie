@@ -36,5 +36,6 @@ Other things (in model.py).
 
 ## Additional documentation
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)
+* [Model compression](https://www.slideshare.net/AnassBensrhirDatasci/deploying-machine-learning-models-to-production) - overview of what is important for ML models in production.
 * [TPOT](https://epistasislab.github.io/tpot/)
 * [Voicebook modeling chapter](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_4_modeling)

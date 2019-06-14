@@ -1,16 +1,6 @@
 '''
-model.py
-
-Once run, can classify folders with machine learning models via
-a range of different types of machine learning model back-ends.
-
-Currently supports these machine learning engines:
-'tpot', 'scsr', 'keras', 'devol', 'ludwig', 'adanet':
-
-These have been discarded due to instability:
-'plda', 'autosklearn', 'autokeras'
-
-Note that many settings can be set during model training.
+PLDA implementation from
+https://github.com/RaviSoji/plda/blob/master/mnist_demo/mnist_demo.ipynb
 '''
 import os, sys, pickle, json, random, shutil
 import numpy as np
@@ -245,13 +235,35 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='autosklearn'
+default_training_script='hypsklearn'
 
 ## bring main imports down here to speed up things.
 ## only import the training scripts that are necessary.
-if default_training_script=='tpot':
-	import train_TPOT as tt
-	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
+
+if default_training_script=='adanet':
+	import train_adanet as ta 
+	ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+elif default_training_script=='alphapy':
+	import train_alphapy as talpy
+	talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features)
+elif default_training_script=='autokeras':
+	import train_autokeras as tak 
+	tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+elif default_training_script=='autosklearn':
+	import train_autosklearn as taskl
+	taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
+elif default_training_script=='devol':
+	import train_devol as td 
+	td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+elif default_training_script=='hypsklearn':
+	import train_hypsklearn as th 
+	th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
+elif default_training_script=='keras':
+	import train_keras as tk
+	tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+elif default_training_script=='ludwig':
+	import train_ludwig as tl
+	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
 elif default_training_script=='plda':
 	# currently does not work very well...
 	import train_pLDA as tp
@@ -262,24 +274,14 @@ elif default_training_script=='scsr':
 		scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
 	elif mtype == 'r':
 		scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
-elif default_training_script=='autosklearn':
-	import train_autosklearn as taskl
-	taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='keras':
-	import train_keras as tk
-	tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='autokeras':
-	import train_autokeras as tak 
-	tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='devol':
-	import train_devol as td 
-	td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='ludwig':
-	import train_ludwig as tl
-	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
-elif default_training_script=='adanet':
-	import train_adanet as ta 
-	ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+elif default_training_script=='tpot':
+	import train_TPOT as tt
+	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
+
+
+
+
+
 
 #except:    
 # print('error, please put %s in %s'%(jsonfile, data_dir))

@@ -97,6 +97,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Text
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
+* follow up with Larry on semantic coherence vector / value 
 * add in text transcription (as the default value) 
 * input text files 
 * BERT pre-trained model - https://github.com/huggingface/pytorch-pretrained-BERT

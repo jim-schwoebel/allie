@@ -66,7 +66,7 @@ Load folders and data script type based on principal type of file.
 
 This aligns well with how we define 'samples' in our pipeline.
 
-## Features to add
+## References 
 ### Bias discovery
 * apply machine learning models for each types of data (audio, text, images, video, .CSV) to auto detect things like ages, genders, etc. 
 

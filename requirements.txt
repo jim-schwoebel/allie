@@ -25,4 +25,4 @@ xgboost
 tpot
 beautifultable
 alphapy
-
+hyperopt 

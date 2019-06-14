@@ -235,10 +235,15 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-default_training_script='hypsklearn'
-
 ## bring main imports down here to speed up things.
 ## only import the training scripts that are necessary.
+
+############################################################
+## 					TRAIN THE MODEL 					  ##
+############################################################
+
+default_training_script='tpot'
+model_compress=True
 
 if default_training_script=='adanet':
 	print('Adanet training is coming soon! Please use a different model setting for now.') 
@@ -249,37 +254,82 @@ elif default_training_script=='alphapy':
 	# import train_alphapy as talpy
 	# talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='autokeras':
-	import train_autokeras as tak 
-	tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+	print('Autokeras training is unstable! Please use a different model setting for now.') 
+	# import train_autokeras as tak 
+	# tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='autosklearn':
-	import train_autosklearn as taskl
-	taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
+	print('Autosklearn training is unstable! Please use a different model setting for now.') 
+	# import train_autosklearn as taskl
+	# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='devol':
 	import train_devol as td 
-	td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+	modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='hypsklearn':
 	import train_hypsklearn as th 
-	th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
+	modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='keras':
 	import train_keras as tk
-	tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+	modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
 elif default_training_script=='ludwig':
 	import train_ludwig as tl
-	tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+	modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
 elif default_training_script=='plda':
-	# currently does not work very well...
-	import train_pLDA as tp
-	tp.train_pLDA(alldata,labels)
+	print('PLDA training is unstable! Please use a different model setting for now.') 
+	# import train_pLDA as tp
+	# tp.train_pLDA(alldata,labels)
 elif default_training_script=='scsr':
 	import train_scsr as scsr
 	if mtype == 'c':
-		scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
+		modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
 	elif mtype == 'r':
-		scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
+		modelname, modeldir=scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
 elif default_training_script=='tpot':
 	import train_TPOT as tt
-	tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
+	modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
 
-#except:    
-# print('error, please put %s in %s'%(jsonfile, data_dir))
-# print('note this can be done with train_audioclassify.py script')
+############################################################
+## 					COMPRESS MODELS 					  ##
+############################################################
+
+# go to model directory 
+os.chdir(modeldir)
+
+if model_compress == True:
+	# now compress the model according to model type 
+	if default_training_script in ['hypsklearn', 'scsr', 'tpot']:
+		# all .pickle files and can compress via scikit-small-ensemble
+		from sklearn.externals import joblib
+
+		# open up model 
+		loadmodel=open(modelname, 'rb')
+		model = pickle.load(loadmodel)
+		loadmodel.close()
+
+		# compress - from 0 to 9. Higher value means more compression, but also slower read and write times. 
+		# Using a value of 3 is often a good compromise.
+		joblib.dump(model, modelname[0:-7]+'_compressed.joblib',compress=3)
+
+		# can now load compressed models as such
+		# thenewmodel=joblib.load(modelname[0:-7]+'_compressed.joblib')
+		# leads to up to 10x reduction in model size and .72 sec - 0.23 secoon (3-4x faster loading model)
+		# note may note work in sklearn and python versions are different from saving and loading environments. 
+
+	elif default_training_script in ['devol', 'keras']: 
+		# can compress with keras_compressor 
+		import logging
+		from keras.models import load_model
+		from keras_compressor.compressor import compress
+
+		os.chdir(modeldir)
+
+		logging.basicConfig(
+		    level=logging.INFO,
+		)
+
+		model = load_model('./'+modelname)
+		model = compress(model, 7e-1)
+		model.save('./'+modelname[0:-3]+'_compressed.h5')
+
+	else:
+		# for everything else, we can compress pocketflow models in the future.
+		print('We cannot currently compress %s models. We are working on this!! \n\n The model will remain uncompressed for now'%(default_training_script))

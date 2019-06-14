@@ -56,9 +56,19 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     model_json = model.to_json()
     with open(modelname+".json", "w") as json_file:
         json_file.write(model_json)
-    # serialize weights to HDF5
-    model.save_weights(modelname+".h5")
-    print("\n Saved %s.json model to disk"%(modelname))
+    # # serialize weights to HDF5
+    # model.save_weights(modelname+".h5")
+    # print("\n Saved %s.json model to disk"%(modelname))
+
+    # re-compile model
+    # not to save optimizer variables in model data
+    model.compile(
+        loss='binary_crossentropy',
+        optimizer='rmsprop',
+        metrics=['accuracy'],
+    )
+    model.save(modelname+".h5")
+
 
     # SUMMARIZE RESULTS
     ############################################################################
@@ -115,7 +125,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     # now move all the files over to proper model directory 
     shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
     shutil.move(cur_dir2+'/'+modelname+".h5", os.getcwd()+'/'+modelname+".h5")
-    shutil.move(cur_dir2+'/'+modelname+".json", os.getcwd()+'/'+modelname+".json")
+    # shutil.move(cur_dir2+'/'+modelname+".json", os.getcwd()+'/'+modelname+".json")
     shutil.move(cur_dir2+'/'+modelname+".txt", os.getcwd()+'/'+modelname+".txt")
 
     model_name=modelname+".h5"

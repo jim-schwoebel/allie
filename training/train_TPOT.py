@@ -81,3 +81,9 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features):
     shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
     shutil.move(cur_dir2+'/'+tpotname, os.getcwd()+'/'+tpotname)
     shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-5]+'.pickle')
+
+    # get model_name 
+    model_name=jsonfilename[0:-5]+'.pickle'
+    model_dir=os.getcwd()
+    
+    return model_name, model_dir

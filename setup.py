@@ -11,6 +11,8 @@ brew_modules=['sox']
 brew_install(brew_modules)
 os.system('pip3 install -r requirements.txt')
 
+os.chdir('training/helpers/hyperopt-sklearn')
+os.system('pip3 install -e .')
 ##################################################
 ##  ARCHIVED TRAINING REPOS (MAY ADD IN LATER)  ##
 ##################################################

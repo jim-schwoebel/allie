@@ -13,6 +13,11 @@ Specifically, just drag and drop sample data in here and predictions will be mad
 * 'devol' - genetic programming keras (https://github.com/joeddav/devol.git). &#x2611;
 * 'ludwig' - deep learning (simple ludwig). - convert every feature to numerical data.&#x2611;
 
+## settings
+* if compress == True, load in compressed model into memory and make predictions 
+* load all models by folder and model type (audio_models, text_models, etc.)
+* only load models in if there are data in the folder. 
+
 ## detailed instructions (classification predictions) 
 
 1. Create a list of directories of classes

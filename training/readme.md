@@ -12,6 +12,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## Settings to finish (before production build)
 Other things (in model.py). 
+* clean up TPOT and other stuff to allow for output of the model name and model directory (for model compression later).
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
 * production == True, create a folder for GitHub (Docker container, featurizers, automated testing w/ test file, YAML files)  and select a cool .GIF to put in repo readme (model accuracies + performance). 

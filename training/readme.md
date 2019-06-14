@@ -12,7 +12,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## Settings to finish (before production build)
 Other things (in model.py). 
-* compress == True, compress ML models with Keras ([PocketFlow](https://github.com/Tencent/PocketFlow)) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
+* compress == True, compress ML models with Keras-compressor ([]()) or scikit-learn ([scikit-small-ensemble](https://github.com/stewartpark/scikit-small-ensemble)) for faster predictions from features).
 
 ## Actively working on (in future)
 
@@ -26,6 +26,7 @@ Other things (in model.py).
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
 * production == True, create a folder for GitHub (Docker container, featurizers, automated testing w/ test file, YAML files)  and select a cool .GIF to put in repo readme (model accuracies + performance). 
+* [PocketFlow](https://github.com/Tencent/PocketFlow)
 
 ## Data modeling tutorials (Readmes)
 * Audio file training example

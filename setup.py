@@ -9,14 +9,21 @@ def brew_install(modules):
     
 brew_modules=['sox']
 brew_install(brew_modules)
+
+# uninstall openCV to guarantee the right version...
+os.system('pip3 uninstall opencv-python')
+os.system('pip3 uninstall opencv-contrib-python')
+
+# now install all modules with pip3 
 os.system('pip3 install -r requirements.txt')
 
+# install add-ons to NLTK 
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 
-curdir=os.getcwd()
 # install hyperopt-sklearn
+curdir=os.getcwd()
 os.chdir('training/helpers/hyperopt-sklearn')
 os.system('pip3 install -e .')
 

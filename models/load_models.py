@@ -69,7 +69,7 @@ def rename_files():
         elif listdir[i].endswith(('.png', '.jpg')):
             os.rename(listdir[i], listdir[i][0:-4]+'_image'+listdir[i][-4:])
         elif listdir[i].endswith(('.txt')):
-            os.rename(listdir[i][0:-4]+'_text'+listdir[i][-4:])
+            os.rename(listdir[i], listdir[i][0:-4]+'_text'+listdir[i][-4:])
         elif listdir[i].endswith(('.mp4', '.avi')):
             os.rename(listdir[i], listdir[i][0:-4]+'_video'+listdir[i][-4:])
         elif listdir[i].endswith(('.csv')):
@@ -161,6 +161,7 @@ default_csv_features='csv'
 
 # now assess folders by content type 
 totalfiles, sampletypes, counts = classifyfolder(os.listdir())
+print('-----------------------------------')
 print('DETECTED %s FILES (%s)'%(str(totalfiles), str(sampletypes)))
 print('-----------------------------------')
 print(counts)

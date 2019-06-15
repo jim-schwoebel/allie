@@ -4,6 +4,9 @@ Use this directory to make predictions on audio, image, video, or text files.
 
 Specifically, just drag and drop sample data in here and predictions will be made based on the models in the ./models directory.
 
+## problem
+* rename files if they have the same name as .csv, audio, etc. (so .JSON files don't mess up)
+
 ## load by model type
 * **'tpot'** - TPOT classification / regression (autoML). &#x2611;
 * 'scsr' - simple classification / regression (built by Jim from NLX-model). &#x2611;

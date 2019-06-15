@@ -5,7 +5,7 @@ first determine the file types available in the folder + load appropriate featur
 
 change to load directory 
 '''
-import os
+import os, json 
 
 ##########################################################
 ##                  HELPER FUNCTIONS                    ##
@@ -45,7 +45,7 @@ def classifyfolder(listdir):
 
     # get back the type of folder (main file type)
     totalfiles=sum(counts.values())
-    values=counts.values()
+    values=list(counts.values())
     indices=list()
 
     for i in range(len(values)):
@@ -65,15 +65,15 @@ def rename_files():
     listdir=os.listdir() 
     for i in range(len(listdir)):
         if listdir[i].endswith(('.mp3', '.wav')):
-            os.rename(listdir[i], listdir[i][0:-4]+'_audio'+listdir[-4:])
+            os.rename(listdir[i], listdir[i][0:-4]+'_audio'+listdir[i][-4:])
         elif listdir[i].endswith(('.png', '.jpg')):
-            os.rename(listdir[i], listdir[i][0:-4]+'_image'+listdir[-4:])
+            os.rename(listdir[i], listdir[i][0:-4]+'_image'+listdir[i][-4:])
         elif listdir[i].endswith(('.txt')):
-            listdir[i], listdir[i][0:-4]+'_text'+listdir[-4:]
+            listdir[i], listdir[i][0:-4]+'_text'+listdir[i][-4:]
         elif listdir[i].endswith(('.mp4', '.avi')):
-            listdir[i], listdir[i][0:-4]+'_video'+listdir[-4:]
+            listdir[i], listdir[i][0:-4]+'_video'+listdir[i][-4:]
         elif listdir[i].endswith(('.csv')):
-            listdir[i], listdir[i][0:-4]+'_csv'+listdir[-4:]
+            listdir[i], listdir[i][0:-4]+'_csv'+listdir[i][-4:]
 
 def detect_models():
     # takes in current directory and detects models
@@ -108,31 +108,38 @@ def detect_models():
           'keras_models': keras_models,
           'ludwig_models': ludwig_models,
          }
+    print(data)
 
     return data 
 
 def load_tpot():
     # load the TPOT file 
     # make a prediction 
+    return
 
 def load_hypsklearn():
     # load the hypsklearn pickle file 
     # make a prediction 
+    return
 
 def load_scsr():
     # load the pickle file (or joblib if compressed)
     # make a prediction 
+    return 
 
 def load_devol():
      # load in the model file (compressed or not)
+     return 
 
 def load_keras():
     # load in the model file (compressed or not)
+    return
 
 def load_ludwig():
     # make a .CSV output of all the features in the folder 
     # make a ludwig prediction
     # load that output prediction 
+    return 
 
 ##########################################################
 ##                     CLEAN FOLDER                    ##
@@ -172,25 +179,30 @@ print(counts)
 # modeltypes.append(g['modeltype'])
 
 # class_list.append(classname) --> could be label here 
+os.chdir(prevdir+'/models')
+listdir=os.listdir()
 
-os.chdir(prevdir+'/models/audio_models')
-data=detect_models()
-
-os.chdir(prevdir+'/models/text_models')
-data=detect_models()
-
-os.chdir(prevdir+'/models/image_models')
-data=detect_models()
-
-os.chdir(prevdir+'/models/video_models')
-data=detect_models()
-
-os.chdir(prevdir+'/models/csv_models')
-data=detect_models()
+if 'audio_models' in listdir:
+    os.chdir(prevdir+'/models/audio_models')
+    data=detect_models()
+if 'text_models' in listdir:
+    os.chdir(prevdir+'/models/text_models')
+    data=detect_models()
+if 'image_models' in listdir:
+    os.chdir(prevdir+'/models/image_models')
+    data=detect_models()
+if 'video_models' in listdir:
+    os.chdir(prevdir+'/models/video_models')
+    data=detect_models()
+if 'csv_models' in listdir:
+    os.chdir(prevdir+'/models/csv_models')
+    data=detect_models()
 
 ##########################################################
 ##                     FEATURIZATION                    ##
 ##########################################################
+# go to the load_directory 
+os.chdir(prevdir+'/load_dir')
 
 # now based on filetypes, featurize accordingly (can probably compress this into a loop)
 if 'audio' in sampletypes:
@@ -198,7 +210,7 @@ if 'audio' in sampletypes:
     os.chdir(prevdir+'/features/audio_features')
     os.system('python3 featurize.py %s'%(os.getcwd()))
 
-if 'text': in sampletypes:
+if 'text' in sampletypes:
     # import right featurizers (based on models)
     os.chdir(prevdir+'/features/text_features')
     os.system('python3 featurize.py %s'%(os.getcwd()))

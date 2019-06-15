@@ -28,3 +28,4 @@ tpot
 beautifultable
 alphapy
 hyperopt 
+tqdm

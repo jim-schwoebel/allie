@@ -69,11 +69,11 @@ def rename_files():
         elif listdir[i].endswith(('.png', '.jpg')):
             os.rename(listdir[i], listdir[i][0:-4]+'_image'+listdir[i][-4:])
         elif listdir[i].endswith(('.txt')):
-            listdir[i], listdir[i][0:-4]+'_text'+listdir[i][-4:]
+            os.rename(listdir[i][0:-4]+'_text'+listdir[i][-4:])
         elif listdir[i].endswith(('.mp4', '.avi')):
-            listdir[i], listdir[i][0:-4]+'_video'+listdir[i][-4:]
+            os.rename(listdir[i], listdir[i][0:-4]+'_video'+listdir[i][-4:])
         elif listdir[i].endswith(('.csv')):
-            listdir[i], listdir[i][0:-4]+'_csv'+listdir[i][-4:]
+            os.rename(listdir[i], listdir[i][0:-4]+'_csv'+listdir[i][-4:])
 
 def detect_models():
     # takes in current directory and detects models

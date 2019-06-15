@@ -203,32 +203,33 @@ if 'csv_models' in listdir:
 ##########################################################
 # go to the load_directory 
 os.chdir(prevdir+'/load_dir')
+load_dir=os.getcwd()
 
 # now based on filetypes, featurize accordingly (can probably compress this into a loop)
 if 'audio' in sampletypes:
     # import right featurizers (based on models)
     os.chdir(prevdir+'/features/audio_features')
-    os.system('python3 featurize.py %s'%(os.getcwd()))
+    os.system('python3 featurize.py %s'%(load_dir))
 
 if 'text' in sampletypes:
     # import right featurizers (based on models)
     os.chdir(prevdir+'/features/text_features')
-    os.system('python3 featurize.py %s'%(os.getcwd()))
+    os.system('python3 featurize.py %s'%(load_dir))
 
 if 'image' in sampletypes:
     # import right featurizers (based on models)
     os.chdir(prevdir+'/features/image_features')
-    os.system('python3 featurize.py %s'%(os.getcwd()))
+    os.system('python3 featurize.py %s'%(load_dir))
 
 if 'video' in sampletypes:
     # import right featurizers (based on models)
     os.chdir(prevdir+'/features/video_features')
-    os.system('python3 featurize.py %s'%(os.getcwd()))
+    os.system('python3 featurize.py %s'%(load_dir))
 
 if 'csv' in sampletypes:
     # import right featurizers (based on models)
     os.chdir(prevdir+'/features/csv_features')
-    os.system('python3 featurize.py %s'%(os.getcwd()))
+    os.system('python3 featurize.py %s'%(load_dir))
 
 
 ##########################################################

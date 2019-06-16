@@ -21,6 +21,26 @@ models={'audio': audio_models,
         'video': video_models,
         'csv': csv_models
         }
+```
+
+Each model includes various information on all models including:
+
+```
+audio_models: []
+```
+
+each model includes
+
+```
+model_name: some1_some2_TPOT.pickle
+feature_set: default_audio features
+prediction: _____
+prediction_time: ______
+problemtype: 'regression' | 'classification'
+metrics: {'MSE': ____
+          'Accuracy': _____
+         } 
+```
 
 ## Settings
 * if compress=True, only use compressed model (if available).

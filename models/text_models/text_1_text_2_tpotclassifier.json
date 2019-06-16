@@ -1,0 +1,1 @@
+{"sample type": "text", "feature_set": "nltk_features", "model name": "text_1_text_2_tpotclassifier.pickle", "accuracy": 1.0, "model type": "TPOTclassification_exported_pipeline = DecisionTreeClassifier(criterion=\"entropy\", max_depth=4, min_samples_leaf=5, min_samples_split=7)\n\n"}

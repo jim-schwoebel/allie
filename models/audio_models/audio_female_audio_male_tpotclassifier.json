@@ -1,0 +1,1 @@
+{"sample type": "audio", "feature_set": "standard_features", "model name": "audio_female_audio_male_tpotclassifier.pickle", "accuracy": 1.0, "model type": "TPOTclassification_exported_pipeline = LinearSVC(C=0.01, dual=False, loss=\"squared_hinge\", penalty=\"l2\", tol=0.0001)\n\n"}

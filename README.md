@@ -8,8 +8,8 @@ Master repository for modeling voice files. Transformed from NLX-model.
 5. visualize models (Yellowbrick) - feature selection / etc. [only Ludwig] &#x2611;
 6. compress models for production. &#x2611;
 7. make predictions from all models (either compressed or not compressed). &#x2611;
-8. automated testing.
-9. server deployment (model compression, etc.). (work on this tomorrow - get this done with tests)
+8. server deployment (model compression, etc.). (work on this tomorrow - get this done with tests)
+9. automated testing.
 10. improved documentation. 
 
 ^^ make a quick visual above with a gif to show what this repo can do. 

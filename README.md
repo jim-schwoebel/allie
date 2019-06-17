@@ -10,7 +10,7 @@ Master repository for modeling voice files. Transformed from NLX-model.
 7. make predictions from all models (either compressed or not compressed). &#x2611;
 8. server deployment (model compression, etc.). 
 9. automated testing. &#x2611;
-10. improved documentation. 
+10. improved documentation w/ videos and whatnot. 
 
 ^^ make a quick visual above with a gif to show what this repo can do. 
 

@@ -49,6 +49,7 @@ if 'settings.json' not in listdir:
             "default_text_features": "nltk_features", 
             "default_image_features": "image_features", 
             "default_video_features": "video_features", 
+            "default_csv_features": "csv_features",
             "bias_discovery": true, 
             "transcribe_audio": true, 
             "default_audio_transcriber": "pocketsphinx", 

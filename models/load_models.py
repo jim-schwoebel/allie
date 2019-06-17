@@ -127,6 +127,7 @@ def detect_models():
     data={'tpot_models': tpot_models,
           'scsr_models': scsr_models,
           'devol_models': devol_models,
+          'hyspklearn_models': hypsklearn_models,
           'keras_models': keras_models,
           'ludwig_models': ludwig_models,
          }

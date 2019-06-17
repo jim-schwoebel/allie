@@ -39,6 +39,18 @@ python3 tests/test.py
 ```
 Note the test above takes roughly 5-10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
 
+## types of data
+
+Load folders and data script type based on principal type of file.
+
+* Audio --> .WAV / .MP3 (can transcribe) --> .WAV 
+* Text --> .TXT / .PPT / .DOCX --> .TXT
+* Images --> .PNG / .JPG (can transcribe images) --> .PNG 
+* Video --> .MP4 / .M4A (can transcribe video, audio, and images) --> .MP4 
+* CSV --> .CSV --> loads categorical and numerical data into .JSON 
+
+This aligns well with how we define 'samples' in our pipeline.
+
 ## settings 
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script. 
@@ -76,18 +88,6 @@ Typical augmentation scheme is to take 50% of the data and augment it and leave 
 Create YAML means that the entire repository will be generated to host the model for production. 
 
 Model compression if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.
-
-## types of data
-
-Load folders and data script type based on principal type of file.
-
-* Audio --> .WAV / .MP3 (can transcribe) --> .WAV 
-* Text --> .TXT / .PPT / .DOCX --> .TXT
-* Images --> .PNG / .JPG (can transcribe images) --> .PNG 
-* Video --> .MP4 / .M4A (can transcribe video, audio, and images) --> .MP4 
-* CSV --> .CSV --> loads categorical and numerical data into .JSON 
-
-This aligns well with how we define 'samples' in our pipeline.
 
 ## References 
 ### Bias discovery

@@ -24,7 +24,9 @@ python3 setup.py
 ```
 This will then download all the required dependencies.
 
-Assumes Mac OSX operating system. 
+Set up virtual environment (to ensure consistent operating mode across operating systems).
+
+Tested on Mac OSX operating system. 
 
 ## settings 
 

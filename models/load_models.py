@@ -7,10 +7,8 @@ change to load directory
 '''
 import os, json 
 import os, getpass
-import keras.models
-from keras import layers 
-from keras.models import Sequential,model_from_json
-from keras.layers import Dense, Dropout
+import keras.models 
+from keras.models import load_model
 import numpy as np
 import time, pickle 
 
@@ -117,10 +115,10 @@ def detect_models():
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             hypsklearn_models.append(data)
         elif listdir[i].find('keras')>0 and listdir[i][-3:]=='.h5':
-            data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
+            data[listdir[i]]=json.load(open(listdir[i][0:-3]+'.json'))
             keras_models.append(data)
         elif listdir[i].find('ludwig') and listdir[i].find('.')<0:
-            data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
+            data[listdir[i]]=json.load(open(listdir[i]+'.json'))
             ludwig_models.append(data)
 
     # make a dictionary outputting all models
@@ -259,9 +257,52 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
 
                 elif modelname.endswith('.h5'):
-                    # load h5 model 
-                    loaded_model.load_weights(modelname+".h5")
-                    output=int(loaded_model.predict_classes(sample[np.newaxis,:]))
+
+                    # load model 
+                    os.chdir(model_dir)
+                    print(os.getcwd())
+                    loaded_model=load_model(modelname)
+
+                    # modeldata
+                    modeldata=json.load(open(modelname[0:-3]+'.json'))
+
+                    # now only load featurized samples and make predictions 
+                    for k in range(len(jsonfilelist)):
+                        # load directory 
+                        os.chdir(load_dir)
+
+                        # get features (from prior array)
+                        jsonfile=json.load(open(jsonfilelist[k]))
+                        features=jsonfile['features'][sampletype][feature_set]['features']
+                        features=np.array(features).reshape(1,-1)
+
+                        # predict output from model 
+                        output=str(int(loaded_model.predict_classes(features)))
+                        print(output)
+
+                        # now get the actual class from the classifier name (assume 2 classes)
+                        one=modelname.split('_')[0]
+                        two=modelname.split('_')[1]
+
+                        if output == '0':
+                            class_=one
+                        elif output == '1':
+                            class_=two
+
+                        # now update the database 
+                        try:
+                            models=jsonfile['models']
+                        except:
+                            models=model_schema()
+
+                        temp=models[sampletype]
+                        temp[class_]= modeldata
+                        models[sampletype]=temp
+                        jsonfile['models']=models
+
+                        jsonfilename=open(jsonfilelist[k],'w')
+                        json.dump(jsonfile,jsonfilename)
+                        jsonfilename.close() 
 
 ##########################################################
 ##                     CLEAN FOLDER                    ##

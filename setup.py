@@ -50,20 +50,20 @@ if 'settings.json' not in listdir:
             "default_image_features": "image_features", 
             "default_video_features": "video_features", 
             "default_csv_features": "csv_features",
-            "bias_discovery": true, 
-            "transcribe_audio": true, 
+            "bias_discovery": True, 
+            "transcribe_audio": True,  
             "default_audio_transcriber": "pocketsphinx", 
-            "transcribe_image": true, 
+            "transcribe_image": True, 
             "default_image_transcriber": "tesseract",
-            "transcribe_video": true, 
+            "transcribe_video": True, 
             "default_video_transcriber": "tesseract (averaged over frames)",
-            "transcribe_csv": true, 
+            "transcribe_csv": True, 
             "default_csv_transcriber": "raw text",
             "default_training_script": "keras", 
-            "augment_data": true, 
-            "visualize_data": true, 
-            "create_YAML": true, 
-            "model_compress": true}
+            "augment_data": True, 
+            "visualize_data": True,  
+            "create_YAML": True, 
+            "model_compress": True}
     jsonfile=open('settings.json','w')
     json.dump(data,jsonfile)
     jsonfile.close()

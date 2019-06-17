@@ -170,6 +170,12 @@ def model_schema():
     return models 
 
 def make_predictions(sampletype, feature_set, model_dir, load_dir):
+    '''
+    Take in a sampletype (e.g. 'audio'), feature set (e.g. 'librosa_features'), the model
+    directory ('audio_models'), and a load directory and update the .JSON file databases with 
+    features with model predictions. 
+    '''
+
     # detect machine learning models
     model_data=detect_models()
     # 'tpot_models': [], 'scsr_models': [], 'devol_models': [], 'keras_models': [], 'ludwig_models': []
@@ -206,6 +212,9 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                     model = pickle.load(loadmodel)
                     loadmodel.close()
 
+                    # modeldata
+                    modeldata=json.load(open(modelname[0:-7]+'.json'))
+
                     # now only load featurized samples and make predictions 
                     for k in range(len(jsonfilelist)):
                         # load directory 
@@ -236,7 +245,7 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                             models=model_schema()
 
                         temp=models[sampletype]
-                        temp.append(class_)
+                        temp.append({class_: modeldata})
                         models[sampletype]=temp
                         jsonfile['models']=models
 

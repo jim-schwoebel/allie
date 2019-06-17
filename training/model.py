@@ -293,7 +293,7 @@ labels=np.asarray(labels)
 ## Now we can train the machine learning model via the default_training script.
 
 default_training_script=settings['default_training_script']
-model_compress=True
+model_compress=settings['model_compress']
 
 if default_training_script=='adanet':
 	print('Adanet training is coming soon! Please use a different model setting for now.') 

@@ -204,38 +204,41 @@ class SimplisticTest(unittest.TestCase):
     # now do all the tests 
     os.chdir(loadmodel_dir+'/audio_models')
 
-    def test_audiomodel(self):
-        b=False
-        b = find_model(b)
-        self.assertEqual(True, b)
+    try:
+        def test_audiomodel(self):
+            b=False
+            b = find_model(b)
+            self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/text_models')
+        os.chdir(loadmodel_dir+'/text_models')
 
-    def test_textmodel(self):
-        b=False
-        b = find_model(b)
-        self.assertEqual(True, b)
+        def test_textmodel(self):
+            b=False
+            b = find_model(b)
+            self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/image_models')
+        os.chdir(loadmodel_dir+'/image_models')
 
-    def test_imagemodel(self):
-        b=False
-        b = find_model(b)
-        self.assertEqual(True, b)
+        def test_imagemodel(self):
+            b=False
+            b = find_model(b)
+            self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/video_models')
+        os.chdir(loadmodel_dir+'/video_models')
 
-    def video_audiomodel(self):
-        b=False
-        b = find_model(b)
-        self.assertEqual(True, b)
+        def video_audiomodel(self):
+            b=False
+            b = find_model(b)
+            self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/csv_models')
+        os.chdir(loadmodel_dir+'/csv_models')
 
-    def test_csvmodel(self):
-        b=False
-        b = find_model(b)
-        self.assertEqual(True, b)
+        def test_csvmodel(self):
+            b=False
+            b = find_model(b)
+            self.assertEqual(True, b)
+    except:
+        pass 
 
     ###############################################################
     ##            FEATURIZATION / LOADING TESTS                  ##
@@ -286,16 +289,10 @@ class SimplisticTest(unittest.TestCase):
         self.assertEqual(True, b)
 
     # now we can remove everything in load_dir
-    os.remove(load_dir+'/test_audio.wav')
-    os.remove(load_dir+'/test_audio.json')
-    os.remove(load_dir+'/test_text.txt')
-    os.remove(load_dir+'/test_text.json')
-    os.remove(load_dir+'/test_image.png')
-    os.remove(load_dir+'/test_image.json')
-    os.remove(load_dir+'/test_video.mp4')
-    os.remove(load_dir+'/test_video.json')
-    os.remove(load_dir+'/test_csv.csv')
-    os.remove(load_dir+'/test_csv.json')
+    listdir=os.listdir()
+    for i in range(len(listdir)):
+        if listdir[i].endswith('.json') or listdir[i].endswith('.wav') or listdir[i].endswith('.png') or listdir[i].endswith('.txt') or listdir[i].endswith('.csv') or listdir[i].endswith('.mp4'):
+            os.remove(listdir[i])
 
     # we can also remove all temporarily trained machine learning models 
     try:

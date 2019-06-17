@@ -27,7 +27,7 @@ def seed_files(filename, cur_dir, train_dir):
     os.chdir(train_dir)
     for i in range(20):
         shutil.copy(cur_dir+'/'+filename, train_dir+'/'+filename)
-        os.rename(filename, str(i)+filename[-4:])
+        os.rename(filename, str(i)+'_'+filename[-4:])
 
 def find_model(b):
     listdir=os.listdir()

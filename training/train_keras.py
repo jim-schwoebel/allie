@@ -11,7 +11,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     # get train and test data 
     start=time.time()
     x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
-    modelname=jsonfile[0:-5]
+    modelname=jsonfile[0:-5]+'_keras'
 
     # MAKE MODEL (assume classification problem)
     ############################################################################

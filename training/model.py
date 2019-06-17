@@ -96,7 +96,7 @@ default_audio_features=settings['default_audio_features']
 default_text_features=settings['default_text_features']
 default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
-default_csv_features='csv'
+default_csv_features=settings['default_csv_features']
 
 # prepare training and testing data (should have been already featurized) - # of classes/folders
 os.chdir(prevdir+'/train_dir')

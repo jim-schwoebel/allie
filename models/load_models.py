@@ -48,7 +48,7 @@ def classifyfolder(listdir):
             'image': filetypes.count('image'),
             'text': filetypes.count('text'),
             'video': filetypes.count('video'),
-            'csv': filetypes.count('.csv')}
+            'csv': filetypes.count('csv')}
 
     # get back the type of folder (main file type)
     totalfiles=sum(counts.values())

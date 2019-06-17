@@ -32,10 +32,10 @@ def seed_files(filename, cur_dir, train_dir):
 def find_model(b):
     listdir=os.listdir()
     for i in range(len(listdir)):
-        if listdir[i].find('one_two') > 0 and listdir[i].endswith('.h5'):
+        if listdir[i].find('one_two') == 0 and listdir[i].endswith('.h5'):
             b=True
             break 
-        elif listdir[i].find('one_two') > 0 and listdir[i].endswith('.pickle'):
+        elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.pickle'):
             b=True
             break 
         elif listdir[i].find('one_two') > 0 and listdir[i].find('.') < 0:
@@ -186,31 +186,36 @@ class SimplisticTest(unittest.TestCase):
     shutil.rmtree('two')
 
     # now do all the tests 
-    def test_audiomodel(self, audiodir=loadmodel_dir+'/audio_models'):
+    audiodir=loadmodel_dir+'/audio_models'
+    def test_audiomodel(self, audiodir=audiodir):
         os.chdir(audiodir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    def test_textmodel(self, textdir=loadmodel_dir+'/text_models'):
+    textdir=loadmodel_dir+'/text_models'
+    def test_textmodel(self, textdir=textdir):
         os.chdir(textdir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    def test_imagemodel(self, imagedir=loadmodel_dir+'/image_models'):
+    imagedir=loadmodel_dir+'/image_models'
+    def test_imagemodel(self, imagedir=imagedir):
         os.chdir(imagedir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    def video_audiomodel(self, videodir=loadmodel_dir+'/video_models'):
+    videodir=loadmodel_dir+'/video_models'
+    def video_audiomodel(self, videodir=videodir):
         os.chdir(videodir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    def test_csvmodel(self, csvdir=loadmodel_dir+'/csv_models'):
+    csvdir=loadmodel_dir+'/csv_models'
+    def test_csvmodel(self, csvdir=csvdir):
         os.chdir(csvdir)
         b=False
         b = find_model(b)

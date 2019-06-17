@@ -222,7 +222,7 @@ default_audio_features=settings['default_audio_features']
 default_text_features=settings['default_text_features']
 default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
-default_csv_features='csv'
+default_csv_features=settings['default_csv_features']
 
 # now assess folders by content type 
 totalfiles, sampletypes, counts = classifyfolder(os.listdir())
@@ -299,23 +299,23 @@ if 'text_models' in listdir:
     print('TEXT MODELING - %s'%(default_text_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/text_models')
-    make_predictions('text', default_text_features, model_dir, load_dir)
+    make_predictions('text', default_audio_features, model_dir, load_dir)
 if 'image_models' in listdir:
     print('-----------------------------------')
     print('IMAGE MODELING - %s'%(default_image_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/image_models')
-    make_predictions('image', default_image_features, model_dir, load_dir)
+    make_predictions('image', default_audio_features, model_dir, load_dir)
 if 'video_models' in listdir:
     print('-----------------------------------')
     print('VIDEO MODELING - %s'%(default_video_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/video_models')
-    make_predictions('video', default_video_features, model_dir, load_dir)
+    make_predictions('video', default_audio_features, model_dir, load_dir)
 if 'csv_models' in listdir:
     print('-----------------------------------')
-    print('CSV MODELING - %s'%(default_csv_features.upper()))
+    print('CSV FEATURIZING - %s'%(default_csv_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/csv_models')
-    make_predictions('csv', default_csv_features, model_dir, load_dir)
+    make_predictions('csv', default_audio_features, model_dir, load_dir)
 

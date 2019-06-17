@@ -73,6 +73,27 @@ default_audio_features --> can be 'all' or any specific featurizer ('standard_fe
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | default_audio_features | default set of audio features used for featurization | standard_features | audioset_features, audiotext_features, librosa_features, meta_features, mixed_features, myprosody_features, praat_features, pspeech_features, pyaudio_features, sa_features, sox_features, specimage_features, specimage2_features, spectrogram_features, standard_features | 
+| default_text_features | default set of text features used for featurization | nltk_features | fast_features, glove_features, nltk_features, spacy_features, w2vec_features | 
+| default_image_features | default set of image features used for featurization | image_features | image_features, inception_features, resnet_features, tesseract_features, vgg16_features, vgg19_features, xception_features | 
+| default_video_features | default set of video features used for featurization | video_features | video_features, y8m_features | 
+| default_csv_features | default set of csv features used for featurization | csv_features | csv_features | 
+| bias_discovery | looks for biases in datasets during featurization (e.g. ages and genders) | False | True, False | 
+| transcribe_audio | determines whether or not to transcribe an audio file via default_audio_transcriber | True | True, False | 
+| default_audio_transcriber | the default audio transcriber if transcribe_audio == True | 'pocketsphinx' | 'pocketsphinx' | 
+| transcribe_text | determines whether or not to transcribe a text file via default_text_transcriber | True | True, False | 
+| default_text_transcriber | the default text transcriber if transcribe_text == True | 'raw text' | 'raw text' | 
+| transcribe_image | determines whether or not to transcribe an image file via default_image_transcriber | True | True, False | 
+| default_image_transcriber | the default image transcriber if transcribe_image == True | 'tesseract' | 'tesseract' | 
+| transcribe_video | determines whether or not to transcribe a video file via default_video_transcriber | True | True, False | 
+| default_video_transcriber | the default video transcriber if transcribe_video == True | 'tesseract_connected_over_frames' | 'tesseract_connected_over_frames' | 
+| transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber | True | True, False | 
+| default_csv_transcriber | the default video transcriber if transcribe_csv == True | 'raw text' | 'raw text' | 
+| default_training_script | the specified traning script to train machine learning models | keras | many | 
+| augment data | specifies whether or not you'd like to augment data during training |  False | True, False | 
+| visualize data | specifies whether or not you'd like to see a visualization during model training |  False | True, False | 
+| create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
+| model_compress | specifies whether or not you'd like to compress a model | True | True, False | 
+
 ```
 default_audio_features=audio_features
 default_text_features=text_features

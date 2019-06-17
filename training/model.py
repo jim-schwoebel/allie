@@ -1,10 +1,38 @@
 '''
-PLDA implementation from
-https://github.com/RaviSoji/plda/blob/master/mnist_demo/mnist_demo.ipynb
+Take in various sys.argv[] inputs and/or user-defined inputs and
+output a trained machine learning model. 
+
+Can featurize and model audio, image, text, video, or CSV files.
+
+This assumes the files are separated in folders in the train_dir. 
+
+For example, if you want to separate males and females in audio
+files, you would need to have one folder named 'males' and another
+folder named 'females' and specify audio file training with the
+proper folder names ('male' and 'female') for the training script 
+to function properly.
+
+For automated training, you can alternatively pass through sys.argv[]
+inputs as follows:
+
+python3 model.py audio 2 c male female 
+
+audio = audio file type 
+2 = 2 classes 
+c = classification (r for regression)
+male = first class
+female = second class [via N number of classes]
 '''
+###############################################################
+##                  IMPORT STATEMENTS                        ##
+###############################################################
 import os, sys, pickle, json, random, shutil
 import numpy as np
 import matplotlib.pyplot as plt
+
+###############################################################
+##                  HELPER FUNCTIONS                         ##
+###############################################################
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -53,6 +81,10 @@ def classifyfolder(listdir):
 	maxind=countvalues.index(maxvalue)
 	return countlist[maxind]
 
+###############################################################
+##                    LOADING SETTINGS                       ##
+###############################################################
+
 # load the default feature set 
 cur_dir = os.getcwd()
 prevdir= prev_dir(cur_dir)
@@ -82,70 +114,81 @@ for i in range(len(folders)):
 	data[folders[i]]=filetype 
 	os.chdir(data_dir)
 
-# now ask user what type of problem they are trying to solve 
-problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
-while problemtype not in ['1','2','3','4','5']:
-	print('answer not recognized...')
+###############################################################
+##                  INITIALIZE CLASSES                       ##
+###############################################################
+
+# get all information from sys.argv, and if not, 
+# go through asking user for the proper parameters 
+
+try:
+	problemtype=sys.argv[1]
+	classnum=sys.argv[2]
+	mtype=sys.argv[3]
+	classes=list()
+	for i in range(int(classnum)):
+		classes.append(sys.argv[i+4])
+except:
+	# now ask user what type of problem they are trying to solve 
 	problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
+	while problemtype not in ['1','2','3','4','5']:
+		print('answer not recognized...')
+		problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
 
-if problemtype=='1':
-	problemtype='audio'
-elif problemtype=='2':
-	problemtype='text'
-elif problemtype=='3':
-	problemtype='image'
-elif problemtype=='4':
-	problemtype='video'
-elif problemtype=='5':
-	problemtype=='csv'
+	if problemtype=='1':
+		problemtype='audio'
+	elif problemtype=='2':
+		problemtype='text'
+	elif problemtype=='3':
+		problemtype='image'
+	elif problemtype=='4':
+		problemtype='video'
+	elif problemtype=='5':
+		problemtype=='csv'
 
-print('\n OK cool, we got you modeling %s files \n'%(problemtype))
-count=0
-availableclasses=list()
-for i in range(len(folders)):
-    if data[folders[i]]==problemtype:
-    	availableclasses.append(folders[i])
-    	count=count+1
-classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
-print('these are the available classes: ')
-print(availableclasses)
-classes=list()
-stillavailable=list()
-for i in range(int(classnum)):
-	class_=input('what is class #%s \n'%(str(i+1)))
-
-	while class_ not in availableclasses and class_ not in '' or class_ in classes:
-		print('\n')
-		print('------------------ERROR------------------')
-		print('the input class does not exist (for %s files).'%(problemtype))
-		print('these are the available classes: ')
-		if len(stillavailable)==0:
-			print(availableclasses)
-		else:
-			print(stillavailable)
-		print('------------------------------------')
+	print('\n OK cool, we got you modeling %s files \n'%(problemtype))
+	count=0
+	availableclasses=list()
+	for i in range(len(folders)):
+	    if data[folders[i]]==problemtype:
+	    	availableclasses.append(folders[i])
+	    	count=count+1
+	classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
+	print('these are the available classes: ')
+	print(availableclasses)
+	classes=list()
+	stillavailable=list()
+	for i in range(int(classnum)):
 		class_=input('what is class #%s \n'%(str(i+1)))
-	for j in range(len(availableclasses)):
-		stillavailable=list()
-		if availableclasses[j] not in classes:
-			stillavailable.append(availableclasses[j])
-	if class_ == '':
-		class_=stillavailable[0]
 
-	classes.append(class_)
+		while class_ not in availableclasses and class_ not in '' or class_ in classes:
+			print('\n')
+			print('------------------ERROR------------------')
+			print('the input class does not exist (for %s files).'%(problemtype))
+			print('these are the available classes: ')
+			if len(stillavailable)==0:
+				print(availableclasses)
+			else:
+				print(stillavailable)
+			print('------------------------------------')
+			class_=input('what is class #%s \n'%(str(i+1)))
+		for j in range(len(availableclasses)):
+			stillavailable=list()
+			if availableclasses[j] not in classes:
+				stillavailable.append(availableclasses[j])
+		if class_ == '':
+			class_=stillavailable[0]
 
-mtype=input('is this a classification (c) or regression (r) problem? \n')
-while mtype not in ['c','r']:
-	print('input not recognized...')
+		classes.append(class_)
+
 	mtype=input('is this a classification (c) or regression (r) problem? \n')
+	while mtype not in ['c','r']:
+		print('input not recognized...')
+		mtype=input('is this a classification (c) or regression (r) problem? \n')
 
-# load all default feature types 
-settings=json.load(open(prevdir+'/settings.json'))
-default_audio_features=settings['default_audio_features']
-default_text_features=settings['default_text_features']
-default_image_features=settings['default_image_features']
-default_video_features=settings['default_video_features']
-default_csv_features='n/a'
+###############################################################
+##                    FEATURIZE FILES                        ##
+###############################################################
 
 # now featurize each class (in proper folder)
 data={}
@@ -189,7 +232,13 @@ for i in range(len(classes)):
 # get feature labels (for ludwig) - should be the same for all files
 feature_labels=g['features'][problemtype][default_features]['labels']
 
-# now that we have featurizations, we can load them in and train model
+###############################################################
+##                    DATA PRE-PROCESSING                    ##
+###############################################################
+
+# perform class balance such that both classes have the same number
+# of members. 
+
 os.chdir(prevdir+'/training/')
 
 model_dir=prevdir+'/models'
@@ -235,12 +284,11 @@ os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
-## bring main imports down here to speed up things.
-## only import the training scripts that are necessary.
-
 ############################################################
 ## 					TRAIN THE MODEL 					  ##
 ############################################################
+
+## Now we can train the machine learning model via the default_training script.
 
 default_training_script=settings['default_training_script']
 model_compress=True

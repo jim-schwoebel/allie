@@ -57,6 +57,8 @@ if 'settings.json' not in listdir:
             "default_image_transcriber": "tesseract",
             "transcribe_video": true, 
             "default_video_transcriber": "tesseract (averaged over frames)",
+            "transcribe_csv": true, 
+            "default_csv_transcriber": "raw text",
             "default_training_script": "keras", 
             "augment_data": true, 
             "visualize_data": true, 

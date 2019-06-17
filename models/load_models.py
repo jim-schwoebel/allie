@@ -314,7 +314,7 @@ if 'video_models' in listdir:
     make_predictions('video', default_audio_features, model_dir, load_dir)
 if 'csv_models' in listdir:
     print('-----------------------------------')
-    print('CSV FEATURIZING - %s'%(default_csv_features.upper()))
+    print('CSV MODELING - %s'%(default_csv_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/csv_models')
     make_predictions('csv', default_audio_features, model_dir, load_dir)

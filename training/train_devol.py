@@ -60,14 +60,7 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	
 	# pickle the model 
 	modelname=jsonfile[0:-5]+'_devol_%s'%(default_features)
-
-	# serialize model to JSON
-	model_json = model.to_json()
-	print(model_json)
-	with open(modelname+".json", "w") as json_file:
-	    json_file.write(model_json)
-	# serialize weights to HDF5
-	model.save_weights(modelname+".h5")
+    model.save(modelname+".h5")
 	print("\n Saved %s.json model to disk"%(modelname))
 
 	listdir=os.listdir()

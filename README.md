@@ -25,7 +25,9 @@ cd voice_modeling
 ```
 Set up virtual environment (to ensure consistent operating mode across operating systems).
 ```
-virtualenv
+python3 -m pip install --user virtualenv
+python3 -m venv env
+source env/bin/activate
 ```
 Now install required dependencies:
 ```

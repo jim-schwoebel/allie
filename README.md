@@ -46,6 +46,7 @@ Note the test above takes roughly 5-10 minutes to complete and makes sure that y
 .. --> features 
 .. --> load_dir
 .. --> models
+.. --> production
 .. --> tests
 .. --> train_dir 
 .. --> training 

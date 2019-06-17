@@ -59,7 +59,6 @@ def transcribe_csv(csv_file):
 basedir=os.getcwd()
 help_dir=basedir+'/helpers'
 prevdir=prev_dir(basedir)
-feature_set='csv_features'
 
 foldername=sys.argv[1]
 os.chdir(foldername)
@@ -78,6 +77,7 @@ cur_dir=os.getcwd()
 g=json.load(open(prev_dir(prevdir)+'/settings.json'))
 csv_transcribe=g['transcribe_csv']
 default_csv_transcriber=g['default_csv_transcriber']
+feature_set=g['default_csv_features']
 
 ###################################################
 

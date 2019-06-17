@@ -5,7 +5,7 @@ of the repository.
 Note this unit_testing requires the settings.json
 to defined in the base directory.
 '''
-import unittest, os, shutil 
+import unittest, os, shutil, time 
 
 ###############################################################
 ##                  HELPER FUNCTIONS                         ##
@@ -44,13 +44,6 @@ def find_model(b):
 
     return b 
 
-def remove_temp_model():
-    listdir=os.listdir()
-    # assumes anything with one_two is a temp model file and can delete
-    for i in range(len(listdir)):
-        if listdir[i].find('one_two') > 0:
-            os.remove(listdir[i])
-
 ###############################################################
 ##                    INITIALIZATION.                        ##
 ###############################################################
@@ -68,69 +61,60 @@ loadmodel_dir = prevdir+'/models'
 
 class SimplisticTest(unittest.TestCase):
      
-    def test(self):
-        a = 'a'
-        b = 'a'
-        self.assertEqual(a, b)
-    
     ###############################################################
     ##                       MODULE TESTS                        ##
     ###############################################################
     # confirm that all the modules are installed correctly 
     def test_requirements(self):
         # import all from requirements.txt 
-        #try:
-        import audioread
-        import decorator
-        import enum 
-        import h5py
-        import html5lib
-        import joblib
-        import keras
-        import librosa
-        import llvmlite
-        import numba
-        import numpy
-        import protobuf
-        import PyYAML
-        import resampy
-        import sklearn 
-        import scipy
-        import soundfile 
-        import tensorflow
-        import cv2 
-        import webrtcvad
-        import xgboost
-        import tpot
-        import beautifultable
-        import alphapy
-        import hyperopt 
-        import tqdm
-        b=True
-       # except:
-           # b=False 
+        try:
+            import audioread
+            import decorator
+            import enum 
+            import h5py
+            import html5lib
+            import joblib
+            import keras
+            import librosa
+            import llvmlite
+            import numba
+            import numpy
+            import yaml
+            import resampy
+            import sklearn 
+            import scipy
+            import soundfile 
+            import tensorflow
+            import cv2 
+            import webrtcvad
+            import xgboost
+            import tpot
+            import beautifultable
+            import alphapy
+            import hyperopt 
+            import tqdm
+            b=True
+       except:
+           b=False 
 
         self.assertEqual(True, b)  
     
     # brew installations (SoX)
-    def test_brew(self):
+    def test_sox(self):
         # test brew installation by merging two test files 
         os.system('sox test_audio.wav test_audio.wav test2.wav')
         if 'test2.wav' in os.listdir():
-            b=True 
-            os.remove('test2.wav')  
+            b=True  
         else:
             b=False    
         self.assertEqual(True, b)      
 
     # brew installation (FFmpeg)
-    def test_FFmpeg(self):
+    def test_ffmpeg(self):
         # test FFmpeg installation with test_audio file conversion 
         os.system('ffmpeg -i test_audio.wav test_audio.mp3')
-        listdir=os.listdir()
-        if 'test_audio.mp3' in listdir:
+        if 'test_audio.mp3' in os.listdir():
             b=True 
-            os.remove('test_audio.mp3')
         else:
             b=False 
         self.assertEqual(True, b)
@@ -204,41 +188,38 @@ class SimplisticTest(unittest.TestCase):
     # now do all the tests 
     os.chdir(loadmodel_dir+'/audio_models')
 
-    try:
-        def test_audiomodel(self):
-            b=False
-            b = find_model(b)
-            self.assertEqual(True, b)
+    def test_audiomodel(self):
+        b=False
+        b = find_model(b)
+        self.assertEqual(True, b)
 
-        os.chdir(loadmodel_dir+'/text_models')
+    os.chdir(loadmodel_dir+'/text_models')
 
-        def test_textmodel(self):
-            b=False
-            b = find_model(b)
-            self.assertEqual(True, b)
+    def test_textmodel(self):
+        b=False
+        b = find_model(b)
+        self.assertEqual(True, b)
 
-        os.chdir(loadmodel_dir+'/image_models')
+    os.chdir(loadmodel_dir+'/image_models')
 
-        def test_imagemodel(self):
-            b=False
-            b = find_model(b)
-            self.assertEqual(True, b)
+    def test_imagemodel(self):
+        b=False
+        b = find_model(b)
+        self.assertEqual(True, b)
 
-        os.chdir(loadmodel_dir+'/video_models')
+    os.chdir(loadmodel_dir+'/video_models')
 
-        def video_audiomodel(self):
-            b=False
-            b = find_model(b)
-            self.assertEqual(True, b)
+    def video_audiomodel(self):
+        b=False
+        b = find_model(b)
+        self.assertEqual(True, b)
 
-        os.chdir(loadmodel_dir+'/csv_models')
+    os.chdir(loadmodel_dir+'/csv_models')
 
-        def test_csvmodel(self):
-            b=False
-            b = find_model(b)
-            self.assertEqual(True, b)
-    except:
-        pass 
+    def test_csvmodel(self):
+        b=False
+        b = find_model(b)
+        self.assertEqual(True, b)
 
     ###############################################################
     ##            FEATURIZATION / LOADING TESTS                  ##
@@ -257,69 +238,63 @@ class SimplisticTest(unittest.TestCase):
     os.system('python3 load_models.py')
 
     os.chdir(load_dir)
-    listdir=os.listdir()
-    def test_loadaudio(self):
+
+    # note we have to do a loop here to end where the end is 
+    # 'audio.json' | 'text.json' | 'image.json' | 'video.json' | 'csv.json'
+    # this is because the files are renamed to not have conflicts.
+    # for example, if 'audio.wav' --> 'audio.json' and 'audio.mp4' --> 'audio.json',
+    # both would have a conflicting name and would overwrite each other. 
+
+    def test_loadaudio(self, load_dir=load_dir):
+        os.chdir(load_dir)
+        listdir=os.listdir() 
         b=False
-        if 'test_audio.json' in listdir:
-            b=True
+        for i in range(len(listdir)):
+            if listdir[i].find('audio.json') > 0: 
+                b=True
+                break
         self.assertEqual(True, b)
 
-    def test_loadtext(self):
+    def test_loadtext(self, load_dir=load_dir):
+        os.chdir(load_dir)
+        listdir=os.listdir()
         b=False
-        if 'test_text.json' in listdir:
-            b=True
+        for i in range(len(listdir)):
+            if listdir[i].find('text.json') > 0: 
+                b=True
+                break
         self.assertEqual(True, b)
 
-    def test_loadimage(self):
+    def test_loadimage(self, load_dir=load_dir):
+        os.chdir(load_dir)
+        listdir=os.listdir()
         b=False
-        if 'test_image.json' in listdir:
-            b=True
+        for i in range(len(listdir)):
+            if listdir[i].find('image.json') > 0: 
+                b=True
+                break
         self.assertEqual(True, b)
 
-    def test_loadvideo(self):
+    def test_loadvideo(self, load_dir=load_dir):
+        os.chdir(load_dir)
+        listdir=os.listdir()
         b=False
-        if 'test_video.json' in listdir:
-            b=True
+        for i in range(len(listdir)):
+            if listdir[i].find('video.json') > 0: 
+                b=True
+                break
         self.assertEqual(True, b)
 
-    def test_loadcsv(self):
+    def test_loadcsv(self, load_dir=load_dir):
+        os.chdir(load_dir)
+        listdir=os.listdir()
         b=False
-        if 'test_csv.json' in listdir:
-            b=True
+        for i in range(len(listdir)):
+            if listdir[i].find('csv.json') > 0: 
+                b=True
+                break
         self.assertEqual(True, b)
-
-    # now we can remove everything in load_dir
-    listdir=os.listdir()
-    for i in range(len(listdir)):
-        if listdir[i].endswith('.json') or listdir[i].endswith('.wav') or listdir[i].endswith('.png') or listdir[i].endswith('.txt') or listdir[i].endswith('.csv') or listdir[i].endswith('.mp4'):
-            os.remove(listdir[i])
-
-    # we can also remove all temporarily trained machine learning models 
-    try:
-        os.chdir(loadmodel_dir+'/audio_models')
-        remove_temp_model()
-    except:
-        pass 
-    try:
-        os.chdir(loadmodel_dir+'/text_models')
-        remove_temp_model()
-    except:
-        pass 
-    try:
-        os.chdir(loadmodel_dir+'/image_models')
-        remove_temp_model()
-    except:
-        pass
-    try:
-        os.chdir(loadmodel_dir+'/video_models')
-        remove_temp_model()
-    except:
-        pass 
-    try:
-        os.chdir(loadmodel_dir+'/csv_models')
-        remove_temp_model()
-    except:
-        pass 
 
 if __name__ == '__main__':
     unittest.main()
+

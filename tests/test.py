@@ -1,4 +1,4 @@
-import os 
+import os, time 
 
 def prev_dir(directory):
     g=directory.split('/')
@@ -37,7 +37,12 @@ os.system('python3 unit_test.py')
 ###############################################################
 ##                    REMOVE TEMP FILES                      ##
 ###############################################################
-
+print('sleeping for 60 seconds...')
+print('-------------------------------------------')
+print('-------------------------------------------')
+print('-------------------------------------------')
+print('-------------------------------------------')
+time.sleep(60)
 os.chdir(cur_dir)
 print('deleting temp files from FFmpeg and SoX tests')
 print('-------------------------------------------')
@@ -61,7 +66,7 @@ for i in range(len(listdir)):
     if listdir[i].endswith('.json') or listdir[i].endswith('.wav') or listdir[i].endswith('.png') or listdir[i].endswith('.txt') or listdir[i].endswith('.csv') or listdir[i].endswith('.mp4'):
         os.remove(listdir[i])
 
-print('deleting temp model files (audio, text, image, and video')
+print('deleting temp model files (audio, text, image, and video)')
 print('-------------------------------------------')
 # we can also remove all temporarily trained machine learning models 
 os.chdir(loadmodel_dir+'/audio_models')

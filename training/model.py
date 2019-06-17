@@ -26,7 +26,7 @@ female = second class [via N number of classes]
 ###############################################################
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
-import os, sys, pickle, json, random, shutil
+import os, sys, pickle, json, random, shutil, time
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -186,6 +186,8 @@ except:
 		print('input not recognized...')
 		mtype=input('is this a classification (c) or regression (r) problem? \n')
 
+# print(problemtype)
+# time.sleep(10)
 ###############################################################
 ##                    FEATURIZE FILES                        ##
 ###############################################################
@@ -210,7 +212,7 @@ for i in range(len(classes)):
 		# featurize video 
 		os.chdir(prevdir+'/features/video_features')
 		default_features=default_video_features
-	elif problemtype == '.csv':
+	elif problemtype == 'csv':
 		# featurize .CSV 
 		os.chdir(prevdir+'/features/csv_features')
 		default_features=default_csv_features

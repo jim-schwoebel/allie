@@ -70,6 +70,9 @@ Settings can be modified in the settings.json file. If no settings.json file is 
 
 default_audio_features --> can be 'all' or any specific featurizer ('standard_features')
 
+| setting | description | default setting | all options | 
+|------|------|------|------| 
+| default_audio_features | default set of audio features used for featurization | standard_features | audioset_features, audiotext_features, librosa_features, meta_features, mixed_features, myprosody_features, praat_features, pspeech_features, pyaudio_features, sa_features, sox_features, specimage_features, specimage2_features, spectrogram_features, standard_features | 
 ```
 default_audio_features=audio_features
 default_text_features=text_features

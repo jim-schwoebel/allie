@@ -242,7 +242,7 @@ labels=np.asarray(labels)
 ## 					TRAIN THE MODEL 					  ##
 ############################################################
 
-default_training_script='keras'
+default_training_script=settings['default_training_script']
 model_compress=True
 
 if default_training_script=='adanet':

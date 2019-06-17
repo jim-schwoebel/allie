@@ -99,7 +99,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 
 #####################
 
-    jsonfilename='%s_keras.json'%(modelname)
+    jsonfilename='%s.json'%(modelname)
     print('saving .JSON file (%s)'%(jsonfilename))
     jsonfile=open(jsonfilename,'w')
     

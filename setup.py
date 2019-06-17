@@ -55,7 +55,7 @@ if 'settings.json' not in listdir:
             "default_audio_transcriber": "pocketsphinx", 
             "transcribe_image": True, 
             "default_image_transcriber": "tesseract",
-            "transcribe_video": True, 
+            "transcribe_videos": True, 
             "default_video_transcriber": "tesseract (averaged over frames)",
             "transcribe_csv": True, 
             "default_csv_transcriber": "raw text",

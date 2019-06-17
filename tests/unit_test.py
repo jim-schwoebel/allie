@@ -94,7 +94,7 @@ class SimplisticTest(unittest.TestCase):
             import hyperopt 
             import tqdm
             b=True
-       except:
+        except:
            b=False 
 
         self.assertEqual(True, b)  

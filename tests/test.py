@@ -12,6 +12,16 @@ def prev_dir(directory):
     # print(dir_)
     return dir_
 
+def remove_temp_model():
+    '''removes temporary model files'''
+    listdir=os.listdir()
+    for i in range(len(listdir)):
+        if listdir[i].find('one_two') == 0:
+            os.remove(listdir[i])
+
+###############################################################
+##                    GET FOLDER INFO.                       ##
+###############################################################
 cur_dir = os.getcwd()
 prevdir= prev_dir(cur_dir)
 load_dir = prevdir+'/load_dir'

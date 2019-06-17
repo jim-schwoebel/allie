@@ -21,12 +21,15 @@ class SimplisticTest(unittest.TestCase):
     # can read text files 
     # can read image files 
     # can read video files 
-     
+    # can read csv files 
+
     # can transcribe audio files 
     # can transcribe image files 
     # can transcribe video files 
 
-    # can fetch dataset (common_voice) in folder (internet connection exists) 
+    # can fetch dataset (common_voice) in folder (internet connection exists) - internet function 
+     
+    # can clean datasets (delete duplicates) 
      
     # can augment dataset - audio files (audio_augmentation) 
     # can augment dataset - text files (text_augmentation) 
@@ -37,15 +40,16 @@ class SimplisticTest(unittest.TestCase):
     # can featurize text files via specified featurizer (can be all featurizers)
     # can featurize image files via specified featurizer (can be all featurizers) 
     # can featurize video files via specified featurizer (can be all featurizers) 
+    # can featurize csv files via specified featurizer (can be all featurizers) 
      
     # can train machine learning model via specified trainer (test)
 
-    # can load SC machine learning models
-    # can load TPOT models 
-    # can load keras deep learning models 
-    # can load ludwig deep learning models 
+    # can load SC machine learning models / make predictions 
+    # can load TPOT models / make predictions 
+    # can load keras deep learning models / make predictions 
+    # can load ludwig deep learning models / make predictions
 
-    # if applicable, can compress audio models 
+    # can compress models (SC vs. deep learning) 
      
     # if applicable, can create YAML files (for production) 
      

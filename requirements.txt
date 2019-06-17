@@ -4,7 +4,7 @@ enum34
 h5py
 html5lib
 joblib
-Keras
+keras
 librosa
 llvmlite
 numba

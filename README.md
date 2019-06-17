@@ -18,14 +18,17 @@ Master repository for modeling voice files. Transformed from NLX-model.
 
 ## getting started 
 ```
-git clone
+git clone git@github.com:jim-schwoebel/voice_modeling.git
 cd voice_modeling 
 python3 setup.py 
 ```
+This will then download all the required dependencies.
+
+Assumes Mac OSX operating system. 
 
 ## settings 
 
-settings.json
+Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script. 
 
 default_audio_features --> can be 'all' or any specific featurizer ('standard_features')
 

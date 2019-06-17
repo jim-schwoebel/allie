@@ -24,6 +24,7 @@ def prev_dir(directory):
     return dir_
 
 def seed_files(filename, cur_dir, train_dir):
+    os.chdir(train_dir)
     for i in range(20):
         shutil.copy(cur_dir+'/'+filename, train_dir+'/'+filename)
         os.rename(filename, str(i)+filename[-4:])

@@ -100,8 +100,9 @@ class SimplisticTest(unittest.TestCase):
         self.assertEqual(True, b)  
     
     # brew installations (SoX)
-    def test_sox(self):
+    def test_sox(self, cur_dir=cur_dir):
         # test brew installation by merging two test files 
+        os.chdir(cur_dir)
         os.system('sox test_audio.wav test_audio.wav test2.wav')
         if 'test2.wav' in os.listdir():
             b=True  
@@ -110,8 +111,9 @@ class SimplisticTest(unittest.TestCase):
         self.assertEqual(True, b)      
 
     # brew installation (FFmpeg)
-    def test_ffmpeg(self):
+    def test_ffmpeg(self, cur_dir=cur_dir):
         # test FFmpeg installation with test_audio file conversion 
+        os.chdir(cur_dir)
         os.system('ffmpeg -i test_audio.wav test_audio.mp3')
         if 'test_audio.mp3' in os.listdir():
             b=True 
@@ -122,8 +124,6 @@ class SimplisticTest(unittest.TestCase):
     ###############################################################
     ##                    TRAINING TESTS                         ##
     ###############################################################
-
-    
 
     # test audio file training 
     os.chdir(train_dir)
@@ -186,37 +186,32 @@ class SimplisticTest(unittest.TestCase):
     shutil.rmtree('two')
 
     # now do all the tests 
-    os.chdir(loadmodel_dir+'/audio_models')
-
-    def test_audiomodel(self):
+    def test_audiomodel(self, audiodir=loadmodel_dir+'/audio_models'):
+        os.chdir(audiodir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/text_models')
-
-    def test_textmodel(self):
+    def test_textmodel(self, textdir=loadmodel_dir+'/text_models'):
+        os.chdir(textdir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/image_models')
-
-    def test_imagemodel(self):
+    def test_imagemodel(self, imagedir=loadmodel_dir+'/image_models'):
+        os.chdir(imagedir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/video_models')
-
-    def video_audiomodel(self):
+    def video_audiomodel(self, videodir=loadmodel_dir+'/video_models'):
+        os.chdir(videodir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)
 
-    os.chdir(loadmodel_dir+'/csv_models')
-
-    def test_csvmodel(self):
+    def test_csvmodel(self, csvdir=loadmodel_dir+'/csv_models'):
+        os.chdir(csvdir)
         b=False
         b = find_model(b)
         self.assertEqual(True, b)

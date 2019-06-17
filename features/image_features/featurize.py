@@ -59,9 +59,16 @@ def make_features(sampletype):
 				 'video': dict(),
 				 'csv': dict()}
 
+	models={'audio': dict(),
+		 'text': dict(),
+		 'image': dict(),
+		 'video': dict(),
+		 'csv': dict()}
+	
 	data={'sampletype': sampletype,
 		  'transcripts': transcripts,
 		  'features': features,
+	      	  'models': models,
 		  'labels': []}
 
 	return data

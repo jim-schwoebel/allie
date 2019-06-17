@@ -7,7 +7,6 @@ joblib
 Keras
 librosa
 llvmlite
-Markdown
 numba
 numpy
 protobuf

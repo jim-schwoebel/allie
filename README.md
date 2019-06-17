@@ -17,16 +17,25 @@ Master repository for modeling voice files. Transformed from NLX-model.
 ^^ show some command line examples of what you can do with training [text, image, image, video, csv].
 
 ## getting started 
+
+First, clone the repository:
 ```
 git clone git@github.com:jim-schwoebel/voice_modeling.git
-cd voice_modeling 
-python3 setup.py 
+cd voice_modeling  
 ```
-This will then download all the required dependencies.
-
 Set up virtual environment (to ensure consistent operating mode across operating systems).
-
-Tested on Mac OSX operating system. 
+```
+virtualenv
+```
+Now install required dependencies:
+```
+python3 setup.py
+```
+Now do some unit tests to make sure everything works:
+```
+python3 tests/test.py
+```
+Note the test above takes roughly 5-10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
 
 ## settings 
 

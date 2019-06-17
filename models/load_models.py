@@ -161,11 +161,11 @@ def load_ludwig():
     return 
 
 def model_schema():
-    models={'audio': [],
-            'text': [],
-            'image': [],
-            'video': [],
-            'csv': []
+    models={'audio': dict(),
+            'text': dict(),
+            'image': dict(),
+            'video': dict(),
+            'csv': dict()
             }
     return models 
 
@@ -245,7 +245,7 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                             models=model_schema()
 
                         temp=models[sampletype]
-                        temp.append({class_: modeldata})
+                        temp[class_]= modeldata
                         models[sampletype]=temp
                         jsonfile['models']=models
 

@@ -12,6 +12,7 @@ from keras import layers
 from keras.models import Sequential,model_from_json
 from keras.layers import Dense, Dropout
 import numpy as np
+import time, pickle 
 
 ##########################################################
 ##                  HELPER FUNCTIONS                    ##
@@ -106,7 +107,7 @@ def detect_models():
         if listdir[i].find('tpot')>0 and listdir[i][-7:]=='.pickle':
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             tpot_models.append(data)
-        elif listdir[i].find('scsr')>0 and listdir[i][-7:]=='.pickle':
+        elif listdir[i].find('sc')>0 and listdir[i][-7:]=='.pickle':
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             scsr_models.append(data)
         elif listdir[i].find('hypsklearn')>0 and listdir[i][-7:]=='.pickle':
@@ -159,6 +160,15 @@ def load_ludwig():
     # load that output prediction 
     return 
 
+def model_schema():
+    models={'audio': [],
+            'text': [],
+            'image': [],
+            'video': [],
+            'csv': []
+            }
+    return models 
+
 def make_predictions(sampletype, feature_set, model_dir, load_dir):
     # detect machine learning models
     model_data=detect_models()
@@ -178,33 +188,67 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
     print(jsonfilelist)
     for i in range(len(model_list)):
-        for j in range(len(model_list[i])):
-            modelname=list(model_list[i][j])[0]
-            if modelname.endswith('.pickle'):
+        if model_data[model_list[i]] != []:
 
-                # load model 
-                os.chdir(model_dir)
-                loadmodel=open(modelname, 'rb')
-                model = pickle.load(loadmodel)
-                loadmodel.close()
+            print(model_list[i])
+            temp_models=list(model_data[model_list[i]])
+            for j in range(len(temp_models)):
 
-                # now only load featurized samples and make predictions 
-                for k in range(len(jsonfilelist)):
-                    # load directory 
-                    os.chdir(load_dir)
+                modelname=list(temp_models[j])[0]
+                print(modelname)
+                time.sleep(2)
+                if modelname.endswith('.pickle'):
 
-                    # get features (from prior array)
-                    jsonfile=json.load(open(filename))
-                    features=jsonfile['features'][sampletype][feature_set]
+                    # load model 
+                    os.chdir(model_dir)
+                    print(os.getcwd())
+                    loadmodel=open(modelname, 'rb')
+                    model = pickle.load(loadmodel)
+                    loadmodel.close()
 
-                    # predict model 
-                    output=str(model.predict(features)[0])
-                    print(output)
+                    # now only load featurized samples and make predictions 
+                    for k in range(len(jsonfilelist)):
+                        # load directory 
+                        os.chdir(load_dir)
 
-            elif modelname.endswith('.h5'):
-                # load h5 model 
-                loaded_model.load_weights(modelname+".h5")
-                output=int(loaded_model.predict_classes(sample[np.newaxis,:]))
+                        # get features (from prior array)
+                        jsonfile=json.load(open(jsonfilelist[k]))
+                        features=jsonfile['features'][sampletype][feature_set]['features']
+                        features=np.array(features).reshape(1,-1)
+
+                        # predict model 
+                        output=str(model.predict(features)[0])
+                        print(output)
+
+                        # now get the actual class from the classifier name (assume 2 classes)
+                        one=modelname.split('_')[0]
+                        two=modelname.split('_')[1]
+
+                        if output == '0':
+                            class_=one
+                        elif output == '1':
+                            class_=two
+
+                        # now update the database 
+                        try:
+                            models=jsonfile['models']
+                        except:
+                            models=model_schema()
+
+                        temp=models[sampletype]
+                        temp.append(class_)
+                        models[sampletype]=temp
+                        jsonfile['models']=models
+
+                        jsonfilename=open(jsonfilelist[k],'w')
+                        json.dump(jsonfile,jsonfilename)
+                        jsonfilename.close() 
+
+
+                elif modelname.endswith('.h5'):
+                    # load h5 model 
+                    loaded_model.load_weights(modelname+".h5")
+                    output=int(loaded_model.predict_classes(sample[np.newaxis,:]))
 
 ##########################################################
 ##                     CLEAN FOLDER                    ##
@@ -293,29 +337,29 @@ if 'audio_models' in listdir:
     print('AUDIO MODELING - %s'%(default_audio_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/audio_models')
-    make_predictions('audio', default_audio_features, model_dir, load_dir)
+    make_predictions('audio', default_audio_features, os.getcwd(), load_dir)
 if 'text_models' in listdir:
     print('-----------------------------------')
     print('TEXT MODELING - %s'%(default_text_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/text_models')
-    make_predictions('text', default_audio_features, model_dir, load_dir)
+    make_predictions('text', default_text_features,  os.getcwd(), load_dir)
 if 'image_models' in listdir:
     print('-----------------------------------')
     print('IMAGE MODELING - %s'%(default_image_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/image_models')
-    make_predictions('image', default_audio_features, model_dir, load_dir)
+    make_predictions('image', default_image_features, os.getcwd(), load_dir)
 if 'video_models' in listdir:
     print('-----------------------------------')
     print('VIDEO MODELING - %s'%(default_video_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/video_models')
-    make_predictions('video', default_audio_features, model_dir, load_dir)
+    make_predictions('video', default_video_features, os.getcwd(), load_dir)
 if 'csv_models' in listdir:
     print('-----------------------------------')
     print('CSV FEATURIZING - %s'%(default_csv_features.upper()))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/csv_models')
-    make_predictions('csv', default_audio_features, model_dir, load_dir)
+    make_predictions('csv', default_csv_features, os.getcwd(), load_dir)
 

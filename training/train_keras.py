@@ -114,6 +114,12 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     json.dump(data,jsonfile)
     jsonfile.close()
 
+    # also make compressed .JSON for loading later.
+    jsonfilename='%s_compressed.json'%(modelname)
+    jsonfile=open(jsonfilename,'w')  
+    json.dump(data,jsonfile)
+    jsonfile.close()
+
     cur_dir2=os.getcwd()
 
     try:

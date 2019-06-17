@@ -9,8 +9,10 @@ import os, json
 import os, getpass
 import keras.models 
 from keras.models import load_model
+from ludwig.api import LudwigModel
 import numpy as np
-import time, pickle 
+import time, pickle, joblib
+import pandas as pd
 
 ##########################################################
 ##                  HELPER FUNCTIONS                    ##
@@ -303,7 +305,55 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         jsonfilename=open(jsonfilelist[k],'w')
                         json.dump(jsonfile,jsonfilename)
                         jsonfilename.close() 
+                elif modelname.find('ludwig') > 0:
 
+                    # load Ludwig model file 
+                    os.chdir(model_dir)
+                    model=LudwigModel.load(os.getcwd()+'/'+modelname+'/experiment_run_0/model')
+                    modeldata=json.load(open(os.getcwd()+'/'+modelname+'/experiment_run_0/prediction_statistics.json'))
+
+                    # now only load featurized samples and make predictions 
+                    for k in range(len(jsonfilelist)):
+                        # load directory 
+                        os.chdir(load_dir)
+
+                        # get features (from prior array)
+                        jsonfile=json.load(open(jsonfilelist[k]))
+                        features=jsonfile['features'][sampletype][feature_set]['features']
+                        labels=jsonfile['features'][sampletype][feature_set]['labels']
+                        data=dict()
+                        for i in range(len(features)):
+                            data[labels[i]]=features[i]
+
+                        # predict output from model 
+                        output=str(model.predict(pd.DataFrame([data])))
+                        print(output)
+
+                        # now get the actual class from the classifier name (assume 2 classes)
+                        one=modelname.split('_')[0]
+                        two=modelname.split('_')[1]
+
+                        if output == '0':
+                            class_=one
+                        elif output == '1':
+                            class_=two
+
+                        # now update the database 
+                        try:
+                            models=jsonfile['models']
+                        except:
+                            models=model_schema()
+
+                        temp=models[sampletype]
+                        temp[class_]= modeldata
+                        models[sampletype]=temp
+                        jsonfile['models']=models
+
+                        jsonfilename=open(jsonfilelist[k],'w')
+                        json.dump(jsonfile,jsonfilename)
+                        jsonfilename.close()
+
+                    model.close()
 ##########################################################
 ##                     CLEAN FOLDER                    ##
 ##########################################################

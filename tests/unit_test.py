@@ -79,36 +79,36 @@ class SimplisticTest(unittest.TestCase):
     # confirm that all the modules are installed correctly 
     def test_requirements(self):
         # import all from requirements.txt 
-        try:
-            import audioread
-            import decorator
-            import enum 
-            import h5py
-            import html5lib
-            import joblib
-            import keras
-            import librosa
-            import llvmlite
-            import numba
-            import numpy
-            import protobuf
-            import PyYAML
-            import resampy
-            import sklearn 
-            import scipy
-            import soundfile 
-            import tensorflow
-            import cv2 
-            import webrtcvad
-            import xgboost
-            import tpot
-            import beautifultable
-            import alphapy
-            import hyperopt 
-            import tqdm
-            b=True
-        except:
-            b=False 
+        #try:
+        import audioread
+        import decorator
+        import enum 
+        import h5py
+        import html5lib
+        import joblib
+        import keras
+        import librosa
+        import llvmlite
+        import numba
+        import numpy
+        import protobuf
+        import PyYAML
+        import resampy
+        import sklearn 
+        import scipy
+        import soundfile 
+        import tensorflow
+        import cv2 
+        import webrtcvad
+        import xgboost
+        import tpot
+        import beautifultable
+        import alphapy
+        import hyperopt 
+        import tqdm
+        b=True
+       # except:
+           # b=False 
 
         self.assertEqual(True, b)  
     

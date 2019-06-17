@@ -110,6 +110,9 @@ def detect_models():
         elif listdir[i].find('sc')>0 and listdir[i][-7:]=='.pickle':
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             scsr_models.append(data)
+        elif listdir[i].find('sr')>0 and listdir[i][-7:]=='.pickle':
+            data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
+            scsr_models.append(data)
         elif listdir[i].find('hypsklearn')>0 and listdir[i][-7:]=='.pickle':
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             hypsklearn_models.append(data)

@@ -39,6 +39,18 @@ python3 tests/test.py
 ```
 Note the test above takes roughly 5-10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
 
+## folder structure
+
+```
+.. --> datasets 
+.. --> features 
+.. --> load_dir
+.. --> models
+.. --> tests
+.. --> train_dir 
+.. --> training 
+```
+
 ## types of data
 
 Load folders and data script type based on principal type of file.

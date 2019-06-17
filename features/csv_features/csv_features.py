@@ -3,6 +3,7 @@ import nltk, json, os
 from nltk import word_tokenize 
 import numpy as np
 from textblob import TextBlob
+import itertools
 
 def nltk_featurize(transcript):
 
@@ -301,7 +302,11 @@ def csv_featurize(csv_file, cur_dir):
 		feature_list.append(features.tolist())
 		label_list.append(labels_)
 
-	return feature_list, label_list
+	# all CSV files must be same length for the ML models to work...
+	features=np.array(feature_list).flatten()
+	labels=list(itertools.chain(*label_list))
+
+	return features, labels 
 
 	
 #feature_list, label_list = csv_featurize('test.csv', os.getcwd()+'/test')

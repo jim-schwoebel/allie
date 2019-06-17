@@ -53,9 +53,9 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     #SAVE TO DISK
     ############################################################################
     # serialize model to JSON
-    model_json = model.to_json()
-    with open(modelname+".json", "w") as json_file:
-        json_file.write(model_json)
+    # model_json = model.to_json()
+    # with open(modelname+".json", "w") as json_file:
+        # json_file.write(model_json)
     # # serialize weights to HDF5
     # model.save_weights(modelname+".h5")
     # print("\n Saved %s.json model to disk"%(modelname))

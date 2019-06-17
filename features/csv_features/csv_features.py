@@ -265,6 +265,8 @@ def csv_featurize(csv_file, cur_dir):
 	#print(labeltypes)
 
 	# Now we need to convert the .CSV file to .JSON labels 
+	feature_list = list()
+	label_list = list() 
 
 	for i in range(len(g_)):
 		# calculate features for entire CSV 
@@ -296,11 +298,10 @@ def csv_featurize(csv_file, cur_dir):
 					labels_=labels_+tlabels2 
 
 		# feature array per sample (output as .JSON)
-		filename=str(i)+'.json'
-		data={'features': features.tolist(),
-			  'labels': labels_}
-		jsonfile=open(filename, 'w')
-		json.dump(data,jsonfile)
-		jsonfile.close()
+		feature_list.append(features.tolist())
+		label_list.append(labels_)
+
+	return feature_list, label_list
+
 	
-# csv_featurize('test.csv', os.getcwd()+'/test')
+#feature_list, label_list = csv_featurize('test.csv', os.getcwd()+'/test')

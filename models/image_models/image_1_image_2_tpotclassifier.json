@@ -1,1 +1,0 @@
-{"sample type": "image", "feature_set": "image_features", "model name": "image_1_image_2_tpotclassifier.pickle", "accuracy": 1.0, "model type": "TPOTclassification_exported_pipeline = RandomForestClassifier(bootstrap=True, criterion=\"entropy\", max_features=0.9500000000000001, min_samples_leaf=11, min_samples_split=13, n_estimators=100)\n\n"}

@@ -298,16 +298,31 @@ class SimplisticTest(unittest.TestCase):
     os.remove(load_dir+'/test_csv.json')
 
     # we can also remove all temporarily trained machine learning models 
-    os.chdir(loadmodel_dir+'/audio_models')
-    remove_temp_model()
-    os.chdir(loadmodel_dir+'/text_models')
-    remove_temp_model()
-    os.chdir(loadmodel_dir+'/image_models')
-    remove_temp_model()
-    os.chdir(loadmodel_dir+'/video_models')
-    remove_temp_model()
-    os.chdir(loadmodel_dir+'/csv_models')
-    remove_temp_model()
+    try:
+        os.chdir(loadmodel_dir+'/audio_models')
+        remove_temp_model()
+    except:
+        pass 
+    try:
+        os.chdir(loadmodel_dir+'/text_models')
+        remove_temp_model()
+    except:
+        pass 
+    try:
+        os.chdir(loadmodel_dir+'/image_models')
+        remove_temp_model()
+    except:
+        pass
+    try:
+        os.chdir(loadmodel_dir+'/video_models')
+        remove_temp_model()
+    except:
+        pass 
+    try:
+        os.chdir(loadmodel_dir+'/csv_models')
+        remove_temp_model()
+    except:
+        pass 
 
 if __name__ == '__main__':
     unittest.main()

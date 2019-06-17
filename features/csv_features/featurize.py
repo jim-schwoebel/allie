@@ -59,7 +59,7 @@ cur_dir=os.getcwd()
 listdir=os.listdir() 
 
 # feature_set='video_features'
-feature_set='y8m_features'
+feature_set='csv_features'
 
 # get class label from folder name 
 labelname=foldername.split('/')

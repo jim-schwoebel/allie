@@ -64,6 +64,40 @@ Load folders and data script type based on principal type of file.
 | Video | .MP4 / .M4A | .MP4 |
 | CSV | .CSV | .CSV | 
 
+This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
+
+```
+def make_features(sampletype):
+
+	# only add labels when we have actual labels.
+	features={'audio':dict(),
+		  'text': dict(),
+		  'image':dict(),
+		  'video':dict(),
+		  'csv': dict(),
+		  }
+
+	transcripts={'audio': dict(),
+			 'text': dict(),
+			 'image': dict(),
+			 'video': dict(),
+			 'csv': dict()}
+
+	models={'audio': dict(),
+		 'text': dict(),
+		 'image': dict(),
+		 'video': dict(),
+		 'csv': dict()}
+
+	data={'sampletype': sampletype,
+		  'transcripts': transcripts,
+		  'features': features,
+		  'models': models,
+		  'labels': []}
+
+	return data
+```
+
 ## settings 
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script. 

@@ -38,7 +38,7 @@ docker bulid .
 ```
 
 if all is good, the tests should indicate it (like below).
-```python3
+```docker
 Sending build context to Docker daemon  1.289MB
 Step 1/12 : FROM gcr.io/arctic-robot-192514/nlx-base
  ---> 43fdd5d2f70e

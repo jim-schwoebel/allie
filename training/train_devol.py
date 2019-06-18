@@ -79,3 +79,5 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	shutil.move(cur_dir2+'/'+modelname+'.json', os.getcwd()+'/'+modelname+'.json')
 	shutil.move(cur_dir2+'/'+modelname+'.csv', os.getcwd()+'/'+modelname+'.csv')
 	shutil.move(cur_dir2+'/'+modelname+'.h5', os.getcwd()+'/'+modelname+'.h5')
+
+	return modelname+'.h5', os.getcwd()

@@ -83,3 +83,5 @@ def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_feat
     # now move all the files over to proper model directory 
     shutil.move(cur_dir2+'/'+modelname+'.json', os.getcwd()+'/'+modelname+'.json')
     shutil.move(cur_dir2+'/'+modelname+'.pickle', os.getcwd()+'/'+modelname+'.pickle')
+
+    return modelname+'.pickle', os.getcwd()

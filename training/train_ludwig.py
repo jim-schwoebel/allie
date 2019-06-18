@@ -75,3 +75,5 @@ def train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, prob
     shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.yaml', os.getcwd()+'/'+jsonfilename[0:-5]+'.yaml')
     shutil.copytree(cur_dir2+'/'+jsonfilename[0:-5], os.getcwd()+'/'+jsonfilename[0:-5])
     shutil.rmtree(cur_dir2+'/'+jsonfilename[0:-5])
+
+    return jsonfilename[0:-5], os.getcwd()

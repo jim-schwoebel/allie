@@ -35,7 +35,7 @@ The .JSON schema looks something like this (e.g. '2_audio.json'):
 
 ## Supported file formats
 
-Here are the supported file formats for the load directory. 
+Here are the supported file formats for the load directory. If you use alternative formats, the load_models.py script may error.
 
 | File type | extension | recommended format | 
 | ------------- |-------------| -------------| 

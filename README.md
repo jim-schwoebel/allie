@@ -1,12 +1,14 @@
 # voice_modeling
 
-This is a repository for modeling audio, text, image, video, or .CSV files. This is an upgrade from the prior archived NLX-model repository.
+This is a repository for modeling audio, text, image, video, or .CSV files. This is an upgrade from the prior archived [NLX-model repository](https://github.com/NeuroLexDiagnostics/nlx-model).
 
 Here are some things that this repository can do:
-- featurize fles (via audio, text, image, video, or csv featurizers) 
+- featurize fles (via audio, text, image, video, or csv featurizers)
 - train machine learning models (via tpot, hyperopt, scsr, devol, keras training scripts)
-- make predictions from machine learning models (with all models trained in models directory) 
-- prepare machine learning models for deployment (including repositories with readmes).
+- make predictions from machine learning models (with all models trained in models directory)
+- prepare machine learning models for deployment (including repositories with readmes)
+
+![](https://media.giphy.com/media/zXmbOaTpbY6mA/giphy.gif)
 
 ## getting started 
 

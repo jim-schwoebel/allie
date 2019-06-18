@@ -19,7 +19,7 @@ Where:
 - jsonfile_name = male_female_sc_classification.json (JSON file with model information regarding accuracy, etc.)
 - classes = ['male', 'female']
 
-## Quick Example:
+## Quick example
 
 Assuming you have trained a model (stressed_calm_sc_classification.json) in the model directory (audio_models) with stressed_features.json and calm_features.json test cases, you can run the code as follows.
 

@@ -42,7 +42,8 @@ if all is good, the tests should indicate it (like below).
 
 ```
 
-If you have a fail, it's likely due to outputs in the model not being correct. In this case, you may need to manually tune the outputs.
+## Test failures 
+If you have a fail in testing, it's likely due to outputs in the model not being correct. In this case, you may need to manually tune the outputs.
 ```
 ======================================================================
 FAIL: test_calm_classification (__main__.ClassifyTest)

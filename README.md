@@ -108,15 +108,9 @@ Note that only .CSV files may have audio, text, image, video features all-togeth
 
 ## settings 
 
-Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script. 
+Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.
 
-Transcription can happen for audio, image, or video datasets. For audio a standard speech-to-text model (e.g. pocketsphinx) can be used. For image and video, it is assumed an OCR transcription can happen (videos are sampled at some frequency then transcripts are stitched together). 
-
-Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
-
-Create YAML means that the entire repository will be generated to host the model for production. 
-
-default_audio_features --> can be 'all' or any specific featurizer ('standard_features')
+Here are some settings that you can modify in this settings.json file and the various options for these settings:
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 

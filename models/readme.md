@@ -33,7 +33,7 @@ models={'audio': audio_models,
 N/A
 
 ## Audio models
-* [AudioSet models](https://github.com/jim-schwoebel/audioset_models) - 📊 Easily apply 527 machine learning models trained on AudioSet.
+N/A 
 
 ## Text models 
 N/A
@@ -46,3 +46,6 @@ N/A
 
 ## CSV models 
 N/A
+
+## References
+* [AudioSet models](https://github.com/jim-schwoebel/audioset_models) - 📊 Easily apply 527 machine learning models trained on AudioSet.

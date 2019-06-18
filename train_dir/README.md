@@ -45,7 +45,7 @@ Note you can edit the settings.json to change the default featurizer for model t
 
 ## Supported file formats
 
-Here are the supported file formats for the load directory. 
+Here are the supported file formats for the load directory. Note that if you use alternative file types, the training script may error.
 
 | File type | extension | recommended format | 
 | ------------- |-------------| -------------| 

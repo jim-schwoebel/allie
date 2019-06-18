@@ -29,7 +29,7 @@ os.system('pip3 install -e .')
 
 # install keras-compressor
 os.chdir(curdir)
-os.chdir('training/keras-compressor')
+os.chdir(os.getcwd()+'/training/keras-compressor')
 os.system('pip3 install .')
 
 # go back to host directory

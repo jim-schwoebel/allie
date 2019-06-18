@@ -1,7 +1,7 @@
 '''
 Custom setup script for MacOSX.
 '''
-import os, json
+import os, json, sys
 
 def brew_install(modules):
   for i in range(len(modules)):

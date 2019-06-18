@@ -2,7 +2,7 @@
 
 This is a folder for extracting features from audio, text, image, video, or .CSV files. 
 
-## How to use as an individual featurizer
+## How to featurize folders of files 
 
 To featurize an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
 

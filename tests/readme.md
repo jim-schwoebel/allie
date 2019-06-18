@@ -9,6 +9,8 @@ python3 test.py
 
 This would run all necessary tests and make sures everything is running properly.
 
+![](https://media.giphy.com/media/QXE10iw9fd0ofwXjF3/giphy.gif)
+
 ## Specific tests
 
 Here is the list of automated tests that are in this repository:

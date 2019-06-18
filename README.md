@@ -14,7 +14,7 @@ Here are some things that Allie can do:
 
 First, clone the repository:
 ```
-git clone git@github.com:jim-schwoebel/Allie.git
+git clone git@github.com:jim-schwoebel/allie.git
 cd allie 
 ```
 Set up virtual environment (to ensure consistent operating mode across operating systems).

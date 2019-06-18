@@ -8,7 +8,7 @@ Here are some things that this repository can do:
 - make predictions from machine learning models (with all models trained in models directory)
 - prepare machine learning models for deployment (including repositories with readmes)
 
-![](https://media.giphy.com/media/zXmbOaTpbY6mA/giphy.gif)
+![](https://media.giphy.com/media/4TvvNH8xgB2GqkHPjW/giphy.gif)
 
 ## getting started 
 

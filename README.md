@@ -118,7 +118,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber | True | True, False | 
 | default_csv_transcriber | the default video transcriber if transcribe_csv == True | 'raw text' | 'raw text' | 
 | default_training_script | the specified traning script to train machine learning models | 'tpot' | 'scsr', 'tpot', 'hyperopt', 'keras', 'devol' or 'ludwig' | 
-| augment data | specifies whether or not you'd like to augment data during training |  False | True, False | 
+| augment data | specifies whether or not you'd like to augment data during training (not currently implemented) |  False | True, False | 
 | visualize data | specifies whether or not you'd like to see a visualization during model training (not currently implemented) |  False | True, False | 
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| False | True, False | 

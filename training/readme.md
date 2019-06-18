@@ -12,6 +12,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## Settings to finish (before production build)
 Other things (in model.py). 
+* if create_YAML == True, save test cases of each class after model training (test_male.json, test_female.json --> both should predict proper class with feature array).
 * clean up TPOT and other stuff to allow for output of the model name and model directory (for model compression later).
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
 * If augment == True, can augment via augmentation scripts (audio, text, image, and video data).

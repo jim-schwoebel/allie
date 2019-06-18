@@ -9,7 +9,7 @@ adapt this to the future schema presented in this repository.
 HOW TO CALL FROM COMMAND LINE 
 ######################################################
 
-python3 create_yaml.py [sampletype] [simple_model_name] [model_name] [jsonfilename] [model_directory]
+python3 create_yaml.py [sampletype] [simple_model_name] [model_name] [jsonfilename] [class 1] [class 2] ... [class N]
 
 Where:
 
@@ -17,11 +17,11 @@ Where:
 	simple_model name = any string for a common name for model (e.g. gender for male_female_sc_classification.pickle)
 	model_name = male_female_sc_classification.pickle
 	jsonfile_name = male_female_sc_classification.json (JSON file with model information regarding accuracy, etc.)
-	model_directory = /Users/jimschwoebel/desktop/voice_modeling/audio_models/ (can be inferred from sampletype)
+	classes = ['male', 'female']
 
 Example:
 
-	python3 create_yaml.py audio stress stressed_calm_sc_classification.pickle stressed_calm_sc_classification.json /Users/jimschwoebel/desktop/voice_modeling/audio_models/ 
+	python3 create_yaml.py audio stress stressed_calm_sc_classification.pickle stressed_calm_sc_classification.json stressed calm  
 
 This will then create a repository nlx-model-stress that can be used for production purposes. Note that automated tests 
 require testing data, and some of this data can be provided during model training.
@@ -41,7 +41,7 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def create_classifyfile():
+def create_classifyfile(model_name):
 	# this should be the same for every repository if the files are named classify.py
 	g=open('classify.py', 'w')
 	g.write('import os \n')
@@ -52,7 +52,7 @@ def create_classifyfile():
 	g.write('# configure the models\n')
 	g.write('cwd = os.path.dirname(os.path.abspath(__file__)) \n')
 	g.write("data_dir = os.path.abspath(cwd + '/data') \n")
-	g.write("model_data = open(data_dir + '/model.pickle', 'rb') \n")
+	g.write("model_data = open(data_dir + '/%s', 'rb') \n"%(model_name))
 	g.write("model = pickle.load(model_data) \n")
 	g.write("model_data.close()\n\n")
 	g.write('# classify \n')
@@ -84,14 +84,14 @@ def create_dockercompose():
 	g.write("  zookeeper-service:\n")
 	g.write("    image: confluentinc/cp-zookeeper:4.0.0\n")
 	g.write("    ports:\n")
-	g.write("      - "2181:2181"\n")
+	g.write('      - "2181:2181"\n')
 	g.write("    environment:\n")
 	g.write("      ZOOKEEPER_CLIENT_PORT: 2181\n")
 	g.write("      ZOOKEEPER_TICK_TIME: 2000\n")
 	g.write("  kafka-service:\n")
 	g.write("    image: confluentinc/cp-kafka:4.0.0\n")
 	g.write("    ports:\n")
-	g.write("      - "29092:29092"\n")
+	g.write('      - "29092:29092"\n')
 	g.write("    depends_on:\n")
 	g.write("      - zookeeper-service\n")
 	g.write("    environment:\n")
@@ -124,7 +124,7 @@ def create_docker(incoming_topic, outgoing_topic):
 	g.write('CMD ["python", "-u", "/usr/src/app/server.py"]')
 	g.close()
 
-def create_makefile(reponame, incoming_topic, outgoing_topic)
+def create_makefile(reponame, incoming_topic, outgoing_topic):
 	g=open('Makefile','w')
 	g.write('build:\n')
 	g.write("	docker build . -t %s\n"%(reponame))
@@ -198,7 +198,7 @@ def create_processpy(modelname):
 	g.write("    features = np.array(features_data).reshape(1, -1)\n")
 	g.write("    result = classify.classify(features)\n")
 	g.write("    # save to mongo\n")
-	g.write("    print(f'Inserted into mongo with %s: {result}'%(%s))\n"%(modelname))
+	g.write("    print(f'Inserted into mongo with %s: {result}')\n"%(modelname))
 	g.write('    v1Features.find_one_and_update({ "sampleID": sampleID },\n')
 	g.write('                                   { "$set": { "model.%s": result } })\n'%(modelname))
 	g.write('    samples.find_one_and_update({ "sampleId": sampleID },\n')
@@ -208,7 +208,7 @@ def create_processpy(modelname):
 	g.write("    print('Skipping as couldn't find the proper features')\n")
 	g.close()
 
-def create_readme(reponame, modelname, sampletype, giflink, default_features, labels, modelinfo):
+def create_readme(reponame, classes, modelname, sampletype, giflink, default_features, labels, modelinfo):
 	g=open('readme.md', 'w')
 	g.write('#%s \n'%(reponame))
 	g.write('This is a repository for modeling %s (%s files). \n'%(modelname, sampletype))
@@ -216,6 +216,7 @@ def create_readme(reponame, modelname, sampletype, giflink, default_features, la
 	g.write('## Feature array \n')
 	g.write('Feature array: %s (%s features) \n'%(default_features, str(len(labels))))
 	g.write('Feature labels: %s \n'%(labels))
+	g.write('Classes: %s \n'%(str(classes)))
 	g.write('## Model performance \n')
 	g.write('```')
 	g.write(modelinfo)
@@ -287,7 +288,7 @@ def create_server(modelname):
 	g.write("  producer.send(outgoing_topic, msg.value)\n")
 	g.close()
 
-def create_test(class_1, class_2):
+def create_test(classes):
 	g=open('test.py', 'w')
 	g.write('import os\n')
 	g.write('import unittest\n')
@@ -297,16 +298,12 @@ def create_test(class_1, class_2):
 	g.write('cwd = os.path.dirname(os.path.abspath(__file__))\n')
 	g.write("test_dir = os.path.abspath(cwd + '/test')\n\n")
 	g.write("class ClassifyTest(unittest.TestCase):\n")
-	g.write("  def test_%s_classification(self):\n"%(class_1))
-	g.write("    features_data = open(test_dir + '/%s_features.json', 'r').read()\n"%(class_1))
-	g.write("    features = np.array(json.loads(features_data)).reshape(1, -1)\n")
-	g.write("    results = classify.classify(features)\n")
-	g.write("    self.assertEqual(results, 0)\n\n")
-	g.write("  def test_%s_classification(self):\n"%(class_2))
-	g.write("    features_data = open(test_dir + '/%s_features.json', 'r').read()\n"%(class_2))
-	g.write("    features = np.array(json.loads(features_data)).reshape(1, -1)\n")
-	g.write("    results = classify.classify(features)\n")
-	g.write("    self.assertEqual(results, 1)\n\n")
+	for i in range(len(classes)):
+		g.write("  def test_%s_classification(self):\n"%(classes[i]))
+		g.write("    features_data = open(test_dir + '/%s_features.json', 'r').read()\n"%(classes[i]))
+		g.write("    features = np.array(json.loads(features_data)).reshape(1, -1)\n")
+		g.write("    results = classify.classify(features)\n")
+		g.write("    self.assertEqual(results, %s)\n\n"%(str(i)))
 	g.write("if __name__ == '__main__':\n")
 	g.write("  unittest.main()\n")
 
@@ -322,14 +319,14 @@ def create_init2():
 	g.write('from .. import pyAudioLex')
 	g.close()
 
-def featurize_training(class_1, class_2):
+def featurize_training(classes):
 	g=open('featurize_training_data.py','w')
 	g.write('import os\n')
 	g.write('import json\n')
 	g.write('from .pyAudioLex import process_audio\n')
 	g.write('cwd = os.path.dirname(os.path.abspath(__file__))\n')
-	g.write("%s_training_folder = os.path.join(cwd, '..', 'data/training/%s \n')"%(class_1, class_1))
-	g.write("%s_training_folder = os.path.join(cwd, '..', 'data/training/%s \n')"%(class_1, class_2))
+	for i in range(len(classes)):
+		g.write("%s_training_folder = os.path.join(cwd, '..', 'data/training/%s \n')"%(classes[i], classes[i]))
 	g.write('# process file\n')
 	g.write('def process_file(filepath):\n')
 	g.write("  print('Processing... ' + filepath)\n")
@@ -343,24 +340,24 @@ def featurize_training(class_1, class_2):
 	g.write("    filepath = folder + '/' + file\n")
 	g.write("    process_file(filepath)\n")
 	g.write("    break\n")
-	g.write("process_file(os.path.join(%s_training_folder, '%s.wav')) \n"%(class_1, class_1))
+	g.write("process_file(os.path.join(%s_training_folder, '%s.wav')) \n"%(classes[0], classes[0]))
 	g.close()
 
-def populate_mongo(class_1, class_2):
+def populate_mongo(classes):
 	g=open('populate_mongo.py','w')
 	g.write('import os\n')
 	g.write('from pymongo import MongoClient\n')
 	g.write('import featurize_training_data\n\n')
 	g.write('cwd = os.path.dirname(os.path.abspath(__file__))\n')
-	g.write("%s_training_folder = os.path.join(cwd, '..', 'data/training/%s')\n"%(class_1, class_1))
-	g.write("%s_training_folder = os.path.join(cwd, '..', 'data/training/%s')\n\n"%(class_2, class_2))
+	for i in range(len(classes)):
+		g.write("%s_training_folder = os.path.join(cwd, '..', 'data/training/%s')\n"%(classes[i], classes[i]))
 	g.write("# configure mongo\n")
 	g.write("MONGO_URL = os.environ.get('MONGO_URL', 'mongodb://mongo-service:27017')\n")
 	g.write("MONGO_DB = os.environ.get('MONGO_DB', 'nlx-data')\n")
 	g.write("client = MongoClient(MONGO_URL)\n")
 	g.write("db = client[MONGO_DB]\n")
 	g.write("v1Features = db.v1Features\n")
-	g.write("results = featurize_training_data.process_file(os.path.join(%s_training_folder, '%s.wav'))\n"%(class_1, class_1))
+	g.write("results = featurize_training_data.process_file(os.path.join(%s_training_folder, '%s.wav'))\n"%(classes[0], classes[0]))
 	g.write("print(results)")
 	g.close()
 
@@ -375,26 +372,24 @@ def populate_mongo(class_1, class_2):
 # model_name = 'stressed_calm_sc_classification.pickle'
 # jsonfile_name = 'stressed_calm_sc_classification.pickle'
 # model_dir = /Users/jimschwoebel/desktop/voice_modeling/audio_models/
+# classes = ['stressed', 'calm']
 
 sampletype = sys.argv[1]
 common_model_name= sys.argv[2]
-repo_name = 'nlx-model-'+model_name 
+repo_name = 'nlx-model-'+common_model_name 
 model_name = sys.argv[3]
 jsonfile_name = sys.argv[4]
-default_features = 'standard features'
-# load labels from helper file
-labels=
+count=5
+classes=list()
+while True:
+	try:
+		classes.append(sys.argv[count])
+	except:
+		break
+	count=count+1
 
-# get model directory if provided; if not, infer from sample type.
-try:
-	model_dir = sys.argv[5]
-
-	if model_dir[-1]=='/':
-		pass
-	else:
-		model_dir=model_dir+'/'
-except:
-	model_dir=prev_dir(cur_dir)+'/models/%s_models'%(sampletype)
+cur_dir=os.getcwd()
+model_dir=prev_dir(cur_dir)+'/models/%s_models/'%(sampletype)
 
 # initialize classes and variables 
 temp=model_name.split('_')
@@ -403,14 +398,19 @@ incoming_topic='REQUESTED_MODEL_%s'%(common_model_name.upper())
 outgoing_topic='CREATED_MODEL_%s'%(common_model_name.upper())
 giflink='https://media.giphy.com/media/l3V0x6kdXUW9M4ONq/giphy.gif'
 
-# initialize directory variables 
-cur_dir=os.getcwd()
+###############################################################
+## 			   CREATE FOLDERS / MAKE REPO		  			 ## 
+###############################################################
 
 # make the repo name in production folder
-os.mkdir(repo_name)
-os.chdir(repo_name)
+try:
+	os.mkdir(repo_name)
+	os.chdir(repo_name)
+except:
+	shutil.rmtree(repo_name)
+	os.mkdir(repo_name)
+	os.chdir(repo_name)
 
-# create folders 
 os.mkdir('data')
 # now copy pickle file and .JSON file into directory 
 shutil.copy(model_dir+model_name, os.getcwd()+'/data/'+model_name)
@@ -418,23 +418,82 @@ shutil.copy(model_dir+jsonfile_name, os.getcwd()+'/data/'+jsonfile_name)
 modelinfo=str(json.load(open(os.getcwd()+'/data/'+jsonfile_name)))
 
 os.mkdir('test')
-# 2 test cases 
-shutil.copy(model_dir+class_1+'_test.json', os.getcwd()+'/test/'+class_1+'_test.json')
-shutil.copy(model_dir+class_2+'_test.json', os.getcwd()+'/test/'+class_2+'_test.json')
-shutil.copy(cur_dir+'/helpers/mongo_row.json', os.getcwd()+'/test/mongo_row.json')
-
+os.chdir('test')
+# transfer test cases 
+for i in range(len(classes)):
+	shutil.copy(model_dir+classes[i]+'_features.json', os.getcwd()+'/'+classes[i]+'_features.json')
+shutil.copy(cur_dir+'/helpers/mongo_row.json', os.getcwd()+'/mongo_row.json')
+create_init2()
+featurize_training(classes)
+populate_mongo(classes)
+default_features = 'standard features'
+standard_labels=['mfcc_1_mean_20ms','mfcc_1_std_20ms', 'mfcc_1_min_20ms', 'mfcc_1_max_20ms',
+		        'mfcc_2_mean_20ms','mfcc_2_std_20ms', 'mfcc_2_min_20ms', 'mfcc_2_max_20ms',
+		        'mfcc_3_mean_20ms','mfcc_3_std_20ms', 'mfcc_3_min_20ms', 'mfcc_3_max_20ms',
+		        'mfcc_4_mean_20ms','mfcc_4_std_20ms', 'mfcc_4_min_20ms', 'mfcc_4_max_20ms',
+		        'mfcc_5_mean_20ms','mfcc_5_std_20ms', 'mfcc_5_min_20ms', 'mfcc_5_max_20ms',
+		        'mfcc_6_mean_20ms','mfcc_6_std_20ms', 'mfcc_6_min_20ms', 'mfcc_6_max_20ms',
+		        'mfcc_7_mean_20ms','mfcc_7_std_20ms', 'mfcc_7_min_20ms', 'mfcc_7_max_20ms',
+		        'mfcc_8_mean_20ms','mfcc_8_std_20ms', 'mfcc_8_min_20ms', 'mfcc_8_max_20ms',
+		        'mfcc_9_mean_20ms','mfcc_9_std_20ms', 'mfcc_9_min_20ms', 'mfcc_9_max_20ms',
+		        'mfcc_10_mean_20ms','mfcc_10_std_20ms', 'mfcc_10_min_20ms', 'mfcc_10_max_20ms',
+		        'mfcc_11_mean_20ms','mfcc_11_std_20ms', 'mfcc_11_min_20ms', 'mfcc_11_max_20ms',
+		        'mfcc_12_mean_20ms','mfcc_12_std_20ms', 'mfcc_12_min_20ms', 'mfcc_12_max_20ms',
+		        'mfcc_13_mean_20ms','mfcc_13_std_20ms', 'mfcc_13_min_20ms', 'mfcc_13_max_20ms',
+		        'mfcc_1_delta_mean_20ms','mfcc_1_delta_std_20ms', 'mfcc_1_delta_min_20ms', 'mfcc_1_delta_max_20ms',
+		        'mfcc_2_delta_mean_20ms','mfcc_2_delta_std_20ms', 'mfcc_2_delta_min_20ms', 'mfcc_2_delta_max_20ms',
+		        'mfcc_3_delta_mean_20ms','mfcc_3_delta_std_20ms', 'mfcc_3_delta_min_20ms', 'mfcc_3_delta_max_20ms',
+		        'mfcc_4_delta_mean_20ms','mfcc_4_delta_std_20ms', 'mfcc_4_delta_min_20ms', 'mfcc_4_delta_max_20ms',
+		        'mfcc_5_delta_mean_20ms','mfcc_5_delta_std_20ms', 'mfcc_5_delta_min_20ms', 'mfcc_5_delta_max_20ms',
+		        'mfcc_6_delta_mean_20ms','mfcc_6_delta_std_20ms', 'mfcc_6_delta_min_20ms', 'mfcc_6_delta_max_20ms',
+		        'mfcc_7_delta_mean_20ms','mfcc_7_delta_std_20ms', 'mfcc_7_delta_min_20ms', 'mfcc_7_delta_max_20ms',
+		        'mfcc_8_delta_mean_20ms','mfcc_8_delta_std_20ms', 'mfcc_8_delta_min_20ms', 'mfcc_8_delta_max_20ms',
+		        'mfcc_9_delta_mean_20ms','mfcc_9_delta_std_20ms', 'mfcc_9_delta_min_20ms', 'mfcc_9_delta_max_20ms',
+		        'mfcc_10_delta_mean_20ms','mfcc_10_delta_std_20ms', 'mfcc_10_delta_min_20ms', 'mfcc_10_delta_max_20ms',
+		        'mfcc_11_delta_mean_20ms','mfcc_11_delta_std_20ms', 'mfcc_11_delta_min_20ms', 'mfcc_11_delta_max_20ms',
+		        'mfcc_12_delta_mean_20ms','mfcc_12_delta_std_20ms', 'mfcc_12_delta_min_20ms', 'mfcc_12_delta_max_20ms',
+		        'mfcc_13_delta_mean_20ms','mfcc_13_delta_std_20ms', 'mfcc_13_delta_min_20ms', 'mfcc_13_delta_max_20ms',
+		        'mfcc_1_mean_500ms','mfcc_1_std_500ms', 'mfcc_1_min_500ms', 'mfcc_1_max_500ms',
+		        'mfcc_2_mean_500ms','mfcc_2_std_500ms', 'mfcc_2_min_500ms', 'mfcc_2_max_500ms',
+		        'mfcc_3_mean_500ms','mfcc_3_std_500ms', 'mfcc_3_min_500ms', 'mfcc_3_max_500ms',
+		        'mfcc_4_mean_500ms','mfcc_4_std_500ms', 'mfcc_4_min_500ms', 'mfcc_4_max_500ms',
+		        'mfcc_5_mean_500ms','mfcc_5_std_500ms', 'mfcc_5_min_500ms', 'mfcc_5_max_500ms',
+		        'mfcc_6_mean_500ms','mfcc_6_std_500ms', 'mfcc_6_min_500ms', 'mfcc_6_max_500ms',
+		        'mfcc_7_mean_500ms','mfcc_7_std_500ms', 'mfcc_7_min_500ms', 'mfcc_7_max_500ms',
+		        'mfcc_8_mean_500ms','mfcc_8_std_500ms', 'mfcc_8_min_500ms', 'mfcc_8_max_500ms',
+		        'mfcc_9_mean_500ms','mfcc_9_std_500ms', 'mfcc_9_min_500ms', 'mfcc_9_max_500ms',
+		        'mfcc_10_mean_500ms','mfcc_10_std_500ms', 'mfcc_10_min_500ms', 'mfcc_10_max_500ms',
+		        'mfcc_11_mean_500ms','mfcc_11_std_500ms', 'mfcc_11_min_500ms', 'mfcc_11_max_500ms',
+		        'mfcc_12_mean_500ms','mfcc_12_std_500ms', 'mfcc_12_min_500ms', 'mfcc_12_max_500ms',
+		        'mfcc_13_mean_500ms','mfcc_13_std_500ms', 'mfcc_13_min_500ms', 'mfcc_13_max_500ms',
+		        'mfcc_1_delta_mean_500ms','mfcc_1_delta_std_500ms', 'mfcc_1_delta_min_500ms', 'mfcc_1_delta_max_500ms',
+		        'mfcc_2_delta_mean_500ms','mfcc_2_delta_std_500ms', 'mfcc_2_delta_min_500ms', 'mfcc_2_delta_max_500ms',
+		        'mfcc_3_delta_mean_500ms','mfcc_3_delta_std_500ms', 'mfcc_3_delta_min_500ms', 'mfcc_3_delta_max_500ms',
+		        'mfcc_4_delta_mean_500ms','mfcc_4_delta_std_500ms', 'mfcc_4_delta_min_500ms', 'mfcc_4_delta_max_500ms',
+		        'mfcc_5_delta_mean_500ms','mfcc_5_delta_std_500ms', 'mfcc_5_delta_min_500ms', 'mfcc_5_delta_max_500ms',
+		        'mfcc_6_delta_mean_500ms','mfcc_6_delta_std_500ms', 'mfcc_6_delta_min_500ms', 'mfcc_6_delta_max_500ms',
+		        'mfcc_7_delta_mean_500ms','mfcc_7_delta_std_500ms', 'mfcc_7_delta_min_500ms', 'mfcc_7_delta_max_500ms',
+		        'mfcc_8_delta_mean_500ms','mfcc_8_delta_std_500ms', 'mfcc_8_delta_min_500ms', 'mfcc_8_delta_max_500ms',
+		        'mfcc_9_delta_mean_500ms','mfcc_9_delta_std_500ms', 'mfcc_9_delta_min_500ms', 'mfcc_9_delta_max_500ms',
+		        'mfcc_10_delta_mean_500ms','mfcc_10_delta_std_500ms', 'mfcc_10_delta_min_500ms', 'mfcc_10_delta_max_500ms',
+		        'mfcc_11_delta_mean_500ms','mfcc_11_delta_std_500ms', 'mfcc_11_delta_min_500ms', 'mfcc_11_delta_max_500ms',
+		        'mfcc_12_delta_mean_500ms','mfcc_12_delta_std_500ms', 'mfcc_12_delta_min_500ms', 'mfcc_12_delta_max_500ms',
+		        'mfcc_13_delta_mean_500ms','mfcc_13_delta_std_500ms', 'mfcc_13_delta_min_500ms', 'mfcc_13_delta_max_500ms']
+		        
 ###############################################################
 ## 					MAKE RELEVANT FILES. 		  			 ## 
 ###############################################################
-create_classifyfile()
-create_YAML(reponame)
+os.chdir(cur_dir)
+os.chdir(repo_name)
+create_classifyfile(model_name)
+create_YAML(repo_name)
 create_dockercompose()
 create_docker(incoming_topic, outgoing_topic)
-create_makefile(reponame, incoming_topic, outgoing_topic)
+create_makefile(repo_name, incoming_topic, outgoing_topic)
 create_processpy(common_model_name)
-create_readme(reponame, common_model_name, sampletype, giflink, default_features, labels, modelinfo)
+create_readme(repo_name, classes, common_model_name, sampletype, giflink, default_features, standard_labels, modelinfo)
 create_requirements()
 create_server(common_model_name)
-create_test(class_1, class_2)
+create_test(classes)
 create_init1()
 

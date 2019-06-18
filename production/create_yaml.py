@@ -1,28 +1,20 @@
 '''
 From the command line, generate relevant repository for a trained machine 
 learning model.
-
 This assumes a standard feature array (for now), but it is expected we can 
 adapt this to the future schema presented in this repository.
-
 ######################################################
            HOW TO CALL FROM COMMAND LINE 
 ######################################################
-
 python3 create_yaml.py [sampletype] [simple_model_name] [model_name] [jsonfilename] [class 1] [class 2] ... [class N]
-
 Where:
-
 	sampletype = 'audio' | 'video' | 'text' | 'image' | 'csv'
 	simple_model name = any string for a common name for model (e.g. gender for male_female_sc_classification.pickle)
 	model_name = male_female_sc_classification.pickle
 	jsonfile_name = male_female_sc_classification.json (JSON file with model information regarding accuracy, etc.)
 	classes = ['male', 'female']
-
 Example:
-
 	python3 create_yaml.py audio stress stressed_calm_sc_classification.pickle stressed_calm_sc_classification.json stressed calm  
-
 This will then create a repository nlx-model-stress that can be used for production purposes. Note that automated tests 
 require testing data, and some of this data can be provided during model training.
  '''
@@ -211,16 +203,19 @@ def create_processpy(modelname):
 def create_readme(reponame, classes, modelname, sampletype, giflink, default_features, labels, modelinfo):
 	g=open('readme.md', 'w')
 	g.write('# %s \n'%(reponame))
-	g.write('This is a repository for modeling %s (%s files). \n'%(modelname, sampletype))
-	g.write('![](%s)\n'%(giflink))
-	g.write('## Feature array \n')
-	g.write('- Feature array: %s (%s features) \n'%(default_features, str(len(labels))))
-	g.write('- Feature labels: %s \n'%(labels))
-	g.write('Classes: %s \n'%(str(classes)))
+	g.write('This is a repository for modeling %s (%s files). \n\n'%(modelname, sampletype))
+	g.write('![](%s)\n\n'%(giflink))
+	g.write('This documentation is automatically generated with the create_yaml.py script. :-) \n')
 	g.write('## Model performance \n')
 	g.write('```')
 	g.write(modelinfo)
-	g.write('```')
+	g.write('```\n')
+	g.write('## Class Predictions \n')
+	g.write('```Classes: %s```\n'%(str(classes)))
+	g.write('## Feature array \n')
+	g.write('```Feature array: %s (%s features)``` \n'%(default_features, str(len(labels))))
+	g.write('## Feature labels \n') 
+	g.write('```Feature labels: %s ``` \n'%(labels))
 	g.close()
 
 def create_requirements():
@@ -496,4 +491,3 @@ create_requirements()
 create_server(common_model_name)
 create_test(classes)
 create_init1()
-

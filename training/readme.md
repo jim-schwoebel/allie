@@ -2,7 +2,7 @@
 
 Quickly train according to the default_training_script using model.py.
 
-![](https://media.giphy.com/media/SShb3lgpxf82BfwMw8/giphy.gif)
+![](https://github.com/jim-schwoebel/Allie/blob/master/training/helpers/train.gif)
 
 ## Default_training scrips 
 

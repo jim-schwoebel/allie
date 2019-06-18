@@ -7,7 +7,8 @@ def brew_install(modules):
   for i in range(len(modules)):
     os.system('brew install %s'%(modules[i]))
     
-brew_modules=['sox']
+# assumes Mac OSX for SoX and FFmpeg installations
+brew_modules=['sox, ffmpeg']
 brew_install(brew_modules)
 
 # uninstall openCV to guarantee the right version...

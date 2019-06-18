@@ -422,7 +422,7 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 		for j in range(len(listdir)):
 			if listdir[j][-5:]=='.json':
 				try:
-					g=json.load(open(listdir[i]))
+					g=json.load(open(listdir[j]))
 					models=g['models'][problemtype][classes[i]]
 					print(models)
 					features=g['features'][problemtype][default_features]['features']

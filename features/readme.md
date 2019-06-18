@@ -7,7 +7,8 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 To featurize an entire folder of a certain file type, you can run:
 
 ```
-cd features/audio_features
+cd ~ 
+cd allie/features/audio_features
 python3 featurize.py [folderpath]
 ```
 

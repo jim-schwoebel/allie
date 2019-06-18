@@ -7,7 +7,7 @@ def brew_install(modules):
   for i in range(len(modules)):
     os.system('brew install %s'%(modules[i]))
 
-# possible systems
+# possible operating systems
 # | Linux (2.x and 3.x) | linux2 (*) |
 # | Windows             | win32      |
 # | Windows/Cygwin      | cygwin     |

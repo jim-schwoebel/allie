@@ -52,7 +52,7 @@ Note the test above takes roughly 5-10 minutes to complete and makes sure that y
 .. --> training 
 ```
 
-## types of data
+## types of data / standard feature array 
 
 Load folders and data script type based on principal type of file.
 

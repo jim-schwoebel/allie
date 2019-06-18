@@ -16,9 +16,11 @@ python3 featurize.py [folderpath]
 Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. 
 
 | Data type | Supported formats | Call to featurizer a folder | 
+| --------- |  --------- |  --------- | 
 | audio files | .MP3 / .WAV | 
 ```
-cd features/audio_features
+cd ~ 
+cd allie/features/audio_features
 python3 featurize.py [folderpath]
 ```
 |

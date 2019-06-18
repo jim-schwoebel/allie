@@ -1,6 +1,6 @@
 ## Featurization scripts
 
-This is a folder for extracting features from audio, text, image, video, or .CSV files. 
+This is a folder for extracting features from audio, text, image, video, or .CSV files. This is done via a convention for featurizers, which are in the proper folders (e.g. audio files --> audio_features). In this way, we can appropriately create featurizers for various sample data types. 
 
 ## How to featurize folders of files 
 

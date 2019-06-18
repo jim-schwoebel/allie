@@ -37,11 +37,10 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * CSV file training example
 
 ## Additional documentation
-* [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor) - should be good for Keras.
+* [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor)
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)
-* [Model compression](https://www.slideshare.net/AnassBensrhirDatasci/deploying-machine-learning-models-to-production) - overview of what is important for ML models in production.
-* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration) - good papers
-* [PocketFlow]() - everything else (Tencent's data science team).
-* [Scikit-small-compression](https://github.com/stewartpark/scikit-small-ensemble) - should be good for TPOT I believe.
+* [Model compression](https://www.slideshare.net/AnassBensrhirDatasci/deploying-machine-learning-models-to-production)
+* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration)
+* [Scikit-small-compression](https://github.com/stewartpark/scikit-small-ensemble)
 * [TPOT](https://epistasislab.github.io/tpot/)
 * [Voicebook modeling chapter](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_4_modeling)

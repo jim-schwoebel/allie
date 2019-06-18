@@ -1,20 +1,12 @@
 # voice_modeling
-Master repository for modeling voice files. Transformed from NLX-model.
 
-1. Get dataset (assess bias). &#x2611;
-2. Featurize and clean dataset (if True, clean according to data type). &#x2611;
-3. feature selection (https://machinelearningmastery.com/feature-selection-machine-learning-python/). &#x2611;
-4. modeling - SC, TPOT, Keras, Ludwig. &#x2611;
-5. visualize models (Yellowbrick) - feature selection / etc. [only Ludwig] &#x2611;
-6. compress models for production. &#x2611;
-7. make predictions from all models (either compressed or not compressed). &#x2611;
-8. automated testing. &#x2611;
-9. server deployment (model compression, etc.). 
-10. improved documentation w/ videos and whatnot. &#x2611;
+This is a repository for modeling audio, text, image, video, or .CSV files. This is an upgrade from the prior archived NLX-model repository.
 
-^^ make a quick visual above with a gif to show what this repo can do. 
-
-^^ show some command line examples of what you can do with training [text, image, image, video, csv].
+Here are some things that this repository can do:
+- featurize fles (via audio, text, image, video, or csv featurizers) 
+- train machine learning models (via tpot, hyperopt, scsr, devol, keras training scripts)
+- make predictions from machine learning models (with all models trained in models directory) 
+- prepare machine learning models for deployment (including repositories with readmes).
 
 ## getting started 
 

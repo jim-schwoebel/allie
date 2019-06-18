@@ -11,16 +11,17 @@ cd features/audio_features
 python3 featurize.py [folderpath]
 ```
 
-^^ The code above will featurize all the audio files in the folderpath via the default_featurizer specified in the settings.json file. 
+The code above will featurize all the audio files in the folderpath via the default_featurizer specified in the settings.json file. 
 
-Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. 
+Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.
 
 | Data type | Supported formats | Call to featurizer a folder | 
 | --------- |  --------- |  --------- | 
-| audio files | .MP3 / .WAV | ```cd ~ 
-cd allie/features/audio_features/
-python3 featurize.py [folderpath]``` | 
-
+| audio files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | 
+| text files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | 
+| image files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | 
+| video files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | 
+| csv files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | 
 
 ## Standard feature dictionary (.JSON)
 

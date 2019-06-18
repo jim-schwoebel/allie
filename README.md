@@ -8,7 +8,7 @@ Here are some things that Allie can do:
 - make predictions from machine learning models (with all models trained in models directory)
 - prepare machine learning models for deployment (including repositories with readmes)
 
-![](https://media.giphy.com/media/4TvvNH8xgB2GqkHPjW/giphy.gif)
+![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 
 ## getting started 
 

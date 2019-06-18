@@ -66,7 +66,7 @@ Load folders and data script type based on principal type of file.
 
 This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
 
-```
+```python3
 def make_features(sampletype):
 
 	# only add labels when we have actual labels.

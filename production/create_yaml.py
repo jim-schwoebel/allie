@@ -6,7 +6,7 @@ This assumes a standard feature array (for now), but it is expected we can
 adapt this to the future schema presented in this repository.
 
 ######################################################
-HOW TO CALL FROM COMMAND LINE 
+           HOW TO CALL FROM COMMAND LINE 
 ######################################################
 
 python3 create_yaml.py [sampletype] [simple_model_name] [model_name] [jsonfilename] [class 1] [class 2] ... [class N]
@@ -362,7 +362,7 @@ def populate_mongo(classes):
 	g.close()
 
 ###############################################################
-## 					CREATE DIRECTORIES.  		  			 ## 
+## 	             CREATE DIRECTORIES.  		     ## 
 ###############################################################
 
 # sampletype = 'audio' 
@@ -399,7 +399,7 @@ outgoing_topic='CREATED_MODEL_%s'%(common_model_name.upper())
 giflink='https://media.giphy.com/media/l3V0x6kdXUW9M4ONq/giphy.gif'
 
 ###############################################################
-## 			   CREATE FOLDERS / MAKE REPO		  			 ## 
+## 	      CREATE FOLDERS / MAKE REPO		     ## 
 ###############################################################
 
 # make the repo name in production folder
@@ -481,7 +481,7 @@ standard_labels=['mfcc_1_mean_20ms','mfcc_1_std_20ms', 'mfcc_1_min_20ms', 'mfcc_
 		        'mfcc_13_delta_mean_500ms','mfcc_13_delta_std_500ms', 'mfcc_13_delta_min_500ms', 'mfcc_13_delta_max_500ms']
 		        
 ###############################################################
-## 					MAKE RELEVANT FILES. 		  			 ## 
+## 	         MAKE RELEVANT FILES. 		  	     ## 
 ###############################################################
 os.chdir(cur_dir)
 os.chdir(repo_name)

@@ -5,8 +5,9 @@ Use this directory to train machine learning models based on folders of files.
 ## Getting started 
 
 To get started, you just need to make at least 2 folders containing the same type of file (e.g. audio .WAV files).
-
-![]()
+| folder 1 | folder 2 | 
+| ------- | ------- | 
+| ![](https://github.com/jim-schwoebel/allie/blob/master/training/helpers/train_1.png) | ![](https://github.com/jim-schwoebel/allie/blob/master/training/helpers/train_2.png)  | 
 
 Now, you just need to run model.py and continue on to train a machine learning model. Additional instructions can be found [here](https://github.com/jim-schwoebel/allie/tree/master/training).
 

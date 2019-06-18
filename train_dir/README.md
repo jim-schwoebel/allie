@@ -2,6 +2,7 @@
 
 Use this directory to train machine learning models based on folders of files.
 
+## Getting started 
 Files can take form:
 
 | File type | extension | how to train | 

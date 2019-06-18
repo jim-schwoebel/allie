@@ -142,6 +142,6 @@ Any feedback on the book or this repository is greatly appreciated.
 * If you want to talk to me directly, please send me an email @ js@neurolex.co. 
 
 ## Additional resources
-Check out the wiki or documentation below to follow along with each chapter in the book.
-* [Augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
-* [Cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).
+Here are some additional resources in this repository (not covered in the information above): 
+* [Data augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
+* [Data cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).

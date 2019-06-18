@@ -14,8 +14,8 @@ Here are some things that Allie can do:
 
 First, clone the repository:
 ```
-git clone git@github.com:jim-schwoebel/voice_modeling.git
-cd voice_modeling  
+git clone git@github.com:jim-schwoebel/Allie.git
+cd Allie 
 ```
 Set up virtual environment (to ensure consistent operating mode across operating systems).
 ```

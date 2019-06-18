@@ -153,6 +153,7 @@ except:
 	    if data[folders[i]]==problemtype:
 	    	availableclasses.append(folders[i])
 	    	count=count+1
+
 	classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
 	print('these are the available classes: ')
 	print(availableclasses)
@@ -181,6 +182,7 @@ except:
 
 		classes.append(class_)
 
+	common_name=input('what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) \n')
 	mtype=input('is this a classification (c) or regression (r) problem? \n')
 	while mtype not in ['c','r']:
 		print('input not recognized...')
@@ -381,3 +383,74 @@ if model_compress == True:
 	else:
 		# for everything else, we can compress pocketflow models in the future.
 		print('We cannot currently compress %s models. We are working on this!! \n\n The model will remain uncompressed for now'%(default_training_script))
+
+
+############################################################
+## 					CREATE YAML FILES 					  ##
+############################################################
+
+create_YAML=settings['create_YAML']
+
+# note this will only work for pickle files for now. Will upgrade to deep learning
+# models in the future.
+if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn']:
+
+	# clear the load directory 
+	os.chdir(prevdir+'/load_dir/')
+	listdir=os.listdir()
+	for i in range(len(listdir)):
+		os.remove(listdir[i])
+
+	# First need to create some test files for each use case
+	# copy 10 files from each class into the load_dir 
+	for i in range(len(classes)):
+		os.chdir(prevdir+'/train_dir/'+classes[i])
+		listdir=os.listdir()
+		for j in range(10):
+			shutil.copy(os.getcwd()+'/'+listdir[j], prevdir+'/load_dir/'+listdir[j])
+	
+	# now apply machine learning model to these files 
+	os.chdir(prevdir+'/models')
+	os.system('python3 load_models.py')
+
+	# now load up each of these and break loop when tests for each class exist 
+	os.chdir(prevdir+'/load_dir')
+	jsonfiles=list()
+	listdir=os.listdir()
+	for i in range(len(classes)):
+		# iterate through until you find a class that fits in models 
+		for j in range(len(listdir)):
+			if listdir[i][-5:]=='.json':
+				try:
+					g=json.load(open(listdir[i]))
+					models=g['models'][problemtype][classes[i]]
+					features=g['features'][problemtype][default_features]['features']
+					data=features
+					testfile=classes[i]+'_features.json'
+					print(testfile)
+					jsonfile=open(testfile,'w')
+					json.dump(data,jsonfile)
+					jsonfile.close()
+					shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
+					break
+				except:
+					pass 
+
+	# now create the YAML file 
+	os.chdir(prevdir+'/production')
+	cmdclasses=''
+	for i in range(len(classes)):
+		if i != len(classes)-1:
+			cmdclasses=cmdclasses+classes[i]+' '
+		else:
+			cmdclasses=cmdclasses+classes[i]
+
+	if 'common_name' in locals():
+		pass 
+	else:
+		common_name=modelname[0:-7]
+
+	jsonfilename=modelname[0:-7]+'.json'
+	os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
+
+

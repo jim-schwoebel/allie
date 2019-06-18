@@ -43,21 +43,19 @@ metrics: {'MSE': ____
 ```
 
 ## Settings
-* if compress=True, only use compressed model (if available).
+N/A
 
 ## Audio models
-* NLX-model-gender --> Gender detection --> {feature array} --> 98% +/- 0.002. 
-* Age 
-* Stress
+N/A
 
 ## Text models 
-* TBA 
+N/A
 
 ## Image models
-* TBA (age and gender) 
+N/A
 
 ## Video models
-* TBA 
+N/A
 
 ## CSV models 
-* TBA 
+N/A

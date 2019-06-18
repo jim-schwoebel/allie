@@ -37,6 +37,18 @@ is this a classification (c) or regression (r) problem?
 
 After this, the model will be trained and placed in the models/[sampletype_models] directory. For example, if you trained an audio model with TPOT, the model will be placed in the allie/models/audio_models/ directory. 
 
+For automated training, you can alternatively pass through sys.argv[] inputs as follows:
+
+```
+python3 model.py audio 2 c male female
+```
+Where:
+- audio = audio file type 
+- 2 = 2 classes 
+- c = classification (r for regression)
+- male = first class
+- female = second class [via N number of classes]
+
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
 ## Default_training scripts 

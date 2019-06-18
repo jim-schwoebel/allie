@@ -36,7 +36,7 @@ Note the test above takes roughly 5-10 minutes to complete and makes sure that y
 
 ## folder structures
 
-Here is a table with all the folders and what they are intended to be used for. 
+Here is a table that describes the folder structure for this repository. These descriptions could help guide how you can quickly get started with featurizing and modeling data samples. 
 
 | folder name | description of folder |
 | ------- | ------- |

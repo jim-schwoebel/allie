@@ -121,7 +121,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | augment data | specifies whether or not you'd like to augment data during training |  False | True, False | 
 | visualize data | specifies whether or not you'd like to see a visualization during model training |  False | True, False | 
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
-| model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| True | True, False | 
+| model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| False | True, False | 
 
 ## License
 This repository is licensed under a trade secret. Please do not share this code outside the core team.

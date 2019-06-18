@@ -89,10 +89,10 @@ def make_features(sampletype):
 		 'csv': dict()}
 
 	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-		  'models': models,
-		  'labels': []}
+	      'transcripts': transcripts,
+	      'features': features,
+	      'models': models,
+	      'labels': []}
 
 	return data
 ```

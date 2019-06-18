@@ -20,7 +20,8 @@ Note you can extend this to any of the feature types. The table below overviews 
 ```
 cd features/audio_features
 python3 featurize.py [folderpath]
-```|
+```
+|
 
 ## Standard feature dictionary (.JSON)
 

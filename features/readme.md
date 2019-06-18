@@ -6,7 +6,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
 
-```
+```python3 
 def make_features(sampletype):
 
 	# only add labels when we have actual labels.
@@ -14,14 +14,13 @@ def make_features(sampletype):
 		  'text': dict(),
 		  'image':dict(),
 		  'video':dict(),
-		  'csv': dict(),
-		  }
+		  'csv': dict()}
 
 	transcripts={'audio': dict(),
-			 'text': dict(),
-			 'image': dict(),
-			 'video': dict(),
-			 'csv': dict()}
+		     'text': dict(),
+		     'image': dict(),
+		     'video': dict(),
+		      'csv': dict()}
 
 	models={'audio': dict(),
 		 'text': dict(),

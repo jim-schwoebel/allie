@@ -33,30 +33,24 @@ python3 tests/test.py
 ```
 Note the test above takes roughly 5-10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
 
-## folder structure
+## folder structures
 
-```
-.. --> datasets 
-an elaborate list of open source datasets that can be used for curating datasets and augmenting datasets. 
-.. --> features 
-a list of audio, text, image, video, and csv featurization scripts (these can be specified in the settings.json files).  
-.. --> load_dir
-a directory where you can put in audio, text, image, video, or .CSV files and make moel predictions from ./models directory.
-.. --> models
-for loading/storing machine learning models and making model predictions for files put in the load_dir. 
-.. --> production
-a folder for outputting production-ready repositories via the YAML.py script.
-.. --> tests
-for running local tests and making sure everything works as expected. 
-.. --> train_dir 
-a directory where you can put in audio, text, image, video, or .CSV files in folders and train machine learning models from the model.py script in the ./training/ directory. 
-.. --> training 
-for training machine learning models via specified model training scripts.  
-```
+Here is a table with all the folders and what they are intended to be used for. 
+
+| folder name | description of folder |
+| ------- | ------- |
+| datasets | an elaborate list of open source datasets that can be used for curating datasets and augmenting datasets. |
+| features | a list of audio, text, image, video, and csv featurization scripts (these can be specified in the settings.json files). |
+| load_dir | a directory where you can put in audio, text, image, video, or .CSV files and make moel predictions from ./models directory. | 
+| models | for loading/storing machine learning models and making model predictions for files put in the load_dir. | 
+| production | a folder for outputting production-ready repositories via the YAML.py script. | 
+| tests | for running local tests and making sure everything works as expected. | 
+| train_dir | a directory where you can put in audio, text, image, video, or .CSV files in folders and train machine learning models from the model.py script in the ./training/ directory. |
+| training | for training machine learning models via specified model training scripts. |
 
 ## types of data / standard feature array 
 
-Load folders and data script type based on principal type of file.
+Supported types of data. 
 
 | Sample type | Acceptable file formats | Recommended format | 
 | ------- | ------- | ------- |

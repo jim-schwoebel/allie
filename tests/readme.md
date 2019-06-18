@@ -11,7 +11,7 @@ This would run all necessary tests and make sures everything is running properly
 
 ## Specific tests
 
-Here are the list of automated tests that are in this repository:
+Here is the list of automated tests that are in this repository:
 - tests for modules and brew installations (FFmpeg and SoX)
 - training tests for audio, text, image, video, and .CSV files (via test files and model.py script)
 - featurization for audio, text, image, video, and .CSV files via default_featurizers.

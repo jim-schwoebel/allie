@@ -3,15 +3,28 @@
 Use this directory to train machine learning models based on folders of files.
 
 ## Getting started 
-Files can take form:
 
-| File type | extension | how to train | 
+To get started, you just need to make at least 2 folders containing the same type of file (e.g. audio .WAV files) in this directory. 
+
+```
+
+```
+
+Now, you just need to run model.py and continue on to train a machine learning model. Additional instructiosn can be found here.
+
+Note you can edit the settings.json to change the default featurizer for model training. It is important to train using standard arrays if you plan to put models into production environments, as our database only takes in standard_features for audio files. 
+
+## Supported file formats
+
+Here are the supported file formats for the load directory. 
+
+| File type | extension | recommended format | 
 | ------------- |-------------| -------------| 
-| audio file | .WAV, .MP3 | classify multiple folders of .WAV files (e.g. male and female folders) | 
-| text file | .WAV, .TXT | classify multiple folders of .TXT files (e.g. wiki vs. transcription) | 
-| image file | .PNG, .JPG | classify multiple folders of image files (e.g. dog vs. cat) | 
-| video file | .MP4 | classify multiple folders of video files (e.g. walking vs. running) | 
-| CSV file | .CSV | classify multiple .CSV files in 2 separate folders (e.g. accepted vs. not accepted as an application candidate). You can input any of the Ludwig data types. (binary, numerical, category, set, bag, sequence, text, timeseries, image) | 
+| audio file | .WAV, .MP3 | .WAV | 
+| text file | .TXT | .TXT | 
+| image file | .PNG, .JPG | .PNG | 
+| video file | .MP4 | .MP4 | 
+| CSV file | .CSV | .CSV | 
 
 
 

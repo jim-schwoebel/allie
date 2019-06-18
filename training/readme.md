@@ -37,7 +37,7 @@ is this a classification (c) or regression (r) problem?
 
 After this, the model will be trained and placed in the models/[sampletype_models] directory. For example, if you trained an audio model with TPOT, the model will be placed in the allie/models/audio_models/ directory. 
 
-Now you're ready to go to load these models and [make predictions]().
+Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
 ## Default_training scrips 
 

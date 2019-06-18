@@ -5,7 +5,8 @@ This is a repository for modeling stress (audio files).
 
 This documentation is automatically generated with the create_yaml.py script. :-) 
 ## Model performance 
-```{'model': 'stressed_calm_sc_audio', 'modeltype': 'logistic regression', 'accuracy': 0.7888888888888889, 'deviation': 0.09269623828717427}```## Class Predictions```Classes: ['stressed', 'calm'] 
+```{'model': 'stressed_calm_sc_audio', 'modeltype': 'logistic regression', 'accuracy': 0.7888888888888889, 'deviation': 0.09269623828717427}```
+## Class Predictions```Classes: ['stressed', 'calm'] 
 ```## Feature array 
 ```Feature array: standard features (208 features)``` 
 ## Feature labels 

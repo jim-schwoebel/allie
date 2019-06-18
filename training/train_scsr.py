@@ -1016,4 +1016,4 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
     shutil.move(cur_dir2+'/'+modelname+'.pickle', os.getcwd()+'/'+modelname+'.pickle')
     shutil.move(cur_dir2+'/'+modelname+'.txt', os.getcwd()+'/'+modelname+'.txt')
 
-    return modelname, os.getcwd()
+    return modelname+'.pickle', os.getcwd()

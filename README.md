@@ -116,9 +116,6 @@ Typical augmentation scheme is to take 50% of the data and augment it and leave 
 
 Create YAML means that the entire repository will be generated to host the model for production. 
 
-Model compression if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.
-
-
 default_audio_features --> can be 'all' or any specific featurizer ('standard_features')
 
 | setting | description | default setting | all options | 
@@ -143,7 +140,7 @@ default_audio_features --> can be 'all' or any specific featurizer ('standard_fe
 | augment data | specifies whether or not you'd like to augment data during training |  False | True, False | 
 | visualize data | specifies whether or not you'd like to see a visualization during model training |  False | True, False | 
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
-| model_compress | specifies whether or not you'd like to compress a model | True | True, False | 
+| model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| True | True, False | 
 
 ## References 
 ### Bias discovery

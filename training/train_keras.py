@@ -105,7 +105,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
     
     data={'sample type': problemtype,
             'feature_set':default_features,
-            'model name':jsonfilename[0:-5]+'.pickle',
+            'model name':jsonfilename[0:-5]+'.h5',
             'accuracy':score[1],
             'model type':'keras_mlp',
             }

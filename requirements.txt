@@ -18,10 +18,14 @@ numba
 numpy
 opencv-python==3.4.2.16
 opencv-contrib-python==3.4.2.16
+peakutils
 pillow
+pocketsphinx
+praat-parselmouth
 protobuf
 pydub
 pymongo
+python_speech_features
 pyscreenshot
 PyYAML
 requests
@@ -29,6 +33,7 @@ resampy
 scikit-learn
 scipy
 simplejson 
+sounddevice
 soundfile
 SpeechRecognition
 tensorflow

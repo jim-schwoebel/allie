@@ -130,27 +130,12 @@ Here are some settings that you can modify in this settings.json file and the va
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| True | True, False | 
 
-## References 
-### Bias discovery
-* apply machine learning models for each types of data (audio, text, images, video, .CSV) to auto detect things like ages, genders, etc. 
+## Navigating the repo
 
-### Datasets
-* [PyDataset](https://github.com/iamaziz/PyDataset) - numerical datasets
-* [CommonVoice]() - download link to Common Voice - standard dataset 
-* [AudioSet_download]() - download link to AudioSet 
+* [datasets]()
+* [testing]()
+* [modeling]()
+* [featurizing]()
 
-### Visualization
-* [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for features. 
-* [Bokeh]() - for features.
-* [Matplotlib]() - for features. 
 
-### Modeling 
-* TPOT
-* AutoKeras
-* Luwdig  
 
-### Model compression
-* [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor) - should be good for Keras.
-* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration) - good papers
-* [PocketFlow]() - everything else (Tencent's data science team).
-* [Scikit-small-compression](https://github.com/stewartpark/scikit-small-ensemble) - should be good for TPOT I believe.

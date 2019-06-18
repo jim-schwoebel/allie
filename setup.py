@@ -6,17 +6,28 @@ import os, json
 def brew_install(modules):
   for i in range(len(modules)):
     os.system('brew install %s'%(modules[i]))
-    
+
+# possible systems
+# | Linux (2.x and 3.x) | linux2 (*) |
+# | Windows             | win32      |
+# | Windows/Cygwin      | cygwin     |
+# | Windows/MSYS2       | msys       |
+# | Mac OS X            | darwin     |
+# | OS/2                | os2        |
+# | OS/2 EMX            | os2emx     |
+
 # assumes Mac OSX for SoX and FFmpeg installations
-if sys.platform.lower() == 'darwin':
+if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
   brew_modules=['sox, ffmpeg']
   brew_install(brew_modules)
-elif sys.platform.lower() == 'linux':
+elif sys.platform.lower() in ['linux', 'linux2']:
   os.system('sudo apt-get install ffmpeg')
   os.system('sudo apt-get install sox')
-elif sys.platform.lower() == 'windows': 
+elif sys.platform.lower() in ['win32', 'cygwin', 'msys']: 
   print('you have to install FFmpeg from source') 
+  # https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10
   print('you have to install SoX from source') 
+  # https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows
 
 # uninstall openCV to guarantee the right version...
 os.system('pip3 uninstall opencv-python')

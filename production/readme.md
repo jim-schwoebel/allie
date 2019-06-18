@@ -183,7 +183,7 @@ Successfully built 0137f8d69282
 
 ```
 
-## Test failures 
+## Fixing test failures 
 If you have a fail in testing, it's likely due to outputs in the model not being correct. In this case, you may need to manually tune the outputs.
 ```python3
 ======================================================================

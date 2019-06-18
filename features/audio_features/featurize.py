@@ -59,14 +59,17 @@ os.chdir(directory)
 
 def transcribe(file, default_audio_transcriber):
 	# get transcript 
-	if file[-4:]=='.wav':
-		transcript=ts.transcribe_sphinx(file)
-	elif file[-4] == '.mp3':
-		os.system('ffmpeg -i %s %s'%(file, file[0:-4]+'.wav'))
-		transcript=ts.transcribe_sphinx(file)
-		os.remove(file[-4:]+'.wav')
-	else:
-		transcript=file
+	try:
+		if file[-4:]=='.wav':
+			transcript=ts.transcribe_sphinx(file)
+		elif file[-4] == '.mp3':
+			os.system('ffmpeg -i %s %s'%(file, file[0:-4]+'.wav'))
+			transcript=ts.transcribe_sphinx(file)
+			os.remove(file[-4:]+'.wav')
+		else:
+			transcript=file
+	except:
+		transcript=''
 
 	return transcript 
 

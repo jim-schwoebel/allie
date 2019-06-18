@@ -208,7 +208,7 @@ Ran 2 tests in 0.011s
 FAILED (failures=2)
 ```
 
-This can be corrected by changing this code:
+This can be corrected by changing this code (test.py in nlx-model-stress repo):
 ```python3
 import os
 import unittest

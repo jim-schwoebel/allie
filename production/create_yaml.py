@@ -210,12 +210,12 @@ def create_processpy(modelname):
 
 def create_readme(reponame, classes, modelname, sampletype, giflink, default_features, labels, modelinfo):
 	g=open('readme.md', 'w')
-	g.write('#%s \n'%(reponame))
+	g.write('# %s \n'%(reponame))
 	g.write('This is a repository for modeling %s (%s files). \n'%(modelname, sampletype))
 	g.write('![](%s)\n'%(giflink))
 	g.write('## Feature array \n')
-	g.write('Feature array: %s (%s features) \n'%(default_features, str(len(labels))))
-	g.write('Feature labels: %s \n'%(labels))
+	g.write('- Feature array: %s (%s features) \n'%(default_features, str(len(labels))))
+	g.write('- Feature labels: %s \n'%(labels))
 	g.write('Classes: %s \n'%(str(classes)))
 	g.write('## Model performance \n')
 	g.write('```')

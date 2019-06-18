@@ -250,7 +250,12 @@ Standard video datasets, alphabetized.
 * [Audio datasets](https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
 * [Datasets-natural-language-processing](https://machinelearningmastery.com/datasets-natural-language-processing/) 
 * [Google Dataset Search](https://toolbox.google.com/datasetsearch)
+* [CommonVoice]() - download link to Common Voice - standard dataset 
+* [AudioSet_download]() - download link to AudioSet 
 * [Kaggle](https://kaggle.com)
 * [NP Datasets](https://github.com/niderhoff/nlp-datasets)
 * [PyDataset](https://github.com/iamaziz/PyDataset)
 * [Video datasets](https://www.di.ens.fr/~miech/datasetviz/)
+* [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for features. 
+* [Bokeh]() - for features.
+* [Matplotlib]() - for features. 

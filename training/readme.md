@@ -4,6 +4,41 @@ Quickly train according to the default_training_script using model.py.
 
 ![](https://github.com/jim-schwoebel/Allie/blob/master/training/helpers/train.gif)
 
+## Getting started
+
+All you need to do to get started is go to this repository and run model.py:
+
+```
+cd allie/training
+python3 model.py 
+```
+
+You then will be asked a few questions regarding the training process (in terms of data type, number of classes, and the name of the model). Note that --> indicates typed responses. 
+
+```
+what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)
+--> 1
+
+ OK cool, we got you modeling audio files 
+
+how many classes would you like to model? (2 available) 
+--> 2
+these are the available classes: 
+['one', 'two']
+what is class #1 
+--> one
+what is class #2 
+--> two
+what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) 
+--> test
+is this a classification (c) or regression (r) problem? 
+--> c
+```
+
+After this, the model will be trained and placed in the models/[sampletype_models] directory. For example, if you trained an audio model with TPOT, the model will be placed in the allie/models/audio_models/ directory. 
+
+Now you're ready to go to load these models and [make predictions]().
+
 ## Default_training scrips 
 
 There are 6 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.

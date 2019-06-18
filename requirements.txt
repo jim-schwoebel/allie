@@ -6,8 +6,6 @@ enum34
 eyed3 
 gensim
 h5py
-hmmlearn 
-html5lib
 hyperopt 
 joblib
 kafka-python

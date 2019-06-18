@@ -45,7 +45,7 @@ Here is a table with all the folders and what they are intended to be used for.
 | [models](https://github.com/jim-schwoebel/Allie/tree/master/training) | for loading/storing machine learning models and making model predictions for files put in the load_dir. | 
 | [production](https://github.com/jim-schwoebel/Allie/tree/master/production) | a folder for outputting production-ready repositories via the YAML.py script. | 
 | [tests](https://github.com/jim-schwoebel/Allie/tree/master/tests) | for running local tests and making sure everything works as expected. | 
-| train_dir | a directory where you can put in audio, text, image, video, or .CSV files in folders and train machine learning models from the model.py script in the ./training/ directory. |
+| [train_dir](https://github.com/jim-schwoebel/Allie/tree/master/train_dir) | a directory where you can put in audio, text, image, video, or .CSV files in folders and train machine learning models from the model.py script in the ./training/ directory. |
 | [training](https://github.com/jim-schwoebel/Allie/tree/master/models) | for training machine learning models via specified model training scripts. |
 
 ## types of data / standard feature array 

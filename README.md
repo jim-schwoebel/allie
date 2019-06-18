@@ -50,16 +50,6 @@ Here is a table with all the folders and what they are intended to be used for.
 
 ## types of data / standard feature array 
 
-Supported types of data. 
-
-| Sample type | Acceptable file formats | Recommended format | 
-| ------- | ------- | ------- |
-| Audio | .WAV / .MP3 | .WAV |
-| Text | .TXT / .PPT / .DOCX | .TXT |
-| Image | .PNG / .JPG | .PNG |
-| Video | .MP4 / .M4A | .MP4 |
-| CSV | .CSV | .CSV | 
-
 This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
 
 ```python3
@@ -101,6 +91,16 @@ Quick note about the variables and what values they can take.
 - Labels = [{classname1: 'value'}, {classname2: 'value'}, ... {classnameN: 'valueN'}] where values are between [0,1] - regression problems. 
 
 Note that only .CSV files may have audio, text, image, video features all-together (as the .CSV can contain files in a current directory that need to be featurized together). Otherwise, audio files likely will have audio features, text files will have text features, image files will have image features, and video files will have video features. 
+
+Supported types of data. 
+
+| Sample type | Acceptable file formats | Recommended format | 
+| ------- | ------- | ------- |
+| Audio | .WAV / .MP3 | .WAV |
+| Text | .TXT / .PPT / .DOCX | .TXT |
+| Image | .PNG / .JPG | .PNG |
+| Video | .MP4 / .M4A | .MP4 |
+| CSV | .CSV | .CSV | 
 
 ## settings 
 

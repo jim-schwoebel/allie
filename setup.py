@@ -24,12 +24,12 @@ nltk.download('averaged_perceptron_tagger')
 
 # install hyperopt-sklearn
 curdir=os.getcwd()
-os.chdir(os.getcwd()+'/training/helpers/hyperopt-sklearn')
+os.chdir(curdir+'/training/helpers/hyperopt-sklearn')
 os.system('pip3 install -e .')
 
 # install keras-compressor
 os.chdir(curdir)
-os.chdir(os.getcwd()+'/training/keras-compressor')
+os.chdir(curdir+'/training/keras-compressor')
 os.system('pip3 install .')
 
 # go back to host directory

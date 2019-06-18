@@ -132,10 +132,11 @@ Here are some settings that you can modify in this settings.json file and the va
 
 ## Navigating the repo
 
+* [augmentation]()
+* [cleaning]()
 * [datasets]()
-* [testing]()
-* [modeling]()
 * [featurizing]()
-
+* [modeling]()
+* [testing]()
 
 

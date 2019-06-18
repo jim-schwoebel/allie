@@ -29,6 +29,7 @@ python3 setup.py
 ```
 Now do some unit tests to make sure everything works:
 ```
+cd ..
 python3 tests/test.py
 ```
 Note the test above takes roughly 5-10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.

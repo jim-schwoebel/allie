@@ -68,6 +68,15 @@ This aligns well with how we define 'samples' in our pipeline.
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script. 
 
+Transcription can happen for audio, image, or video datasets. For audio a standard speech-to-text model (e.g. pocketsphinx) can be used. For image and video, it is assumed an OCR transcription can happen (videos are sampled at some frequency then transcripts are stitched together). 
+
+Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
+
+Create YAML means that the entire repository will be generated to host the model for production. 
+
+Model compression if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.
+
+
 default_audio_features --> can be 'all' or any specific featurizer ('standard_features')
 
 | setting | description | default setting | all options | 
@@ -88,43 +97,12 @@ default_audio_features --> can be 'all' or any specific featurizer ('standard_fe
 | default_video_transcriber | the default video transcriber if transcribe_video == True | 'tesseract_connected_over_frames' | 'tesseract_connected_over_frames' | 
 | transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber | True | True, False | 
 | default_csv_transcriber | the default video transcriber if transcribe_csv == True | 'raw text' | 'raw text' | 
-| default_training_script | the specified traning script to train machine learning models | keras | many | 
+| default_training_script | the specified traning script to train machine learning models | tpot | scsr, tpot, hyperopt, keras, devol or ludwig | 
 | augment data | specifies whether or not you'd like to augment data during training |  False | True, False | 
 | visualize data | specifies whether or not you'd like to see a visualization during model training |  False | True, False | 
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
 | model_compress | specifies whether or not you'd like to compress a model | True | True, False | 
 
-```
-default_audio_features=audio_features
-default_text_features=text_features
-default_image_features=image_features
-default_video_features=video_features
-bias_discovery=True 
-transcribe_audio=True 
-default_audio_transcriber=pocketsphinx
-transcribe_images=True 
-transcribe_videos=True
-default_training_script=keras
-clean_data=True 
-augment_data=False 
-visualize_data=True 
-create_YAML=True 
-model_compress=True
-```
-
-Bias discovery looks at all the audio files and plots out a bias assessment before modeling. This can help identify areas of the dataset that may need to be augmented before modeling and can work across any type. 
-* solution = class pairing (equal delete)
-* solution = data augmentation (to make one class more represented) / combining with other datasets 
-
-Transcription can happen for audio, image, or video datasets. For audio a standard speech-to-text model (e.g. pocketsphinx) can be used. For image and video, it is assumed an OCR transcription can happen (videos are sampled at some frequency then transcripts are stitched together). 
-
-Default_training script = the type of script used for training. Can be simple, tpot, autokeras, or ludwig.  
-
-Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
-
-Create YAML means that the entire repository will be generated to host the model for production. 
-
-Model compression if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.
 
 ## References 
 ### Bias discovery

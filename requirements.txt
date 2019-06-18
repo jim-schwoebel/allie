@@ -12,6 +12,7 @@ kafka-python
 keras
 librosa
 llvmlite
+ludwig
 matplotlib 
 nltk
 numba
@@ -27,6 +28,7 @@ pydub
 pymongo
 python_speech_features
 pyscreenshot
+pytesseract
 PyYAML
 requests
 resampy
@@ -35,6 +37,7 @@ scipy
 simplejson 
 sounddevice
 soundfile
+spacy
 SpeechRecognition
 tensorflow
 textblob
@@ -42,4 +45,5 @@ tpot
 tqdm
 wave
 webrtcvad
+wget
 xgboost

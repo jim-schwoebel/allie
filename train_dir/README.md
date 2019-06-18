@@ -10,7 +10,7 @@ To get started, you just need to make at least 2 folders containing the same typ
 
 ```
 
-Now, you just need to run model.py and continue on to train a machine learning model. Additional instructiosn can be found [here](https://github.com/jim-schwoebel/allie/tree/master/training).
+Now, you just need to run model.py and continue on to train a machine learning model. Additional instructions can be found [here](https://github.com/jim-schwoebel/allie/tree/master/training).
 
 Note you can edit the settings.json to change the default featurizer for model training. It is important to train using standard arrays if you plan to put models into production environments, as our database only takes in standard_features for audio files. 
 

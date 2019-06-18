@@ -8,8 +8,15 @@ def brew_install(modules):
     os.system('brew install %s'%(modules[i]))
     
 # assumes Mac OSX for SoX and FFmpeg installations
-brew_modules=['sox, ffmpeg']
-brew_install(brew_modules)
+if sys.platform.lower() == 'darwin':
+  brew_modules=['sox, ffmpeg']
+  brew_install(brew_modules)
+elif sys.platform.lower() == 'linux':
+  os.system('sudo apt-get install ffmpeg')
+  os.system('sudo apt-get install sox')
+elif sys.platform.lower() == 'windows': 
+  print('you have to install FFmpeg from source') 
+  print('you have to install SoX from source') 
 
 # uninstall openCV to guarantee the right version...
 os.system('pip3 uninstall opencv-python')

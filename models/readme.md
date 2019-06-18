@@ -13,7 +13,7 @@ README.md	test_csv.csv	test_text.txt
 test_audio.wav	test_image.png	test_video.mp4
 ```
 
-
+Now you can apply all models in the directory according to sample types (audio_models, text_models, image_models, video_models, csv_models) by running the load_models.py command in this directory. 
 ```
 cd ..
 cd models 
@@ -290,8 +290,6 @@ CSV MODELING - CSV_FEATURES
 -----------------------------------
 ['0_csv.json']
 ```
-
-This will then load the directory and apply all models in the directory according to sample types (audio_models, text_models, image_models, video_models, csv_models).
 
 ## Model schema 
 

@@ -15,9 +15,9 @@ You can also augment datasets with any of the augmentation libraries attached to
 
 Some things you can do to clean datasets include:
 
-- file de duplication (use from a prior script) - cleaning/delete_duplicates.py
-- speaker uniqueness / identity uniqueness
-- noise removal / normalization, etc. 
+- [remove file duplicates in a folder](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py)
+- [remove speaking silence](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/remove_silence.py)
+- [deleting multiple speakers](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_multi_speaker.py)
 
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 
@@ -246,16 +246,20 @@ Standard video datasets, alphabetized.
 ## CSV datasets 
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
+## Work in progress
+- [peak normalization]()
+
 ## References
 * [Audio datasets](https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
+* [Bokeh](https://bokeh.pydata.org/en/latest/) 
+* [Common Voice](https://voice.mozilla.org/) 
 * [Datasets-natural-language-processing](https://machinelearningmastery.com/datasets-natural-language-processing/) 
+* [Download AudioSet](https://github.com/jim-schwoebel/download_audioset) 
 * [Google Dataset Search](https://toolbox.google.com/datasetsearch)
-* [CommonVoice]() - download link to Common Voice - standard dataset 
-* [AudioSet_download]() - download link to AudioSet 
 * [Kaggle](https://kaggle.com)
+* [Matplotlib](https://matplotlib.org/) 
 * [NP Datasets](https://github.com/niderhoff/nlp-datasets)
 * [PyDataset](https://github.com/iamaziz/PyDataset)
 * [Video datasets](https://www.di.ens.fr/~miech/datasetviz/)
+* [Voicebook repository](https://github.com/jim-schwoebel/voicebook)
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for features. 
-* [Bokeh]() - for features.
-* [Matplotlib]() - for features. 

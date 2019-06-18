@@ -16,7 +16,7 @@ The code above will featurize all the audio files in the folderpath via the defa
 Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.
 
 | Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
-| --------- |  --------- |  --------- | 
+| --------- |  --------- |  --------- | --------- | 
 | audio files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | ./allie/features/audio_features | 
 | text files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | ./allie/features/text_features | 
 | image files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | ./allie/features/image_features | 

@@ -41,3 +41,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * [Model compression](https://www.slideshare.net/AnassBensrhirDatasci/deploying-machine-learning-models-to-production) - overview of what is important for ML models in production.
 * [TPOT](https://epistasislab.github.io/tpot/)
 * [Voicebook modeling chapter](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_4_modeling)
+* [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor) - should be good for Keras.
+* [Model compression papers](https://github.com/sun254/awesome-model-compression-and-acceleration) - good papers
+* [PocketFlow]() - everything else (Tencent's data science team).
+* [Scikit-small-compression](https://github.com/stewartpark/scikit-small-ensemble) - should be good for TPOT I believe.

@@ -50,7 +50,7 @@ Here is a table with all the folders and what they are intended to be used for.
 
 ## standard feature array 
 
-This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
+After much trial and error, this standard feature array schema seemed the most appropriate for defining data samples (audio, text, image, video, or CSV samples):
 
 ```python3
 def make_features(sampletype):
@@ -82,7 +82,6 @@ def make_features(sampletype):
 
 	return data
 ```
-After much trial and error, this schema seemed the most appropriate for defining data samples. 
 
 There are many advantages for having this schema including:
 - **transcript definition flexibility** - transcripts can be audio, text, image, video, and csv transcripts. The image and video transcripts use OCR to characterize text in the image, whereas audio transcripts are transcipts done by traditional speech-to-text systems (e.g. Pocketsphinx). The schema above allows for a flexible definition for transcripts that can accomodate all forms. 

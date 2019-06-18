@@ -11,3 +11,14 @@ Specifically, just drag and drop sample data in here and predictions will be mad
 3. Run load_classify.py (runs all models in ./models/ directory + makes predictions) 
 4. See predictions for each file in a .JSON format. The feature array will follow the standard feature array vector along with any audio, image, or video transcripts that were made. 
 
+## Supported file formats
+
+Here are the supported file formats for the load directory. 
+
+| File type | extension | recommended format | 
+| ------------- |-------------| -------------| 
+| audio file | .WAV, .MP3 | .WAV | 
+| text file | .TXT | .TXT | 
+| image file | .PNG, .JPG | .PNG | 
+| video file | .MP4 | .MP4 | 
+| CSV file | .CSV | .CSV | 

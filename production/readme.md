@@ -29,3 +29,39 @@ python3 create_yaml.py audio stress stressed_calm_sc_classification.pickle stres
 
 This will then create a repository nlx-model-stress that can be used for production purposes. Note that automated tests 
 require testing data, and some of this data can be provided during model training.
+
+Now you can test the docker container by going to the directory and running docker build . 
+
+```
+cd nlx-model-stress
+docker bulid .
+```
+
+if all is good, the tests should indicate it (like below).
+```
+
+```
+
+If you have a fail, it's likely due to outputs in the model not being correct. In this case, you may need to manually tune the outputs.
+```
+======================================================================
+FAIL: test_calm_classification (__main__.ClassifyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test.py", line 21, in test_calm_classification
+    self.assertEqual(results, 1)
+AssertionError: 'calm' != 1
+
+======================================================================
+FAIL: test_stressed_classification (__main__.ClassifyTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "test.py", line 15, in test_stressed_classification
+    self.assertEqual(results, 0)
+AssertionError: 'stressed' != 0
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.011s
+
+FAILED (failures=2)
+```

@@ -6,7 +6,7 @@ Use this section of the repository to make model predctions in the ./load_dir.
 
 First, you need to put some files in the ./load_dir. I put the test files from the ./test directory into the load_dir here for demostration purposes. This is the output from the terminal (of files in the ./load_dir.
 
-```python3
+```
 Jims-MBP:allie jimschwoebel$ cd load_dir
 Jims-MBP:load_dir jimschwoebel$ ls
 README.md	test_csv.csv	test_text.txt
@@ -14,7 +14,7 @@ test_audio.wav	test_image.png	test_video.mp4
 ```
 
 
-```python3
+```
 cd ..
 cd models 
 python3 load_models.py

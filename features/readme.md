@@ -2,6 +2,26 @@
 
 This is a folder for extracting features from audio, text, image, video, or .CSV files. 
 
+## How to use as an individual featurizer
+
+To featurize an entire folder of a certain file type, you can run:
+
+```
+cd features/audio_features
+python3 featurize.py [folderpath]
+```
+
+^^ The code above will featurize all the audio files in the folderpath via the default_featurizer specified in the settings.json file. 
+
+Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. 
+
+| Data type | Supported formats | Call to featurizer a folder | 
+| audio files | .MP3 / .WAV | 
+```
+cd features/audio_features
+python3 featurize.py [folderpath]
+```|
+
 ## Standard feature dictionary (.JSON)
 
 This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):

@@ -132,11 +132,11 @@ Here are some settings that you can modify in this settings.json file and the va
 
 ## Navigating the repo
 
-* [augmentation]()
-* [cleaning]()
-* [datasets]()
-* [featurizing]()
-* [modeling]()
-* [testing]()
-
+* [augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
+* [cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).
+* [datasets](https://github.com/jim-schwoebel/Allie/tree/master/datasets) - an elaborate list of open source datasets that can be used for curating datasets and augmenting datasets. 
+* [featurizing](https://github.com/jim-schwoebel/Allie/tree/master/features) - a list of audio, text, image, video, and csv featurizers (these can be specified in the settings.json files).  
+* [modeling](https://github.com/jim-schwoebel/Allie/tree/master/training) - for loading machine learning models and making model predictions for files put in the load_dir. 
+* [training](https://github.com/jim-schwoebel/Allie/tree/master/models) - for training machine learning models via specified model training scripts.  
+* [testing](https://github.com/jim-schwoebel/Allie/tree/master/tests) - for running local tests and making sure everything works as expected. 
 

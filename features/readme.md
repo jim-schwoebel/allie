@@ -113,6 +113,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ## Not Implemented / Work in progress
 - Reduce redundnacy; if already in schema, do not re-featurize (to reduce computational overhead again).
+- Pass through featurization type as a command line argument 
 
 ### Audio
 * allow Ludwig model type to dictate featurization - 'audio_ludwig_features'

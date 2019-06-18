@@ -3,7 +3,7 @@
 Use this section of the repository to make model predctions in the ./load_dir.
 
 ## Getting started
-```
+```python3
 cd voice_modeling/models
 python3 load_model.py
 ```

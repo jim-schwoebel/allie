@@ -4,7 +4,7 @@ This is a folder for extracting features from audio, text, image, video, or .CSV
 
 ## Standard feature dictionary (.JSON)
 
-Show outline for this below. This makes it flexible to any featurization and transcript type.
+This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
 
 ```
 def make_features(sampletype):

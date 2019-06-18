@@ -130,6 +130,15 @@ Here are some settings that you can modify in this settings.json file and the va
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| True | True, False | 
 
+## License
+This repository is licensed under a trade secret. Please do not share this code outside the core team.
+
+## Feedback
+Any feedback on the book or this repository is greatly appreciated. 
+* If you find something that is missing or doesn't work, please consider opening a [GitHub issue](https://github.com/jim-schwoebel/Allie/issues).
+* If you'd like to be mentored by someone on our team, check out the [Innovation Fellows Program](http://neurolex.ai/research).
+* If you want to talk to me directly, please send me an email @ js@neurolex.co. 
+
 ## Navigating the repo
 
 * [augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 

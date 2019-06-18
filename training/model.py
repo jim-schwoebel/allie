@@ -416,20 +416,21 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 	# now load up each of these and break loop when tests for each class exist 
 	os.chdir(prevdir+'/load_dir')
 	jsonfiles=list()
+	# iterate through until you find a class that fits in models 
 	listdir=os.listdir()
 	for i in range(len(classes)):
-		# iterate through until you find a class that fits in models 
 		for j in range(len(listdir)):
-			if listdir[i][-5:]=='.json':
+			if listdir[j][-5:]=='.json':
 				try:
 					g=json.load(open(listdir[i]))
 					models=g['models'][problemtype][classes[i]]
+					print(models)
 					features=g['features'][problemtype][default_features]['features']
-					data=features
+					print(features)
 					testfile=classes[i]+'_features.json'
 					print(testfile)
 					jsonfile=open(testfile,'w')
-					json.dump(data,jsonfile)
+					json.dump(features,jsonfile)
 					jsonfile.close()
 					shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
 					break

@@ -262,4 +262,4 @@ Standard video datasets, alphabetized.
 * [PyDataset](https://github.com/iamaziz/PyDataset)
 * [Video datasets](https://www.di.ens.fr/~miech/datasetviz/)
 * [Voicebook repository](https://github.com/jim-schwoebel/voicebook)
-* [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for features. 
+* [Yellowbrick](https://www.scikit-yb.org/en/latest/)

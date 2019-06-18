@@ -68,34 +68,19 @@ class SimplisticTest(unittest.TestCase):
     def test_requirements(self):
         # import all from requirements.txt 
         try:
-            import audioread
-            import decorator
-            import enum 
-            import h5py
-            import html5lib
-            import joblib
-            import keras
-            import librosa
-            import llvmlite
-            import numba
-            import numpy
-            import yaml
-            import resampy
-            import sklearn 
-            import scipy
-            import soundfile 
-            import tensorflow
-            import cv2 
-            import webrtcvad
-            import xgboost
-            import tpot
-            import beautifultable
-            import alphapy
-            import hyperopt 
-            import tqdm
+            import alphapy, audioread, beautifultable, decorator
+            from enum import Enum
+            import eyed3, gensim
+            import h5py, hyperopt, joblib, kafka, keras, librosa, llvmlite, ludwig
+            import matplotlib, nltk, numba, numpy, cv2, moviepy, peakutils, PIL
+            import pocketsphinx, parselmouth, pydub, pymongo, python_speech_features
+            # ignore protobuf
+            import pyscreenshot, pytesseract, yaml, requests, resampy, sklearn 
+            import scipy, skvideo, simplejson, sounddevice, soundfile, spacy, speech_recognition
+            import tensorflow, textblob, tpot, tqdm, wave, webrtcvad, wget, xgboost
             b=True
         except:
-           b=False 
+            b=False 
 
         self.assertEqual(True, b)  
     

@@ -17,7 +17,9 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 | Data type | Supported formats | Call to featurizer a folder | 
 | --------- |  --------- |  --------- | 
-| audio files | .MP3 / .WAV | ```python3 featurize.py [folderpath]``` | 
+| audio files | .MP3 / .WAV | ```cd ~ 
+cd allie/features/audio_features/
+python3 featurize.py [folderpath]``` | 
 
 
 ## Standard feature dictionary (.JSON)

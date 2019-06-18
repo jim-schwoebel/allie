@@ -34,7 +34,7 @@ requests
 resampy
 scikit-learn
 scipy
-skvideo
+scikit-video
 simplejson 
 sounddevice
 soundfile

@@ -141,7 +141,7 @@ Any feedback on the book or this repository is greatly appreciated.
 * If you'd like to be mentored by someone on our team, check out the [Innovation Fellows Program](http://neurolex.ai/research).
 * If you want to talk to me directly, please send me an email @ js@neurolex.co. 
 
-## Navigating the repo
+## Additional resources
 Check out the wiki or documentation below to follow along with each chapter in the book.
 * [Augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
 * [Cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).

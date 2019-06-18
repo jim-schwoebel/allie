@@ -39,9 +39,10 @@ After this, the model will be trained and placed in the models/[sampletype_model
 
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
-## Default_training scrips 
+## Default_training scripts 
 
 There are 6 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
+
 * **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
 * '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;

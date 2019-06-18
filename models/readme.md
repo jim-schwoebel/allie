@@ -333,4 +333,5 @@ N/A - no video models trained yet.
 N/A - no .CSV models trained yet. 
 
 ## References
+* [Age/gender](https://towardsdatascience.com/predict-age-and-gender-using-convolutional-neural-network-and-opencv-fd90390e3ce6) - age and gender detection from images 
 * [AudioSet models](https://github.com/jim-schwoebel/audioset_models) - 📊 Easily apply 527 machine learning models trained on AudioSet.

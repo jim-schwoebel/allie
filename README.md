@@ -133,5 +133,8 @@ Any feedback on the book or this repository is greatly appreciated.
 
 ## Additional resources
 Here are some additional resources in this repository (not covered in the information above): 
+* [Bokeh](https://bokeh.pydata.org/en/latest/) - for data visualizaton. 
 * [Data augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
 * [Data cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).
+* [Matplotlib](https://towardsdatascience.com/data-visualization-using-matplotlib-16f1aae5ce70) - for data visualization.
+* [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for data visualization 

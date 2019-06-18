@@ -724,6 +724,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
     shutil.move(os.getcwd()+'/'+foldername+'.pickle', os.getcwd()+'/'+problemtype+'_models'+'/'+foldername+'.pickle')
     shutil.move(os.getcwd()+'/'+foldername+'.xlsx', os.getcwd()+'/'+problemtype+'_models'+'/'+foldername+'.xlsx')
 
+    return foldername+'.pickle', os.getcwd()+'/'+problemtype+'_models'
 
 def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, min_num):
 
@@ -1015,3 +1016,4 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
     shutil.move(cur_dir2+'/'+modelname+'.pickle', os.getcwd()+'/'+modelname+'.pickle')
     shutil.move(cur_dir2+'/'+modelname+'.txt', os.getcwd()+'/'+modelname+'.txt')
 
+    return modelname, os.getcwd()

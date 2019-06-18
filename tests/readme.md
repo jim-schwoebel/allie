@@ -9,7 +9,7 @@ python3 test.py
 
 This would run all necessary tests and make sures everything is running properly.
 
-![](https://media.giphy.com/media/QXE10iw9fd0ofwXjF3/giphy.gif)
+![](https://github.com/jim-schwoebel/Allie/blob/master/tests/helpers/tests.gif)
 
 ## Specific tests
 

@@ -74,14 +74,13 @@ def make_features(sampletype):
 		  'text': dict(),
 		  'image':dict(),
 		  'video':dict(),
-		  'csv': dict(),
-		  }
+		  'csv': dict()}
 
 	transcripts={'audio': dict(),
-			 'text': dict(),
-			 'image': dict(),
-			 'video': dict(),
-			 'csv': dict()}
+		     'text': dict(),
+		     'image': dict(),
+		     'video': dict(),
+		     'csv': dict()}
 
 	models={'audio': dict(),
 		 'text': dict(),

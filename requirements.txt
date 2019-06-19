@@ -5,6 +5,7 @@ decorator
 enum34
 eyed3 
 dcase_util
+ffmpeg-normalize
 gensim
 h5py
 hyperopt 

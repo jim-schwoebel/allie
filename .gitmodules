@@ -28,3 +28,6 @@
 [submodule "datasets/labeling/labelme"]
 	path = datasets/labeling/labelme
 	url = https://github.com/wkentaro/labelme
+[submodule "datasets/augmentation/audio_augmentation"]
+	path = datasets/augmentation/audio_augmentation
+	url = https://github.com/jim-schwoebel/audio_augmentation

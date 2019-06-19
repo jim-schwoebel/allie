@@ -1,10 +1,12 @@
 ## Production directory
 
-From the command line, generate relevant repository for a trained machine 
-learning model.
+From the command line, generate relevant repository for a trained machine learning model.
 
-This assumes a standard feature array (for now), but it is expected we can 
-adapt this to the future schema presented in this repository.
+Note that this assumes a standard audio feature array (for now), but it is expected we can adapt this to the future schema presented in this repository (to accomodate video, text, image, and csv types - and other audio feature embeddings).
+
+## Settings.json
+
+If you set create_YAML == True, the production folder will automatically generate a production-ready repository from the model.py script. This is the easiest way to spin up new models into production.
 
 ## How to call from command line 
 

@@ -7,6 +7,7 @@ eyed3
 gensim
 h5py
 hyperopt 
+imageio
 joblib
 kafka-python
 keras
@@ -33,10 +34,13 @@ pytesseract
 PyYAML
 requests
 resampy
+Shapely
+scikit-image
 scikit-learn
 scipy
 scikit-video
 simplejson 
+six
 sounddevice
 soundfile
 spacy

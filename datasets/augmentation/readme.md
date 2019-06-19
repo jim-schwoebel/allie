@@ -8,6 +8,15 @@ Typical augmentation scheme is to take 50% of the data and augment it and leave 
 
 You can read more about data augmentation [here](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c).
 
+## Types of augmentation
+
+There are two main types of data augmentation:
+
+* adding data to data (e.g. YouTube videos to iPhone videos) 
+* generating new data (through manipulations) 
+
+The vast majority of approaches focus on generating new data because it's often more convenient and useful for modeling purposes. It's much harder to make two datasets look like each other, as there exists variation in the datasets themselves which may confuse machine learning models (or lead to overfitting to one dataset over another). 
+
 ## Augmentation scripts 
 
 ```

@@ -70,7 +70,7 @@ class SimplisticTest(unittest.TestCase):
         try:
             import alphapy, audioread, beautifultable, decorator
             from enum import Enum
-            import eyed3, gensim
+            import eyed3, ffmpeg_normalize, gensim
             import h5py, hyperopt, joblib, kafka, keras, librosa, llvmlite, ludwig
             import matplotlib, nltk, numba, numpy, cv2, moviepy, peakutils, PIL
             import pocketsphinx, parselmouth, pydub, pymongo, python_speech_features

@@ -1,0 +1,1 @@
+{"The Street View House Numbers (SVHN)": {"description": "- 10 classes, 1 for each digit. Digit '1' has label 1, '9' has label 9 and '0' has label 10. 73257 digits for training, 26032 digits for testing, and 531131 additional, somewhat less difficult samples, to use as extra training data.", "link": "SVHN"}}

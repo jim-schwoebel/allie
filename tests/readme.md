@@ -22,4 +22,7 @@ Here is the list of automated tests that are in this repository:
 ## Work-in-progress (to add later)
 
 Here are some tests we are working to add in:
-- ability to spin up YAML files for trained models (if create_YAML==True in settings.json) 
+- test ability to spin up YAML files for trained models (if create_YAML==True in settings.json) 
+- test cleaning abilities 
+- test augmentation capabilities
+

@@ -6,6 +6,7 @@ enum34
 eyed3 
 dcase_util
 ffmpeg-normalize
+fuzzywuzzy
 gensim
 h5py
 hyperopt 

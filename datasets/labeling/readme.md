@@ -12,8 +12,7 @@ Manual labeling involves a human-in-the-loop. A human being manually looks at or
 
 There are many tools for manual annotation. Here are the ones that we have found most useful internally. 
 * [sound_event_detection](https://github.com/jim-schwoebel/sound_event_detection/tree/94da2fe402ef330e0b6dc9ed41b59b0902e67842)
-* image_labeling
-* video_tagging 
+* [labelme](https://github.com/wkentaro/labelme/tree/a98d9b66b032622685c8d59c7712be37eef9d3e5)
 
 ## Automatic labeling
 

@@ -8,5 +8,5 @@ Common data cleaning things include
 - removing file duplicates 
 - removing similar files 
 - class auto balance 
-
+- normalizing volume in the audio files 
 

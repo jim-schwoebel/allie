@@ -13,36 +13,56 @@ python3 download.py
 You will then be prompted through a few screens as to what kinds of data you are seeking to download. 
 
 ```
-what type of data would you like to download? (1-audio, 2-text, 3-image, 4-video, 5-csv)
---> 1 
-------
-Okay, there are 50 audio datasets that are downloadable. 
-------
-Which dataset would you like to download? Options are:
-- 1
-- 2
-- 3
-- 4
-- 5
-- 6
-- 7
-- 8
-- 9
-- 10 
-- 11 
-- 12
-- 13
-- 14
-- 15
-- 16
-- 17 
-- 18 
-...
-------
-Great, I have you downloading the AudioSet dataset. This may take some time (up to 2 days), as it it estimated to be >20GB in size.
+what dataset would you like to download? (1-audio, 2-text, 3-image, 4-video, 5-csv)
+1
+found 35 datasets...
+----------------------------
+here are the available AUDIO datasets
+----------------------------
+TIMIT dataset
+Parkinson's speech dataset
+ISOLET Data Set
+AudioSet
+Multimodal EmotionLines Dataset (MELD)
+Free Spoken Digit Dataset
+Speech Accent Archive
+2000 HUB5 English
+Emotional Voice dataset - Nature
+LJ Speech
+VoxForge
+Million Song Dataset
+Free Music Archive
+Common Voice
+Spoken Commands dataset
+Bird audio detection challenge
+Environmental audio dataset
+Urban Sound Dataset
+Ted-LIUM
+Noisy Dataset
+Librispeech
+Emotional Voices Database
+CMU Wilderness
+Arabic Speech Corpus
+Flickr Audio Caption
+CHIME
+Tatoeba
+Freesound dataset
+Spoken Wikipeida Corpora
+Karoldvl-ESC
+Zero Resource Speech Challenge
+Speech Commands Dataset
+Persian Consonant Vowel Combination (PCVC) Speech Dataset
+VoxCeleb
+
+what audio dataset would you like to download?
+voxceleb
+found dataset: VoxCeleb
+-vector) - VoxCeleb is a large-scale speaker identification dataset. It contains around 100,000 utterances by 1,251 celebrities, extracted from You Tube videos. The data is mostly gender balanced (males comprise of 55%). The celebrities span a diverse range of accents, professions, and age. There is no overlap between the development and test sets. It’s an intriguing use case for isolating and identifying which superstar the voice belongs to.
+just confirming, do you want to download the VoxCeleb dataset? (Y - yes, N - no) 
+Y
 ```
 
-Data will then be downloaded in the ./allie/datasets/downloads/data folder. 
+Right now this just opens up links to the datasets for you to manually download (the .JSON files were assembled from the README. However, in the future data could be downloaded in the ./allie/datasets/downloads/data folder. 
 
 ## References
 

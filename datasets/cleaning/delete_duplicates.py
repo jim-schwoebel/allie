@@ -39,3 +39,5 @@ for i in range(len(listdir)):
         except:
             pass 
  
+print('deleted the files below')
+print(deleted_files)

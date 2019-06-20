@@ -14,7 +14,8 @@ You will then be prompted through a few screens as to what kinds of data you are
 
 ```
 what dataset would you like to download? (1-audio, 2-text, 3-image, 4-video, 5-csv)
-1
+--> 1
+
 found 35 datasets...
 ----------------------------
 here are the available AUDIO datasets
@@ -55,9 +56,8 @@ Persian Consonant Vowel Combination (PCVC) Speech Dataset
 VoxCeleb
 
 what audio dataset would you like to download?
-voxceleb
+--> voxceleb
 found dataset: VoxCeleb
--vector) - VoxCeleb is a large-scale speaker identification dataset. It contains around 100,000 utterances by 1,251 celebrities, extracted from You Tube videos. The data is mostly gender balanced (males comprise of 55%). The celebrities span a diverse range of accents, professions, and age. There is no overlap between the development and test sets. It’s an intriguing use case for isolating and identifying which superstar the voice belongs to.
 just confirming, do you want to download the VoxCeleb dataset? (Y - yes, N - no) 
 Y
 ```

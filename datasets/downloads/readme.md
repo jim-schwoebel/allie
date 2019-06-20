@@ -66,4 +66,4 @@ Right now this just opens up links to the datasets for you to manually download 
 
 ## References
 
-For a complete list of datasets, visit the main datasets page. Note all these and more are included in the download.py script. Some datasets you may need to sign up for research access, so they cannot be directly downloaded within this interface; however, we may have them intenrally within the NeuroLex team. Just ask us :-) 
+For a complete list of datasets, visit the [main datasets page](https://github.com/jim-schwoebel/allie/tree/master/datasets). Note all these and more are included in the download.py script. Some datasets you may need to sign up for research access, so they cannot be directly downloaded within this interface; however, we may have them intenrally within the NeuroLex team. Just ask us :-) 

@@ -8,5 +8,5 @@ Common data cleaning things include
 - class auto balance (this is done by default in the model.py script)
 - removing file duplicates 
 - normalizing volume in the audio files
-
+- trimming silence out of voice files 
 

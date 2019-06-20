@@ -11,8 +11,9 @@ This allows for data to be modeled as classification problems (labels are binary
 Manual labeling involves a human-in-the-loop. A human being manually looks at or listens to a dataset to tag it with useful information. For example, a human may view a 20 second video clip and rank each emotion - happy, sad, neutral, angry, disgust - on a scale of 1-10. This can then be useful to build regression or classification-based machine learning models.
 
 There are many tools for manual annotation. Here are the ones that we have found most useful internally. 
-* [sound_event_detection](https://github.com/jim-schwoebel/sound_event_detection/tree/94da2fe402ef330e0b6dc9ed41b59b0902e67842)
-* [labelme](https://github.com/wkentaro/labelme/tree/a98d9b66b032622685c8d59c7712be37eef9d3e5)
+* [sound_event_detection](https://github.com/jim-schwoebel/sound_event_detection/tree/94da2fe402ef330e0b6dc9ed41b59b0902e67842) - for audio 
+* [labelme](https://github.com/wkentaro/labelme/tree/a98d9b66b032622685c8d59c7712be37eef9d3e5) - for images
+* [labellmg](https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5) - for images/videos
 
 ## Automatic labeling
 

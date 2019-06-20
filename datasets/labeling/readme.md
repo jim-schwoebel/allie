@@ -14,7 +14,7 @@ There are many tools for manual annotation. Here are the ones that we have found
 * [sound_event_detection](https://github.com/jim-schwoebel/sound_event_detection/tree/94da2fe402ef330e0b6dc9ed41b59b0902e67842) - for audio 
 * [labelme](https://github.com/wkentaro/labelme/tree/a98d9b66b032622685c8d59c7712be37eef9d3e5) - for images
 * [labellmg](https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5) - for images/videos
-* [youtube_scrape]() - for manually annotating YouTube videos via a spreadsheet / building playlists.
+* [youtube_scrape](https://github.com/jim-schwoebel/allie/tree/master/datasets/labeling/youtube_scrape) - for manually annotating YouTube videos via a spreadsheet / building playlists.
 
 ## Automatic labeling
 

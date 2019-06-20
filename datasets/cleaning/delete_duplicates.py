@@ -1,13 +1,22 @@
 import filecmp, os,time, platform, json, datetime 
+import sys
 
-foldername=input('what folder would you like to delete duplicates?')
-directory=os.getcwd()
-os.chdir(directory+'/%s'%(foldername))
+try:
+    foldername=sys.argv[1]
+    os.chdir(foldername)
+except:
+    foldername=input('what folder would you like to delete duplicates?')
+    directory=os.getcwd()
+    os.chdir(directory+'/%s'%(foldername))
 
 # remove duplicates using filecmp
 listdir=os.listdir()
 unclean_filelist=listdir 
 deleted_files=list()
+
+print('-----------------------------')
+print('     DELETING DUPLICATES     ')
+print('-----------------------------')
 
 for i in range(len(listdir)):
     file=listdir[i]
@@ -28,5 +37,5 @@ for i in range(len(listdir)):
                 else:
                     pass
         except:
-            print('error, moving on...')
+            pass 
  

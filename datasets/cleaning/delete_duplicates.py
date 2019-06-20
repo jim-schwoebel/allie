@@ -15,7 +15,7 @@ unclean_filelist=listdir
 deleted_files=list()
 
 print('-----------------------------')
-print('     DELETING DUPLICATES     ')
+print('   DELETING DUPLICATE FILES  ')
 print('-----------------------------')
 
 for i in range(len(listdir)):

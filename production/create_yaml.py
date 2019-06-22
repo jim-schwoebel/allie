@@ -129,7 +129,7 @@ def create_makefile(reponame, incoming_topic, outgoing_topic):
 	g.write('		-e "KAFKA_OUTGOING_TOPIC=%s" \\ \n'%(outgoing_topic))
 	g.write('		-e "MONGO_URL=mongo-service:27017" \\ \n')
 	g.write('		-e "MONGO_DB=nlx-data" \\ \n')
-	g.write('		nlx-model-stress\n')
+	g.write('		%s\n'%(reponame))
 	g.write('stop:\n')
 	g.write('	docker stop %s_worker_1 || true\n'%(reponame))
 	g.write('	docker-compose stop\n')
@@ -197,7 +197,7 @@ def create_processpy(modelname):
 	g.write('                                       { "$set": { "model.%s": result } })\n'%(modelname))
 	g.write('  # otherwise skip\n')
 	g.write("  else:\n")
-	g.write("    print('Skipping as couldn't find the proper features')\n")
+	g.write("    print('Skipping as could not find the proper features')\n")
 	g.close()
 
 def create_readme(reponame, classes, modelname, sampletype, giflink, default_features, labels, modelinfo):

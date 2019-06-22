@@ -65,11 +65,11 @@ os.chdir(curdir)
 # create settings.json (if it does not exist)
 listdir=os.listdir()
 if 'settings.json' not in listdir:
-    data = {"default_audio_features": "audio_features", 
-            "default_text_features": "nltk_features", 
-            "default_image_features": "image_features", 
-            "default_video_features": "video_features", 
-            "default_csv_features": "csv_features",
+    data = {"default_audio_features": ["audio_features"], 
+            "default_text_features": ["nltk_features"], 
+            "default_image_features": ["image_features"], 
+            "default_video_features": ["video_features"], 
+            "default_csv_features": ["csv_features"],
             "bias_discovery": True, 
             "transcribe_audio": True,  
             "default_audio_transcriber": "pocketsphinx", 

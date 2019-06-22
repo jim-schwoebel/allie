@@ -52,6 +52,20 @@ def transcribe_csv(csv_file):
 	transcript=open(csv_file).read()
 	return transcript 
 
+def csv_featurize(feature_set, csvfile, cur_dir):
+
+	if feature_set == 'csv_features':
+		features, labels = cf.csv_featurize(csv_file, cur_dir)
+	else:
+		print('-----------------------')
+		print('!!		error		!!')
+		print('-----------------------')
+		print('Feature set %s does not exist. Please reformat the desired featurizer properly in the settings.json.'%(feature_set))
+		print('Note that the featurizers are named accordingly with the Python scripts. csv_features.py --> csv_features in settings.json)')
+		print('-----------------------')
+
+	return features, labels 
+
 ##################################################
 ##				   Main script  		    	##
 ##################################################
@@ -77,7 +91,7 @@ cur_dir=os.getcwd()
 g=json.load(open(prev_dir(prevdir)+'/settings.json'))
 csv_transcribe=g['transcribe_csv']
 default_csv_transcriber=g['default_csv_transcriber']
-feature_set=g['default_csv_features']
+feature_sets=g['default_csv_features']
 
 ###################################################
 
@@ -102,18 +116,21 @@ for i in range(len(listdir)):
 				basearray['transcripts']=transcript_list
 
 			# featurize the csv file 
-			features, labels = cf.csv_featurize(csv_file, cur_dir)
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				features, labels = csv_featurize(feature_set, csv_file, cur_dir)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
 
-			print(features)
-			csv_features=basearray['features']['csv']
-			csv_features[feature_set]=data
-			basearray['features']['csv']=csv_features
+				print(features)
+				csv_features=basearray['features']['csv']
+				csv_features[feature_set]=data
+				basearray['features']['csv']=csv_features
+
 			basearray['labels']=[labelname]
 
 			# write to .JSON 
@@ -135,18 +152,20 @@ for i in range(len(listdir)):
 				transcript = transcript_list['csv'][default_csv_transcriber]
 
 			# only re-featurize if necessary (checks if relevant feature embedding exists)
-			if feature_set not in list(basearray['features']['csv']):
-				features, labels = cf.csv_featurize(csv_file, cur_dir)
-				print(features)
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				if feature_set not in list(basearray['features']['csv']):
+					features, labels = cf.csv_featurize(csv_file, cur_dir)
+					print(features)
 
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-				
-				basearray['features']['audio'][feature_set]=data
+					try:
+						data={'features':features.tolist(),
+							  'labels': labels}
+					except:
+						data={'features':features,
+							  'labels': labels}
+					
+					basearray['features']['csv'][feature_set]=data
 
 			# only add the label if necessary 
 			label_list=basearray['labels']

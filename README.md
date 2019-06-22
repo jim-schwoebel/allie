@@ -101,27 +101,27 @@ Here are some settings that you can modify in this settings.json file and the va
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 
-| [default_audio_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/audio_features) | default set of audio features used for featurization (list) | ["standard_features"] | ["audioset_features", "audiotext_features", "librosa_features", "meta_features", "mixed_features", "myprosody_features", "praat_features", "pspeech_features", "pyaudio_features", "sa_features", "sox_features", "specimage_features", "specimage2_features", "spectrogram_features", "standard_features"] | 
-| [default_text_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of text features used for featurization (list) | ["nltk_features"] | ["fast_features", "glove_features", "nltk_features", "spacy_features", "w2vec_features"] | 
-| [default_image_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/image_features) | default set of image features used for featurization (list) | ["image_features"] | ["image_features", "inception_features", "resnet_features", "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"] | 
-| [default_video_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/video_features) | default set of video features used for featurization (list) | ["video_features"] | ["video_features", "y8m_features"] | 
-| [default_csv_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of csv features used for featurization (list) | ["csv_features"] | ["csv_features"] | 
-| bias_discovery | looks for biases in datasets during featurization - e.g. ages and genders (not currently implemented) | False | True, False | 
-| transcribe_audio | determines whether or not to transcribe an audio file via default_audio_transcriber | True | True, False | 
+| [default_audio_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/audio_features) | default set of audio features used for featurization (list). | ["standard_features"] | ["audioset_features", "audiotext_features", "librosa_features", "meta_features", "mixed_features", "myprosody_features", "praat_features", "pspeech_features", "pyaudio_features", "sa_features", "sox_features", "specimage_features", "specimage2_features", "spectrogram_features", "standard_features"] | 
+| [default_text_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of text features used for featurization (list). | ["nltk_features"] | ["fast_features", "glove_features", "nltk_features", "spacy_features", "w2vec_features"] | 
+| [default_image_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/image_features) | default set of image features used for featurization (list). | ["image_features"] | ["image_features", "inception_features", "resnet_features", "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"] | 
+| [default_video_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/video_features) | default set of video features used for featurization (list). | ["video_features"] | ["video_features", "y8m_features"] | 
+| [default_csv_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of csv features used for featurization (list). | ["csv_features"] | ["csv_features"] | 
+| bias_discovery | looks for biases in datasets during featurization - e.g. ages and genders (boolean).| False | True, False | 
+| transcribe_audio | determines whether or not to transcribe an audio file via default_audio_transcriber (boolean). | True | True, False | 
 | default_audio_transcriber | the default audio transcriber if transcribe_audio == True | 'pocketsphinx' | 'pocketsphinx' | 
-| transcribe_text | determines whether or not to transcribe a text file via default_text_transcriber | True | True, False | 
-| default_text_transcriber | the default text transcriber if transcribe_text == True | 'raw text' | 'raw text' | 
-| transcribe_image | determines whether or not to transcribe an image file via default_image_transcriber | True | True, False | 
+| transcribe_text | determines whether or not to transcribe a text file via default_text_transcriber (boolean). | True | True, False | 
+| default_text_transcriber | the default text transcriber if transcribe_text == True (string). | 'raw text' | 'raw text' | 
+| transcribe_image | determines whether or not to transcribe an image file via default_image_transcriber (boolean). | True | True, False | 
 | default_image_transcriber | the default image transcriber if transcribe_image == True | 'tesseract' | 'tesseract' | 
 | transcribe_video | determines whether or not to transcribe a video file via default_video_transcriber | True | True, False | 
-| default_video_transcriber | the default video transcriber if transcribe_video == True | 'tesseract_connected_over_frames' | 'tesseract_connected_over_frames' | 
+| default_video_transcriber | the default video transcriber if transcribe_video == True (boolean). | 'tesseract_connected_over_frames' | 'tesseract_connected_over_frames' | 
 | transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber | True | True, False | 
 | default_csv_transcriber | the default video transcriber if transcribe_csv == True | 'raw text' | 'raw text' | 
-| default_training_script | the specified traning script to train machine learning models | 'tpot' | 'scsr', 'tpot', 'hyperopt', 'keras', 'devol' or 'ludwig' | 
-| augment data | specifies whether or not you'd like to augment data during training (not currently implemented) |  False | True, False | 
-| visualize data | specifies whether or not you'd like to see a visualization during model training (not currently implemented) |  False | True, False | 
-| create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment |  False | True, False | 
-| model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now.| False | True, False | 
+| default_training_script | the specified traning script to train machine learning models (string). | 'tpot' | 'scsr', 'tpot', 'hyperopt', 'keras', 'devol' or 'ludwig' | 
+| augment data | specifies whether or not you'd like to augment data during training (Boolean) |  False | True, False | 
+| visualize data | specifies whether or not you'd like to see a visualization during model training (boolean). |  False | True, False | 
+| create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 
+| model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now (boolean).| False | True, False | 
 
 ## License
 This repository is licensed under a trade secret. Please do not share this code outside the core team.

@@ -88,7 +88,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
         else:
             foldername=foldername+'_'+classes[i]
 
-    foldername=foldername+'_sc_regression_%s'%(str(default_features))
+    foldername=foldername+'_sc_regression_%s'%(str(default_features).replace("'",'').replace('"',''))
     tempdir=os.getcwd()+'/'+foldername 
 
     try:
@@ -729,7 +729,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
 def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, min_num):
 
     selectedfeature=str(default_features) + ' (%s)'%(problemtype)
-    modelname=jsonfile[0:-5]+'_sc_classification_%s'%(str(default_features))
+    modelname=jsonfile[0:-5]+'_sc_classification_%s'%(str(default_features).replace("'",'').replace('"',''))
     testing_set=0.250
     X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=testing_set)
     print(X_train.shape)

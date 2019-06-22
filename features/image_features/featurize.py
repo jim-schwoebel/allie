@@ -92,7 +92,17 @@ os.chdir(basedir)
 
 image_transcribe=settings['transcribe_image']
 default_image_transcriber=settings['default_image_transcriber']
-feature_set=settings['default_image_features']
+feature_sets=settings['default_image_features']
+
+#### ^^ 
+#### Can specify a few feature sets here (customizable in settings.json)
+# feature_sets=['image_features']
+# feature_sets=['VGG16_features']
+# feature_sets=['Inception_features']
+# feature_sets=['Xception_features']
+# feature_sets=['Resnet50_features']
+# feature_sets=['VGG19_features']
+# feature_sets=['tesseract_features']
 
 # get class label from folder name 
 labelname=foldername.split('/')
@@ -100,15 +110,6 @@ if labelname[-1]=='':
 	labelname=labelname[-2]
 else:
 	labelname=labelname[-1]
-
-#### Can specify a few feature sets here (customizable in settings.json)
-# feature_set='image_features'
-# feature_set='VGG16_features'
-# feature_set='Inception_features'
-# feature_set='Xception_features'
-# feature_set='Resnet50_features'
-# feature_set='VGG19_features'
-# feature_set='tesseract_features'
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
@@ -130,19 +131,22 @@ for i in range(len(listdir)):
 				transcript_list['image'][default_image_transcriber]=transcript 
 				basearray['transcripts']=transcript_list
 			
-			# featurize the image file 
-			features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
-			print(features)
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+			# featurize the image file with specified featurizers 
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
+				print(features)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
 
-			image_features=basearray['features']['image']
-			image_features[feature_set]=data
-			basearray['features']['image']=image_features
+				image_features=basearray['features']['image']
+				image_features[feature_set]=data
+				basearray['features']['image']=image_features
+
 			basearray['labels']=[labelname]
 
 			# write to .JSON 
@@ -162,16 +166,20 @@ for i in range(len(listdir)):
 				basearray['transcripts']=transcript_list
 
 			# only re-featurize if necessary (checks if relevant feature embedding exists)
-			if feature_set not in list(basearray['features']['image']):
-				features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-				print(features)
-				basearray['features']['image'][feature_set]=data
+			for j in range(len(feature_sets)):
+				# load feature set 
+				feature_set=feature_sets[j]
+				# only add in if it is not in the image feature list array 
+				if feature_set not in list(basearray['features']['image']):
+					features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
+					try:
+						data={'features':features.tolist(),
+							  'labels': labels}
+					except:
+						data={'features':features,
+							  'labels': labels}
+					print(features)
+					basearray['features']['image'][feature_set]=data
 
 			# only add label if necessary 
 			label_list=basearray['labels']

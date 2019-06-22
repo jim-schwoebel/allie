@@ -154,7 +154,31 @@ os.chdir(basedir)
 
 audio_transcribe=settings['transcribe_audio']
 default_audio_transcriber=settings['default_audio_transcriber']
-feature_set=settings['default_audio_features']
+feature_sets=settings['default_audio_features']
+
+# ^^ feature set set by settings.json above ^^ 
+# here are some options below to give an example of what is possible
+# feature_sets=['librosa_features']
+# feature_sets=['standard_features']
+# feature_sets=['audioset_features']
+# feature_sets=['sox_features']
+# feature_sets=['sa_features']
+# feature_sets=['pyaudio_features']
+# feature_sets=['spectrogram_features']
+# feature_sets= ['meta_features']
+# feature_sets=['praat_features']
+# feature_sets=['pspeech_features']
+# feature_sets=['specimage_features']
+# feature_sets=['specimage2_features']
+# feature_sets=['myprosody_features']
+# feature_sets= ['nltk_features']
+# feature_sets= ['mixed_features']
+# feature_sets= ['audiotext_features']
+# feature_sets=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
+		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
+		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
+		# 	  'myprosody_features', 'nltk_features', 'mixed_features', 'audiotext_features']
+
 
 ################################################
 ##	   		Get featurization folder     	  ##
@@ -172,41 +196,6 @@ if labelname[-1]=='':
 	labelname=labelname[-2]
 else:
 	labelname=labelname[-1]
-
-################################################
-##	    	Load feature set                  ##
-################################################
-
-# if set to 'all', then featurizes all audio features...
-
-# feature_set='librosa_features'
-# feature_set='standard_features'
-# feature_set='audioset_features'
-# feature_set='sox_features'
-# feature_set='sa_features'
-# feature_set='pyaudio_features'
-# feature_set='spectrogram_features'
-# feature_set = 'meta_features'
-# feature_set='praat_features'
-# feature_set='pspeech_features'
-# feature_set='specimage_features'
-# feature_set='specimage2_features'
-# feature_set='myprosody_features'
-# feature_set = 'nltk_features'
-# feature_set='mixed_features'
-# feature_set='audiotext_features'
-
-# all_ features ..
-# feature_set=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
-		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
-		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
-		# 	  'myprosody_features', 'nltk_features', 'mixed_features', 'audiotext_features']
-
-# for i in range(len(feature_set)):
-# 	audio_featurize(all_[i], audiofile, transcript)
-
-## can also do custom multi-featurizations
-# feature_set= ['meta_features', 'librosa_features']
 
 ################################################
 ##	    	Now go featurize!                 ##
@@ -232,17 +221,20 @@ for i in range(len(listdir)):
 				basearray['transcripts']=transcript_list
 
 			# featurize the audio file 
-			features, labels = audio_featurize(feature_set, listdir[i], transcript)
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
-			print(features)
-			audio_features=basearray['features']['audio']
-			audio_features[feature_set]=data
-			basearray['features']['audio']=audio_features
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				features, labels = audio_featurize(feature_set, listdir[i], transcript)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
+				print(features)
+				audio_features=basearray['features']['audio']
+				audio_features[feature_set]=data
+				basearray['features']['audio']=audio_features
+			
 			basearray['labels']=[labelname]
 
 			# write to .JSON 
@@ -264,17 +256,19 @@ for i in range(len(listdir)):
 				transcript = transcript_list['audio'][default_audio_transcriber]
 				
 			# only re-featurize if necessary (checks if relevant feature embedding exists)
-			if feature_set not in list(basearray['features']['audio']):
-				features, labels = audio_featurize(feature_set, listdir[i], transcript)
-				print(features)
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-				
-				basearray['features']['audio'][feature_set]=data
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				if feature_set not in list(basearray['features']['audio']):
+					features, labels = audio_featurize(feature_set, listdir[i], transcript)
+					print(features)
+					try:
+						data={'features':features.tolist(),
+							  'labels': labels}
+					except:
+						data={'features':features,
+							  'labels': labels}
+					
+					basearray['features']['audio'][feature_set]=data
 
 			# only add the label if necessary 
 			label_list=basearray['labels']

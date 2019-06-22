@@ -91,7 +91,7 @@ audio_transcribe_setting=settings['transcribe_audio']
 video_transcribe_setting=settings['transcribe_videos']
 default_audio_transcriber=settings['default_audio_transcriber']
 default_video_transcriber=settings['default_video_transcriber']
-feature_set=settings['default_video_features']
+feature_sets=settings['default_video_features']
 os.chdir(cur_dir)
 
 # get class label from folder name 
@@ -105,34 +105,36 @@ else:
 ##				Download inception 		    	##
 ##################################################
 
-if feature_set == 'video_features':
-	fast_model=[]
+for j in range(len(feature_sets)):
+	feature_set=feature_sets[j]
+	if feature_set == 'video_features':
+		fast_model=[]
 
-elif feature_set == 'y8m_features':
+	elif feature_set == 'y8m_features':
 
-	if 'inception-2015-12-05.tgz' not in os.listdir(basedir+'/helpers'):
-	    os.chdir(basedir+'/helpers')
-	    filename = wget.download('http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz')
-	    filename=wget.download('http://data.yt8m.org/yt8m_pca.tgz')
-	    os.system('tar zxvf inception-2015-12-05.tgz')
-	    os.system('tar zxvf yt8m_pca.tgz')
-	    os.chdir(cur_dir)
+		if 'inception-2015-12-05.tgz' not in os.listdir(basedir+'/helpers'):
+		    os.chdir(basedir+'/helpers')
+		    filename = wget.download('http://download.tensorflow.org/models/image/imagenet/inception-2015-12-05.tgz')
+		    filename=wget.download('http://data.yt8m.org/yt8m_pca.tgz')
+		    os.system('tar zxvf inception-2015-12-05.tgz')
+		    os.system('tar zxvf yt8m_pca.tgz')
+		    os.chdir(cur_dir)
 
-	# load in FAST model 
-	os.chdir(prevdir+'text_features')
-	if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
-		print('downloading Facebook FastText model...')
-		wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
-		zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
-		zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
-		zip_ref.close()
+		# load in FAST model 
+		os.chdir(prevdir+'text_features')
+		if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
+			print('downloading Facebook FastText model...')
+			wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
+			zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
+			zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
+			zip_ref.close()
 
-	print('-----------------')
-	print('loading Facebook FastText model...')
-	# Loading fasttext model 
-	fast_model = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
-	print('loaded Facebook FastText model...')
-	os.chdir(cur_dir)
+		print('-----------------')
+		print('loading Facebook FastText model...')
+		# Loading fasttext model 
+		fast_model = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
+		print('loaded Facebook FastText model...')
+		os.chdir(cur_dir)
 
 ###################################################
 
@@ -152,18 +154,21 @@ for i in range(len(listdir)):
 			basearray=make_features(sampletype)
 
 			# get features and add label 
-			video_features=basearray['features']['video']
-			features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
-			
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				video_features=basearray['features']['video']
+				features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
+				
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
 
-			video_features[feature_set]=data
-			basearray['features']['video']=video_features
+				video_features[feature_set]=data
+				basearray['features']['video']=video_features
+
 			basearray['labels']=[labelname]
 
 			# only add transcripts in schema if they are true 
@@ -186,18 +191,20 @@ for i in range(len(listdir)):
 			video_features=basearray['features']['video']
 
 			# featurizes/labels only if necessary (skips if feature embedding there)
-			if feature_set not in list(video_features):
-				features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
-				print(features)
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				if feature_set not in list(video_features):
+					features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
+					print(features)
+					try:
+						data={'features':features.tolist(),
+							  'labels': labels}
+					except:
+						data={'features':features,
+							  'labels': labels}
 
-				video_features[feature_set]=data
-				basearray['features']['video']=video_features
+					video_features[feature_set]=data
+					basearray['features']['video']=video_features
 
 			# make transcript additions, as necessary 
 			transcript_list=basearray['transcripts']
@@ -205,6 +212,7 @@ for i in range(len(listdir)):
 				transcript_list['video'][default_video_transcriber] = video_transcript
 			if audio_transcribe_setting == True and default_audio_transcriber not in list(transcript_list):	
 				transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+			
 			basearray['transcripts']=transcript_list
 
 			# add appropriate labels only if they are new labels 

@@ -114,74 +114,77 @@ os.chdir(foldername)
 listdir=os.listdir() 
 cur_dir=os.getcwd()
 
-feature_set=settings['default_text_features']
+feature_sets=settings['default_text_features']
 default_text_transcriber='raw_text'
 
 # can specify many types of features...
-if feature_set in ['nltk_features', 'spacy_features']:
-	# save memory by not loading any models that are not necessary.
-	glovemodel=[]
-	w2vmodel=[]
-	fastmodel=[]
+for j in range(len(feature_sets)):
+	feature_set=feature_sets[j]
 
-else:
-	##################################################
-	##				Load ML models					##
-	##################################################
-
-	# load GloVE model
-	if feature_set == 'glove_features':
-		if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
-			curdir=os.getcwd()
-			print('downloading GloVe model...')
-			wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
-			print('extracting GloVe model')
-			zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
-			zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
-			zip_ref.close()
-			os.chdir(os.getcwd()+'/helpers/glove.6B')
-			glove_input_file = 'glove.6B.100d.txt'
-			word2vec_output_file = 'glove.6B.100d.txt.word2vec'
-			glove2word2vec(glove_input_file, word2vec_output_file)
-			os.chdir(curdir)
-
-		glovemodelname = 'glove.6B.100d.txt.word2vec'
-		print('-----------------')
-		print('loading GloVe model...')
-		glovemodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/glove.6B/'+glovemodelname, binary=False)
-		print('loaded GloVe model...')
-		w2vmodel=[]
-		fastmodel=[]
-	# load Google W2V model
-	elif feature_set == 'w2v_features':
-		if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
-			print('downloading Google W2V model...')
-			wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
-
-		w2vmodelname = 'GoogleNews-vectors-negative300.bin'
-		print('-----------------')
-		print('loading Google W2V model...')
-		w2vmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/'+w2vmodelname, binary=True)
-		print('loaded Google W2V model...')
-		glovemodel=[]
-		fastmodel=[]
-
-	# load facebook FastText model
-	elif feature_set == 'fast_features':
-		if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
-			print('downloading Facebook FastText model...')
-			wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
-			zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
-			zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
-			zip_ref.close()
-
-		print('-----------------')
-		print('loading Facebook FastText model...')
-		# Loading fasttext model 
-		fastmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
-		print('loaded Facebook FastText model...')
+	if feature_set in ['nltk_features', 'spacy_features']:
+		# save memory by not loading any models that are not necessary.
 		glovemodel=[]
 		w2vmodel=[]
+		fastmodel=[]
+
+	else:
+		##################################################
+		##				Load ML models					##
+		##################################################
+
+		# load GloVE model
+		if feature_set == 'glove_features':
+			if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
+				curdir=os.getcwd()
+				print('downloading GloVe model...')
+				wget.download("http://neurolex.co/uploads/glove.6B.zip", "./helpers/glove.6B.zip")
+				print('extracting GloVe model')
+				zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/glove.6B.zip', 'r')
+				zip_ref.extractall(os.getcwd()+'/helpers/glove.6B')
+				zip_ref.close()
+				os.chdir(os.getcwd()+'/helpers/glove.6B')
+				glove_input_file = 'glove.6B.100d.txt'
+				word2vec_output_file = 'glove.6B.100d.txt.word2vec'
+				glove2word2vec(glove_input_file, word2vec_output_file)
+				os.chdir(curdir)
+
+			glovemodelname = 'glove.6B.100d.txt.word2vec'
+			print('-----------------')
+			print('loading GloVe model...')
+			glovemodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/glove.6B/'+glovemodelname, binary=False)
+			print('loaded GloVe model...')
+			w2vmodel=[]
+			fastmodel=[]
+		# load Google W2V model
+		elif feature_set == 'w2v_features':
+			if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
+				print('downloading Google W2V model...')
+				wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
+
+			w2vmodelname = 'GoogleNews-vectors-negative300.bin'
+			print('-----------------')
+			print('loading Google W2V model...')
+			w2vmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/'+w2vmodelname, binary=True)
+			print('loaded Google W2V model...')
+			glovemodel=[]
+			fastmodel=[]
+
+		# load facebook FastText model
+		elif feature_set == 'fast_features':
+			if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
+				print('downloading Facebook FastText model...')
+				wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
+				zip_ref = zipfile.ZipFile(os.getcwd()+'/helpers/wiki-news-300d-1M.vec.zip', 'r')
+				zip_ref.extractall(os.getcwd()+'/helpers/wiki-news-300d-1M')
+				zip_ref.close()
+
+			print('-----------------')
+			print('loading Facebook FastText model...')
+			# Loading fasttext model 
+			fastmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
+			print('loaded Facebook FastText model...')
+			glovemodel=[]
+			w2vmodel=[]
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
@@ -202,20 +205,23 @@ for i in range(len(listdir)):
 			transcript_list['text'][default_text_transcriber]=transcript 
 			basearray['transcripts']=transcript_list
 
-			# featurize the text file 
-			features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
-			print(features)
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				# featurize the text file 
+				features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+				print(features)
 
-			try:
-				data={'features':features.tolist(),
-					  'labels': labels}
-			except:
-				data={'features':features,
-					  'labels': labels}
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
 
-			text_features=basearray['features']['text']
-			text_features[feature_set]=data
-			basearray['features']['text']=text_features
+				text_features=basearray['features']['text']
+				text_features[feature_set]=data
+				basearray['features']['text']=text_features
+
 			basearray['labels']=[foldername]
 			jsonfile=open(listdir[i][0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
@@ -233,21 +239,22 @@ for i in range(len(listdir)):
 				transcript_list['text'][default_audio_transcriber]=transcript 
 				basearray['transcripts']=transcript_list
 
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				# re-featurize only if necessary 
+				if feature_set not in list(basearray['features']['text']):
 
-			# re-featurize only if necessary 
-			if feature_set not in list(basearray['features']['text']):
+					features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+					print(features)
 
-				features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
-				print(features)
+					try:
+						data={'features':features.tolist(),
+							  'labels': labels}
+					except:
+						data={'features':features,
+							  'labels': labels}
 
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-
-				basearray['features']['text'][feature_set]=data
+					basearray['features']['text'][feature_set]=data
 
 			# only add the label if necessary 
 			label_list=basearray['labels']

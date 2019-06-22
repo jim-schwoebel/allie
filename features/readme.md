@@ -113,8 +113,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [csv_features](https://github.com/jim-schwoebel/allie/blob/master/features/csv_features/csv_features.py) - standard CSV feature array
 
 ## Not Implemented / Work in progress
-- Reduce redundnacy; if already in schema, do not re-featurize (to reduce computational overhead again).
-- Pass through featurization type as a command line argument -[feature_type] (after folder directory), if not there default to default_featurizer 
+- Pass through featurization type as a command line argument -[feature_type] (after folder directory), if not there default to default_featurizer (as a list).
 
 ### Audio
 * allow Ludwig model type to dictate featurization - 'audio_ludwig_features'

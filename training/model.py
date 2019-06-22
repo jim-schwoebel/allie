@@ -408,27 +408,36 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 
 	# First need to create some test files for each use case
 	# copy 10 files from each class into the load_dir 
+	copylist=list()
 	for i in range(len(classes)):
 		os.chdir(prevdir+'/train_dir/'+classes[i])
 		tempdirectory=os.getcwd()
 		listdir=os.listdir()
 		os.chdir(prevdir+'/load_dir/')
 		listdir2=os.listdir()
+		for j in range(len(listdir2)):
+			# remove all files in the load_dir 
+			os.remove(listdir2[j])	
 		os.chdir(tempdirectory)
 		count=0
+		
 		# rename files if necessary 
 		# the only other file in the directory should be .json, so this should work
 		for j in range(len(listdir)):
-			if listdir[j] not in listdir2 and listdir[j].endswith('.json') == False:
+			if listdir[j] not in copylist and listdir[j].endswith('.json') == False:
 				shutil.copy(tempdirectory+'/'+listdir[j], prevdir+'/load_dir/'+listdir[j])
+				print(tempdirectory+'/'+listdir[j])
+				copylist.append(listdir[j])
 				count=count+1 
 				if count == 10:
 					break
-			elif listdir[j] in listdir2 and listdir[j].endswith('.json') == False: 
+			elif listdir[j] in copylist and listdir[j].endswith('.json') == False: 
 				# rename the file appropriately such that there are no conflicts.
 				newname=str(j)+'_'+listdir[j]
 				os.rename(listdir[j], newname)
+				print(tempdirectory+'/'+newname)
 				shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
+				copylist.append(listdir[j])
 				count=count+1 
 				if count == 10:
 					break 

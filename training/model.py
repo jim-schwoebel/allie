@@ -415,17 +415,24 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 		os.chdir(prevdir+'/load_dir/')
 		listdir2=os.listdir()
 		os.chdir(tempdirectory)
-
+		count=0
 		# rename files if necessary 
-		for j in range(10):
-			if listdir[j] not in listdir2:
+		# the only other file in the directory should be .json, so this should work
+		for j in range(len(listdir)):
+			if listdir[j] not in listdir2 and listdir[j].endswith('.json') == False:
 				shutil.copy(tempdirectory+'/'+listdir[j], prevdir+'/load_dir/'+listdir[j])
-			else: 
-				# rename the fiale 
+				count=count+1 
+				if count == 10:
+					break
+			elif listdir[j] in listdir2 and listdir[j].endswith('.json') == False: 
+				# rename the file appropriately such that there are no conflicts.
 				newname=str(j)+'_'+listdir[j]
 				os.rename(listdir[j], newname)
 				shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-	
+				count=count+1 
+				if count == 10:
+					break 
+
 	# now apply machine learning model to these files 
 	os.chdir(prevdir+'/models')
 	os.system('python3 load_models.py')

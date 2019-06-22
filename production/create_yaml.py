@@ -371,7 +371,7 @@ def populate_mongo(classes):
 
 sampletype = sys.argv[1]
 common_model_name= sys.argv[2]
-repo_name = 'nlx-model-'+common_model_name 
+repo_name = 'nlx-model-'+sampletype+'-'+common_model_name 
 model_name = sys.argv[3]
 jsonfile_name = sys.argv[4]
 count=5
@@ -491,3 +491,5 @@ create_requirements()
 create_server(common_model_name)
 create_test(classes)
 create_init1()
+# copy over settings.json (in case you need defaults for some reason)
+shutil.copy(prev_dir(cur_dir)+'/settings.json', os.getcwd()+'/settings.json')

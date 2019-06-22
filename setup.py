@@ -81,7 +81,7 @@ if 'settings.json' not in listdir:
             "default_video_transcriber": "tesseract (averaged over frames)",
             "transcribe_csv": True, 
             "default_csv_transcriber": "raw text",
-            "default_training_script": "tpot", 
+            "default_training_script": ["tpot","devol"], 
             "augment_data": True, 
             "visualize_data": True,  
             "create_YAML": True, 

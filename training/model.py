@@ -297,208 +297,217 @@ labels=np.asarray(labels)
 ## 					TRAIN THE MODEL 					  ##
 ############################################################
 
-## Now we can train the machine learning model via the default_training script.
+'''
+Now we can train the machine learning model via the default_training script.
+Note you can specify multiple training scripts and it will consecutively model the 
+files appropriately. 
+'''
 
-default_training_script=settings['default_training_script']
+default_training_scripts=settings['default_training_script']
 model_compress=settings['model_compress']
 
-if default_training_script=='adanet':
-	print('Adanet training is coming soon! Please use a different model setting for now.') 
-	# import train_adanet as ta 
-	# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
-elif default_training_script=='alphapy':
-	print('Alphapy training is coming soon! Please use a different model setting for now.') 
-	# import train_alphapy as talpy
-	# talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='autokeras':
-	print('Autokeras training is unstable! Please use a different model setting for now.') 
-	# import train_autokeras as tak 
-	# tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='autosklearn':
-	print('Autosklearn training is unstable! Please use a different model setting for now.') 
-	# import train_autosklearn as taskl
-	# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='devol':
-	import train_devol as td 
-	modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='hypsklearn':
-	import train_hypsklearn as th 
-	modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='keras':
-	import train_keras as tk
-	modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
-elif default_training_script=='ludwig':
-	import train_ludwig as tl
-	modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
-elif default_training_script=='plda':
-	print('PLDA training is unstable! Please use a different model setting for now.') 
-	# import train_pLDA as tp
-	# tp.train_pLDA(alldata,labels)
-elif default_training_script=='scsr':
-	import train_scsr as scsr
-	if mtype == 'c':
-		modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
-	elif mtype == 'r':
-		modelname, modeldir=scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
-elif default_training_script=='tpot':
-	import train_TPOT as tt
-	modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
+for i in range(len(default_training_scripts)):
+	# go to model directory 
+	os.chdir(model_dir)
 
-############################################################
-## 					COMPRESS MODELS 					  ##
-############################################################
+	default_training_script=default_training_scripts[i]
+	if default_training_script=='adanet':
+		print('Adanet training is coming soon! Please use a different model setting for now.') 
+		# import train_adanet as ta 
+		# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+	elif default_training_script=='alphapy':
+		print('Alphapy training is coming soon! Please use a different model setting for now.') 
+		# import train_alphapy as talpy
+		# talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features)
+	elif default_training_script=='autokeras':
+		print('Autokeras training is unstable! Please use a different model setting for now.') 
+		# import train_autokeras as tak 
+		# tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+	elif default_training_script=='autosklearn':
+		print('Autosklearn training is unstable! Please use a different model setting for now.') 
+		# import train_autosklearn as taskl
+		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
+	elif default_training_script=='devol':
+		import train_devol as td 
+		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+	elif default_training_script=='hypsklearn':
+		import train_hypsklearn as th 
+		modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features)
+	elif default_training_script=='keras':
+		import train_keras as tk
+		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features)
+	elif default_training_script=='ludwig':
+		import train_ludwig as tl
+		modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features)
+	elif default_training_script=='plda':
+		print('PLDA training is unstable! Please use a different model setting for now.') 
+		# import train_pLDA as tp
+		# tp.train_pLDA(alldata,labels)
+	elif default_training_script=='scsr':
+		import train_scsr as scsr
+		if mtype == 'c':
+			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, minlength)
+		elif mtype == 'r':
+			modelname, modeldir=scsr.train_sr(classes, problemtype, default_features, model_dir, alldata, labels)
+	elif default_training_script=='tpot':
+		import train_TPOT as tt
+		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
 
-# go to model directory 
-os.chdir(modeldir)
+	############################################################
+	## 					COMPRESS MODELS 					  ##
+	############################################################
 
-if model_compress == True:
-	# now compress the model according to model type 
-	if default_training_script in ['hypsklearn', 'scsr', 'tpot']:
-		# all .pickle files and can compress via scikit-small-ensemble
-		from sklearn.externals import joblib
+	# go to model directory 
+	os.chdir(modeldir)
 
-		# open up model 
-		loadmodel=open(modelname, 'rb')
-		model = pickle.load(loadmodel)
-		loadmodel.close()
+	if model_compress == True:
+		# now compress the model according to model type 
+		if default_training_script in ['hypsklearn', 'scsr', 'tpot']:
+			# all .pickle files and can compress via scikit-small-ensemble
+			from sklearn.externals import joblib
 
-		# compress - from 0 to 9. Higher value means more compression, but also slower read and write times. 
-		# Using a value of 3 is often a good compromise.
-		joblib.dump(model, modelname[0:-7]+'_compressed.joblib',compress=3)
+			# open up model 
+			loadmodel=open(modelname, 'rb')
+			model = pickle.load(loadmodel)
+			loadmodel.close()
 
-		# can now load compressed models as such
-		# thenewmodel=joblib.load(modelname[0:-7]+'_compressed.joblib')
-		# leads to up to 10x reduction in model size and .72 sec - 0.23 secoon (3-4x faster loading model)
-		# note may note work in sklearn and python versions are different from saving and loading environments. 
+			# compress - from 0 to 9. Higher value means more compression, but also slower read and write times. 
+			# Using a value of 3 is often a good compromise.
+			joblib.dump(model, modelname[0:-7]+'_compressed.joblib',compress=3)
 
-	elif default_training_script in ['devol', 'keras']: 
-		# can compress with keras_compressor 
-		import logging
-		from keras.models import load_model
-		from keras_compressor.compressor import compress
+			# can now load compressed models as such
+			# thenewmodel=joblib.load(modelname[0:-7]+'_compressed.joblib')
+			# leads to up to 10x reduction in model size and .72 sec - 0.23 secoon (3-4x faster loading model)
+			# note may note work in sklearn and python versions are different from saving and loading environments. 
 
-		logging.basicConfig(
-		    level=logging.INFO,
-		)
+		elif default_training_script in ['devol', 'keras']: 
+			# can compress with keras_compressor 
+			import logging
+			from keras.models import load_model
+			from keras_compressor.compressor import compress
 
-		model = load_model(modelname)
-		model = compress(model, 7e-1)
-		model.save(modelname[0:-3]+'_compressed.h5')
+			logging.basicConfig(
+			    level=logging.INFO,
+			)
 
-	else:
-		# for everything else, we can compress pocketflow models in the future.
-		print('We cannot currently compress %s models. We are working on this!! \n\n The model will remain uncompressed for now'%(default_training_script))
+			model = load_model(modelname)
+			model = compress(model, 7e-1)
+			model.save(modelname[0:-3]+'_compressed.h5')
 
-
-############################################################
-## 					CREATE YAML FILES 					  ##
-############################################################
-
-create_YAML=settings['create_YAML']
-
-# note this will only work for pickle files for now. Will upgrade to deep learning
-# models in the future.
-if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn']:
-
-	# clear the load directory 
-	os.chdir(prevdir+'/load_dir/')
-	listdir=os.listdir()
-	for i in range(len(listdir)):
-		os.remove(listdir[i])
-
-	# First need to create some test files for each use case
-	# copy 10 files from each class into the load_dir 
-	copylist=list()
-	print(classes)
-
-	# clear the load_directory 
-	os.chdir(prevdir+'/load_dir/')
-	listdir2=os.listdir()
-	for j in range(len(listdir2)):
-		# remove all files in the load_dir 
-		os.remove(listdir2[j])	
-
-	for i in range(len(classes)):
-		os.chdir(prevdir+'/train_dir/'+classes[i])
-		tempdirectory=os.getcwd()
-		listdir=os.listdir()
-		os.chdir(tempdirectory)
-		count=0
-		
-		# rename files if necessary 
-		# the only other file in the directory should be .json, so this should work
-		for j in range(len(listdir)):
-			# print(listdir[j])
-			if listdir[j].replace(' ','_').replace('-','') not in copylist and listdir[j].endswith('.json') == False:
-				if count >= 10:
-					break
-				else:
-					newname=listdir[j].replace(' ','_').replace('-','')
-					os.rename(listdir[j], newname)
-					shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-					# print(tempdirectory+'/'+listdir[j])
-					copylist.append(newname)
-					count=count+1 
-
-			elif listdir[j].replace(' ','_').replace('-','') in copylist and listdir[j].endswith('.json') == False: 
-				# rename the file appropriately such that there are no conflicts.
-				if count >= 10:
-					break
-				else:
-					newname=str(j)+'_'+listdir[j].replace(' ','_').replace('-','')
-					os.rename(listdir[j], newname)
-					# print(tempdirectory+'/'+newname)
-					shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-					copylist.append(newname)
-					count=count+1 
-
-	# now apply machine learning model to these files 
-	os.chdir(prevdir+'/models')
-	os.system('python3 load_models.py')
-
-	# now load up each of these and break loop when tests for each class exist 
-	os.chdir(prevdir+'/load_dir')
-	jsonfiles=list()
-	# iterate through until you find a class that fits in models 
-	listdir=os.listdir()
-
-	for i in range(len(classes)):
-		for j in range(len(listdir)):
-			if listdir[j][-5:]=='.json':
-				try:
-					g=json.load(open(listdir[j]))
-					models=g['models'][problemtype][classes[i]]
-					print(models)
-					features=list()
-					for k in range(len(default_features)):
-						features=features+g['features'][problemtype][default_features[k]]['features']
-					
-					print(features)
-					testfile=classes[i]+'_features.json'
-					print(testfile)
-					jsonfile=open(testfile,'w')
-					json.dump(features,jsonfile)
-					jsonfile.close()
-					shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
-					break
-				except:
-					pass 
-
-	# now create the YAML file 
-	os.chdir(prevdir+'/production')
-	cmdclasses=''
-	for i in range(len(classes)):
-		if i != len(classes)-1:
-			cmdclasses=cmdclasses+classes[i]+' '
 		else:
-			cmdclasses=cmdclasses+classes[i]
+			# for everything else, we can compress pocketflow models in the future.
+			print('We cannot currently compress %s models. We are working on this!! \n\n The model will remain uncompressed for now'%(default_training_script))
 
-	if 'common_name' in locals():
-		pass 
-	else:
-		common_name=modelname[0:-7]
 
-	jsonfilename=modelname[0:-7]+'.json'
-	os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
+	############################################################
+	## 					CREATE YAML FILES 					  ##
+	############################################################
+
+	create_YAML=settings['create_YAML']
+
+	# note this will only work for pickle files for now. Will upgrade to deep learning
+	# models in the future.
+	if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn']:
+
+		# clear the load directory 
+		os.chdir(prevdir+'/load_dir/')
+		listdir=os.listdir()
+		for i in range(len(listdir)):
+			os.remove(listdir[i])
+
+		# First need to create some test files for each use case
+		# copy 10 files from each class into the load_dir 
+		copylist=list()
+		print(classes)
+
+		# clear the load_directory 
+		os.chdir(prevdir+'/load_dir/')
+		listdir2=os.listdir()
+		for j in range(len(listdir2)):
+			# remove all files in the load_dir 
+			os.remove(listdir2[j])	
+
+		for i in range(len(classes)):
+			os.chdir(prevdir+'/train_dir/'+classes[i])
+			tempdirectory=os.getcwd()
+			listdir=os.listdir()
+			os.chdir(tempdirectory)
+			count=0
+			
+			# rename files if necessary 
+			# the only other file in the directory should be .json, so this should work
+			for j in range(len(listdir)):
+				# print(listdir[j])
+				if listdir[j].replace(' ','_').replace('-','') not in copylist and listdir[j].endswith('.json') == False:
+					if count >= 10:
+						break
+					else:
+						newname=listdir[j].replace(' ','_').replace('-','')
+						os.rename(listdir[j], newname)
+						shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
+						# print(tempdirectory+'/'+listdir[j])
+						copylist.append(newname)
+						count=count+1 
+
+				elif listdir[j].replace(' ','_').replace('-','') in copylist and listdir[j].endswith('.json') == False: 
+					# rename the file appropriately such that there are no conflicts.
+					if count >= 10:
+						break
+					else:
+						newname=str(j)+'_'+listdir[j].replace(' ','_').replace('-','')
+						os.rename(listdir[j], newname)
+						# print(tempdirectory+'/'+newname)
+						shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
+						copylist.append(newname)
+						count=count+1 
+
+		# now apply machine learning model to these files 
+		os.chdir(prevdir+'/models')
+		os.system('python3 load_models.py')
+
+		# now load up each of these and break loop when tests for each class exist 
+		os.chdir(prevdir+'/load_dir')
+		jsonfiles=list()
+		# iterate through until you find a class that fits in models 
+		listdir=os.listdir()
+
+		for i in range(len(classes)):
+			for j in range(len(listdir)):
+				if listdir[j][-5:]=='.json':
+					try:
+						g=json.load(open(listdir[j]))
+						models=g['models'][problemtype][classes[i]]
+						print(models)
+						features=list()
+						for k in range(len(default_features)):
+							features=features+g['features'][problemtype][default_features[k]]['features']
+						
+						print(features)
+						testfile=classes[i]+'_features.json'
+						print(testfile)
+						jsonfile2=open(testfile,'w')
+						json.dump(features,jsonfile2)
+						jsonfile2.close()
+						shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
+						break
+					except:
+						pass 
+
+		# now create the YAML file 
+		os.chdir(prevdir+'/production')
+		cmdclasses=''
+		for i in range(len(classes)):
+			if i != len(classes)-1:
+				cmdclasses=cmdclasses+classes[i]+' '
+			else:
+				cmdclasses=cmdclasses+classes[i]
+
+		if 'common_name' in locals():
+			pass 
+		else:
+			common_name=modelname[0:-7]
+
+		jsonfilename=modelname[0:-7]+'.json'
+		os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
 
 

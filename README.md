@@ -117,7 +117,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | default_video_transcriber | the default video transcriber if transcribe_video == True (boolean). | 'tesseract_connected_over_frames' | 'tesseract_connected_over_frames' | 
 | transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber (boolean). | True | True, False | 
 | default_csv_transcriber | the default video transcriber if transcribe_csv == True (string). | 'raw text' | 'raw text' | 
-| default_training_script | the specified traning script to train machine learning models (string). | 'tpot' | 'scsr', 'tpot', 'hyperopt', 'keras', 'devol' or 'ludwig' | 
+| default_training_script | the specified traning script(s) to train machine learning models. Note that if you specify multiple training scripts here that the training scripts will be executed serially (list). | ['tpot','devol'] | ['scsr', 'tpot', 'hyperopt', 'keras', 'devol', 'ludwig'] | 
 | augment data | specifies whether or not you'd like to augment data during training (boolean). |  False | True, False | 
 | visualize data | specifies whether or not you'd like to see a visualization during model training (boolean). |  False | True, False | 
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 

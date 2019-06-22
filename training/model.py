@@ -306,11 +306,11 @@ files appropriately.
 default_training_scripts=settings['default_training_script']
 model_compress=settings['model_compress']
 
-for i in range(len(default_training_scripts)):
+for z in range(len(default_training_scripts)):
 	# go to model directory 
 	os.chdir(model_dir)
-
-	default_training_script=default_training_scripts[i]
+	default_training_script=default_training_scripts[z]
+	
 	if default_training_script=='adanet':
 		print('Adanet training is coming soon! Please use a different model setting for now.') 
 		# import train_adanet as ta 

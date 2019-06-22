@@ -268,3 +268,5 @@ if __name__ == '__main__':
   unittest.main()
 ```
  
+## Work in progress
+* add in all types of feature arrays and data types (to production training) - rename to include type of file (e.g. nlx-model-audio-age vs. nlx-model-video-age) 

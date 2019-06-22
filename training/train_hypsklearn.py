@@ -13,7 +13,7 @@ def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_feat
     X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
     if mtype in [' classification', 'c']:
 
-        modelname=jsonfile[0:-5]+'_hypsklearn_classification_%s'%(str(default_features))
+        modelname=jsonfile[0:-5]+'_hypsklearn_classification_%s'%(str(default_features).replace("'",'').replace('"',''))
 
         estim = HyperoptEstimator(classifier=any_classifier('my_clf'),
                                   preprocessing=any_preprocessing('my_pre'),
@@ -28,7 +28,7 @@ def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_feat
 
     elif mtype in ['regression','r']:
 
-        modelname=jsonfile[0:-5]+'_hypsklearn_regression_%s'%(str(default_features))
+        modelname=jsonfile[0:-5]+'_hypsklearn_regression_%s'%(str(default_features).replace("'",'').replace('"',''))
 
         estim = HyperoptEstimator(classifier=any_regressor('my_clf'),
                                   preprocessing=any_preprocessing('my_pre'),

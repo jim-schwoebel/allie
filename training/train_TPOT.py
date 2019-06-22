@@ -9,12 +9,13 @@ from sklearn.model_selection import cross_val_score
 def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features):
     # get train and test data 
     X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
+    modelname=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')
     if mtype in [' classification', 'c']:
         tpot=TPOTClassifier(generations=5, population_size=50, verbosity=2, n_jobs=-1)
-        tpotname='%s_tpotclassifier.py'%(jsonfile[0:-5])
+        tpotname='%s_tpotclassifier.py'%(modelname)
     elif mtype in ['regression','r']:
         tpot = TPOTRegressor(generations=5, population_size=20, verbosity=2)
-        tpotname='%s_tpotregression.py'%(jsonfile[0:-5])
+        tpotname='%s_tpotregression.py'%(modelname)
     tpot.fit(X_train, y_train)
     accuracy=tpot.score(X_test,y_test)
     tpot.export(tpotname)

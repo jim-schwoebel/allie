@@ -269,4 +269,5 @@ if __name__ == '__main__':
 ```
  
 ## Work in progress
-* add in all types of feature arrays and data types (to production training) - rename to include type of file (e.g. nlx-model-audio-age vs. nlx-model-video-age) 
+* add in all types of feature arrays and data types (to production training) - rename to include type of file (e.g. nlx-model-audio-age vs. nlx-model-video-age).
+* adapt testing scripts in this folder to keras/devol and ludwig (to allow for any model type to be spun up into production).

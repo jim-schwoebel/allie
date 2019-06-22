@@ -428,7 +428,7 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 		# rename files if necessary 
 		# the only other file in the directory should be .json, so this should work
 		for j in range(len(listdir)):
-			print(listdir[j])
+			# print(listdir[j])
 			if listdir[j].replace(' ','_').replace('-','') not in copylist and listdir[j].endswith('.json') == False:
 				if count >= 10:
 					break

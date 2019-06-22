@@ -410,9 +410,21 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 	# copy 10 files from each class into the load_dir 
 	for i in range(len(classes)):
 		os.chdir(prevdir+'/train_dir/'+classes[i])
+		tempdirectory=os.getcwd()
 		listdir=os.listdir()
+		os.chdir(prevdir+'/load_dir/')
+		listdir2=os.listdir()
+		os.chdir(tempdirectory)
+
+		# rename files if necessary 
 		for j in range(10):
-			shutil.copy(os.getcwd()+'/'+listdir[j], prevdir+'/load_dir/'+listdir[j])
+			if listdir[j] not in listdir2:
+				shutil.copy(tempdirectory+'/'+listdir[j], prevdir+'/load_dir/'+listdir[j])
+			else: 
+				# rename the fiale 
+				newname=str(j)+'_'+listdir[j]
+				os.rename(listdir[j], newname)
+				shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
 	
 	# now apply machine learning model to these files 
 	os.chdir(prevdir+'/models')
@@ -430,7 +442,10 @@ if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklea
 					g=json.load(open(listdir[j]))
 					models=g['models'][problemtype][classes[i]]
 					print(models)
-					features=g['features'][problemtype][default_features]['features']
+					features=list()
+					for k in range(len(default_features)):
+						features=features+g['features'][problemtype][default_features[k]]['features']
+					
 					print(features)
 					testfile=classes[i]+'_features.json'
 					print(testfile)

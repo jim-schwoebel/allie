@@ -228,13 +228,18 @@ for i in range(len(classes)):
 	for i in range(len(listdir)):
 		if listdir[i][-5:]=='.json':
 			g=json.load(open(listdir[i]))
-			feature_list.append(g['features'][problemtype][default_features]['features'])
-			print(g['features'][problemtype][default_features]['features'])
+			# consolidate all features into one array (if featurizing with multiple featurizers)
+			default_feature=list()
+			for j in range(len(default_features)):
+				default_feature=default_feature+g['features'][problemtype][default_features[j]]['features']
+
+			feature_list.append(default_feature)
+			print(default_feature)
 	
 	data[class_type]=feature_list
 
 # get feature labels (for ludwig) - should be the same for all files
-feature_labels=g['features'][problemtype][default_features]['labels']
+feature_labels=g['features'][problemtype][default_features[0]]['labels']
 
 ###############################################################
 ##                    DATA PRE-PROCESSING                    ##

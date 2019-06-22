@@ -47,7 +47,7 @@ def make_yaml(feature_labels, epochs):
 
 def train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features):
   
-    jsonfilename='%s.json'%(jsonfile[0:-5]+"_ludwig_%s"%(default_features))
+    jsonfilename='%s.json'%(jsonfile[0:-5]+"_ludwig_%s"%(str(default_features)))
     filename='%s.csv'%(jsonfilename[0:-5])
     filename=write_csv(filename, alldata, feature_labels, labels)
 

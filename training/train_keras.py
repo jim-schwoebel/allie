@@ -89,7 +89,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
         g.write('Group %s: %s (%s training, %s testing)'%(str(i+1), classes[i], str(math.floor(len(x_train)/len(classes))), str(math.floor(len(x_test)/len(classes)))))
         g.write('\n')
     g.write('\n')
-    g.write('FEATURES: \n\n %s'%(default_features))
+    g.write('FEATURES: \n\n %s'%(str(default_features)))
     g.write('\n\n')
     g.write('MODEL ACCURACY: \n\n')
     g.write('%s: %s \n\n'%(str('accuracy'),str(score[1]*100)))

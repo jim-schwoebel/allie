@@ -226,7 +226,11 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
                         # get features (from prior array)
                         jsonfile=json.load(open(jsonfilelist[k]))
-                        features=jsonfile['features'][sampletype][feature_set]['features']
+
+                        # assume models use the default feature settings (can be more adaptable in future)
+                        features=list()
+                        for j in range(len(feature_set)):
+                            features=features+jsonfile['features'][sampletype][feature_set[j]]['features']
                         features=np.array(features).reshape(1,-1)
 
                         # predict model 
@@ -275,7 +279,9 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
                         # get features (from prior array)
                         jsonfile=json.load(open(jsonfilelist[k]))
-                        features=jsonfile['features'][sampletype][feature_set]['features']
+                        features=list()
+                        for j in range(len(feature_set)):
+                            features=features+jsonfile['features'][sampletype][feature_set[j]]['features']
                         features=np.array(features).reshape(1,-1)
 
                         # predict output from model 
@@ -317,10 +323,14 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         # load directory 
                         os.chdir(load_dir)
 
-                        # get features (from prior array)
+                        # get features (from prior array) - if multiple featurizers, load in the right features
                         jsonfile=json.load(open(jsonfilelist[k]))
-                        features=jsonfile['features'][sampletype][feature_set]['features']
-                        labels=jsonfile['features'][sampletype][feature_set]['labels']
+                        features=list()
+                        labels=list()
+                        for j in range(len(feature_set)):
+                            features=features+jsonfile['features'][sampletype][feature_set[j]]['features']
+                            labels=labels+jsonfile['features'][sampletype][feature_set[j]]['labels']
+
                         data=dict()
                         for i in range(len(features)):
                             data[labels[i]]=features[i]
@@ -390,7 +400,7 @@ load_dir=os.getcwd()
 if 'audio' in sampletypes:
     # import right featurizers (based on models)
     print('-----------------------------------')
-    print('AUDIO FEATURIZING - %s'%(default_audio_features.upper()))
+    print('AUDIO FEATURIZING - %s'%(str(default_audio_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/audio_features')
     os.system('python3 featurize.py %s'%(load_dir))
@@ -398,7 +408,7 @@ if 'audio' in sampletypes:
 if 'text' in sampletypes:
     # import right featurizers (based on models)
     print('-----------------------------------')
-    print('TEXT FEATURIZING - %s'%(default_text_features.upper()))
+    print('TEXT FEATURIZING - %s'%(str(default_text_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/text_features')
     os.system('python3 featurize.py %s'%(load_dir))
@@ -406,7 +416,7 @@ if 'text' in sampletypes:
 if 'image' in sampletypes:
     # import right featurizers (based on models)
     print('-----------------------------------')
-    print('IMAGE FEATURIZING - %s'%(default_image_features.upper()))
+    print('IMAGE FEATURIZING - %s'%(str(default_image_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/image_features')
     os.system('python3 featurize.py %s'%(load_dir))
@@ -414,7 +424,7 @@ if 'image' in sampletypes:
 if 'video' in sampletypes:
     # import right featurizers (based on models)
     print('-----------------------------------')
-    print('VIDEO FEATURIZING - %s'%(default_video_features))
+    print('VIDEO FEATURIZING - %s'%(str(default_video_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/video_features')
     os.system('python3 featurize.py %s'%(load_dir))
@@ -422,7 +432,7 @@ if 'video' in sampletypes:
 if 'csv' in sampletypes:
     # import right featurizers (based on models)
     print('-----------------------------------')
-    print('CSV FEATURIZING - %s'%(default_csv_features))
+    print('CSV FEATURIZING - %s'%(str(default_csv_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/csv_features')
     os.system('python3 featurize.py %s'%(load_dir))
@@ -438,31 +448,31 @@ model_dir=os.getcwd()
 
 if 'audio_models' in listdir:
     print('-----------------------------------')
-    print('AUDIO MODELING - %s'%(default_audio_features.upper()))
+    print('AUDIO MODELING - %s'%(str(default_audio_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/audio_models')
     make_predictions('audio', default_audio_features, os.getcwd(), load_dir)
 if 'text_models' in listdir:
     print('-----------------------------------')
-    print('TEXT MODELING - %s'%(default_text_features.upper()))
+    print('TEXT MODELING - %s'%(str(default_text_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/text_models')
     make_predictions('text', default_text_features,  os.getcwd(), load_dir)
 if 'image_models' in listdir:
     print('-----------------------------------')
-    print('IMAGE MODELING - %s'%(default_image_features.upper()))
+    print('IMAGE MODELING - %s'%(str(default_image_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/image_models')
     make_predictions('image', default_image_features, os.getcwd(), load_dir)
 if 'video_models' in listdir:
     print('-----------------------------------')
-    print('VIDEO MODELING - %s'%(default_video_features.upper()))
+    print('VIDEO MODELING - %s'%(str(default_video_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/video_models')
     make_predictions('video', default_video_features, os.getcwd(), load_dir)
 if 'csv_models' in listdir:
     print('-----------------------------------')
-    print('CSV FEATURIZING - %s'%(default_csv_features.upper()))
+    print('CSV MODELING - %s'%(str(default_csv_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/models/csv_models')
     make_predictions('csv', default_csv_features, os.getcwd(), load_dir)

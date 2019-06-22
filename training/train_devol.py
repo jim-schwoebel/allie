@@ -59,7 +59,7 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	os.remove('best-model.h5')
 	
 	# pickle the model 
-	modelname=jsonfile[0:-5]+'_devol_%s'%(default_features)
+	modelname=jsonfile[0:-5]+'_devol_%s'%(str(default_features))
     model.save(modelname+".h5")
 	print("\n Saved %s.json model to disk"%(modelname))
 

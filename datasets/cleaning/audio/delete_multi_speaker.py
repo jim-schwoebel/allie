@@ -82,7 +82,7 @@ removed_files=list()
 for i in range(len(wavfiles)):
     try:
         speaker_number=get_speakernum(wavfiles[i], model, mean_,scale_)
-        if speaker_number != 1: 
+        if speaker_number > 1: 
             # remove files with more than 1 concurrent speaker 
             os.remove(wavfiles[i])
             removed_files.append(wavfiles[i])

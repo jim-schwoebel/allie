@@ -86,5 +86,9 @@ elif problemtype=='csv':
     print('csv augmentation coming soon! passing now...') 
 
 # now move all the files in the temp directory back into main directory
+os.chdir(temp_dir)
+listdir=os.listdir()
+for i in range(len(listdir)):
+    shutil.move(temp_dir+'/'+listdir[i], folderpath+'/'+listdir[i])
 os.chdir(folderpath)
 shutil.rmtree('temp_folder')

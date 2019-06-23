@@ -43,57 +43,6 @@ deleted the files below
   from ._conv import register_converters as _register_converters
 Using TensorFlow backend.
 -----------------------------
- DELETING MUPLTIPLE SPEAKERS 
------------------------------
-/Users/jimschwoebel/allie/train_dir/two
-WARNING:tensorflow:From /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
-Instructions for updating:
-Colocations handled automatically by placer.
-2019-06-22 20:36:55.720557: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
-/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/keras/engine/saving.py:292: UserWarning: No training configuration found in save file: the model was *not* compiled. Compile it manually.
-  warnings.warn('No training configuration found in save file: '
-3_5_.wav
-Speaker Count Estimate:  4
-9_14_.wav
-Speaker Count Estimate:  4
-8_18_.wav
-Speaker Count Estimate:  4
-0_15_.wav
-Speaker Count Estimate:  4
-7_4_.wav
-Speaker Count Estimate:  4
-7_8_.wav
-Speaker Count Estimate:  4
-2_.wav
-Speaker Count Estimate:  4
-12_.wav
-Speaker Count Estimate:  4
-13_13_.wav
-Speaker Count Estimate:  4
-1_.wav
-Speaker Count Estimate:  4
-11_.wav
-Speaker Count Estimate:  4
-10_.wav
-Speaker Count Estimate:  4
-0_.wav
-Speaker Count Estimate:  4
-7_.wav
-Speaker Count Estimate:  4
-17_.wav
-Speaker Count Estimate:  4
-4_19_.wav
-Speaker Count Estimate:  4
-15_3_.wav
-Speaker Count Estimate:  4
-16_.wav
-Speaker Count Estimate:  4
-6_9_.wav
-Speaker Count Estimate:  4
-6_.wav
-Speaker Count Estimate:  4
-[]
------------------------------
        REMOVING SILENCE      
 -----------------------------
 ```
@@ -107,7 +56,7 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 * [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/datasets/cleaning/audio)
-* [delete_multi_speaker](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/delete_multi_speaker.py) - deletes audio file if more than 1 speaker (optimizing for one-way monologues).
+* [delete_multi_speaker](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/delete_multi_speaker.py) - deletes audio file if more than 1 speaker (optimizing for one-way monologues). Disabled by default because you may want to model audio events.
 * [remove_silence](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/remove_silence.py) - removes silence from audio files 
 * [normalize_volume](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/normalize_volume.py) - normalizes the volume of all audio files (at end)
 

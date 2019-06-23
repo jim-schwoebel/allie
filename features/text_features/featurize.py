@@ -113,8 +113,10 @@ os.chdir(basedir)
 os.chdir(foldername)
 listdir=os.listdir() 
 cur_dir=os.getcwd()
-
-feature_sets=settings['default_text_features']
+try:
+	feature_sets=[sys.argv[2]]
+except:
+	feature_sets=settings['default_text_features']
 default_text_transcriber='raw_text'
 
 # can specify many types of features...

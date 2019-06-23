@@ -106,7 +106,6 @@ Here are some settings that you can modify in this settings.json file and the va
 | [default_image_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/image_features) | default set of image features used for featurization (list). | ["image_features"] | ["image_features", "inception_features", "resnet_features", "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"] | 
 | [default_video_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/video_features) | default set of video features used for featurization (list). | ["video_features"] | ["video_features", "y8m_features"] | 
 | [default_csv_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of csv features used for featurization (list). | ["csv_features"] | ["csv_features"] | 
-| bias_discovery | looks for biases in datasets during featurization - e.g. ages and genders (boolean).| False | True, False | 
 | transcribe_audio | determines whether or not to transcribe an audio file via default_audio_transcriber (boolean). | True | True, False | 
 | default_audio_transcriber | the default audio transcriber if transcribe_audio == True (string). | 'pocketsphinx' | 'pocketsphinx' | 
 | transcribe_text | determines whether or not to transcribe a text file via default_text_transcriber (boolean). | True | True, False | 

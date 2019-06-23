@@ -63,6 +63,7 @@ termcolor
 textblob
 tpot
 tqdm
+uuid
 wave
 webrtcvad
 wget

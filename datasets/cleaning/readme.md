@@ -103,13 +103,13 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 ## Supported data cleaning scripts 
 
 ### All file types 
-* [delete_duplicates]() - deletes duplicate files in the directory 
-* [delete_json]() - deletes all .JSON files in the directory (this is to clean the featurizations) 
+* [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
+* [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
-### Audio 
-* [delete_multi_speaker]() - deletes multiple speakers or 0 speakers 
-* [remove_silence]() - removes silence from audio files 
-* [normalize_volume]() - normalizes the volume of all audio files (at end)
+### [Audio](https://github.com/jim-schwoebel/allie/tree/master/datasets/cleaning/audio)
+* [delete_multi_speaker](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/delete_multi_speaker.py) - deletes multiple speakers or 0 speakers 
+* [remove_silence](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/remove_silence.py) - removes silence from audio files 
+* [normalize_volume](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/normalize_volume.py) - normalizes the volume of all audio files (at end)
 
 ### Text
 * N/A 

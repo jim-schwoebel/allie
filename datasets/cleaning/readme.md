@@ -103,7 +103,8 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 ## Supported data cleaning scripts 
 
 ### All file types 
-* [delete_duplicates]()
+* [delete_duplicates]() - deletes duplicate files in the directory 
+* [delete_json]() - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
 ### Audio 
 * [delete_multi_speaker]() - deletes multiple speakers or 0 speakers 

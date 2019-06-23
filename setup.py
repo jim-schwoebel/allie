@@ -83,7 +83,7 @@ if 'settings.json' not in listdir:
             "default_csv_transcriber": "raw text",
             "default_training_script": ["tpot","devol"], 
             "clean_data": True,
-            "augment_data": True, 
+            "augment_data": False, 
             "visualize_data": True,  
             "create_YAML": True, 
             "model_compress": True}

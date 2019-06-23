@@ -431,7 +431,7 @@ for i in range(len(default_training_scripts)):
 
 	# note this will only work for pickle files for now. Will upgrade to deep learning
 	# models in the future.
-	if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn']:
+	if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn'] and problemtype=='audio':
 
 		# clear the load directory 
 		os.chdir(prevdir+'/load_dir/')

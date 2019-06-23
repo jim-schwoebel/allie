@@ -1,5 +1,8 @@
 import filecmp, os,time, platform, json, datetime 
 import sys
+'''
+go to the proper folder from cmd line
+'''
 
 try:
     foldername=sys.argv[1]

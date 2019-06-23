@@ -1,7 +1,7 @@
 
 import numpy as np
 import soundfile as sf
-import argparse, os, keras, sklearn, librosa
+import argparse, os, keras, sklearn, librosa, sys
 
 def get_speakernum(filename, model, mean_, scale_):
     '''
@@ -59,12 +59,21 @@ def get_wavfiles(listdir):
 
 	return wavfiles 
 
-model = keras.models.load_model(os.path.join('models', 'RNN_keras2.h5'))
-with np.load(os.path.join("models", 'scaler.npz')) as data:
+print('-----------------------------')
+print(' DELETING MUPLTIPLE SPEAKERS ')
+print('-----------------------------')
+
+folderpath=sys.argv[1]
+print(folderpath)
+
+model_dir=sys.argv[2]
+curdir=os.getcwd()
+model = keras.models.load_model(model_dir+'/models/RNN_keras2.h5')
+with np.load(model_dir+'/models/scaler.npz') as data:
 	mean_ = data['arr_0']
 	scale_ = data['arr_1']
-folder=input('what folder would you like to delete multiple concurrent speakers? (assumes wavfiles)')
-os.chdir(folder)
+
+os.chdir(folderpath)
 listdir=os.listdir()
 wavfiles=get_wavfiles(listdir)
 errors=list()
@@ -72,7 +81,7 @@ errors=list()
 for i in range(len(wavfiles)):
     try:
         speaker_number=get_speakernum(wavfiles[i], model, mean_,scale_)
-        if speaker_number > 1: 
+        if speaker_number != 1: 
             # remove files with more than 1 concurrent speaker 
             os.remove(wavfiles[i])
     except:

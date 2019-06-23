@@ -91,7 +91,13 @@ cur_dir=os.getcwd()
 g=json.load(open(prev_dir(prevdir)+'/settings.json'))
 csv_transcribe=g['transcribe_csv']
 default_csv_transcriber=g['default_csv_transcriber']
-feature_sets=g['default_csv_features']
+
+try:
+	# assume 1 type of feature_set 
+	feature_sets=[sys.argv[2]]
+except:
+	# if none provided in command line, then load deafult features 
+	feature_sets=g['default_csv_features']
 
 ###################################################
 

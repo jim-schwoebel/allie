@@ -5,7 +5,7 @@ This will take in a folder, classify that folder as
 audio, text, image, video, or .CSV files, and then
 augment the dataset appropriately.
 '''
-import os, sys, random, shutil
+import os, sys, random, shutil, time 
 
 def classifyfolder(listdir):
     filetypes=list()
@@ -67,7 +67,7 @@ for i in range(int(len(listdir)/3)):
     shutil.move(folderpath+'/'+listdir[i], temp_dir+'/'+listdir[i])
 
 ################################################
-##       FILE-SPECIFIC CLEANING SCRIPTS       ## 
+##     FILE-SPECIFIC AUGMENTATION SCRIPTS     ## 
 ################################################
 
 print(temp_dir)
@@ -75,40 +75,16 @@ if problemtype=='audio':
     # audio augmentation
     os.chdir(curdir+'/audio_augmentation')
     print(os.getcwd())
-    os.system('python3 audio_augment_folder.py %s'%(temp_dir))
-    os.chdir(temp_dir)
-    listdir=os.listdir()
-    for i in range(len(listdir)):
-        os.chdir(temp_dir)
-        if listdir[i].find('.') < 0: 
-            # if a folder, move all audio files back into temp dir
-            os.chdir(listdir[i])
-            listdir2=os.listdir()
-
-            for j in range(len(listdir2)):
-                if listdir2[j][-4:]=='.wav':
-                    shutil.move(listdir[i]+'/'+listdir2[j], temp_dir+'/'+listdir2[j])
-
-        # now go back to temp dir and delete all folder files
-        os.chdir(temp_dir)
-        shutil.rmtree(listdir[i])
-
+    os.system('python3 audio_augment.py %s'%(temp_dir))
 elif problemtype=='image':
-    # image augmentation 
-    pass
+    print('image augmentation coming soon! passing now...')
 elif problemtype=='text':
-    # text augmentation 
-    pass 
+    print('text augmentation coming soon! passing now...')
 elif problemtype=='video':
-    # video augmentation 
-    pass 
+    print('video augmentation coming soon! passing now...')
 elif problemtype=='csv':
-    print('currently, there is not a way to augment .CSV files')
-    print('feature coming soon!!')
+    print('csv augmentation coming soon! passing now...') 
 
 # now move all the files in the temp directory back into main directory
-listdir=os.listdir(temp_dir)
-for i in range(len(listdir)):
-    shutil.move(temp_dir+'/'+listdir[i], folderpath+'/'+listdir[i])
-os.chdir(cur_dir)
+os.chdir(folderpath)
 shutil.rmtree('temp_folder')

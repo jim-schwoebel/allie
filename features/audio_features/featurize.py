@@ -154,7 +154,12 @@ os.chdir(basedir)
 
 audio_transcribe=settings['transcribe_audio']
 default_audio_transcriber=settings['default_audio_transcriber']
-feature_sets=settings['default_audio_features']
+try:
+	# assume 1 type of feature_set 
+	feature_sets=[sys.argv[2]]
+except:
+	# if none provided in command line, then load deafult features 
+	feature_sets=settings['default_audio_features']
 
 # ^^ feature set set by settings.json above ^^ 
 # here are some options below to give an example of what is possible

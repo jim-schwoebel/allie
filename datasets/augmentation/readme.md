@@ -24,11 +24,10 @@ augment.py [foldername]
 ```
 
 Folder structures 
-- audio_augmentation
-- text_augmentation 
-- image_augmentation
-- video_augmentation 
-- csv_augmentation 
+- [audio_augmentation](https://github.com/jim-schwoebel/audio_augmentation/tree/a1b7838063684f451fbbacfc23311bbf8ca38897) - for augmenting audio files
+- [eda_nlp]() - for augmenting text files (not implemented yet)
+- [imgaug]() - for augmenting images (not implemented yet)
+- [vidaug]() - for augmenting video files (not implemented yet)
 
 ## Work-in-progress (WIP)
 Implement these two approaches:

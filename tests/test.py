@@ -1,4 +1,4 @@
-import os, time 
+import os, time, shutil
 
 def prev_dir(directory):
     g=directory.split('/')
@@ -28,6 +28,17 @@ load_dir = prevdir+'/load_dir'
 train_dir = prevdir + '/train_dir'
 model_dir = prevdir+ '/training'
 loadmodel_dir = prevdir+'/models'
+
+# remove one and two directories if they exist in train_dir to allow for 
+# proper testing.
+os.chdir(train_dir)
+listdir=os.listdir()
+if 'one' in listdir:
+    shutil.rmtree('one')
+if 'two' in listdir:
+    shutil.rmtree('two')
+
+os.chdir(cur_dir)
 
 ###############################################################
 ##                    RUN UNIT TESTS.                        ##

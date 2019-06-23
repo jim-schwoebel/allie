@@ -212,7 +212,7 @@ augment_dir=prevdir+'/datasets/augmentation'
 if augment_data == True:
 	for i in range(len(classes)):
 		os.chdir(augment_dir)
-		os.system('python3 augment.py %s %s'%(augment_dir, data_dir+'/'+classes[i]))
+		os.system('python3 augment.py %s'%(data_dir+'/'+classes[i]))
 
 ###############################################################
 ##                    FEATURIZE FILES                        ##
@@ -318,7 +318,7 @@ alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
 ############################################################
-## 		   TRAIN THE MODEL 			  ##
+## 					TRAIN THE MODEL 					  ##
 ############################################################
 
 '''
@@ -378,7 +378,7 @@ for i in range(len(default_training_scripts)):
 		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
 
 	############################################################
-	## 		    COMPRESS MODELS 			  ##
+	## 					COMPRESS MODELS 					  ##
 	############################################################
 
 	# go to model directory 
@@ -424,7 +424,7 @@ for i in range(len(default_training_scripts)):
 
 
 	############################################################
-	## 		    CREATE YAML FILES 		 	  ##
+	## 					CREATE YAML FILES 					  ##
 	############################################################
 
 	create_YAML=settings['create_YAML']
@@ -437,7 +437,15 @@ for i in range(len(default_training_scripts)):
 		os.chdir(prevdir+'/load_dir/')
 		listdir=os.listdir()
 		for i in range(len(listdir)):
-			os.remove(listdir[i])
+			try:
+				# for any files in the ./load_dir 
+				os.remove(listdir[i])
+			except:
+				# for folders in the ./load_dir
+				try:
+					shutil.rmtree(listdir[i])
+				except:
+					print('error, %s not a folder'%(listdir[i]))
 
 		# First need to create some test files for each use case
 		# copy 10 files from each class into the load_dir 

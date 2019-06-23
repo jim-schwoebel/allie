@@ -29,8 +29,9 @@ pip3 install -r requirements.txt
 Now you can run main script. There are two arguments - the file name ('test.avi') and the number of seconds that you wish to record (60):
 
 ```
-python3 record.py test.avi 60
+python3 record.py test.avi 60 /Users/jimschwoebel/downloads/
 ```
+This will record a 60 second video file and transfer the file to the /downloads directory.
 
 ## Feedback
 Any feedback this repository is greatly appreciated. 

@@ -190,6 +190,30 @@ except:
 
 # print(problemtype)
 # time.sleep(10)
+
+
+###############################################################
+##                    CLEAN THE DATA                        ##
+###############################################################
+clean_data=settings['clean_data']
+clean_dir=prevdir+'/datasets/cleaning'
+
+if clean_data == True:
+	for i in range(len(classes)):
+		os.chdir(clean_dir)
+		os.system('python3 clean.py %s %s'%(clean_dir, data_dir+'/'+classes[i]))
+
+###############################################################
+##                    AUGMENT THE DATA                       ##
+###############################################################
+augment_data=settings['augment_data']
+augment_dir=prevdir+'/datasets/augmentation'
+
+if augment_data == True:
+	for i in range(len(classes)):
+		os.chdir(augment_dir)
+		os.system('python3 augment.py %s %s'%(augment_dir, data_dir+'/'+classes[i]))
+
 ###############################################################
 ##                    FEATURIZE FILES                        ##
 ###############################################################
@@ -306,11 +330,11 @@ files appropriately.
 default_training_scripts=settings['default_training_script']
 model_compress=settings['model_compress']
 
-for z in range(len(default_training_scripts)):
+for i in range(len(default_training_scripts)):
 	# go to model directory 
 	os.chdir(model_dir)
-	default_training_script=default_training_scripts[z]
-	
+
+	default_training_script=default_training_scripts[i]
 	if default_training_script=='adanet':
 		print('Adanet training is coming soon! Please use a different model setting for now.') 
 		# import train_adanet as ta 

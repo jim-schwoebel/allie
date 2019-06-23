@@ -86,7 +86,7 @@ if 'settings.json' not in listdir:
             "augment_data": False, 
             "visualize_data": True,  
             "create_YAML": True, 
-            "model_compress": True}
+            "model_compress": False}
     jsonfile=open('settings.json','w')
     json.dump(data,jsonfile)
     jsonfile.close()

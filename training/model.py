@@ -318,7 +318,7 @@ alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
 ############################################################
-## 					TRAIN THE MODEL 					  ##
+## 		   TRAIN THE MODEL 			  ##
 ############################################################
 
 '''
@@ -378,7 +378,7 @@ for i in range(len(default_training_scripts)):
 		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_features)
 
 	############################################################
-	## 					COMPRESS MODELS 					  ##
+	## 		    COMPRESS MODELS 			  ##
 	############################################################
 
 	# go to model directory 
@@ -424,7 +424,7 @@ for i in range(len(default_training_scripts)):
 
 
 	############################################################
-	## 					CREATE YAML FILES 					  ##
+	## 		    CREATE YAML FILES 		 	  ##
 	############################################################
 
 	create_YAML=settings['create_YAML']

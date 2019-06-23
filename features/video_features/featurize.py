@@ -91,7 +91,10 @@ audio_transcribe_setting=settings['transcribe_audio']
 video_transcribe_setting=settings['transcribe_videos']
 default_audio_transcriber=settings['default_audio_transcriber']
 default_video_transcriber=settings['default_video_transcriber']
-feature_sets=settings['default_video_features']
+try:
+	feature_sets=[sys.argv[2]]
+except:
+	feature_sets=settings['default_video_features']
 os.chdir(cur_dir)
 
 # get class label from folder name 

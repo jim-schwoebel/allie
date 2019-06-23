@@ -23,6 +23,6 @@ Here is the list of automated tests that are in this repository:
 
 Here are some tests we are working to add in:
 - test ability to spin up YAML files for trained models (if create_YAML==True in settings.json) 
-- test cleaning abilities 
-- test augmentation capabilities
+- test cleaning abilities (for audio, text, image, video, csv files)
+- test augmentation capabilities (for audio, text, image, video, csv files)
 

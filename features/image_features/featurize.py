@@ -92,7 +92,10 @@ os.chdir(basedir)
 
 image_transcribe=settings['transcribe_image']
 default_image_transcriber=settings['default_image_transcriber']
-feature_sets=settings['default_image_features']
+try:
+	feature_sets=[sys.argv[2]]
+except:
+	feature_sets=settings['default_image_features']
 
 #### ^^ 
 #### Can specify a few feature sets here (customizable in settings.json)

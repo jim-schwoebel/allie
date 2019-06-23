@@ -17,6 +17,7 @@ librosa
 llvmlite
 ludwig
 lxml==4.2.4
+markovify
 matplotlib 
 natsort
 nltk

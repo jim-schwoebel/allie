@@ -65,10 +65,12 @@ os.system('python3 delete_json.py %s'%(folderpath))
 ################################################
 
 if problemtype=='audio':
-    # the order here is important 
-    # delete files that have multiple speakers, remove silence, then normalize volumes.
-    os.system('python3 audio/delete_multi_speaker.py %s %s'%(modelpath, folderpath))
+    # the order is important here (so do not re-order) 
+    # 1. delete files that have multiple speakers, remove silence, then normalize volumes.
+    # os.system('python3 audio/delete_multi_speaker.py %s %s'%(modelpath, folderpath))
+    # 2. remove silence
     os.system('python3 audio/remove_silence.py %s'%(folderpath))
+    # 3. normalize volume 
     os.system('python3 audio/normalize_volume.py %s'%(folderpath))
 elif problemtype=='image':
     pass

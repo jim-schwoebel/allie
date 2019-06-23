@@ -109,6 +109,7 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 ### Audio 
 * [delete_multi_speaker]() - deletes multiple speakers or 0 speakers 
 * [remove_silence]() - removes silence from audio files 
+* [normalize_volume]() - normalizes the volume of all audio files (at end)
 
 ### Text
 * N/A 

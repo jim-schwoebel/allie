@@ -108,11 +108,6 @@ settingsdir=prev_dir(basedir)
 settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
-
-# change to folder directory 
-os.chdir(foldername)
-listdir=os.listdir() 
-cur_dir=os.getcwd()
 try:
 	feature_sets=[sys.argv[2]]
 except:
@@ -187,6 +182,11 @@ for j in range(len(feature_sets)):
 			print('loaded Facebook FastText model...')
 			glovemodel=[]
 			w2vmodel=[]
+
+# change to folder directory 
+os.chdir(foldername)
+listdir=os.listdir() 
+cur_dir=os.getcwd()
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):

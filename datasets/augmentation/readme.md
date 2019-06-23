@@ -38,7 +38,7 @@ Here is a brief description of what the folders in this section of the repositor
 - [vidaug]() - for augmenting video files (not implemented yet)
 
 ## Work-in-progress (WIP)
-Implement these two approaches:
+- Currently getting EDA_NLP, IMGAUG, and VIDAUG to work.
 - [AutoAugment (Google)](https://github.com/tensorflow/models/tree/master/research/autoaugment) - paper [here](https://arxiv.org/abs/1805.09501)
 - [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
 

@@ -9,7 +9,7 @@ To featurize an entire folder of a certain file type (e.g. audio files of .WAV f
 ```
 cd ~ 
 cd allie/features/audio_features
-python3 featurize.py [folderpath]
+python3 featurize.py /Users/jimschwoebel/allie/load_dir
 ```
 
 The code above will featurize all the audio files in the folderpath via the default_featurizer specified in the settings.json file (e.g. 'standard_features'). 
@@ -19,7 +19,7 @@ If you'd like to use a different featurizer you can specify it optionally:
 ```
 cd ~ 
 cd allie/features/audio_features
-python3 featurize.py [folderpath] [featurizer]
+python3 featurize.py /Users/jimschwoebel/allie/load_dir librosa_features
 ```
 
 Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.

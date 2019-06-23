@@ -61,7 +61,9 @@ except:
     shutil.rmtree(temp_dir)
     os.mkdir(temp_dir)
 
-for i in range(int(len(listdir)/3)):
+# can also augment int(len(listdir)/2) if augmentation is 1:1 
+# if augmentation is not 1:1, better to augment whole dataset
+for i in range(len(listdir)):
     # find 33% of the dataset to augment 
     augment_files.append(listdir[i])
     shutil.move(folderpath+'/'+listdir[i], temp_dir+'/'+listdir[i])

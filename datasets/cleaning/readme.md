@@ -112,13 +112,13 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 * [normalize_volume](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/normalize_volume.py) - normalizes the volume of all audio files (at end)
 
 ### Text
-* N/A 
+* Coming soon.
 
 ### Image 
-* N/A 
+* Coming soon.
 
 ### Video
-* N/A
+* Coming soon.
 
 ### CSV
-* N/A
+* Coming soon.

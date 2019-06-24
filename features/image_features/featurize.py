@@ -37,7 +37,7 @@ def image_featurize(feature_set, imgfile, cur_dir, haar_dir):
 	elif feature_set == 'resnet_features':
 		features, labels=rf.resnet_featurize(imgfile)
 	elif feature_set == 'vgg19_features':
-		features, labels=v16f.vgg19_featurize(imgfile)
+		features, labels=v19f.vgg19_featurize(imgfile)
 	elif feature_set == 'tesseract_features':
 		transcript, features, labels = tf.tesseract_featurize(imgfile)
 

@@ -34,7 +34,7 @@ def video_record(filename, test_dir):
     print('---------------')
     print('recording video...')
     cur_dur=os.getcwd()
-    os.chdir(test_dir+'/helpers/video_record')
+    os.chdir(test_dir+'/video_record')
     # 3 second recordings 
     os.system('python3 record.py %s 3 %s'%(filename, cur_dir))
     os.chdir(cur_dir)

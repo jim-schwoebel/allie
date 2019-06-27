@@ -303,8 +303,11 @@ os.rename(newfilename2, filename[0:-4]+'.mp4')
 shutil.rmtree(filename[0:-4]+'_screenshots')
 
 os.chdir(curdir)
-file_dir=os.getcwd()+'/'+filename[0:-4]
+file_dir=os.getcwd()+'/temp'
+os.chdir(file_dir)
+os.remove(filename[0:-4]+'.mp4')
+os.rename('output.mp4', filename[0:-4]+'.mp4')
 shutil.move(file_dir+'/'+filename[0:-4]+'.mp4', train_dir+'/'+filename[0:-4]+'.mp4')
-
+os.chdir(curdir)
 shutil.rmtree('temp')
-shutil.rmtree(filename[0:-4])
+

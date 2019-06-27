@@ -19,6 +19,18 @@ Here is the list of automated tests that are in this repository:
 - featurization for audio, text, image, video, and .CSV files via default_featurizers.
 - ability to load model files and make predictions via model directory (via test files / load_dir / models trained) 
 
+## Seed files 
+
+You can seed fils with the seed_files.py script. The an example is below:
+```
+python3 seed_files.py audio /Users/jimschwoebel/allie/train_dir/one
+
+```
+
+Where the 'audio' is the type of file you want to automatically generate and the /Users/jimschwoebel/allie/train_dir/one is the directory you'd like to put the files.
+
+By default, this script generates 20 files at a time and does things like record ambient sound for audio. You can automatically generate csv, audio, text, image, and video files this way :-) 
+
 ## Work-in-progress (to add later)
 
 Here are some tests we are working to add in:

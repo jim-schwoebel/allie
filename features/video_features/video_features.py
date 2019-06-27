@@ -553,14 +553,17 @@ def textfeatures(transcript):
     return features, labels
                            
 def transcribe(wavfile):
-    r = sr.Recognizer()
-    # use wavfile as the audio source (must be .wav file)
-    with sr.AudioFile(wavfile) as source:
-        #extract audio data from the file
-        audio = r.record(source)                    
+    try:
+        r = sr.Recognizer()
+        # use wavfile as the audio source (must be .wav file)
+        with sr.AudioFile(wavfile) as source:
+            #extract audio data from the file
+            audio = r.record(source)                    
 
-    transcript=r.recognize_sphinx(audio)
-    print(transcript)
+        transcript=r.recognize_sphinx(audio)
+        print(transcript)
+    except:
+        transcript=''
     return transcript
 
 

@@ -72,7 +72,7 @@ def classifyfolder(listdir):
 			'image': filetypes.count('image'),
 			'text': filetypes.count('text'),
 			'video': filetypes.count('video'),
-			'csv': filetypes.count('.csv')}
+			'csv': filetypes.count('csv')}
 
 	# get back the type of folder (main file type)
 	countlist=list(counts)
@@ -144,7 +144,7 @@ except:
 	elif problemtype=='4':
 		problemtype='video'
 	elif problemtype=='5':
-		problemtype=='csv'
+		problemtype='csv'
 
 	print('\n OK cool, we got you modeling %s files \n'%(problemtype))
 	count=0
@@ -254,16 +254,15 @@ for i in range(len(classes)):
 			g=json.load(open(listdir[i]))
 			# consolidate all features into one array (if featurizing with multiple featurizers)
 			default_feature=list()
+			default_label=list()
 			for j in range(len(default_features)):
 				default_feature=default_feature+g['features'][problemtype][default_features[j]]['features']
+				default_label=default_label+g['features'][problemtype][default_features[j]]['labels']
 
 			feature_list.append(default_feature)
-			print(default_feature)
+			label_list.append(default_label)
 	
 	data[class_type]=feature_list
-
-# get feature labels (for ludwig) - should be the same for all files
-feature_labels=g['features'][problemtype][default_features[0]]['labels']
 
 ###############################################################
 ##                    DATA PRE-PROCESSING                    ##

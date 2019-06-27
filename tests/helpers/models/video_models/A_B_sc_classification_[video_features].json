@@ -1,0 +1,1 @@
+{"sample type": "video", "feature_set": ["video_features"], "model name": "A_B_sc_classification_[video_features].pickle", "accuracy": 1.0, "deviation": 0.0, "model type": "sc_decision-tree"}

@@ -1,0 +1,1 @@
+{"sample type": "csv", "feature_set": ["csv_features"], "model name": "one_two_sc_classification_[csv_features].pickle", "accuracy": 0.52, "deviation": 0.039999999999999994, "model type": "sc_decision-tree"}

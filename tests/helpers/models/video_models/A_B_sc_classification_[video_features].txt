@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+svm: 1.0 (+/- 0.0) 
+
+MODEL FILE NAME: 
+
+ A_B_sc_classification_[video_features].pickle
+
+DATE CREATED: 
+
+ 2019-06-26 19:45:16.724459
+
+EXECUTION TIME: 
+
+ 0.3522989749908447
+
+GROUPS: 
+
+['A', 'B']
+(20 in each class, 25% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+[1 0 1 0 1 0 0 0 1 0 0 0 1 0 1 0 1 0 1 1 1 0 0 1 1 1 0 0 1 1]
+
+test labels
+
+[0 0 1 0 1 0 0 1 1 1]
+
+FEATURES: 
+
+ ['video_features'] (video)
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+decision-tree: 1.0 (+/- 0.0)
+gaussian-nb: 1.0 (+/- 0.0)
+sk: 1.0 (+/- 0.0)
+adaboost: 1.0 (+/- 0.0)
+gradient boosting: 1.0 (+/- 0.0)
+logistic regression: 1.0 (+/- 0.0)
+hard voting: 1.0 (+/- 0.0)
+knn: 1.0 (+/- 0.0)
+random forest: 1.0 (+/- 0.0)
+svm: 1.0 (+/- 0.0)
+
+
+(C) 2019, NeuroLex Laboratories

@@ -56,6 +56,19 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	                  epochs=10)
 	model.summary()
 
+	score = model.evaluate(x_test, y_test, verbose=0)
+	jsonfile=open(modelname+'.json','w')
+	data={'accuracy': score[1],
+		  'sampletype': mtype,
+		  'feature_set': default_features,
+		  'model_name': modelname+".h5",
+		  'training_type': 'devol',
+		  'model summary': str(model.summary()),
+		}
+
+	json.dump(data,jsonfile)
+	jsonfile.close()
+
 	os.remove('best-model.h5')
 	
 	# pickle the model 

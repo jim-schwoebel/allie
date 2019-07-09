@@ -23,9 +23,9 @@ prevdir=prev_dir(directory)
 sys.path.append(prevdir+'/text_features')
 import nltk_features as nf 
 
-def mixed_featurize(wavfile, transcript):
+def mixed_featurize(wavfile, transcript, help_dir):
     print(os.getcwd())
-    g=json.load(open(prev_dir(os.getcwd())+'/helpers/mixed/mixed_feature_0.json'))
+    g=json.load(open(help_dir+'/mixed/mixed_feature_0.json'))
     
     labels=g['labels']
     inds=g['mixed_inds']

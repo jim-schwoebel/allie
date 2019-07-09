@@ -10,6 +10,8 @@ Here are some things that Allie can do:
 
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 
+You can read more about Allie in the [wiki documentation](https://github.com/jim-schwoebel/allie/wiki).
+
 ## getting started 
 
 First, clone the repository:
@@ -131,7 +133,10 @@ Any feedback on the book or this repository is greatly appreciated.
 * If you want to talk to me directly, please send me an email @ js@neurolex.co. 
 
 ## Additional resources
-Here are some additional resources in this repository (not covered in the information above): 
+
+First, you may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.
+
+Here are also some additional resources to explore to understand Allie's functionality:
 * [Bokeh](https://bokeh.pydata.org/en/latest/) - for data visualizaton. 
 * [Data augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
 * [Data cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).

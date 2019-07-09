@@ -134,7 +134,8 @@ Any feedback on the book or this repository is greatly appreciated.
 
 ## Additional resources
 
-First, you may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.
+You may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.
+
 * [0. Getting started](https://github.com/jim-schwoebel/allie/wiki/0.-Getting-started)
 * [1. Sample schema](https://github.com/jim-schwoebel/allie/wiki/1.-Sample-schema)
 * [2. Collecting datasets](https://github.com/jim-schwoebel/allie/wiki/2.-Collecting-datasets)
@@ -145,10 +146,3 @@ First, you may want to read through [the wiki](https://github.com/jim-schwoebel/
 * [7. Training models](https://github.com/jim-schwoebel/allie/wiki/7.-Training-models)
 * [8. Loading models](https://github.com/jim-schwoebel/allie/wiki/8.-Loading-models)
 * [9. Server deployment](https://github.com/jim-schwoebel/allie/wiki/9.-Server-deployment)
-
-Here are also some additional resources to explore to understand Allie's functionality:
-* [Bokeh](https://bokeh.pydata.org/en/latest/) - for data visualizaton. 
-* [Data augmentation](https://github.com/jim-schwoebel/Allie/tree/master/datasets/augmentation) - augmentation repositories for audio, text, and video files. 
-* [Data cleaning](https://github.com/jim-schwoebel/Allie/tree/master/datasets/cleaning) - data cleaning scripts for deleting duplicate files and removing silence (for audio files).
-* [Matplotlib](https://towardsdatascience.com/data-visualization-using-matplotlib-16f1aae5ce70) - for data visualization.
-* [Yellowbrick](https://www.scikit-yb.org/en/latest/) - for data visualization 

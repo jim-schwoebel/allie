@@ -6,7 +6,7 @@ Note that this assumes a standard audio feature array (for now), but it is expec
 
 ## Settings.json
 
-If you set create_YAML == True, the production folder will automatically generate a production-ready repository from the model.py script. This is the easiest way to spin up new models into production.
+If you set ```create_YAML == True```, the production folder will automatically generate a production-ready repository from the model.py script. This is the easiest way to spin up new models into production.
 
 ## How to call from command line 
 

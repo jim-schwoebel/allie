@@ -60,7 +60,7 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	
 	# pickle the model 
 	modelname=jsonfile[0:-5]+'_devol_%s'%(str(default_features.replace("'",'').replace('"','')))
-    model.save(modelname+".h5")
+	model.save(modelname+".h5")
 	print("\n Saved %s.json model to disk"%(modelname))
 
 	listdir=os.listdir()

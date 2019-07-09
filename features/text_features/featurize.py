@@ -113,7 +113,7 @@ try:
 	feature_sets=[sys.argv[2]]
 except:
 	feature_sets=settings['default_text_features']
-default_text_transcriber='raw text'
+default_text_transcriber=settings['default_text_transcriber']
 
 # can specify many types of features...
 for j in range(len(feature_sets)):

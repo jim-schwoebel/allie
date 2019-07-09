@@ -21,8 +21,6 @@ Some things you can do to clean datasets include:
 
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 
-* get_commonvoice.py - standard dataset used for speech 
-* get_audioset.py - standard dataset used for event detection
 
 ### Speech datasets 
 * [2000 HUB5 English](https://catalog.ldc.upenn.edu/LDC2002T43) - The Hub5 evaluation series focused on conversational speech over the telephone with the particular task of transcribing conversational speech into text. Its goals were to explore promising new areas in the recognition of conversational speech, to develop advanced technology incorporating those ideas and to measure the performance of new technology.

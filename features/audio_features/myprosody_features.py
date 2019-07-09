@@ -14,10 +14,10 @@ def prev_dir(directory):
     directory=directory[0:i1]
     return directory
 
-def myprosody_featurize(wavfile):
+def myprosody_featurize(wavfile, help_dir):
 	sound=os.getcwd()+'/'+wavfile
 	path=os.getcwd()
-	sourcerun=prev_dir(os.getcwd())+"helpers/myprosody/myprosody/"+"dataset"+"/"+"essen"+"/"+"myspsolution.praat"
+	sourcerun=help_dir+'/myprosody/myprosody/dataset/essen/myspsolution.praat'
 	objects= run_file(sourcerun, -20, 2, 0.3, "yes",sound,path, 80, 400, 0.01, capture_output=True)
 	print(objects[0]) # This will print the info from the sound object, and objects[0] is a parselmouth.Sound object
 	z1=str(objects[1]) # This will print the info from the textgrid object, and objects[1] is a parselmouth.Data object with a TextGrid inside

@@ -105,7 +105,7 @@ def audio_featurize(feature_set, audiofile, transcript):
 	elif feature_set == 'nltk_features':
 		features, labels = nf.nltk_featurize(transcript)
 	elif feature_set == 'mixed_features':
-		features, labels = mixf.mixed_featurize(audiofile, transcript)
+		features, labels = mixf.mixed_featurize(audiofile, transcript, help_dir)
 	elif feature_set == 'audiotext_features':
 		features, labels = atf.audiotext_featurize(audiofile, transcript)
 

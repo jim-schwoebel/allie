@@ -99,9 +99,10 @@ def audio_featurize(feature_set, audiofile, transcript):
 	elif feature_set == 'specimage_features':
 		features, labels = sif.specimage_featurize(audiofile,cur_dir, haar_dir)
 	elif feature_set == 'specimage2_features':
-		features, labels = sif2.specimage2_featurize(audiofile,cur_dir, haar_dir)
+		features, labels = sif2.specimage2_featurize(audiofile, cur_dir, haar_dir)
 	elif feature_set == 'myprosody_features':
-		features, labels = mpf.myprosody_featurize(audiofile, help_dir)
+		print('Myprosody features are coming soon!! Currently debugging this feature set.')
+		# features, labels = mpf.myprosody_featurize(audiofile, cur_dir, help_dir)
 	elif feature_set == 'nltk_features':
 		features, labels = nf.nltk_featurize(transcript)
 	elif feature_set == 'mixed_features':

@@ -3,7 +3,7 @@ import numpy as np
 from keras import backend as K
 from helpers.devol.devol import DEvol, GenomeHandler
 from sklearn.model_selection import train_test_split
-import time, os, shutil 
+import time, os, shutil, json
 
 def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
 	print('training DEVOL CNN network (may take up to 1 day)')

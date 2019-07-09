@@ -1,12 +1,12 @@
 # Models
 
-Use this section of the repository to make model predctions in the [./load_dir](https://github.com/jim-schwoebel/allie/tree/master/load_dir).
+Use this section of the repository to make model predictions in the [./load_dir](https://github.com/jim-schwoebel/allie/tree/master/load_dir).
 
-Note you can put audio, text, image, video, or .CSV files in the [./load_dir](https://github.com/jim-schwoebel/allie/tree/master/load_dir). These files will then be featurized by the default featurizers. Model predictions will only be made if there are model files in the proper directory (e.g. audio_modeos, text_models, image_models, video_models, or csv_models). 
+Note you can put audio, text, image, video, or .CSV files in the [./load_dir](https://github.com/jim-schwoebel/allie/tree/master/load_dir). These files will then be featurized by the default featurizers. Model predictions will only be made if there are model files in the proper directory (e.g. audio_models, text_models, image_models, video_models, or csv_models). 
 
 ## Getting started
 
-First, you need to put some files in the ./load_dir. I put the test files from the ./test directory into the load_dir here for demostration purposes. This is the output from the terminal (of files in the ./load_dir.
+First, you need to put some files in the ./load_dir. I put the test files from the ./test directory into the load_dir here for demonstration purposes. This is the output from the terminal (of files in the ./load_dir.
 
 ```
 Jims-MBP:allie jimschwoebel$ cd load_dir

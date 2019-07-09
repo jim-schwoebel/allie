@@ -123,6 +123,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 
 ### Audio
+* fix myprosody_features.py feature script (in helpers for now).
 * allow Ludwig model type to dictate featurization - 'audio_ludwig_features'
 * [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
 * [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)

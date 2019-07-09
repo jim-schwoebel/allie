@@ -70,7 +70,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines and feature selection. 
 * '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning
-* '[Hyperband-scikitlearn](https://github.com/thuijskens/scikit-hyperband)' - Hyperband 
+* '[Hyperband-scikitlearn](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * Add in RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) and hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts

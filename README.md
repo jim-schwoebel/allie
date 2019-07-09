@@ -135,6 +135,16 @@ Any feedback on the book or this repository is greatly appreciated.
 ## Additional resources
 
 First, you may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.
+* [0. Getting started](https://github.com/jim-schwoebel/allie/wiki/0.-Getting-started)
+* [1. Sample schema](https://github.com/jim-schwoebel/allie/wiki/1.-Sample-schema)
+* [2. Collecting datasets](https://github.com/jim-schwoebel/allie/wiki/2.-Collecting-datasets)
+* [3. Cleaning datasets](https://github.com/jim-schwoebel/allie/wiki/3.-Cleaning-datasets)
+* [4. Augmenting datasets](https://github.com/jim-schwoebel/allie/wiki/4.-Augmenting-datasets)
+* [5. Labeling datasets](https://github.com/jim-schwoebel/allie/wiki/5.-Labeling-datasets)
+* [6. Data featurization](https://github.com/jim-schwoebel/allie/wiki/6.-Data-featurization)
+* [7. Training models](https://github.com/jim-schwoebel/allie/wiki/7.-Training-models)
+* [8. Loading models](https://github.com/jim-schwoebel/allie/wiki/8.-Loading-models)
+* [9. Server deployment](https://github.com/jim-schwoebel/allie/wiki/9.-Server-deployment)
 
 Here are also some additional resources to explore to understand Allie's functionality:
 * [Bokeh](https://bokeh.pydata.org/en/latest/) - for data visualizaton. 

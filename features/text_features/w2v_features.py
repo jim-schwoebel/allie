@@ -8,7 +8,7 @@ import numpy as np
 
 def w2v_featurize(transcript,model):
 
-    sentences2=sentence.split()
+    sentences2=transcript.split()
     size=300
 
     w2v_embed=list()

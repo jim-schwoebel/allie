@@ -71,6 +71,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines and feature selection. 
 * '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning
 * '[Hyperband-scikitlearn](https://github.com/thuijskens/scikit-hyperband)' - Hyperband 
+* '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * Add in RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) and hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
 * If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 

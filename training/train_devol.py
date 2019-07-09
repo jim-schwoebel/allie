@@ -55,6 +55,7 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	                  pop_size=10,
 	                  epochs=10)
 	model.summary()
+	summary = str(model.to_json()) 
 
 	# get model name 
 	modelname=jsonfile[0:-5]+'_devol_%s'%(str(default_features.replace("'",'').replace('"','')))
@@ -62,11 +63,11 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	score = model.evaluate(x_test, y_test, verbose=0)
 	jsonfile=open(modelname+'.json','w')
 	data={'accuracy': score[1],
-		  'sampletype': mtype,
+		  'sampletype': problemtype,
 		  'feature_set': default_features,
 		  'model_name': modelname+".h5",
 		  'training_type': 'devol',
-		  'model summary': str(model.summary()),
+		  'model summary': summary,
 		}
 
 	json.dump(data,jsonfile)

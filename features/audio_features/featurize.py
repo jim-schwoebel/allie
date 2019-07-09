@@ -26,7 +26,7 @@ import praat_features as prf
 import pspeech_features as psf
 import specimage_features as sif
 import specimage2_features as sif2
-import myprosody_features as mpf
+# import myprosody_features as mpf
 import mixed_features as mixf
 import audiotext_features as atf
 import helpers.transcribe as ts

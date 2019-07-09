@@ -15,6 +15,7 @@ information is useful to you.
 import nltk_features as nf
 import spacy_features as sf
 import glove_features as gf 
+import w2v_features as w2v
 import fast_features as ff
 import helpers.transcribe as ts
 
@@ -117,6 +118,9 @@ default_text_transcriber='raw_text'
 # can specify many types of features...
 for j in range(len(feature_sets)):
 	feature_set=feature_sets[j]
+	glovemodel=[]
+	w2vmodel=[]
+	fastmodel=[]
 
 	if feature_set in ['nltk_features', 'spacy_features']:
 		# save memory by not loading any models that are not necessary.
@@ -150,8 +154,7 @@ for j in range(len(feature_sets)):
 			print('loading GloVe model...')
 			glovemodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/glove.6B/'+glovemodelname, binary=False)
 			print('loaded GloVe model...')
-			w2vmodel=[]
-			fastmodel=[]
+
 		# load Google W2V model
 		elif feature_set == 'w2v_features':
 			if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
@@ -163,8 +166,6 @@ for j in range(len(feature_sets)):
 			print('loading Google W2V model...')
 			w2vmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/'+w2vmodelname, binary=True)
 			print('loaded Google W2V model...')
-			glovemodel=[]
-			fastmodel=[]
 
 		# load facebook FastText model
 		elif feature_set == 'fast_features':
@@ -180,8 +181,6 @@ for j in range(len(feature_sets)):
 			# Loading fasttext model 
 			fastmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
 			print('loaded Facebook FastText model...')
-			glovemodel=[]
-			w2vmodel=[]
 
 # change to folder directory 
 os.chdir(foldername)

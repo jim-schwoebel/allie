@@ -101,7 +101,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [glove_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/glove_features.py) 
 * [nltk_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/nltk_features.py) - standard text feature array (default)
 * [spacy_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/spacy_features.py) 
-* [w2vec_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/w2vec_features.py) - note this is the largest model from Google and may crash your computer if you don't have enough memory. I'd recommend fast_features if you're looking for a pre-trained embedding.
+* [w2v_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/w2vec_features.py) - note this is the largest model from Google and may crash your computer if you don't have enough memory. I'd recommend fast_features if you're looking for a pre-trained embedding.
 
 ### Images 
 * [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default)

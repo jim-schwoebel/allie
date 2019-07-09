@@ -1,10 +1,12 @@
 # Datasets
 
-You can quickly download any of these datasets with the datasets.py script. This uses fuzzy search to figure out what dataset you are trying to find. An exhaustive list of all the audio, text, image, and video datasets are listed below.
+You can quickly download any of these datasets with the datasets.py script. This uses fuzzy search to figure out what dataset you are trying to find. 
 ```
 cd allie/datasets/downloads
 python3 download.py 
 ```
+
+An exhaustive list of all the audio, text, image, and video datasets are listed below.
 
 You can also search for more datasets using Google DataSet search @ https://toolbox.google.com/datasetsearch or Kaggle @ https://www.kaggle.com/datasets.
 

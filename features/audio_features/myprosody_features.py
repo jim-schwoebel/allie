@@ -25,10 +25,82 @@ def myprosody_featurize(wavfile, help_dir):
 	z3=np.array(z2)
 	z4=np.array(z3)[np.newaxis]
 	z5=z4.T
-	dataset={"number_ of_syllables":float(z5[0,:]),"number_of_pauses":float(z5[1,:]),"rate_of_speech":float(z5[2,:]),
-			 "articulation_rate":float(z5[3,:]),"speaking_duration":float(z5[4,:]),"original_duration":float(z5[5,:]),
-			 "balance":float(z5[6,:]),"f0_mean":float(z5[7,:]),"f0_std":float(z5[8,:]),"f0_median":float(z5[9,:]),
-			 "f0_min":float(z5[10,:]),"f0_max":float(z5[11,:]),"f0_quantile25":float(z5[12,:]),"f0_quan75":float(z5[13,:])}
+
+	try:
+		syllables=float(z5[0,:])
+	except:
+		syllables=0
+
+	try:
+		pauses=float(z5[1,:])
+	except:
+		pauses=0
+
+
+	try:
+		rate=float(z5[2,:])
+	except:
+		rate=0
+
+	try:
+		articulation=float(z5[3,:])
+	except:
+		articulation=0
+
+	try:
+		speak_duration=float(z5[4,:])
+	except:
+		speak_duration=0
+
+	try:
+		original_duration=float(z5[5,:])
+	except:
+		original_duration=0
+
+	try:
+		balance=float(z5[6,:])
+	except:
+		balance=0
+
+	try:
+		f0_mean=float(z5[7,:])
+	except:
+		f0_mean=0
+
+	try:
+		f0_std=float(z5[8,:])
+	except:
+		f0_std=0
+
+	try:
+		f0_median=float(z5[9,:])
+	except:
+		f0_median=0
+
+	try:
+		f0_min=float(z5[10,:])
+	except:
+		f0_min=0
+
+	try:
+		f0_max=float(z5[11,:])
+	except:
+		f0_max=0
+
+	try:
+		f0_quant25=float(z5[12,:])
+	except:
+		f0_quant25=0
+
+	try:
+		f0_quant75=float(z5[13,:])
+	except:
+		f0_quant75=0
+
+	dataset={"number_ of_syllables":syllables,"number_of_pauses":pauses,"rate_of_speech":rate,
+			 "articulation_rate":articulation,"speaking_duration":speak_duration,"original_duration":original_duration,
+			 "balance":balance,"f0_mean":f0_mean,"f0_std":f0_std,"f0_median":f0_median,
+			 "f0_min":f0_min,"f0_max":f0_max,"f0_quantile25":f0_quant25,"f0_quant75":f0_quant75}
 
 	os.remove(wavfile[0:-4]+'.TextGrid')
 	# sound = parselmouth.Sound(wavfile)

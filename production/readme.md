@@ -1,6 +1,6 @@
 ## Production directory
 
-From the command line, generate relevant repository for a trained machine learning model.
+You can generate a relevant repository for a trained machine learning model ready for deployment on a server with the create_yaml.py script.
 
 Note that this assumes a standard audio feature array (for now), but it is expected we can adapt this to the future schema presented in this repository (to accomodate video, text, image, and csv types - and other audio feature embeddings).
 

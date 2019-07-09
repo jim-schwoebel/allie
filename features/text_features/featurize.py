@@ -113,7 +113,7 @@ try:
 	feature_sets=[sys.argv[2]]
 except:
 	feature_sets=settings['default_text_features']
-default_text_transcriber='raw_text'
+default_text_transcriber='raw text'
 
 # can specify many types of features...
 for j in range(len(feature_sets)):
@@ -237,7 +237,7 @@ for i in range(len(listdir)):
 			transcript_list=basearray['transcripts']
 
 			if default_text_transcriber not in list(transcript_list['text']):
-				transcript_list['text'][default_audio_transcriber]=transcript 
+				transcript_list['text'][default_text_transcriber]=transcript 
 				basearray['transcripts']=transcript_list
 
 			for j in range(len(feature_sets)):

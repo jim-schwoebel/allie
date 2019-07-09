@@ -135,6 +135,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * add in text transcription (as the default value) 
 * input text files 
 * BERT pre-trained model - https://github.com/huggingface/pytorch-pretrained-BERT [tutorial](https://medium.com/swlh/a-simple-guide-on-using-bert-for-text-classification-bbf041ac8d04?source=emailShare-be301d83c471-1561217978&_branch_match_id=651446911253519181)
+* Allen NLP pre-trained models.
 
 ### Images 
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV). - 'image_ludwig_features'

@@ -91,7 +91,7 @@ def setup_audioset(curdir):
         shutil.rmtree('models')
     os.system('git clone https://github.com/tensorflow/models.git')
     time.sleep(5)
-    os.chdir(curdir+'/models/research/audioset')
+    os.chdir(curdir+'/models/research/audioset/vggish')
     # add modified file in the current folder 
     os.remove('vggish_inference_demo.py')
     shutil.copy(curdir+'/helpers/vggish_inference_demo.py', os.getcwd()+'/vggish_inference_demo.py')
@@ -105,7 +105,7 @@ def setup_audioset(curdir):
     os.system('python3 vggish_smoke_test.py')
 
     # copy back into main directory and delete unnecessary models 
-    shutil.copytree(curdir+'/models/research/audioset/', curdir+'/audioset')
+    shutil.copytree(curdir+'/models/research/audioset/vggish', curdir+'/audioset')
     shutil.rmtree(curdir+'/models')
     
     # go back to main directory

@@ -244,9 +244,6 @@ Standard video datasets, alphabetized.
 ## CSV datasets 
 * see [PyDataset](https://github.com/iamaziz/PyDataset)
 
-## Work in progress
-- [peak normalization]()
-
 ## References
 * [Audio datasets](https://towardsdatascience.com/a-data-lakes-worth-of-audio-datasets-b45b88cd4ad) 
 * [Bokeh](https://bokeh.pydata.org/en/latest/) 

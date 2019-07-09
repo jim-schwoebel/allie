@@ -75,8 +75,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.
 * Add in RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) and hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
 * Ludwig (features) - need to be able to featurize according to image - path to image and text types - transcripts
-* If clean == True, then clean each folder. This will remove any duplicate files (through byte-wise analysis). 
-* If augment == True, can augment via augmentation scripts (audio, text, image, and video data).
+* Add in video and image augmentation scripts via Google and others.
 
 ### Other stuff 
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.

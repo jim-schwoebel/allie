@@ -13,69 +13,69 @@ import pandas as pd
 ###############################################################
 
 def prev_dir(directory):
-    g=directory.split('/')
-    dir_=''
-    for i in range(len(g)):
-        if i != len(g)-1:
-            if i==0:
-                dir_=dir_+g[i]
-            else:
-                dir_=dir_+'/'+g[i]
-    # print(dir_)
-    return dir_
+	g=directory.split('/')
+	dir_=''
+	for i in range(len(g)):
+		if i != len(g)-1:
+			if i==0:
+				dir_=dir_+g[i]
+			else:
+				dir_=dir_+'/'+g[i]
+	# print(dir_)
+	return dir_
 
 def seed_files(filename, cur_dir, train_dir, clean_data, augment_data, filetype):
-    os.chdir(train_dir)
+	os.chdir(train_dir)
 
-    def text_record(filename, text_model):
-        textfile=open(filename, 'w')
-        # Print five randomly-generated sentences
-        for i in range(5):
-            textfile.write(text_model.make_sentence())
-        textfile.close()
+	def text_record(filename, text_model):
+		textfile=open(filename, 'w')
+		# Print five randomly-generated sentences
+		for i in range(5):
+			textfile.write(text_model.make_sentence())
+		textfile.close()
 
-    # Get raw text as string (the Brother's Karamazov, one of my fav novels)
-    with open(cur_dir+'/helpers/text.txt') as f:
-        text = f.read()
-    # Build the model.
-    text_model = markovify.Text(text)
-    for i in range(20):
-        filename=str(uuid.uuid4())+'.txt'
-        text_record(filename, text_model)
+	# Get raw text as string (the Brother's Karamazov, one of my fav novels)
+	with open(cur_dir+'/helpers/text.txt') as f:
+		text = f.read()
+	# Build the model.
+	text_model = markovify.Text(text)
+	for i in range(20):
+		filename=str(uuid.uuid4())+'.txt'
+		text_record(filename, text_model)
 
 def find_model(b):
-    listdir=os.listdir()
-    b=0
-    for i in range(len(listdir)):
-        if listdir[i].find('one_two') == 0 and listdir[i].endswith('.h5'):
-            # this is for .h5 models 
-            b=b+1 
-        elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.pickle'):
-            # this is for pickle models 
-            b=b+1
-        elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.joblib'):
-            # this is for compressed joblib models 
-            b=b+1
-        elif listdir[i].find('one_two_ludwig_nltk_features.hdf5') == 0:
-            b=b+1
+	listdir=os.listdir()
+	b=0
+	for i in range(len(listdir)):
+		if listdir[i].find('one_two') == 0 and listdir[i].endswith('.h5'):
+			# this is for .h5 models 
+			b=b+1 
+		elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.pickle'):
+			# this is for pickle models 
+			b=b+1
+		elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.joblib'):
+			# this is for compressed joblib models 
+			b=b+1
+		elif listdir[i].find('one_two_ludwig_nltk_features.hdf5') == 0:
+			b=b+1
 
-    # 6=non-compressed, 12=compressed models 
-    if b == 6*2:
-        b=True
-    else:
-        b=False 
+	# 6=non-compressed, 12=compressed models 
+	if b == 6*2:
+		b=True
+	else:
+		b=False 
 
-    print(b)
+	print(b)
 
-    return b
+	return b
 
 def clean_file(directory, clean_dir, train_dir):
-    os.chdir(clean_dir)
-    os.system('python3 clean.py %s %s'%(clean_dir, train_dir+'/'+directory))
+	os.chdir(clean_dir)
+	os.system('python3 clean.py %s %s'%(clean_dir, train_dir+'/'+directory))
 
 def augment_file(directory, augment_dir, train_dir):
-    os.chdir(augment_dir)
-    os.system('python3 augment.py %s'%(train_dir+'/'+directory))
+	os.chdir(augment_dir)
+	os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 
 ###############################################################
 ##                     INITIALIZATION                        ##
@@ -159,7 +159,7 @@ csvdir=loadmodel_dir+'/csv_models'
 #             b=False 
 
 #         self.assertEqual(True, b)  
-    
+	
 #     # brew installations (SoX)
 #     def test_sox(self):
 
@@ -350,7 +350,7 @@ csvdir=loadmodel_dir+'/csv_models'
 #         # remove temp directory 
 #         os.chdir(train_dir)
 #         shutil.rmtree(train_dir+'/'+directory)
-        
+		
 #     # text features
 #     def test_text_augment(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
 #         directory='text_augment'
@@ -496,7 +496,7 @@ csvdir=loadmodel_dir+'/csv_models'
 #         self.assertEqual(True, b, notcount) 
 #         os.chdir(train_dir)
 #         shutil.rmtree(directory)
-        
+		
 #     # text features
 #     def test_text_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
 #         directory='text_features'
@@ -899,120 +899,10 @@ csvdir=loadmodel_dir+'/csv_models'
 #         os.chdir(train_dir)
 #         shutil.rmtree(directory)
 
-##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-class test_training(unittest.TestCase):
-    '''
-    Tests all available training scripts and compression abilities.
-    '''
-##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-
-    def setUp(self, prevdir=prevdir):
-        # change settings.json to test all model scripts 
-        os.chdir(prevdir)
-        gopen=open('settings.json','r')
-        settings=json.load(gopen)
-        gopen.close()
-        settings['default_training_script']=['scsr', 'tpot', 'hypsklearn', 'keras', 'devol', 'ludwig']
-        settings['clean_data']=False 
-        settings['augment_data']=False 
-        settings['model_compress']=False 
-        settings['create_YAML']=False 
-        jsonfile=open('settings.json', 'w')
-        json.dump(settings, jsonfile)
-        jsonfile.close()
-
-    def tearDown(self, textdir=textdir, prevdir=prevdir, training_scripts=training_scripts, clean_data=clean_data, augment_data=augment_data, model_compress=model_compress, production=production):
-        # change settings.json back to normal to defaults  
-        os.chdir(prevdir)
-        gopen=open('settings.json','r')
-        settings=json.load(gopen)
-        gopen.close()
-        settings['default_training_script']=training_scripts
-        settings['clean_data']=clean_data
-        settings['augment_data']=augment_data 
-        settings['model_compress']=model_compress
-        settings['create_YAML']=production 
-        jsonfile=open('settings.json','w')
-        json.dump(settings, jsonfile)
-        jsonfile.close() 
-
-    def test_training(self, cur_dir=cur_dir, train_dir=train_dir, model_dir=model_dir, clean_data=clean_data, augment_data=augment_data):
-        # use text model for training arbitrarily because it's the fastest model training time.
-        # note there are some risks for an infinite loop here in case model training fails 
-        os.chdir(train_dir)
-        try:
-            os.mkdir('one')
-        except:
-            shutil.rmtree('one')
-            os.mkdir('one')
-        try:
-            os.mkdir('two')
-        except:
-            shutil.rmtree('two')
-            os.mkdir('two')
-
-        # needed to seed three times here because hyperopt fails if too few samples in each class.
-        seed_files('test_text.txt', cur_dir, train_dir+'/one', clean_data, augment_data,'text')
-        seed_files('test_text.txt', cur_dir, train_dir+'/one', clean_data, augment_data,'text')
-        seed_files('test_text.txt', cur_dir, train_dir+'/one', clean_data, augment_data,'text')
-        seed_files('test_text.txt', cur_dir, train_dir+'/two', clean_data, augment_data,'text')
-        seed_files('test_text.txt', cur_dir, train_dir+'/two', clean_data, augment_data,'text')
-        seed_files('test_text.txt', cur_dir, train_dir+'/two', clean_data, augment_data,'text')
-
-        os.chdir(model_dir)
-        # iterate through all machine learning model training methods
-        os.system('python3 model.py text 2 c one two')
-        os.chdir(train_dir)
-        shutil.rmtree('one')
-        shutil.rmtree('two')
-        
-        files=['one_two_devol_nltk_features.csv', 'one_two_devol_nltk_features.h5', 'one_two_devol_nltk_features.json', 
-               'one_two_hypsklearn_classification_nltk_features.json', 'one_two_hypsklearn_classification_nltk_features.pickle', 
-               'one_two_keras.h5', 'one_two_keras.json', 'one_two_keras.txt', 'one_two_keras_compressed.json', 
-               'one_two_ludwig_nltk_features', 'one_two_ludwig_nltk_features.csv', 'one_two_ludwig_nltk_features.hdf5', 
-               'one_two_ludwig_nltk_features.json', 'one_two_ludwig_nltk_features.yaml', 'one_two_nltk_features_tpotclassifier.json', 
-               'one_two_nltk_features_tpotclassifier.pickle', 'one_two_nltk_features_tpotclassifier.py', 'one_two_sc_classification_nltk_features.json', 
-               'one_two_sc_classification_nltk_features.pickle', 'one_two_sc_classification_nltk_features.txt']
-
-        # now find the model 
-        os.chdir(textdir)
-        listdir=os.listdir()
-        # check if the list of files is in the listdir as a True/False statement
-        b=set(files).issubset(set(listdir))
-
-        # remove temporary files in the textdir
-        for i in range(len(listdir)):
-            if listdir[i] in files:
-                if listdir[i] == 'one_two_ludwig_nltk_features':
-                    # use shutil to remove a folder. 
-                    shutil.rmtree(listdir[i])
-                else:
-                    os.remove(listdir[i])
-
-        self.assertEqual(True, b)
-
 # ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-# class test_production(unittest.TestCase):
-#       '''
-#       ability to create a production-ready model repository 
-#       create_YAML.py
-#       '''
-# ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-
-#     # train a quick model and see if it properly creates a production
-#     # this is a future test based on making the production folder compatible with all model types and featurizations
-
-
-# ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-# class test_loading(unittest.TestCase):
+# class test_training(unittest.TestCase):
 #     '''
-#     FEATURIZATION AND LOADING TESTS
-
-#     # note we have to do a loop here to end where the end is 
-#     # 'audio.json' | 'text.json' | 'image.json' | 'video.json' | 'csv.json'
-#     # this is because the files are renamed to not have conflicts.
-#     # for example, if 'audio.wav' --> 'audio.json' and 'audio.mp4' --> 'audio.json',
-#     # both would have a conflicting name and would overwrite each other. 
+#     Tests all available training scripts and compression abilities.
 #     '''
 # ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
@@ -1022,231 +912,418 @@ class test_training(unittest.TestCase):
 #         gopen=open('settings.json','r')
 #         settings=json.load(gopen)
 #         gopen.close()
-#         # set features for the right ML models 
-#         settings['default_audio_features']=['standard_features'] 
-#         settings['default_text_features']=['nltk_features'] 
-#         settings['default_image_features']=['image_features'] 
-#         settings['default_video_features']=['video_features'] 
-#         settings['default_csv_features']=['csv_features'] 
+#         settings['default_training_script']=['scsr', 'tpot', 'hypsklearn', 'keras', 'devol', 'ludwig']
+#         settings['clean_data']=False 
+#         settings['augment_data']=False 
+#         settings['model_compress']=False 
+#         settings['create_YAML']=False 
 #         jsonfile=open('settings.json', 'w')
 #         json.dump(settings, jsonfile)
 #         jsonfile.close()
 
-#     def tearDown(self, default_audio_features=default_audio_features, default_text_features=default_text_features, default_image_features=default_image_features, default_video_features=default_video_features, default_csv_features=default_csv_features):
+#     def tearDown(self, textdir=textdir, prevdir=prevdir, training_scripts=training_scripts, clean_data=clean_data, augment_data=augment_data, model_compress=model_compress, production=production):
+#         # change settings.json back to normal to defaults  
 #         os.chdir(prevdir)
 #         gopen=open('settings.json','r')
 #         settings=json.load(gopen)
 #         gopen.close()
-#         # set features back to what they were before. 
-#         settings['default_audio_features']=default_audio_features
-#         settings['default_text_features']=default_text_features
-#         settings['default_image_features']=default_image_features
-#         settings['default_video_features']=default_video_features 
-#         settings['default_csv_features']=default_csv_features 
+#         settings['default_training_script']=training_scripts
+#         settings['clean_data']=clean_data
+#         settings['augment_data']=augment_data 
+#         settings['model_compress']=model_compress
+#         settings['create_YAML']=production 
 #         jsonfile=open('settings.json','w')
 #         json.dump(settings, jsonfile)
 #         jsonfile.close() 
 
-#     def test_loadaudio(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
-#         filetype='audio'
-#         testfile='test_audio.wav'
-#         # copy machine learning model into image_model dir 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+#     def test_training(self, cur_dir=cur_dir, train_dir=train_dir, model_dir=model_dir, clean_data=clean_data, augment_data=augment_data):
+#         # use text model for training arbitrarily because it's the fastest model training time.
+#         # note there are some risks for an infinite loop here in case model training fails 
+#         os.chdir(train_dir)
+#         try:
+#             os.mkdir('one')
+#         except:
+#             shutil.rmtree('one')
+#             os.mkdir('one')
+#         try:
+#             os.mkdir('two')
+#         except:
+#             shutil.rmtree('two')
+#             os.mkdir('two')
+
+#         # needed to seed three times here because hyperopt fails if too few samples in each class.
+#         seed_files('test_text.txt', cur_dir, train_dir+'/one', clean_data, augment_data,'text')
+#         seed_files('test_text.txt', cur_dir, train_dir+'/one', clean_data, augment_data,'text')
+#         seed_files('test_text.txt', cur_dir, train_dir+'/one', clean_data, augment_data,'text')
+#         seed_files('test_text.txt', cur_dir, train_dir+'/two', clean_data, augment_data,'text')
+#         seed_files('test_text.txt', cur_dir, train_dir+'/two', clean_data, augment_data,'text')
+#         seed_files('test_text.txt', cur_dir, train_dir+'/two', clean_data, augment_data,'text')
+
+#         os.chdir(model_dir)
+#         # iterate through all machine learning model training methods
+#         os.system('python3 model.py text 2 c one two')
+#         os.chdir(train_dir)
+#         shutil.rmtree('one')
+#         shutil.rmtree('two')
+		
+#         files=['one_two_devol_nltk_features.csv', 'one_two_devol_nltk_features.h5', 'one_two_devol_nltk_features.json', 
+#                'one_two_hypsklearn_classification_nltk_features.json', 'one_two_hypsklearn_classification_nltk_features.pickle', 
+#                'one_two_keras.h5', 'one_two_keras.json', 'one_two_keras.txt', 'one_two_keras_compressed.json', 
+#                'one_two_ludwig_nltk_features', 'one_two_ludwig_nltk_features.csv', 'one_two_ludwig_nltk_features.hdf5', 
+#                'one_two_ludwig_nltk_features.json', 'one_two_ludwig_nltk_features.yaml', 'one_two_nltk_features_tpotclassifier.json', 
+#                'one_two_nltk_features_tpotclassifier.pickle', 'one_two_nltk_features_tpotclassifier.py', 'one_two_sc_classification_nltk_features.json', 
+#                'one_two_sc_classification_nltk_features.pickle', 'one_two_sc_classification_nltk_features.txt']
+
+#         # now find the model 
+#         os.chdir(textdir)
 #         listdir=os.listdir()
-#         temp=os.getcwd()
-#         tempfiles=list()
+#         # check if the list of files is in the listdir as a True/False statement
+#         b=set(files).issubset(set(listdir))
 
-#         os.chdir(loadmodel_dir)
-#         if '%s_models'%(filetype) not in os.listdir():
-#             os.mkdir('%s_models'%(filetype))
-
-#         os.chdir(temp)
-        
+#         # remove temporary files in the textdir
 #         for i in range(len(listdir)):
-#             shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             tempfiles.append(listdir[i])
-
-#         # copy file in load_dir 
-#         shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-#         # copy machine learning models into proper models directory 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
-
-#         # copy audio machine learning model into directory (one_two)
-#         audiomodel_files=list()
-#         for i in range(len(listdir)):
-#             shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             audiomodel_files.append(listdir[i])
-
-#         os.chdir(loadmodel_dir)
-#         os.system('python3 load_models.py')
-#         os.chdir(load_dir)
-
-#         os.chdir(load_dir)
-#         listdir=os.listdir() 
-#         b=False
-#         for i in range(len(listdir)):
-#             if listdir[i].find('%s.json'%(filetype)) > 0: 
-#                 b=True
-#                 break
-
-#         # now remove all the temp files 
-#         os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-#         for i in range(len(tempfiles)):
-#             os.remove(tempfiles[i])
+#             if listdir[i] in files:
+#                 if listdir[i] == 'one_two_ludwig_nltk_features':
+#                     # use shutil to remove a folder. 
+#                     shutil.rmtree(listdir[i])
+#                 else:
+#                     os.remove(listdir[i])
 
 #         self.assertEqual(True, b)
 
-#     def test_loadtext(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
-#         filetype='text'
-#         testfile='test_text.txt'
-#         # copy machine learning model into image_model dir 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
-#         temp=os.getcwd()
-#         tempfiles=list()
+# ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+# class test_production(unittest.TestCase):
+# 	'''
+# 	ability to create a production-ready model repository 
+# 	create_YAML.py
+# 	'''
+# 	##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+# 	def setUp(self, prevdir=prevdir):
+# 		# change settings.json to test all model scripts 
+# 		os.chdir(prevdir)
+# 		gopen=open('settings.json','r')
+# 		settings=json.load(gopen)
+# 		gopen.close()
+# 		settings['default_training_script']=['tpot', 'keras']
+# 		settings['default_audio_features']=['standard_features']
+# 		settings['clean_data']=False 
+# 		settings['augment_data']=False 
+# 		settings['model_compress']=True 
+# 		settings['create_YAML']=True 
+# 		jsonfile=open('settings.json', 'w')
+# 		json.dump(settings, jsonfile)
+# 		jsonfile.close()
 
-#         os.chdir(loadmodel_dir)
-#         if '%s_models'%(filetype) not in os.listdir():
-#             os.mkdir('%s_models'%(filetype))
+# 	def tearDown(self, textdir=textdir, prevdir=prevdir, default_audio_features=default_audio_features, training_scripts=training_scripts, clean_data=clean_data, augment_data=augment_data, model_compress=model_compress, production=production):
+# 		# change settings.json back to normal to defaults  
+# 		os.chdir(prevdir)
+# 		gopen=open('settings.json','r')
+# 		settings=json.load(gopen)
+# 		gopen.close()
+# 		settings['default_audio_features']=default_audio_features
+# 		settings['default_training_script']=training_scripts
+# 		settings['clean_data']=clean_data
+# 		settings['augment_data']=augment_data 
+# 		settings['model_compress']=model_compress
+# 		settings['create_YAML']=production 
+# 		jsonfile=open('settings.json','w')
+# 		json.dump(settings, jsonfile)
+# 		jsonfile.close() 
+		
+# 	def test_production(self, production_dir=production_dir, cur_dir=cur_dir, audiodir=audiodir, train_dir=train_dir, model_dir=model_dir, clean_data=clean_data, augment_data=augment_data):
+		
+# 		os.chdir(train_dir)
+# 		# remove folders if the exist 
+# 		try:
+# 			shutil.rmtree('one')
+# 		except:
+# 			pass 
+# 		try:
+# 			shutil.rmtree('two')
+# 		except:
+# 			pass 
 
-#         os.chdir(temp)
-        
-#         for i in range(len(listdir)):
-#             shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             tempfiles.append(listdir[i])
+# 		# seed files from test folder 
+# 		shutil.copytree(cur_dir+'/helpers/audio_data/one', train_dir+'/one/')
+# 		shutil.copytree(cur_dir+'/helpers/audio_data/two', train_dir+'/two/')
 
-#         # copy file in load_dir 
-#         shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-#         # copy machine learning models into proper models directory 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
+# 		os.chdir(model_dir)
+# 		# iterate through all machine learning model training methods
+# 		os.system('python3 model.py audio 2 c one two')
+# 		os.chdir(train_dir)
+# 		# shutil.rmtree('one')
+# 		# shutil.rmtree('two')
+		
+# 		# test if the model has been packaged for production 
+# 		os.chdir(production_dir)
+# 		production_files=['nlx-model-audio-one_two_standard_features_tpotclassifier']
+# 		listdir=os.listdir()
+# 		b=set(production_files).issubset(set(listdir))
+# 		self.assertEqual(True, b)
+# 		shutil.rmtree('nlx-model-audio-one_two_standard_features_tpotclassifier')
 
-#         # copy audio machine learning model into directory (one_two)
-#         audiomodel_files=list()
-#         for i in range(len(listdir)):
-#             shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             audiomodel_files.append(listdir[i])
+# 		# test if the model has been compressed and remove temporary model files 
+# 		model_files=['one_features.json', 'one_two_keras.h5', 'one_two_keras.json', 'one_two_keras.txt', 
+# 					'one_two_keras_compressed.h5', 'one_two_keras_compressed.json', 'one_two_standard_features_tpotclassifier.json', 
+# 					'one_two_standard_features_tpotclassifier.pickle', 'one_two_standard_features_tpotclassifier.py', 
+# 					'one_two_standard_features_tpotclassifier_compressed.joblib', 'two_features.json']
 
-#         os.chdir(loadmodel_dir)
-#         os.system('python3 load_models.py')
-#         os.chdir(load_dir)
+# 		os.chdir(audiodir)
+# 		listdir=os.listdir()
+# 		c=set(model_files).issubset(set(listdir))
 
-#         os.chdir(load_dir)
-#         listdir=os.listdir() 
-#         b=False
-#         for i in range(len(listdir)):
-#             if listdir[i].find('%s.json'%(filetype)) > 0: 
-#                 b=True
-#                 break
+# 		# remove temporary files in the textdir
+# 		for i in range(len(listdir)):
+# 			if listdir[i] in model_files:
+# 				os.remove(listdir[i])
 
-#         # now remove all the temp files 
-#         os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-#         for i in range(len(tempfiles)):
-#             os.remove(tempfiles[i])
+# 		# test whether the models have been successfully compressed 
+# 		self.assertEqual(True, c)
 
-#         self.assertEqual(True, b)
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+class test_loading(unittest.TestCase):
+    '''
+    FEATURIZATION AND LOADING TESTS
 
-#     def test_loadimage(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
-#         filetype='image'
-#         testfile='test_image.png'
-#         # copy machine learning model into image_model dir 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
-#         temp=os.getcwd()
-#         tempfiles=list()
+    # note we have to do a loop here to end where the end is 
+    # 'audio.json' | 'text.json' | 'image.json' | 'video.json' | 'csv.json'
+    # this is because the files are renamed to not have conflicts.
+    # for example, if 'audio.wav' --> 'audio.json' and 'audio.mp4' --> 'audio.json',
+    # both would have a conflicting name and would overwrite each other. 
+    '''
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-#         os.chdir(loadmodel_dir)
-#         if '%s_models'%(filetype) not in os.listdir():
-#             os.mkdir('%s_models'%(filetype))
+    def setUp(self, prevdir=prevdir):
+        # change settings.json to test all model scripts 
+        os.chdir(prevdir)
+        gopen=open('settings.json','r')
+        settings=json.load(gopen)
+        gopen.close()
+        # set features for the right ML models 
+        settings['default_audio_features']=['standard_features'] 
+        settings['default_text_features']=['nltk_features'] 
+        settings['default_image_features']=['image_features'] 
+        settings['default_video_features']=['video_features'] 
+        settings['default_csv_features']=['csv_features'] 
+        jsonfile=open('settings.json', 'w')
+        json.dump(settings, jsonfile)
+        jsonfile.close()
 
-#         os.chdir(temp)
-        
-#         for i in range(len(listdir)):
-#             shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             tempfiles.append(listdir[i])
+    def tearDown(self, default_audio_features=default_audio_features, default_text_features=default_text_features, default_image_features=default_image_features, default_video_features=default_video_features, default_csv_features=default_csv_features):
+        os.chdir(prevdir)
+        gopen=open('settings.json','r')
+        settings=json.load(gopen)
+        gopen.close()
+        # set features back to what they were before. 
+        settings['default_audio_features']=default_audio_features
+        settings['default_text_features']=default_text_features
+        settings['default_image_features']=default_image_features
+        settings['default_video_features']=default_video_features 
+        settings['default_csv_features']=default_csv_features 
+        jsonfile=open('settings.json','w')
+        json.dump(settings, jsonfile)
+        jsonfile.close() 
 
-#         # copy file in load_dir 
-#         shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-#         # copy machine learning models into proper models directory 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
+    def test_loadaudio(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
+        filetype='audio'
+        testfile='test_audio.wav'
+        # copy machine learning model into image_model dir 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
+        temp=os.getcwd()
+        tempfiles=list()
 
-#         # copy audio machine learning model into directory (one_two)
-#         audiomodel_files=list()
-#         for i in range(len(listdir)):
-#             shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             audiomodel_files.append(listdir[i])
+        os.chdir(loadmodel_dir)
+        if '%s_models'%(filetype) not in os.listdir():
+            os.mkdir('%s_models'%(filetype))
 
-#         os.chdir(loadmodel_dir)
-#         os.system('python3 load_models.py')
-#         os.chdir(load_dir)
+        os.chdir(temp)
+		
+        for i in range(len(listdir)):
+            shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            tempfiles.append(listdir[i])
 
-#         os.chdir(load_dir)
-#         listdir=os.listdir() 
-#         b=False
-#         for i in range(len(listdir)):
-#             if listdir[i].find('%s.json'%(filetype)) > 0: 
-#                 b=True
-#                 break
+        # copy file in load_dir 
+        shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
+        # copy machine learning models into proper models directory 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
 
-#         # now remove all the temp files 
-#         os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-#         for i in range(len(tempfiles)):
-#             os.remove(tempfiles[i])
+        # copy audio machine learning model into directory (one_two)
+        audiomodel_files=list()
+        for i in range(len(listdir)):
+            shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            audiomodel_files.append(listdir[i])
 
-#         self.assertEqual(True, b)
+        os.chdir(loadmodel_dir)
+        os.system('python3 load_models.py')
+        os.chdir(load_dir)
 
-#     def test_loadvideo(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
-#         filetype='video'
-#         testfile='test_video.mp4'
-#         # copy machine learning model into image_model dir 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
-#         temp=os.getcwd()
-#         tempfiles=list()
+        os.chdir(load_dir)
+        listdir=os.listdir() 
+        b=False
+        for i in range(len(listdir)):
+            if listdir[i].find('%s.json'%(filetype)) > 0: 
+                b=True
+                break
 
-#         os.chdir(loadmodel_dir)
-#         if '%s_models'%(filetype) not in os.listdir():
-#             os.mkdir('%s_models'%(filetype))
+        # now remove all the temp files 
+        os.chdir(loadmodel_dir+'/%s_models'%(filetype))
+        for i in range(len(tempfiles)):
+            os.remove(tempfiles[i])
 
-#         os.chdir(temp)
-        
-#         for i in range(len(listdir)):
-#             shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             tempfiles.append(listdir[i])
+        self.assertEqual(True, b)
 
-#         # copy file in load_dir 
-#         shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-#         # copy machine learning models into proper models directory 
-#         os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-#         listdir=os.listdir()
+    def test_loadtext(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
+        filetype='text'
+        testfile='test_text.txt'
+        # copy machine learning model into image_model dir 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
+        temp=os.getcwd()
+        tempfiles=list()
 
-#         # copy audio machine learning model into directory (one_two)
-#         audiomodel_files=list()
-#         for i in range(len(listdir)):
-#             shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-#             audiomodel_files.append(listdir[i])
+        os.chdir(loadmodel_dir)
+        if '%s_models'%(filetype) not in os.listdir():
+            os.mkdir('%s_models'%(filetype))
 
-#         os.chdir(loadmodel_dir)
-#         os.system('python3 load_models.py')
-#         os.chdir(load_dir)
+        os.chdir(temp)
+		
+        for i in range(len(listdir)):
+            shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            tempfiles.append(listdir[i])
 
-#         os.chdir(load_dir)
-#         listdir=os.listdir() 
-#         b=False
-#         for i in range(len(listdir)):
-#             if listdir[i].find('%s.json'%(filetype)) > 0: 
-#                 b=True
-#                 break
+        # copy file in load_dir 
+        shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
+        # copy machine learning models into proper models directory 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
 
-#         # now remove all the temp files 
-#         os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-#         for i in range(len(tempfiles)):
-#             os.remove(tempfiles[i])
+        # copy audio machine learning model into directory (one_two)
+        audiomodel_files=list()
+        for i in range(len(listdir)):
+            shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            audiomodel_files.append(listdir[i])
 
-#         self.assertEqual(True, b)
+        os.chdir(loadmodel_dir)
+        os.system('python3 load_models.py')
+        os.chdir(load_dir)
+
+        os.chdir(load_dir)
+        listdir=os.listdir() 
+        b=False
+        for i in range(len(listdir)):
+            if listdir[i].find('%s.json'%(filetype)) > 0: 
+                b=True
+                break
+
+        # now remove all the temp files 
+        os.chdir(loadmodel_dir+'/%s_models'%(filetype))
+        for i in range(len(tempfiles)):
+            os.remove(tempfiles[i])
+
+        self.assertEqual(True, b)
+
+    def test_loadimage(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
+        filetype='image'
+        testfile='test_image.png'
+        # copy machine learning model into image_model dir 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
+        temp=os.getcwd()
+        tempfiles=list()
+
+        os.chdir(loadmodel_dir)
+        if '%s_models'%(filetype) not in os.listdir():
+            os.mkdir('%s_models'%(filetype))
+
+        os.chdir(temp)
+		
+        for i in range(len(listdir)):
+            shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            tempfiles.append(listdir[i])
+
+        # copy file in load_dir 
+        shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
+        # copy machine learning models into proper models directory 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
+
+        # copy audio machine learning model into directory (one_two)
+        audiomodel_files=list()
+        for i in range(len(listdir)):
+            shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            audiomodel_files.append(listdir[i])
+
+        os.chdir(loadmodel_dir)
+        os.system('python3 load_models.py')
+        os.chdir(load_dir)
+
+        os.chdir(load_dir)
+        listdir=os.listdir() 
+        b=False
+        for i in range(len(listdir)):
+            if listdir[i].find('%s.json'%(filetype)) > 0: 
+                b=True
+                break
+
+        # now remove all the temp files 
+        os.chdir(loadmodel_dir+'/%s_models'%(filetype))
+        for i in range(len(tempfiles)):
+            os.remove(tempfiles[i])
+
+        self.assertEqual(True, b)
+
+    def test_loadvideo(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
+        filetype='video'
+        testfile='test_video.mp4'
+        # copy machine learning model into image_model dir 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
+        temp=os.getcwd()
+        tempfiles=list()
+
+        os.chdir(loadmodel_dir)
+        if '%s_models'%(filetype) not in os.listdir():
+            os.mkdir('%s_models'%(filetype))
+
+        os.chdir(temp)
+		
+        for i in range(len(listdir)):
+            shutil.copy(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            tempfiles.append(listdir[i])
+
+        # copy file in load_dir 
+        shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
+        # copy machine learning models into proper models directory 
+        os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+        listdir=os.listdir()
+
+        # copy audio machine learning model into directory (one_two)
+        audiomodel_files=list()
+        for i in range(len(listdir)):
+            shutil.copy(cur_dir+'/helpers/models/%s_models/'%(filetype)+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+            audiomodel_files.append(listdir[i])
+
+        os.chdir(loadmodel_dir)
+        os.system('python3 load_models.py')
+        os.chdir(load_dir)
+
+        os.chdir(load_dir)
+        listdir=os.listdir() 
+        b=False
+        for i in range(len(listdir)):
+            if listdir[i].find('%s.json'%(filetype)) > 0: 
+                b=True
+                break
+
+        # now remove all the temp files 
+        os.chdir(loadmodel_dir+'/%s_models'%(filetype))
+        for i in range(len(tempfiles)):
+            os.remove(tempfiles[i])
+
+        self.assertEqual(True, b)
 
 if __name__ == '__main__':
-    unittest.main()
+	unittest.main()
 

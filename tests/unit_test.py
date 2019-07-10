@@ -915,8 +915,8 @@ class test_training(unittest.TestCase):
         settings['default_training_script']=['scsr', 'tpot', 'hypsklearn', 'keras', 'devol', 'ludwig']
         settings['clean_data']=False 
         settings['augment_data']=False 
-        settings['model_compress']=True
-        settings['create_YAML']=True 
+        settings['model_compress']=False 
+        settings['create_YAML']=False 
         jsonfile=open('settings.json', 'w')
         json.dump(settings, jsonfile)
         jsonfile.close()

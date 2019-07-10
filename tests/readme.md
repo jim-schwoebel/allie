@@ -21,7 +21,7 @@ Here is the list of automated tests that are in this repository:
 
 ## Seed test files 
 
-You can seed fils with the seed_files.py script. The an example is below:
+You can seed files with the seed_files.py script. The an example is below:
 ```
 python3 seed_files.py audio /Users/jimschwoebel/allie/train_dir/one
 ```

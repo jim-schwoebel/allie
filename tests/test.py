@@ -1,3 +1,9 @@
+'''
+Unit testing of Allie's functionality.
+
+I built a custom unit test script here because there are a lot of things that could go 
+wrong, and I want to be sure to delete these temp files before/after testing in case of failures.
+'''
 import os, time, shutil
 
 def prev_dir(directory):
@@ -78,18 +84,74 @@ for i in range(len(listdir)):
 print('deleting temp model files (audio, text, image, and video)')
 print('-------------------------------------------')
 # we can also remove all temporarily trained machine learning models 
-os.chdir(loadmodel_dir+'/audio_models')
-print(os.getcwd())
-remove_temp_model()
+try:
+    os.chdir(loadmodel_dir+'/audio_models')
+    remove_temp_model()
+except:
+    pass 
 
-os.chdir(loadmodel_dir+'/text_models')
-remove_temp_model()
+try:
+    os.chdir(loadmodel_dir+'/text_models')
+    remove_temp_model()
+except:
+    pass 
 
-os.chdir(loadmodel_dir+'/image_models')
-remove_temp_model()
+try:
+    os.chdir(loadmodel_dir+'/image_models')
+    remove_temp_model()
+except:
+    pass 
 
-os.chdir(loadmodel_dir+'/video_models')
-remove_temp_model()
+try:
+    os.chdir(loadmodel_dir+'/video_models')
+    remove_temp_model()
+except:
+    pass 
 
-os.chdir(loadmodel_dir+'/csv_models')
-remove_temp_model()
+try:
+    os.chdir(loadmodel_dir+'/csv_models')
+    remove_temp_model()
+except:
+    pass 
+
+os.chdir(train_dir)
+try:
+    shutil.rmtree('audio_features')
+except:
+    pass
+try:
+    shutil.rmtree('text_features')
+except:
+    pass 
+try:
+    shutil.rmtree('image_features')
+except:
+    pass 
+try:
+    shutil.rmtree('video_features')
+except:
+    pass
+try:
+    shutil.rmtree('csv_features')
+except:
+    pass
+try:
+    shutil.rmtree('audio_transcription')
+except:
+    pass
+try:
+    shutil.rmtree('text_transcription')
+except:
+    pass
+try:
+    shutil.rmtree('image_transcription')
+except:
+    pass
+try:
+    shutil.rmtree('video_transcription')
+except:
+    pass
+try:
+    shutil.rmtree('csv_transcription')
+except:
+    pass

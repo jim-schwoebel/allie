@@ -986,7 +986,11 @@ class test_training(unittest.TestCase):
         # remove temporary files in the textdir
         for i in range(len(listdir)):
             if listdir[i] in files:
-                os.remove(listdir[i])
+                if listdir[i] == 'one_two_ludwig_nltk_features':
+                    # use shutil to remove a folder. 
+                    shutil.rmtree(listdir[i])
+                else:
+                    os.remove(listdir[i])
 
         self.assertEqual(True, b)
 

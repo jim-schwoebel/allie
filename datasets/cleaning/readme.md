@@ -71,3 +71,6 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 
 ### CSV
 * Coming soon.
+
+## In progress
+* [Spectral cluster](https://github.com/wq2012/SpectralCluster)

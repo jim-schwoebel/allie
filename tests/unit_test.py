@@ -967,15 +967,12 @@ class test_training(unittest.TestCase):
         shutil.rmtree('two')
         
         files=['one_two_devol_nltk_features.csv', 'one_two_devol_nltk_features.h5', 'one_two_devol_nltk_features.json', 
-                'one_two_devol_nltk_features_compressed.h5', 'one_two_hypsklearn_classification_nltk_features.json', 
-                'one_two_hypsklearn_classification_nltk_features.pickle', 'one_two_hypsklearn_classification_nltk_features_compressed.joblib', 
-                'one_two_keras.h5', 'one_two_keras.json', 'one_two_keras.txt', 'one_two_keras_compressed.h5', 
-                'one_two_keras_compressed.json', 'one_two_ludwig_nltk_features', 'one_two_ludwig_nltk_features.csv', 
-                'one_two_ludwig_nltk_features.hdf5', 'one_two_ludwig_nltk_features.json', 'one_two_ludwig_nltk_features.yaml', 
-                'one_two_nltk_features_tpotclassifier.json', 'one_two_nltk_features_tpotclassifier.pickle', 
-                'one_two_nltk_features_tpotclassifier.py', 'one_two_nltk_features_tpotclassifier_compressed.joblib', 
-                'one_two_sc_classification_nltk_features.json', 'one_two_sc_classification_nltk_features.pickle', 
-                'one_two_sc_classification_nltk_features.txt', 'one_two_sc_classification_nltk_features_compressed.joblib']
+               'one_two_hypsklearn_classification_nltk_features.json', 'one_two_hypsklearn_classification_nltk_features.pickle', 
+               'one_two_keras.h5', 'one_two_keras.json', 'one_two_keras.txt', 'one_two_keras_compressed.json', 
+               'one_two_ludwig_nltk_features', 'one_two_ludwig_nltk_features.csv', 'one_two_ludwig_nltk_features.hdf5', 
+               'one_two_ludwig_nltk_features.json', 'one_two_ludwig_nltk_features.yaml', 'one_two_nltk_features_tpotclassifier.json', 
+               'one_two_nltk_features_tpotclassifier.pickle', 'one_two_nltk_features_tpotclassifier.py', 'one_two_sc_classification_nltk_features.json', 
+               'one_two_sc_classification_nltk_features.pickle', 'one_two_sc_classification_nltk_features.txt']
 
         # now find the model 
         os.chdir(textdir)

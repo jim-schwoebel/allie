@@ -25,16 +25,12 @@ python3 -m pip install --user virtualenv
 python3 -m venv env
 source env/bin/activate
 ```
-Now install required dependencies:
+Now install required dependencies and perform unit tests to make sure everything works:
 ```
 python3 setup.py
 ```
-Now do some unit tests to make sure everything works:
-```
-cd tests
-python3 test.py
-```
-Note the test above takes roughly 5-10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
+
+Note the test above takes roughly 10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
 
 ## folder structures
 

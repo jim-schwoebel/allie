@@ -15,15 +15,36 @@ This would run all necessary tests and make sures everything is running properly
 
 Here is the list of automated tests that are included in the unit_test.py script:
 ```python3 
-class test_dependencies(unittest.TestCase)
+class test_dependencies(unittest.TestCase):
 ``` 
 - tests for modules and brew installations (FFmpeg and SoX) 
+```python3 
+class test_cleaning(unittest.TestCase):
+```
 - ability to clean files via cleaning scripts (mostly de-duplication, will expand in future) 
+```python3
+class test_augmentation(unittest.TestCase):
+```
 - ability to augment files via augmentation scripts (in ./datasets/) directory 
+```python3
+class test_features(unittest.TestCase):
+```
 - ability to featurize files via default_featurizers
-- ability to properly execute model training scripts (via test files and model.py script)
+```python3
+class test_transcription(unittest.TestCase):
+```
 - ability to transcribe files
+```python3
+class test_training(unittest.TestCase):
+```
+- ability to properly execute model training scripts (via test files and model.py script)
+```python3
+class test_production(unittest.TestCase):
+```
 - ability to compress machine learning models and make production-ready repositories (in ./production directory)
+```python3
+class test_loading(unittest.TestCase):
+```
 - ability to load model files and make predictions via model directory (via test files / load_dir / models trained) 
 
 No testing suite is 100% perfect, but all tests were designed to be independent from each other. If you think additional things need to be added in, please write us some suggestions in the [GitHub issues forum](https://github.com/jim-schwoebel/allie/issues). 

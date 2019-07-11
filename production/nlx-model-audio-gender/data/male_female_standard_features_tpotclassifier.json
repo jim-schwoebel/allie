@@ -1,0 +1,1 @@
+{"sample type": "audio", "feature_set": "standard_features", "model name": "male_female_standard_features_tpotclassifier.pickle", "accuracy": 1.0, "model type": "TPOTclassification_exported_pipeline = ExtraTreesClassifier(bootstrap=False, criterion=\"entropy\", max_features=0.3, min_samples_leaf=4, min_samples_split=11, n_estimators=100)\n\n"}

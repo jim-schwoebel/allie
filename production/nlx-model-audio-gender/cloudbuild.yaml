@@ -1,0 +1,10 @@
+steps: 
+- name: debian
+  args: ['sed', '-i', 's#https://github.com/NeuroLexDiagnostics/pyAudioLex#https://source.developers.google.com/p/arctic-robot-192514/r/github-neurolexdiagnostics-pyaudiolex#g', '.gitmodules'] 
+- name: 'gcr.io/cloud-builders/git'
+  args: ['submodule', 'update', '--init', '--recursive']
+- name: 'ubuntu'
+  args: ['ls', '-lsa', 'pyAudioLex']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/$PROJECT_ID/nlx-model-audio-gender:$COMMIT_SHA', '.']
+images: ['gcr.io/$PROJECT_ID/nlx-model-audio-gender:$COMMIT_SHA']

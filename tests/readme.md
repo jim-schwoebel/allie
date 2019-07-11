@@ -34,7 +34,5 @@ By default, this script generates 20 files at a time and does things like record
 
 Here are some tests we are working to add in:
 - test ability to spin up YAML files for trained models (if create_YAML==True in settings.json) 
-- test cleaning abilities (for audio, text, image, video, csv files)
-- test augmentation capabilities (for audio, text, image, video, csv files)
 - multi-class (3+) modeling outside of 2 things.
 

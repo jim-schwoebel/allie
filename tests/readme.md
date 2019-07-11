@@ -17,7 +17,7 @@ Here is the list of automated tests that are in this repository:
 - tests for modules and brew installations (FFmpeg and SoX) 
 - ability to clean files via cleaning scripts (mostly de-duplication, will expand in future) 
 - ability to augment files via augmentation scripts (in ./datasets/) directory 
-- ability to featurize files via default_featurizers.
+- ability to featurize files via default_featurizers
 - ability to properly execute model training scripts (via test files and model.py script)
 - ability to transcribe files
 - ability to compress machine learning models and make production-ready repositories (in ./production directory)

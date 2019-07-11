@@ -39,7 +39,7 @@ Here are the supported file formats for the load directory. If you use alternati
 
 | File type | extension | recommended format | 
 | ------------- |-------------| -------------| 
-| audio file | .WAV, .MP3 | .WAV | 
+| audio file | .WAV, .MP3, .M4A | .WAV | 
 | text file | .TXT | .TXT | 
 | image file | .PNG, .JPG | .PNG | 
 | video file | .MP4 | .MP4 | 

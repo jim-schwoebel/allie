@@ -234,7 +234,7 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
   #take first image as a background image 
   background=cv2.imread(listdir[1])
   image_features=numpy.zeros(1024)
-  image_features2=np.zeros(63)
+  image_features2=numpy.zeros(63)
   image_transcript=''
   for i in range(len(listdir)):
       if listdir[i][-4:]=='.png':

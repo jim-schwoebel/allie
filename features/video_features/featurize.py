@@ -1,6 +1,6 @@
 import os, json, wget
 import video_features as vf 
-# import y8m_features as yf
+import y8m_features as yf
 from gensim.models import KeyedVectors
 import os, wget, zipfile, sys
 import shutil

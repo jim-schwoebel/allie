@@ -249,21 +249,21 @@ for i in range(len(classes)):
 	listdir=os.listdir()
 	feature_list=list()
 	label_list=list()
-	for i in range(len(listdir)):
-		if listdir[i][-5:]=='.json':
+	for j in range(len(listdir)):
+		if listdir[j][-5:]=='.json':
 			try:
-				g=json.load(open(listdir[i]))
+				g=json.load(open(listdir[j]))
 				# consolidate all features into one array (if featurizing with multiple featurizers)
 				default_feature=list()
 				default_label=list()
-				for j in range(len(default_features)):
-					default_feature=default_feature+g['features'][problemtype][default_features[j]]['features']
-					default_label=default_label+g['features'][problemtype][default_features[j]]['labels']
+				for k in range(len(default_features)):
+					default_feature=default_feature+g['features'][problemtype][default_features[k]]['features']
+					default_label=default_label+g['features'][problemtype][default_features[k]]['labels']
 
 				feature_list.append(default_feature)
 				label_list.append(default_label)
 			except:
-				print('ERROR - skipping ' + listdir[i])
+				print('ERROR - skipping ' + listdir[j])
 	
 	data[class_type]=feature_list
 
@@ -275,7 +275,6 @@ for i in range(len(classes)):
 # of members. 
 
 os.chdir(prevdir+'/training/')
-
 model_dir=prevdir+'/models'
 
 jsonfile=''
@@ -311,7 +310,7 @@ for i in range(len(classes)):
         class_=class_[0:minlength]
 
     for j in range(len(class_)):
-        alldata.append(class_[i])
+        alldata.append(class_[j])
         labels.append(i)
 
 os.chdir(model_dir)

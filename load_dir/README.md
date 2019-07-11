@@ -20,7 +20,7 @@ Now you can apply all models in the directory according to sample types (audio_m
 ```
 cd ..
 cd models 
-python3 load_models.py
+python3 load.py
 ```
 
 All the files will then be featurized and modeled. The model schema is updated in corresponding .JSON files (e.g. 2_audio.wav --> 2_audio.json).

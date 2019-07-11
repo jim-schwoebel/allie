@@ -30,7 +30,7 @@ Now install required dependencies and perform unit tests to make sure everything
 python3 setup.py
 ```
 
-Note the test above takes roughly 10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
+Note the test above takes roughly 30-40 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
 ## folder structures
 

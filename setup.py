@@ -7,6 +7,12 @@ def brew_install(modules):
   for i in range(len(modules)):
     os.system('brew install %s'%(modules[i]))
 
+# uninstall openCV to guarantee the right version
+# this is the only step requiring manual intervention 
+# so it's best to do this first.
+os.system('pip3 uninstall opencv-python')
+os.system('pip3 uninstall opencv-contrib-python')
+
 # possible operating systems
 # | Linux (2.x and 3.x) | linux2 (*) |
 # | Windows             | win32      |
@@ -28,10 +34,6 @@ elif sys.platform.lower() in ['win32', 'cygwin', 'msys']:
   # https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10
   print('you have to install SoX from source') 
   # https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows
-
-# uninstall openCV to guarantee the right version...
-os.system('pip3 uninstall opencv-python')
-os.system('pip3 uninstall opencv-contrib-python')
 
 # now install all modules with pip3 
 os.system('pip3 install -r requirements.txt')

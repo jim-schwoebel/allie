@@ -13,8 +13,9 @@ This would run all necessary tests and make sures everything is running properly
 
 ## Specific tests
 
-Here is the list of automated tests that are in this repository:
-- tests for modules and brew installations (FFmpeg and SoX) 
+Here is the list of automated tests that are included in the unit_test.py script:
+
+- ```python3 class test_dependencies(unittest.TestCase)``` - tests for modules and brew installations (FFmpeg and SoX) 
 - ability to clean files via cleaning scripts (mostly de-duplication, will expand in future) 
 - ability to augment files via augmentation scripts (in ./datasets/) directory 
 - ability to featurize files via default_featurizers

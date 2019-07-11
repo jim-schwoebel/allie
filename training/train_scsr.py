@@ -745,10 +745,11 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         #decision tree
         classifier2 = DecisionTreeClassifier(random_state=0)
         classifier2.fit(X_train,y_train)
+        # cross val score taken from documentation (95% interval) - https://scikit-learn.org/stable/modules/cross_validation.html
         scores = cross_val_score(classifier2, X_test, y_test,cv=5)
-        print('Decision tree accuracy (+/-) %s'%(str(scores.std())))
+        print('Decision tree accuracy (+/-) %s'%(str(scores.std()*2)))
         c2=scores.mean()
-        c2s=scores.std()
+        c2s=scores.std()*2 
         print(c2)
     except:
         c2=0
@@ -758,9 +759,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier3 = GaussianNB()
         classifier3.fit(X_train,y_train)
         scores = cross_val_score(classifier3, X_test, y_test,cv=5)
-        print('Gaussian NB accuracy (+/-) %s'%(str(scores.std())))
+        print('Gaussian NB accuracy (+/-) %s'%(str(scores.std()*2)))
         c3=scores.mean()
-        c3s=scores.std()
+        c3s=scores.std()*2 
         print(c3)
     except:
         c3=0
@@ -771,9 +772,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier4 = SVC()
         classifier4.fit(X_train,y_train)
         scores=cross_val_score(classifier4, X_test, y_test,cv=5)
-        print('SKlearn classifier accuracy (+/-) %s'%(str(scores.std())))
+        print('SKlearn classifier accuracy (+/-) %s'%(str(scores.std()*2)))
         c4=scores.mean()
-        c4s=scores.std()
+        c4s=scores.std()*2 
         print(c4)
     except:
         c4=0
@@ -784,9 +785,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier6 = AdaBoostClassifier(n_estimators=100)
         classifier6.fit(X_train,y_train)
         scores = cross_val_score(classifier6, X_test, y_test,cv=5)
-        print('Adaboost classifier accuracy (+/-) %s'%(str(scores.std())))
+        print('Adaboost classifier accuracy (+/-) %s'%(str(scores.std()*2)))
         c6=scores.mean()
-        c6s=scores.std()
+        c6s=scores.std()*2 
         print(c6)
     except:
         c6=0
@@ -797,9 +798,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier7=GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
         classifier7.fit(X_train,y_train)
         scores = cross_val_score(classifier7, X_test, y_test,cv=5)
-        print('Gradient boosting accuracy (+/-) %s'%(str(scores.std())))
+        print('Gradient boosting accuracy (+/-) %s'%(str(scores.std()*2)))
         c7=scores.mean()
-        c7s=scores.std()
+        c7s=scores.std()*2 
         print(c7)
     except:
         c7=0
@@ -810,9 +811,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier8=LogisticRegression(random_state=1)
         classifier8.fit(X_train,y_train)
         scores = cross_val_score(classifier8, X_test, y_test,cv=5)
-        print('Logistic regression accuracy (+/-) %s'%(str(scores.std())))
+        print('Logistic regression accuracy (+/-) %s'%(str(scores.std()*2)))
         c8=scores.mean()
-        c8s=scores.std()
+        c8s=scores.std()*2 
         print(c8)
     except:
         c8=0
@@ -823,9 +824,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier9=VotingClassifier(estimators=[('gradboost', classifier7), ('logit', classifier8), ('adaboost', classifier6)], voting='hard')
         classifier9.fit(X_train,y_train)
         scores = cross_val_score(classifier9, X_test, y_test,cv=5)
-        print('Hard voting accuracy (+/-) %s'%(str(scores.std())))
+        print('Hard voting accuracy (+/-) %s'%(str(scores.std()*2)))
         c9=scores.mean()
-        c9s=scores.std()
+        c9s=scores.std()*2 
         print(c9)
     except:
         c9=0
@@ -836,9 +837,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier10=KNeighborsClassifier(n_neighbors=7)
         classifier10.fit(X_train,y_train)
         scores = cross_val_score(classifier10, X_test, y_test,cv=5)
-        print('K Nearest Neighbors accuracy (+/-) %s'%(str(scores.std())))
+        print('K Nearest Neighbors accuracy (+/-) %s'%(str(scores.std()*2)))
         c10=scores.mean()
-        c10s=scores.std()
+        c10s=scores.std()*2 
         print(c10)
     except:
         c10=0
@@ -849,9 +850,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier11=RandomForestClassifier(n_estimators=10, max_depth=None, min_samples_split=2, random_state=0)
         classifier11.fit(X_train,y_train)
         scores = cross_val_score(classifier11, X_test, y_test,cv=5)
-        print('Random forest accuracy (+/-) %s'%(str(scores.std())))
+        print('Random forest accuracy (+/-) %s'%(str(scores.std()*2)))
         c11=scores.mean()
-        c11s=scores.std()
+        c11s=scores.std()*2 
         print(c11)
     except:
         c11=0
@@ -862,9 +863,9 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         classifier12 = svm.SVC(kernel='linear', C = 1.0)
         classifier12.fit(X_train,y_train)
         scores = cross_val_score(classifier12, X_test, y_test,cv=5)
-        print('svm accuracy (+/-) %s'%(str(scores.std())))
+        print('svm accuracy (+/-) %s'%(str(scores.std()*2)))
         c12=scores.mean()
-        c12s=scores.std()
+        c12s=scores.std()*2 
         print(c12)
     except:
         c12=0

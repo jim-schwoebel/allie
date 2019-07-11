@@ -307,7 +307,7 @@ for i in range(len(classes)):
     random.shuffle(class_)
 
     if len(class_) > minlength:
-        print('%s greater than class, equalizing...'%(class_))
+        print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
         class_=class_[0:minlength]
 
     for j in range(len(class_)):

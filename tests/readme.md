@@ -23,7 +23,7 @@ Here is the list of automated tests that are in this repository:
 - ability to compress machine learning models and make production-ready repositories (in ./production directory)
 - ability to load model files and make predictions via model directory (via test files / load_dir / models trained) 
 
-No testing suite is 100% perfect, but all tests were designed to be independent from each other. If you think additional things need to be added in, please write us some suggestions in the GitHub issues forum. 
+No testing suite is 100% perfect, but all tests were designed to be independent from each other. If you think additional things need to be added in, please write us some suggestions in the [GitHub issues forum](https://github.com/jim-schwoebel/allie/issues). 
 
 ## Seed test files 
 

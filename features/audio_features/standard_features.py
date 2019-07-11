@@ -1,4 +1,4 @@
-import librosa, os 
+import librosa, os, uuid
 import numpy as np 
 from pydub import AudioSegment 
 
@@ -46,11 +46,11 @@ def exportfile(newAudio,time1,time2,filename,i):
     newAudio2 = newAudio[time1:time2]
     g=os.listdir()
     if filename[0:-4]+'_'+str(i)+'.wav' in g:
-        filename2=str(i)+'_segment'+'.wav'
+        filename2=str(uuid.uuid4())+'_segment'+'.wav'
         print('making %s'%(filename2))
         newAudio2.export(filename2,format="wav")
     else:
-        filename2=str(i)+'.wav'
+        filename2=str(uuid.uuid4())+'.wav'
         print('making %s'%(filename2))
         newAudio2.export(filename2, format="wav")
 

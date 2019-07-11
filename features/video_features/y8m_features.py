@@ -302,6 +302,9 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
   features=numpy.append(features,text_features)
   labels=video_labels+avg_image_labels2+audio_labels+text_labels 
 
+  os.remove(videofile[0:-4]+'.wav')
+  shutil.rmtree('output')
+
   return features, labels, transcript, image_transcript
 
 

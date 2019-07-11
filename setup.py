@@ -90,3 +90,14 @@ if 'settings.json' not in listdir:
     jsonfile=open('settings.json','w')
     json.dump(data,jsonfile)
     jsonfile.close()
+
+##################################################
+##             AUTOMATED TESTING                ##
+##################################################
+'''
+Perform some automated tests here to ensure add-on 
+files are downloaded and features work properly.
+'''
+testdir=curdir+'/tests'
+os.system('python3 test.py')
+os.chdir(curdir)

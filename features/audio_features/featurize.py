@@ -209,7 +209,13 @@ else:
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
-	if listdir[i][-4:] in ['.wav', '.mp3']:
+	if listdir[i][-4:] in ['.wav', '.mp3', '.m4a']:
+		filename=listdir[i]
+		if listdir[i][-4:]=='.m4a':
+			os.system('ffmpeg -i %s %s'%(listdir[i], listdir[i][0:-4]+'.wav'))
+			filename=listdir[i][0:-4]+'.wav'
+			os.remove(listdir[i])
+
 		#try:
 		os.chdir(foldername)
 		sampletype='audio'
@@ -221,15 +227,17 @@ for i in range(len(listdir)):
 
 			# get the audio transcript  
 			if audio_transcribe==True:
-				transcript = transcribe(listdir[i], default_audio_transcriber)
+				transcript = transcribe(filename, default_audio_transcriber)
 				transcript_list=basearray['transcripts']
 				transcript_list['audio'][default_audio_transcriber]=transcript 
 				basearray['transcripts']=transcript_list
+			else:
+				transcript=''
 
 			# featurize the audio file 
 			for j in range(len(feature_sets)):
 				feature_set=feature_sets[j]
-				features, labels = audio_featurize(feature_set, listdir[i], transcript)
+				features, labels = audio_featurize(feature_set, filename, transcript)
 				try:
 					data={'features':features.tolist(),
 						  'labels': labels}
@@ -255,17 +263,19 @@ for i in range(len(listdir)):
 
 			# only transcribe if you need to (checks within schema)
 			if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-				transcript = transcribe(listdir[i], default_audio_transcriber)
+				transcript = transcribe(filename, default_audio_transcriber)
 				transcript_list['audio'][default_audio_transcriber]=transcript 
 				basearray['transcripts']=transcript_list
-			else:
+			elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
 				transcript = transcript_list['audio'][default_audio_transcriber]
+			else:
+				transcript=''
 				
 			# only re-featurize if necessary (checks if relevant feature embedding exists)
 			for j in range(len(feature_sets)):
 				feature_set=feature_sets[j]
 				if feature_set not in list(basearray['features']['audio']):
-					features, labels = audio_featurize(feature_set, listdir[i], transcript)
+					features, labels = audio_featurize(feature_set, filename, transcript)
 					print(features)
 					try:
 						data={'features':features.tolist(),

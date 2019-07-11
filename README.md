@@ -30,7 +30,7 @@ Now install required dependencies and perform unit tests to make sure everything
 python3 setup.py
 ```
 
-Note the test above takes roughly 10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques.
+Note the test above takes roughly 10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. Note that after the first step (uninstalling opencv if necessary), it may be best to go grab lunch or coffee and get back to your computer later! :-) 
 
 ## folder structures
 

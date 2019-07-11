@@ -19,7 +19,7 @@ Now you can apply all models in the directory according to sample types (audio_m
 ```
 cd ..
 cd models 
-python3 load_models.py
+python3 load.py
 -----------------------------------
 DETECTED 5 FILES (['audio', 'image', 'text', 'video', 'csv'])
 -----------------------------------

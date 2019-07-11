@@ -251,16 +251,19 @@ for i in range(len(classes)):
 	label_list=list()
 	for i in range(len(listdir)):
 		if listdir[i][-5:]=='.json':
-			g=json.load(open(listdir[i]))
-			# consolidate all features into one array (if featurizing with multiple featurizers)
-			default_feature=list()
-			default_label=list()
-			for j in range(len(default_features)):
-				default_feature=default_feature+g['features'][problemtype][default_features[j]]['features']
-				default_label=default_label+g['features'][problemtype][default_features[j]]['labels']
+			try:
+				g=json.load(open(listdir[i]))
+				# consolidate all features into one array (if featurizing with multiple featurizers)
+				default_feature=list()
+				default_label=list()
+				for j in range(len(default_features)):
+					default_feature=default_feature+g['features'][problemtype][default_features[j]]['features']
+					default_label=default_label+g['features'][problemtype][default_features[j]]['labels']
 
-			feature_list.append(default_feature)
-			label_list.append(default_label)
+				feature_list.append(default_feature)
+				label_list.append(default_label)
+			except:
+				print('ERROR - skipping ' + listdir[i])
 	
 	data[class_type]=feature_list
 

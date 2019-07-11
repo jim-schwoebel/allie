@@ -41,7 +41,7 @@ os.chdir(basedir)
 
 #### to extract tesseract features 
 sys.path.append(prevdir+ '/image_features')
-import tesseract_features as tf 
+import tesseract_features as tff
 os.chdir(basedir)
 
 # import fast featurize
@@ -251,7 +251,7 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
           im = numpy.array(Image.open(listdir[i]))
           image_features_temp = extractor.extract_rgb_frame_features(im)
           image_features=image_features+image_features_temp
-          ttranscript, tfeatures, tlabels = tf.tesseract_featurize(listdir[i])
+          ttranscript, tfeatures, tlabels = tff.tesseract_featurize(listdir[i])
           image_transcript=image_transcript+ttranscript 
           image_features2=image_features2+tfeatures 
           #os.remove(listdir[i])

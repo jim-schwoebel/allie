@@ -124,7 +124,7 @@ for j in range(len(feature_sets)):
 		    os.chdir(cur_dir)
 
 		# load in FAST model 
-		os.chdir(prevdir+'text_features')
+		os.chdir(prevdir+'/text_features')
 		if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 			print('downloading Facebook FastText model...')
 			wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")

@@ -324,7 +324,7 @@ N/A - no audio models trained yet.
 N/A - no text models trained yet. 
 
 ## Image models
-N/A - no image models trained yet. 
+* age and gender model (https://github.com/deepinx/age-gender-estimation) - 96% accuracy gender, 4.1 MAE age.
 
 ## Video models
 N/A - no video models trained yet. 

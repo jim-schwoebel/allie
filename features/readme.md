@@ -131,6 +131,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 
 ### Text
+* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers)
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
 * follow up with Larry on semantic coherence vector / value 
 * add in text transcription (as the default value) 

@@ -12,7 +12,7 @@ h5py
 hyperopt 
 joblib
 kafka-python
-keras
+keras==2.2.0
 librosa==0.6.2
 llvmlite
 ludwig

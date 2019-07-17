@@ -44,6 +44,10 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 
+# install spacy add-ons
+os.system('python3 -m spacy download en')
+os.system("python3 -m spacy download 'en_core_web_sm'")
+
 # install hyperopt-sklearn
 curdir=os.getcwd()
 os.chdir(curdir+'/training/helpers/hyperopt-sklearn')

@@ -122,6 +122,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 
 ### Audio
+* [auDeep](https://github.com/auDeep/auDeep)
 * fix myprosody_features.py feature script (in helpers for now). This is buggy and may change into the future as the library is more supported by more senior developers.
 * allow Ludwig model type to dictate featurization - 'audio_ludwig_features'
 * [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
@@ -130,6 +131,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 
 ### Text
+* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers)
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
 * follow up with Larry on semantic coherence vector / value 
 * add in text transcription (as the default value) 

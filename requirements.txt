@@ -12,7 +12,8 @@ h5py
 hyperopt 
 joblib
 kafka-python
-keras
+keras==2.2.0
+keras_squeezenet==0.4
 librosa==0.6.2
 llvmlite
 ludwig
@@ -33,6 +34,7 @@ praat-parselmouth
 protobuf
 psutil
 pyaudio
+pyaudioanalysis==0.2.5
 pydub
 pyobjc
 pymongo

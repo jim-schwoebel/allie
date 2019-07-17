@@ -505,7 +505,7 @@ for i in range(len(default_training_scripts)):
 
 		# now apply machine learning model to these files 
 		os.chdir(prevdir+'/models')
-		os.system('python3 load_models.py')
+		os.system('python3 load.py')
 
 		# now load up each of these and break loop when tests for each class exist 
 		os.chdir(prevdir+'/load_dir')

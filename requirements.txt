@@ -70,3 +70,4 @@ wave
 webrtcvad
 wget
 xgboost
+xlsxwriter

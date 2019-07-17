@@ -140,6 +140,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * Allen NLP pre-trained models.
 
 ### Images 
+* add in [keras_squeezenet](https://github.com/rcmalli/keras-squeezenet) featurizer (reduced memory footprint) 
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV). - 'image_ludwig_features'
 * Add in transcription to standard image array if settings.JSON image transcript == True.
 * [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html

@@ -34,6 +34,7 @@ praat-parselmouth
 protobuf
 psutil
 pyaudio
+pyaudioanalysis==0.2.5
 pydub
 pyobjc
 pymongo

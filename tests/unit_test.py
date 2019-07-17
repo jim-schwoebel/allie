@@ -1209,7 +1209,7 @@ class test_loading(unittest.TestCase):
             audiomodel_files.append(listdir[i])
 
         os.chdir(loadmodel_dir)
-        os.system('python3 load_models.py')
+        os.system('python3 load.py')
         os.chdir(load_dir)
 
         os.chdir(load_dir)

@@ -131,7 +131,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 
 ### Text
-* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers)
+* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers) - a lot of pre-trained models that could be useful for featurizations (e.g. BERT and other model types here).
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
 * follow up with Larry on semantic coherence vector / value 
 * add in text transcription (as the default value) 
@@ -155,4 +155,3 @@ Note that all scripts implemented have features and their corresponding labels. 
 * be able to determine file type and featurize accordingly on local path ./img.jpg ,./audio.wav, ./video.mp4, ./text.txt, etc.; these will then be featurized with default featurizers for images, audio, video, and text accordingly.
 * accomodate all types on ludwig (https://uber.github.io/ludwig/getting_started/) - binary, numerical, category, set, bag, sequence, text, timeseries, image
 * [seglearn](https://github.com/dmbee/seglearn) - time series pipeline.
-

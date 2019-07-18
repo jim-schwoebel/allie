@@ -5,6 +5,7 @@ import xception_features as xf
 import resnet_features as rf 
 import vgg19_features as v19f
 import tesseract_features as tf
+import squeezenet_features as sf
 import helpers.audio_plot as ap 
 import os, json, sys
 
@@ -40,6 +41,8 @@ def image_featurize(feature_set, imgfile, cur_dir, haar_dir):
 		features, labels=v19f.vgg19_featurize(imgfile)
 	elif feature_set == 'tesseract_features':
 		transcript, features, labels = tf.tesseract_featurize(imgfile)
+	elif feature_set == 'squeezenet_features':
+		features, labels=sf.squeezenet_featurize(imgfile, cur_dir)
 
 	return features, labels 
 

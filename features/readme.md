@@ -107,6 +107,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default)
 * [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py)
 * [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py)
+* [squeezenet_features](https://github.com/rcmalli/keras-squeezenet) - efficient memory footprint
 * [tesseract_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/tesseract_features.py)
 * [vgg16_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg16_features.py) 
 * [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) 
@@ -131,7 +132,8 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 
 ### Text
-* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers)
+* [coreNLP](https://stanfordnlp.github.io/stanfordnlp/) - stanfordNLP parser and featurizer
+* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers) - a lot of pre-trained models that could be useful for featurizations (e.g. BERT and other model types here).
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
 * follow up with Larry on semantic coherence vector / value 
 * add in text transcription (as the default value) 
@@ -141,6 +143,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Images 
 * add in [keras_squeezenet](https://github.com/rcmalli/keras-squeezenet) featurizer (reduced memory footprint) 
+* SURF, ORB, BRIEF, AKAZE - corner detectors - SIFT is most accurate but also the slowest (patented), BRIEF is the fastest but least accurate
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV). - 'image_ludwig_features'
 * Add in transcription to standard image array if settings.JSON image transcript == True.
 * [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html
@@ -154,4 +157,3 @@ Note that all scripts implemented have features and their corresponding labels. 
 * be able to determine file type and featurize accordingly on local path ./img.jpg ,./audio.wav, ./video.mp4, ./text.txt, etc.; these will then be featurized with default featurizers for images, audio, video, and text accordingly.
 * accomodate all types on ludwig (https://uber.github.io/ludwig/getting_started/) - binary, numerical, category, set, bag, sequence, text, timeseries, image
 * [seglearn](https://github.com/dmbee/seglearn) - time series pipeline.
-

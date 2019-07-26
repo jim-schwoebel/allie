@@ -13,7 +13,7 @@ import json, os, sys
 ################################################
 ##	    	Import According to settings      ##
 ################################################
-
+import numpy as np 
 import librosa_features as lf 
 import standard_features as sf 
 import audioset_features as af 
@@ -109,6 +109,10 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = mixf.mixed_featurize(audiofile, transcript, help_dir)
 	elif feature_set == 'audiotext_features':
 		features, labels = atf.audiotext_featurize(audiofile, transcript)
+
+	# make sure all the features do not have any infinity or NaN
+	features=np.nan_to_num(np.array(features))
+	features=features.tolist()
 
 	return features, labels 
 
@@ -216,90 +220,90 @@ for i in range(len(listdir)):
 			filename=listdir[i][0:-4]+'.wav'
 			os.remove(listdir[i])
 
-		#try:
-		os.chdir(foldername)
-		sampletype='audio'
+		try:
+			os.chdir(foldername)
+			sampletype='audio'
 
-		if listdir[i][0:-4]+'.json' not in listdir:
+			if listdir[i][0:-4]+'.json' not in listdir:
 
-			# make new .JSON if it is not there with base array schema.
-			basearray=make_features(sampletype)
+				# make new .JSON if it is not there with base array schema.
+				basearray=make_features(sampletype)
 
-			# get the audio transcript  
-			if audio_transcribe==True:
-				transcript = transcribe(filename, default_audio_transcriber)
-				transcript_list=basearray['transcripts']
-				transcript_list['audio'][default_audio_transcriber]=transcript 
-				basearray['transcripts']=transcript_list
-			else:
-				transcript=''
+				# get the audio transcript  
+				if audio_transcribe==True:
+					transcript = transcribe(filename, default_audio_transcriber)
+					transcript_list=basearray['transcripts']
+					transcript_list['audio'][default_audio_transcriber]=transcript 
+					basearray['transcripts']=transcript_list
+				else:
+					transcript=''
 
-			# featurize the audio file 
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				features, labels = audio_featurize(feature_set, filename, transcript)
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-				print(features)
-				audio_features=basearray['features']['audio']
-				audio_features[feature_set]=data
-				basearray['features']['audio']=audio_features
-			
-			basearray['labels']=[labelname]
-
-			# write to .JSON 
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
-
-		elif listdir[i][0:-4]+'.json' in listdir:
-			# load the .JSON file if it is there 
-			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			transcript_list=basearray['transcripts']
-
-			# only transcribe if you need to (checks within schema)
-			if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-				transcript = transcribe(filename, default_audio_transcriber)
-				transcript_list['audio'][default_audio_transcriber]=transcript 
-				basearray['transcripts']=transcript_list
-			elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
-				transcript = transcript_list['audio'][default_audio_transcriber]
-			else:
-				transcript=''
-				
-			# only re-featurize if necessary (checks if relevant feature embedding exists)
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				if feature_set not in list(basearray['features']['audio']):
+				# featurize the audio file 
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
 					features, labels = audio_featurize(feature_set, filename, transcript)
-					print(features)
 					try:
 						data={'features':features.tolist(),
 							  'labels': labels}
 					except:
 						data={'features':features,
 							  'labels': labels}
+					print(features)
+					audio_features=basearray['features']['audio']
+					audio_features[feature_set]=data
+					basearray['features']['audio']=audio_features
+				
+				basearray['labels']=[labelname]
+
+				# write to .JSON 
+				jsonfile=open(listdir[i][0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
+
+			elif listdir[i][0:-4]+'.json' in listdir:
+				# load the .JSON file if it is there 
+				basearray=json.load(open(listdir[i][0:-4]+'.json'))
+				transcript_list=basearray['transcripts']
+
+				# only transcribe if you need to (checks within schema)
+				if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
+					transcript = transcribe(filename, default_audio_transcriber)
+					transcript_list['audio'][default_audio_transcriber]=transcript 
+					basearray['transcripts']=transcript_list
+				elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
+					transcript = transcript_list['audio'][default_audio_transcriber]
+				else:
+					transcript=''
 					
-					basearray['features']['audio'][feature_set]=data
+				# only re-featurize if necessary (checks if relevant feature embedding exists)
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
+					if feature_set not in list(basearray['features']['audio']):
+						features, labels = audio_featurize(feature_set, filename, transcript)
+						print(features)
+						try:
+							data={'features':features.tolist(),
+								  'labels': labels}
+						except:
+							data={'features':features,
+								  'labels': labels}
+						
+						basearray['features']['audio'][feature_set]=data
 
-			# only add the label if necessary 
-			label_list=basearray['labels']
-			if labelname not in label_list:
-				label_list.append(labelname)
-			basearray['labels']=label_list
-			transcript_list=basearray['transcripts']
+				# only add the label if necessary 
+				label_list=basearray['labels']
+				if labelname not in label_list:
+					label_list.append(labelname)
+				basearray['labels']=label_list
+				transcript_list=basearray['transcripts']
 
-			# overwrite .JSON 
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
+				# overwrite .JSON 
+				jsonfile=open(listdir[i][0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
 
-		#except:
-			#print('error')
+		except:
+			print('error')
 	
 
 

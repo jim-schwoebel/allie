@@ -7,6 +7,7 @@ import vgg19_features as v19f
 import tesseract_features as tf
 import squeezenet_features as sf
 import helpers.audio_plot as ap 
+import numpy as np 
 import os, json, sys
 
 ##################################################
@@ -43,6 +44,10 @@ def image_featurize(feature_set, imgfile, cur_dir, haar_dir):
 		transcript, features, labels = tf.tesseract_featurize(imgfile)
 	elif feature_set == 'squeezenet_features':
 		features, labels=sf.squeezenet_featurize(imgfile, cur_dir)
+		
+	# make sure all the features do not have any infinity or NaN
+	features=np.nan_to_num(np.array(features))
+	features=features.tolist()
 
 	return features, labels 
 

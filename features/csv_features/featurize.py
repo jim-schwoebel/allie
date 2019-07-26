@@ -2,6 +2,7 @@ import os, json, wget, sys
 import csv_features as cf
 import os, wget, zipfile 
 import shutil
+import numpy as np
 
 ##################################################
 ##				Helper functions.    			##
@@ -56,6 +57,10 @@ def csv_featurize(feature_set, csvfile, cur_dir):
 
 	if feature_set == 'csv_features':
 		features, labels = cf.csv_featurize(csv_file, cur_dir)
+		# make sure all the features do not have any infinity or NaN
+		features=np.nan_to_num(np.array(features))
+		features=features.tolist()
+
 	else:
 		print('-----------------------')
 		print('!!		error		!!')

@@ -80,7 +80,7 @@ def train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, prob
     g=json.load(open(jsonfilename))
     g['settings']=settings
     jsonfile=open(jsonfilename, 'w')
-    json.dump(data,g)
+    json.dump(g,jsonfile)
     jsonfile.close()
 
     return jsonfilename[0:-5], os.getcwd()

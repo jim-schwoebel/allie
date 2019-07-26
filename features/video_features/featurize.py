@@ -1,6 +1,7 @@
 import os, json, wget
 import video_features as vf 
 import y8m_features as yf
+import numpy as np
 from gensim.models import KeyedVectors
 import os, wget, zipfile, sys
 import shutil
@@ -58,6 +59,10 @@ def video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_mo
 		features, labels, audio_transcript, image_transcript = vf.video_featurize(videofile, cur_dir, haar_dir)
 	elif feature_set == 'y8m_features':
 		features, labels, audio_transcript, image_transcript = yf.y8m_featurize(videofile, cur_dir, help_dir, fast_model)
+
+	# make sure all the features do not have any infinity or NaN
+	features=np.nan_to_num(np.array(features))
+	features=features.tolist()
 
 	return features, labels, audio_transcript, image_transcript 
 

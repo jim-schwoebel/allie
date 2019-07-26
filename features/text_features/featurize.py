@@ -18,6 +18,7 @@ import glove_features as gf
 import w2v_features as w2v
 import fast_features as ff
 import helpers.transcribe as ts
+import numpy as np
 
 # other import stuff 
 import json, os, sys
@@ -85,6 +86,10 @@ def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel):
 		features, labels=w2v.w2v_featurize(transcript, w2vmodel)
 	elif feature_set == 'fast_features':
 		features, labels=ff.fast_featurize(transcript, fastmodel)
+	
+	# make sure all the features do not have any infinity or NaN
+	features=np.nan_to_num(np.array(features))
+	features=features.tolist()
 
 	return features, labels 
 

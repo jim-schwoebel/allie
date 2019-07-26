@@ -123,6 +123,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 
 ### Audio
+* Ludwig audio features - add them in.
 * [auDeep](https://github.com/auDeep/auDeep)
 * fix myprosody_features.py feature script (in helpers for now). This is buggy and may change into the future as the library is more supported by more senior developers.
 * allow Ludwig model type to dictate featurization - 'audio_ludwig_features'
@@ -132,14 +133,14 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 
 ### Text
+* BERT pre-trained model - add through Ludwig
+* Allen NLP pre-trained models.
 * [coreNLP](https://stanfordnlp.github.io/stanfordnlp/) - stanfordNLP parser and featurizer
 * [pytorch-transformers](https://github.com/huggingface/pytorch-transformers) - a lot of pre-trained models that could be useful for featurizations (e.g. BERT and other model types here).
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
 * follow up with Larry on semantic coherence vector / value 
 * add in text transcription (as the default value) 
 * input text files 
-* BERT pre-trained model - https://github.com/huggingface/pytorch-pretrained-BERT [tutorial](https://medium.com/swlh/a-simple-guide-on-using-bert-for-text-classification-bbf041ac8d04?source=emailShare-be301d83c471-1561217978&_branch_match_id=651446911253519181)
-* Allen NLP pre-trained models.
 
 ### Images 
 * SURF, ORB, BRIEF, AKAZE - corner detectors - SIFT is most accurate but also the slowest (patented), BRIEF is the fastest but least accurate

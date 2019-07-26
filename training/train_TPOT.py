@@ -6,7 +6,7 @@ from tpot import TPOTRegressor
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score
 
-def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features):
+def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
     # get train and test data 
     X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
     modelname=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')
@@ -59,6 +59,7 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features):
             'model name':jsonfilename[0:-5]+'.pickle',
             'accuracy':accuracy,
             'model type':'TPOTclassification_'+modeltype,
+            'settings': settings,
         }
     elif mtype in ['regression', 'r']:
         data={'sample type': problemtype,
@@ -66,6 +67,7 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features):
             'model name':jsonfilename[0:-5]+'.pickle',
             'accuracy':accuracy,
             'model type':'TPOTregression_'+modeltype,
+            'settings': settings,
         }
 
     json.dump(data,jsonfile)

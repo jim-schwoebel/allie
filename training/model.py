@@ -363,16 +363,16 @@ for i in range(len(default_training_scripts)):
 		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
 	elif default_training_script=='devol':
 		import train_devol as td 
-		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
 	elif default_training_script=='hypsklearn':
 		import train_hypsklearn as th 
-		modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+		modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
 	elif default_training_script=='keras':
 		import train_keras as tk
-		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
 	elif default_training_script=='ludwig':
 		import train_ludwig as tl
-		modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, default_label, problemtype, default_featurenames)
+		modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, default_label, problemtype, default_featurenames, settings)
 	elif default_training_script=='plda':
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp
@@ -380,12 +380,12 @@ for i in range(len(default_training_scripts)):
 	elif default_training_script=='scsr':
 		import train_scsr as scsr
 		if mtype == 'c':
-			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, classes, minlength)
+			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, classes, minlength, settings)
 		elif mtype == 'r':
-			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels)
+			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels, settings)
 	elif default_training_script=='tpot':
 		import train_TPOT as tt
-		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_featurenames)
+		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 
 	############################################################
 	## 					COMPRESS MODELS 					  ##

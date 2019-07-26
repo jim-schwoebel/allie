@@ -45,7 +45,7 @@ def make_yaml(feature_labels, epochs):
 
     return 'model_definition.yaml'
 
-def train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features):
+def train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_features, settings):
   
     jsonfilename='%s.json'%(jsonfile[0:-5]+"_ludwig_%s"%(str(default_features).replace("'",'').replace('"','')))
     filename='%s.csv'%(jsonfilename[0:-5])
@@ -75,5 +75,12 @@ def train_ludwig(mtype, classes, jsonfile, alldata, labels, feature_labels, prob
     shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.yaml', os.getcwd()+'/'+jsonfilename[0:-5]+'.yaml')
     shutil.copytree(cur_dir2+'/'+jsonfilename[0:-5], os.getcwd()+'/'+jsonfilename[0:-5])
     shutil.rmtree(cur_dir2+'/'+jsonfilename[0:-5])
+
+    # add settings to JSONFILE
+    g=json.load(open(jsonfilename))
+    g['settings']=settings
+    jsonfile=open(jsonfilename, 'w')
+    json.dump(data,g)
+    jsonfile.close()
 
     return jsonfilename[0:-5], os.getcwd()

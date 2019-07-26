@@ -5,7 +5,7 @@ from helpers.devol.devol import DEvol, GenomeHandler
 from sklearn.model_selection import train_test_split
 import time, os, shutil, json
 
-def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
+def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
 	print('training DEVOL CNN network (may take up to 1 day)')
 	x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 
@@ -68,6 +68,7 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 		  'model_name': modelname+".h5",
 		  'training_type': 'devol',
 		  'model summary': summary,
+		  'settings': settings,
 		}
 
 	json.dump(data,jsonfile)

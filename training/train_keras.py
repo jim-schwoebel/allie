@@ -7,7 +7,7 @@ from keras.models import Sequential,model_from_json
 from keras.layers import Dense, Dropout
 from sklearn.model_selection import train_test_split
 
-def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features):
+def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
     # get train and test data 
     start=time.time()
     x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
@@ -108,6 +108,7 @@ def train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_
             'model name':jsonfilename[0:-5]+'.h5',
             'accuracy':score[1],
             'model type':'keras_mlp',
+            'settings': settings,
             }
 
 

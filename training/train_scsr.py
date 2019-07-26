@@ -39,7 +39,7 @@ warnings.filterwarnings("ignore")
 
 # INITIAL FUNCTIONS
 #############################################################
-def update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores):
+def update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores, settings):
 
     #try:
     explained_variances.append(metrics.explained_variance_score(y_test,predictions))
@@ -697,6 +697,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
                 'r2_score':r2_scores[ind-1]
                 },
         'classes':classes,
+        'settings': settings,
         }
 
     jsonfilename=foldername+'.json'
@@ -726,7 +727,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
 
     return foldername+'.pickle', os.getcwd()+'/'+problemtype+'_models'
 
-def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, min_num):
+def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, min_num, settings):
 
     selectedfeature=str(default_features) + ' (%s)'%(problemtype)
     modelname=jsonfile[0:-5]+'_sc_classification_%s'%(str(default_features).replace("'",'').replace('"',''))
@@ -993,6 +994,7 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
         'accuracy':model_accuracy[len(model_accuracy)-1][1],
         'deviation': model_accuracy[len(model_accuracy)-1][2],
         'model type':'sc_'+classifiername,
+        'settings': settings,
         }
 
     # write to .JSON and move to proper directory...

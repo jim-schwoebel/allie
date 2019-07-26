@@ -7,7 +7,7 @@ from hpsklearn import HyperoptEstimator, any_preprocessing, any_classifier, any_
 from hyperopt import tpe
 import numpy as np 
 
-def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features):
+def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
 
     # get train and test data 
     X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
@@ -61,6 +61,7 @@ def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_feat
             'model name':jsonfilename[0:-5]+'.pickle',
             'accuracy':scores,
             'model type': bestmodel,
+            'settings': settings
         }
     elif mtype in ['regression', 'r']:
         data={'sample type': problemtype,
@@ -68,6 +69,7 @@ def train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_feat
             'model name':jsonfilename[0:-5]+'.pickle',
             'accuracy':scores,
             'model type': bestmodel,
+            'settings': settings,
         }
 
     json.dump(data,jsonfile)

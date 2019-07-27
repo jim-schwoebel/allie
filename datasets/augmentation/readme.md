@@ -57,7 +57,7 @@ Video
 * [VIDAUG]()
 
 CSV 
-* []()
+* coming soon
 
 ## References
 * [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)

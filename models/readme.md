@@ -317,6 +317,8 @@ models={'audio': audio_models,
 
 This allows for a flexible definition of models as arrays. As features are put into the load_dir, featurized, and then modeled, they can be updated with classes in the array such that new labels can be tagged onto the data samples.
 
+## Dealing with multiple models of the same class (output)
+
 Note that if you have multiple models you can print out accuracy on an array something like this:
 ```
 g=json.load(open('sample.json'))

@@ -135,34 +135,11 @@ def detect_models():
 
     return data 
 
-def load_tpot():
-    # load the TPOT file 
-    # make a prediction 
-    return
-
-def load_hypsklearn():
-    # load the hypsklearn pickle file 
-    # make a prediction 
-    return
-
-def load_scsr():
-    # load the pickle file (or joblib if compressed)
-    # make a prediction 
-    return 
-
-def load_devol():
-     # load in the model file (compressed or not)
-     return 
-
-def load_keras():
-    # load in the model file (compressed or not)
-    return
-
-def load_ludwig():
-    # make a .CSV output of all the features in the folder 
-    # make a ludwig prediction
-    # load that output prediction 
-    return 
+def appendlist(tlist, masterlist):
+    for i in range(len(tlist)):
+        if tlist[i] not in masterlist:
+            masterlist.append(tlist[i])
+    return masterlist 
 
 def model_schema():
     models={'audio': dict(),
@@ -209,9 +186,15 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                 time.sleep(2)
                 if modelname.endswith('.pickle'):
 
-                    # load model 
+                    # change to model directory
                     os.chdir(model_dir)
                     print(os.getcwd())
+
+                    # now load and update features_list to the type of features necessary
+                    settings=json.load(open(modelname[0:-7]+'.json'))['settings']
+                    feature_set=settings['default_%s_features'%(sampletype)]
+                    
+                    # load model 
                     loadmodel=open(modelname, 'rb')
                     model = pickle.load(loadmodel)
                     loadmodel.close()
@@ -264,6 +247,10 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
                 elif modelname.endswith('.h5'):
 
+                    # now load and update features_list to the type of features necessary
+                    settings=json.load(open(modelname[0:-3]+'.json'))['settings']
+                    feature_set=settings['default_%s_features'%(sampletype)]
+
                     # load model 
                     os.chdir(model_dir)
                     print(os.getcwd())
@@ -311,7 +298,11 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         jsonfilename=open(jsonfilelist[k],'w')
                         json.dump(jsonfile,jsonfilename)
                         jsonfilename.close() 
-                elif modelname.find('ludwig') > 0:
+                elif modelname.find('ludwig') > 0 and modelname[-5:] != '.json':
+
+                    # modeldata
+                    settings=json.load(open(modelname+'.json'))['settings']
+                    feature_set=settings['default_%s_features'%(sampletype)]
 
                     # load Ludwig model file 
                     os.chdir(model_dir)
@@ -374,13 +365,49 @@ prevdir= prev_dir(cur_dir)
 os.chdir(prevdir+'/load_dir')
 rename_files()
 
-# get all the default feature arrays 
-settings=json.load(open(prevdir+'/settings.json'))
-default_audio_features=settings['default_audio_features']
-default_text_features=settings['default_text_features']
-default_image_features=settings['default_image_features']
-default_video_features=settings['default_video_features']
-default_csv_features=settings['default_csv_features']
+# load all the features that are necessary to load for models 
+# create default feature lists so as to make it seamless to featurize into the future
+# note that the settings are all stored in the .JSON files for each model  
+os.chdir(prevdir+'/models')
+tempdir=os.getcwd()
+features={'default_audio_features': [],
+           'default_text_features': [],
+           'default_image_features': [],
+           'default_video_features': [],
+           'default_csv_features': [],
+            }
+
+directories=['audio_models', 'text_models', 'image_models', 'video_models', 'csv_models']
+direxist=[]
+
+for i in range(len(directories)):
+    try:
+        os.chdir(tempdir+'/'+directories[i])
+        direxist.append(True)
+        listdir=os.listdir()
+        split=directories[i].split('_')[0]
+
+        for i in range(len(listdir)):
+            if listdir[i][-5:]=='.json':
+                try:
+                    # get settings of model and only extract features for type 
+                    g=json.load(open(listdir[i]))
+                    settings=g['settings']
+                    t1='default_%s_features'%(split)
+                    featurelist=appendlist(settings[t1], features[t1])
+                    features[t1]=featurelist 
+                except:
+                    print('error')
+    except:
+        print('no %s directory'%(directories[i].upper()))
+        direxist.append(False)
+
+default_audio_features=features['default_audio_features']
+default_text_features=features['default_text_features']
+default_image_features=features['default_image_features']
+default_video_features=features['default_video_features']
+default_csv_features=features['default_csv_features']
+os.chdir(prevdir+'/load_dir')
 
 # now assess folders by content type 
 totalfiles, sampletypes, counts = classifyfolder(os.listdir())
@@ -397,45 +424,50 @@ os.chdir(prevdir+'/load_dir')
 load_dir=os.getcwd()
 
 # now based on filetypes, featurize accordingly (can probably compress this into a loop)
-if 'audio' in sampletypes:
+if 'audio' in sampletypes and direxist[0] == True:
     # import right featurizers (based on models)
     print('-----------------------------------')
     print('AUDIO FEATURIZING - %s'%(str(default_audio_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/audio_features')
-    os.system('python3 featurize.py %s'%(load_dir))
+    for i in range(len(default_audio_features)):
+        os.system('python3 featurize.py %s %s'%(load_dir, default_audio_features[i]))
 
-if 'text' in sampletypes:
+if 'text' in sampletypes and direxist[1] == True:
     # import right featurizers (based on models)
     print('-----------------------------------')
     print('TEXT FEATURIZING - %s'%(str(default_text_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/text_features')
-    os.system('python3 featurize.py %s'%(load_dir))
+    for i in range(len(default_text_features)):
+        os.system('python3 featurize.py %s %s'%(load_dir, default_text_features[i]))
 
-if 'image' in sampletypes:
+if 'image' in sampletypes and direxist[2] == True:
     # import right featurizers (based on models)
     print('-----------------------------------')
     print('IMAGE FEATURIZING - %s'%(str(default_image_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/image_features')
-    os.system('python3 featurize.py %s'%(load_dir))
+    for i in range(len(default_image_features)):
+        os.system('python3 featurize.py %s %s'%(load_dir, default_image_features[i]))
 
-if 'video' in sampletypes:
+if 'video' in sampletypes and direxist[3] == True:
     # import right featurizers (based on models)
     print('-----------------------------------')
     print('VIDEO FEATURIZING - %s'%(str(default_video_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/video_features')
-    os.system('python3 featurize.py %s'%(load_dir))
+    for i in range(len(default_video_features)):
+        os.system('python3 featurize.py %s %s'%(load_dir, default_video_features[i]))
 
-if 'csv' in sampletypes:
+if 'csv' in sampletypes and direxist[4] == True:
     # import right featurizers (based on models)
     print('-----------------------------------')
     print('CSV FEATURIZING - %s'%(str(default_csv_features)))
     print('-----------------------------------')
     os.chdir(prevdir+'/features/csv_features')
-    os.system('python3 featurize.py %s'%(load_dir))
+    for i in range(len(default_csv_features)):
+        os.system('python3 featurize.py %s %s'%(load_dir, default_csv_features[i]))
 
 ##########################################################
 ##                GET MODEL PREDICTIONS                 ##

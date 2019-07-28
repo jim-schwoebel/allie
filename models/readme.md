@@ -317,6 +317,24 @@ models={'audio': audio_models,
 
 This allows for a flexible definition of models as arrays. As features are put into the load_dir, featurized, and then modeled, they can be updated with classes in the array such that new labels can be tagged onto the data samples.
 
+Note that if you have multiple models you can print out accuracy on an array something like this:
+```
+g=json.load(open('sample.json'))
+models=g['models']['audio']['males']
+for i in range(len(males)):
+     print(males[i]['accuracy'])
+```
+
+So if you had like 5 gender detection models that ran and predicted males, it would print something like this:
+```
+0.9247536945812808
+0.9298428383210992
+0.9247457440111113
+0.9290565756082996
+0.8718679621228347
+```
+
+This can help select the best class or model from a list of similar algorithms.
 ## Audio models
 N/A - no audio models trained yet. 
 

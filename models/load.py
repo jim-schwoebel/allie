@@ -5,7 +5,7 @@ first determine the file types available in the folder + load appropriate featur
 
 change to load directory 
 '''
-import os, json 
+import os, json, uuid
 import os, getpass
 import keras.models 
 from keras.models import load_model
@@ -78,15 +78,15 @@ def rename_files():
     listdir=os.listdir()
     for i in range(len(listdir)):
         if listdir[i].endswith(('.mp3', '.wav')):
-            os.rename(listdir[i], str(i)+'_audio'+listdir[i][-4:])
+            os.rename(listdir[i], str(uuid.uuid4())+listdir[i][-4:])
         elif listdir[i].endswith(('.png', '.jpg')):
-            os.rename(listdir[i], str(i)+'_image'+listdir[i][-4:])
+            os.rename(listdir[i], str(uuid.uuid4())+listdir[i][-4:])
         elif listdir[i].endswith(('.txt')):
-            os.rename(listdir[i], str(i)+'_text'+listdir[i][-4:])
+            os.rename(listdir[i], str(uuid.uuid4())+listdir[i][-4:])
         elif listdir[i].endswith(('.mp4', '.avi')):
-            os.rename(listdir[i], str(i)+'_video'+listdir[i][-4:])
+            os.rename(listdir[i], str(uuid.uuid4())+listdir[i][-4:])
         elif listdir[i].endswith(('.csv')):
-            os.rename(listdir[i], str(i)+'_csv'+listdir[i][-4:])
+            os.rename(listdir[i], str(uuid.uuid4())+listdir[i][-4:])
 
 def detect_models():
     # takes in current directory and detects models
@@ -236,7 +236,13 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                             models=model_schema()
 
                         temp=models[sampletype]
-                        temp[class_]= modeldata
+                        if class_ not in list(temp):
+                            temp[class_]= [modeldata]
+                        else:
+                            tclass=temp[class_]
+                            tclass.append(modeldata)
+                            temp[class_]=tclass
+
                         models[sampletype]=temp
                         jsonfile['models']=models
 
@@ -291,13 +297,20 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                             models=model_schema()
 
                         temp=models[sampletype]
-                        temp[class_]= modeldata
+                        if class_ not in list(temp):
+                            temp[class_]= [modeldata]
+                        else:
+                            tclass=temp[class_]
+                            tclass.append(modeldata)
+                            temp[class_]=tclass
+                            
                         models[sampletype]=temp
                         jsonfile['models']=models
 
                         jsonfilename=open(jsonfilelist[k],'w')
                         json.dump(jsonfile,jsonfilename)
                         jsonfilename.close() 
+
                 elif modelname.find('ludwig') > 0 and modelname[-5:] != '.json':
 
                     # modeldata
@@ -346,7 +359,13 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                             models=model_schema()
 
                         temp=models[sampletype]
-                        temp[class_]= modeldata
+                        if class_ not in list(temp):
+                            temp[class_]= [modeldata]
+                        else:
+                            tclass=temp[class_]
+                            tclass.append(modeldata)
+                            temp[class_]=tclass
+                            
                         models[sampletype]=temp
                         jsonfile['models']=models
 
@@ -355,6 +374,7 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         jsonfilename.close()
 
                     model.close()
+                    
 ##########################################################
 ##                     CLEAN FOLDER                    ##
 ##########################################################

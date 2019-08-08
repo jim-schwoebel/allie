@@ -123,6 +123,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 
 ### Audio
+* https://github.com/bootphon/shennong
 * Ludwig audio features - add them in.
 * [auDeep](https://github.com/auDeep/auDeep)
 * fix myprosody_features.py feature script (in helpers for now). This is buggy and may change into the future as the library is more supported by more senior developers.

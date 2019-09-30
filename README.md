@@ -95,6 +95,8 @@ We are currently in process to implement this schema into the SurveyLex architec
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.
 
+![](https://github.com/jim-schwoebel/allie/blob/master/datasets/labeling/helpers/Screen%20Shot%202019-09-29%20at%2010.43.36%20PM.png)
+
 Here are some settings that you can modify in this settings.json file and the various options for these settings:
 
 | setting | description | default setting | all options | 

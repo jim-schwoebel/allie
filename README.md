@@ -95,11 +95,6 @@ We are currently in process to implement this schema into the SurveyLex architec
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.
 
-```
-{"default_audio_features": ["sox_features"], "default_text_features": ["nltk_features"], "default_image_features": ["image_features"], "default_video_features": ["video_features"], "default_csv_features": ["csv_features"], "bias_discovery": true, "transcribe_audio": false, "default_audio_transcriber": "pocketsphinx", "transcribe_text": true, "default_text_transcriber": "raw text", "transcribe_image": true, "default_image_transcriber": "tesseract", "transcribe_videos": true, "default_video_transcriber": "tesseract (averaged over frames)", "transcribe_csv": true, "default_csv_transcriber": "raw text", "default_training_script": ["tpot", "devol"], "clean_data": false, "augment_data": false, "visualize_data": true, "create_YAML": true, "model_compress": false}
-© 2019 GitHub, Inc.
-```
-
 Here are some settings that you can modify in this settings.json file and the various options for these settings:
 
 | setting | description | default setting | all options | 

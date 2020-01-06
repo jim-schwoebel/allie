@@ -91,6 +91,10 @@ There are many advantages for having this schema including:
 
 We are currently in process to implement this schema into the SurveyLex architecture. 
 
+### perhaps add?
+* sample ID (unique UUID)
+* datetime (put stamp in here) 
+
 ## settings 
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.

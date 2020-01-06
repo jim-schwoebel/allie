@@ -125,7 +125,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Audio
 * https://github.com/bootphon/shennong
 * Ludwig audio features - add them in.
-* [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk
+* [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk (bottom)
 * [auDeep](https://github.com/auDeep/auDeep)
 * fix myprosody_features.py feature script (in helpers for now). This is buggy and may change into the future as the library is more supported by more senior developers.
 * allow Ludwig model type to dictate featurization - 'audio_ludwig_features'

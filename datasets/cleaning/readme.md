@@ -71,3 +71,8 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 
 ### CSV
 * Coming soon.
+
+## Future
+
+### Audio 
+* [RNN Noise XIPH](https://github.com/xiph/rnnoise) - eliminates all noise events from environment (e.g. typing)

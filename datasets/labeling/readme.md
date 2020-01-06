@@ -23,3 +23,8 @@ Automatic labeling is the idea of using machine learning models to automatically
 Allie can auto-label if you use machine learning models in the load_dir. 
 
 Read more information about how to do this [here](https://github.com/jim-schwoebel/allie/tree/master/models). 
+
+## Future
+
+- Text labeling - find a way to annotate text files on a per-sample basis 
+- CSV labeling - find a way to annotate CSV files on a per-sample basis 

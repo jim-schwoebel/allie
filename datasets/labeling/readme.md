@@ -26,5 +26,12 @@ Read more information about how to do this [here](https://github.com/jim-schwoeb
 
 ## Future
 
-- Text labeling - find a way to annotate text files on a per-sample basis 
-- CSV labeling - find a way to annotate CSV files on a per-sample basis 
+### Video annotation
+* https://github.com/ElbitSystems/AnnotationTool
+* probably have to manually create one here...
+
+### Text labeling 
+* https://github.com/doccano/doccano
+
+### CSV
+* TBA

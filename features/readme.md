@@ -137,6 +137,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 
 ### Text
+* [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team
 * BERT pre-trained model - add through Ludwig
 * Allen NLP pre-trained models.
 * [coreNLP](https://stanfordnlp.github.io/stanfordnlp/) - stanfordNLP parser and featurizer

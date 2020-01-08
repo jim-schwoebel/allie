@@ -1,6 +1,6 @@
 # Allie 
 
-Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files. She is an upgrade from the prior archived [NLX-model repository](https://github.com/NeuroLexDiagnostics/nlx-model).
+Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files.
 
 Here are some things that Allie can do:
 - featurize fles (via audio, text, image, video, or csv featurizers)

@@ -104,7 +104,7 @@ if 'settings.json' not in listdir:
 Perform some automated tests here to ensure add-on 
 files are downloaded and features work properly.
 '''
-testdir=curdir+'/tests'
-os.chdir(testdir)
-os.system('python3 test.py')
-os.chdir(curdir)
+# testdir=curdir+'/tests'
+# os.chdir(testdir)
+# os.system('python3 test.py')
+# os.chdir(curdir)

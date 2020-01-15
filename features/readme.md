@@ -126,6 +126,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * OpenSMILE feature set - Larry Zhang
 * GeMAPS feature set - Larry Zhang 
 * https://github.com/bootphon/shennong
+* [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 * Ludwig audio features - add them in.
 * [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk (bottom)
 * [auDeep](https://github.com/auDeep/auDeep)

@@ -52,6 +52,7 @@ Text
 
 Image 
 * [IMGAUG]()
+* [Augmentor](https://github.com/mdbloice/Augmentor)
 
 Video
 * [VIDAUG]()

@@ -59,6 +59,7 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 * [delete_multi_speaker](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/delete_multi_speaker.py) - deletes audio file if more than 1 speaker (optimizing for one-way monologues). Disabled by default because you may want to model audio events.
 * [remove_silence](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/remove_silence.py) - removes silence from audio files 
 * [normalize_volume](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/audio/normalize_volume.py) - normalizes the volume of all audio files (at end)
+* [clean audio files](https://github.com/meokz/looking-to-listen) - background noise removal 
 
 ### Text
 * Coming soon.

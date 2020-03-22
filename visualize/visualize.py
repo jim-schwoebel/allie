@@ -16,9 +16,11 @@ import os, sys, json
 from tqdm import tqdm
 from yellowbrick.features import Rank1D, Rank2D, Manifold
 from yellowbrick.features.pca import PCADecomposition
+from sklearn.ensemble import ExtraTreesClassifier
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
 import numpy as np
+import pandas as pd
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -122,7 +124,7 @@ def visualize_features(classes, problem_type, curdir):
 	viz.fit_transform(np.array(features), tclass_labels)
 	viz.poof(outpath="tsne.png")   
 	plt.close()
-	os.system('open tsne.png')
+	# os.system('open tsne.png')
 	# viz.show()
 
 	# PCA
@@ -131,7 +133,7 @@ def visualize_features(classes, problem_type, curdir):
 	visualizer.fit_transform(np.array(features), tclass_labels)
 	visualizer.poof(outpath="pca.png") 
 	plt.close()
-	os.system('open pca.png')
+	# os.system('open pca.png')
 
 	# Shapiro rank algorithm (1D)
 	plt.figure()
@@ -140,7 +142,7 @@ def visualize_features(classes, problem_type, curdir):
 	visualizer.transform(np.array(features))
 	visualizer.poof(outpath="shapiro.png")
 	plt.close()
-	os.system('open shapiro.png')
+	# os.system('open shapiro.png')
 	# visualizer.show()   
 
 	# pearson ranking algorithm (2D)
@@ -150,8 +152,20 @@ def visualize_features(classes, problem_type, curdir):
 	visualizer.transform(np.array(features))
 	visualizer.poof(outpath="pearson.png")
 	plt.close()
-	os.system('open pearson.png')
+	# os.system('open pearson.png')
 	# visualizer.show()   
+
+	# You can get the feature importance of each feature of your dataset 
+	# by using the feature importance property of the model.
+	plt.figure()
+	model = ExtraTreesClassifier()
+	model.fit(np.array(features),tclass_labels)
+	print(model.feature_importances_)
+	feat_importances = pd.Series(model.feature_importances_, index=feature_labels[0])
+	feat_importances.nlargest(10).plot(kind='barh')
+	plt.tight_layout()
+	plt.savefig('feature_importance.png')
+	os.system('open feature_importance.png')
 
 	return ''
 

@@ -9,9 +9,12 @@ To get started, you first need to featurize some data using featurizations scrip
 
 After you have featurized your data, go to this current folder (./allie/visualize') and run the visualize.py script:
 ```
-python3 visualize.py audio males females 
+python3 visualize.py [problemtype] [folder A] [folder B] ... [folder N]
 ```
 Note you need to pass through the problem_type (e.g. 'audio'|'text'|'image'|'video'|'csv') and also all the relevant folders featurizations. In this case, we are looking at audio files separating males from females (e.g. featurizations exist) in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir).
+```
+python3 visualize.py audio males females 
+```
 
 ## Output graphs
 

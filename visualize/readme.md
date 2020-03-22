@@ -6,7 +6,12 @@ Can help during modeling process.
 
 This is a setting in the Allie Framework. If visualization == True.
 
-### Featurization tutorials (Readmes)
+## Output graphs
+
+Once you run this script, you get the following visualizations:
+
+
+## Featurization tutorials (Readmes)
 * [How to visualize anything in Yellowbrick](https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f)
 * [Intro to data visualization in Python](https://gilberttanner.com/blog/introduction-to-data-visualization-inpython)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)

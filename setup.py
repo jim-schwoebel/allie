@@ -13,6 +13,9 @@ def brew_install(modules):
 os.system('pip3 uninstall opencv-python')
 os.system('pip3 uninstall opencv-contrib-python')
 
+# install xcode if it is not already installed (on Mac)
+os.system('xcode-select --install')
+
 # possible operating systems
 # | Linux (2.x and 3.x) | linux2 (*) |
 # | Windows             | win32      |

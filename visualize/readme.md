@@ -10,6 +10,21 @@ This is a setting in the Allie Framework. If visualization == True.
 
 Once you run this script, you get the following visualizations:
 
+### numbers in each class
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)
+
+## top 10 features (if 10 features exist)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_importance.png)
+
+## PCA plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/pca.png)
+
+## Pearson ranking plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/pearson.png)
+
+## tSNE plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/tsne.png)
+
 
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)

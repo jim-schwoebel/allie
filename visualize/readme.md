@@ -46,5 +46,6 @@ Once you run this script, you output many visualizations. These visualizations c
 * [Dimensionality reduction techniques](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
 
 ## Additional documentation
+* [MLXtend](https://github.com/rasbt/mlxtend) - for visualizing models
 * [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)

@@ -9,9 +9,16 @@ models to uncover relationships in the data.
 
 Note that this automatically happens as part of the modeling process
 if visualize==True in settings.
+
+ML models: https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f
 '''
 import os, sys, json
 from tqdm import tqdm
+from yellowbrick.features import Rank1D, Rank2D, Manifold
+from yellowbrick.features.pca import PCADecomposition
+import matplotlib.pyplot as plt
+from sklearn import preprocessing
+import numpy as np
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -77,33 +84,74 @@ def get_features(classes, problem_type):
 
 	return features, feature_labels, class_labels 
 
-def visualize_features(classes, problem_type):
+def visualize_features(classes, problem_type, curdir):
 
 	features, feature_labels, class_labels = get_features(classes, problem_type)
+	os.chdir(curdir)
+	le = preprocessing.LabelEncoder()
+	le.fit(class_labels)
+	tclass_labels = le.transform(class_labels)
+
 	print(len(features))
 	print(len(feature_labels))
 	print(len(class_labels))
 	print(class_labels)
 
-	if problem_type=='audio':
-		# yellowbrick
-		pass
+	# Manifold type options 
+	##################################
+	'''
+		"lle"
+		Locally Linear Embedding (LLE) uses many local linear decompositions to preserve globally non-linear structures.
+		"ltsa"
+		LTSA LLE: local tangent space alignment is similar to LLE in that it uses locality to preserve neighborhood distances.
+		"hessian"
+		Hessian LLE an LLE regularization method that applies a hessian-based quadratic form at each neighborhood
+		"modified"
+		Modified LLE applies a regularization parameter to LLE.
+		"isomap"
+		Isomap seeks a lower dimensional embedding that maintains geometric distances between each instance.
+		"mds"
+		MDS: multi-dimensional scaling uses similarity to plot points that are near to each other close in the embedding.
+		"spectral"
+		Spectral Embedding a discrete approximation of the low dimensional manifold using a graph representation.
+		"tsne" (default)
+		t-SNE: converts the similarity of points into probabilities then uses those probabilities to create an embedding.
+	'''
+	plt.figure()
+	viz = Manifold(manifold="isomap", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="tsne.png")   
+	plt.close()
+	os.system('open tsne.png')
+	# viz.show()
 
-	elif problem_type=='text':
-		# tSNE
-		pass
+	# PCA
+	plt.figure()
+	visualizer = PCADecomposition(scale=True, classes=set(classes))
+	visualizer.fit_transform(np.array(features), tclass_labels)
+	visualizer.poof(outpath="pca.png") 
+	plt.close()
+	os.system('open pca.png')
 
-	elif problem_type=='image':
-		# other plots
-		pass 
+	# Shapiro rank alngorithm (1D))
+	plt.figure()
+	visualizer = Rank1D(algorithm='shapiro', classes=set(classes))
+	visualizer.fit(np.array(features), tclass_labels)
+	visualizer.transform(np.array(features))
+	visualizer.poof(outpath="shapiro.png")
+	plt.close()
+	os.system('open shapiro.png')
+	# visualizer.show()   
 
-	elif problem_type=='video':
-		# video plots
-		pass
-
-	elif problem_type=='csv':
-		# class labels
-		pass
+	# pearson ranking algorithm (2D)
+	plt.figure()
+	visualizer = Rank2D(algorithm='pearson', classes=set(classes))
+	visualizer.fit(np.array(features), tclass_labels)
+	visualizer.transform(np.array(features))
+	visualizer.poof(outpath="pearson.png")
+	plt.close()
+	os.system('open pearson.png')
+	# visualizer.show()   
 
 	return ''
 
@@ -115,4 +163,4 @@ problem_type=sys.argv[1]
 print(problem_type)
 classes=get_classes()
 
-visualize_features(classes, problem_type)
+visualize_features(classes, problem_type, curdir)

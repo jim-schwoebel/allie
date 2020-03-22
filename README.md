@@ -52,6 +52,7 @@ Here is a table that describes the folder structure for this repository. These d
 | [tests](https://github.com/jim-schwoebel/Allie/tree/master/tests) | for running local tests and making sure everything works as expected. | 
 | [train_dir](https://github.com/jim-schwoebel/Allie/tree/master/train_dir) | a directory where you can put in audio, text, image, video, or .CSV files in folders and train machine learning models from the model.py script in the ./training/ directory. |
 | [training](https://github.com/jim-schwoebel/Allie/tree/master/models) | for training machine learning models via specified model training scripts. |
+| [visualize](https://github.com/jim-schwoebel/Allie/tree/master/visualize) | for visualizing and selecting features as part of the model creation process. |
 
 ## standard feature array 
 

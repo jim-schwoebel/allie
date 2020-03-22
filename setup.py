@@ -13,9 +13,6 @@ def brew_install(modules):
 os.system('pip3 uninstall opencv-python')
 os.system('pip3 uninstall opencv-contrib-python')
 
-# install xcode if it is not already installed (on Mac)
-os.system('xcode-select --install')
-
 # possible operating systems
 # | Linux (2.x and 3.x) | linux2 (*) |
 # | Windows             | win32      |
@@ -29,6 +26,8 @@ os.system('xcode-select --install')
 if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
   brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4']
   brew_install(brew_modules)
+  # install xcode if it is not already installed (on Mac) - important for OPENSMILE features
+  os.system('xcode-select --install')
 elif sys.platform.lower() in ['linux', 'linux2']:
   os.system('sudo apt-get install ffmpeg')
   os.system('sudo apt-get install sox')

@@ -22,7 +22,9 @@ import pyaudio_features as pf
 import sa_features as saf
 import spectrogram_features as specf
 import meta_features as mf 
+import opensmile_features as osm
 import praat_features as prf
+import prosody_features as prosf
 import pspeech_features as psf
 import specimage_features as sif
 import specimage2_features as sif2
@@ -92,6 +94,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels= specf.spectrogram_featurize(audiofile)
 	elif feature_set == 'meta_features':
 		features, labels = mf.meta_featurize(audiofile, cur_dir, help_dir)
+	elif feature_set == 'opensmile_features':
+		features, labels = osm.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
 	elif feature_set == 'praat_features':
 		features, labels = prf.praat_featurize(audiofile)
 	elif feature_set == 'pspeech_features':
@@ -109,6 +113,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = mixf.mixed_featurize(audiofile, transcript, help_dir)
 	elif feature_set == 'audiotext_features':
 		features, labels = atf.audiotext_featurize(audiofile, transcript)
+	elif feature_set == 'prosody_features':
+		features, labels = prosf.prosody_featurize(audiofile, 20)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))

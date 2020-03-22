@@ -1,10 +1,15 @@
 ## Visualization
 
-This is a univeral visualizer for all types of data.
+This is a univeral visualizer for all types of data. Note taht this is a setting in the Allie Framework (e.g. visualization == True | False).
 
-Can help during modeling process.
+## Getting started
+To get started, you first need to featurize some data using featurizations scripts. This data must be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) in the form of directories. To read more about featurization, [see this page](https://github.com/jim-schwoebel/allie/tree/master/features).
 
-This is a setting in the Allie Framework. If visualization == True.
+After you have featurized your data, go to this current folder (./allie/visualize') and run the visualize.py script:
+```
+python3 visualize.py audio males females 
+```
+Note you need to pass through the problem_type (e.g. 'audio'|'text'|'image'|'video'|'csv') and also all the relevant folders featurizations. In this case, we are looking at audio files separating males from females (e.g. featurizations exist) in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir).
 
 ## Output graphs
 

@@ -24,7 +24,7 @@ os.system('pip3 uninstall opencv-contrib-python')
 
 # assumes Mac OSX for SoX and FFmpeg installations
 if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
-  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus']
+  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4']
   brew_install(brew_modules)
 elif sys.platform.lower() in ['linux', 'linux2']:
   os.system('sudo apt-get install ffmpeg')

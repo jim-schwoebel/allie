@@ -8,7 +8,7 @@ This is a setting in the Allie Framework. If visualization == True.
 
 ## Output graphs
 
-Once you run this script, you get the following visualizations:
+Once you run this script, you output many visualizations. These visualizations can be customized within the script itself with some simple modifications. See below for some of the visualizations you can make.
 
 ### numbers in each class
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)

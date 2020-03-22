@@ -6,6 +6,7 @@ Here are some things that Allie can do:
 - featurize fles (via audio, text, image, video, or csv featurizers)
 - train machine learning models (via tpot, hyperopt, scsr, devol, keras training scripts)
 - make predictions from machine learning models (with all models trained in models directory)
+- create rich visualizations from featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
 - prepare machine learning models for deployment (including repositories with readmes)
 
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)

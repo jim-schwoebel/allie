@@ -5,7 +5,7 @@ Allie is a framework for building machine learning models from audio, text, imag
 Here are some things that Allie can do:
 - featurize files (via audio, text, image, video, or csv featurizers)
 - create visualizations from featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
-- train machine learning models (via tpot, hyperopt, scsr, devol, keras training scripts)
+- train machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig training scripts)
 - make predictions from machine learning models (with all models trained in models directory)
 - prepare machine learning models for deployment (including repositories with readmes)
 

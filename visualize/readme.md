@@ -1,6 +1,8 @@
 ## Visualization
 
-This is a univeral visualizer for all types of data. Note taht this is a setting in the Allie Framework (e.g. visualization == True | False).
+This is a univeral visualizer for all types of data. 
+
+Note that this is a setting in the Allie Framework (e.g. visualization == True | False).
 
 ## Getting started
 To get started, you first need to featurize some data using featurizations scripts. This data must be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) in the form of directories. To read more about featurization, [see this page](https://github.com/jim-schwoebel/allie/tree/master/features).

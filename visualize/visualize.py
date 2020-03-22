@@ -1,15 +1,11 @@
 '''
 visualize.py
-
 Takes in a folder or set of folders of featurized files and outputs
 visualizations to look deeper at the data.
-
 This is often useful as a precursor before building machine learning 
 models to uncover relationships in the data.
-
 Note that this automatically happens as part of the modeling process
 if visualize==True in settings.
-
 ML models: https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f
 '''
 import os, sys, json
@@ -99,6 +95,19 @@ def visualize_features(classes, problem_type, curdir):
 	print(len(class_labels))
 	print(class_labels)
 
+	# Visualize each class (quick plot)
+	##################################
+	objects = tuple(set(class_labels))
+	y_pos = np.arange(len(objects))
+	performance=list()
+	for i in range(len(objects)):
+		performance.append(class_labels.count(objects[i]))
+
+	plt.bar(y_pos, performance, align='center', alpha=0.5)
+	plt.xticks(y_pos, objects)
+	plt.tight_layout()
+	plt.savefig('classes.png')
+
 	# Manifold type options 
 	##################################
 	'''
@@ -120,7 +129,7 @@ def visualize_features(classes, problem_type, curdir):
 		t-SNE: converts the similarity of points into probabilities then uses those probabilities to create an embedding.
 	'''
 	plt.figure()
-	viz = Manifold(manifold="isomap", classes=set(classes))
+	viz = Manifold(manifold="tsne", classes=set(classes))
 	viz.fit_transform(np.array(features), tclass_labels)
 	viz.poof(outpath="tsne.png")   
 	plt.close()
@@ -174,6 +183,8 @@ curdir=os.getcwd()
 basedir=prev_dir(curdir)
 os.chdir(basedir+'/train_dir')
 problem_type=sys.argv[1]
+# 	plt.ylabel('Usage')
+# 	plt.title('Programming language usage')
 print(problem_type)
 classes=get_classes()
 

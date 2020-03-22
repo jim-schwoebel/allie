@@ -32,7 +32,6 @@ python3 setup.py
 ```
 
 Now you can run some unit tests:
-
 ```
 cd testdir
 python3 test.py

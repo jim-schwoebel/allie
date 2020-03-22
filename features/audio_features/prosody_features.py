@@ -8,7 +8,7 @@ from datetime import datetime
 Featurize Wrapper for grabbing prosody features for audio stored in a folder
 '''
 
-def featurize_audio(audiofile,fsize):
+def prosody_featurize(audiofile,fsize):
     df = pd.DataFrame()
     vp = Voice_Prosody()
     if audiofile.endswith('.wav'):

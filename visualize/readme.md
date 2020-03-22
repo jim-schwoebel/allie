@@ -43,6 +43,7 @@ Once you run this script, you output many visualizations. These visualizations c
 * [Matplotlib bar chart](https://pythonspot.com/matplotlib-bar-chart/)
 * [Visualize machine learning Pandas](https://machinelearningmastery.com/visualize-machine-learning-data-python-pandas/)
 * [Top 50 Matplotlib visualizations](https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/)
+* [Dimensionality reduction techniques](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
 
 ## Additional documentation
 * [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)

@@ -71,3 +71,4 @@ webrtcvad
 wget
 xgboost
 xlsxwriter
+yellowbrick

@@ -133,7 +133,7 @@ def visualize_features(classes, problem_type, curdir):
 	plt.close()
 	os.system('open pca.png')
 
-	# Shapiro rank alngorithm (1D))
+	# Shapiro rank algorithm (1D)
 	plt.figure()
 	visualizer = Rank1D(algorithm='shapiro', classes=set(classes))
 	visualizer.fit(np.array(features), tclass_labels)

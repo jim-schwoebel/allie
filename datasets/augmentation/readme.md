@@ -54,6 +54,7 @@ Audio
 
 Text
 * [EDA_NLP]()
+* [Augmentation with Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/augmentation.html)
 
 Image 
 * [IMGAUG]()

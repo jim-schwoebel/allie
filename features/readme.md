@@ -163,6 +163,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * [Near duplicate](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
+* [pliers](https://github.com/tyarkoni/pliers) - multiple feature extractors / video
 
 ### CSV 
 * be able to determine file type and featurize accordingly on local path ./img.jpg ,./audio.wav, ./video.mp4, ./text.txt, etc.; these will then be featurized with default featurizers for images, audio, video, and text accordingly.

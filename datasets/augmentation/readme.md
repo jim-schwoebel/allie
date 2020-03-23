@@ -44,7 +44,8 @@ General
 
 Audio 
 * [Audio data augmentation](https://github.com/sid0710/audio_data_augmentation)
-* [Keras-AudioDataGenerator](https://github.com/AhmedImtiazPrio/Keras-AudioDataGenerator)
+* [Keras-AudioDataGenerator](https://github.com/AhmedImtiazPrio/Keras-AudioDataGenerator)'
+* [Audio degrader](https://github.com/emilio-molina/audio_degrader)
 * [Spectral cluster](https://github.com/wq2012/SpectralCluster) - spectral cluster 
 * [spec_augment](https://github.com/zcaceres/spec_augment) - from Google research / uses images 
 * [audiomentations](https://github.com/iver56/audiomentations) - various transformations (can randomize noise)

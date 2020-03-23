@@ -148,7 +148,8 @@ tried but not user friendly
 * [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 
 ### Text
-* [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html)
+* [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
+* [textdistance](https://github.com/life4/textdistance) - from references
 * [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team
 * BERT pre-trained model - add through Ludwig
 * Allen NLP pre-trained models.

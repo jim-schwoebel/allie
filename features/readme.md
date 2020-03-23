@@ -129,7 +129,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Audio
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths
-* https://github.com/bootphon/shennong
+* [Shennong](https://github.com/bootphon/shennong) - using kaldi / post-processing
 * [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 * Ludwig audio features - add them in.
 * [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk (bottom)

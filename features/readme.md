@@ -130,7 +130,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths
 * [Shennong](https://github.com/bootphon/shennong) - using kaldi / post-processing
-* [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 * Ludwig audio features - add them in.
 * [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk (bottom)
 * [auDeep](https://github.com/auDeep/auDeep)
@@ -140,6 +139,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
 * [kaldi features](https://github.com/pykaldi/pykaldi)  - GMM and other such features. https://pykaldi.github.io/api/kaldi.feat.html#module-kaldi.feat.fbank
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
+* [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 
 ### Text
 * [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team

@@ -82,3 +82,4 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 
 ### Text
 * [Text rank/summarization](https://github.com/davidadamojr/TextRank) - 100 word summary, Number of keywords extracted is relative to the size of the text (a third of the number of nodes in the graph)
+* [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html) - preprocessing like removing punctuation and repeats, etc.

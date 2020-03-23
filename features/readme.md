@@ -127,6 +127,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 
 ### Audio
+* [speechpy](https://github.com/astorfi/speechpy)
 * [sonopy](https://github.com/MycroftAI/sonopy) - MFCCs fastest featurizer
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths

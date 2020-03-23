@@ -47,8 +47,3 @@ def grammar_featurize(importtext):
     labels=listobj
 
     return features, labels
-
-# transcript='this is a test. One two three. I love Jess this is the greatest day ever.'
-# features, labels=get_grammar(transcript)
-# print(len(features))
-# print(len(labels))

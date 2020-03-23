@@ -128,6 +128,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Audio
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
+* [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths
 * https://github.com/bootphon/shennong
 * [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 * Ludwig audio features - add them in.

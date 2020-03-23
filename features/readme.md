@@ -127,9 +127,13 @@ Note that all scripts implemented have features and their corresponding labels. 
 ## Not Implemented / Work in progress
 
 ### Audio
+looking into actively
 * [speechpy](https://github.com/astorfi/speechpy)
 * [sonopy](https://github.com/MycroftAI/sonopy) - MFCCs fastest featurizer
+* [spafe](https://github.com/SuperKogito/spafe) - many features
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
+
+tried but not user friendly
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths
 * [Shennong](https://github.com/bootphon/shennong) - using kaldi / post-processing
 * Ludwig audio features - add them in.

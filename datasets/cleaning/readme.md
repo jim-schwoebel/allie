@@ -78,3 +78,4 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 ### Audio 
 * [RNN Noise XIPH](https://github.com/xiph/rnnoise) - eliminates all noise events from environment (e.g. typing)
 * Diarization?? - can implement this here if necessary 
+* [Deep Audio Prior](https://github.com/adobe/Deep-Audio-Prior) - can separate 2 noises without any training data

@@ -49,6 +49,7 @@ Audio
 * [Spectral cluster](https://github.com/wq2012/SpectralCluster) - spectral cluster 
 * [spec_augment](https://github.com/zcaceres/spec_augment) - from Google research / uses images 
 * [audiomentations](https://github.com/iver56/audiomentations) - various transformations (can randomize noise)
+* [audio dataset augmenter](https://github.com/kleydon/Audio-Dataset-Augmenter)
 
 Text
 * [EDA_NLP]()

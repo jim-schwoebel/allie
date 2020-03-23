@@ -8,7 +8,7 @@ Note that this automatically happens as part of the modeling process
 if visualize==True in settings.
 ML models: https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f
 '''
-import os, sys, json
+import os, sys, json, time
 from tqdm import tqdm
 from yellowbrick.features import Rank1D, Rank2D, Manifold
 from yellowbrick.features.pca import PCADecomposition
@@ -69,15 +69,18 @@ def get_features(classes, problem_type):
 			g=json.load(open(jsonfiles[j]))
 			feature_=list()
 			label_=list()
-			for k in range(len(feature_list)):
-				feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
-				label_=g['features'][problem_type][feature_list[k]]['labels']
+			try:
+				for k in range(len(feature_list)):
+					feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
+					label_=label_+g['features'][problem_type][feature_list[k]]['labels']
 
-			# quick quality check to only add to list if the feature_labels match in length the features_
-			if len(feature_) == len(label_):
-				features.append(feature_)
-				feature_labels.append(label_)
-				class_labels.append(classes[i])
+				# quick quality check to only add to list if the feature_labels match in length the features_
+				if len(feature_) == len(label_):
+					features.append(feature_)
+					feature_labels.append(label_)
+					class_labels.append(classes[i])
+			except:
+				print('error loading feature embedding: %s'%(feature_list[k].upper()))
 
 
 	return features, feature_labels, class_labels 
@@ -85,6 +88,7 @@ def get_features(classes, problem_type):
 def visualize_features(classes, problem_type, curdir):
 
 	features, feature_labels, class_labels = get_features(classes, problem_type)
+	print(features)
 	os.chdir(curdir)
 	le = preprocessing.LabelEncoder()
 	le.fit(class_labels)

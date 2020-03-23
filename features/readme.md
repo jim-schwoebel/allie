@@ -149,7 +149,8 @@ tried but not user friendly
 
 ### Text
 * [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
-* [jellyfish](https://github.com/jamesturk/jellyfish)
+* [jellyfish](https://github.com/jamesturk/jellyfish) - distance measurements 
+* [text2image](https://github.com/mansimov/text2image) - create an image from a sentence
 * [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team
 * BERT pre-trained model - add through Ludwig
 * Allen NLP pre-trained models.

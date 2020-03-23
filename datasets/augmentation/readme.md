@@ -43,6 +43,7 @@ General
 * [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
 
 Audio 
+* [Audio data augmentation](https://github.com/sid0710/audio_data_augmentation)
 * [Spectral cluster](https://github.com/wq2012/SpectralCluster) - spectral cluster 
 * [spec_augment](https://github.com/zcaceres/spec_augment) - from Google research / uses images 
 * [audiomentations](https://github.com/iver56/audiomentations) - various transformations (can randomize noise)

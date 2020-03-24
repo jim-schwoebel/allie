@@ -158,64 +158,27 @@ for i in range(len(listdir)):
 
 	# make audio file into spectrogram and analyze those images if audio file
 	if listdir[i][-4:] in ['.mp4']:
-		#try:
-		sampletype='video'
-		videofile=listdir[i]
-		
-		# I think it's okay to assume audio less than a minute here...
-		if listdir[i][0:-4]+'.json' not in listdir:
-
-			# rename to avoid conflicts
-			newfile=str(uuid.uuid4())+'.mp4'
-			os.rename(listdir[i], newfile)
-			videofile=newfile
+		try:
+			sampletype='video'
+			videofile=listdir[i]
 			
-			# make new .JSON if it is not there with base array schema.
-			basearray=make_features(sampletype)
+			# I think it's okay to assume audio less than a minute here...
+			if listdir[i][0:-4]+'.json' not in listdir:
 
-			# get features and add label 
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				video_features=basearray['features']['video']
-				features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
+				# rename to avoid conflicts
+				newfile=str(uuid.uuid4())+'.mp4'
+				os.rename(listdir[i], newfile)
+				videofile=newfile
 				
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
+				# make new .JSON if it is not there with base array schema.
+				basearray=make_features(sampletype)
 
-				video_features[feature_set]=data
-				basearray['features']['video']=video_features
-
-			basearray['labels']=[labelname]
-
-			# only add transcripts in schema if they are true 
-			transcript_list=basearray['transcripts']
-
-			if video_transcribe_setting == True:	
-				transcript_list['video'][default_video_transcriber] = video_transcript
-			if audio_transcribe_setting == True:
-				transcript_list['audio'][default_audio_transcriber] = audio_transcript 
-			basearray['transcripts']=transcript_list
-
-			# write to .JSON 
-			jsonfile=open(videofile[0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
-
-		elif listdir[i][0:-4]+'.json' in listdir:
-			# load the .JSON file if it is there 
-			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			video_features=basearray['features']['video']
-
-			# featurizes/labels only if necessary (skips if feature embedding there)
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				if feature_set not in list(video_features):
+				# get features and add label 
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
+					video_features=basearray['features']['video']
 					features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
-					print(features)
+					
 					try:
 						data={'features':features.tolist(),
 							  'labels': labels}
@@ -226,25 +189,62 @@ for i in range(len(listdir)):
 					video_features[feature_set]=data
 					basearray['features']['video']=video_features
 
-			# make transcript additions, as necessary 
-			transcript_list=basearray['transcripts']
-			if video_transcribe_setting == True and default_video_transcriber not in list(transcript_list):	
-				transcript_list['video'][default_video_transcriber] = video_transcript
-			if audio_transcribe_setting == True and default_audio_transcriber not in list(transcript_list):	
-				transcript_list['audio'][default_audio_transcriber] = audio_transcript 
-			
-			basearray['transcripts']=transcript_list
+				basearray['labels']=[labelname]
 
-			# add appropriate labels only if they are new labels 
-			label_list=basearray['labels']
-			if labelname not in label_list:
-				label_list.append(labelname)
-			basearray['labels']=label_list
+				# only add transcripts in schema if they are true 
+				transcript_list=basearray['transcripts']
 
-			# overwrite .JSON 
-			jsonfile=open(videofile[0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
+				if video_transcribe_setting == True:	
+					transcript_list['video'][default_video_transcriber] = video_transcript
+				if audio_transcribe_setting == True:
+					transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+				basearray['transcripts']=transcript_list
 
-		#except:
-			#print('error')
+				# write to .JSON 
+				jsonfile=open(videofile[0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
+
+			elif listdir[i][0:-4]+'.json' in listdir:
+				# load the .JSON file if it is there 
+				basearray=json.load(open(listdir[i][0:-4]+'.json'))
+				video_features=basearray['features']['video']
+
+				# featurizes/labels only if necessary (skips if feature embedding there)
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
+					if feature_set not in list(video_features):
+						features, labels, audio_transcript, video_transcript = video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model)
+						print(features)
+						try:
+							data={'features':features.tolist(),
+								  'labels': labels}
+						except:
+							data={'features':features,
+								  'labels': labels}
+
+						video_features[feature_set]=data
+						basearray['features']['video']=video_features
+
+				# make transcript additions, as necessary 
+				transcript_list=basearray['transcripts']
+				if video_transcribe_setting == True and default_video_transcriber not in list(transcript_list):	
+					transcript_list['video'][default_video_transcriber] = video_transcript
+				if audio_transcribe_setting == True and default_audio_transcriber not in list(transcript_list):	
+					transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+				
+				basearray['transcripts']=transcript_list
+
+				# add appropriate labels only if they are new labels 
+				label_list=basearray['labels']
+				if labelname not in label_list:
+					label_list.append(labelname)
+				basearray['labels']=label_list
+
+				# overwrite .JSON 
+				jsonfile=open(videofile[0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
+
+		except:
+			print('error - already featurized %s'%(videofile.upper()))

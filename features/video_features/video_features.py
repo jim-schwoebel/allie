@@ -28,9 +28,7 @@ def prev_dir(directory):
 
 #### to extract tesseract features 
 curdir=os.getcwd()
-prevdir=prev_dir(os.getcwd())
-sys.path.append(prevdir+ '/image_features')
-import tesseract_features as tf 
+import helpers.tesseract_features as tf 
 os.chdir(curdir)
 
 # DEFINE HELPER FUNCTIONS
@@ -637,6 +635,8 @@ def video_featurize(videofile, cur_dir,haar_dir):
     # make wavfile from video file
     wavfile = videofile[0:-4]+'.wav'
     os.system('ffmpeg -i %s %s'%(videofile,wavfile))
+
+    print('made wavfile in %s'%(str(os.getcwd())))
 
     # FEATURIZATION
     #############################################

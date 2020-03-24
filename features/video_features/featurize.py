@@ -1,6 +1,4 @@
-import os, json, wget
-import video_features as vf 
-import y8m_features as yf
+import os, json, wget, uuid
 import numpy as np
 from gensim.models import KeyedVectors
 import os, wget, zipfile, sys
@@ -81,10 +79,6 @@ prevdir=prev_dir(basedir)
 # os.chdir(basedir)
 
 haar_dir=prevdir+'/image_features/helpers/haarcascades/'  
-foldername=sys.argv[1]
-os.chdir(foldername)
-cur_dir=os.getcwd()
-listdir=os.listdir() 
 
 # get settings 
 settingsdir=prev_dir(basedir)
@@ -92,6 +86,7 @@ settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
 
+# load settings
 audio_transcribe_setting=settings['transcribe_audio']
 video_transcribe_setting=settings['transcribe_videos']
 default_audio_transcriber=settings['default_audio_transcriber']
@@ -100,6 +95,18 @@ try:
 	feature_sets=[sys.argv[2]]
 except:
 	feature_sets=settings['default_video_features']
+
+# import proper feature sets from database 
+if 'video_features' in feature_sets:
+	import video_features as vf 
+if 'y8m_features' in feature_sets:
+	import y8m_features as yf
+
+# change to video folder
+foldername=sys.argv[1]
+os.chdir(foldername)
+cur_dir=os.getcwd()
+listdir=os.listdir() 
 os.chdir(cur_dir)
 
 # get class label from folder name 
@@ -158,6 +165,11 @@ for i in range(len(listdir)):
 		# I think it's okay to assume audio less than a minute here...
 		if listdir[i][0:-4]+'.json' not in listdir:
 
+			# rename to avoid conflicts
+			newfile=str(uuid.uuid4())+'.mp4'
+			os.rename(listdir[i], newfile)
+			videofile=newfile
+			
 			# make new .JSON if it is not there with base array schema.
 			basearray=make_features(sampletype)
 
@@ -189,7 +201,7 @@ for i in range(len(listdir)):
 			basearray['transcripts']=transcript_list
 
 			# write to .JSON 
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
+			jsonfile=open(videofile[0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
 
@@ -230,7 +242,7 @@ for i in range(len(listdir)):
 			basearray['labels']=label_list
 
 			# overwrite .JSON 
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
+			jsonfile=open(videofile[0:-4]+'.json','w')
 			json.dump(basearray, jsonfile)
 			jsonfile.close()
 

@@ -153,6 +153,29 @@ except:
 	# if none provided in command line, then load deafult features 
 	feature_sets=settings['default_audio_features']
 
+# ^^ feature set set by settings.json above ^^ 
+# here are some options below to give an example of what is possible
+# feature_sets=['librosa_features']
+# feature_sets=['standard_features']
+# feature_sets=['audioset_features']
+# feature_sets=['sox_features']
+# feature_sets=['sa_features']
+# feature_sets=['pyaudio_features']
+# feature_sets=['spectrogram_features']
+# feature_sets= ['meta_features']
+# feature_sets=['praat_features']
+# feature_sets=['pspeech_features']
+# feature_sets=['specimage_features']
+# feature_sets=['specimage2_features']
+# feature_sets=['myprosody_features']
+# feature_sets= ['nltk_features']
+# feature_sets= ['mixed_features']
+# feature_sets= ['audiotext_features']
+# feature_sets=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
+		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
+		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
+		# 	  'myprosody_features', 'nltk_features', 'mixed_features', 'audiotext_features']
+		
 ################################################
 ##	    	Import According to settings      ##
 ################################################
@@ -195,30 +218,6 @@ if 'audiotext_features' in feature_sets:
 	import audiotext_features as atf
 if 'pyworld_features' in feature_sets:
 	import pyworld_features as pywf
-
-# ^^ feature set set by settings.json above ^^ 
-# here are some options below to give an example of what is possible
-# feature_sets=['librosa_features']
-# feature_sets=['standard_features']
-# feature_sets=['audioset_features']
-# feature_sets=['sox_features']
-# feature_sets=['sa_features']
-# feature_sets=['pyaudio_features']
-# feature_sets=['spectrogram_features']
-# feature_sets= ['meta_features']
-# feature_sets=['praat_features']
-# feature_sets=['pspeech_features']
-# feature_sets=['specimage_features']
-# feature_sets=['specimage2_features']
-# feature_sets=['myprosody_features']
-# feature_sets= ['nltk_features']
-# feature_sets= ['mixed_features']
-# feature_sets= ['audiotext_features']
-# feature_sets=['librosa_features', 'standard_features', 'audioset_features', 'sox_features',
-		# 	  'sa_features', 'pyaudio_features', 'spectrogram_features', 'meta_features',
-		# 	  'praat_features', 'pspeech_features', 'specimage_features', 'specimage2_features',
-		# 	  'myprosody_features', 'nltk_features', 'mixed_features', 'audiotext_features']
-
 
 ################################################
 ##	   		Get featurization folder     	  ##

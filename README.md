@@ -45,7 +45,7 @@ Here is a table that describes the folder structure for this repository. These d
 | folder name | description of folder |
 | ------- | ------- |
 | [datasets](https://github.com/jim-schwoebel/Allie/tree/master/datasets) | an elaborate list of open source datasets that can be used for curating, cleaning, and augmenting datasets. |
-| [features](https://github.com/jim-schwoebel/Allie/tree/master/features) | a list of audio, text, image, video, and csv featurization scripts (these can be specified in the settings.json files). |
+| [features](https://github.com/jim-schwoebel/Allie/tree/master/features) | a list of audio, text, image, video, and csv featurization scripts (defaults can be specified in the settings.json files). |
 | [load_dir](https://github.com/jim-schwoebel/Allie/tree/master/load_dir) | a directory where you can put in audio, text, image, video, or .CSV files and make moel predictions from ./models directory. | 
 | [models](https://github.com/jim-schwoebel/Allie/tree/master/training) | for loading/storing machine learning models and making model predictions for files put in the load_dir. | 
 | [production](https://github.com/jim-schwoebel/Allie/tree/master/production) | a folder for outputting production-ready repositories via the YAML.py script. | 

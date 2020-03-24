@@ -182,6 +182,7 @@ tried but not user friendly
 * [Near duplicate](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
 * [pliers](https://github.com/tyarkoni/pliers) - multiple feature extractors / video
 * [video2data](https://github.com/KristopherKubicki/video2data) - sophisticated video pipeline
+* [video face extraction](https://github.com/ChangLabUcsf/face_extraction)
 
 ### CSV 
 * be able to determine file type and featurize accordingly on local path ./img.jpg ,./audio.wav, ./video.mp4, ./text.txt, etc.; these will then be featurized with default featurizers for images, audio, video, and text accordingly.

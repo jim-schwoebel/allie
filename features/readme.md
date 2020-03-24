@@ -150,6 +150,7 @@ tried but not user friendly
 * [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
 
 ### Text
+* [keras-bert](https://github.com/CyberZHG/keras-bert)
 * [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
 * [jellyfish](https://github.com/jamesturk/jellyfish) - distance measurements 
 * [text2image](https://github.com/mansimov/text2image) - create an image from a sentence

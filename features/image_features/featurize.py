@@ -1,11 +1,3 @@
-import vgg16_features as v16f
-import image_features as imf 
-import inception_features as incf 
-import xception_features as xf 
-import resnet_features as rf 
-import vgg19_features as v19f
-import tesseract_features as tf
-import squeezenet_features as sf
 import helpers.audio_plot as ap 
 import numpy as np 
 import os, json, sys
@@ -115,12 +107,37 @@ except:
 # feature_sets=['VGG19_features']
 # feature_sets=['tesseract_features']
 
+##################################################
+##	         Only load relevant features     	##
+##################################################
+
+if 'vgg16_features' in feature_sets:
+	import vgg16_features as v16f
+if 'image_features' in feature_sets:
+	import image_features as imf 
+if 'inception_features' in feature_sets:
+	import inception_features as incf 
+if 'xception_features' in feature_sets:
+	import xception_features as xf 
+if 'resnet_features' in feature_sets:
+	import resnet_features as rf 
+if 'vgg19_features' in feature_sets:
+	import vgg19_features as v19f
+if 'squeezenet_features' in feature_sets:
+	import squeezenet_features as sf
+if image_transcribe == True or 'tesseract_features' in feature_sets:
+	import tesseract_features as tf
+
 # get class label from folder name 
 labelname=foldername.split('/')
 if labelname[-1]=='':
 	labelname=labelname[-2]
 else:
 	labelname=labelname[-1]
+
+##################################################
+##	         		Main loop     				##
+##################################################
 
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):

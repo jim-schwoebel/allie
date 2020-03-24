@@ -151,6 +151,7 @@ tried but not user friendly
 * [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
 * [jellyfish](https://github.com/jamesturk/jellyfish) - distance measurements 
 * [text2image](https://github.com/mansimov/text2image) - create an image from a sentence
+* [stylemetry](https://github.com/jpotts18/stylometry) - many features around lexical richness
 * [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team
 * BERT pre-trained model - add through Ludwig
 * Allen NLP pre-trained models.

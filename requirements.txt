@@ -56,7 +56,6 @@ google-resumable-media==0.5.0
 googleapis-common-protos==1.51.0
 grpcio==1.27.2
 h5py==2.10.0
--e git+git@github.com:jim-schwoebel/allie.git@48997581a6e6710dce6e63c582cca8321238eb89#egg=hpsklearn&subdirectory=training/helpers/hyperopt-sklearn
 hyperopt==0.2.3
 idna==2.9
 iexfinance==0.4.3

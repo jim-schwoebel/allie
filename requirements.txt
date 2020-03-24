@@ -72,3 +72,4 @@ wget
 xgboost
 xlsxwriter
 yellowbrick
+pyworld

@@ -153,6 +153,7 @@ tried but not user friendly
 * [text2image](https://github.com/mansimov/text2image) - create an image from a sentence
 * [stylemetry](https://github.com/jpotts18/stylometry) - many features around lexical richness
 * [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team
+* [summerize](https://github.com/junaidiiith/TextSummerizer/blob/master/summerizer.py) - misspelled but many text features
 * BERT pre-trained model - add through Ludwig
 * Allen NLP pre-trained models.
 * [coreNLP](https://stanfordnlp.github.io/stanfordnlp/) - stanfordNLP parser and featurizer

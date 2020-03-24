@@ -143,82 +143,81 @@ else:
 for i in range(len(listdir)):
 	os.chdir(cur_dir)
 	if listdir[i][-4:] in ['.jpg', '.png']:
-		#try:
-		imgfile=listdir[i]
-		sampletype='image'
+		try:
+			imgfile=listdir[i]
+			sampletype='image'
 
-		# I think it's okay to assume audio less than a minute here...
-		if listdir[i][0:-4]+'.json' not in listdir:
+			# I think it's okay to assume audio less than a minute here...
+			if listdir[i][0:-4]+'.json' not in listdir:
 
-			# make new .JSON if it is not there with base array schema.
-			basearray=make_features(sampletype)
+				# make new .JSON if it is not there with base array schema.
+				basearray=make_features(sampletype)
 
-			if image_transcribe==True:
-				transcript, features, labels = tf.tesseract_featurize(imgfile)
-				transcript_list=basearray['transcripts']
-				transcript_list['image'][default_image_transcriber]=transcript 
-				basearray['transcripts']=transcript_list
-			
-			# featurize the image file with specified featurizers 
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
-				print(features)
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-
-				image_features=basearray['features']['image']
-				image_features[feature_set]=data
-				basearray['features']['image']=image_features
-
-			basearray['labels']=[labelname]
-
-			# write to .JSON 
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
-
-		elif listdir[i][0:-4]+'.json' in listdir:
-			# overwrite existing .JSON if it is there.
-			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-			transcript_list=basearray['transcripts']
-
-			# only re-transcribe if necessary 
-			if image_transcribe==True and default_image_transcriber not in list(transcript_list['image']):
-				transcript, features, labels = tf.tesseract_featurize(imgfile)
-				transcript_list['image'][default_image_transcriber]=transcript 
-				basearray['transcripts']=transcript_list
-
-			# only re-featurize if necessary (checks if relevant feature embedding exists)
-			for j in range(len(feature_sets)):
-				# load feature set 
-				feature_set=feature_sets[j]
-				# only add in if it is not in the image feature list array 
-				if feature_set not in list(basearray['features']['image']):
+				if image_transcribe==True:
+					transcript, features, labels = tf.tesseract_featurize(imgfile)
+					transcript_list=basearray['transcripts']
+					transcript_list['image'][default_image_transcriber]=transcript 
+					basearray['transcripts']=transcript_list
+				
+				# featurize the image file with specified featurizers 
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
 					features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
+					print(features)
 					try:
 						data={'features':features.tolist(),
 							  'labels': labels}
 					except:
 						data={'features':features,
 							  'labels': labels}
-					print(features)
-					basearray['features']['image'][feature_set]=data
 
-			# only add label if necessary 
-			label_list=basearray['labels']
-			if labelname not in label_list:
-				label_list.append(labelname)
-			basearray['labels']=label_list
+					image_features=basearray['features']['image']
+					image_features[feature_set]=data
+					basearray['features']['image']=image_features
 
-			# overwrite .JSON file 
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
+				basearray['labels']=[labelname]
 
-		#except:
-			#print('error')
+				# write to .JSON 
+				jsonfile=open(listdir[i][0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
+
+			elif listdir[i][0:-4]+'.json' in listdir:
+				# overwrite existing .JSON if it is there.
+				basearray=json.load(open(listdir[i][0:-4]+'.json'))
+				transcript_list=basearray['transcripts']
+
+				# only re-transcribe if necessary 
+				if image_transcribe==True and default_image_transcriber not in list(transcript_list['image']):
+					transcript, features, labels = tf.tesseract_featurize(imgfile)
+					transcript_list['image'][default_image_transcriber]=transcript 
+					basearray['transcripts']=transcript_list
+
+				# only re-featurize if necessary (checks if relevant feature embedding exists)
+				for j in range(len(feature_sets)):
+					# load feature set 
+					feature_set=feature_sets[j]
+					# only add in if it is not in the image feature list array 
+					if feature_set not in list(basearray['features']['image']):
+						features, labels = image_featurize(feature_set, imgfile, cur_dir, haar_dir)
+						try:
+							data={'features':features.tolist(),
+								  'labels': labels}
+						except:
+							data={'features':features,
+								  'labels': labels}
+						print(features)
+						basearray['features']['image'][feature_set]=data
+
+				# only add label if necessary 
+				label_list=basearray['labels']
+				if labelname not in label_list:
+					label_list.append(labelname)
+				basearray['labels']=label_list
+
+				# overwrite .JSON file 
+				jsonfile=open(listdir[i][0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
+		except:
+			print('error')

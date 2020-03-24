@@ -32,6 +32,7 @@ import specimage2_features as sif2
 import mixed_features as mixf
 import audiotext_features as atf
 import helpers.transcribe as ts
+import pyworld_features as pywf
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -115,6 +116,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = atf.audiotext_featurize(audiofile, transcript)
 	elif feature_set == 'prosody_features':
 		features, labels = prosf.prosody_featurize(audiofile, 20)
+	elif feature_set == 'pyworld_features':
+		features, labels = pywf.pyworld_featurize(audiofile)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))

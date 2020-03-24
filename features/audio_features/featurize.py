@@ -9,30 +9,8 @@ information is useful to you.
 '''
 
 import json, os, sys
-
-################################################
-##	    	Import According to settings      ##
-################################################
 import numpy as np 
-import librosa_features as lf 
-import standard_features as sf 
-import audioset_features as af 
-import sox_features as soxf 
-import pyaudio_features as pf 
-import sa_features as saf
-import spectrogram_features as specf
-import meta_features as mf 
-import opensmile_features as osm
-import praat_features as prf
-import prosody_features as prosf
-import pspeech_features as psf
-import specimage_features as sif
-import specimage2_features as sif2
-# import myprosody_features as mpf
-import mixed_features as mixf
-import audiotext_features as atf
 import helpers.transcribe as ts
-import pyworld_features as pywf
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -174,6 +152,49 @@ try:
 except:
 	# if none provided in command line, then load deafult features 
 	feature_sets=settings['default_audio_features']
+
+################################################
+##	    	Import According to settings      ##
+################################################
+
+# only load the relevant featuresets for featurization to save memory
+if 'librosa_features' in feature_sets:
+	import librosa_features as lf 
+if 'standard_features' in feature_sets:
+	import standard_features as sf 
+if 'audioset_features' in feature_sets:
+	import audioset_features as af 
+if 'sox_features' in feature_sets:
+	import sox_features as soxf 
+if 'pyaudio_features' in feature_sets:
+	import pyaudio_features as pf 
+if 'sa_features' in feature_sets:
+	import sa_features as saf
+if 'spectrogram_features' in feature_sets:
+	import spectrogram_features as specf
+if 'meta_features' in feature_sets:
+	import meta_features as mf 
+if 'opensmile_features' in feature_sets:
+	import opensmile_features as osm
+if 'praat_features' in feature_sets:
+	import praat_features as prf
+if 'prosody_features' in feature_sets:
+	import prosody_features as prosf
+if 'pspeech_features' in feature_sets:
+	import pspeech_features as psf
+if 'specimage_features' in feature_sets:
+	import specimage_features as sif
+if 'specimage2_features' in feature_sets:
+	import specimage2_features as sif2
+if 'myprosody_features' in feature_sets:
+	pass
+	# import myprosody_features as mpf
+if 'mixed_features' in feature_sets:
+	import mixed_features as mixf
+if 'audiotext_features' in feature_sets:
+	import audiotext_features as atf
+if 'pyworld_features' in feature_sets:
+	import pyworld_features as pywf
 
 # ^^ feature set set by settings.json above ^^ 
 # here are some options below to give an example of what is possible

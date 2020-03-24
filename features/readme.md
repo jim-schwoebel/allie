@@ -135,6 +135,7 @@ looking into actively
 * [sonopy](https://github.com/MycroftAI/sonopy) - MFCCs fastest featurizer
 * [spafe](https://github.com/SuperKogito/spafe) - many features
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
+* [Essentia](https://github.com/kushagrasurana/Essentia-feature-extraction)
 
 tried but not user friendly
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths

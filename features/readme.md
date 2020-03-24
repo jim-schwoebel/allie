@@ -150,6 +150,7 @@ tried but not user friendly
 * [kaldi features](https://github.com/pykaldi/pykaldi)  - GMM and other such features. https://pykaldi.github.io/api/kaldi.feat.html#module-kaldi.feat.fbank
 * [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
 * [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
+* [resin](https://github.com/kylerbrown/resin) - copyleft license
 
 ### Text
 * [keras-bert](https://github.com/CyberZHG/keras-bert)

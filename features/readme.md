@@ -91,6 +91,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [prosody_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/prosody_features.py) - prosody using Google's VAD
 * [pspeech_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pspeech_features.py) 
 * [pyaudio_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyaudio_features.py)
+* [pyworld_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyworld_features.py)
 * [sa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sa_features.py)
 * [sox_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sox_features.py)
 * [specimage_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/specimage_features.py)

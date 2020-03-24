@@ -11,23 +11,10 @@ information is useful to you.
 ##				Import statements   			##
 ##################################################
 
-# scripts 
-import nltk_features as nf
-import spacy_features as sf
-import glove_features as gf 
-import w2v_features as w2v
-import fast_features as ff
-import helpers.transcribe as ts
-import text_features as textf 
-import grammar_features as grammarf
 import numpy as np
-
-# other import stuff 
-import json, os, sys
-from gensim.scripts.glove2word2vec import glove2word2vec
-from gensim.models import KeyedVectors
 from gensim.models import Word2Vec
-from gensim.models.fasttext import FastText
+import helpers.transcribe as ts
+import json, os, sys
 import os, wget, zipfile 
 import shutil
 
@@ -126,6 +113,22 @@ except:
 	feature_sets=settings['default_text_features']
 default_text_transcriber=settings['default_text_transcriber']
 
+# contextually load repositories heere
+if 'nltk_features' in feature_sets:
+	import nltk_features as nf
+if 'spacy_features' in feature_sets:
+	import spacy_features as sf
+if 'glove_features' in feature_sets:
+	import glove_features as gf 
+if 'w2v_features' in feature_sets:
+	import w2v_features as w2v
+if 'fast_features' in feature_sets:
+	import fast_features as ff
+if 'text_features' in feature_sets:
+	import text_features as textf 
+if 'grammar_features' in feature_sets:
+	import grammar_features as grammarf
+
 # can specify many types of features...
 for j in range(len(feature_sets)):
 	feature_set=feature_sets[j]
@@ -146,6 +149,9 @@ for j in range(len(feature_sets)):
 
 		# load GloVE model
 		if feature_set == 'glove_features':
+
+			from gensim.scripts.glove2word2vec import glove2word2vec
+
 			if 'glove.6B' not in os.listdir(os.getcwd()+'/helpers'):
 				curdir=os.getcwd()
 				print('downloading GloVe model...')
@@ -168,6 +174,9 @@ for j in range(len(feature_sets)):
 
 		# load Google W2V model
 		elif feature_set == 'w2v_features':
+
+			from gensim.models import KeyedVectors
+
 			if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
 				print('downloading Google W2V model...')
 				wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
@@ -180,6 +189,10 @@ for j in range(len(feature_sets)):
 
 		# load facebook FastText model
 		elif feature_set == 'fast_features':
+
+			from gensim.models.fasttext import FastText
+			from gensim.models import KeyedVectors
+
 			if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 				print('downloading Facebook FastText model...')
 				wget.download("https://dl.fbaipublicfiles.com/fasttext/vectors-english/wiki-news-300d-1M.vec.zip", "./helpers/wiki-news-300d-1M.vec.zip")
@@ -193,6 +206,7 @@ for j in range(len(feature_sets)):
 			fastmodel = KeyedVectors.load_word2vec_format(os.getcwd()+'/helpers/wiki-news-300d-1M/wiki-news-300d-1M.vec')
 			print('loaded Facebook FastText model...')
 
+
 # change to folder directory 
 os.chdir(foldername)
 listdir=os.listdir() 
@@ -201,61 +215,25 @@ cur_dir=os.getcwd()
 # featurize all files accoridng to librosa featurize
 for i in range(len(listdir)):
 	if listdir[i][-4:] in ['.txt']:
-		#try:
-		sampletype='text'
-		os.chdir(cur_dir)
-		transcript=open(listdir[i]).read()
+		try:
+			sampletype='text'
+			os.chdir(cur_dir)
+			transcript=open(listdir[i]).read()
 
-		# I think it's okay to assume audio less than a minute here...
-		if listdir[i][0:-4]+'.json' not in listdir:
+			# I think it's okay to assume audio less than a minute here...
+			if listdir[i][0:-4]+'.json' not in listdir:
 
-			# make new .JSON if it is not there with base array schema.
-			basearray=make_features(sampletype)
+				# make new .JSON if it is not there with base array schema.
+				basearray=make_features(sampletype)
 
-			# assume text_transcribe==True and add to transcript list 
-			transcript_list=basearray['transcripts']
-			transcript_list['text'][default_text_transcriber]=transcript 
-			basearray['transcripts']=transcript_list
-
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				# featurize the text file 
-				features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
-				print(features)
-
-				try:
-					data={'features':features.tolist(),
-						  'labels': labels}
-				except:
-					data={'features':features,
-						  'labels': labels}
-
-				text_features=basearray['features']['text']
-				text_features[feature_set]=data
-				basearray['features']['text']=text_features
-
-			basearray['labels']=[foldername]
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
-
-		elif listdir[i][0:-4]+'.json' in listdir:
-			
-			# load base array 
-			basearray=json.load(open(listdir[i][0:-4]+'.json'))
-
-			# get transcript and update if necessary 
-			transcript_list=basearray['transcripts']
-
-			if default_text_transcriber not in list(transcript_list['text']):
+				# assume text_transcribe==True and add to transcript list 
+				transcript_list=basearray['transcripts']
 				transcript_list['text'][default_text_transcriber]=transcript 
 				basearray['transcripts']=transcript_list
 
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				# re-featurize only if necessary 
-				if feature_set not in list(basearray['features']['text']):
-
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
+					# featurize the text file 
 					features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
 					print(features)
 
@@ -266,21 +244,57 @@ for i in range(len(listdir)):
 						data={'features':features,
 							  'labels': labels}
 
-					basearray['features']['text'][feature_set]=data
+					text_features=basearray['features']['text']
+					text_features[feature_set]=data
+					basearray['features']['text']=text_features
 
-			# only add the label if necessary 
-			label_list=basearray['labels']
-			if labelname not in label_list:
-				label_list.append(labelname)
-			basearray['labels']=label_list
+				basearray['labels']=[foldername]
+				jsonfile=open(listdir[i][0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
 
-			# overwrite existing .JSON
-			jsonfile=open(listdir[i][0:-4]+'.json','w')
-			json.dump(basearray, jsonfile)
-			jsonfile.close()
+			elif listdir[i][0:-4]+'.json' in listdir:
+				
+				# load base array 
+				basearray=json.load(open(listdir[i][0:-4]+'.json'))
 
-		#except:
-			#print('error')
+				# get transcript and update if necessary 
+				transcript_list=basearray['transcripts']
+
+				if default_text_transcriber not in list(transcript_list['text']):
+					transcript_list['text'][default_text_transcriber]=transcript 
+					basearray['transcripts']=transcript_list
+
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
+					# re-featurize only if necessary 
+					if feature_set not in list(basearray['features']['text']):
+
+						features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+						print(features)
+
+						try:
+							data={'features':features.tolist(),
+								  'labels': labels}
+						except:
+							data={'features':features,
+								  'labels': labels}
+
+						basearray['features']['text'][feature_set]=data
+
+				# only add the label if necessary 
+				label_list=basearray['labels']
+				if labelname not in label_list:
+					label_list.append(labelname)
+				basearray['labels']=label_list
+
+				# overwrite existing .JSON
+				jsonfile=open(listdir[i][0:-4]+'.json','w')
+				json.dump(basearray, jsonfile)
+				jsonfile.close()
+
+		except:
+			print('error')
 
 
 

@@ -43,7 +43,7 @@ def stats(matrix, label):
 
 def pyworld_featurize(audiofile):
 
-	fs, x = wav.read(file_name)
+	fs, x = wav.read(audiofile)
 	print(x)
 	print(fs)
 	# corrects for 2 channel audio

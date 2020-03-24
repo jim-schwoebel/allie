@@ -13,6 +13,7 @@ information is useful to you.
 
 import numpy as np
 from gensim.models import Word2Vec
+from gensim.models import KeyedVectors
 import helpers.transcribe as ts
 import json, os, sys
 import os, wget, zipfile 
@@ -175,8 +176,6 @@ for j in range(len(feature_sets)):
 		# load Google W2V model
 		elif feature_set == 'w2v_features':
 
-			from gensim.models import KeyedVectors
-
 			if 'GoogleNews-vectors-negative300.bin' not in os.listdir(os.getcwd()+'/helpers'):
 				print('downloading Google W2V model...')
 				wget.download("http://neurolex.co/uploads/GoogleNews-vectors-negative300.bin", "./helpers/GoogleNews-vectors-negative300.bin")
@@ -191,7 +190,6 @@ for j in range(len(feature_sets)):
 		elif feature_set == 'fast_features':
 
 			from gensim.models.fasttext import FastText
-			from gensim.models import KeyedVectors
 
 			if 'wiki-news-300d-1M' not in os.listdir(os.getcwd()+'/helpers'):
 				print('downloading Facebook FastText model...')

@@ -424,9 +424,13 @@ for i in range(len(default_training_scripts)):
 			    level=logging.INFO,
 			)
 
-			model = load_model(modelname)
-			model = compress(model, 7e-1)
-			model.save(modelname[0:-3]+'_compressed.h5')
+			try:
+				print('compressing model!!')
+				model = load_model(modelname)
+				model = compress(model, 7e-1)
+				model.save(modelname[0:-3]+'_compressed.h5')
+			except:
+				print('error compressing model!!')
 
 		else:
 			# for everything else, we can compress pocketflow models in the future.

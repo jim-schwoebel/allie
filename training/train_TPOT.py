@@ -36,10 +36,11 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, 
     g=g.replace("import numpy as np", "import numpy as np \nimport json, pickle")
     g=g.replace("tpot_data = pd.read_csv(\'PATH/TO/DATA/FILE\', sep=\'COLUMN_SEPARATOR\', dtype=np.float64)","g=json.load(open('%s'))\ntpot_data=np.array(g['labels'])"%(jsonfilename))
     g=g.replace("features = tpot_data.drop('target', axis=1)","features=np.array(g['data'])\n")
-    g=g.replace("tpot_data['target']", "tpot_data")
+    g=g.replace("tpot_data['target'].values", "tpot_data")
     g=g.replace("results = exported_pipeline.predict(testing_features)", "print('saving classifier to disk')\nf=open('%s','wb')\npickle.dump(exported_pipeline,f)\nf.close()"%(jsonfilename[0:-6]+'.pickle'))
     g1=g.find('exported_pipeline = ')
     g2=g.find('exported_pipeline.fit(training_features, training_target)')
+    g=g.replace('.values','')
     modeltype=g[g1:g2]
     os.remove(tpotname)
     t=open(tpotname,'w')

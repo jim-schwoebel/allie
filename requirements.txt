@@ -71,7 +71,7 @@ jmespath==0.9.5
 joblib==0.14.1
 jsonschema==3.2.0
 kafka-python==2.0.1
-Keras==2.2.0
+Keras==2.3.1
 Keras-Applications==1.0.8
 Keras-Preprocessing==1.1.0
 keras-squeezenet==0.4
@@ -101,7 +101,7 @@ opencv-contrib-python==3.4.2.16
 opencv-python==3.4.2.16
 opt-einsum==3.2.0
 packaging==20.3
-pandas==0.25.3
+pandas==1.0
 pandas-datareader==0.8.1
 parso==0.6.2
 patsy==0.5.1

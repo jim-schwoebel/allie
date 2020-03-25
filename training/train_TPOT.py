@@ -41,6 +41,7 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, 
     g1=g.find('exported_pipeline = ')
     g2=g.find('exported_pipeline.fit(training_features, training_target)')
     g=g.replace('.values','')
+    g=g.replace("tpot_data['target']",'tpot_data')
     modeltype=g[g1:g2]
     os.remove(tpotname)
     t=open(tpotname,'w')
@@ -49,6 +50,7 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, 
     print('')
     os.system('python3 %s'%(tpotname))
 
+    time.sleep(500)
     # now write an accuracy label 
     os.remove(jsonfilename)
 

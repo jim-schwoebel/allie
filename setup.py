@@ -10,6 +10,7 @@ def brew_install(modules):
 # uninstall openCV to guarantee the right version
 # this is the only step requiring manual intervention 
 # so it's best to do this first.
+os.system('pip3 install --upgrade pip')
 os.system('pip3 uninstall opencv-python')
 os.system('pip3 uninstall opencv-contrib-python')
 

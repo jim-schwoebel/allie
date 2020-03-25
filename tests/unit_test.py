@@ -135,11 +135,11 @@ csvdir=loadmodel_dir+'/csv_models'
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_dependencies(unittest.TestCase):
-    '''
-    confirm that all the modules are installed correctly, along with
-    all brew install commands. 
-    '''
-##### ##### ##### ##### ##### ##### ##### ##### ##### #####
+	'''
+	confirm that all the modules are installed correctly, along with
+	all brew install commands. 
+	'''
+#### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
     def test_requirements(self):
         # import all from requirements.txt 
@@ -1053,6 +1053,8 @@ class test_production(unittest.TestCase):
 		os.chdir(model_dir)
 		# iterate through all machine learning model training methods
 		os.system('python3 model.py audio 2 c one two')
+		print('SLEEEEEP')
+		time.sleep(500)
 		os.chdir(train_dir)
 		# shutil.rmtree('one')
 		# shutil.rmtree('two')
@@ -1071,8 +1073,17 @@ class test_production(unittest.TestCase):
 					'one_two_standard_features_tpotclassifier.pickle', 'one_two_standard_features_tpotclassifier.py', 
 					'one_two_standard_features_tpotclassifier_compressed.joblib', 'two_features.json']
 
+
 		os.chdir(audiodir)
 		listdir=os.listdir()
+		print(model_files)
+		print(listdir)
+
+		# make an informative error message
+		for i in range(len(model_files)):
+			if model_files[i] not in listdir:
+				print('ERROR - %s not in production directory.'%(modelfiles[i].upper()))
+
 		c=set(model_files).issubset(set(listdir))
 
 		# remove temporary files in the textdir
@@ -1166,7 +1177,7 @@ class test_loading(unittest.TestCase):
         listdir=os.listdir() 
         b=False
         for i in range(len(listdir)):
-            if listdir[i].find('%s.json'%(filetype)) > 0: 
+            if listdir[i].endswith('.wav') and listdir[i][0:-4]+'.json' in listdir: 
                 b=True
                 break
 
@@ -1216,7 +1227,7 @@ class test_loading(unittest.TestCase):
         listdir=os.listdir() 
         b=False
         for i in range(len(listdir)):
-            if listdir[i].find('%s.json'%(filetype)) > 0: 
+            if listdir[i].endswith('.txt') and listdir[i][0:-4]+'.json' in listdir: 
                 b=True
                 break
 
@@ -1266,7 +1277,7 @@ class test_loading(unittest.TestCase):
         listdir=os.listdir() 
         b=False
         for i in range(len(listdir)):
-            if listdir[i].find('%s.json'%(filetype)) > 0: 
+            if listdir[i].endswith('.png') and listdir[i][0:-4]+'.json' in listdir:
                 b=True
                 break
 
@@ -1315,8 +1326,9 @@ class test_loading(unittest.TestCase):
         os.chdir(load_dir)
         listdir=os.listdir() 
         b=False
+        print(listdir)
         for i in range(len(listdir)):
-            if listdir[i].find('%s.json'%(filetype)) > 0: 
+            if listdir[i].endswith('.mp4') and listdir[i][0:-4]+'.json' in listdir: 
                 b=True
                 break
 

@@ -1053,8 +1053,6 @@ class test_production(unittest.TestCase):
 		os.chdir(model_dir)
 		# iterate through all machine learning model training methods
 		os.system('python3 model.py audio 2 c one two')
-		print('SLEEEEEP')
-		time.sleep(500)
 		os.chdir(train_dir)
 		# shutil.rmtree('one')
 		# shutil.rmtree('two')

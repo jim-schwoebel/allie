@@ -191,7 +191,14 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                     print(os.getcwd())
 
                     # now load and update features_list to the type of features necessary
-                    settings=json.load(open(modelname[0:-7]+'.json'))['settings']
+                    print(modelname)
+                    print(os.getcwd())
+                    # try to get the settings in the model .json but if not get from master folder
+                    try:
+                        settings=json.load(open(modelname[0:-7]+'.json'))['settings']
+                    except:
+                        settings=json.load(open(prev_dir(prev_dir(os.getcwd()))+'/settings.json'))
+
                     feature_set=settings['default_%s_features'%(sampletype)]
                     
                     # load model 
@@ -412,7 +419,12 @@ for i in range(len(directories)):
                 try:
                     # get settings of model and only extract features for type 
                     g=json.load(open(listdir[i]))
-                    settings=g['settings']
+                    print(g)
+                    try:
+                        # try for models 
+                        settings=g['settings']
+                    except:
+                        settings=json.load(open(prev_dir(prev_dir(os.getcwd()))+'/settings.json'))
                     t1='default_%s_features'%(split)
                     featurelist=appendlist(settings[t1], features[t1])
                     features[t1]=featurelist 
@@ -451,6 +463,8 @@ if 'audio' in sampletypes and direxist[0] == True:
     print('-----------------------------------')
     os.chdir(prevdir+'/features/audio_features')
     for i in range(len(default_audio_features)):
+        print(load_dir)
+        print(default_audio_features[i])
         os.system('python3 featurize.py %s %s'%(load_dir, default_audio_features[i]))
 
 if 'text' in sampletypes and direxist[1] == True:
@@ -528,4 +542,3 @@ if 'csv_models' in listdir:
     print('-----------------------------------')
     os.chdir(prevdir+'/models/csv_models')
     make_predictions('csv', default_csv_features, os.getcwd(), load_dir)
-

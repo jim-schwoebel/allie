@@ -183,7 +183,7 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
                 modelname=list(temp_models[j])[0]
                 print(modelname)
-                time.sleep(2)
+
                 if modelname.endswith('.pickle'):
 
                     # change to model directory

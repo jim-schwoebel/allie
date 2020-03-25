@@ -33,7 +33,6 @@ deprecation==2.0.7
 docutils==0.15.2
 EasyProcess==0.2.10
 empyrical==0.5.3
-en-core-web-sm==2.2.5
 entrypoint2==0.2
 enum34==1.1.10
 eyeD3==0.9.4

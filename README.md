@@ -33,7 +33,7 @@ python3 setup.py
 
 Now you can run some unit tests:
 ```
-cd testdir
+cd tests
 python3 test.py
 ```
 Note the unit tests above takes roughly 30-40 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)

@@ -49,8 +49,6 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, 
     t.close()
     print('')
     os.system('python3 %s'%(tpotname))
-
-    time.sleep(500)
     # now write an accuracy label 
     os.remove(jsonfilename)
 

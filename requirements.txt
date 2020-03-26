@@ -7,6 +7,7 @@ astor==0.8.1
 async-timeout==3.0.1
 attrs==19.3.0
 audioread==2.1.8
+autogluon==0.0.6
 backcall==0.1.0
 beautifulsoup4==4.8.2
 beautifultable==0.8.0
@@ -90,6 +91,7 @@ MouseInfo==0.1.2
 moviepy==1.0.1
 multidict==4.7.5
 murmurhash==1.0.2
+mxnet==1.6.0
 natsort==7.0.1
 networkx==2.2
 nltk==3.4.5

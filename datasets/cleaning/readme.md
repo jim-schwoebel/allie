@@ -79,6 +79,7 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 * [RNN Noise XIPH](https://github.com/xiph/rnnoise) - eliminates all noise events from environment (e.g. typing)
 * Diarization?? - can implement this here if necessary 
 * [Deep Audio Prior](https://github.com/adobe/Deep-Audio-Prior) - can separate 2 noises without any training data
+* [Microsoft noise dataset](https://github.com/microsoft/MS-SNSD) - MS-SNSD
 
 ### Text
 * [Text rank/summarization](https://github.com/davidadamojr/TextRank) or [textrank](https://github.com/summanlp/textrank)- 100 word summary, Number of keywords extracted is relative to the size of the text (a third of the number of nodes in the graph)

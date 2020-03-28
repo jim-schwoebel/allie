@@ -353,6 +353,18 @@ for i in range(len(default_training_scripts)):
 		print('Alphapy training is coming soon! Please use a different model setting for now.') 
 		# import train_alphapy as talpy
 		# talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+	elif default_training_script=='atm':
+		import train_atm as tatm
+		modelname, modeldir=tatm.train_atm(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		
+	elif default_training_script=='autogbt':
+		import train_autogbt as autogbt
+		modelname, modeldir=autogbt.train_autogbt(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+
+	elif default_training_script=='autogluon':
+		import train_autogluon as tautg
+		modelname, modeldir=tautg.train_autogluon(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+
 	elif default_training_script=='autokeras':
 		print('Autokeras training is unstable! Please use a different model setting for now.') 
 		# import train_autokeras as tak 
@@ -364,15 +376,24 @@ for i in range(len(default_training_scripts)):
 	elif default_training_script=='devol':
 		import train_devol as td 
 		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+	elif default_training_script=='gentun':
+		import train_gentun as tgentun 
+		modelname, modeldir=tgentun.train_gentun(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='hypsklearn':
 		import train_hypsklearn as th 
 		modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+	elif default_training_script=='hungabunga':
+		import train_hungabunga as thung
+		modelname, modeldir=thung.train_hungabunga(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='keras':
 		import train_keras as tk
 		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
 	elif default_training_script=='ludwig':
 		import train_ludwig as tl
 		modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, default_label, problemtype, default_featurenames, settings)
+	elif default_training_script=='neuraxle':
+		import train_neuraxle as tneuraxle
+		modelname, modeldir=tneuraxle.train_neuraxle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='plda':
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp

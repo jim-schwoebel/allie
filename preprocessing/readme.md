@@ -1,4 +1,4 @@
-## Transformation scripts
+## Preprocessing scripts
 
 This is a folder for manipulating and pre-processing features from audio, text, image, video, or .CSV files. 
 

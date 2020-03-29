@@ -369,6 +369,10 @@ for i in range(len(default_training_scripts)):
 		print('Autokeras training is unstable! Please use a different model setting for now.') 
 		# import train_autokeras as tak 
 		# tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+	elif default_training_script=='automl':
+		import train_automl as auto_ml
+		modelname, modeldir=auto_ml.train_automl(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+
 	elif default_training_script=='autosklearn':
 		print('Autosklearn training is unstable! Please use a different model setting for now.') 
 		# import train_autosklearn as taskl
@@ -379,6 +383,9 @@ for i in range(len(default_training_scripts)):
 	elif default_training_script=='devol':
 		import train_devol as td 
 		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+	elif default_training_script=='gama':
+		import train_gama as tgama
+		modelname, modeldir=tgama.train_gama(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='gentun':
 		import train_gentun as tgentun 
 		modelname, modeldir=tgentun.train_gentun(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

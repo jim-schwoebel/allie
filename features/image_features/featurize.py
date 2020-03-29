@@ -1,6 +1,7 @@
 import helpers.audio_plot as ap 
 import numpy as np 
 import os, json, sys
+from tqdm import tqdm
 
 ##################################################
 ##				Helper functions.    			##
@@ -140,7 +141,7 @@ else:
 ##################################################
 
 # featurize all files accoridng to librosa featurize
-for i in range(len(listdir)):
+for i in tqdm(range(len(listdir))):
 	os.chdir(cur_dir)
 	if listdir[i][-4:] in ['.jpg', '.png']:
 		try:

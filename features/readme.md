@@ -155,6 +155,7 @@ tried but not user friendly
 
 ### Text
 * [keras-bert](https://github.com/CyberZHG/keras-bert)
+* [bert](https://github.com/UKPLab/sentence-transformers)
 * [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
 * [jellyfish](https://github.com/jamesturk/jellyfish) - distance measurements 
 * [text2image](https://github.com/mansimov/text2image) - create an image from a sentence

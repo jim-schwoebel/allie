@@ -57,7 +57,7 @@ There are 11 potential training script settings (customized in the 'settings.jso
 
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;
-* '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification).
+* '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' - seems stable - hyperparameter optimization of the data. &#x2611;

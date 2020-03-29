@@ -24,6 +24,8 @@ This is done via a convention for transformers, which are in the proper folders 
 
 ## Dimensionality reduction techniques
 
+![https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png]()
+
 * PCA - PCA - dimensionality reduction
 * LDA - Linear discriminant analysis (LDA)
 * tSNE - t-distributed stochastic neighbor embedding 

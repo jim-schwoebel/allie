@@ -14,6 +14,7 @@ information is useful to you.
 import numpy as np
 from gensim.models import Word2Vec
 from gensim.models import KeyedVectors
+from tqdm import tqdm
 import helpers.transcribe as ts
 import json, os, sys
 import os, wget, zipfile 
@@ -64,7 +65,7 @@ def make_features(sampletype):
 	
 	return data
 
-def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel):
+def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel, bert_model):
 
 	if feature_set == 'nltk_features':
 		features, labels = nf.nltk_featurize(transcript)
@@ -80,6 +81,8 @@ def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel):
 		features, labels=textf.text_featurize(transcript)
 	elif feature_set == 'grammar_features':
 		features, labels=grammarf.grammar_featurize(transcript)
+	elif feature_set == 'bert_features':
+		features, labels=bertf.bert_featurize(transcript, bert_model)
 	
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))
@@ -129,6 +132,12 @@ if 'text_features' in feature_sets:
 	import text_features as textf 
 if 'grammar_features' in feature_sets:
 	import grammar_features as grammarf
+if 'bert_features' in feature_sets:
+	import bert_features as bertf
+	from sentence_transformers import SentenceTransformer
+	bert_model=SentenceTransformer('bert-base-nli-mean-tokens')
+else:
+	bert_model=[]
 
 # can specify many types of features...
 for j in range(len(feature_sets)):
@@ -211,7 +220,7 @@ listdir=os.listdir()
 cur_dir=os.getcwd()
 
 # featurize all files accoridng to librosa featurize
-for i in range(len(listdir)):
+for i in tqdm(range(len(listdir))):
 	if listdir[i][-4:] in ['.txt']:
 		try:
 			sampletype='text'
@@ -232,7 +241,7 @@ for i in range(len(listdir)):
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]
 					# featurize the text file 
-					features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+					features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel, bert_model)
 					print(features)
 
 					try:
@@ -268,7 +277,7 @@ for i in range(len(listdir)):
 					# re-featurize only if necessary 
 					if feature_set not in list(basearray['features']['text']):
 
-						features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel)
+						features, labels = text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel, bert_model)
 						print(features)
 
 						try:

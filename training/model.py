@@ -373,6 +373,9 @@ for i in range(len(default_training_scripts)):
 		print('Autosklearn training is unstable! Please use a different model setting for now.') 
 		# import train_autosklearn as taskl
 		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+	elif default_training_script=='cvopt':
+		import train_cvopt as tcvopt
+		modelname, modeldir = tcvopt.train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_features, settings)
 	elif default_training_script=='devol':
 		import train_devol as td 
 		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)

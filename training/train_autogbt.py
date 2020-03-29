@@ -1,7 +1,7 @@
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import roc_auc_score
-import random, pickle, time, json, os
+import random, pickle, time, json, os, shutil
 import numpy as np
 from sklearn.preprocessing import LabelBinarizer, StandardScaler
 from sklearn.model_selection import train_test_split

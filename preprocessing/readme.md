@@ -58,5 +58,4 @@ Note you can extend this to any of the feature types. The table below overviews 
 | --------- |  --------- |  --------- | --------- | --------- | 
 | scaling data | scale_data: True | default_scalers: ['standard_scaler','quantile_transformer', 'power_transformer','one_hot_encoder','binarizer','poly'] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
 | feature selection | select_features: True | default_feature_selectors: ['rfe', 'lasso'] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
-| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ['PCA', 'LDA', 'tSNE', 'pLDA','autoencoder'] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
-
+| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ['pca', 'lda', 'tsne', 'plda','autoencoder'] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 

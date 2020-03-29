@@ -397,6 +397,9 @@ for i in range(len(default_training_scripts)):
 	elif default_training_script=='gentun':
 		import train_gentun as tgentun 
 		modelname, modeldir=tgentun.train_gentun(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+	elif default_training_script=='hyperband':
+		import train_hyperband as thband
+		modelname, modeldir = thband.train_hyperband(alldata, labels, mtype, jsonfile, problemtype, default_features, settings)
 	elif default_training_script=='hypsklearn':
 		import train_hypsklearn as th 
 		modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)

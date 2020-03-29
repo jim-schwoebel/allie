@@ -141,7 +141,7 @@ else:
 ##################################################
 
 # featurize all files accoridng to librosa featurize
-for i in tqdm(range(len(listdir))):
+for i in tqdm(range(len(listdir)), desc=labelname):
 	os.chdir(cur_dir)
 	if listdir[i][-4:] in ['.jpg', '.png']:
 		try:

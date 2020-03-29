@@ -56,7 +56,7 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 | Data type | Settings.json | Options | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | --------- | 
-| scaling data | scale_data: true | default_scalers: ['standard_scaler','quantile_transformer', 'power_transformer','one_hot_encoder','binarizer','poly'] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
-| feature selection | select_features: true | default_feature_selectors: ['rfe', 'lasso'] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
-| dimensionality reduction | reduce_dimensions: true | default_dimensionality_reduction: ['PCA', 'LDA', 'tSNE', 'pLDA','autoencoder'] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
+| scaling data | scale_data: True | default_scalers: ['standard_scaler','quantile_transformer', 'power_transformer','one_hot_encoder','binarizer','poly'] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
+| feature selection | select_features: True | default_feature_selectors: ['rfe', 'lasso'] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
+| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ['PCA', 'LDA', 'tSNE', 'pLDA','autoencoder'] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
 

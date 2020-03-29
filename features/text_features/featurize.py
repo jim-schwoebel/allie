@@ -220,7 +220,7 @@ listdir=os.listdir()
 cur_dir=os.getcwd()
 
 # featurize all files accoridng to librosa featurize
-for i in tqdm(range(len(listdir))):
+for i in tqdm(range(len(listdir)), desc=labelname):
 	if listdir[i][-4:] in ['.txt']:
 		try:
 			sampletype='text'

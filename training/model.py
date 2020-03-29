@@ -364,6 +364,10 @@ for i in range(len(default_training_scripts)):
 	elif default_training_script=='autogluon':
 		import train_autogluon as tautg
 		modelname, modeldir=tautg.train_autogluon(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		
+	elif default_training_script=='autokaggle':
+		import train_autokaggle as autokag
+		modelname, modeldir=autokag.train_autokaggle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 
 	elif default_training_script=='autokeras':
 		print('Autokeras training is unstable! Please use a different model setting for now.') 

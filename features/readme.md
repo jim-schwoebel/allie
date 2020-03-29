@@ -136,6 +136,7 @@ looking into actively
 * [spafe](https://github.com/SuperKogito/spafe) - many features
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [Essentia](https://github.com/kushagrasurana/Essentia-feature-extraction)
+* [Wav2Letter](https://github.com/facebookresearch/wav2letter/wiki/Python-bindings) 
 
 tried but not user friendly
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths

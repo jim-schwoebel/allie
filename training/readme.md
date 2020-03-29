@@ -53,7 +53,7 @@ Now you're ready to go to load these models and [make predictions](https://githu
 
 ## Default_training scripts 
 
-There are 11 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
+There are 13 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
 
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;

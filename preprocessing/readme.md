@@ -34,50 +34,6 @@ Note you can extend this to any of the feature types. The table below overviews 
 | video files | .MP4 | ```python3 transform.py [folderpath]``` |./allie/features/video_transformers | 
 | csv files | .CSV | ```python3 transform.py [folderpath]``` | ./allie/features/csv_transformers | 
 
-## Standard feature dictionary (.JSON)
-
-This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
-
-```python3 
-def make_features(sampletype):
-
-	# only add labels when we have actual labels.
-	features={'audio':dict(),
-		  'text': dict(),
-		  'image':dict(),
-		  'video':dict(),
-		  'csv': dict()}
-
-	transcripts={'audio': dict(),
-		     'text': dict(),
-		     'image': dict(),
-		     'video': dict(),
-		      'csv': dict()}
-
-	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-
-	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-		  'models': models,
-		  'labels': []}
-
-	return data
-```
-
-Note that there can be audio transcripts, image transcripts, and video transcripts. The image and video transcripts use OCR to characterize text in the image, whereas audio transcripts are transcipts done by traditional speech-to-text systems (e.g. Pocketsphinx). The schema above allows for a flexible definition for transcripts that can accomodate all forms. 
-
-Quick note about the variables and what values they can take.
-- Sampletype = 'audio', 'text', 'image', 'video', 'csv'
-- Labels = ['classname_1', 'classname_2', 'classname_N...'] - classification problems.
-- Labels = [{classname1: 'value'}, {classname2: 'value'}, ... {classnameN: 'valueN'}] where values are between [0,1] - regression problems. 
-
-Note that only .CSV files may have audio, text, image, video features all-together (as the .CSV can contain files in a current directory that need to be featurized together). Otherwise, audio files likely will have audio features, text files will have text features, image files will have image features, and video files will have video features. 
-
 ## Not Implemented / Work in progress
 
 ### Audio

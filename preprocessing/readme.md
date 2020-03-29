@@ -4,6 +4,32 @@ This is a folder for manipulating and pre-processing features from audio, text, 
 
 This is done via a convention for transformers, which are in the proper folders (e.g. audio files --> audio_transformers). In this way, we can appropriately create transformers for various sample data types. 
 
+# Various prepreprocessors
+
+## Scaling data
+
+* scaler = preprocessing.StandardScaler().fit(X_train)
+* quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
+* pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
+* [X_normalized = preprocessing.normalize(X, norm='l2')]() - Normalization is the process of scaling individual samples to have unit norm.
+* enc = preprocessing.OneHotEncoder(categories=[genders, locations, browsers]) - for turning into numbers
+* binarizer = preprocessing.Binarizer().fit(X)  # fit does nothing - Feature binarization is the process of thresholding numerical features to get boolean values.
+* poly = PolynomialFeatures(2) // poly.fit_transform(X)
+
+## Feature selection 
+
+* [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
+* RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) 
+* LASSO - 
+
+## Dimensionality reduction techniques
+
+* PCA - PCA - dimensionality reduction
+* LDA - Linear discriminant analysis (LDA)
+* tSNE - t-distributed stochastic neighbor embedding 
+* pLDA - probabilistic LDA 
+* Neural autoencoder 
+
 ## How to transform folders of featurized files
 
 To transform an entire folder of a featurized files, you can run:
@@ -34,28 +60,3 @@ Note you can extend this to any of the feature types. The table below overviews 
 | video files | .MP4 | ```python3 transform.py [folderpath]``` |./allie/features/video_transformers | 
 | csv files | .CSV | ```python3 transform.py [folderpath]``` | ./allie/features/csv_transformers | 
 
-### Various prepreprocessors
-
-## Scaling data
-
-* scaler = preprocessing.StandardScaler().fit(X_train)
-* quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
-* pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
-* [X_normalized = preprocessing.normalize(X, norm='l2')]() - Normalization is the process of scaling individual samples to have unit norm.
-* enc = preprocessing.OneHotEncoder(categories=[genders, locations, browsers]) - for turning into numbers
-* binarizer = preprocessing.Binarizer().fit(X)  # fit does nothing - Feature binarization is the process of thresholding numerical features to get boolean values.
-* poly = PolynomialFeatures(2) // poly.fit_transform(X)
-
-## Feature selection 
-
-* [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
-* RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) 
-* LASSO - 
-
-## Dimensionality reduction techniques
-
-* PCA - PCA - dimensionality reduction
-* LDA - Linear discriminant analysis (LDA)
-* tSNE - t-distributed stochastic neighbor embedding 
-* pLDA - probabilistic LDA 
-* Neural autoencoder 

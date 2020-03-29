@@ -81,63 +81,16 @@ Note that only .CSV files may have audio, text, image, video features all-togeth
 ## Not Implemented / Work in progress
 
 ### Audio
-looking into actively
-* [speechpy](https://github.com/astorfi/speechpy)
-* [sigfeat](https://github.com/SiggiGue/sigfeat)
-* [pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - f0 and other estimators
-* [sonopy](https://github.com/MycroftAI/sonopy) - MFCCs fastest featurizer
-* [spafe](https://github.com/SuperKogito/spafe) - many features
-* [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
-* [Essentia](https://github.com/kushagrasurana/Essentia-feature-extraction)
-
-tried but not user friendly
-* [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths
-* [Shennong](https://github.com/bootphon/shennong) - using kaldi / post-processing
-* Ludwig audio features - add them in.
-* [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk (bottom)
-* [auDeep](https://github.com/auDeep/auDeep)
-* fix myprosody_features.py feature script (in helpers for now). This is buggy and may change into the future as the library is more supported by more senior developers.
-* allow Ludwig model type to dictate featurization - 'audio_ludwig_features'
 * [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
-* [fft python](https://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files)
-* [kaldi features](https://github.com/pykaldi/pykaldi)  - GMM and other such features. https://pykaldi.github.io/api/kaldi.feat.html#module-kaldi.feat.fbank
-* [CountNet](https://github.com/faroit/CountNet) - number of speakers in a mixture (5 second interval). Combine with WebRTC VAD (https://github.com/wiseman/py-webrtcvad) to get featurization per segment like average lengths, etc. 
-* [pyroomacoustics](https://github.com/LCAV/pyroomacoustics)
-* [resin](https://github.com/kylerbrown/resin) - copyleft license
 
 ### Text
-* [keras-bert](https://github.com/CyberZHG/keras-bert)
-* [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
-* [jellyfish](https://github.com/jamesturk/jellyfish) - distance measurements 
-* [text2image](https://github.com/mansimov/text2image) - create an image from a sentence
-* [stylemetry](https://github.com/jpotts18/stylometry) - many features around lexical richness
-* [Swivel](https://github.com/bigiceberg/models/tree/master/swivel) - Google team
-* [summerize](https://github.com/junaidiiith/TextSummerizer/blob/master/summerizer.py) - misspelled but many text features
-* BERT pre-trained model - add through Ludwig
-* Allen NLP pre-trained models.
-* [coreNLP](https://stanfordnlp.github.io/stanfordnlp/) - stanfordNLP parser and featurizer
-* [pytorch-transformers](https://github.com/huggingface/pytorch-transformers) - a lot of pre-trained models that could be useful for featurizations (e.g. BERT and other model types here).
-* allow Ludwig model type to dictate featurization (.JSON files --> .CSV images). - 'text_ludwig_features'
-* follow up with Larry on semantic coherence vector / value 
-* add in text transcription (as the default value) 
-* input text files 
+* coming soon
 
 ### Images 
-* SURF, ORB, BRIEF, AKAZE - corner detectors - SIFT is most accurate but also the slowest (patented), BRIEF is the fastest but least accurate
-* allow Ludwig model type to dictate featurization (.JSON files --> .CSV). - 'image_ludwig_features'
-* Yolo-9000 classes - https://github.com/philipperemy/yolo-9000
-* Add in transcription to standard image array if settings.JSON image transcript == True.
-* [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html
+* coming soon
 
 ### Videos 
-* add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.
-* [Age](https://github.com/deepinsight/insightface) - age/gender with video 
-* [Near duplicate](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
-* [pliers](https://github.com/tyarkoni/pliers) - multiple feature extractors / video
-* [video2data](https://github.com/KristopherKubicki/video2data) - sophisticated video pipeline
-* [video face extraction](https://github.com/ChangLabUcsf/face_extraction)
+* coming soon
 
 ### CSV 
-* be able to determine file type and featurize accordingly on local path ./img.jpg ,./audio.wav, ./video.mp4, ./text.txt, etc.; these will then be featurized with default featurizers for images, audio, video, and text accordingly.
-* accomodate all types on ludwig (https://uber.github.io/ludwig/getting_started/) - binary, numerical, category, set, bag, sequence, text, timeseries, image
-* [seglearn](https://github.com/dmbee/seglearn) - time series pipeline.
+* coming soon

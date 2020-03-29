@@ -11,6 +11,7 @@ information is useful to you.
 import json, os, sys
 import numpy as np 
 import helpers.transcribe as ts
+from tqdm import tqdm
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -241,7 +242,7 @@ else:
 ################################################
 
 # featurize all files accoridng to librosa featurize
-for i in range(len(listdir)):
+for i in tqdm(range(len(listdir))):
 	if listdir[i][-4:] in ['.wav', '.mp3', '.m4a']:
 		filename=listdir[i]
 		if listdir[i][-4:]=='.m4a':

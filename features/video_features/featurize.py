@@ -3,6 +3,7 @@ import numpy as np
 from gensim.models import KeyedVectors
 import os, wget, zipfile, sys
 import shutil
+from tqdm import tqdm
 
 ##################################################
 ##				Helper functions.    			##
@@ -154,7 +155,7 @@ for j in range(len(feature_sets)):
 ###################################################
 
 # featurize all files accoridng to librosa featurize
-for i in range(len(listdir)):
+for i in tqdm(range(len(listdir))):
 
 	# make audio file into spectrogram and analyze those images if audio file
 	if listdir[i][-4:] in ['.mp4']:

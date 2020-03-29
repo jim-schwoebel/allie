@@ -60,6 +60,7 @@ There are 13 potential training script settings (customized in the 'settings.jso
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
+* '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood.
 * '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' - seems stable - hyperparameter optimization of the data. &#x2611;
 * '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;
 * '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
@@ -81,7 +82,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines and feature selection. 
 * '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning
-* '[Hyperband-scikitlearn](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood.
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.

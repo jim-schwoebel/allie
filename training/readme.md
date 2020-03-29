@@ -57,7 +57,7 @@ There are 6 potential training script settings (customized in the 'settings.json
 
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can.
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna.
-* '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning's parameter search and feature selection module which is integrated log management and visualization.
+* '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization.
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' - seems stable - hyperparameter optimization of the data. &#x2611;
 * '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;

@@ -36,6 +36,9 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 ## Not Implemented / Work in progress
 
+### All data
+* [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
+
 ### Audio
 * [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
 

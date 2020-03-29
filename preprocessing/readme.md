@@ -34,12 +34,17 @@ Note you can extend this to any of the feature types. The table below overviews 
 | video files | .MP4 | ```python3 transform.py [folderpath]``` |./allie/features/video_transformers | 
 | csv files | .CSV | ```python3 transform.py [folderpath]``` | ./allie/features/csv_transformers | 
 
-## Not Implemented / Work in progress
+## Feature selection 
 
-### All data
 * [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
 * RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) 
-* LASSO
+* LASSO - 
+
+## Dimensionality reduction techniques
+
+* PCA - PCA - dimensionality reduction
+* LDA - linear discriminent analysis 
+* pLDA - probabilistic LDA 
 
 ### Audio
 * [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.

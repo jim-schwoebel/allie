@@ -85,7 +85,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.
-* Add in RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) and hyperparameter optimization to scsr with hyperopt-sklearn (https://github.com/hyperopt/hyperopt-sklearn). 
 
 ### Other stuff 
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.

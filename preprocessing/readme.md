@@ -33,7 +33,8 @@ These are added during the modeling process.
 * Neural autoencoder 
 
 ## Settings.json
-
+| setting | description | default setting | all options | 
+|------|------|------|------| 
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
 | default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ['pca'] | ['pca', 'lda', 'tsne', 'plda','autoencoder'] | 
 | select_features | if True, select features via the default_feature_selector (or set of feature selectors) | False | True, False | 

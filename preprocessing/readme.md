@@ -54,10 +54,10 @@ python3 featurize.py /Users/jimschwoebel/allie/load_dir standard_scalar
 
 Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.
 
-| Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
+| Data type | Settings.json setting | Options | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | 
-| scaling data| true | ```python3 transform.py [folderpath]``` | ./allie/features/audio_transformers | 
-| feature selection | true | ```python3 transform.py [folderpath]``` | ./allie/features/text_transformers | 
-| dimensionality reduction | true | ```python3 transform.py [folderpath]``` | ./allie/features/image_transformers | 
+| scaling data| true | [] |  ```python3 transform.py [folderpath]``` | ./allie/features/audio_transformers | 
+| feature selection | true | [] | ```python3 transform.py [folderpath]``` | ./allie/features/text_transformers | 
+| dimensionality reduction | true | [] | ```python3 transform.py [folderpath]``` | ./allie/features/image_transformers | 
 
 

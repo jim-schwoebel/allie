@@ -56,9 +56,8 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 | Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | 
-| audio files | .MP3 / .WAV | ```python3 transform.py [folderpath]``` | ./allie/features/audio_transformers | 
-| text files | .TXT | ```python3 transform.py [folderpath]``` | ./allie/features/text_transformers | 
-| image files | .PNG | ```python3 transform.py [folderpath]``` | ./allie/features/image_transformers | 
-| video files | .MP4 | ```python3 transform.py [folderpath]``` |./allie/features/video_transformers | 
-| csv files | .CSV | ```python3 transform.py [folderpath]``` | ./allie/features/csv_transformers | 
+| scaling data| true | ```python3 transform.py [folderpath]``` | ./allie/features/audio_transformers | 
+| feature selection | true | ```python3 transform.py [folderpath]``` | ./allie/features/text_transformers | 
+| dimensionality reduction | true | ```python3 transform.py [folderpath]``` | ./allie/features/image_transformers | 
+
 

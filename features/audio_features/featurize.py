@@ -242,7 +242,7 @@ else:
 ################################################
 
 # featurize all files accoridng to librosa featurize
-for i in tqdm(range(len(listdir))):
+for i in tqdm(range(len(listdir)), desc=labelname):
 	if listdir[i][-4:] in ['.wav', '.mp3', '.m4a']:
 		filename=listdir[i]
 		if listdir[i][-4:]=='.m4a':

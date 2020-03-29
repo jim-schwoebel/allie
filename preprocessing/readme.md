@@ -34,6 +34,18 @@ Note you can extend this to any of the feature types. The table below overviews 
 | video files | .MP4 | ```python3 transform.py [folderpath]``` |./allie/features/video_transformers | 
 | csv files | .CSV | ```python3 transform.py [folderpath]``` | ./allie/features/csv_transformers | 
 
+### Various prepreprocessors
+
+## Scaling data
+
+* scaler = preprocessing.StandardScaler().fit(X_train)
+* quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
+* pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
+* [X_normalized = preprocessing.normalize(X, norm='l2')]() - Normalization is the process of scaling individual samples to have unit norm.
+* enc = preprocessing.OneHotEncoder(categories=[genders, locations, browsers]) - for turning into numbers
+* binarizer = preprocessing.Binarizer().fit(X)  # fit does nothing - Feature binarization is the process of thresholding numerical features to get boolean values.
+* poly = PolynomialFeatures(2) // poly.fit_transform(X)
+
 ## Feature selection 
 
 * [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
@@ -46,19 +58,4 @@ Note you can extend this to any of the feature types. The table below overviews 
 * LDA - Linear discriminant analysis (LDA)
 * tSNE - t-distributed stochastic neighbor embedding 
 * pLDA - probabilistic LDA 
-* Neural autoencoder
-
-### Audio
-* [Wavelet transforms](http://ataspinar.com/2018/12/21/a-guide-for-using-the-wavelet-transform-in-machine-learning/) - could be useful for dataset augmentation techniques.
-
-### Text
-* coming soon
-
-### Images 
-* coming soon
-
-### Videos 
-* coming soon
-
-### CSV 
-* coming soon
+* Neural autoencoder 

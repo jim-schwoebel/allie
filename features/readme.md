@@ -100,6 +100,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [standard_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/standard_features.py) - standard audio feature array (default)
 
 ### Text
+* [bert features](https://github.com/UKPLab/sentence-transformers) - extract BERT-related features from sentences (note shorter sentences run faster here, and long text can lead to long featurization times).
 * [fast_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/fast_features.py)
 * [glove_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/glove_features.py)
 * [grammar_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/grammar_features.py) - 85k+ grammar features (memory intensive)
@@ -155,7 +156,6 @@ tried but not user friendly
 
 ### Text
 * [keras-bert](https://github.com/CyberZHG/keras-bert)
-* [bert](https://github.com/UKPLab/sentence-transformers)
 * [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references
 * [jellyfish](https://github.com/jamesturk/jellyfish) - distance measurements 
 * [text2image](https://github.com/mansimov/text2image) - create an image from a sentence

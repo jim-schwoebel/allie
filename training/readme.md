@@ -77,8 +77,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ### model training 
 * [MLBlocks](https://github.com/HDI-Project/MLBlocks) - most recent framework @ MIT
 * [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 
-* 'keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
-* '[keras-squeezenet](https://github.com/rcmalli/keras-squeezenet)' - 510x reduced memory footprint training keras models.
+* '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines and feature selection. 
 * '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning

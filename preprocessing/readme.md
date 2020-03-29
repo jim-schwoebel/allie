@@ -56,8 +56,8 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 | Data type | Settings.json setting | Options | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | --------- | 
-| scaling data | true | [] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/features/audio_transformers | 
-| feature selection | true | [] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/features/text_transformers | 
-| dimensionality reduction | true | [] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/features/image_transformers | 
+| scaling data | true | [] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
+| feature selection | true | [] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
+| dimensionality reduction | true | [] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
 
 

@@ -3,6 +3,7 @@ import csv_features as cf
 import os, wget, zipfile 
 import shutil
 import numpy as np
+from tqdm import tqdm
 
 ##################################################
 ##				Helper functions.    			##
@@ -107,7 +108,7 @@ except:
 ###################################################
 
 # featurize all files accoridng to librosa featurize
-for i in range(len(listdir)):
+for i in tqdm(range(len(listdir))):
 
 	# make audio file into spectrogram and analyze those images if audio file
 	if listdir[i][-4:] in ['.csv']:

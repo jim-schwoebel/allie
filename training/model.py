@@ -243,6 +243,10 @@ for i in range(len(classes)):
 		os.chdir(prevdir+'/features/csv_features')
 		default_features=default_csv_features
 
+	print('-----------------------------------')
+	print('FEATURIZING %s'%(classes[i].upper()))
+	print('-----------------------------------')
+	
 	os.system('python3 featurize.py %s'%(data_dir+'/'+classes[i]))
 	os.chdir(data_dir+'/'+classes[i])
 	# load audio features 
@@ -412,6 +416,11 @@ for i in range(len(default_training_scripts)):
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp
 		# tp.train_pLDA(alldata,labels)
+
+	elif default_training_script=='safe':
+		import train_safe as tsafe
+		modelname, modeldir=tsafe.train_safe(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+
 	elif default_training_script=='scsr':
 		import train_scsr as scsr
 		if mtype == 'c':

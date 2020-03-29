@@ -32,7 +32,7 @@ These are added during the modeling process.
 * pLDA - probabilistic LDA 
 * Neural autoencoder 
 
-## Settings.json
+## Preproprocessing parameters adaptable in settings.json
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |

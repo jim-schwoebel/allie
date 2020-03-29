@@ -66,6 +66,7 @@ There are 13 potential training script settings (customized in the 'settings.jso
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data. &#x2611; 
 * '[neuraxle](https://github.com/Neuraxio/Neuraxle)' - A sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. &#x2611;
+* '[safe](https://github.com/ModelOriented/SAFE)' - black box trainer / helps reduce opacity of ML models while increasing accuracy.
 * '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
 * **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
 
@@ -75,7 +76,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ### model training 
 * [MLBlocks](https://github.com/HDI-Project/MLBlocks) - most recent framework @ MIT
-* [SAFE](https://github.com/ModelOriented/SAFE) - black box trainer / can improve scsr with this
 * [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 
 * 'keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 * '[keras-squeezenet](https://github.com/rcmalli/keras-squeezenet)' - 510x reduced memory footprint training keras models.

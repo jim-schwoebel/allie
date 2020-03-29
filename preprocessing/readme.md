@@ -1,25 +1,27 @@
-## Featurization scripts
+## Transformation scripts
 
-This is a folder for extracting features from audio, text, image, video, or .CSV files. This is done via a convention for featurizers, which are in the proper folders (e.g. audio files --> audio_features). In this way, we can appropriately create featurizers for various sample data types. 
+This is a folder for manipulating and pre-processing features from audio, text, image, video, or .CSV files. 
 
-## How to featurize folders of files 
+This is done via a convention for transformers, which are in the proper folders (e.g. audio files --> audio_transformers). In this way, we can appropriately create transformers for various sample data types. 
 
-To featurize an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
+## How to transform folders of featurized files
 
-```
-cd ~ 
-cd allie/features/audio_features
-python3 featurize.py /Users/jimschwoebel/allie/load_dir
-```
-
-The code above will featurize all the audio files in the folderpath via the default_featurizer specified in the settings.json file (e.g. 'standard_features'). 
-
-If you'd like to use a different featurizer you can specify it optionally:
+To transform an entire folder of a featurized files, you can run:
 
 ```
 cd ~ 
-cd allie/features/audio_features
-python3 featurize.py /Users/jimschwoebel/allie/load_dir librosa_features
+cd allie/preprocessing/audio_transformers
+python3 transform.py /Users/jimschwoebel/allie/train_dir/classA
+```
+
+The code above will transform all the featurized audio files (.JSON) in the folderpath via the default_transformer specified in the settings.json file (e.g. 'standard_transformer'). 
+
+If you'd like to use a different transformer you can specify it optionally:
+
+```
+cd ~ 
+cd allie/features/audio_transformer
+python3 featurize.py /Users/jimschwoebel/allie/load_dir standard_scalar
 ```
 
 Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.

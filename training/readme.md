@@ -64,7 +64,7 @@ There are 11 potential training script settings (customized in the 'settings.jso
 * '[gama](https://github.com/PGijsbers/gama) - An automated machine learning tool based on genetic programming. &#x2611; 
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data. &#x2611; 
-* '[neuraxle](https://github.com/Neuraxio/Neuraxle)' - A Sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. &#x2611;
+* '[neuraxle](https://github.com/Neuraxio/Neuraxle)' - A sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. &#x2611;
 * '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
 * **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
 

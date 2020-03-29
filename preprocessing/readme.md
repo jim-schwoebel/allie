@@ -1,10 +1,8 @@
-## Preprocessing scripts
+# Preprocessing scripts
 
 This is a folder for manipulating and pre-processing features from audio, text, image, video, or .CSV files. 
 
 This is done via a convention for transformers, which are in the proper folders (e.g. audio files --> audio_transformers). In this way, we can appropriately create transformers for various sample data types. 
-
-# Various prepreprocessors
 
 ## Scaling data
 

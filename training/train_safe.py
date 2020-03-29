@@ -84,10 +84,9 @@ def train_safe(alldata, labels, mtype, jsonfile, problemtype, default_features, 
 
 		data={'sample type': problemtype,
 			'feature_set':default_features,
-			'model names':[surrogate_model, safe_transformer, base_model],
-			'accuracy model':acc_model,
-			'accuracy surrogate': acc_surrogate,
-			'accuracy base': acc_base,
+			'models':{model_name: acc_model, 
+					 model_name_sur: acc_surrogate, 
+					 model_Name_base: acc_base}
 			'model type':'safe_classification',
 			'settings': settings,
 		}

@@ -68,5 +68,5 @@ Note you can extend this to any of the feature types. The table below overviews 
 | Data type | Settings.json | Options | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | --------- | 
 | scaling data | scale_data: True | default_scalers: ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler" ] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
-| feature selection | select_features: True | default_feature_selectors: ['rfe', 'lasso'] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
-| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ['pca', 'lda', 'tsne', 'plda','autoencoder'] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
+| feature selection | select_features: True | default_feature_selectors: ["rfe", "lasso"] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
+| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ["pca", "lda", "tsne", "plda","autoencoder"] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 

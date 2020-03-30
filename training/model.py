@@ -342,7 +342,17 @@ transform_command=''
 for i in range(len(classes)):
 	transform_command=transform_command+' '+classes[i]
 
-transform_file=problemtype+transform_command.replace(' ','_')+'.pickle'
+# get filename / create a unique file name
+t_filename=problemtype
+for i in range(len(classes)):
+	t_filename=filename+'_'+classes[i]
+for i in range(len(default_scalers)):
+	t_filename=filename+'_'+default_scalers[i]
+for i in range(len(default_reducers)):
+	t_filename=filename+'_'+default_reducers[i]
+for i in range(len(default_selectors)):
+	t_filename=filename+'_'+default_selectors[i]
+transform_file=t_filename+'.pickle'
 
 if scale_features == True or reduce_dimensions == True or select_features == True:
 	print('----------------------------------')

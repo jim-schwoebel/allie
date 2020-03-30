@@ -1,11 +1,11 @@
 '''
-Import all the featurization scripts and allow the user to customize what embedding that
-they would like to use for modeling purposes.
+Make transformations in this order:
 
-AudioSet is the only embedding that is a little bit wierd, as it is normalized to the length
-of each audio file. There are many ways around this issue (such as normalizing to the length 
-of each second), however, I included all the original embeddings here in case the time series
-information is useful to you.
+Feature scalers --> reduce dimensions --> select features.
+
+A --> A`--> A`` --> A```
+
+Can do this through scikit-leran pipelines.
 '''
 
 import json, os, sys
@@ -123,3 +123,17 @@ for i in range(len(feature_scalers)):
 print(features[0])
 print(feature_labels[1])
 print(class_labels[0])
+
+################################################
+##	    	Now go featurize!                 ##
+################################################
+
+################################################
+##	    	Now go featurize!                 ##
+################################################
+
+
+################################################
+##	    	Now go featurize!                 ##
+################################################
+

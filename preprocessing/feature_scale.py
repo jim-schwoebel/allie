@@ -62,6 +62,9 @@ def feature_scale(feature_scaler, X_train, y_train):
 		enc = preprocessing.OneHotEncoder(handle_unknown='ignore')
 		enc.fit(y_train)
 
+	elif feature_scaler == 'minmaxscaler':
+		X_scale = preprocessing.MinMaxScaler(X_train)
+
 	elif feature_scaler == 'normalize':
 		X_normalized = preprocessing.normalize(X_train, norm='l2')
 
@@ -84,4 +87,3 @@ def feature_scale(feature_scaler, X_train, y_train):
 	elif feature_scaler == 'standard_scaler':
 		# scale the X values in the set 
 		X_scale = preprocessing.scale(X_train)
-

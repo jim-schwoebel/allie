@@ -20,7 +20,7 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def feature_select(dimensionality_selector, X_train, y_train):
+def feature_reduce(dimensionality_selector, X_train, y_train):
 
 	if dimensionality_selector == 'autoencoder':
 

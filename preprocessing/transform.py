@@ -91,17 +91,16 @@ basedir=os.getcwd()
 settingsdir=prev_dir(basedir)
 print(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
+
+# get all the important settings for the transformations 
+scale_features=settings['scale_features']
+reduce_dimensions=settings['reduce_dimensions']
+select_featuers=settings['select_features']
+default_scaler=settings['default_scaler']
+default_reducer=settings['default_dimensionality_reducer']
+default_selector=settings['default_feature_selector']
+
 os.chdir(basedir)
-
-# feature_scaler=settings['feature_scaler']
-# default_audio_transformer=settings['default_feature_scaler']
-
-# try:
-	# assume 1 type of feature_set 
-	# feature_scaler=[sys.argv[2]]
-# except:
-	# if none provided in command line, then load deafult features 
-	# feature_scaler=settings['default_audio_transformers']
 
 ################################################
 ##	    	Now go featurize!                 ##
@@ -115,7 +114,7 @@ problem_type=sys.argv[1]
 
 classes=get_classes()
 features, feature_labels, class_labels = get_features(classes, problem_type)
-x_train, x_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.750, test_size=0.250)
+x_train, x_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 
 for i in range(len(feature_scalers)):
 	model=feature_scale(feature_scaler, x_train, y_train)
@@ -125,15 +124,20 @@ print(feature_labels[1])
 print(class_labels[0])
 
 ################################################
-##	    	Now go featurize!                 ##
+##	    	    Scale features               ##
 ################################################
-
+if scale_features == True:
+	import feature_scale as fsc_
+	scaler_model=fsc_.feature_scale(feature_scaler, X_train, y_train)
 ################################################
-##	    	Now go featurize!                 ##
+##	    	   Reduce dimensions              ##
 ################################################
-
-
+if reduce_dimensions == True:
+	import feature_reduce as fre_
+	dimension_model=fre_.feature_reduce(dimensionality_selector, X_train, y_train)
 ################################################
-##	    	Now go featurize!                 ##
+##	    	   Feature selection              ##
 ################################################
-
+if select_features == True:
+	import feature_select as fse_
+	selection_model=fse_.feature_select(feature_selector, X_train, y_train)

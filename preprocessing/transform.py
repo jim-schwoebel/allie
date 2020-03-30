@@ -191,12 +191,17 @@ filename=problem_type
 
 for i in range(len(classes)):
 	filename=filename+'_'+classes[i]
-for i in range(len(default_scalers)):
-	filename=filename+'_'+default_scalers[i]
-for i in range(len(default_reducers)):
-	filename=filename+'_'+default_reducers[i]
-for i in range(len(default_selectors)):
-	filename=filename+'_'+default_selectors[i]
+
+# only add names in if True 
+if scale_features == True:
+	for i in range(len(default_scalers)):
+		filename=filename+'_'+default_scalers[i]
+if reduce_dimensions == True:
+	for i in range(len(default_reducers)):
+		filename=filename+'_'+default_reducers[i]
+if select_features == True:
+	for i in range(len(default_selectors)):
+		filename=filename+'_'+default_selectors[i]
 
 model_file=filename+'.pickle'
 json_file=filename+'.json'

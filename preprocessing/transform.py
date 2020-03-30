@@ -4,7 +4,7 @@ Way to go here
 Scalers --> Reduce features --> Select Features 
 {in this order} 
 
-A --> A' --> A'' --> A''' --> A '''N
+A --> A' --> A'' --> A''' --> A'''N
 
 Can do this with scikt-learn pipelines.
 '''

@@ -349,13 +349,13 @@ for i in range(len(classes)):
 # only add names in if True 
 if scale_features == True:
 	for i in range(len(default_scalers)):
-		filename=filename+'_'+default_scalers[i]
+		t_filename=t_filename+'_'+default_scalers[i]
 if reduce_dimensions == True:
 	for i in range(len(default_reducers)):
-		filename=filename+'_'+default_reducers[i]
+		t_filename=t_filename+'_'+default_reducers[i]
 if select_features == True:
 	for i in range(len(default_selectors)):
-		filename=filename+'_'+default_selectors[i]
+		t_filename=t_filename+'_'+default_selectors[i]
 	
 transform_file=t_filename+'.pickle'
 

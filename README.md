@@ -129,11 +129,11 @@ Here are some settings that you can modify in this settings.json file and the va
 | clean_data | specifies whether or not you'd like to clean / pre-process data in folders before model training (boolean). |  True | True, False | 
 | augment_data | specifies whether or not you'd like to augment data during training (boolean). |  False | True, False | 
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
-| default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ['pca'] | ['pca', 'lda', 'tsne', 'plda','autoencoder'] | 
+| default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
 | select_features | if True, select features via the default_feature_selector (or set of feature selectors) | False | True, False | 
-| default_feature_selector | the default feature selector or set of reature selectors | ['lasso'] | ['lasso', 'rfe'] | 
+| default_feature_selector | the default feature selector or set of reature selectors | ["lasso"] | ["lasso", "rfe"] | 
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
-| default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ['standard_scaler'] | ['standard_scaler','quantile_transformer', 'power_transformer','one_hot_encoder','binarizer','poly']|
+| default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now (boolean).| False | True, False | 
 

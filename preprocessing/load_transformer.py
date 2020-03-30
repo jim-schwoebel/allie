@@ -12,7 +12,7 @@ array([[-1.4530485 , -0.03725366,  0.53727615,  0.51361116,  0.26511576,
          0.79677552,  0.01716853,  0.77574926,  0.24912955, -0.64725461,
          0.01852962, -0.02733052]])
 '''
-import sys, os, pickle, json
+import sys, os, pickle, json, time
 import numpy as np
 
 # files 
@@ -29,8 +29,12 @@ h=json.load(open(jsonfile))
 sample=h['sample input X']
 # reshape the data to output array 
 print('----------------------------------')
-print('        TRANSFORMING DATA         ')
+print('-%-$-V-|-%-$-V-|-%-$-V-|-%-$-V-|-%-$-')
+print('         TRANSFORMATION           ')
+print('-%-$-V-|-%-$-V-|-%-$-V-|-%-$-V-|-%-$-')
 print('----------------------------------')
 print(sample)
 print('-->')
 print(g.transform(np.array(sample).reshape(1,-1)))
+print('----------------------------------')
+time.sleep(3)

@@ -346,12 +346,16 @@ for i in range(len(classes)):
 t_filename=problemtype
 for i in range(len(classes)):
 	t_filename=t_filename+'_'+classes[i]
-for i in range(len(default_scalers)):
-	t_filename=t_filename+'_'+default_scalers[i]
-for i in range(len(default_reducers)):
-	t_filename=t_filename+'_'+default_reducers[i]
-for i in range(len(default_selectors)):
-	t_filename=t_filename+'_'+default_selectors[i]
+# only add names in if True 
+if scale_features == True:
+	for i in range(len(default_scalers)):
+		filename=filename+'_'+default_scalers[i]
+if reduce_dimensions == True:
+	for i in range(len(default_reducers)):
+		filename=filename+'_'+default_reducers[i]
+if select_features == True:
+	for i in range(len(default_selectors)):
+		filename=filename+'_'+default_selectors[i]
 	
 transform_file=t_filename+'.pickle'
 

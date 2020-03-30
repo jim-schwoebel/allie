@@ -345,13 +345,14 @@ for i in range(len(classes)):
 # get filename / create a unique file name
 t_filename=problemtype
 for i in range(len(classes)):
-	t_filename=filename+'_'+classes[i]
+	t_filename=t_filename+'_'+classes[i]
 for i in range(len(default_scalers)):
-	t_filename=filename+'_'+default_scalers[i]
+	t_filename=t_filename+'_'+default_scalers[i]
 for i in range(len(default_reducers)):
-	t_filename=filename+'_'+default_reducers[i]
+	t_filename=t_filename+'_'+default_reducers[i]
 for i in range(len(default_selectors)):
-	t_filename=filename+'_'+default_selectors[i]
+	t_filename=t_filename+'_'+default_selectors[i]
+	
 transform_file=t_filename+'.pickle'
 
 if scale_features == True or reduce_dimensions == True or select_features == True:

@@ -27,6 +27,7 @@ female = second class [via N number of classes]
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
 import os, sys, pickle, json, random, shutil, time
+from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -244,7 +245,7 @@ for i in range(len(classes)):
 		default_features=default_csv_features
 
 	print('-----------------------------------')
-	print('FEATURIZING %s'%(classes[i].upper()))
+	print('           FEATURIZING %s'%(classes[i].upper()))
 	print('-----------------------------------')
 	
 	os.system('python3 featurize.py %s'%(data_dir+'/'+classes[i]))
@@ -317,8 +318,58 @@ for i in range(len(classes)):
         alldata.append(class_[j])
         labels.append(i)
 
-os.chdir(model_dir)
+############################################################
+## 			        DATA TRANSFORMATION 			      ##
+############################################################
 
+'''
+Scale features via scalers, dimensionality reduction techniques,
+and feature selection strategies per the settings.json document.
+'''
+preprocess_dir=prevdir+'/preprocessing'
+os.chdir(preprocess_dir)
+
+# get all the important settings for the transformations 
+scale_features=settings['scale_features']
+reduce_dimensions=settings['reduce_dimensions']
+select_features=settings['select_features']
+default_scalers=settings['default_scaler']
+default_reducers=settings['default_dimensionality_reducer']
+default_selectors=settings['default_feature_selector']
+
+# get command for terminal
+transform_command=''
+for i in range(len(classes)):
+	transform_command=transform_command+' '+classes[i]
+
+transform_file=problemtype+transform_command.replace(' ','_')+'.pickle'
+
+if scale_features == True or reduce_dimensions == True or select_features == True:
+	print('----------------------------------')
+	print('        TRANSFORMING DATA         ')
+	print('----------------------------------')
+	# go to proper transformer directory
+	try:
+		os.chdir(problemtype+'_transformer')
+	except:
+		os.mkdir(problemtype+'_transformer')
+		os.chdir(problemtype+'_transformer')
+	# train transformer if it doesn't already exist
+	if transform_file in os.listdir():
+		transform_model=pickle.load(open(transform_file,'rb'))
+		alldata=transform_model.transform(alldata)
+	else:
+		print('making transformer...')
+		os.chdir(preprocess_dir)
+		os.system('python3 transform.py %s %s'%(problemtype, transform_command))
+		os.chdir(problemtype+'_transformer')
+		transform_model=pickle.load(open(transform_file,'rb'))
+		alldata=transform_model.transform(alldata)
+	
+	os.chdir(preprocess_dir)
+	os.system('python3 load_transformer.py %s %s'%(problemtype, transform_file))
+
+os.chdir(model_dir)
 alldata=np.asarray(alldata)
 labels=np.asarray(labels)
 
@@ -332,6 +383,10 @@ Note you can specify multiple training scripts and it will consecutively model t
 files appropriately. 
 '''
 
+print('----------------------------------')
+print('          MODELING DATA           ')
+print('----------------------------------')
+
 default_training_scripts=settings['default_training_script']
 model_compress=settings['model_compress']
 
@@ -342,13 +397,16 @@ for i in range(len(default_features)):
 	else:
 		default_featurenames=default_featurenames+'_|_'+default_features[i] 
 
-print(default_featurenames)
-
-for i in range(len(default_training_scripts)):
+for i in tqdm(range(len(default_training_scripts)), desc=default_training_scripts[i]):
 	# go to model directory 
 	os.chdir(model_dir)
 
 	default_training_script=default_training_scripts[i]
+
+	print('----------------------------------')
+	print('       .... training %s           '%(default_training_script.upper()))
+	print('----------------------------------')
+
 	if default_training_script=='adanet':
 		print('Adanet training is coming soon! Please use a different model setting for now.') 
 		# import train_adanet as ta 
@@ -602,5 +660,3 @@ for i in range(len(default_training_scripts)):
 
 		jsonfilename=modelname[0:-7]+'.json'
 		os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
-
-

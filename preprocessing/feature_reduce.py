@@ -20,7 +20,7 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def feature_reduce(dimensionality_selector, X_train, y_train):
+def feature_reduce(dimensionality_selector, X_train, y_train, component_num):
 
 	if dimensionality_selector == 'autoencoder':
 
@@ -59,63 +59,52 @@ def feature_reduce(dimensionality_selector, X_train, y_train):
 		encoded_audio = encoder.predict(X_test)
 		decoded_audio = decoder.predict(encoded_audio)
 
+		print('not saving model due to keras autoencoder')
+
 	elif dimensionality_selector == 'cca':
 		from sklearn.cross_decomposition import CCA
-		cca = CCA(n_components=50).fit(X, Y).transform(X, Y)
-		new_X=cca[0]
-		new_Y=cca[1]
+		cca = CCA(n_components=component_num)
+		return cca
 
 	elif dimensionality_selector == 'dictionary':
 		from sklearn.decomposition import MiniBatchDictionaryLearning
-		dico_X = MiniBatchDictionaryLearning(n_components=50, alpha=1, n_iter=500).fit_transform(X)
-		dico_Y = MiniBatchDictionaryLearning(n_components=50, alpha=1, n_iter=500).fit_transform(Y)
-
+		dico_X = MiniBatchDictionaryLearning(n_components=component_num, alpha=1, n_iter=500)
+		model=dico_X
 
 	elif dimensionality_selector == 'ica':
 		from sklearn.decomposition import FastICA
-		ica = FastICA(n_components=50)
-		S_ = ica.fit_transform(X_train)  # Reconstruct signals
-		# The mixing matrix is analagous to PCA singular values
-		A_ = ica.mixing_  # Get estimated mixing matrix
-
+		ica = FastICA(n_components=component_num)
+		model=ica
 
 	elif dimensionality_selector == 'kmeans':
 		from sklearn.cluster import KMeans
-		kmeans = KMeans(n_clusters=50, random_state=0).fit_transform(X_train)
-
-
-	elif feature_selector == 'lasso':
-		from sklearn.cross_decomposition import PLSRegression
-		pls = PLSRegression(n_components=50).fit(X, Y).transform(X, Y)
-		pls_X=pls[0]
-		pls_Y=pls[1]
+		kmeans = KMeans(n_clusters=component_num, random_state=0)
+		model=kmeans
 
 	elif dimensionality_selector == 'lda':
 		from sklearn.discriminant_analysis import LinearDiscriminantAnalysis as LDA 
-		lda = LDA(n_components=50).fit(X_train, y_train).transform(X)
+		lda = LDA(n_components=component_num).fit(X_train, y_train).transform(X_train)
+		model=lda
 
 	elif dimensionality_selector == 'manifold':
 		from sklearn import manifold
-		manifold_X = manifold.Isomap(10, 50).fit_transform(X)
-		manifold_Y = manifold.Isomap(10,50).fit_transform(Y)
+		manifold_X = manifold.Isomap(10, component_num)
+		model=manifold_X
 
-	elif dimensionalit_selector == 'neighborhood':
-
+	elif dimensionality_selector == 'neighborhood':
 		from sklearn.neighbors import NeighborhoodComponentsAnalysis
 		nca = NeighborhoodComponentsAnalysis(random_state=42)
-		nca.fit(X_train, y_train)
-		nca.transform(X_train)
-		
+		model=nca
+
 	# feature_engineering.gradient.selector 
 	elif dimensionality_selector == 'pca':
 		from sklearn.decomposition import PCA
-		# calculate PCA for 50 components 
-		pca = PCA(n_components=50)
-		pca.fit(X_train)
-		X_pca = pca.transform(X_train)
-		print("PCA original shape:   ", X.shape)
-		print("PCA transformed shape:", X_pca.shape)
-		print(pca.explained_variance_ratio_)  
-		print(np.sum(pca.explained_variance_ratio_))
+		pca = PCA(n_components=component_num)
+		model = pca
 
+	elif dimensionality_selector == 'pls':
+		from sklearn.cross_decomposition import PLSRegression
+		pls = PLSRegression(n_components=component_num)
+		model=pls
 
+	return model

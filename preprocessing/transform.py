@@ -13,7 +13,9 @@ import numpy as np
 from sklearn import preprocessing
 import numpy as np
 from sklearn.model_selection import train_test_split
+from sklearn.pipeline import Pipeline
 from tqdm import tqdm
+import pickle
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -95,10 +97,17 @@ settings=json.load(open(settingsdir+'/settings.json'))
 # get all the important settings for the transformations 
 scale_features=settings['scale_features']
 reduce_dimensions=settings['reduce_dimensions']
-select_featuers=settings['select_features']
-default_scaler=settings['default_scaler']
-default_reducer=settings['default_dimensionality_reducer']
-default_selector=settings['default_feature_selector']
+select_features=settings['select_features']
+default_scalers=settings['default_scaler']
+default_reducers=settings['default_dimensionality_reducer']
+default_selectors=settings['default_feature_selector']
+
+print(scale_features)
+print(reduce_dimensions)
+print(select_features)
+print(default_scalers)
+print(default_reducers)
+print(default_selectors)
 
 os.chdir(basedir)
 
@@ -114,30 +123,94 @@ problem_type=sys.argv[1]
 
 classes=get_classes()
 features, feature_labels, class_labels = get_features(classes, problem_type)
-x_train, x_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
+X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 
-for i in range(len(feature_scalers)):
-	model=feature_scale(feature_scaler, x_train, y_train)
-	
 print(features[0])
 print(feature_labels[1])
 print(class_labels[0])
+
+component_num=int(len(features[0])/3)
+
+# create a scikit-learn pipeline 
+estimators = []
 
 ################################################
 ##	    	    Scale features               ##
 ################################################
 if scale_features == True:
 	import feature_scale as fsc_
-	scaler_model=fsc_.feature_scale(feature_scaler, X_train, y_train)
+	for i in range(len(default_scalers)):
+		feature_scaler=default_scalers[i]
+		print(feature_scaler.upper())
+		scaler_model=fsc_.feature_scale(feature_scaler, X_train, y_train)
+		# print(len(scaler_model))
+		estimators.append((feature_scaler, scaler_model))
+
 ################################################
 ##	    	   Reduce dimensions              ##
 ################################################
 if reduce_dimensions == True:
 	import feature_reduce as fre_
-	dimension_model=fre_.feature_reduce(dimensionality_selector, X_train, y_train)
+	for i in range(len(default_reducers)):
+		feature_reducer=default_reducers[i]
+		print(feature_reducer.upper()+' - %s features'%(str(component_num)))
+		dimension_model=fre_.feature_reduce(feature_reducer, X_train, y_train, component_num)
+		# print(len(dimension_model))
+		estimators.append((feature_reducer, dimension_model))
+
 ################################################
 ##	    	   Feature selection              ##
 ################################################
 if select_features == True:
 	import feature_select as fse_
-	selection_model=fse_.feature_select(feature_selector, X_train, y_train)
+	for i in range(len(default_selectors)):
+		feature_selector=default_selectors[i]
+		print(feature_selector.upper())
+		selection_model=fse_.feature_select(feature_selector, X_train, y_train, int(component_num/2))
+		estimators.append((feature_selector, selection_model))
+
+print(estimators)
+model=Pipeline(estimators)
+model=model.fit(X_train, y_train)
+print(len(X_test))
+X_test=model.transform(X_test)
+print(len(X_test))
+
+# pickle me timbers
+os.chdir(curdir)
+print(os.getcwd())
+
+try:
+	os.chdir('%s_transformer'%(problem_type))
+except:
+	os.mkdir('%s_transformer'%(problem_type))
+	os.chdir('%s_transformer'%(problem_type))
+
+# get filename
+filename=problem_type
+for i in range(len(classes)):
+	filename=filename+'_'+classes[i]
+model_file=filename+'.pickle'
+json_file=filename+'.json'
+
+# create model
+modelfile=open(model_file,'wb')
+pickle.dump(model, modelfile)
+modelfile.close()
+
+print(type(X_train[0]))
+print(type(y_train[0]))
+print(type(X_test[0]))
+
+# write json file 
+data={'estimators': str(estimators),
+	  'settings': settings,
+	  'classes': list(set(y_test)),
+	  'sample input X': X_train[0],
+	  'sample input Y': y_train[0],
+	  'sample transformed X': X_test[0].tolist(),
+	  'sample transformed y': y_train[0],
+	 }
+jsonfile=open(json_file,'w')
+json.dump(data,jsonfile)
+jsonfile.close()

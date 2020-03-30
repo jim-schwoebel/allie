@@ -48,8 +48,7 @@ def feature_scale(feature_scaler, X_train, y_train):
 
 	if feature_scaler == 'binarizer':
 		# scale the X values in the set 
-		binarizer = preprocessing.Binarizer()
-		binarizer.fit(X_train)
+		model = preprocessing.Binarizer()
 
 	elif feature_scaler == 'one_hot_encoder':
 		'''
@@ -59,31 +58,35 @@ def feature_scale(feature_scaler, X_train, y_train):
 			       [0., 1., 1., 0., 0., 1.]])
 		'''
 		# This is on y values 
-		enc = preprocessing.OneHotEncoder(handle_unknown='ignore')
-		enc.fit(y_train)
+		model = preprocessing.OneHotEncoder(handle_unknown='ignore')
 
-	elif feature_scaler == 'minmaxscaler':
-		X_scale = preprocessing.MinMaxScaler(X_train)
+	elif feature_scaler == 'maxabs':
+		model=preprocessing.MaxAbsScaler()
+
+	elif feature_scaler == 'minmax':
+		model=preprocessing.MinMaxScaler()
 
 	elif feature_scaler == 'normalize':
-		X_normalized = preprocessing.normalize(X_train, norm='l2')
-
-	elif feature_scaler == 'power_transformer':
-		# scale the X values in the set 
-		pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
-		X_lognormal = np.random.RandomState(616).lognormal(size=(3, 3))
-		pt.fit_transform(X_lognormal)
+		# L2 normalization
+		model = preprocessing.Normalizer()
 
 	elif feature_scaler == 'poly':
 		# scale the X values in the set 
-		poly = PolynomialFeatures(2)
-		poly.fit_transform(X_train)
+		model = PolynomialFeatures(2)
 
-	elif feature_scaler == 'quantile_transformer':
+	elif feature_scaler == 'power_transformer':
 		# scale the X values in the set 
-		quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
-		quantile_transformer.fit(X_train)	
-		
+		model = preprocessing.PowerTransformer(method='yeo-johnson')
+
+	elif feature_scaler == 'quantile_transformer_normal':
+		# scale the X values in the set 
+		model = preprocessing.QuantileTransformer(output_distribution='normal')
+
+	elif feature_scaler == 'robust':
+		model=preprocessing.RobustScaler(quantile_range=(25, 75)) 
+
 	elif feature_scaler == 'standard_scaler':
 		# scale the X values in the set 
-		X_scale = preprocessing.scale(X_train)
+		model=preprocessing.StandardScaler()
+
+	return model 

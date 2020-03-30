@@ -1,11 +1,10 @@
 '''
-Import all the featurization scripts and allow the user to customize what embedding that
-they would like to use for modeling purposes.
+Way to go here 
 
-AudioSet is the only embedding that is a little bit wierd, as it is normalized to the length
-of each audio file. There are many ways around this issue (such as normalizing to the length 
-of each second), however, I included all the original embeddings here in case the time series
-information is useful to you.
+Scalers --> Reduce features --> Select Features 
+{in this order} 
+
+Can do this with scikt-learn pipelines.
 '''
 
 import json, os, sys

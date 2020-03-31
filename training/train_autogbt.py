@@ -40,7 +40,8 @@ def train_autogbt(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	print('CV AUC: %.3f' % (model_score))
 
 	modelname=jsonfile[0:-5]+'_autogbt_%s'%(str(default_features.replace("'",'').replace('"','')))
-
+	jsonfilename=modelname+'.json'
+	
 	# save the models 
 	scaler_modelname=modelname+'scaler.pickle'
 	binarizer_modelname=modelname+'binarizer.pickle'
@@ -93,3 +94,6 @@ def train_autogbt(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	# making predictions 
 	# print(model.model.predict(x_train[0].reshape(1,28,28,1)))
 	# print(y_train[0])
+	model_dir=os.getcwd()
+
+	return model_name, model_dir

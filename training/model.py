@@ -502,7 +502,8 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		if mtype == 'c':
 			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, classes, minlength, settings)
 		elif mtype == 'r':
-			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels, settings)
+			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels)
+
 	elif default_training_script=='tpot':
 		import train_TPOT as tt
 		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

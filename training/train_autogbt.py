@@ -96,4 +96,4 @@ def train_autogbt(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	# print(y_train[0])
 	model_dir=os.getcwd()
 
-	return model_name, model_dir
+	return main_modelname, model_dir

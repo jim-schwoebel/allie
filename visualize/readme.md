@@ -49,5 +49,6 @@ Once you run this script, you output many visualizations. These visualizations c
 * [MLXtend](https://github.com/rasbt/mlxtend) - for visualizing models
 * [Plotly learning curves](https://github.com/mitmedialab/vizml/blob/master/notebooks/Plotly%20Performance.ipynb)
 * [Snowflake](https://github.com/doubledherin/Audio_Snowflake) - audio song visualization
+* [Streamit](https://github.com/streamlit/streamlit)
 * [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)

@@ -39,12 +39,12 @@ warnings.filterwarnings("ignore")
 
 # INITIAL FUNCTIONS
 #############################################################
-def update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores, settings):
+def update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores):
 
-    #try:
-    explained_variances.append(metrics.explained_variance_score(y_test,predictions))
-    #except:
-        #explained_variances.append('n/a')
+    try:
+        explained_variances.append(metrics.explained_variance_score(y_test,predictions))
+    except:
+        explained_variances.append('n/a')
     try:
         mean_absolute_errors.append(metrics.mean_absolute_error(y_test,predictions))
     except:
@@ -64,7 +64,7 @@ def update_list(y_test, predictions, explained_variances, mean_absolute_errors, 
 
     return explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores
 
-def train_sr(classes, problemtype, default_features, modeldir, alldata, labels):
+def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, settings):
     testing_set=0.25
     X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=testing_set, random_state=42)
 

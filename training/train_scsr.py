@@ -39,7 +39,7 @@ warnings.filterwarnings("ignore")
 
 # INITIAL FUNCTIONS
 #############################################################
-def train_sr(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores, settings):
+def update_ilst(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores, settings):
 
     #try:
     explained_variances.append(metrics.explained_variance_score(y_test,predictions))

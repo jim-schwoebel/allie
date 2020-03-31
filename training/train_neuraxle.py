@@ -38,7 +38,7 @@ def train_neuraxle(alldata, labels, mtype, jsonfile, problemtype, default_featur
     if mtype in ['classification', 'c']:
         print('neuraxle currently does not support training classification models. We are working on this soon')
         print('----> please use another model training script')
-        modelname=''
+        model_name=''
         model_dir=''
 
     elif mtype in ['regression', 'r']:

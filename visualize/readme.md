@@ -35,6 +35,12 @@ Once you run this script, you output many visualizations. These visualizations c
 ## tSNE plot
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/tsne.png)
 
+## Using streamlit
+
+```
+streamlit run test.py
+```
+Outputs various graphs on the data.
 
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)

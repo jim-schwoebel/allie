@@ -64,7 +64,7 @@ Video
 * [VIDAUG]()
 
 CSV 
-* [TGAN](https://github.com/sdv-dev/TGAN)
+* [TGAN](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on continuous audio data as well
 
 ## References
 * [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)

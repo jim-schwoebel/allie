@@ -42,7 +42,11 @@ Note the unit tests above takes roughly 30-40 minutes to complete and makes sure
 
 ### Windows 10
 
-For Windows users, check out this article on how to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
+Download Microsoft Visual C++ (https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15).
+
+Download SWIG and compile locally as an environment variable (http://www.swig.org/download.html).
+
+Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
 
 ### Linux
 Coming soon

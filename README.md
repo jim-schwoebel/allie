@@ -41,6 +41,7 @@ python3 test.py
 Note the unit tests above takes roughly 30-40 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
 ### Windows 10
+
 For Windows users, check out this article on how to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
 
 ### Linux

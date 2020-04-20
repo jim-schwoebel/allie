@@ -50,7 +50,7 @@ First, install various dependencies:
 
 - Download Microsoft Visual C++ (https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15).
 - Download SWIG and compile locally as an environment variable (http://www.swig.org/download.html).
-- Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
+- Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44) on Windows.
 
 Now clone Allie and run the setup.py script:
 ```

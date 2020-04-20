@@ -42,17 +42,27 @@ Note the unit tests above takes roughly 30-40 minutes to complete and makes sure
 
 ### Windows 10
 
+Note that there are many incomptible Python libraries with Windows, so I encourage you to instead run Allie in a Docker container with Ubuntu or on [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
+
+If you still want to try to use Allie with Windows, you can do so below. 
+
+First, install various dependencies:
+
+- Download Microsoft Visual C++ (https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15).
+- Download SWIG and compile locally as an environment variable (http://www.swig.org/download.html).
+- Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
+
+Now clone Allie and run the setup.py script:
 ```
 git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
 git checkout windows
 cd allie 
+python3 -m pip install --user virtualenv
+python3 -m venv env
+python3 setup.py
 ```
 
-Download Microsoft Visual C++ (https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15).
-
-Download SWIG and compile locally as an environment variable (http://www.swig.org/download.html).
-
-Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
+Note that there are some functions that are limited (e.g. featurization / modeling scripts) due to lack of Windows compatibility.
 
 ### Linux
 

@@ -56,6 +56,8 @@ Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to
 
 ### Linux
 
+Here are the instructions for setting up Allie on Linux:
+
 ```
 git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
 git checkout linux
@@ -65,7 +67,12 @@ python3 -m venv env
 source env/bin/activate
 python3 setup.py
 ```
-Coming soon
+
+Now you can run some unit tests:
+```
+cd tests
+python3 test.py
+```
 
 ## folder structures
 

@@ -42,6 +42,12 @@ Note the unit tests above takes roughly 30-40 minutes to complete and makes sure
 
 ### Windows 10
 
+```
+git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
+git checkout windows
+cd allie 
+```
+
 Download Microsoft Visual C++ (https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15).
 
 Download SWIG and compile locally as an environment variable (http://www.swig.org/download.html).
@@ -49,6 +55,16 @@ Download SWIG and compile locally as an environment variable (http://www.swig.or
 Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44). 
 
 ### Linux
+
+```
+git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
+git checkout linux
+cd allie 
+python3 -m pip install --user virtualenv
+python3 -m venv env
+source env/bin/activate
+python3 setup.py
+```
 Coming soon
 
 ## folder structures

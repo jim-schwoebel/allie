@@ -1,5 +1,5 @@
 '''
-Custom setup script for MacOSX.
+Custom setup script for all operating systems.
 '''
 import os, json, sys
 
@@ -13,6 +13,8 @@ def brew_install(modules):
 os.system('pip3 install --upgrade pip')
 os.system('pip3 uninstall opencv-python')
 os.system('pip3 uninstall opencv-contrib-python')
+os.system('pip3 install numpy')
+curdir=os.getcwd()
 
 # possible operating systems
 # | Linux (2.x and 3.x) | linux2 (*) |
@@ -30,14 +32,21 @@ if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
   # install xcode if it is not already installed (on Mac) - important for OPENSMILE features
   os.system('xcode-select --install')
 elif sys.platform.lower() in ['linux', 'linux2']:
-  os.system('sudo apt-get install ffmpeg')
-  os.system('sudo apt-get install sox')
+  os.system('sudo apt-get install ffmpeg -y')
+  os.system('sudo apt-get install sox -y')
+  os.system('sudo apt-get install python-pyaudio -y')
+  os.system('sudo apt-get install portaudio19-dev -y')
+  os.system('sudo apt-get install libpq-dev python3.7-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev libffi-dev -y')
+  os.system('sudo apt upgrade gcc -y')
+  os.system('sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev')
+  os.system('sudo apt-get install tesseract-ocr')
+  os.system('sudo apt-get install opus-tools libav-tools')
 elif sys.platform.lower() in ['win32', 'cygwin', 'msys']: 
-  print('you have to install FFmpeg from source') 
   # https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10
-  print('you have to install SoX from source') 
+  print('you have to install FFmpeg from source') 
   # https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows
-
+  print('you have to install SoX from source') 
+  
 # now install all modules with pip3 - install individually to reduce errors
 requirements=open('requirements.txt').read().split('\n')
 for i in range(len(requirements)):

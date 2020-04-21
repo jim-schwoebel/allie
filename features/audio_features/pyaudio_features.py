@@ -81,7 +81,7 @@ def pyaudio_featurize(file, basedir):
     curdir=os.getcwd()
     shutil.copy(curdir+'/'+file, basedir+'/helpers/'+file)
     os.chdir(basedir+'/helpers/')
-    os.system('python %s/helpers/pyaudio_help.py %s'%(basedir, file))
+    os.system('python3 %s/helpers/pyaudio_help.py %s'%(basedir, file))
     jsonfile=file[0:-4]+'.json'
     g=json.load(open(jsonfile))
     features=g['features']

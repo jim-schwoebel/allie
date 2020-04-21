@@ -38,8 +38,10 @@ elif sys.platform.lower() in ['win32', 'cygwin', 'msys']:
   print('you have to install SoX from source') 
   # https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows
 
-# now install all modules with pip3 
-os.system('pip3 install -r requirements.txt')
+# now install all modules with pip3 - install individually to reduce errors
+requirements=open('requirements.txt').read().split('\n')
+for i in range(len(requirements)):
+  os.system('pip3 install %s'%(requirements[i]))
 
 # install add-ons to NLTK 
 import nltk

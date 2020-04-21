@@ -40,7 +40,8 @@ elif sys.platform.lower() in ['linux', 'linux2']:
   os.system('sudo apt upgrade gcc -y')
   os.system('sudo apt-get install -y python python-dev python-pip build-essential swig git libpulse-dev')
   os.system('sudo apt-get install tesseract-ocr')
-  os.system('sudo apt-get install opus-tools libav-tools')
+  os.system('sudo apt install opus-tools')
+  os.system('sudo apt install libav-tools')
 elif sys.platform.lower() in ['win32', 'cygwin', 'msys']: 
   # https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10
   print('you have to install FFmpeg from source') 

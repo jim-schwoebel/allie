@@ -442,11 +442,11 @@ class test_augmentation(unittest.TestCase):
 class test_features(unittest.TestCase):
 	'''
 	tests featurization capabilities across all training scripts.
-	'''
-##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-	# change settings.json to include every type of featurization
-	# change back to default settings.
+	- change settings.json to include every type of featurization
+	- change back to default settings.
+	'''
+#### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
 	# audio features
 	def test_audio_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
@@ -629,7 +629,11 @@ class test_features(unittest.TestCase):
 
 		# now that we have the folder let's check if the array has all the features
 		os.chdir(folder)
-		gopen=open('test_video.json','r')
+		listdir=os.listdir()
+		for i in range(len(listdir)):
+                        if listdir[i].endswith('.mp4'):
+                                videofile=listdir[i]
+		gopen=open(listdir[i][0:-4]+'.json','r')
 		g=json.load(gopen)
 		features=g['features']['video']
 		gopen.close()
@@ -852,7 +856,11 @@ class test_transcription(unittest.TestCase):
 
 		# now that we have the folder let's check if the array has all the features
 		os.chdir(folder)
-		gopen=open('test_video.json','r')
+		listdir=os.listdir()
+		for i in range(len(listdir)):
+                        if listdir[i].endswith('.mp4'):
+                                videofile=listdir[i]
+		gopen=open(listdir[i][0:-4]+'.json','r')
 		g=json.load(gopen)
 		gopen.close()
 		transcripts=list(g['transcripts']['video'])

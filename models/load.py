@@ -1,8 +1,6 @@
 '''
 fingerprint audio models in a streaming folder. 
-
 first determine the file types available in the folder + load appropriate featurizers, as necessary.
-
 change to load directory 
 '''
 import os, json, uuid
@@ -100,28 +98,33 @@ def detect_models():
     devol_models=list()
     keras_models=list()
     ludwig_models=list()
+    safe_models=list()
 
     # get a list of files for models 
+    print(listdir)
     for i in range(len(listdir)):
         data=dict()
-        if listdir[i].find('tpot')>0 and listdir[i][-7:]=='.pickle':
+        if listdir[i].find('tpot')>0 and listdir[i].endswith('.pickle') == True:
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             tpot_models.append(data)
-        elif listdir[i].find('sc')>0 and listdir[i][-7:]=='.pickle':
+        elif listdir[i].find('sc')>0 and listdir[i].endswith('.pickle') == True:
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             scsr_models.append(data)
-        elif listdir[i].find('sr')>0 and listdir[i][-7:]=='.pickle':
+        elif listdir[i].find('sr')>0 and listdir[i].endswith('.pickle') == True:
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             scsr_models.append(data)
-        elif listdir[i].find('hypsklearn')>0 and listdir[i][-7:]=='.pickle':
+        elif listdir[i].find('hypsklearn')>0 and listdir[i].endswith('.pickle') == True:
             data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
             hypsklearn_models.append(data)
-        elif listdir[i].find('keras')>0 and listdir[i][-3:]=='.h5':
+        elif listdir[i].find('keras')>0 and listdir[i].endswith('.h5') == True:
             data[listdir[i]]=json.load(open(listdir[i][0:-3]+'.json'))
             keras_models.append(data)
-        elif listdir[i].find('ludwig') and listdir[i].find('.')<0:
+        elif listdir[i].find('ludwig')>0 and listdir[i].find('.')<0:
             data[listdir[i]]=json.load(open(listdir[i]+'.json'))
             ludwig_models.append(data)
+        elif listdir[i].find('safe')>0 and listdir[i].endswith('.pickle') == True and listdir[i][0:-7]+'.json' in listdir:
+            data[listdir[i]]=json.load(open(listdir[i][0:-7]+'.json'))
+            safe_models.append(data)
 
     # make a dictionary outputting all models
     data={'tpot_models': tpot_models,
@@ -130,6 +133,7 @@ def detect_models():
           'hyspklearn_models': hypsklearn_models,
           'keras_models': keras_models,
           'ludwig_models': ludwig_models,
+          'safe_models': safe_models,
          }
     # print(data)
 
@@ -150,6 +154,73 @@ def model_schema():
             }
     return models 
 
+
+def transform_model(settings, model_dir, classes, problemtype):
+
+    ##########################################################
+    ##             LOAD TRANSFORMERS (IF NECESSARY)         ##
+    ##########################################################
+
+    # get all the important settings for the transformations 
+    scale_features=settings['scale_features']
+    reduce_dimensions=settings['reduce_dimensions']
+    select_features=settings['select_features']
+    default_scalers=settings['default_scaler']
+    default_reducers=settings['default_dimensionality_reducer']
+    default_selectors=settings['default_feature_selector']
+
+    curdir=os.getcwd()
+    preprocess_dir=prev_dir(prev_dir(model_dir))+'/preprocessing'
+    os.chdir(preprocess_dir)
+
+    # get command for terminal
+    transform_command=''
+    for i in range(len(classes)):
+        transform_command=transform_command+' '+classes[i]
+
+    # get filename / create a unique file name
+    t_filename=problemtype
+    for i in range(len(classes)):
+        t_filename=t_filename+'_'+classes[i]
+    if scale_features == True:
+        for i in range(len(default_scalers)):
+            t_filename=t_filename+'_'+default_scalers[i]
+    if reduce_dimensions == True:
+        for i in range(len(default_reducers)):
+            t_filename=t_filename+'_'+default_reducers[i]
+    if select_features == True:
+        for i in range(len(default_selectors)):
+            t_filename=t_filename+'_'+default_selectors[i]
+
+    transform_file=t_filename+'.pickle'
+
+    if scale_features == True or reduce_dimensions == True or select_features == True:
+        print('----------------------------------')
+        print('        TRANSFORMING DATA         ')
+        print('----------------------------------')
+        # go to proper transformer directory
+        try:
+            os.chdir(problemtype+'_transformer')
+        except:
+            os.mkdir(problemtype+'_transformer')
+            os.chdir(problemtype+'_transformer')
+        # train transformer if it doesn't already exist
+        if transform_file in os.listdir():
+            transform_model=pickle.load(open(transform_file,'rb'))
+        else:
+            print('making transformer...')
+            os.chdir(preprocess_dir)
+            os.system('python3 transform.py %s %s'%(problemtype, transform_command))
+            os.chdir(problemtype+'_transformer')
+            transform_model=pickle.load(open(transform_file,'rb'))
+
+    else:
+        transform_model = ''
+
+    os.chdir(curdir)
+
+    return transform_model
+
 def make_predictions(sampletype, feature_set, model_dir, load_dir):
     '''
     Take in a sampletype (e.g. 'audio'), feature set (e.g. 'librosa_features'), the model
@@ -159,6 +230,7 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
 
     # detect machine learning models
     model_data=detect_models()
+    print(model_data)
     # 'tpot_models': [], 'scsr_models': [], 'devol_models': [], 'keras_models': [], 'ludwig_models': []
     model_list=list(model_data)
 
@@ -173,7 +245,6 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
             if g['sampletype'] == sampletype:
                 jsonfilelist.append(listdir[i])
 
-    print(jsonfilelist)
     for i in range(len(model_list)):
         if model_data[model_list[i]] != []:
 
@@ -199,6 +270,7 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                     except:
                         settings=json.load(open(prev_dir(prev_dir(os.getcwd()))+'/settings.json'))
 
+                    print(settings)
                     feature_set=settings['default_%s_features'%(sampletype)]
                     
                     # load model 
@@ -221,15 +293,25 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         features=list()
                         for j in range(len(feature_set)):
                             features=features+jsonfile['features'][sampletype][feature_set[j]]['features']
-                        features=np.array(features).reshape(1,-1)
-
-                        # predict model 
-                        output=str(model.predict(features)[0])
-                        print(output)
-
+                        
                         # now get the actual class from the classifier name (assume 2 classes)
                         one=modelname.split('_')[0]
                         two=modelname.split('_')[1]
+
+                        classes=[one, two]
+
+                        t_model=transform_model(settings, model_dir, classes, sampletype)
+                        if t_model == '':
+                            features=np.array(features).reshape(1,-1)
+                                # predict model 
+                            output=str(model.predict(features)[0])
+                            print(output)
+                        else:
+                            features=t_model.transform(np.array(features).reshape(1,-1))
+                            # predict model 
+                            print(features)
+                            output=str(model.predict(features)[0])
+                            print(output[0])
 
                         if output == '0':
                             class_=one
@@ -282,15 +364,22 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         features=list()
                         for j in range(len(feature_set)):
                             features=features+jsonfile['features'][sampletype][feature_set[j]]['features']
-                        features=np.array(features).reshape(1,-1)
-
-                        # predict output from model 
-                        output=str(int(loaded_model.predict_classes(features)))
-                        print(output)
 
                         # now get the actual class from the classifier name (assume 2 classes)
                         one=modelname.split('_')[0]
                         two=modelname.split('_')[1]
+
+                        classes=[one, two]
+
+                        t_model=transform_model(settings, model_dir, classes, sampletype)
+                        if t_model == '':
+                            features=np.array(features).reshape(1,-1)
+                        else:
+                            features=t_model.transform(np.array(features).reshape(1,-1))
+
+                        # predict output from model 
+                        output=str(int(loaded_model.predict_classes(features)))
+                        print(output)
 
                         if output == '0':
                             class_=one
@@ -342,6 +431,18 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                             features=features+jsonfile['features'][sampletype][feature_set[j]]['features']
                             labels=labels+jsonfile['features'][sampletype][feature_set[j]]['labels']
 
+                        # now get the actual class from the classifier name (assume 2 classes)
+                        one=modelname.split('_')[0]
+                        two=modelname.split('_')[1]
+
+                        classes=[one, two]
+
+                        t_model=transform_model(settings, model_dir, classes, sampletype)
+                        if t_model == '':
+                            features=np.array(features).reshape(1,-1)
+                        else:
+                            features=t_model.transform(np.array(features).reshape(1,-1))
+
                         data=dict()
                         for i in range(len(features)):
                             data[labels[i]]=features[i]
@@ -349,10 +450,6 @@ def make_predictions(sampletype, feature_set, model_dir, load_dir):
                         # predict output from model 
                         output=str(model.predict(pd.DataFrame([data])))
                         print(output)
-
-                        # now get the actual class from the classifier name (assume 2 classes)
-                        one=modelname.split('_')[0]
-                        two=modelname.split('_')[1]
 
                         if output == '0':
                             class_=one

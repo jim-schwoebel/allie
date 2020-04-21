@@ -42,6 +42,27 @@ Note the unit tests above takes roughly 30-40 minutes to complete and makes sure
 
 ### Windows 10
 
+#### recommended installation (Docker)
+
+You can run Allie in a Docker container fairly easily (10-11GB container run on top of Linux/Ubuntu):
+
+```
+git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
+cd allie 
+docker build -t allie_image .
+docker run -it --entrypoint=/bin/bash allie_image
+cd ..
+```
+
+You will then have access to the docker container to use Allie's folder structure. You can then run tests @
+
+```
+cd tests
+python3 test.py
+```
+
+#### alternative
+
 Note that there are many incomptible Python libraries with Windows, so I encourage you to instead run Allie in a Docker container with Ubuntu or on [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
 
 If you still want to try to use Allie with Windows, you can do so below. 

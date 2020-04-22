@@ -9,7 +9,7 @@ RUN apt-get update \
   && ln -s /usr/bin/python3 python \
   && pip3 install --upgrade pip \
   && apt-get install -y tree \
-  && apt-get install libsm6
+  && apt-get install -y libsm6
 
 RUN     python setup.py
 RUN		tree

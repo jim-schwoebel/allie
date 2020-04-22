@@ -29,6 +29,7 @@ curdir=os.getcwd()
 if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
   brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4']
   brew_install(brew_modules)
+  os.system('pip3 install -r mac.txt')
   # install xcode if it is not already installed (on Mac) - important for OPENSMILE features
   os.system('xcode-select --install')
 elif sys.platform.lower() in ['linux', 'linux2']:
@@ -50,16 +51,7 @@ elif sys.platform.lower() in ['win32', 'cygwin', 'msys']:
   print('you have to install SoX from source') 
   
 # now install all modules with pip3 - install individually to reduce errors
-requirements=open('requirements.txt').read().split('\n')
-for i in range(len(requirements)):
-	# skip pyobjc installations if not on mac computer
-	if requirements[i].find('pyobjc')==0:
-		if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
-			os.system('pip3 install %s'%(requirements[i]))
-		else:
-			pass
-	else:
-		os.system('pip3 install %s'%(requirements[i]))
+os.system('pip3 install -r requirements.txt')
 
 # install add-ons to NLTK 
 import nltk

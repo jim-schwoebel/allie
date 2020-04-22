@@ -197,7 +197,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
 | default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
 | select_features | if True, select features via the default_feature_selector (or set of feature selectors) | False | True, False | 
-| default_feature_selector | the default feature selector or set of reature selectors | ["lasso"] | ["lasso", "rfe"] | 
+| default_feature_selector | the default feature selector or set of feature selectors | ["lasso"] | ["lasso", "rfe"] | 
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
 | default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 

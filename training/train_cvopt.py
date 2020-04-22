@@ -3,12 +3,14 @@ import numpy as np, pandas as pd, scipy as sp
 from sklearn import datasets
 from sklearn.model_selection import train_test_split, StratifiedKFold
 from sklearn.linear_model import LogisticRegression
-
 from cvopt.model_selection import SimpleoptCV
 from cvopt.search_setting import search_category, search_numeric
 
 
 def train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+	# downloading library
+	os.system('pip3 install cvopt==0.4.2')
+
 	# training and testing sets
 	Xtrain, Xtest, ytrain, ytest = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 	modelname=jsonfile[0:-5]+'_cvopt_'+str(default_features).replace("'",'').replace('"','')

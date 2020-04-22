@@ -8,6 +8,10 @@ from sklearn.model_selection import train_test_split
 from autogbt import AutoGBTClassifier
 
 def train_autogbt(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+		
+	# install repo if necessary
+	print('initializing installation...')
+	os.system('pip3 install git+https://github.com/pfnet-research/autogbt-alt.git')
 
 	print('creating training data...')
 	x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)

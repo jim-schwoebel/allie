@@ -5,6 +5,10 @@ from sklearn.metrics import log_loss, accuracy_score, mean_squared_error
 from gama import GamaClassifier, GamaRegressor
 
 def train_gama(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+	# install library
+	print('installing library')
+	os.system('pip3 install gama==20.1.0')
+
 	# training and testing sets
 	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.8616666666666667 (+/- 0.020602049520483258) 
+
+MODEL FILE NAME: 
+
+ Engine_Engine_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:29:25.602151
+
+EXECUTION TIME: 
+
+ 4.420250177383423
+
+GROUPS: 
+
+['Engine', 'Engine_controls']
+(186 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine']
+
+test labels
+
+['Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls', 'Engine', 'Engine_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5036666666666667 (+/- 0.02395365896429559)
+logistic regression: 0.6746666666666666 (+/- 0.05101633725255732)
+decision-tree: 0.7313333333333333 (+/- 0.06180974392799604)
+random forest: 0.805 (+/- 0.029173808649388084)
+gradient boosting: 0.8126666666666666 (+/- 0.07100547709703654)
+knn: 0.8206666666666667 (+/- 0.04353287391283868)
+adaboost: 0.8380000000000001 (+/- 0.04905099387372287)
+gaussian-nb: 0.8613333333333333 (+/- 0.05600991975633523)
+hard voting: 0.8616666666666667 (+/- 0.020602049520483258)
+
+
+(C) 2018, NeuroLex Laboratories

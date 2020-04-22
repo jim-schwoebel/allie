@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7138461538461538 (+/- 0.06498065255982424) 
+
+MODEL FILE NAME: 
+
+ Tools_Tools_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:34:17.364754
+
+EXECUTION TIME: 
+
+ 2.4515421390533447
+
+GROUPS: 
+
+['Tools', 'Tools_controls']
+(101 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls']
+
+test labels
+
+['Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools_controls', 'Tools', 'Tools', 'Tools', 'Tools', 'Tools_controls', 'Tools']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5374358974358974 (+/- 0.0020512820512820443)
+gaussian-nb: 0.5487179487179488 (+/- 0.11761379426850987)
+decision-tree: 0.5641025641025641 (+/- 0.13855647267801327)
+random forest: 0.5641025641025641 (+/- 0.07068742949789857)
+adaboost: 0.5928205128205128 (+/- 0.11368433868651563)
+logistic regression: 0.6082051282051282 (+/- 0.12068618190835288)
+knn: 0.6564102564102564 (+/- 0.07709382758139954)
+hard voting: 0.683076923076923 (+/- 0.08347483056154177)
+gradient boosting: 0.7138461538461538 (+/- 0.06498065255982424)
+
+
+(C) 2018, NeuroLex Laboratories

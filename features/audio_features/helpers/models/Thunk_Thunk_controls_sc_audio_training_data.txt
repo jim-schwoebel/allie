@@ -1,0 +1,8 @@
+train labels
+
+['Thunk', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls']
+
+test labels
+
+['Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk', 'Thunk', 'Thunk_controls', 'Thunk_controls', 'Thunk']
+

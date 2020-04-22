@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.817063492063492 (+/- 0.07096853620986715) 
+
+MODEL FILE NAME: 
+
+ Hiccup_Hiccup_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:36:04.328060
+
+EXECUTION TIME: 
+
+ 2.0518929958343506
+
+GROUPS: 
+
+['Hiccup', 'Hiccup_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls']
+
+test labels
+
+['Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup', 'Hiccup', 'Hiccup_controls', 'Hiccup', 'Hiccup_controls', 'Hiccup_controls', 'Hiccup']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6503968253968254 (+/- 0.12576548179923813)
+gradient boosting: 0.6503968253968254 (+/- 0.12576548179923813)
+adaboost: 0.6626984126984127 (+/- 0.10800651324573969)
+hard voting: 0.6876984126984127 (+/- 0.07765620560252419)
+gaussian-nb: 0.7162698412698413 (+/- 0.051495645071455036)
+random forest: 0.7412698412698413 (+/- 0.02425509014275575)
+knn: 0.8011904761904761 (+/- 0.08053111678708459)
+logistic regression: 0.817063492063492 (+/- 0.07096853620986715)
+
+
+(C) 2018, NeuroLex Laboratories

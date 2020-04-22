@@ -1,0 +1,8 @@
+train labels
+
+['Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls']
+
+test labels
+
+['Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle']
+

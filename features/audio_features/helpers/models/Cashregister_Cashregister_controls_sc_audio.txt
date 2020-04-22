@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8484126984126984 (+/- 0.1253968253968254) 
+
+MODEL FILE NAME: 
+
+ Cashregister_Cashregister_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:38:58.306277
+
+EXECUTION TIME: 
+
+ 2.304387092590332
+
+GROUPS: 
+
+['Cashregister', 'Cashregister_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls']
+
+test labels
+
+['Cashregister', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister_controls', 'Cashregister', 'Cashregister', 'Cashregister_controls', 'Cashregister']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5313492063492063 (+/- 0.10176385946876391)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gradient boosting: 0.5694444444444444 (+/- 0.08072251834838852)
+random forest: 0.5853174603174602 (+/- 0.19213071104978466)
+knn: 0.6583333333333332 (+/- 0.16054714020425645)
+adaboost: 0.6773809523809524 (+/- 0.11933563044360909)
+hard voting: 0.7218253968253967 (+/- 0.1274816641872691)
+logistic regression: 0.7281746031746033 (+/- 0.12891635097223691)
+gaussian-nb: 0.8484126984126984 (+/- 0.1253968253968254)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7662698412698413 (+/- 0.12658916752369115) 
+
+MODEL FILE NAME: 
+
+ Vocalmusic_Vocalmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:10:54.987521
+
+EXECUTION TIME: 
+
+ 2.4817588329315186
+
+GROUPS: 
+
+['Vocalmusic', 'Vocalmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls']
+
+test labels
+
+['Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic', 'Vocalmusic_controls', 'Vocalmusic_controls', 'Vocalmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5043650793650793 (+/- 0.20870299781037294)
+knn: 0.5146825396825397 (+/- 0.07461583816870614)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5888888888888889 (+/- 0.1405591182003027)
+gaussian-nb: 0.6154761904761905 (+/- 0.07449756117696198)
+logistic regression: 0.6718253968253969 (+/- 0.16046472883880167)
+adaboost: 0.694047619047619 (+/- 0.11997259702232499)
+gradient boosting: 0.6968253968253968 (+/- 0.1739091546006646)
+hard voting: 0.7662698412698413 (+/- 0.12658916752369115)
+
+
+(C) 2018, NeuroLex Laboratories

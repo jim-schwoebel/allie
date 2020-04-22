@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7468253968253968 (+/- 0.02843884582090304) 
+
+MODEL FILE NAME: 
+
+ Didgeridoo_Didgeridoo_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:46:25.229823
+
+EXECUTION TIME: 
+
+ 2.039048910140991
+
+GROUPS: 
+
+['Didgeridoo', 'Didgeridoo_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls']
+
+test labels
+
+['Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo', 'Didgeridoo', 'Didgeridoo_controls', 'Didgeridoo']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.5952380952380952 (+/- 0.06388765649999398)
+decision-tree: 0.6416666666666666 (+/- 0.16169648913360968)
+random forest: 0.6424603174603174 (+/- 0.0765410255785996)
+hard voting: 0.6488095238095237 (+/- 0.0479157423749955)
+gradient boosting: 0.6710317460317461 (+/- 0.07116795488822932)
+gaussian-nb: 0.6801587301587302 (+/- 0.1128994406481478)
+logistic regression: 0.721031746031746 (+/- 0.10228246770487326)
+knn: 0.7468253968253968 (+/- 0.02843884582090304)
+
+
+(C) 2018, NeuroLex Laboratories

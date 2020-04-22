@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7412698412698413 (+/- 0.02425509014275575) 
+
+MODEL FILE NAME: 
+
+ Independentmusic_Independentmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:48:24.798478
+
+EXECUTION TIME: 
+
+ 2.0208611488342285
+
+GROUPS: 
+
+['Independentmusic', 'Independentmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls']
+
+test labels
+
+['Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic', 'Independentmusic_controls', 'Independentmusic_controls', 'Independentmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.6432539682539682 (+/- 0.0769718530552656)
+decision-tree: 0.6682539682539682 (+/- 0.08667160867356155)
+adaboost: 0.7182539682539681 (+/- 0.1394151029288655)
+gradient boosting: 0.7182539682539681 (+/- 0.1602703058107339)
+knn: 0.7289682539682539 (+/- 0.18841309958369185)
+hard voting: 0.7404761904761905 (+/- 0.11908332797779703)
+gaussian-nb: 0.7412698412698413 (+/- 0.08269407111657526)
+logistic regression: 0.7412698412698413 (+/- 0.02425509014275575)
+
+
+(C) 2018, NeuroLex Laboratories

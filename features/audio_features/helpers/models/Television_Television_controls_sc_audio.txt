@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6619047619047619 (+/- 0.19886298112210574) 
+
+MODEL FILE NAME: 
+
+ Television_Television_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:20:38.104553
+
+EXECUTION TIME: 
+
+ 2.0183327198028564
+
+GROUPS: 
+
+['Television', 'Television_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Television', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television', 'Television_controls', 'Television', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television', 'Television', 'Television_controls', 'Television', 'Television', 'Television', 'Television', 'Television', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television_controls']
+
+test labels
+
+['Television', 'Television_controls', 'Television', 'Television', 'Television', 'Television_controls', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television', 'Television', 'Television', 'Television_controls', 'Television_controls', 'Television', 'Television_controls', 'Television', 'Television', 'Television', 'Television_controls', 'Television', 'Television_controls', 'Television_controls', 'Television']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.35238095238095235 (+/- 0.15718794446973763)
+random forest: 0.5265873015873016 (+/- 0.16749416644286758)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.5460317460317461 (+/- 0.09328689050739755)
+knn: 0.5619047619047619 (+/- 0.1000708365888929)
+gaussian-nb: 0.5638888888888889 (+/- 0.1634053553396923)
+hard voting: 0.5988095238095237 (+/- 0.18471955823015537)
+gradient boosting: 0.6146825396825397 (+/- 0.0716311061558497)
+logistic regression: 0.6619047619047619 (+/- 0.19886298112210574)
+
+
+(C) 2018, NeuroLex Laboratories

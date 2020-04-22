@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8956349206349206 (+/- 0.10501712538359978) 
+
+MODEL FILE NAME: 
+
+ Computerkeyboard_Computerkeyboard_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:24:08.482793
+
+EXECUTION TIME: 
+
+ 2.1165387630462646
+
+GROUPS: 
+
+['Computerkeyboard', 'Computerkeyboard_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls']
+
+test labels
+
+['Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard', 'Computerkeyboard_controls', 'Computerkeyboard_controls', 'Computerkeyboard']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.6182539682539683 (+/- 0.05556405830624518)
+random forest: 0.7511904761904762 (+/- 0.0954164995691137)
+logistic regression: 0.7726190476190476 (+/- 0.08095238095238094)
+gaussian-nb: 0.819047619047619 (+/- 0.1487666604934601)
+adaboost: 0.8198412698412698 (+/- 0.06385560604031972)
+decision-tree: 0.8484126984126984 (+/- 0.1253968253968254)
+hard voting: 0.8670634920634921 (+/- 0.09126984126984125)
+gradient boosting: 0.8956349206349206 (+/- 0.10501712538359978)
+
+
+(C) 2018, NeuroLex Laboratories

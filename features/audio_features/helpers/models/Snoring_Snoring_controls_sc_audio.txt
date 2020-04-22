@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7698412698412699 (+/- 0.04807978168527287) 
+
+MODEL FILE NAME: 
+
+ Snoring_Snoring_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:35:22.844326
+
+EXECUTION TIME: 
+
+ 1.9713501930236816
+
+GROUPS: 
+
+['Snoring', 'Snoring_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls']
+
+test labels
+
+['Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring', 'Snoring', 'Snoring_controls', 'Snoring', 'Snoring_controls', 'Snoring_controls', 'Snoring']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6174603174603174 (+/- 0.14840633209331666)
+gradient boosting: 0.6273809523809524 (+/- 0.1774408655608258)
+random forest: 0.6281746031746032 (+/- 0.14834902292455684)
+knn: 0.6349206349206349 (+/- 0.21171666939038508)
+adaboost: 0.6369047619047619 (+/- 0.06692128248835807)
+hard voting: 0.6746031746031745 (+/- 0.16706773361127686)
+logistic regression: 0.6904761904761905 (+/- 0.16448400731418092)
+gaussian-nb: 0.7698412698412699 (+/- 0.04807978168527287)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7797619047619048 (+/- 0.1357351696546593) 
+
+MODEL FILE NAME: 
+
+ Cupboardopenorclose_Cupboardopenorclose_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:40:50.746411
+
+EXECUTION TIME: 
+
+ 2.058058023452759
+
+GROUPS: 
+
+['Cupboardopenorclose', 'Cupboardopenorclose_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls']
+
+test labels
+
+['Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose', 'Cupboardopenorclose_controls', 'Cupboardopenorclose_controls', 'Cupboardopenorclose']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5904761904761905 (+/- 0.08702698515474794)
+knn: 0.6662698412698412 (+/- 0.20477267105939503)
+random forest: 0.6912698412698413 (+/- 0.09856618854768269)
+gaussian-nb: 0.7011904761904761 (+/- 0.16548903684290614)
+gradient boosting: 0.7198412698412698 (+/- 0.08969834107178619)
+adaboost: 0.7420634920634921 (+/- 0.1700664210052647)
+hard voting: 0.7734126984126984 (+/- 0.12444383705715072)
+logistic regression: 0.7797619047619048 (+/- 0.1357351696546593)
+
+
+(C) 2018, NeuroLex Laboratories

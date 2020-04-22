@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.675 (+/- 0.1) 
+
+MODEL FILE NAME: 
+
+ Housemusic_Housemusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:41:55.201916
+
+EXECUTION TIME: 
+
+ 2.199873208999634
+
+GROUPS: 
+
+['Housemusic', 'Housemusic_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Housemusic', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls']
+
+test labels
+
+['Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic', 'Housemusic', 'Housemusic_controls', 'Housemusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.45 (+/- 0.06123724356957945)
+sk: 0.575 (+/- 0.15)
+hard voting: 0.5916666666666667 (+/- 0.19436506316151)
+decision-tree: 0.6166666666666667 (+/- 0.24636242498490807)
+gaussian-nb: 0.65 (+/- 0.1224744871391589)
+random forest: 0.65 (+/- 0.09354143466934853)
+gradient boosting: 0.6666666666666667 (+/- 0.2157029850924131)
+knn: 0.6666666666666667 (+/- 0.16029486718059455)
+adaboost: 0.675 (+/- 0.1)
+
+
+(C) 2018, NeuroLex Laboratories

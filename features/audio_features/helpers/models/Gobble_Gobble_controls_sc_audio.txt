@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8206349206349206 (+/- 0.05882660463557592) 
+
+MODEL FILE NAME: 
+
+ Gobble_Gobble_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:07:06.786619
+
+EXECUTION TIME: 
+
+ 2.0461466312408447
+
+GROUPS: 
+
+['Gobble', 'Gobble_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls']
+
+test labels
+
+['Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble', 'Gobble', 'Gobble_controls', 'Gobble', 'Gobble_controls', 'Gobble_controls', 'Gobble']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5166666666666666 (+/- 0.14077852856280462)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.5424603174603175 (+/- 0.11019749100791455)
+knn: 0.6218253968253968 (+/- 0.12422346349965384)
+gaussian-nb: 0.6468253968253969 (+/- 0.09963399889825533)
+gradient boosting: 0.6646825396825395 (+/- 0.12713284941688613)
+adaboost: 0.6968253968253968 (+/- 0.07241818869536755)
+hard voting: 0.7940476190476191 (+/- 0.12483549265636504)
+logistic regression: 0.8206349206349206 (+/- 0.05882660463557592)
+
+
+(C) 2018, NeuroLex Laboratories

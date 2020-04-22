@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8956349206349206 (+/- 0.10501712538359978) 
+
+MODEL FILE NAME: 
+
+ Engineknocking_Engineknocking_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:30:16.414183
+
+EXECUTION TIME: 
+
+ 2.026143789291382
+
+GROUPS: 
+
+['Engineknocking', 'Engineknocking_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls']
+
+test labels
+
+['Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking', 'Engineknocking_controls', 'Engineknocking_controls', 'Engineknocking']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5932539682539681 (+/- 0.07245731838922985)
+adaboost: 0.6726190476190477 (+/- 0.17292665531349943)
+hard voting: 0.7261904761904762 (+/- 0.14080872666730898)
+gradient boosting: 0.7956349206349207 (+/- 0.1328743043286355)
+knn: 0.8011904761904761 (+/- 0.08053111678708459)
+logistic regression: 0.8583333333333332 (+/- 0.13333333333333333)
+gaussian-nb: 0.8670634920634921 (+/- 0.15702456666925377)
+random forest: 0.8956349206349206 (+/- 0.10501712538359978)
+
+
+(C) 2018, NeuroLex Laboratories

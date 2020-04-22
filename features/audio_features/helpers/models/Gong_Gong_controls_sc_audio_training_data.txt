@@ -1,0 +1,8 @@
+train labels
+
+['Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls']
+
+test labels
+
+['Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong', 'Gong', 'Gong_controls', 'Gong_controls', 'Gong_controls', 'Gong', 'Gong_controls', 'Gong', 'Gong', 'Gong_controls', 'Gong_controls']
+

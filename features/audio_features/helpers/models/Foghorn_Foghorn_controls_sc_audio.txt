@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7968253968253968 (+/- 0.1556527069476986) 
+
+MODEL FILE NAME: 
+
+ Foghorn_Foghorn_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:51:00.630882
+
+EXECUTION TIME: 
+
+ 2.0266430377960205
+
+GROUPS: 
+
+['Foghorn', 'Foghorn_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls']
+
+test labels
+
+['Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn_controls', 'Foghorn', 'Foghorn_controls', 'Foghorn', 'Foghorn', 'Foghorn_controls', 'Foghorn_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4920634920634921 (+/- 0.13165994510049348)
+random forest: 0.4984126984126984 (+/- 0.0960809266693432)
+gradient boosting: 0.5206349206349207 (+/- 0.10969620662330792)
+hard voting: 0.5492063492063493 (+/- 0.12237673185648498)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+adaboost: 0.5777777777777778 (+/- 0.13968253968253969)
+gaussian-nb: 0.5841269841269842 (+/- 0.1865737810147951)
+logistic regression: 0.6444444444444445 (+/- 0.06853026395213621)
+knn: 0.7968253968253968 (+/- 0.1556527069476986)
+
+
+(C) 2018, NeuroLex Laboratories

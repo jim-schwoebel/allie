@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7484126984126984 (+/- 0.13840846615052707) 
+
+MODEL FILE NAME: 
+
+ Noise_Noise_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:17:46.027463
+
+EXECUTION TIME: 
+
+ 2.547852039337158
+
+GROUPS: 
+
+['Noise', 'Noise_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls']
+
+test labels
+
+['Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise', 'Noise', 'Noise', 'Noise_controls', 'Noise', 'Noise_controls', 'Noise_controls', 'Noise']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5011904761904761 (+/- 0.13741622886198168)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5904761904761905 (+/- 0.11757421547739416)
+logistic regression: 0.6404761904761904 (+/- 0.1363913769625872)
+gradient boosting: 0.6476190476190476 (+/- 0.1571879444697376)
+random forest: 0.6654761904761906 (+/- 0.0632634774075544)
+adaboost: 0.7261904761904762 (+/- 0.14080872666730898)
+gaussian-nb: 0.7289682539682539 (+/- 0.16533671942013284)
+hard voting: 0.7484126984126984 (+/- 0.13840846615052707)
+
+
+(C) 2018, NeuroLex Laboratories

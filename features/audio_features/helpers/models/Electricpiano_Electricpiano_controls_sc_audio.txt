@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.657936507936508 (+/- 0.10998293461155562) 
+
+MODEL FILE NAME: 
+
+ Electricpiano_Electricpiano_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:17:44.842194
+
+EXECUTION TIME: 
+
+ 2.0786800384521484
+
+GROUPS: 
+
+['Electricpiano', 'Electricpiano_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls']
+
+test labels
+
+['Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano', 'Electricpiano', 'Electricpiano_controls', 'Electricpiano']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5123015873015874 (+/- 0.18888388682185736)
+gaussian-nb: 0.5408730158730158 (+/- 0.13353395715049446)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.5567460317460318 (+/- 0.2177685800269726)
+gradient boosting: 0.5630952380952381 (+/- 0.2120117439950833)
+hard voting: 0.5630952380952381 (+/- 0.2120117439950833)
+knn: 0.598015873015873 (+/- 0.1406106432160763)
+decision-tree: 0.6138888888888888 (+/- 0.1148163387117556)
+logistic regression: 0.657936507936508 (+/- 0.10998293461155562)
+
+
+(C) 2018, NeuroLex Laboratories

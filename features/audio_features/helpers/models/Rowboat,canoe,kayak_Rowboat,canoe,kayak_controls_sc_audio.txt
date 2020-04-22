@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7345238095238096 (+/- 0.12326140371484738) 
+
+MODEL FILE NAME: 
+
+ Rowboat,canoe,kayak_Rowboat,canoe,kayak_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:41:51.008009
+
+EXECUTION TIME: 
+
+ 2.0083038806915283
+
+GROUPS: 
+
+['Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls']
+
+test labels
+
+['Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak', 'Rowboat,canoe,kayak_controls', 'Rowboat,canoe,kayak']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.582936507936508 (+/- 0.14417601082096115)
+hard voting: 0.6043650793650793 (+/- 0.14141467517642292)
+logistic regression: 0.623015873015873 (+/- 0.1172348758901058)
+decision-tree: 0.6238095238095237 (+/- 0.0773717943298663)
+adaboost: 0.6265873015873016 (+/- 0.05897097774050769)
+gradient boosting: 0.6301587301587303 (+/- 0.08717162043013321)
+random forest: 0.7317460317460317 (+/- 0.16268099016278043)
+gaussian-nb: 0.7345238095238096 (+/- 0.12326140371484738)
+
+
+(C) 2018, NeuroLex Laboratories

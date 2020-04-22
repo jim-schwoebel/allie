@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7802889576883385 (+/- 0.11736718289193313) 
+
+MODEL FILE NAME: 
+
+ Keyboard(musical)_Keyboard(musical)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:11:34.163458
+
+EXECUTION TIME: 
+
+ 3.6482040882110596
+
+GROUPS: 
+
+['Keyboard(musical)', 'Keyboard(musical)_controls']
+(138 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)']
+
+test labels
+
+['Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)', 'Keyboard(musical)_controls', 'Keyboard(musical)', 'Keyboard(musical)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.521671826625387 (+/- 0.010902053784308977)
+gaussian-nb: 0.6713794289645683 (+/- 0.11008673004306317)
+decision-tree: 0.6714482284141727 (+/- 0.10249053799742518)
+random forest: 0.6714482284141727 (+/- 0.07792417734575541)
+knn: 0.7203302373581011 (+/- 0.11985507864434697)
+gradient boosting: 0.7270725834193326 (+/- 0.09802113304050669)
+logistic regression: 0.7487100103199175 (+/- 0.09709611016782739)
+adaboost: 0.7679394564843481 (+/- 0.1196294832268031)
+hard voting: 0.7802889576883385 (+/- 0.11736718289193313)
+
+
+(C) 2018, NeuroLex Laboratories

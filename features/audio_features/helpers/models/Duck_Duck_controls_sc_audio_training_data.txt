@@ -1,0 +1,8 @@
+train labels
+
+['Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls']
+
+test labels
+
+['Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck', 'Duck', 'Duck_controls', 'Duck_controls', 'Duck_controls', 'Duck', 'Duck_controls', 'Duck', 'Duck', 'Duck_controls', 'Duck_controls']
+

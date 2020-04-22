@@ -1,0 +1,8 @@
+train labels
+
+['Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls']
+
+test labels
+
+['Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls']
+

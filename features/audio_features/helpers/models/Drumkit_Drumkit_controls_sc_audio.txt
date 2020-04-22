@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8358974358974359 (+/- 0.07471180658632545) 
+
+MODEL FILE NAME: 
+
+ Drumkit_Drumkit_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:10:07.529509
+
+EXECUTION TIME: 
+
+ 2.341437339782715
+
+GROUPS: 
+
+['Drumkit', 'Drumkit_controls']
+(91 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls']
+
+test labels
+
+['Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit_controls', 'Drumkit', 'Drumkit_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5230769230769231 (+/- 0.04615384615384617)
+gradient boosting: 0.7179487179487178 (+/- 0.14707313230461527)
+knn: 0.7371794871794871 (+/- 0.03603453672450052)
+hard voting: 0.7512820512820513 (+/- 0.14099067165509252)
+adaboost: 0.7512820512820514 (+/- 0.10744782994747161)
+gaussian-nb: 0.7846153846153847 (+/- 0.08700963846644696)
+decision-tree: 0.7871794871794872 (+/- 0.08381517501887771)
+random forest: 0.8179487179487179 (+/- 0.1235434534015036)
+logistic regression: 0.8358974358974359 (+/- 0.07471180658632545)
+
+
+(C) 2018, NeuroLex Laboratories

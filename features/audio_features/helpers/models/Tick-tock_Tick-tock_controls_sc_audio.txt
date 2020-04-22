@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.6801587301587302 (+/- 0.1202479172477376) 
+
+MODEL FILE NAME: 
+
+ Tick-tock_Tick-tock_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:30:16.037407
+
+EXECUTION TIME: 
+
+ 2.009718894958496
+
+GROUPS: 
+
+['Tick-tock', 'Tick-tock_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls']
+
+test labels
+
+['Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock', 'Tick-tock', 'Tick-tock_controls', 'Tick-tock']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5027777777777778 (+/- 0.07995416298343987)
+logistic regression: 0.519047619047619 (+/- 0.20546820476551625)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+random forest: 0.6035714285714284 (+/- 0.1747852585926948)
+gradient boosting: 0.6043650793650794 (+/- 0.15305118804753332)
+adaboost: 0.6293650793650795 (+/- 0.11018891677338796)
+gaussian-nb: 0.648015873015873 (+/- 0.1503104203778795)
+decision-tree: 0.6801587301587302 (+/- 0.1128994406481478)
+hard voting: 0.6801587301587302 (+/- 0.1202479172477376)
+
+
+(C) 2018, NeuroLex Laboratories

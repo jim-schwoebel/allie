@@ -1,0 +1,8 @@
+train labels
+
+['Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls']
+
+test labels
+
+['Grunt', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt_controls', 'Grunt_controls', 'Grunt_controls', 'Grunt', 'Grunt', 'Grunt', 'Grunt', 'Grunt', 'Grunt_controls', 'Grunt_controls']
+

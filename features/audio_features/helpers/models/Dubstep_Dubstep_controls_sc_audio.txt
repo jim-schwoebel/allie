@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8412698412698413 (+/- 0.09576573415237051) 
+
+MODEL FILE NAME: 
+
+ Dubstep_Dubstep_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:12:44.458731
+
+EXECUTION TIME: 
+
+ 2.015150785446167
+
+GROUPS: 
+
+['Dubstep', 'Dubstep_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls']
+
+test labels
+
+['Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+gaussian-nb: 0.6190476190476191 (+/- 0.10858813572372744)
+decision-tree: 0.6603174603174603 (+/- 0.22905592390536442)
+gradient boosting: 0.6603174603174603 (+/- 0.2104836121174702)
+adaboost: 0.7174603174603175 (+/- 0.19759195326470394)
+random forest: 0.7238095238095238 (+/- 0.22213150075601143)
+knn: 0.7333333333333334 (+/- 0.0645936188869073)
+hard voting: 0.8031746031746032 (+/- 0.18770470475040615)
+logistic regression: 0.8412698412698413 (+/- 0.09576573415237051)
+
+
+(C) 2018, NeuroLex Laboratories

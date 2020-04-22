@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7222222222222222 (+/- 0.13522957160708982) 
+
+MODEL FILE NAME: 
+
+ Quack_Quack_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:15:12.273373
+
+EXECUTION TIME: 
+
+ 2.110785961151123
+
+GROUPS: 
+
+['Quack', 'Quack_controls']
+(65 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls']
+
+test labels
+
+['Quack', 'Quack', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack', 'Quack', 'Quack', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls', 'Quack_controls', 'Quack', 'Quack_controls', 'Quack', 'Quack', 'Quack_controls', 'Quack_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.48888888888888893 (+/- 0.1625415426480866)
+sk: 0.5333333333333334 (+/- 0.027216552697590882)
+hard voting: 0.5805555555555555 (+/- 0.058531409738070764)
+gradient boosting: 0.5833333333333334 (+/- 0.07807482956975109)
+knn: 0.6055555555555555 (+/- 0.0435677420593281)
+logistic regression: 0.6083333333333334 (+/- 0.07576767609436585)
+adaboost: 0.6944444444444444 (+/- 0.06972166887783965)
+random forest: 0.7 (+/- 0.1133796201775475)
+gaussian-nb: 0.7222222222222222 (+/- 0.13522957160708982)
+
+
+(C) 2018, NeuroLex Laboratories

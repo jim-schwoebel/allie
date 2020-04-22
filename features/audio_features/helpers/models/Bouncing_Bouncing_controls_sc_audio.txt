@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8603174603174603 (+/- 0.1629286021632551) 
+
+MODEL FILE NAME: 
+
+ Bouncing_Bouncing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:09:15.021417
+
+EXECUTION TIME: 
+
+ 2.372804880142212
+
+GROUPS: 
+
+['Bouncing', 'Bouncing_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls']
+
+test labels
+
+['Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing_controls', 'Bouncing', 'Bouncing_controls', 'Bouncing', 'Bouncing', 'Bouncing_controls', 'Bouncing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4 (+/- 0.10306465448093922)
+adaboost: 0.5079365079365079 (+/- 0.28518469436794547)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gradient boosting: 0.5809523809523809 (+/- 0.27631816059668496)
+gaussian-nb: 0.6031746031746031 (+/- 0.2146088099194358)
+hard voting: 0.6158730158730159 (+/- 0.25739748318253314)
+random forest: 0.638095238095238 (+/- 0.13997084244475302)
+knn: 0.7968253968253969 (+/- 0.12674580811223574)
+logistic regression: 0.8603174603174603 (+/- 0.1629286021632551)
+
+
+(C) 2018, NeuroLex Laboratories

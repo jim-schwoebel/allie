@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7083333333333333 (+/- 0.0950146187582615) 
+
+MODEL FILE NAME: 
+
+ Telephone_Telephone_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:18:10.064805
+
+EXECUTION TIME: 
+
+ 1.9997131824493408
+
+GROUPS: 
+
+['Telephone', 'Telephone_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Telephone', 'Telephone', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls']
+
+test labels
+
+['Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone', 'Telephone', 'Telephone_controls', 'Telephone_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.525 (+/- 0.09354143466934853)
+sk: 0.525 (+/- 0.09354143466934853)
+gradient boosting: 0.5666666666666667 (+/- 0.14092945437739804)
+knn: 0.6 (+/- 0.1457737973711325)
+logistic regression: 0.6083333333333333 (+/- 0.20172864061517004)
+adaboost: 0.625 (+/- 0.11180339887498948)
+hard voting: 0.625 (+/- 0.11180339887498948)
+random forest: 0.65 (+/- 0.09354143466934853)
+gaussian-nb: 0.7083333333333333 (+/- 0.0950146187582615)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6202020202020202 (+/- 0.19362348007281188) 
+
+MODEL FILE NAME: 
+
+ Horse_Horse_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:41:04.941321
+
+EXECUTION TIME: 
+
+ 2.2055749893188477
+
+GROUPS: 
+
+['Horse', 'Horse_controls']
+(76 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls']
+
+test labels
+
+['Horse', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls', 'Horse', 'Horse', 'Horse_controls', 'Horse_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.39595959595959596 (+/- 0.08065642334415003)
+logistic regression: 0.4141414141414142 (+/- 0.07085122390606134)
+hard voting: 0.44646464646464656 (+/- 0.13314955194572994)
+adaboost: 0.4686868686868687 (+/- 0.20268577230196377)
+knn: 0.501010101010101 (+/- 0.10352426646722389)
+gradient boosting: 0.5131313131313131 (+/- 0.094410678347862)
+random forest: 0.5131313131313131 (+/- 0.11769302354448086)
+sk: 0.5494949494949495 (+/- 0.004948464126834735)
+gaussian-nb: 0.6202020202020202 (+/- 0.19362348007281188)
+
+
+(C) 2018, NeuroLex Laboratories

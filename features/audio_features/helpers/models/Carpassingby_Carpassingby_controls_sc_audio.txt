@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7547619047619047 (+/- 0.19374103413938368) 
+
+MODEL FILE NAME: 
+
+ Carpassingby_Carpassingby_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:37:49.364839
+
+EXECUTION TIME: 
+
+ 2.32686185836792
+
+GROUPS: 
+
+['Carpassingby', 'Carpassingby_controls']
+(61 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls']
+
+test labels
+
+['Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby', 'Carpassingby_controls', 'Carpassingby_controls', 'Carpassingby']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+decision-tree: 0.6158730158730159 (+/- 0.2188289683975294)
+adaboost: 0.638095238095238 (+/- 0.1324802642213672)
+logistic regression: 0.6492063492063492 (+/- 0.18902972607338825)
+knn: 0.680952380952381 (+/- 0.12480395309035322)
+hard voting: 0.713095238095238 (+/- 0.08268454930564446)
+gradient boosting: 0.7353174603174604 (+/- 0.1706607584719971)
+gaussian-nb: 0.751984126984127 (+/- 0.19527680607326062)
+random forest: 0.7547619047619047 (+/- 0.19374103413938368)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7387878787878788 (+/- 0.08806458936954427) 
+
+MODEL FILE NAME: 
+
+ Piano_Piano_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:37:15.578520
+
+EXECUTION TIME: 
+
+ 2.4695792198181152
+
+GROUPS: 
+
+['Piano', 'Piano_controls']
+(83 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls']
+
+test labels
+
+['Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano', 'Piano_controls', 'Piano_controls', 'Piano_controls', 'Piano', 'Piano', 'Piano_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.509090909090909 (+/- 0.018181818181818167)
+random forest: 0.5821212121212122 (+/- 0.08351990134709492)
+gaussian-nb: 0.5872727272727272 (+/- 0.16697382165064306)
+knn: 0.633939393939394 (+/- 0.06056513769900586)
+gradient boosting: 0.653939393939394 (+/- 0.06253447166902253)
+decision-tree: 0.6857575757575758 (+/- 0.12722076861480655)
+hard voting: 0.7221212121212122 (+/- 0.0755974064397874)
+logistic regression: 0.7324242424242424 (+/- 0.1498257328684509)
+adaboost: 0.7387878787878788 (+/- 0.08806458936954427)
+
+
+(C) 2018, NeuroLex Laboratories

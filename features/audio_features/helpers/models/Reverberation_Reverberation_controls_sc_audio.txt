@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7126984126984126 (+/- 0.07345451404550216) 
+
+MODEL FILE NAME: 
+
+ Reverberation_Reverberation_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:32:07.483552
+
+EXECUTION TIME: 
+
+ 2.028568983078003
+
+GROUPS: 
+
+['Reverberation', 'Reverberation_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls']
+
+test labels
+
+['Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation', 'Reverberation', 'Reverberation_controls', 'Reverberation', 'Reverberation_controls', 'Reverberation_controls', 'Reverberation']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5111111111111111 (+/- 0.0503452429433451)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.5591269841269841 (+/- 0.15895024424684767)
+logistic regression: 0.6218253968253968 (+/- 0.12422346349965384)
+knn: 0.6369047619047619 (+/- 0.11243541860111995)
+gaussian-nb: 0.6432539682539682 (+/- 0.0769718530552656)
+adaboost: 0.659126984126984 (+/- 0.08818456789378318)
+gradient boosting: 0.7126984126984126 (+/- 0.07345451404550216)
+hard voting: 0.7126984126984126 (+/- 0.07345451404550216)
+
+
+(C) 2018, NeuroLex Laboratories

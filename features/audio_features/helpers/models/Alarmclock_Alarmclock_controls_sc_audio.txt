@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8384920634920634 (+/- 0.14256804963956593) 
+
+MODEL FILE NAME: 
+
+ Alarmclock_Alarmclock_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:12:55.054705
+
+EXECUTION TIME: 
+
+ 2.2307441234588623
+
+GROUPS: 
+
+['Alarmclock', 'Alarmclock_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls']
+
+test labels
+
+['Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock', 'Alarmclock_controls', 'Alarmclock_controls', 'Alarmclock']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5575396825396826 (+/- 0.15210374918621467)
+gradient boosting: 0.5734126984126984 (+/- 0.1893984057743131)
+random forest: 0.6019841269841268 (+/- 0.1756713358558266)
+adaboost: 0.6333333333333333 (+/- 0.14515024665603704)
+gaussian-nb: 0.6563492063492063 (+/- 0.1491841844394816)
+hard voting: 0.6805555555555555 (+/- 0.15967969955503863)
+knn: 0.778968253968254 (+/- 0.15034184613043966)
+logistic regression: 0.8384920634920634 (+/- 0.14256804963956593)
+
+
+(C) 2018, NeuroLex Laboratories

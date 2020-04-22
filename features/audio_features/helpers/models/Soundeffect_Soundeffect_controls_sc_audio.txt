@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7353174603174604 (+/- 0.2210841036845264) 
+
+MODEL FILE NAME: 
+
+ Soundeffect_Soundeffect_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:39:46.296835
+
+EXECUTION TIME: 
+
+ 2.0042741298675537
+
+GROUPS: 
+
+['Soundeffect', 'Soundeffect_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls']
+
+test labels
+
+['Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect', 'Soundeffect_controls', 'Soundeffect_controls', 'Soundeffect']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5388888888888889 (+/- 0.15402040517535479)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5611111111111111 (+/- 0.07192727143381243)
+gradient boosting: 0.5968253968253968 (+/- 0.2068157119880394)
+adaboost: 0.6246031746031746 (+/- 0.12632766826077169)
+gaussian-nb: 0.6432539682539682 (+/- 0.14916835044675628)
+hard voting: 0.669047619047619 (+/- 0.12652695481510878)
+logistic regression: 0.7198412698412698 (+/- 0.08969834107178619)
+knn: 0.7353174603174604 (+/- 0.2210841036845264)
+
+
+(C) 2018, NeuroLex Laboratories

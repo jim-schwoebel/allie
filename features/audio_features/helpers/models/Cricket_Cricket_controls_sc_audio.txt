@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7880952380952382 (+/- 0.036161224602839714) 
+
+MODEL FILE NAME: 
+
+ Cricket_Cricket_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:32:05.484639
+
+EXECUTION TIME: 
+
+ 2.120496988296509
+
+GROUPS: 
+
+['Cricket', 'Cricket_controls']
+(63 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls']
+
+test labels
+
+['Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket_controls', 'Cricket', 'Cricket_controls', 'Cricket', 'Cricket', 'Cricket', 'Cricket_controls', 'Cricket']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5726190476190476 (+/- 0.026902303582029028)
+random forest: 0.5789682539682539 (+/- 0.08901988646614278)
+decision-tree: 0.651984126984127 (+/- 0.14900569080800935)
+gaussian-nb: 0.6714285714285715 (+/- 0.11308897225750396)
+adaboost: 0.6900793650793651 (+/- 0.05217009025252317)
+knn: 0.7150793650793651 (+/- 0.04435932892851469)
+gradient boosting: 0.7214285714285714 (+/- 0.10288114554348445)
+hard voting: 0.7345238095238096 (+/- 0.06002959713444661)
+logistic regression: 0.7880952380952382 (+/- 0.036161224602839714)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8634920634920634 (+/- 0.09123878008380898) 
+
+MODEL FILE NAME: 
+
+ Groan_Groan_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:10:38.493669
+
+EXECUTION TIME: 
+
+ 2.1685569286346436
+
+GROUPS: 
+
+['Groan', 'Groan_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls']
+
+test labels
+
+['Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+decision-tree: 0.6095238095238095 (+/- 0.19610724078070477)
+gaussian-nb: 0.7777777777777779 (+/- 0.11962821385026522)
+gradient boosting: 0.8 (+/- 0.1456862718169367)
+logistic regression: 0.8 (+/- 0.1456862718169367)
+knn: 0.8 (+/- 0.1456862718169367)
+hard voting: 0.8571428571428571 (+/- 0.0903507902905251)
+random forest: 0.8571428571428571 (+/- 0.12777531299998796)
+adaboost: 0.8634920634920634 (+/- 0.09123878008380898)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7272222222222222 (+/- 0.12237868772738389) 
+
+MODEL FILE NAME: 
+
+ Rockmusic_Rockmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:39:17.626879
+
+EXECUTION TIME: 
+
+ 2.1035242080688477
+
+GROUPS: 
+
+['Rockmusic', 'Rockmusic_controls']
+(67 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls']
+
+test labels
+
+['Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls', 'Rockmusic_controls', 'Rockmusic', 'Rockmusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.44666666666666666 (+/- 0.07710822921287766)
+sk: 0.5561111111111111 (+/- 0.06187402574367047)
+adaboost: 0.5755555555555556 (+/- 0.11383331977658398)
+gaussian-nb: 0.6005555555555555 (+/- 0.08210953238596586)
+gradient boosting: 0.6005555555555555 (+/- 0.08210953238596586)
+hard voting: 0.6027777777777776 (+/- 0.11902380714238084)
+logistic regression: 0.6083333333333334 (+/- 0.18181186857726192)
+decision-tree: 0.6472222222222221 (+/- 0.08940820521906155)
+knn: 0.7272222222222222 (+/- 0.12237868772738389)
+
+
+(C) 2018, NeuroLex Laboratories

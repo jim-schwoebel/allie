@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8234126984126984 (+/- 0.12239989147917732) 
+
+MODEL FILE NAME: 
+
+ Fusillade_Fusillade_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:59:36.224689
+
+EXECUTION TIME: 
+
+ 2.0428078174591064
+
+GROUPS: 
+
+['Fusillade', 'Fusillade_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls']
+
+test labels
+
+['Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade', 'Fusillade', 'Fusillade_controls', 'Fusillade', 'Fusillade_controls', 'Fusillade_controls', 'Fusillade']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5896825396825396 (+/- 0.18446790414421702)
+adaboost: 0.6976190476190476 (+/- 0.08629104892581009)
+knn: 0.7162698412698413 (+/- 0.051495645071455036)
+gradient boosting: 0.7198412698412698 (+/- 0.11956501323978717)
+gaussian-nb: 0.7440476190476191 (+/- 0.07063046178186345)
+logistic regression: 0.7956349206349207 (+/- 0.1328743043286355)
+hard voting: 0.7984126984126985 (+/- 0.049013960814744455)
+random forest: 0.8234126984126984 (+/- 0.12239989147917732)
+
+
+(C) 2018, NeuroLex Laboratories

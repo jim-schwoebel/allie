@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6664332399626517 (+/- 0.08412577164657657) 
+
+MODEL FILE NAME: 
+
+ Water_Water_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:16:22.255672
+
+EXECUTION TIME: 
+
+ 4.142629146575928
+
+GROUPS: 
+
+['Water', 'Water_controls']
+(263 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water']
+
+test labels
+
+['Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water', 'Water', 'Water_controls', 'Water_controls', 'Water', 'Water_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5230345471521941 (+/- 0.007168266140048247)
+logistic regression: 0.5931279178338003 (+/- 0.07390836735579036)
+random forest: 0.6267600373482727 (+/- 0.07369559511080417)
+gaussian-nb: 0.6328011204481793 (+/- 0.09036357258158689)
+decision-tree: 0.6331279178338003 (+/- 0.057178284301273835)
+adaboost: 0.6497945845004669 (+/- 0.03407566319214593)
+gradient boosting: 0.6614005602240896 (+/- 0.045962759122673454)
+hard voting: 0.6615686274509803 (+/- 0.06077292745979769)
+knn: 0.6664332399626517 (+/- 0.08412577164657657)
+
+
+(C) 2018, NeuroLex Laboratories

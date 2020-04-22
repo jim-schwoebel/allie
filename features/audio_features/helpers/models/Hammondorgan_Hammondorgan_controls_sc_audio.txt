@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7911111111111111 (+/- 0.1451095797094623) 
+
+MODEL FILE NAME: 
+
+ Hammondorgan_Hammondorgan_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:24:52.997362
+
+EXECUTION TIME: 
+
+ 2.655592918395996
+
+GROUPS: 
+
+['Hammondorgan', 'Hammondorgan_controls']
+(69 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls']
+
+test labels
+
+['Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan', 'Hammondorgan_controls', 'Hammondorgan_controls', 'Hammondorgan']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5222222222222223 (+/- 0.027216552697590882)
+random forest: 0.6505555555555556 (+/- 0.28506226307100085)
+gradient boosting: 0.7016666666666668 (+/- 0.14664562138572343)
+logistic regression: 0.7216666666666666 (+/- 0.10049875621120892)
+gaussian-nb: 0.7233333333333333 (+/- 0.12767628819753976)
+knn: 0.7388888888888888 (+/- 0.049190985824841486)
+decision-tree: 0.7416666666666666 (+/- 0.10849702732458436)
+adaboost: 0.7466666666666667 (+/- 0.15876063199548224)
+hard voting: 0.7911111111111111 (+/- 0.1451095797094623)
+
+
+(C) 2018, NeuroLex Laboratories

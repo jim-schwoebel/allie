@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7559523809523809 (+/- 0.0917516612761795) 
+
+MODEL FILE NAME: 
+
+ Policecar(siren)_Policecar(siren)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:48:14.195022
+
+EXECUTION TIME: 
+
+ 2.0504770278930664
+
+GROUPS: 
+
+['Policecar(siren)', 'Policecar(siren)_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls']
+
+test labels
+
+['Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)', 'Policecar(siren)', 'Policecar(siren)_controls', 'Policecar(siren)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.3984126984126984 (+/- 0.14961106879934194)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.5757936507936507 (+/- 0.09390938203000672)
+random forest: 0.5757936507936507 (+/- 0.11729127690581266)
+gradient boosting: 0.632936507936508 (+/- 0.0999653505100398)
+adaboost: 0.6551587301587303 (+/- 0.059924576765119586)
+hard voting: 0.6551587301587303 (+/- 0.059924576765119586)
+gaussian-nb: 0.657936507936508 (+/- 0.08460481251578685)
+logistic regression: 0.7559523809523809 (+/- 0.0917516612761795)
+
+
+(C) 2018, NeuroLex Laboratories

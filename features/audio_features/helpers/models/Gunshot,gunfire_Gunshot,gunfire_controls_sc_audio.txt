@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7364577451533973 (+/- 0.09819117564665901) 
+
+MODEL FILE NAME: 
+
+ Gunshot,gunfire_Gunshot,gunfire_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:20:28.320565
+
+EXECUTION TIME: 
+
+ 4.192389965057373
+
+GROUPS: 
+
+['Gunshot,gunfire', 'Gunshot,gunfire_controls']
+(167 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire']
+
+test labels
+
+['Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire_controls', 'Gunshot,gunfire_controls', 'Gunshot,gunfire', 'Gunshot,gunfire', 'Gunshot,gunfire']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5039337474120084 (+/- 0.01693931028495467)
+random forest: 0.5572934312064747 (+/- 0.07263434181201021)
+decision-tree: 0.5838509316770187 (+/- 0.09789049564539438)
+logistic regression: 0.6574063617541878 (+/- 0.036052024728735324)
+knn: 0.6652362130623 (+/- 0.08998665351922427)
+gaussian-nb: 0.6735742518351213 (+/- 0.09905116387259086)
+adaboost: 0.7000188217579522 (+/- 0.09488762233643246)
+gradient boosting: 0.700489365706757 (+/- 0.0855871838749811)
+hard voting: 0.7364577451533973 (+/- 0.09819117564665901)
+
+
+(C) 2018, NeuroLex Laboratories

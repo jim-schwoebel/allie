@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7281746031746033 (+/- 0.12891635097223691) 
+
+MODEL FILE NAME: 
+
+ Pigeon,dove_Pigeon,dove_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:38:54.539214
+
+EXECUTION TIME: 
+
+ 2.0473642349243164
+
+GROUPS: 
+
+['Pigeon,dove', 'Pigeon,dove_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls']
+
+test labels
+
+['Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove', 'Pigeon,dove', 'Pigeon,dove_controls', 'Pigeon,dove']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.3861111111111111 (+/- 0.15185300406988703)
+gradient boosting: 0.525 (+/- 0.12510766338494905)
+random forest: 0.5444444444444445 (+/- 0.07898320828333161)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.5801587301587302 (+/- 0.17497075305401255)
+knn: 0.6015873015873016 (+/- 0.12622790699727648)
+gaussian-nb: 0.632936507936508 (+/- 0.11496984388864448)
+hard voting: 0.632936507936508 (+/- 0.0999653505100398)
+logistic regression: 0.7281746031746033 (+/- 0.12891635097223691)
+
+
+(C) 2018, NeuroLex Laboratories

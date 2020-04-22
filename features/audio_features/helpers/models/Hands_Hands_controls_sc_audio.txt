@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7666666666666667 (+/- 0.08579691784155835) 
+
+MODEL FILE NAME: 
+
+ Hands_Hands_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:25:42.397747
+
+EXECUTION TIME: 
+
+ 2.0148229598999023
+
+GROUPS: 
+
+['Hands', 'Hands_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls']
+
+test labels
+
+['Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5166666666666667 (+/- 0.16791201399674904)
+sk: 0.5583333333333333 (+/- 0.13333333333333333)
+gradient boosting: 0.5916666666666667 (+/- 0.1301708279317776)
+hard voting: 0.625 (+/- 0.25)
+logistic regression: 0.675 (+/- 0.203100960115899)
+random forest: 0.675 (+/- 0.1695582495781317)
+adaboost: 0.7 (+/- 0.203100960115899)
+gaussian-nb: 0.75 (+/- 0.1767766952966369)
+knn: 0.7666666666666667 (+/- 0.08579691784155835)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7178571428571429 (+/- 0.16536909861128893) 
+
+MODEL FILE NAME: 
+
+ Chatter_Chatter_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:48:42.218305
+
+EXECUTION TIME: 
+
+ 2.254194974899292
+
+GROUPS: 
+
+['Chatter', 'Chatter_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls']
+
+test labels
+
+['Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.4440476190476191 (+/- 0.19447440650270795)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+random forest: 0.6011904761904762 (+/- 0.08731962295662975)
+hard voting: 0.6059523809523809 (+/- 0.1462590966607174)
+gradient boosting: 0.6309523809523809 (+/- 0.15762012659679608)
+gaussian-nb: 0.6714285714285715 (+/- 0.16544621174143528)
+logistic regression: 0.6761904761904762 (+/- 0.1656687813823611)
+decision-tree: 0.6892857142857143 (+/- 0.17554579610635013)
+knn: 0.7178571428571429 (+/- 0.16536909861128893)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7236363636363636 (+/- 0.1265404619937016) 
+
+MODEL FILE NAME: 
+
+ Watertap,faucet_Watertap,faucet_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:18:25.380604
+
+EXECUTION TIME: 
+
+ 2.4392449855804443
+
+GROUPS: 
+
+['Watertap,faucet', 'Watertap,faucet_controls']
+(83 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls']
+
+test labels
+
+['Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet_controls', 'Watertap,faucet', 'Watertap,faucet', 'Watertap,faucet_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.4909090909090909 (+/- 0.018181818181818188)
+decision-tree: 0.5272727272727272 (+/- 0.09875719917731579)
+gradient boosting: 0.6054545454545455 (+/- 0.13118657460034508)
+gaussian-nb: 0.6254545454545455 (+/- 0.14694126560360804)
+random forest: 0.6557575757575758 (+/- 0.10020823131613395)
+logistic regression: 0.6606060606060605 (+/- 0.09736661191918283)
+knn: 0.6872727272727273 (+/- 0.06039812815226579)
+hard voting: 0.6921212121212121 (+/- 0.06731366485776885)
+adaboost: 0.7236363636363636 (+/- 0.1265404619937016)
+
+
+(C) 2018, NeuroLex Laboratories

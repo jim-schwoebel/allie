@@ -1,0 +1,8 @@
+train labels
+
+['Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls']
+
+test labels
+
+['Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls']
+

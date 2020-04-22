@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8269841269841269 (+/- 0.10166322807463274) 
+
+MODEL FILE NAME: 
+
+ Choir_Choir_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:02:51.966263
+
+EXECUTION TIME: 
+
+ 2.569039821624756
+
+GROUPS: 
+
+['Choir', 'Choir_controls']
+(62 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls']
+
+test labels
+
+['Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+decision-tree: 0.6186507936507937 (+/- 0.12566527423637763)
+logistic regression: 0.644047619047619 (+/- 0.22682867359646772)
+gradient boosting: 0.7075396825396825 (+/- 0.14616755244842444)
+random forest: 0.7226190476190476 (+/- 0.11298309672748631)
+knn: 0.7289682539682539 (+/- 0.056977273319992285)
+gaussian-nb: 0.744047619047619 (+/- 0.20066185523445287)
+hard voting: 0.8019841269841269 (+/- 0.12398745862666684)
+adaboost: 0.8269841269841269 (+/- 0.10166322807463274)
+
+
+(C) 2018, NeuroLex Laboratories

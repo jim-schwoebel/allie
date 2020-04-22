@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7182539682539681 (+/- 0.16491903080632095) 
+
+MODEL FILE NAME: 
+
+ Steelguitar,slideguitar_Steelguitar,slideguitar_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:03:43.264584
+
+EXECUTION TIME: 
+
+ 1.9932119846343994
+
+GROUPS: 
+
+['Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls']
+
+test labels
+
+['Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar', 'Steelguitar,slideguitar_controls', 'Steelguitar,slideguitar']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4837301587301587 (+/- 0.18858352000141734)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.573015873015873 (+/- 0.10509806576029745)
+gradient boosting: 0.5980158730158729 (+/- 0.041611830885455)
+knn: 0.6015873015873016 (+/- 0.12622790699727648)
+hard voting: 0.6238095238095239 (+/- 0.1045211278295513)
+logistic regression: 0.6996031746031747 (+/- 0.1437997999445644)
+random forest: 0.7023809523809523 (+/- 0.03194382824999702)
+gaussian-nb: 0.7182539682539681 (+/- 0.16491903080632095)
+
+
+(C) 2018, NeuroLex Laboratories

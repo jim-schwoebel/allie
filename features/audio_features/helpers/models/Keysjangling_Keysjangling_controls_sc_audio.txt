@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.6666666666666667 (+/- 0.0875177698545411) 
+
+MODEL FILE NAME: 
+
+ Keysjangling_Keysjangling_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:12:24.954175
+
+EXECUTION TIME: 
+
+ 2.2363500595092773
+
+GROUPS: 
+
+['Keysjangling', 'Keysjangling_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls']
+
+test labels
+
+['Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling', 'Keysjangling', 'Keysjangling_controls', 'Keysjangling_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4349206349206349 (+/- 0.1147257841243978)
+gaussian-nb: 0.48571428571428577 (+/- 0.06396648152257108)
+knn: 0.4984126984126984 (+/- 0.0960809266693432)
+gradient boosting: 0.5079365079365079 (+/- 0.06506000486323556)
+hard voting: 0.5587301587301587 (+/- 0.07605808603625994)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.6317460317460316 (+/- 0.1572630612888995)
+logistic regression: 0.6444444444444445 (+/- 0.06853026395213621)
+adaboost: 0.6666666666666667 (+/- 0.0875177698545411)
+
+
+(C) 2018, NeuroLex Laboratories

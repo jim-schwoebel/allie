@@ -1,0 +1,8 @@
+train labels
+
+['Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell', 'Bell', 'Bell', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls']
+
+test labels
+
+['Bell', 'Bell', 'Bell', 'Bell', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell', 'Bell', 'Bell', 'Bell_controls', 'Bell_controls', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell_controls', 'Bell', 'Bell', 'Bell_controls', 'Bell']
+

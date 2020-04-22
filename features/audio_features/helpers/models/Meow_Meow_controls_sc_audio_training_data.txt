@@ -1,0 +1,8 @@
+train labels
+
+['Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls']
+
+test labels
+
+['Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow', 'Meow', 'Meow_controls', 'Meow_controls', 'Meow_controls', 'Meow', 'Meow_controls', 'Meow', 'Meow', 'Meow_controls', 'Meow_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8630952380952381 (+/- 0.08074202360863414) 
+
+MODEL FILE NAME: 
+
+ Bellylaugh_Bellylaugh_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:49:34.932967
+
+EXECUTION TIME: 
+
+ 1.7677619457244873
+
+GROUPS: 
+
+['Bellylaugh', 'Bellylaugh_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls']
+
+test labels
+
+['Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh', 'Bellylaugh', 'Bellylaugh_controls', 'Bellylaugh_controls', 'Bellylaugh']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.6 (+/- 0.2)
+logistic regression: 0.6428571428571429 (+/- 0.08674969858207943)
+knn: 0.7297619047619047 (+/- 0.13747809555478144)
+decision-tree: 0.8333333333333334 (+/- 0.1148670729340852)
+gaussian-nb: 0.8333333333333334 (+/- 0.13944333775567927)
+adaboost: 0.8333333333333334 (+/- 0.13944333775567927)
+hard voting: 0.8333333333333334 (+/- 0.13944333775567927)
+gradient boosting: 0.8583333333333334 (+/- 0.13333333333333336)
+random forest: 0.8630952380952381 (+/- 0.08074202360863414)
+
+
+(C) 2018, NeuroLex Laboratories

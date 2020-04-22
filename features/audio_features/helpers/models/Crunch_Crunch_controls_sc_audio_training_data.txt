@@ -1,0 +1,8 @@
+train labels
+
+['Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls']
+
+test labels
+
+['Crunch', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch_controls', 'Crunch_controls', 'Crunch_controls', 'Crunch', 'Crunch', 'Crunch', 'Crunch', 'Crunch', 'Crunch_controls', 'Crunch_controls']
+

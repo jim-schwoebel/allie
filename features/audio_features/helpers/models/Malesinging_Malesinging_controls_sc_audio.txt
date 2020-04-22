@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7753968253968254 (+/- 0.08457502733179185) 
+
+MODEL FILE NAME: 
+
+ Malesinging_Malesinging_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:22:28.735997
+
+EXECUTION TIME: 
+
+ 2.053896903991699
+
+GROUPS: 
+
+['Malesinging', 'Malesinging_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls']
+
+test labels
+
+['Malesinging', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging_controls', 'Malesinging', 'Malesinging', 'Malesinging_controls', 'Malesinging']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5285714285714286 (+/- 0.14317425122259914)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.5785714285714285 (+/- 0.1395652465690747)
+hard voting: 0.584920634920635 (+/- 0.14719173517389536)
+logistic regression: 0.6103174603174603 (+/- 0.152834971772248)
+gradient boosting: 0.6142857142857143 (+/- 0.15121911573097846)
+random forest: 0.648809523809524 (+/- 0.08505404148119718)
+gaussian-nb: 0.7246031746031747 (+/- 0.03752885846837109)
+knn: 0.7753968253968254 (+/- 0.08457502733179185)
+
+
+(C) 2018, NeuroLex Laboratories

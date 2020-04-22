@@ -1,0 +1,8 @@
+train labels
+
+['Ska', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska', 'Ska_controls']
+
+test labels
+
+['Ska', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska_controls', 'Ska_controls', 'Ska_controls', 'Ska', 'Ska', 'Ska', 'Ska', 'Ska', 'Ska_controls', 'Ska_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.711111111111111 (+/- 0.10306465448093922) 
+
+MODEL FILE NAME: 
+
+ Powerwindows,electricwindows_Powerwindows,electricwindows_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:04:31.561803
+
+EXECUTION TIME: 
+
+ 2.0288679599761963
+
+GROUPS: 
+
+['Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls']
+
+test labels
+
+['Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows', 'Powerwindows,electricwindows_controls', 'Powerwindows,electricwindows_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5523809523809523 (+/- 0.10690449676496974)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6031746031746031 (+/- 0.27511192435927995)
+adaboost: 0.6317460317460317 (+/- 0.12188161155842837)
+gradient boosting: 0.6380952380952382 (+/- 0.15662090645770171)
+hard voting: 0.6603174603174603 (+/- 0.0806873969977069)
+gaussian-nb: 0.6761904761904761 (+/- 0.13303064660163152)
+knn: 0.6888888888888889 (+/- 0.11340045142534447)
+logistic regression: 0.711111111111111 (+/- 0.10306465448093922)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Biting', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting', 'Biting_controls']
+
+test labels
+
+['Biting', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting_controls', 'Biting_controls', 'Biting_controls', 'Biting', 'Biting', 'Biting', 'Biting', 'Biting', 'Biting_controls', 'Biting_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.6349206349206349 (+/- 0.23414716082013684) 
+
+MODEL FILE NAME: 
+
+ Radio_Radio_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:17:48.267232
+
+EXECUTION TIME: 
+
+ 2.0521810054779053
+
+GROUPS: 
+
+['Radio', 'Radio_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls']
+
+test labels
+
+['Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.48571428571428577 (+/- 0.06396648152257108)
+hard voting: 0.5079365079365079 (+/- 0.0957657341523705)
+adaboost: 0.5365079365079366 (+/- 0.08888888888888888)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.5714285714285714 (+/- 0.13127665478181164)
+knn: 0.603174603174603 (+/- 0.11577512716705061)
+gradient boosting: 0.6222222222222223 (+/- 0.1594902436454663)
+gaussian-nb: 0.6285714285714287 (+/- 0.1428924118720876)
+decision-tree: 0.6349206349206349 (+/- 0.23414716082013684)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls']
+
+test labels
+
+['Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls']
+

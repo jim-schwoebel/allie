@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7777777777777778 (+/- 0.19697894676175962) 
+
+MODEL FILE NAME: 
+
+ Telephonebellringing_Telephonebellringing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:18:58.706861
+
+EXECUTION TIME: 
+
+ 1.9757459163665771
+
+GROUPS: 
+
+['Telephonebellringing', 'Telephonebellringing_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls']
+
+test labels
+
+['Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing_controls', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing', 'Telephonebellringing_controls', 'Telephonebellringing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.6253968253968254 (+/- 0.1948182348262382)
+knn: 0.6603174603174604 (+/- 0.14076063033266897)
+random forest: 0.6984126984126984 (+/- 0.19310357239041967)
+gradient boosting: 0.7333333333333333 (+/- 0.11106575037800571)
+adaboost: 0.7492063492063492 (+/- 0.11419749681653935)
+hard voting: 0.7555555555555555 (+/- 0.18930859067778508)
+decision-tree: 0.7619047619047619 (+/- 0.15058465048420855)
+gaussian-nb: 0.7777777777777778 (+/- 0.19697894676175962)
+
+
+(C) 2018, NeuroLex Laboratories

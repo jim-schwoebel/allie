@@ -1,0 +1,8 @@
+train labels
+
+['Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls']
+
+test labels
+
+['Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6932539682539682 (+/- 0.10855622747014451) 
+
+MODEL FILE NAME: 
+
+ Typewriter_Typewriter_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:51:24.395496
+
+EXECUTION TIME: 
+
+ 2.0124573707580566
+
+GROUPS: 
+
+['Typewriter', 'Typewriter_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls']
+
+test labels
+
+['Typewriter', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter_controls', 'Typewriter', 'Typewriter', 'Typewriter_controls', 'Typewriter']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.573015873015873 (+/- 0.14464489841135897)
+gaussian-nb: 0.5908730158730159 (+/- 0.24644230976708495)
+logistic regression: 0.5944444444444444 (+/- 0.10859973640061793)
+adaboost: 0.6265873015873016 (+/- 0.14072706501564064)
+random forest: 0.6452380952380953 (+/- 0.13288852486318156)
+hard voting: 0.6551587301587302 (+/- 0.10841688155726097)
+gradient boosting: 0.6773809523809524 (+/- 0.09645061476442424)
+knn: 0.6932539682539682 (+/- 0.10855622747014451)
+
+
+(C) 2018, NeuroLex Laboratories

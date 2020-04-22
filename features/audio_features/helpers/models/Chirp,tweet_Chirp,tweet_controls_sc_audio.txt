@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7476190476190476 (+/- 0.14234033502509644) 
+
+MODEL FILE NAME: 
+
+ Chirp,tweet_Chirp,tweet_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:00:51.636273
+
+EXECUTION TIME: 
+
+ 2.3454909324645996
+
+GROUPS: 
+
+['Chirp,tweet', 'Chirp,tweet_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls']
+
+test labels
+
+['Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet', 'Chirp,tweet_controls', 'Chirp,tweet_controls', 'Chirp,tweet']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.5404761904761906 (+/- 0.2130054346554185)
+gradient boosting: 0.6476190476190476 (+/- 0.1571879444697376)
+random forest: 0.6690476190476191 (+/- 0.039947527941815525)
+gaussian-nb: 0.6753968253968253 (+/- 0.18268455258887692)
+decision-tree: 0.6904761904761905 (+/- 0.1035782701626486)
+hard voting: 0.6976190476190476 (+/- 0.11703053073756674)
+logistic regression: 0.7384920634920634 (+/- 0.12459559172154697)
+knn: 0.7476190476190476 (+/- 0.14234033502509644)
+
+
+(C) 2018, NeuroLex Laboratories

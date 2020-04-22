@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.9142857142857143 (+/- 0.11428571428571428) 
+
+MODEL FILE NAME: 
+
+ Clicking_Clicking_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:17:42.157677
+
+EXECUTION TIME: 
+
+ 2.3254551887512207
+
+GROUPS: 
+
+['Clicking', 'Clicking_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls']
+
+test labels
+
+['Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking_controls', 'Clicking_controls', 'Clicking', 'Clicking_controls', 'Clicking', 'Clicking', 'Clicking_controls', 'Clicking_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.7968253968253969 (+/- 0.05443310539518171)
+adaboost: 0.8126984126984127 (+/- 0.12146746964894596)
+gradient boosting: 0.8126984126984127 (+/- 0.1403303879701609)
+hard voting: 0.834920634920635 (+/- 0.14183052637262653)
+decision-tree: 0.8412698412698413 (+/- 0.06506000486323552)
+gaussian-nb: 0.8476190476190476 (+/- 0.16081174783382782)
+logistic regression: 0.8984126984126984 (+/- 0.10461750510021638)
+knn: 0.9142857142857143 (+/- 0.11428571428571428)
+
+
+(C) 2018, NeuroLex Laboratories

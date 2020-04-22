@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8916666666666666 (+/- 0.097182531580755) 
+
+MODEL FILE NAME: 
+
+ Chewing,mastication_Chewing,mastication_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:50:39.282070
+
+EXECUTION TIME: 
+
+ 2.3125569820404053
+
+GROUPS: 
+
+['Chewing,mastication', 'Chewing,mastication_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls']
+
+test labels
+
+['Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication', 'Chewing,mastication', 'Chewing,mastication_controls', 'Chewing,mastication_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.65 (+/- 0.2)
+gaussian-nb: 0.725 (+/- 0.1224744871391589)
+decision-tree: 0.75 (+/- 0.2091650066335189)
+gradient boosting: 0.8166666666666667 (+/- 0.12527746981977425)
+adaboost: 0.85 (+/- 0.1457737973711325)
+knn: 0.8666666666666666 (+/- 0.1130388330520878)
+random forest: 0.8666666666666666 (+/- 0.1379412113103904)
+hard voting: 0.875 (+/- 0.15811388300841897)
+logistic regression: 0.8916666666666666 (+/- 0.097182531580755)
+
+
+(C) 2018, NeuroLex Laboratories

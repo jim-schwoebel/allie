@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8325396825396825 (+/- 0.11502187945709405) 
+
+MODEL FILE NAME: 
+
+ Christianmusic_Christianmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:06:42.935581
+
+EXECUTION TIME: 
+
+ 2.381740093231201
+
+GROUPS: 
+
+['Christianmusic', 'Christianmusic_controls']
+(63 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls']
+
+test labels
+
+['Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic', 'Christianmusic', 'Christianmusic', 'Christianmusic_controls', 'Christianmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5726190476190476 (+/- 0.026902303582029028)
+decision-tree: 0.5956349206349206 (+/- 0.2535226745986467)
+knn: 0.6297619047619047 (+/- 0.1687119403624464)
+gaussian-nb: 0.6365079365079364 (+/- 0.1371340385171757)
+adaboost: 0.6559523809523808 (+/- 0.20232492221587495)
+gradient boosting: 0.6845238095238095 (+/- 0.21049707813710383)
+hard voting: 0.6845238095238095 (+/- 0.21049707813710383)
+random forest: 0.6992063492063492 (+/- 0.10027676490214021)
+logistic regression: 0.8325396825396825 (+/- 0.11502187945709405)
+
+
+(C) 2018, NeuroLex Laboratories

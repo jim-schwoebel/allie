@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8476190476190476 (+/- 0.03702191679266855) 
+
+MODEL FILE NAME: 
+
+ Frying(food)_Frying(food)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:57:06.923823
+
+EXECUTION TIME: 
+
+ 2.0506670475006104
+
+GROUPS: 
+
+['Frying(food)', 'Frying(food)_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls']
+
+test labels
+
+['Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)', 'Frying(food)', 'Frying(food)_controls', 'Frying(food)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.6380952380952382 (+/- 0.09057360392182291)
+knn: 0.6730158730158731 (+/- 0.1093280975093496)
+logistic regression: 0.761904761904762 (+/- 0.11313352178543148)
+decision-tree: 0.7841269841269841 (+/- 0.1916892589136575)
+gaussian-nb: 0.8095238095238095 (+/- 0.14582455971880445)
+adaboost: 0.8253968253968254 (+/- 0.08031181359157788)
+hard voting: 0.8253968253968254 (+/- 0.08031181359157788)
+gradient boosting: 0.8476190476190476 (+/- 0.03702191679266855)
+
+
+(C) 2018, NeuroLex Laboratories

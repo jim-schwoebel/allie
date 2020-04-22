@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.851190476190476 (+/- 0.03859624258980262) 
+
+MODEL FILE NAME: 
+
+ Happymusic_Happymusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:26:34.763442
+
+EXECUTION TIME: 
+
+ 2.049832344055176
+
+GROUPS: 
+
+['Happymusic', 'Happymusic_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls']
+
+test labels
+
+['Happymusic', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic_controls', 'Happymusic', 'Happymusic', 'Happymusic_controls', 'Happymusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.6107142857142858 (+/- 0.1688462919189657)
+adaboost: 0.6932539682539682 (+/- 0.10855622747014451)
+logistic regression: 0.7226190476190476 (+/- 0.18422445422334036)
+knn: 0.7337301587301588 (+/- 0.11984126984126983)
+gradient boosting: 0.7531746031746033 (+/- 0.06390737187046791)
+hard voting: 0.7531746031746033 (+/- 0.06390737187046791)
+random forest: 0.7718253968253969 (+/- 0.05888546603666522)
+gaussian-nb: 0.851190476190476 (+/- 0.03859624258980262)
+
+
+(C) 2018, NeuroLex Laboratories

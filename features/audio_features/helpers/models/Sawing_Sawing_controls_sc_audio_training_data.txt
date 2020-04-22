@@ -1,0 +1,8 @@
+train labels
+
+['Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls']
+
+test labels
+
+['Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing']
+

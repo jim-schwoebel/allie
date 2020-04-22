@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8261904761904761 (+/- 0.144357203725944) 
+
+MODEL FILE NAME: 
+
+ Fieldrecording_Fieldrecording_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:37:54.767023
+
+EXECUTION TIME: 
+
+ 2.0364460945129395
+
+GROUPS: 
+
+['Fieldrecording', 'Fieldrecording_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls']
+
+test labels
+
+['Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording', 'Fieldrecording', 'Fieldrecording_controls', 'Fieldrecording']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.6710317460317461 (+/- 0.07116795488822932)
+random forest: 0.696031746031746 (+/- 0.07254853893350122)
+decision-tree: 0.7023809523809524 (+/- 0.07719248517960525)
+gradient boosting: 0.8003968253968253 (+/- 0.09155923753686503)
+gaussian-nb: 0.8162698412698413 (+/- 0.21107082799820256)
+hard voting: 0.8226190476190476 (+/- 0.11954657343460184)
+adaboost: 0.8253968253968254 (+/- 0.12088528739466521)
+logistic regression: 0.8261904761904761 (+/- 0.144357203725944)
+
+
+(C) 2018, NeuroLex Laboratories

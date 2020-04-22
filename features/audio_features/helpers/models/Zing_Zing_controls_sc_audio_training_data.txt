@@ -1,0 +1,8 @@
+train labels
+
+['Zing', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing', 'Zing', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls']
+
+test labels
+
+['Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing', 'Zing', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing', 'Zing', 'Zing_controls', 'Zing_controls', 'Zing']
+

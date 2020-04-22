@@ -1,0 +1,8 @@
+train labels
+
+['Sonar', 'Sonar', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls']
+
+test labels
+
+['Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar', 'Sonar', 'Sonar_controls', 'Sonar_controls']
+

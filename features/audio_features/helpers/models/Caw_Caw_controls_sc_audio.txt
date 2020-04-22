@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7416666666666667 (+/- 0.06666666666666668) 
+
+MODEL FILE NAME: 
+
+ Caw_Caw_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:43:33.112897
+
+EXECUTION TIME: 
+
+ 2.31015682220459
+
+GROUPS: 
+
+['Caw', 'Caw_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls']
+
+test labels
+
+['Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.475 (+/- 0.049999999999999996)
+knn: 0.5 (+/- 0.07905694150420949)
+gaussian-nb: 0.5166666666666667 (+/- 0.2017286406151701)
+random forest: 0.55 (+/- 0.1274754878398196)
+gradient boosting: 0.6333333333333333 (+/- 0.1130388330520878)
+decision-tree: 0.65 (+/- 0.1224744871391589)
+adaboost: 0.7166666666666667 (+/- 0.08079466429027217)
+logistic regression: 0.7416666666666667 (+/- 0.17159383568311667)
+hard voting: 0.7416666666666667 (+/- 0.06666666666666668)
+
+
+(C) 2018, NeuroLex Laboratories

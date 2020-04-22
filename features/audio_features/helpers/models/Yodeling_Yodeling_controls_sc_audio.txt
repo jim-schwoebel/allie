@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7226190476190476 (+/- 0.07946818699180301) 
+
+MODEL FILE NAME: 
+
+ Yodeling_Yodeling_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:47:21.389397
+
+EXECUTION TIME: 
+
+ 1.994724988937378
+
+GROUPS: 
+
+['Yodeling', 'Yodeling_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls']
+
+test labels
+
+['Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling', 'Yodeling', 'Yodeling_controls', 'Yodeling', 'Yodeling_controls', 'Yodeling_controls', 'Yodeling']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5325396825396826 (+/- 0.12654064423530892)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.5869047619047618 (+/- 0.0562932877025566)
+gradient boosting: 0.5896825396825397 (+/- 0.09501793335660402)
+adaboost: 0.596031746031746 (+/- 0.1554856904979023)
+random forest: 0.6154761904761905 (+/- 0.07449756117696198)
+hard voting: 0.6404761904761904 (+/- 0.1363913769625872)
+gaussian-nb: 0.6912698412698413 (+/- 0.13371072818192184)
+logistic regression: 0.7226190476190476 (+/- 0.07946818699180301)
+
+
+(C) 2018, NeuroLex Laboratories

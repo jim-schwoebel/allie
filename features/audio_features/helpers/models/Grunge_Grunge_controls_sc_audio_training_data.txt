@@ -1,0 +1,8 @@
+train labels
+
+['Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls']
+
+test labels
+
+['Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge']
+

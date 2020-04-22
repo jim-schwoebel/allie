@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7555555555555555 (+/- 0.1663564762739543) 
+
+MODEL FILE NAME: 
+
+ Pant_Pant_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:31:34.391661
+
+EXECUTION TIME: 
+
+ 2.0031580924987793
+
+GROUPS: 
+
+['Pant', 'Pant_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Pant', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant', 'Pant_controls']
+
+test labels
+
+['Pant', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant_controls', 'Pant_controls', 'Pant_controls', 'Pant', 'Pant', 'Pant', 'Pant', 'Pant', 'Pant_controls', 'Pant_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5460317460317461 (+/- 0.16452899707745955)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+gradient boosting: 0.5904761904761904 (+/- 0.09805362039035238)
+adaboost: 0.6031746031746031 (+/- 0.10188448594210296)
+gaussian-nb: 0.619047619047619 (+/- 0.06023386019368343)
+random forest: 0.619047619047619 (+/- 0.16768397011103817)
+hard voting: 0.6476190476190476 (+/- 0.06459361888690733)
+logistic regression: 0.6984126984126984 (+/- 0.170662603882103)
+knn: 0.7555555555555555 (+/- 0.1663564762739543)
+
+
+(C) 2018, NeuroLex Laboratories

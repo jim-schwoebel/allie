@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.9277777777777778 (+/- 0.059186877090729215) 
+
+MODEL FILE NAME: 
+
+ Hi-hat_Hi-hat_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:35:12.449242
+
+EXECUTION TIME: 
+
+ 2.0174081325531006
+
+GROUPS: 
+
+['Hi-hat', 'Hi-hat_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls']
+
+test labels
+
+['Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat', 'Hi-hat_controls', 'Hi-hat_controls', 'Hi-hat']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.7912698412698413 (+/- 0.11564856495854815)
+logistic regression: 0.8206349206349206 (+/- 0.09854222147359153)
+knn: 0.8234126984126984 (+/- 0.10317460317460318)
+random forest: 0.8706349206349205 (+/- 0.09116108081621646)
+adaboost: 0.8769841269841269 (+/- 0.07124093520638519)
+gradient boosting: 0.8805555555555555 (+/- 0.10599324460188285)
+gaussian-nb: 0.9277777777777778 (+/- 0.059186877090729215)
+hard voting: 0.9277777777777778 (+/- 0.059186877090729215)
+
+
+(C) 2018, NeuroLex Laboratories

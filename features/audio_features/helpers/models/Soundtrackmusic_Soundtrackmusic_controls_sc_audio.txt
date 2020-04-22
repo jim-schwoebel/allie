@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7634920634920634 (+/- 0.11112811661249035) 
+
+MODEL FILE NAME: 
+
+ Soundtrackmusic_Soundtrackmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:40:37.505809
+
+EXECUTION TIME: 
+
+ 2.2075579166412354
+
+GROUPS: 
+
+['Soundtrackmusic', 'Soundtrackmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls']
+
+test labels
+
+['Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic', 'Soundtrackmusic_controls', 'Soundtrackmusic_controls', 'Soundtrackmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.6027777777777776 (+/- 0.15763710953274693)
+decision-tree: 0.6555555555555554 (+/- 0.15660582437369686)
+hard voting: 0.6876984126984127 (+/- 0.1495226299956846)
+random forest: 0.6876984126984127 (+/- 0.1495226299956846)
+logistic regression: 0.7134920634920634 (+/- 0.1539437061105312)
+gaussian-nb: 0.7134920634920635 (+/- 0.09636077700456316)
+gradient boosting: 0.7412698412698413 (+/- 0.09354985143737886)
+adaboost: 0.7634920634920634 (+/- 0.11112811661249035)
+
+
+(C) 2018, NeuroLex Laboratories

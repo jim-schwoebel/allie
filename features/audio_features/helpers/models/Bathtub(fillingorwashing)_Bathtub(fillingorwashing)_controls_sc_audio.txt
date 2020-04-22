@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.7892857142857143 (+/- 0.1815466432448405) 
+
+MODEL FILE NAME: 
+
+ Bathtub(fillingorwashing)_Bathtub(fillingorwashing)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:42:32.836131
+
+EXECUTION TIME: 
+
+ 2.193096876144409
+
+GROUPS: 
+
+['Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls']
+
+test labels
+
+['Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)', 'Bathtub(fillingorwashing)_controls', 'Bathtub(fillingorwashing)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.4928571428571429 (+/- 0.2557003188524107)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+gaussian-nb: 0.6142857142857142 (+/- 0.1741272373426412)
+adaboost: 0.6345238095238096 (+/- 0.22308647134271753)
+hard voting: 0.6845238095238095 (+/- 0.21520964835193654)
+knn: 0.6845238095238095 (+/- 0.21520964835193654)
+logistic regression: 0.7142857142857142 (+/- 0.17349939716415885)
+gradient boosting: 0.7428571428571429 (+/- 0.09608256559038608)
+decision-tree: 0.7892857142857143 (+/- 0.1815466432448405)
+
+
+(C) 2018, NeuroLex Laboratories

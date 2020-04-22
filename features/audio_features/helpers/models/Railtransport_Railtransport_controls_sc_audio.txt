@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8123333333333334 (+/- 0.0442919606449949) 
+
+MODEL FILE NAME: 
+
+ Railtransport_Railtransport_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:23:38.037383
+
+EXECUTION TIME: 
+
+ 3.2376739978790283
+
+GROUPS: 
+
+['Railtransport', 'Railtransport_controls']
+(185 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport']
+
+test labels
+
+['Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls', 'Railtransport', 'Railtransport_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.512 (+/- 0.00979795897113272)
+decision-tree: 0.6916666666666667 (+/- 0.051033757890679037)
+logistic regression: 0.7316666666666667 (+/- 0.05432413009990231)
+knn: 0.7383333333333334 (+/- 0.08891943919451283)
+gradient boosting: 0.7646666666666666 (+/- 0.06244464215073486)
+hard voting: 0.78 (+/- 0.04398231968012195)
+gaussian-nb: 0.7956666666666667 (+/- 0.07100547709703653)
+adaboost: 0.796 (+/- 0.06984586204238906)
+random forest: 0.8123333333333334 (+/- 0.0442919606449949)
+
+
+(C) 2018, NeuroLex Laboratories

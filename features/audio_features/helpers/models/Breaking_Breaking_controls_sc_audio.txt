@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.9206349206349206 (+/- 0.11178931340735879) 
+
+MODEL FILE NAME: 
+
+ Breaking_Breaking_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:16:34.924174
+
+EXECUTION TIME: 
+
+ 2.373349905014038
+
+GROUPS: 
+
+['Breaking', 'Breaking_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls']
+
+test labels
+
+['Breaking', 'Breaking', 'Breaking', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking_controls', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking_controls', 'Breaking', 'Breaking', 'Breaking_controls', 'Breaking']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.5944444444444444 (+/- 0.19492813180350638)
+random forest: 0.696031746031746 (+/- 0.07254853893350122)
+gradient boosting: 0.7146825396825396 (+/- 0.16746031746031748)
+adaboost: 0.7523809523809524 (+/- 0.18850835351496537)
+hard voting: 0.8126984126984127 (+/- 0.1669008181345386)
+gaussian-nb: 0.819047619047619 (+/- 0.14289241187208762)
+knn: 0.851190476190476 (+/- 0.03859624258980262)
+logistic regression: 0.9206349206349206 (+/- 0.11178931340735879)
+
+
+(C) 2018, NeuroLex Laboratories

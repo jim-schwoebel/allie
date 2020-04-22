@@ -1,0 +1,8 @@
+train labels
+
+['Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls']
+
+test labels
+
+['Buzz', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz_controls', 'Buzz_controls', 'Buzz_controls', 'Buzz', 'Buzz', 'Buzz', 'Buzz', 'Buzz', 'Buzz_controls', 'Buzz_controls']
+

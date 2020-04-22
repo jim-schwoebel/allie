@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6825396825396826 (+/- 0.1104287436884196) 
+
+MODEL FILE NAME: 
+
+ Cacophony_Cacophony_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:24:58.430938
+
+EXECUTION TIME: 
+
+ 2.376899003982544
+
+GROUPS: 
+
+['Cacophony', 'Cacophony_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls']
+
+test labels
+
+['Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony_controls', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony', 'Cacophony_controls', 'Cacophony_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.4031746031746032 (+/- 0.14076063033266897)
+gaussian-nb: 0.4888888888888888 (+/- 0.14457520681569144)
+logistic regression: 0.5111111111111111 (+/- 0.11286596085480112)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+knn: 0.5682539682539682 (+/- 0.0905736039218229)
+hard voting: 0.5746031746031746 (+/- 0.08541983521951564)
+adaboost: 0.6476190476190475 (+/- 0.14317425122259914)
+decision-tree: 0.6539682539682541 (+/- 0.11681504439983553)
+gradient boosting: 0.6825396825396826 (+/- 0.1104287436884196)
+
+
+(C) 2018, NeuroLex Laboratories

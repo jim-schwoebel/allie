@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.5511904761904762 (+/- 0.1665645945942162) 
+
+MODEL FILE NAME: 
+
+ Shout_Shout_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:03:18.551236
+
+EXECUTION TIME: 
+
+ 1.9643199443817139
+
+GROUPS: 
+
+['Shout', 'Shout_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Shout', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout', 'Shout', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls']
+
+test labels
+
+['Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout', 'Shout', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout', 'Shout', 'Shout_controls', 'Shout_controls', 'Shout']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.35357142857142854 (+/- 0.14033487645991788)
+adaboost: 0.38095238095238093 (+/- 0.13192281121138158)
+decision-tree: 0.4630952380952381 (+/- 0.1976835809720702)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+random forest: 0.4904761904761904 (+/- 0.14456322518917977)
+gradient boosting: 0.5178571428571429 (+/- 0.1564921592871903)
+hard voting: 0.5178571428571429 (+/- 0.1564921592871903)
+gaussian-nb: 0.5511904761904762 (+/- 0.12346563964251593)
+logistic regression: 0.5511904761904762 (+/- 0.1665645945942162)
+
+
+(C) 2018, NeuroLex Laboratories

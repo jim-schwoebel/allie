@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8964285714285716 (+/- 0.14655917520487993) 
+
+MODEL FILE NAME: 
+
+ Sigh_Sigh_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:06:33.166609
+
+EXECUTION TIME: 
+
+ 1.9808199405670166
+
+GROUPS: 
+
+['Sigh', 'Sigh_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sigh', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls']
+
+test labels
+
+['Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh', 'Sigh', 'Sigh_controls', 'Sigh_controls', 'Sigh']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+gaussian-nb: 0.7226190476190475 (+/- 0.18746125828023524)
+logistic regression: 0.7226190476190475 (+/- 0.18746125828023524)
+knn: 0.8047619047619048 (+/- 0.13941284389568956)
+decision-tree: 0.8214285714285715 (+/- 0.1862629258629328)
+hard voting: 0.8261904761904763 (+/- 0.144357203725944)
+random forest: 0.8345238095238094 (+/- 0.15041514735321035)
+adaboost: 0.8511904761904763 (+/- 0.13974791038884943)
+gradient boosting: 0.8964285714285716 (+/- 0.14655917520487993)
+
+
+(C) 2018, NeuroLex Laboratories

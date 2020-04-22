@@ -1,0 +1,8 @@
+train labels
+
+['Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls']
+
+test labels
+
+['Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw', 'Caw', 'Caw_controls', 'Caw_controls']
+

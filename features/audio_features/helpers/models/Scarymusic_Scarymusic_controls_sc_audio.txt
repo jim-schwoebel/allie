@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.9242063492063493 (+/- 0.06269841269841271) 
+
+MODEL FILE NAME: 
+
+ Scarymusic_Scarymusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:54:10.232206
+
+EXECUTION TIME: 
+
+ 1.9938979148864746
+
+GROUPS: 
+
+['Scarymusic', 'Scarymusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls']
+
+test labels
+
+['Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic', 'Scarymusic_controls', 'Scarymusic_controls', 'Scarymusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6563492063492063 (+/- 0.11871249125829522)
+adaboost: 0.7027777777777777 (+/- 0.21936370109598488)
+gradient boosting: 0.709126984126984 (+/- 0.15009025587304892)
+random forest: 0.7384920634920635 (+/- 0.12459559172154697)
+knn: 0.7484126984126984 (+/- 0.10485055172014664)
+hard voting: 0.7849206349206349 (+/- 0.17845940048528447)
+gaussian-nb: 0.7920634920634921 (+/- 0.10435376243790076)
+logistic regression: 0.9242063492063493 (+/- 0.06269841269841271)
+
+
+(C) 2018, NeuroLex Laboratories

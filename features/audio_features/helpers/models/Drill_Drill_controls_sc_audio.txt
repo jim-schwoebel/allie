@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.803968253968254 (+/- 0.08322366177091002) 
+
+MODEL FILE NAME: 
+
+ Drill_Drill_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:04:25.043665
+
+EXECUTION TIME: 
+
+ 2.229341983795166
+
+GROUPS: 
+
+['Drill', 'Drill_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls']
+
+test labels
+
+['Drill', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+random forest: 0.657936507936508 (+/- 0.08460481251578685)
+gaussian-nb: 0.6607142857142857 (+/- 0.24431686012862294)
+decision-tree: 0.6646825396825397 (+/- 0.14836176020849937)
+logistic regression: 0.7246031746031747 (+/- 0.03752885846837109)
+knn: 0.7273809523809525 (+/- 0.13785099729518974)
+hard voting: 0.778968253968254 (+/- 0.11011171861782708)
+adaboost: 0.803968253968254 (+/- 0.12283909469171969)
+gradient boosting: 0.803968253968254 (+/- 0.08322366177091002)
+
+
+(C) 2018, NeuroLex Laboratories

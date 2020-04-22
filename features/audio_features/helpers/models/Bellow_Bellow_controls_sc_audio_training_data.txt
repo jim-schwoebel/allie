@@ -1,0 +1,8 @@
+train labels
+
+['Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls']
+
+test labels
+
+['Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.555952380952381 (+/- 0.17194220524663026) 
+
+MODEL FILE NAME: 
+
+ Fire_Fire_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:41:22.896219
+
+EXECUTION TIME: 
+
+ 2.0660829544067383
+
+GROUPS: 
+
+['Fire', 'Fire_controls']
+(62 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls']
+
+test labels
+
+['Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.33214285714285713 (+/- 0.15121911573097846)
+gradient boosting: 0.39404761904761904 (+/- 0.09470419130025994)
+decision-tree: 0.4321428571428571 (+/- 0.19638808304863423)
+hard voting: 0.44404761904761897 (+/- 0.13062971310186025)
+adaboost: 0.4726190476190476 (+/- 0.1394455962948515)
+random forest: 0.5142857142857142 (+/- 0.10921280896361632)
+logistic regression: 0.5265873015873016 (+/- 0.1662864142969684)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+gaussian-nb: 0.555952380952381 (+/- 0.17194220524663026)
+
+
+(C) 2018, NeuroLex Laboratories

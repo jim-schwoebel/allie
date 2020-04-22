@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.780952380952381 (+/- 0.11427331281920437) 
+
+MODEL FILE NAME: 
+
+ Ambientmusic_Ambientmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:14:00.034715
+
+EXECUTION TIME: 
+
+ 2.193358898162842
+
+GROUPS: 
+
+['Ambientmusic', 'Ambientmusic_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls']
+
+test labels
+
+['Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic', 'Ambientmusic', 'Ambientmusic_controls', 'Ambientmusic_controls', 'Ambientmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+random forest: 0.6773809523809524 (+/- 0.14108021873357665)
+gaussian-nb: 0.6797619047619048 (+/- 0.09014664294115499)
+adaboost: 0.7095238095238096 (+/- 0.1369513378329703)
+gradient boosting: 0.7178571428571429 (+/- 0.1452478529118768)
+logistic regression: 0.7392857142857142 (+/- 0.1677431223688197)
+hard voting: 0.7595238095238096 (+/- 0.1424896065748636)
+knn: 0.7642857142857142 (+/- 0.15787168646643104)
+decision-tree: 0.780952380952381 (+/- 0.11427331281920437)
+
+
+(C) 2018, NeuroLex Laboratories

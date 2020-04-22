@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6226190476190475 (+/- 0.08464947064110084) 
+
+MODEL FILE NAME: 
+
+ Pig_Pig_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:38:02.805262
+
+EXECUTION TIME: 
+
+ 2.011254072189331
+
+GROUPS: 
+
+['Pig', 'Pig_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls']
+
+test labels
+
+['Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.46547619047619043 (+/- 0.1707991088996281)
+gradient boosting: 0.46547619047619043 (+/- 0.15140124042063535)
+hard voting: 0.5190476190476191 (+/- 0.11163848766190645)
+decision-tree: 0.555952380952381 (+/- 0.1717176794952901)
+knn: 0.5642857142857143 (+/- 0.09689042833036098)
+logistic regression: 0.5976190476190475 (+/- 0.0574150264370833)
+sk: 0.6 (+/- 0.2)
+gaussian-nb: 0.6226190476190475 (+/- 0.030257773874140085)
+random forest: 0.6226190476190475 (+/- 0.08464947064110084)
+
+
+(C) 2018, NeuroLex Laboratories

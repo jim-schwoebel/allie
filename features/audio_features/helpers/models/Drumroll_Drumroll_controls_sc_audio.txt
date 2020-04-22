@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7433333333333334 (+/- 0.16384274303259344) 
+
+MODEL FILE NAME: 
+
+ Drumroll_Drumroll_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:11:55.259585
+
+EXECUTION TIME: 
+
+ 2.077011823654175
+
+GROUPS: 
+
+['Drumroll', 'Drumroll_controls']
+(64 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls']
+
+test labels
+
+['Drumroll', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll_controls', 'Drumroll', 'Drumroll_controls', 'Drumroll', 'Drumroll', 'Drumroll_controls', 'Drumroll_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4961111111111111 (+/- 0.1850058390803576)
+gradient boosting: 0.5033333333333333 (+/- 0.141578403877302)
+sk: 0.5333333333333333 (+/- 0.06666666666666667)
+hard voting: 0.5683333333333334 (+/- 0.18577166390790367)
+adaboost: 0.5733333333333334 (+/- 0.12011568497818166)
+knn: 0.5811111111111111 (+/- 0.04783588198139835)
+random forest: 0.6133333333333333 (+/- 0.17595769693625543)
+logistic regression: 0.6905555555555556 (+/- 0.11289676263004923)
+gaussian-nb: 0.7433333333333334 (+/- 0.16384274303259344)
+
+
+(C) 2018, NeuroLex Laboratories

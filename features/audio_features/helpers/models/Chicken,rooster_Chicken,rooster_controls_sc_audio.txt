@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.703030303030303 (+/- 0.06470956516382616) 
+
+MODEL FILE NAME: 
+
+ Chicken,rooster_Chicken,rooster_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:51:52.199571
+
+EXECUTION TIME: 
+
+ 2.5039780139923096
+
+GROUPS: 
+
+['Chicken,rooster', 'Chicken,rooster_controls']
+(76 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls']
+
+test labels
+
+['Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls', 'Chicken,rooster', 'Chicken,rooster', 'Chicken,rooster_controls', 'Chicken,rooster_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5494949494949495 (+/- 0.004948464126834735)
+adaboost: 0.6 (+/- 0.14908488668682904)
+gaussian-nb: 0.6222222222222221 (+/- 0.10332696446500544)
+decision-tree: 0.6303030303030303 (+/- 0.04453617714151233)
+gradient boosting: 0.6404040404040403 (+/- 0.0959542794912155)
+hard voting: 0.6404040404040403 (+/- 0.11186156121137074)
+logistic regression: 0.6444444444444444 (+/- 0.055472849364630226)
+random forest: 0.6848484848484848 (+/- 0.11345552389574928)
+knn: 0.703030303030303 (+/- 0.06470956516382616)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7238095238095238 (+/- 0.16174906924262855) 
+
+MODEL FILE NAME: 
+
+ Harmonica_Harmonica_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:28:15.976985
+
+EXECUTION TIME: 
+
+ 2.04259991645813
+
+GROUPS: 
+
+['Harmonica', 'Harmonica_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls']
+
+test labels
+
+['Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica_controls', 'Harmonica', 'Harmonica_controls', 'Harmonica', 'Harmonica', 'Harmonica_controls', 'Harmonica_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5365079365079366 (+/- 0.08888888888888888)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+logistic regression: 0.5746031746031746 (+/- 0.16840364710952183)
+random forest: 0.6444444444444445 (+/- 0.06853026395213621)
+gaussian-nb: 0.6730158730158731 (+/- 0.16816409699236862)
+adaboost: 0.6952380952380952 (+/- 0.09331389496316869)
+decision-tree: 0.7238095238095238 (+/- 0.11428571428571428)
+gradient boosting: 0.7238095238095238 (+/- 0.14568627181693672)
+hard voting: 0.7238095238095238 (+/- 0.16174906924262855)
+
+
+(C) 2018, NeuroLex Laboratories

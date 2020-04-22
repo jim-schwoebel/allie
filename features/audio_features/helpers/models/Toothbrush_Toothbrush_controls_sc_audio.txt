@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.819047619047619 (+/- 0.17405397030949588) 
+
+MODEL FILE NAME: 
+
+ Toothbrush_Toothbrush_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:35:59.261957
+
+EXECUTION TIME: 
+
+ 2.013735771179199
+
+GROUPS: 
+
+['Toothbrush', 'Toothbrush_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls']
+
+test labels
+
+['Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush_controls', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush', 'Toothbrush_controls', 'Toothbrush_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.4888888888888888 (+/- 0.19294693840028881)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+random forest: 0.6539682539682541 (+/- 0.1476787726934985)
+logistic regression: 0.6698412698412699 (+/- 0.12311567891850994)
+decision-tree: 0.7047619047619047 (+/- 0.15764709864044615)
+adaboost: 0.726984126984127 (+/- 0.15853956811661932)
+knn: 0.761904761904762 (+/- 0.07968190728895956)
+hard voting: 0.8126984126984127 (+/- 0.14033038797016092)
+gradient boosting: 0.819047619047619 (+/- 0.17405397030949588)
+
+
+(C) 2018, NeuroLex Laboratories

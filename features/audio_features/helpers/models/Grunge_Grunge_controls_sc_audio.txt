@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8289682539682539 (+/- 0.0423024062578934) 
+
+MODEL FILE NAME: 
+
+ Grunge_Grunge_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:12:20.365823
+
+EXECUTION TIME: 
+
+ 2.062407970428467
+
+GROUPS: 
+
+['Grunge', 'Grunge_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls']
+
+test labels
+
+['Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge_controls', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge_controls', 'Grunge', 'Grunge', 'Grunge_controls', 'Grunge']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.607936507936508 (+/- 0.08917188511230566)
+knn: 0.648809523809524 (+/- 0.08505404148119718)
+gradient boosting: 0.680952380952381 (+/- 0.11428571428571428)
+logistic regression: 0.680952380952381 (+/- 0.11428571428571428)
+random forest: 0.6837301587301587 (+/- 0.10116790909267583)
+hard voting: 0.7123015873015873 (+/- 0.12347584257118736)
+adaboost: 0.7880952380952381 (+/- 0.12697420596165127)
+gaussian-nb: 0.8289682539682539 (+/- 0.0423024062578934)
+
+
+(C) 2018, NeuroLex Laboratories

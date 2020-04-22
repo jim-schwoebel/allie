@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8333333333333334 (+/- 0.045643546458763846) 
+
+MODEL FILE NAME: 
+
+ Babbling_Babbling_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:32:07.172106
+
+EXECUTION TIME: 
+
+ 2.1732518672943115
+
+GROUPS: 
+
+['Babbling', 'Babbling_controls']
+(54 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls']
+
+test labels
+
+['Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling_controls', 'Babbling', 'Babbling', 'Babbling_controls', 'Babbling_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5666666666666667 (+/- 0.1136515141415488)
+sk: 0.6333333333333333 (+/- 0.20982797186690286)
+decision-tree: 0.725 (+/- 0.13333333333333336)
+adaboost: 0.75 (+/- 0.052704627669473016)
+gradient boosting: 0.775 (+/- 0.07264831572567791)
+random forest: 0.775 (+/- 0.07264831572567791)
+hard voting: 0.8 (+/- 0.08079466429027217)
+logistic regression: 0.8083333333333333 (+/- 0.12247448713915891)
+gaussian-nb: 0.8333333333333334 (+/- 0.045643546458763846)
+
+
+(C) 2018, NeuroLex Laboratories

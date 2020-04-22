@@ -1,0 +1,8 @@
+train labels
+
+['Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls']
+
+test labels
+
+['Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco', 'Disco', 'Disco_controls', 'Disco_controls', 'Disco_controls', 'Disco', 'Disco_controls', 'Disco', 'Disco', 'Disco_controls', 'Disco_controls']
+

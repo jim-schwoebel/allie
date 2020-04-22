@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6591269841269841 (+/- 0.12625285470331238) 
+
+MODEL FILE NAME: 
+
+ Printer_Printer_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:05:27.091916
+
+EXECUTION TIME: 
+
+ 2.0640878677368164
+
+GROUPS: 
+
+['Printer', 'Printer_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls']
+
+test labels
+
+['Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer', 'Printer', 'Printer', 'Printer_controls', 'Printer', 'Printer_controls', 'Printer_controls', 'Printer']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.3753968253968254 (+/- 0.09853263301162503)
+knn: 0.4888888888888888 (+/- 0.0503452429433451)
+random forest: 0.4888888888888888 (+/- 0.0503452429433451)
+gradient boosting: 0.5083333333333333 (+/- 0.1642512041048303)
+decision-tree: 0.5353174603174603 (+/- 0.2229099336018077)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+hard voting: 0.5555555555555555 (+/- 0.1199437173797623)
+adaboost: 0.6119047619047618 (+/- 0.08702698515474792)
+gaussian-nb: 0.6591269841269841 (+/- 0.12625285470331238)
+
+
+(C) 2018, NeuroLex Laboratories

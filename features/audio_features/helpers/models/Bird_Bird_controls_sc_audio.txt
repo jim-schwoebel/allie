@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6822134387351778 (+/- 0.05418624921474027) 
+
+MODEL FILE NAME: 
+
+ Bird_Bird_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:54:09.161861
+
+EXECUTION TIME: 
+
+ 3.2598462104797363
+
+GROUPS: 
+
+['Bird', 'Bird_controls']
+(171 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird']
+
+test labels
+
+['Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird', 'Bird', 'Bird_controls', 'Bird', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird_controls', 'Bird', 'Bird', 'Bird', 'Bird']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5039525691699605 (+/- 0.026098931255682495)
+adaboost: 0.5051383399209486 (+/- 0.08487078161036374)
+gradient boosting: 0.5225296442687747 (+/- 0.13991536578040706)
+hard voting: 0.5490118577075098 (+/- 0.08217542447377756)
+decision-tree: 0.558498023715415 (+/- 0.097265330981363)
+knn: 0.5841897233201581 (+/- 0.10194717236196604)
+random forest: 0.5849802371541502 (+/- 0.052615213572470315)
+gaussian-nb: 0.6106719367588933 (+/- 0.056895033092321204)
+logistic regression: 0.6822134387351778 (+/- 0.05418624921474027)
+
+
+(C) 2018, NeuroLex Laboratories

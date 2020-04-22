@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7683333333333333 (+/- 0.189212141703172) 
+
+MODEL FILE NAME: 
+
+ Steamwhistle_Steamwhistle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:02:50.871859
+
+EXECUTION TIME: 
+
+ 2.134740114212036
+
+GROUPS: 
+
+['Steamwhistle', 'Steamwhistle_controls']
+(69 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls']
+
+test labels
+
+['Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle', 'Steamwhistle_controls', 'Steamwhistle_controls', 'Steamwhistle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.49000000000000005 (+/- 0.15373538272380424)
+sk: 0.5222222222222223 (+/- 0.027216552697590882)
+decision-tree: 0.643888888888889 (+/- 0.17438073854445232)
+knn: 0.6538888888888889 (+/- 0.13530486838028927)
+random forest: 0.7216666666666667 (+/- 0.12263063077770689)
+adaboost: 0.7461111111111112 (+/- 0.19327904729550172)
+hard voting: 0.7461111111111112 (+/- 0.19327904729550172)
+gaussian-nb: 0.7488888888888888 (+/- 0.13799266396675577)
+gradient boosting: 0.7683333333333333 (+/- 0.189212141703172)
+
+
+(C) 2018, NeuroLex Laboratories

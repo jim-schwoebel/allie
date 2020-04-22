@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6219780219780219 (+/- 0.09953399449867475) 
+
+MODEL FILE NAME: 
+
+ Hum_Hum_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:45:06.139856
+
+EXECUTION TIME: 
+
+ 2.44730806350708
+
+GROUPS: 
+
+['Hum', 'Hum_controls']
+(104 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hum', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum']
+
+test labels
+
+['Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum', 'Hum', 'Hum', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum_controls', 'Hum', 'Hum', 'Hum']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5197802197802198 (+/- 0.07302526472895009)
+hard voting: 0.5340659340659341 (+/- 0.08731943088052277)
+adaboost: 0.5351648351648353 (+/- 0.06450839613819417)
+sk: 0.5362637362637362 (+/- 0.03196272433461315)
+gradient boosting: 0.5626373626373626 (+/- 0.10480544191267133)
+gaussian-nb: 0.5648351648351648 (+/- 0.04706068814365685)
+decision-tree: 0.5769230769230769 (+/- 0.18016616731357535)
+logistic regression: 0.5791208791208791 (+/- 0.08544618539030222)
+knn: 0.6219780219780219 (+/- 0.09953399449867475)
+
+
+(C) 2018, NeuroLex Laboratories

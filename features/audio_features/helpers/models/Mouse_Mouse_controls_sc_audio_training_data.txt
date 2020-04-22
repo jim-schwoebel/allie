@@ -1,0 +1,8 @@
+train labels
+
+['Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls']
+
+test labels
+
+['Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse']
+

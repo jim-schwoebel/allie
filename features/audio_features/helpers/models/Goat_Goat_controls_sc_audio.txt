@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7047619047619047 (+/- 0.17692539419800346) 
+
+MODEL FILE NAME: 
+
+ Goat_Goat_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:06:15.657368
+
+EXECUTION TIME: 
+
+ 2.058192014694214
+
+GROUPS: 
+
+['Goat', 'Goat_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls']
+
+test labels
+
+['Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.49523809523809514 (+/- 0.1493751156319821)
+random forest: 0.5015873015873016 (+/- 0.0960809266693432)
+decision-tree: 0.5238095238095237 (+/- 0.14754222271266348)
+adaboost: 0.5238095238095238 (+/- 0.1634227006505873)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+knn: 0.5650793650793651 (+/- 0.1147257841243978)
+hard voting: 0.5746031746031746 (+/- 0.19111005642276074)
+logistic regression: 0.6888888888888889 (+/- 0.14499285392595856)
+gaussian-nb: 0.7047619047619047 (+/- 0.17692539419800346)
+
+
+(C) 2018, NeuroLex Laboratories

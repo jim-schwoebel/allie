@@ -1,0 +1,8 @@
+train labels
+
+['Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls']
+
+test labels
+
+['Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship', 'Ship', 'Ship', 'Ship_controls', 'Ship', 'Ship_controls', 'Ship_controls', 'Ship']
+

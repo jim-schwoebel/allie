@@ -1,0 +1,8 @@
+train labels
+
+['Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls']
+
+test labels
+
+['Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass']
+

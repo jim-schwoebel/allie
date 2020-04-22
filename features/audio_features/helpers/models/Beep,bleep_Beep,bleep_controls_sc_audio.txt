@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+sk: 0.775 (+/- 0.1457737973711325) 
+
+MODEL FILE NAME: 
+
+ Beep,bleep_Beep,bleep_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:46:16.679403
+
+EXECUTION TIME: 
+
+ 2.3047947883605957
+
+GROUPS: 
+
+['Beep,bleep', 'Beep,bleep_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls']
+
+test labels
+
+['Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep', 'Beep,bleep', 'Beep,bleep_controls', 'Beep,bleep_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.5083333333333333 (+/- 0.21473497877875208)
+adaboost: 0.575 (+/- 0.1695582495781317)
+knn: 0.5916666666666667 (+/- 0.1522972240208089)
+gaussian-nb: 0.6083333333333333 (+/- 0.21666666666666665)
+hard voting: 0.6083333333333333 (+/- 0.14813657362192648)
+random forest: 0.6166666666666667 (+/- 0.16541194367732673)
+decision-tree: 0.6416666666666667 (+/- 0.23511226632776475)
+logistic regression: 0.7083333333333333 (+/- 0.12360330811826105)
+sk: 0.775 (+/- 0.1457737973711325)
+
+
+(C) 2018, NeuroLex Laboratories

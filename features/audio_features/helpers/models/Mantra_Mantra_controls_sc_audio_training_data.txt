@@ -1,0 +1,8 @@
+train labels
+
+['Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls']
+
+test labels
+
+['Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra_controls', 'Mantra_controls', 'Mantra', 'Mantra_controls', 'Mantra', 'Mantra', 'Mantra_controls', 'Mantra_controls']
+

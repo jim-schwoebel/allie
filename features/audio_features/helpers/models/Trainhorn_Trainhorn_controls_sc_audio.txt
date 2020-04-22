@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7825396825396825 (+/- 0.08052329481467167) 
+
+MODEL FILE NAME: 
+
+ Trainhorn_Trainhorn_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:41:11.708810
+
+EXECUTION TIME: 
+
+ 2.017570972442627
+
+GROUPS: 
+
+['Trainhorn', 'Trainhorn_controls']
+(62 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls']
+
+test labels
+
+['Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn', 'Trainhorn_controls', 'Trainhorn_controls', 'Trainhorn', 'Trainhorn_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+logistic regression: 0.5865079365079365 (+/- 0.22741107587380863)
+knn: 0.694047619047619 (+/- 0.15706668026954168)
+gradient boosting: 0.7095238095238094 (+/- 0.16552233759490692)
+hard voting: 0.7095238095238094 (+/- 0.14542229623713943)
+random forest: 0.7095238095238094 (+/- 0.14542229623713943)
+gaussian-nb: 0.7595238095238096 (+/- 0.11887156293952969)
+decision-tree: 0.7825396825396825 (+/- 0.08829342785775314)
+adaboost: 0.7825396825396825 (+/- 0.08052329481467167)
+
+
+(C) 2018, NeuroLex Laboratories

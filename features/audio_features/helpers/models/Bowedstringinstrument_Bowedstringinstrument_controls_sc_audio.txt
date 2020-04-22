@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8 (+/- 0.04844521416518047) 
+
+MODEL FILE NAME: 
+
+ Bowedstringinstrument_Bowedstringinstrument_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:12:01.036662
+
+EXECUTION TIME: 
+
+ 3.300266981124878
+
+GROUPS: 
+
+['Bowedstringinstrument', 'Bowedstringinstrument_controls']
+(112 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument']
+
+test labels
+
+['Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument', 'Bowedstringinstrument', 'Bowedstringinstrument_controls', 'Bowedstringinstrument_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.525 (+/- 0.03061862178478973)
+decision-tree: 0.6375 (+/- 0.07397255420431421)
+logistic regression: 0.6892857142857143 (+/- 0.08326102304910547)
+knn: 0.7160714285714286 (+/- 0.04935812486101874)
+gaussian-nb: 0.7196428571428571 (+/- 0.1554289653356353)
+random forest: 0.7285714285714285 (+/- 0.06252550500004139)
+gradient boosting: 0.7321428571428572 (+/- 0.0636376060043052)
+hard voting: 0.7982142857142858 (+/- 0.05747670335511098)
+adaboost: 0.8 (+/- 0.04844521416518047)
+
+
+(C) 2018, NeuroLex Laboratories

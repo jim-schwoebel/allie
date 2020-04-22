@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8 (+/- 0.1274754878398196) 
+
+MODEL FILE NAME: 
+
+ Beatboxing_Beatboxing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:44:22.895242
+
+EXECUTION TIME: 
+
+ 2.1886250972747803
+
+GROUPS: 
+
+['Beatboxing', 'Beatboxing_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls']
+
+test labels
+
+['Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing', 'Beatboxing', 'Beatboxing_controls', 'Beatboxing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5833333333333333 (+/- 0.06972166887783962)
+adaboost: 0.5833333333333333 (+/- 0.06972166887783962)
+gradient boosting: 0.6416666666666667 (+/- 0.1740051084818425)
+hard voting: 0.65 (+/- 0.18371173070873836)
+random forest: 0.6583333333333333 (+/- 0.04859126579037751)
+gaussian-nb: 0.6666666666666667 (+/- 0.1148670729340852)
+knn: 0.7166666666666667 (+/- 0.13794121131039042)
+sk: 0.775 (+/- 0.1457737973711325)
+logistic regression: 0.8 (+/- 0.1274754878398196)
+
+
+(C) 2018, NeuroLex Laboratories

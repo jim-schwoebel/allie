@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7797619047619048 (+/- 0.1357351696546593) 
+
+MODEL FILE NAME: 
+
+ Wheeze_Wheeze_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:22:39.621938
+
+EXECUTION TIME: 
+
+ 1.958479881286621
+
+GROUPS: 
+
+['Wheeze', 'Wheeze_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls']
+
+test labels
+
+['Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze', 'Wheeze_controls', 'Wheeze_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5714285714285714 (+/- 0.14285714285714285)
+logistic regression: 0.6297619047619047 (+/- 0.1727790719669213)
+random forest: 0.6428571428571429 (+/- 0.15100757590882455)
+gaussian-nb: 0.7 (+/- 0.2449489742783178)
+decision-tree: 0.7130952380952381 (+/- 0.13396957044414476)
+gradient boosting: 0.7464285714285714 (+/- 0.1743793659390529)
+adaboost: 0.7630952380952382 (+/- 0.13834132425079954)
+hard voting: 0.7714285714285715 (+/- 0.18189759397495492)
+knn: 0.7797619047619048 (+/- 0.1357351696546593)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7047619047619047 (+/- 0.09233675918888246) 
+
+MODEL FILE NAME: 
+
+ Firecracker_Firecracker_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:43:04.681056
+
+EXECUTION TIME: 
+
+ 2.0344908237457275
+
+GROUPS: 
+
+['Firecracker', 'Firecracker_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls']
+
+test labels
+
+['Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker_controls', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker', 'Firecracker_controls', 'Firecracker_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.45396825396825397 (+/- 0.13750100208068392)
+hard voting: 0.5333333333333333 (+/- 0.09233675918888244)
+gradient boosting: 0.5619047619047619 (+/- 0.07619047619047618)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+random forest: 0.5682539682539682 (+/- 0.09057360392182291)
+decision-tree: 0.5968253968253968 (+/- 0.14076063033266897)
+logistic regression: 0.6253968253968253 (+/- 0.14706329932572024)
+gaussian-nb: 0.653968253968254 (+/- 0.1476787726934985)
+knn: 0.7047619047619047 (+/- 0.09233675918888246)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls']
+
+test labels
+
+['Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls']
+

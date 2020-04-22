@@ -1,0 +1,8 @@
+train labels
+
+['Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls']
+
+test labels
+
+['Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock']
+

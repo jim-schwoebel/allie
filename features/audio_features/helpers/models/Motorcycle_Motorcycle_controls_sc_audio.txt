@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6746031746031745 (+/- 0.16403823089223887) 
+
+MODEL FILE NAME: 
+
+ Motorcycle_Motorcycle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:37:08.772717
+
+EXECUTION TIME: 
+
+ 2.084723949432373
+
+GROUPS: 
+
+['Motorcycle', 'Motorcycle_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls']
+
+test labels
+
+['Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle', 'Motorcycle', 'Motorcycle_controls', 'Motorcycle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.49365079365079356 (+/- 0.09040654518030566)
+decision-tree: 0.5313492063492063 (+/- 0.11653701899037282)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.5599206349206349 (+/- 0.17954935049110812)
+hard voting: 0.573015873015873 (+/- 0.14464489841135897)
+knn: 0.5785714285714285 (+/- 0.16625800238186755)
+adaboost: 0.5980158730158729 (+/- 0.10774083571012551)
+gaussian-nb: 0.6682539682539682 (+/- 0.1330306466016315)
+random forest: 0.6746031746031745 (+/- 0.16403823089223887)
+
+
+(C) 2018, NeuroLex Laboratories

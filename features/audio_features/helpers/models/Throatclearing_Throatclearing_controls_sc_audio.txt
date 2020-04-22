@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.775 (+/- 0.07264831572567791) 
+
+MODEL FILE NAME: 
+
+ Throatclearing_Throatclearing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:24:16.882500
+
+EXECUTION TIME: 
+
+ 2.1264350414276123
+
+GROUPS: 
+
+['Throatclearing', 'Throatclearing_controls']
+(54 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls']
+
+test labels
+
+['Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls', 'Throatclearing', 'Throatclearing', 'Throatclearing_controls', 'Throatclearing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.6 (+/- 0.2)
+decision-tree: 0.6083333333333333 (+/- 0.097182531580755)
+logistic regression: 0.6416666666666666 (+/- 0.0816496580927726)
+random forest: 0.6666666666666666 (+/- 0.045643546458763846)
+knn: 0.7083333333333333 (+/- 0.16666666666666669)
+gaussian-nb: 0.725 (+/- 0.13333333333333336)
+adaboost: 0.775 (+/- 0.07264831572567791)
+gradient boosting: 0.775 (+/- 0.07264831572567791)
+hard voting: 0.775 (+/- 0.07264831572567791)
+
+
+(C) 2018, NeuroLex Laboratories

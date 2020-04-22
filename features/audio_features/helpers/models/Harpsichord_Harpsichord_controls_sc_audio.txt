@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8456349206349205 (+/- 0.04928309427384133) 
+
+MODEL FILE NAME: 
+
+ Harpsichord_Harpsichord_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:30:01.105264
+
+EXECUTION TIME: 
+
+ 2.0033037662506104
+
+GROUPS: 
+
+['Harpsichord', 'Harpsichord_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls']
+
+test labels
+
+['Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord', 'Harpsichord_controls', 'Harpsichord_controls', 'Harpsichord']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.6412698412698413 (+/- 0.14174723154898464)
+decision-tree: 0.6817460317460318 (+/- 0.17636913578756633)
+random forest: 0.7003968253968254 (+/- 0.10381364974083111)
+adaboost: 0.7067460317460317 (+/- 0.18078173518714183)
+gradient boosting: 0.7067460317460317 (+/- 0.15658470701556848)
+hard voting: 0.7067460317460317 (+/- 0.15658470701556848)
+logistic regression: 0.8242063492063492 (+/- 0.12756316394700437)
+gaussian-nb: 0.8456349206349205 (+/- 0.04928309427384133)
+
+
+(C) 2018, NeuroLex Laboratories

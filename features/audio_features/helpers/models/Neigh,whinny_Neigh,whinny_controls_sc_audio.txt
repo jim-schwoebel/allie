@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.5424603174603174 (+/- 0.06308899839367364) 
+
+MODEL FILE NAME: 
+
+ Neigh,whinny_Neigh,whinny_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:16:04.702259
+
+EXECUTION TIME: 
+
+ 2.059544801712036
+
+GROUPS: 
+
+['Neigh,whinny', 'Neigh,whinny_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls']
+
+test labels
+
+['Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny', 'Neigh,whinny_controls', 'Neigh,whinny_controls', 'Neigh,whinny']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.321031746031746 (+/- 0.1507748526294658)
+gradient boosting: 0.38809523809523805 (+/- 0.12544704640304277)
+adaboost: 0.39444444444444443 (+/- 0.19385804028546438)
+hard voting: 0.4515873015873016 (+/- 0.18918877088898872)
+random forest: 0.4674603174603174 (+/- 0.1187403441858098)
+decision-tree: 0.48611111111111105 (+/- 0.14804299934419357)
+logistic regression: 0.49603174603174605 (+/- 0.13059716131568014)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.5424603174603174 (+/- 0.06308899839367364)
+
+
+(C) 2018, NeuroLex Laboratories

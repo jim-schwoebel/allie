@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7567460317460318 (+/- 0.09599238337971726) 
+
+MODEL FILE NAME: 
+
+ Turkey_Turkey_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:50:04.800622
+
+EXECUTION TIME: 
+
+ 2.065340995788574
+
+GROUPS: 
+
+['Turkey', 'Turkey_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls']
+
+test labels
+
+['Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5222222222222223 (+/- 0.05274046897090842)
+adaboost: 0.623015873015873 (+/- 0.15368981532569115)
+gaussian-nb: 0.6452380952380953 (+/- 0.09744790779791003)
+hard voting: 0.6515873015873016 (+/- 0.07679981208509806)
+decision-tree: 0.657936507936508 (+/- 0.10998293461155562)
+logistic regression: 0.682936507936508 (+/- 0.1654167035551935)
+knn: 0.7015873015873015 (+/- 0.18872208187557907)
+gradient boosting: 0.730952380952381 (+/- 0.09952013866296656)
+random forest: 0.7567460317460318 (+/- 0.09599238337971726)
+
+
+(C) 2018, NeuroLex Laboratories

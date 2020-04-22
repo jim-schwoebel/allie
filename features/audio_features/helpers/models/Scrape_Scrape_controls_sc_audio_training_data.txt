@@ -1,0 +1,8 @@
+train labels
+
+['Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls']
+
+test labels
+
+['Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape']
+

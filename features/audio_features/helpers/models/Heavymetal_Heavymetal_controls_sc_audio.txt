@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8126984126984127 (+/- 0.12146746964894596) 
+
+MODEL FILE NAME: 
+
+ Heavymetal_Heavymetal_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:33:32.339145
+
+EXECUTION TIME: 
+
+ 2.2071621417999268
+
+GROUPS: 
+
+['Heavymetal', 'Heavymetal_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls']
+
+test labels
+
+['Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal', 'Heavymetal', 'Heavymetal_controls', 'Heavymetal_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.5873015873015873 (+/- 0.09887245398347579)
+gradient boosting: 0.6952380952380952 (+/- 0.1731250565642664)
+knn: 0.7492063492063492 (+/- 0.17136977239702578)
+gaussian-nb: 0.7555555555555555 (+/- 0.13968253968253969)
+logistic regression: 0.7555555555555555 (+/- 0.12071843391639073)
+random forest: 0.7777777777777778 (+/- 0.1750355397090822)
+hard voting: 0.7904761904761906 (+/- 0.11551368507085874)
+adaboost: 0.8126984126984127 (+/- 0.12146746964894596)
+
+
+(C) 2018, NeuroLex Laboratories

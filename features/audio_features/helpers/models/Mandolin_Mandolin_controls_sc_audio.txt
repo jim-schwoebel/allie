@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6876984126984127 (+/- 0.07765620560252419) 
+
+MODEL FILE NAME: 
+
+ Mandolin_Mandolin_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:25:02.272011
+
+EXECUTION TIME: 
+
+ 2.0598480701446533
+
+GROUPS: 
+
+['Mandolin', 'Mandolin_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls']
+
+test labels
+
+['Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin', 'Mandolin', 'Mandolin_controls', 'Mandolin', 'Mandolin_controls', 'Mandolin_controls', 'Mandolin']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.4424603174603174 (+/- 0.16574765521834825)
+decision-tree: 0.4825396825396825 (+/- 0.09275363923498006)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.5484126984126984 (+/- 0.18918877088898875)
+gradient boosting: 0.5888888888888888 (+/- 0.1405591182003027)
+random forest: 0.5896825396825396 (+/- 0.09501793335660402)
+hard voting: 0.5896825396825397 (+/- 0.08435130321007253)
+knn: 0.5932539682539681 (+/- 0.07245731838922985)
+gaussian-nb: 0.6876984126984127 (+/- 0.07765620560252419)
+
+
+(C) 2018, NeuroLex Laboratories

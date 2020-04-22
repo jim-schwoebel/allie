@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.8220000000000001 (+/- 0.0769805170156709) 
+
+MODEL FILE NAME: 
+
+ Train_Train_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:40:18.154852
+
+EXECUTION TIME: 
+
+ 3.2271511554718018
+
+GROUPS: 
+
+['Train', 'Train_controls']
+(185 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train']
+
+test labels
+
+['Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train', 'Train', 'Train_controls', 'Train', 'Train_controls', 'Train', 'Train_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5036666666666667 (+/- 0.02395365896429559)
+logistic regression: 0.667 (+/- 0.0577581163127746)
+decision-tree: 0.7153333333333334 (+/- 0.10472397581791434)
+gaussian-nb: 0.7646666666666666 (+/- 0.05709057131727909)
+gradient boosting: 0.7716666666666667 (+/- 0.11912645009027638)
+hard voting: 0.772 (+/- 0.09525637919728937)
+random forest: 0.772 (+/- 0.12027468561588511)
+adaboost: 0.7963333333333333 (+/- 0.103668274371242)
+knn: 0.8220000000000001 (+/- 0.0769805170156709)
+
+
+(C) 2018, NeuroLex Laboratories

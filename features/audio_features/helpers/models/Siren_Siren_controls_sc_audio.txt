@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.76 (+/- 0.09158692963776752) 
+
+MODEL FILE NAME: 
+
+ Siren_Siren_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:20:33.106927
+
+EXECUTION TIME: 
+
+ 3.323166847229004
+
+GROUPS: 
+
+['Siren', 'Siren_controls']
+(194 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren']
+
+test labels
+
+['Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren', 'Siren_controls', 'Siren_controls', 'Siren', 'Siren_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5270769230769231 (+/- 0.015310591144153498)
+decision-tree: 0.6046153846153847 (+/- 0.09846153846153846)
+adaboost: 0.6904615384615385 (+/- 0.05184775163025321)
+knn: 0.6975384615384617 (+/- 0.04554054049308558)
+gradient boosting: 0.7286153846153847 (+/- 0.12170232381225009)
+random forest: 0.736923076923077 (+/- 0.09119846360171652)
+logistic regression: 0.7372307692307694 (+/- 0.07282239073057116)
+hard voting: 0.7526153846153846 (+/- 0.11207098342320276)
+gaussian-nb: 0.76 (+/- 0.09158692963776752)
+
+
+(C) 2018, NeuroLex Laboratories

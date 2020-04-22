@@ -1,0 +1,8 @@
+train labels
+
+['Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls']
+
+test labels
+
+['Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands', 'Hands', 'Hands_controls', 'Hands_controls']
+

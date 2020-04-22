@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.875 (+/- 0.13693063937629152) 
+
+MODEL FILE NAME: 
+
+ Bagpipes_Bagpipes_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:35:50.410867
+
+EXECUTION TIME: 
+
+ 2.1755189895629883
+
+GROUPS: 
+
+['Bagpipes', 'Bagpipes_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls']
+
+test labels
+
+['Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes', 'Bagpipes', 'Bagpipes_controls', 'Bagpipes_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5 (+/- 0.0)
+adaboost: 0.725 (+/- 0.24238399287081647)
+decision-tree: 0.7416666666666667 (+/- 0.18892973414591058)
+gaussian-nb: 0.775 (+/- 0.18371173070873836)
+gradient boosting: 0.775 (+/- 0.21505813167606566)
+logistic regression: 0.775 (+/- 0.16583123951777)
+knn: 0.775 (+/- 0.2)
+hard voting: 0.8 (+/- 0.2318404623873926)
+random forest: 0.875 (+/- 0.13693063937629152)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls']
+
+test labels
+
+['Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm', 'Alarm', 'Alarm_controls', 'Alarm', 'Alarm_controls', 'Alarm_controls', 'Alarm']
+

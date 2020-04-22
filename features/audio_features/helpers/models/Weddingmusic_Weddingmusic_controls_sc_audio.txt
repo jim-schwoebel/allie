@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.803968253968254 (+/- 0.1729284765430381) 
+
+MODEL FILE NAME: 
+
+ Weddingmusic_Weddingmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:20:11.133041
+
+EXECUTION TIME: 
+
+ 2.189923048019409
+
+GROUPS: 
+
+['Weddingmusic', 'Weddingmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls']
+
+test labels
+
+['Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic', 'Weddingmusic_controls', 'Weddingmusic_controls', 'Weddingmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.628968253968254 (+/- 0.21515842276886346)
+decision-tree: 0.6976190476190476 (+/- 0.08629104892581009)
+gradient boosting: 0.7031746031746031 (+/- 0.1590007614022028)
+hard voting: 0.7059523809523809 (+/- 0.19610724078070477)
+knn: 0.7134920634920635 (+/- 0.12464108209143225)
+random forest: 0.719047619047619 (+/- 0.03067642553982174)
+gaussian-nb: 0.7984126984126985 (+/- 0.12967510810048224)
+adaboost: 0.803968253968254 (+/- 0.1729284765430381)
+
+
+(C) 2018, NeuroLex Laboratories

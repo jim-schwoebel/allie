@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.9428571428571428 (+/- 0.11428571428571428) 
+
+MODEL FILE NAME: 
+
+ Rhythmandblues_Rhythmandblues_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:33:48.854282
+
+EXECUTION TIME: 
+
+ 2.158778190612793
+
+GROUPS: 
+
+['Rhythmandblues', 'Rhythmandblues_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls']
+
+test labels
+
+['Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues', 'Rhythmandblues', 'Rhythmandblues_controls', 'Rhythmandblues_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.7238095238095238 (+/- 0.15700651452543793)
+knn: 0.7396825396825397 (+/- 0.03110463165438956)
+gaussian-nb: 0.7682539682539682 (+/- 0.10461750510021638)
+random forest: 0.7809523809523811 (+/- 0.1476787726934985)
+logistic regression: 0.7968253968253969 (+/- 0.12674580811223574)
+hard voting: 0.7968253968253969 (+/- 0.05443310539518171)
+gradient boosting: 0.8031746031746032 (+/- 0.11733154674651639)
+adaboost: 0.9428571428571428 (+/- 0.11428571428571428)
+
+
+(C) 2018, NeuroLex Laboratories

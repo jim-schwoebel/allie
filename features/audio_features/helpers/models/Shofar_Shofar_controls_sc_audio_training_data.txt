@@ -1,0 +1,8 @@
+train labels
+
+['Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls']
+
+test labels
+
+['Shofar', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar_controls', 'Shofar_controls', 'Shofar_controls', 'Shofar', 'Shofar', 'Shofar', 'Shofar', 'Shofar', 'Shofar_controls', 'Shofar_controls']
+

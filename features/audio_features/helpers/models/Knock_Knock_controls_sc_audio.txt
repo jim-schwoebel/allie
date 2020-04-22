@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7968253968253969 (+/- 0.08888888888888886) 
+
+MODEL FILE NAME: 
+
+ Knock_Knock_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:13:14.233330
+
+EXECUTION TIME: 
+
+ 2.0254242420196533
+
+GROUPS: 
+
+['Knock', 'Knock_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls']
+
+test labels
+
+['Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock', 'Knock', 'Knock_controls', 'Knock_controls', 'Knock_controls', 'Knock', 'Knock_controls', 'Knock', 'Knock', 'Knock_controls', 'Knock_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.6317460317460317 (+/- 0.12188161155842837)
+decision-tree: 0.6666666666666667 (+/- 0.0875177698545411)
+adaboost: 0.6825396825396824 (+/- 0.1170735804100684)
+knn: 0.7523809523809524 (+/- 0.16995249288030698)
+gradient boosting: 0.7682539682539682 (+/- 0.15506888561041032)
+hard voting: 0.7682539682539683 (+/- 0.1260281475636775)
+gaussian-nb: 0.7904761904761906 (+/- 0.11551368507085874)
+logistic regression: 0.7968253968253969 (+/- 0.08888888888888886)
+
+
+(C) 2018, NeuroLex Laboratories

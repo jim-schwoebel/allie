@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7394444444444443 (+/- 0.09597453365925314) 
+
+MODEL FILE NAME: 
+
+ Ambulance(siren)_Ambulance(siren)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:15:20.055001
+
+EXECUTION TIME: 
+
+ 2.3095600605010986
+
+GROUPS: 
+
+['Ambulance(siren)', 'Ambulance(siren)_controls']
+(67 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls']
+
+test labels
+
+['Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls', 'Ambulance(siren)_controls', 'Ambulance(siren)', 'Ambulance(siren)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5505555555555555 (+/- 0.13869319546803946)
+sk: 0.5783333333333334 (+/- 0.02899552966822196)
+gaussian-nb: 0.6199999999999999 (+/- 0.09594236953299068)
+random forest: 0.64 (+/- 0.10002468831046131)
+gradient boosting: 0.665 (+/- 0.07419527122131798)
+decision-tree: 0.67 (+/- 0.08488190779904124)
+adaboost: 0.7144444444444444 (+/- 0.07023769168568494)
+hard voting: 0.7372222222222222 (+/- 0.0799614104458759)
+logistic regression: 0.7394444444444443 (+/- 0.09597453365925314)
+
+
+(C) 2018, NeuroLex Laboratories

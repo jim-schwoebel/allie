@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7880952380952382 (+/- 0.14512312215677453) 
+
+MODEL FILE NAME: 
+
+ Choruseffect_Choruseffect_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:05:42.179130
+
+EXECUTION TIME: 
+
+ 2.3723220825195312
+
+GROUPS: 
+
+['Choruseffect', 'Choruseffect_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls']
+
+test labels
+
+['Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect', 'Choruseffect', 'Choruseffect_controls', 'Choruseffect']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.6361111111111111 (+/- 0.14980671178031993)
+gaussian-nb: 0.6452380952380953 (+/- 0.09744790779791003)
+adaboost: 0.6801587301587302 (+/- 0.19296652460214958)
+decision-tree: 0.6865079365079365 (+/- 0.11680425964752525)
+random forest: 0.7023809523809523 (+/- 0.17010808296239432)
+knn: 0.7087301587301588 (+/- 0.09898705922329436)
+hard voting: 0.730952380952381 (+/- 0.1619592189773123)
+gradient boosting: 0.7880952380952382 (+/- 0.14512312215677453)
+
+
+(C) 2018, NeuroLex Laboratories

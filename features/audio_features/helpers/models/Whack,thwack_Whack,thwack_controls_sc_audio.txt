@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7317460317460318 (+/- 0.038276684291388884) 
+
+MODEL FILE NAME: 
+
+ Whack,thwack_Whack,thwack_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:21:03.345830
+
+EXECUTION TIME: 
+
+ 2.0332930088043213
+
+GROUPS: 
+
+['Whack,thwack', 'Whack,thwack_controls']
+(61 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls']
+
+test labels
+
+['Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack', 'Whack,thwack_controls', 'Whack,thwack_controls', 'Whack,thwack']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.4793650793650793 (+/- 0.1455359509741532)
+knn: 0.4793650793650793 (+/- 0.1455359509741532)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+decision-tree: 0.5773809523809523 (+/- 0.1634227006505873)
+gradient boosting: 0.5996031746031746 (+/- 0.1233380318199641)
+hard voting: 0.6309523809523808 (+/- 0.03511400286607767)
+adaboost: 0.6623015873015874 (+/- 0.0681154001305566)
+logistic regression: 0.6623015873015874 (+/- 0.18511979193099656)
+random forest: 0.7317460317460318 (+/- 0.038276684291388884)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6911111111111111 (+/- 0.10650740425197595) 
+
+MODEL FILE NAME: 
+
+ Goose_Goose_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:08:56.910327
+
+EXECUTION TIME: 
+
+ 2.1284806728363037
+
+GROUPS: 
+
+['Goose', 'Goose_controls']
+(68 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls']
+
+test labels
+
+['Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose_controls', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose', 'Goose_controls', 'Goose', 'Goose']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4011111111111111 (+/- 0.11549143520165586)
+adaboost: 0.4538888888888889 (+/- 0.15529342994060003)
+gradient boosting: 0.4638888888888889 (+/- 0.12222222222222223)
+hard voting: 0.4738888888888889 (+/- 0.15349427946070335)
+gaussian-nb: 0.5788888888888889 (+/- 0.06814563199863824)
+random forest: 0.5983333333333334 (+/- 0.054873592110514416)
+sk: 0.6011111111111112 (+/- 0.02537374943704274)
+logistic regression: 0.6211111111111111 (+/- 0.04689757686756727)
+knn: 0.6911111111111111 (+/- 0.10650740425197595)
+
+
+(C) 2018, NeuroLex Laboratories

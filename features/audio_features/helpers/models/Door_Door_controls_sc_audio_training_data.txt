@@ -1,0 +1,8 @@
+train labels
+
+['Door', 'Door', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door', 'Door', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door', 'Door', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door', 'Door', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door_controls', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door_controls', 'Door', 'Door_controls']
+
+test labels
+
+['Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door_controls', 'Door', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door', 'Door', 'Door_controls', 'Door_controls']
+

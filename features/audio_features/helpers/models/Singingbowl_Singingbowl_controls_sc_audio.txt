@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8103174603174603 (+/- 0.15025802951795383) 
+
+MODEL FILE NAME: 
+
+ Singingbowl_Singingbowl_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:16:01.069794
+
+EXECUTION TIME: 
+
+ 1.9773030281066895
+
+GROUPS: 
+
+['Singingbowl', 'Singingbowl_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls']
+
+test labels
+
+['Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl', 'Singingbowl', 'Singingbowl_controls', 'Singingbowl']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+random forest: 0.6265873015873016 (+/- 0.11556002520572588)
+adaboost: 0.7154761904761905 (+/- 0.14984875216723395)
+knn: 0.721031746031746 (+/- 0.10228246770487326)
+hard voting: 0.7404761904761905 (+/- 0.14293648590289176)
+gradient boosting: 0.7468253968253967 (+/- 0.11794195548101538)
+logistic regression: 0.7781746031746033 (+/- 0.12767914955284068)
+decision-tree: 0.8003968253968253 (+/- 0.09155923753686503)
+gaussian-nb: 0.8103174603174603 (+/- 0.15025802951795383)
+
+
+(C) 2018, NeuroLex Laboratories

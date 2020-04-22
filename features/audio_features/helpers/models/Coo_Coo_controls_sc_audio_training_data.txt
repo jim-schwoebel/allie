@@ -1,0 +1,8 @@
+train labels
+
+['Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo', 'Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls']
+
+test labels
+
+['Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo', 'Coo', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo_controls', 'Coo', 'Coo_controls', 'Coo_controls', 'Coo']
+

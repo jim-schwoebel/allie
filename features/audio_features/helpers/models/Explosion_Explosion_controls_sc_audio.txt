@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7253968253968254 (+/- 0.1403303879701609) 
+
+MODEL FILE NAME: 
+
+ Explosion_Explosion_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:34:30.364995
+
+EXECUTION TIME: 
+
+ 2.100526809692383
+
+GROUPS: 
+
+['Explosion', 'Explosion_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls']
+
+test labels
+
+['Explosion', 'Explosion', 'Explosion', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion_controls', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion_controls', 'Explosion', 'Explosion', 'Explosion_controls', 'Explosion']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.47777777777777775 (+/- 0.052740468970908415)
+random forest: 0.509920634920635 (+/- 0.18498193683820102)
+adaboost: 0.5444444444444444 (+/- 0.07898320828333161)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.5543650793650794 (+/- 0.1671365259055038)
+gaussian-nb: 0.6238095238095239 (+/- 0.1045211278295513)
+hard voting: 0.6369047619047619 (+/- 0.20066185523445287)
+decision-tree: 0.7031746031746031 (+/- 0.17529444688607648)
+gradient boosting: 0.7253968253968254 (+/- 0.1403303879701609)
+
+
+(C) 2018, NeuroLex Laboratories

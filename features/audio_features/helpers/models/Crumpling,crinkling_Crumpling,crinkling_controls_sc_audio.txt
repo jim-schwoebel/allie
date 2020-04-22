@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8242063492063492 (+/- 0.16962417515251274) 
+
+MODEL FILE NAME: 
+
+ Crumpling,crinkling_Crumpling,crinkling_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:37:29.721992
+
+EXECUTION TIME: 
+
+ 2.0485408306121826
+
+GROUPS: 
+
+['Crumpling,crinkling', 'Crumpling,crinkling_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls']
+
+test labels
+
+['Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling', 'Crumpling,crinkling_controls', 'Crumpling,crinkling_controls', 'Crumpling,crinkling']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.628968253968254 (+/- 0.24247298176989737)
+knn: 0.6369047619047619 (+/- 0.1303014123096393)
+random forest: 0.6662698412698413 (+/- 0.1320683569006287)
+hard voting: 0.7011904761904761 (+/- 0.16548903684290614)
+gradient boosting: 0.7198412698412698 (+/- 0.08969834107178619)
+decision-tree: 0.734920634920635 (+/- 0.12850404857974607)
+gaussian-nb: 0.7892857142857144 (+/- 0.17068290207640743)
+logistic regression: 0.8242063492063492 (+/- 0.16962417515251274)
+
+
+(C) 2018, NeuroLex Laboratories

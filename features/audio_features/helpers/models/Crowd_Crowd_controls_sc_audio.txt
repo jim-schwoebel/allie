@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8505847953216374 (+/- 0.07560930863596947) 
+
+MODEL FILE NAME: 
+
+ Crowd_Crowd_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:35:50.322311
+
+EXECUTION TIME: 
+
+ 2.876268148422241
+
+GROUPS: 
+
+['Crowd', 'Crowd_controls']
+(143 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd']
+
+test labels
+
+['Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd', 'Crowd_controls', 'Crowd', 'Crowd_controls', 'Crowd']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.4947368421052632 (+/- 0.010526315789473694)
+decision-tree: 0.691812865497076 (+/- 0.17741489202134908)
+gaussian-nb: 0.7661988304093568 (+/- 0.08629379741706959)
+logistic regression: 0.7878947368421052 (+/- 0.060698148604440186)
+random forest: 0.8101169590643273 (+/- 0.07217985356663444)
+adaboost: 0.8105847953216374 (+/- 0.078508287321405)
+knn: 0.8107017543859649 (+/- 0.05350017506755934)
+hard voting: 0.8194736842105262 (+/- 0.07597965453518776)
+gradient boosting: 0.8505847953216374 (+/- 0.07560930863596947)
+
+
+(C) 2018, NeuroLex Laboratories

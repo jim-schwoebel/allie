@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7842424242424243 (+/- 0.08277800888659415) 
+
+MODEL FILE NAME: 
+
+ Powertool_Powertool_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:03:36.692357
+
+EXECUTION TIME: 
+
+ 2.318413019180298
+
+GROUPS: 
+
+['Powertool', 'Powertool_controls']
+(75 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls']
+
+test labels
+
+['Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool', 'Powertool', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls', 'Powertool_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4595959595959596 (+/- 0.24103135198883813)
+sk: 0.5404040404040403 (+/- 0.020700910638302223)
+random forest: 0.6145454545454545 (+/- 0.20809610613569365)
+gradient boosting: 0.6307070707070707 (+/- 0.18961250687922457)
+adaboost: 0.6426262626262625 (+/- 0.17855020440284214)
+gaussian-nb: 0.6448484848484849 (+/- 0.13115079320425904)
+hard voting: 0.6870707070707069 (+/- 0.17900221131012004)
+logistic regression: 0.7096969696969696 (+/- 0.11763683373223652)
+knn: 0.7842424242424243 (+/- 0.08277800888659415)
+
+
+(C) 2018, NeuroLex Laboratories

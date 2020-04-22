@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.5391666666666668 (+/- 0.0607590871118606) 
+
+MODEL FILE NAME: 
+
+ Fly,housefly_Fly,housefly_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:50:09.282534
+
+EXECUTION TIME: 
+
+ 2.580785036087036
+
+GROUPS: 
+
+['Fly,housefly', 'Fly,housefly_controls']
+(114 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly']
+
+test labels
+
+['Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly_controls', 'Fly,housefly', 'Fly,housefly_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.44666666666666666 (+/- 0.16275407487644936)
+gaussian-nb: 0.44749999999999995 (+/- 0.07762087348130012)
+random forest: 0.48666666666666664 (+/- 0.1484737163421339)
+gradient boosting: 0.4883333333333333 (+/- 0.10482790129010923)
+adaboost: 0.5008333333333334 (+/- 0.058713049846028445)
+hard voting: 0.5125000000000001 (+/- 0.057373048260195014)
+decision-tree: 0.5149999999999999 (+/- 0.09551032521262934)
+sk: 0.5266666666666666 (+/- 0.013333333333333332)
+knn: 0.5391666666666668 (+/- 0.0607590871118606)
+
+
+(C) 2018, NeuroLex Laboratories

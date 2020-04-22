@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6698412698412698 (+/- 0.12311567891850994) 
+
+MODEL FILE NAME: 
+
+ Roaringcats(lions,tigers)_Roaringcats(lions,tigers)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:37:29.641465
+
+EXECUTION TIME: 
+
+ 1.9772930145263672
+
+GROUPS: 
+
+['Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls']
+
+test labels
+
+['Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)', 'Roaringcats(lions,tigers)_controls', 'Roaringcats(lions,tigers)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.5111111111111112 (+/- 0.14457520681569144)
+knn: 0.5396825396825397 (+/- 0.05589465670367939)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.5746031746031746 (+/- 0.08541983521951564)
+random forest: 0.5746031746031746 (+/- 0.08541983521951563)
+decision-tree: 0.580952380952381 (+/- 0.16605329308726377)
+adaboost: 0.6190476190476191 (+/- 0.10858813572372744)
+hard voting: 0.6190476190476191 (+/- 0.10858813572372744)
+gaussian-nb: 0.6698412698412698 (+/- 0.12311567891850994)
+
+
+(C) 2018, NeuroLex Laboratories

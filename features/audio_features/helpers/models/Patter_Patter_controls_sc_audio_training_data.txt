@@ -1,0 +1,8 @@
+train labels
+
+['Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls']
+
+test labels
+
+['Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter', 'Patter', 'Patter', 'Patter_controls', 'Patter', 'Patter_controls', 'Patter_controls', 'Patter']
+

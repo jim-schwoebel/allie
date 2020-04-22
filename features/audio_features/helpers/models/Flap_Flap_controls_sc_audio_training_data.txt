@@ -1,0 +1,8 @@
+train labels
+
+['Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls']
+
+test labels
+
+['Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap', 'Flap', 'Flap', 'Flap_controls', 'Flap', 'Flap_controls', 'Flap_controls', 'Flap']
+

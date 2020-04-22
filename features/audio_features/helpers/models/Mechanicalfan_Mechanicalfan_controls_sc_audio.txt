@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7412698412698413 (+/- 0.1437012101302384) 
+
+MODEL FILE NAME: 
+
+ Mechanicalfan_Mechanicalfan_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:28:41.006180
+
+EXECUTION TIME: 
+
+ 2.2417831420898438
+
+GROUPS: 
+
+['Mechanicalfan', 'Mechanicalfan_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls']
+
+test labels
+
+['Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan', 'Mechanicalfan', 'Mechanicalfan_controls', 'Mechanicalfan']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gaussian-nb: 0.6265873015873016 (+/- 0.05897097774050769)
+hard voting: 0.6718253968253969 (+/- 0.1666458792781054)
+random forest: 0.6773809523809524 (+/- 0.07795978057467322)
+decision-tree: 0.6904761904761905 (+/- 0.14000683854730125)
+knn: 0.6932539682539682 (+/- 0.08274166373485302)
+gradient boosting: 0.719047619047619 (+/- 0.12674580811223574)
+logistic regression: 0.7281746031746033 (+/- 0.08211505548996743)
+adaboost: 0.7412698412698413 (+/- 0.1437012101302384)
+
+
+(C) 2018, NeuroLex Laboratories

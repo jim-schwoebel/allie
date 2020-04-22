@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8634920634920634 (+/- 0.09123878008380898) 
+
+MODEL FILE NAME: 
+
+ Humming_Humming_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:45:55.896816
+
+EXECUTION TIME: 
+
+ 2.011049270629883
+
+GROUPS: 
+
+['Humming', 'Humming_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls']
+
+test labels
+
+['Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+decision-tree: 0.653968253968254 (+/- 0.11681504439983553)
+knn: 0.7047619047619047 (+/- 0.09233675918888246)
+gradient boosting: 0.7269841269841271 (+/- 0.09385235237520306)
+random forest: 0.7555555555555556 (+/- 0.056432980427400546)
+adaboost: 0.7841269841269842 (+/- 0.11070219539150916)
+gaussian-nb: 0.8063492063492064 (+/- 0.11810206500151284)
+hard voting: 0.8063492063492064 (+/- 0.14869890068102057)
+logistic regression: 0.8634920634920634 (+/- 0.09123878008380898)
+
+
+(C) 2018, NeuroLex Laboratories

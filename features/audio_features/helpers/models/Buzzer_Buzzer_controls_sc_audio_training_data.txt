@@ -1,0 +1,8 @@
+train labels
+
+['Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls']
+
+test labels
+
+['Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls']
+

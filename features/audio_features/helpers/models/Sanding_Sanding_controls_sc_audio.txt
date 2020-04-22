@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.7198412698412698 (+/- 0.08969834107178618) 
+
+MODEL FILE NAME: 
+
+ Sanding_Sanding_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:51:33.858619
+
+EXECUTION TIME: 
+
+ 1.993776798248291
+
+GROUPS: 
+
+['Sanding', 'Sanding_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls']
+
+test labels
+
+['Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding', 'Sanding', 'Sanding_controls', 'Sanding', 'Sanding_controls', 'Sanding_controls', 'Sanding']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.47896825396825393 (+/- 0.11620684679538672)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+hard voting: 0.596031746031746 (+/- 0.08859610226959523)
+random forest: 0.6055555555555555 (+/- 0.18750325435993276)
+gradient boosting: 0.6253968253968254 (+/- 0.1607382894087024)
+gaussian-nb: 0.6376984126984127 (+/- 0.14933294190640853)
+knn: 0.6476190476190476 (+/- 0.13586040588273432)
+logistic regression: 0.6996031746031747 (+/- 0.1405994437319273)
+decision-tree: 0.7198412698412698 (+/- 0.08969834107178618)
+
+
+(C) 2018, NeuroLex Laboratories

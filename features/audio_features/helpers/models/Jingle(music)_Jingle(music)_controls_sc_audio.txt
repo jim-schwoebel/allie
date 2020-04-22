@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7178571428571429 (+/- 0.16536909861128893) 
+
+MODEL FILE NAME: 
+
+ Jingle(music)_Jingle(music)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:07:54.233330
+
+EXECUTION TIME: 
+
+ 2.451625108718872
+
+GROUPS: 
+
+['Jingle(music)', 'Jingle(music)_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls']
+
+test labels
+
+['Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)', 'Jingle(music)', 'Jingle(music)_controls', 'Jingle(music)_controls', 'Jingle(music)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+decision-tree: 0.5773809523809523 (+/- 0.16318645346383479)
+adaboost: 0.6059523809523809 (+/- 0.12305171008973859)
+random forest: 0.6178571428571429 (+/- 0.2468164649024428)
+knn: 0.619047619047619 (+/- 0.22057567435670197)
+gaussian-nb: 0.6309523809523809 (+/- 0.11110402471733428)
+logistic regression: 0.680952380952381 (+/- 0.21621486122177616)
+gradient boosting: 0.6928571428571428 (+/- 0.18571428571428572)
+hard voting: 0.7178571428571429 (+/- 0.16536909861128893)
+
+
+(C) 2018, NeuroLex Laboratories

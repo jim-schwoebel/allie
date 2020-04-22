@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.675 (+/- 0.1695582495781317) 
+
+MODEL FILE NAME: 
+
+ Bellow_Bellow_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:48:16.425957
+
+EXECUTION TIME: 
+
+ 2.066161870956421
+
+GROUPS: 
+
+['Bellow', 'Bellow_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls']
+
+test labels
+
+['Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow', 'Bellow', 'Bellow_controls', 'Bellow_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5 (+/- 0.07905694150420949)
+gradient boosting: 0.5 (+/- 0.19364916731037085)
+decision-tree: 0.55 (+/- 0.06123724356957946)
+hard voting: 0.55 (+/- 0.1695582495781317)
+adaboost: 0.575 (+/- 0.09999999999999999)
+logistic regression: 0.5916666666666667 (+/- 0.1522972240208089)
+gaussian-nb: 0.6333333333333333 (+/- 0.1130388330520878)
+random forest: 0.6333333333333333 (+/- 0.08079466429027214)
+knn: 0.675 (+/- 0.1695582495781317)
+
+
+(C) 2018, NeuroLex Laboratories

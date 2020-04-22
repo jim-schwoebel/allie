@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.9555555555555555 (+/- 0.054433105395181765) 
+
+MODEL FILE NAME: 
+
+ MusicofAsia_MusicofAsia_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:12:22.788580
+
+EXECUTION TIME: 
+
+ 2.256357192993164
+
+GROUPS: 
+
+['MusicofAsia', 'MusicofAsia_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls']
+
+test labels
+
+['MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia', 'MusicofAsia', 'MusicofAsia_controls', 'MusicofAsia_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+logistic regression: 0.7523809523809525 (+/- 0.14394646411116996)
+knn: 0.8539682539682539 (+/- 0.14033038797016092)
+random forest: 0.8761904761904761 (+/- 0.07197323205558498)
+gradient boosting: 0.8825396825396824 (+/- 0.10018878627339364)
+gaussian-nb: 0.9047619047619048 (+/- 0.08577305451496062)
+hard voting: 0.9111111111111111 (+/- 0.10886621079036347)
+decision-tree: 0.9269841269841269 (+/- 0.06073373482447301)
+adaboost: 0.9555555555555555 (+/- 0.054433105395181765)
+
+
+(C) 2018, NeuroLex Laboratories

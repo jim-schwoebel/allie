@@ -1,0 +1,8 @@
+train labels
+
+['Roar', 'Roar', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls']
+
+test labels
+
+['Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar', 'Roar', 'Roar_controls', 'Roar_controls']
+

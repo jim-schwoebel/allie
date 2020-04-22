@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6811145510835913 (+/- 0.09009234730088819) 
+
+MODEL FILE NAME: 
+
+ Childspeech,kidspeaking_Childspeech,kidspeaking_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:57:37.433575
+
+EXECUTION TIME: 
+
+ 3.1863958835601807
+
+GROUPS: 
+
+['Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls']
+(137 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking']
+
+test labels
+
+['Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking_controls', 'Childspeech,kidspeaking']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5077399380804953 (+/- 0.0565132097045431)
+sk: 0.5275541795665635 (+/- 0.001516711915036041)
+decision-tree: 0.5696594427244582 (+/- 0.03806916693235762)
+gradient boosting: 0.5746130030959752 (+/- 0.11117267275926357)
+logistic regression: 0.6588235294117648 (+/- 0.07923277494595408)
+adaboost: 0.660061919504644 (+/- 0.029914234871036963)
+hard voting: 0.660061919504644 (+/- 0.06052295050544841)
+random forest: 0.6625386996904025 (+/- 0.06514802941207497)
+gaussian-nb: 0.6811145510835913 (+/- 0.09009234730088819)
+
+
+(C) 2018, NeuroLex Laboratories

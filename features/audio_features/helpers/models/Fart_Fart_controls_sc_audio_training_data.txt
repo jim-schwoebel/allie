@@ -1,0 +1,8 @@
+train labels
+
+['Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls']
+
+test labels
+
+['Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart', 'Fart', 'Fart', 'Fart_controls', 'Fart', 'Fart_controls', 'Fart_controls', 'Fart']
+

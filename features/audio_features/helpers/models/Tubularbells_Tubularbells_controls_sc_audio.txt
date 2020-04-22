@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6333333333333333 (+/- 0.08079466429027214) 
+
+MODEL FILE NAME: 
+
+ Tubularbells_Tubularbells_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:48:20.631599
+
+EXECUTION TIME: 
+
+ 2.0022799968719482
+
+GROUPS: 
+
+['Tubularbells', 'Tubularbells_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls']
+
+test labels
+
+['Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells', 'Tubularbells', 'Tubularbells_controls', 'Tubularbells_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4583333333333333 (+/- 0.22047927592204922)
+gradient boosting: 0.4916666666666667 (+/- 0.09279607271383372)
+hard voting: 0.5 (+/- 0.07905694150420949)
+random forest: 0.5333333333333333 (+/- 0.18892973414591058)
+adaboost: 0.55 (+/- 0.06123724356957946)
+logistic regression: 0.5583333333333333 (+/- 0.20682789409984761)
+sk: 0.6 (+/- 0.18371173070873836)
+gaussian-nb: 0.6333333333333333 (+/- 0.08079466429027214)
+knn: 0.6333333333333333 (+/- 0.08079466429027214)
+
+
+(C) 2018, NeuroLex Laboratories

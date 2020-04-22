@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.778968253968254 (+/- 0.08477215917996458) 
+
+MODEL FILE NAME: 
+
+ Chainsaw_Chainsaw_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:45:33.608296
+
+EXECUTION TIME: 
+
+ 2.3994100093841553
+
+GROUPS: 
+
+['Chainsaw', 'Chainsaw_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls']
+
+test labels
+
+['Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw', 'Chainsaw', 'Chainsaw_controls', 'Chainsaw']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.5293650793650795 (+/- 0.1673756650553135)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.5571428571428572 (+/- 0.09040654518030566)
+decision-tree: 0.5892857142857143 (+/- 0.1762994800807557)
+hard voting: 0.5892857142857143 (+/- 0.1762994800807557)
+adaboost: 0.6178571428571429 (+/- 0.22664115502690024)
+gradient boosting: 0.6615079365079366 (+/- 0.11387990119947997)
+gaussian-nb: 0.7218253968253968 (+/- 0.056125197486467125)
+random forest: 0.778968253968254 (+/- 0.08477215917996458)
+
+
+(C) 2018, NeuroLex Laboratories

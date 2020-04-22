@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7345238095238096 (+/- 0.1304970438670926) 
+
+MODEL FILE NAME: 
+
+ Slam_Slam_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:25:53.364430
+
+EXECUTION TIME: 
+
+ 1.970686912536621
+
+GROUPS: 
+
+['Slam', 'Slam_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls']
+
+test labels
+
+['Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+logistic regression: 0.5642857142857143 (+/- 0.19811326612105493)
+knn: 0.569047619047619 (+/- 0.08976853581670885)
+decision-tree: 0.5904761904761905 (+/- 0.23189547258211327)
+random forest: 0.6190476190476191 (+/- 0.15379736056874915)
+adaboost: 0.6892857142857143 (+/- 0.09270439206634185)
+gaussian-nb: 0.6928571428571428 (+/- 0.1107590795201239)
+hard voting: 0.7107142857142856 (+/- 0.1581855737321247)
+gradient boosting: 0.7345238095238096 (+/- 0.1304970438670926)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7734126984126984 (+/- 0.12444383705715072) 
+
+MODEL FILE NAME: 
+
+ Electronicorgan_Electronicorgan_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:23:59.640210
+
+EXECUTION TIME: 
+
+ 2.064167022705078
+
+GROUPS: 
+
+['Electronicorgan', 'Electronicorgan_controls']
+(61 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls']
+
+test labels
+
+['Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan', 'Electronicorgan_controls', 'Electronicorgan_controls', 'Electronicorgan']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.4884920634920634 (+/- 0.10092479906726319)
+decision-tree: 0.5357142857142857 (+/- 0.26970117745326494)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+gradient boosting: 0.571031746031746 (+/- 0.24058355819898952)
+adaboost: 0.5809523809523809 (+/- 0.07468755781599104)
+gaussian-nb: 0.5996031746031746 (+/- 0.19387834665866896)
+hard voting: 0.6753968253968253 (+/- 0.1362308002611132)
+logistic regression: 0.7345238095238095 (+/- 0.07693092581620721)
+knn: 0.7734126984126984 (+/- 0.12444383705715072)
+
+
+(C) 2018, NeuroLex Laboratories

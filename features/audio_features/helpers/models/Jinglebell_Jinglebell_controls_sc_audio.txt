@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6825396825396824 (+/- 0.11707358041006842) 
+
+MODEL FILE NAME: 
+
+ Jinglebell_Jinglebell_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:09:34.078852
+
+EXECUTION TIME: 
+
+ 2.025160312652588
+
+GROUPS: 
+
+['Jinglebell', 'Jinglebell_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls']
+
+test labels
+
+['Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell', 'Jinglebell', 'Jinglebell_controls', 'Jinglebell_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.44761904761904764 (+/- 0.15662090645770171)
+adaboost: 0.47619047619047616 (+/- 0.1475422227126635)
+decision-tree: 0.4984126984126984 (+/- 0.20465728839728503)
+hard voting: 0.5555555555555556 (+/- 0.17503553970908217)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.5650793650793651 (+/- 0.11472578412439781)
+gradient boosting: 0.6285714285714286 (+/- 0.17405397030949585)
+logistic regression: 0.6571428571428571 (+/- 0.1916892589136575)
+knn: 0.6825396825396824 (+/- 0.11707358041006842)
+
+
+(C) 2018, NeuroLex Laboratories

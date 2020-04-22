@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7011904761904761 (+/- 0.04885305840162665) 
+
+MODEL FILE NAME: 
+
+ Ding-dong_Ding-dong_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:48:02.625305
+
+EXECUTION TIME: 
+
+ 1.9786560535430908
+
+GROUPS: 
+
+['Ding-dong', 'Ding-dong_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls']
+
+test labels
+
+['Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong', 'Ding-dong', 'Ding-dong_controls', 'Ding-dong_controls', 'Ding-dong']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.4821428571428571 (+/- 0.10949792654825638)
+random forest: 0.5392857142857143 (+/- 0.05101020306102035)
+sk: 0.5428571428571429 (+/- 0.08571428571428573)
+logistic regression: 0.5940476190476189 (+/- 0.16079803814193375)
+decision-tree: 0.6023809523809524 (+/- 0.22418914107301607)
+gradient boosting: 0.6023809523809524 (+/- 0.17751273468418174)
+hard voting: 0.6023809523809524 (+/- 0.15893637398360608)
+gaussian-nb: 0.6059523809523809 (+/- 0.1462590966607174)
+knn: 0.7011904761904761 (+/- 0.04885305840162665)
+
+
+(C) 2018, NeuroLex Laboratories

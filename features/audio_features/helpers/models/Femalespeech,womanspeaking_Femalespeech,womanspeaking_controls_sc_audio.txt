@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7 (+/- 0.1695582495781317) 
+
+MODEL FILE NAME: 
+
+ Femalespeech,womanspeaking_Femalespeech,womanspeaking_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:37:02.561454
+
+EXECUTION TIME: 
+
+ 2.011420965194702
+
+GROUPS: 
+
+['Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls']
+
+test labels
+
+['Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking', 'Femalespeech,womanspeaking_controls', 'Femalespeech,womanspeaking_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.525 (+/- 0.18371173070873836)
+sk: 0.5916666666666667 (+/- 0.1301708279317776)
+gradient boosting: 0.625 (+/- 0.1767766952966369)
+knn: 0.6333333333333333 (+/- 0.1379412113103904)
+random forest: 0.6333333333333333 (+/- 0.15898986690282427)
+logistic regression: 0.65 (+/- 0.1224744871391589)
+adaboost: 0.6583333333333333 (+/- 0.16541194367732673)
+hard voting: 0.6833333333333333 (+/- 0.16791201399674904)
+gaussian-nb: 0.7 (+/- 0.1695582495781317)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7698412698412699 (+/- 0.1495773839922507) 
+
+MODEL FILE NAME: 
+
+ Writing_Writing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:44:48.053617
+
+EXECUTION TIME: 
+
+ 2.0167171955108643
+
+GROUPS: 
+
+['Writing', 'Writing_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing', 'Writing', 'Writing', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls']
+
+test labels
+
+['Writing', 'Writing', 'Writing', 'Writing', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing', 'Writing', 'Writing', 'Writing_controls', 'Writing_controls', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing_controls', 'Writing', 'Writing', 'Writing_controls', 'Writing']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.6238095238095239 (+/- 0.1045211278295513)
+gaussian-nb: 0.6333333333333333 (+/- 0.21510132846330063)
+adaboost: 0.7182539682539681 (+/- 0.14919790587390286)
+hard voting: 0.7404761904761905 (+/- 0.10273410238275812)
+knn: 0.7440476190476191 (+/- 0.0872474579666521)
+gradient boosting: 0.7468253968253968 (+/- 0.07580923134133048)
+logistic regression: 0.7654761904761905 (+/- 0.11632061841557371)
+random forest: 0.7698412698412699 (+/- 0.1495773839922507)
+
+
+(C) 2018, NeuroLex Laboratories

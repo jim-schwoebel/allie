@@ -1,0 +1,8 @@
+train labels
+
+['Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls']
+
+test labels
+
+['Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls']
+

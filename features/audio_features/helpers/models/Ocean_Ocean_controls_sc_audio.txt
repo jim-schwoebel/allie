@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.8711111111111112 (+/- 0.07875575620741931) 
+
+MODEL FILE NAME: 
+
+ Ocean_Ocean_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:18:43.955823
+
+EXECUTION TIME: 
+
+ 2.087193012237549
+
+GROUPS: 
+
+['Ocean', 'Ocean_controls']
+(67 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean_controls']
+
+test labels
+
+['Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean', 'Ocean', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls', 'Ocean_controls', 'Ocean', 'Ocean_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5783333333333334 (+/- 0.02899552966822196)
+gradient boosting: 0.6888888888888889 (+/- 0.15947444549341472)
+hard voting: 0.6944444444444444 (+/- 0.10540925533894598)
+logistic regression: 0.7194444444444443 (+/- 0.12801909579781015)
+knn: 0.7411111111111112 (+/- 0.1929498111676444)
+gaussian-nb: 0.7588888888888888 (+/- 0.11630101429448465)
+adaboost: 0.7744444444444444 (+/- 0.12440475557580803)
+random forest: 0.7788888888888889 (+/- 0.09365025558091322)
+decision-tree: 0.8711111111111112 (+/- 0.07875575620741931)
+
+
+(C) 2018, NeuroLex Laboratories

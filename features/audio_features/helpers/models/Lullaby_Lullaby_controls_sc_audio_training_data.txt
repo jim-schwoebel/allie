@@ -1,0 +1,8 @@
+train labels
+
+['Lullaby', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls']
+
+test labels
+
+['Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby', 'Lullaby', 'Lullaby_controls', 'Lullaby_controls', 'Lullaby']
+

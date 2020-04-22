@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7690476190476191 (+/- 0.06449603064733345) 
+
+MODEL FILE NAME: 
+
+ Filing(rasp)_Filing(rasp)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:38:46.679622
+
+EXECUTION TIME: 
+
+ 2.0641660690307617
+
+GROUPS: 
+
+['Filing(rasp)', 'Filing(rasp)_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls']
+
+test labels
+
+['Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)', 'Filing(rasp)', 'Filing(rasp)_controls', 'Filing(rasp)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.5825396825396825 (+/- 0.19797411844658874)
+adaboost: 0.6007936507936508 (+/- 0.13681213797946978)
+gradient boosting: 0.6611111111111111 (+/- 0.20177469105693405)
+logistic regression: 0.6710317460317461 (+/- 0.17682746287015058)
+knn: 0.6801587301587302 (+/- 0.1202479172477376)
+hard voting: 0.6833333333333333 (+/- 0.20720822419330612)
+gaussian-nb: 0.696031746031746 (+/- 0.07254853893350122)
+random forest: 0.7690476190476191 (+/- 0.06449603064733345)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6583333333333333 (+/- 0.1452966314513558) 
+
+MODEL FILE NAME: 
+
+ Traditionalmusic_Traditionalmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:36:48.979742
+
+EXECUTION TIME: 
+
+ 1.9846830368041992
+
+GROUPS: 
+
+['Traditionalmusic', 'Traditionalmusic_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls']
+
+test labels
+
+['Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic', 'Traditionalmusic', 'Traditionalmusic_controls', 'Traditionalmusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.375 (+/- 0.22360679774997896)
+adaboost: 0.4083333333333333 (+/- 0.1301708279317776)
+decision-tree: 0.4583333333333333 (+/- 0.15365907428821476)
+hard voting: 0.4583333333333333 (+/- 0.15365907428821476)
+random forest: 0.4833333333333333 (+/- 0.13333333333333333)
+gaussian-nb: 0.4916666666666667 (+/- 0.09279607271383372)
+logistic regression: 0.5166666666666667 (+/- 0.15500896031448563)
+sk: 0.575 (+/- 0.09999999999999999)
+knn: 0.6583333333333333 (+/- 0.1452966314513558)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8583333333333332 (+/- 0.07961617026648063) 
+
+MODEL FILE NAME: 
+
+ Pizzicato_Pizzicato_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:42:19.478965
+
+EXECUTION TIME: 
+
+ 2.68778920173645
+
+GROUPS: 
+
+['Pizzicato', 'Pizzicato_controls']
+(127 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato']
+
+test labels
+
+['Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato_controls', 'Pizzicato', 'Pizzicato', 'Pizzicato']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.525 (+/- 0.03061862178478973)
+decision-tree: 0.5611111111111111 (+/- 0.0635558954924864)
+random forest: 0.7583333333333333 (+/- 0.10842232811818744)
+knn: 0.7597222222222222 (+/- 0.11297055226479308)
+logistic regression: 0.7652777777777777 (+/- 0.09132934568207554)
+gaussian-nb: 0.8 (+/- 0.06370747189544287)
+adaboost: 0.8097222222222221 (+/- 0.06596856715021066)
+hard voting: 0.8097222222222221 (+/- 0.043390275977259196)
+gradient boosting: 0.8583333333333332 (+/- 0.07961617026648063)
+
+
+(C) 2018, NeuroLex Laboratories

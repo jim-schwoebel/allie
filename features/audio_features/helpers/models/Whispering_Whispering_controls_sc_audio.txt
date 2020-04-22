@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.9142857142857143 (+/- 0.06998542122237654) 
+
+MODEL FILE NAME: 
+
+ Whispering_Whispering_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:26:47.759109
+
+EXECUTION TIME: 
+
+ 1.9400429725646973
+
+GROUPS: 
+
+['Whispering', 'Whispering_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls']
+
+test labels
+
+['Whispering', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering_controls', 'Whispering_controls', 'Whispering_controls', 'Whispering', 'Whispering', 'Whispering', 'Whispering', 'Whispering', 'Whispering_controls', 'Whispering_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.692063492063492 (+/- 0.11733154674651637)
+random forest: 0.8 (+/- 0.1456862718169367)
+decision-tree: 0.8126984126984127 (+/- 0.05801799010316526)
+adaboost: 0.8126984126984127 (+/- 0.05801799010316526)
+knn: 0.8126984126984127 (+/- 0.05801799010316526)
+gradient boosting: 0.8285714285714286 (+/- 0.10690449676496974)
+hard voting: 0.8571428571428571 (+/- 0.0903507902905251)
+gaussian-nb: 0.9142857142857143 (+/- 0.06998542122237654)
+
+
+(C) 2018, NeuroLex Laboratories

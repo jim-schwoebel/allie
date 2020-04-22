@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7333333333333333 (+/- 0.08579691784155835) 
+
+MODEL FILE NAME: 
+
+ Babycry,infantcry_Babycry,infantcry_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:33:00.945108
+
+EXECUTION TIME: 
+
+ 2.187854051589966
+
+GROUPS: 
+
+['Babycry,infantcry', 'Babycry,infantcry_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls']
+
+test labels
+
+['Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry', 'Babycry,infantcry', 'Babycry,infantcry_controls', 'Babycry,infantcry_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5 (+/- 0.07905694150420949)
+knn: 0.6166666666666667 (+/- 0.16541194367732673)
+adaboost: 0.6833333333333333 (+/- 0.056519416526043906)
+hard voting: 0.6833333333333333 (+/- 0.056519416526043906)
+logistic regression: 0.7083333333333333 (+/- 0.14672347384715842)
+decision-tree: 0.7333333333333333 (+/- 0.08579691784155835)
+gaussian-nb: 0.7333333333333333 (+/- 0.08579691784155835)
+gradient boosting: 0.7333333333333333 (+/- 0.03333333333333335)
+random forest: 0.7333333333333333 (+/- 0.08579691784155835)
+
+
+(C) 2018, NeuroLex Laboratories

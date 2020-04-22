@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.6063492063492063 (+/- 0.1881245372666572) 
+
+MODEL FILE NAME: 
+
+ Glass_Glass_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:04:29.586454
+
+EXECUTION TIME: 
+
+ 2.023531198501587
+
+GROUPS: 
+
+['Glass', 'Glass_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls']
+
+test labels
+
+['Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass', 'Glass', 'Glass', 'Glass_controls', 'Glass', 'Glass_controls', 'Glass_controls', 'Glass']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.47341269841269834 (+/- 0.2013809717733804)
+gaussian-nb: 0.4825396825396825 (+/- 0.09275363923498006)
+adaboost: 0.5146825396825396 (+/- 0.11717844772713537)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.5432539682539682 (+/- 0.22265547335189192)
+hard voting: 0.5619047619047619 (+/- 0.1348237280367345)
+knn: 0.586111111111111 (+/- 0.10424958906565424)
+gradient boosting: 0.5904761904761905 (+/- 0.11757421547739416)
+decision-tree: 0.6063492063492063 (+/- 0.1881245372666572)
+
+
+(C) 2018, NeuroLex Laboratories

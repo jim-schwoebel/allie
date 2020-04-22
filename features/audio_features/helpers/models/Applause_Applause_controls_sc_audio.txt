@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8448412698412697 (+/- 0.0966202614916407) 
+
+MODEL FILE NAME: 
+
+ Applause_Applause_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:29:14.028775
+
+EXECUTION TIME: 
+
+ 2.378917932510376
+
+GROUPS: 
+
+['Applause', 'Applause_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause', 'Applause', 'Applause', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls']
+
+test labels
+
+['Applause', 'Applause', 'Applause', 'Applause', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause', 'Applause', 'Applause', 'Applause_controls', 'Applause_controls', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause_controls', 'Applause', 'Applause', 'Applause_controls', 'Applause']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.705952380952381 (+/- 0.10701344330090093)
+decision-tree: 0.730952380952381 (+/- 0.09952013866296656)
+logistic regression: 0.7468253968253968 (+/- 0.11794195548101538)
+gradient boosting: 0.755952380952381 (+/- 0.11557092606653735)
+random forest: 0.7718253968253969 (+/- 0.10784601715630347)
+gaussian-nb: 0.7781746031746032 (+/- 0.15083750406614735)
+hard voting: 0.8226190476190476 (+/- 0.06644426243159075)
+adaboost: 0.8448412698412697 (+/- 0.0966202614916407)
+
+
+(C) 2018, NeuroLex Laboratories

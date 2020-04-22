@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7595238095238095 (+/- 0.18760400659501222) 
+
+MODEL FILE NAME: 
+
+ Sewingmachine_Sewingmachine_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:59:13.082370
+
+EXECUTION TIME: 
+
+ 2.485651969909668
+
+GROUPS: 
+
+['Sewingmachine', 'Sewingmachine_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls']
+
+test labels
+
+['Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine', 'Sewingmachine', 'Sewingmachine_controls', 'Sewingmachine']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.49642857142857133 (+/- 0.07992264463670085)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.5976190476190476 (+/- 0.22085178333914723)
+logistic regression: 0.6043650793650793 (+/- 0.14141467517642292)
+random forest: 0.6551587301587303 (+/- 0.059924576765119586)
+gradient boosting: 0.657936507936508 (+/- 0.1423359097764586)
+gaussian-nb: 0.6996031746031747 (+/- 0.051367051191379076)
+adaboost: 0.7281746031746033 (+/- 0.12891635097223691)
+hard voting: 0.7595238095238095 (+/- 0.18760400659501222)
+
+
+(C) 2018, NeuroLex Laboratories

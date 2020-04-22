@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8956349206349206 (+/- 0.05352878961561032) 
+
+MODEL FILE NAME: 
+
+ Sampler_Sampler_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:50:39.583165
+
+EXECUTION TIME: 
+
+ 1.9955329895019531
+
+GROUPS: 
+
+['Sampler', 'Sampler_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls']
+
+test labels
+
+['Sampler', 'Sampler', 'Sampler', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler_controls', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler_controls', 'Sampler', 'Sampler', 'Sampler_controls', 'Sampler']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.6896825396825397 (+/- 0.1326228234622496)
+knn: 0.696031746031746 (+/- 0.07254853893350122)
+decision-tree: 0.769047619047619 (+/- 0.14899512235392395)
+hard voting: 0.7849206349206349 (+/- 0.19518646884855298)
+gradient boosting: 0.7912698412698413 (+/- 0.14008779596014612)
+random forest: 0.8384920634920634 (+/- 0.14256804963956593)
+gaussian-nb: 0.8920634920634921 (+/- 0.10595758265573736)
+logistic regression: 0.8956349206349206 (+/- 0.05352878961561032)
+
+
+(C) 2018, NeuroLex Laboratories

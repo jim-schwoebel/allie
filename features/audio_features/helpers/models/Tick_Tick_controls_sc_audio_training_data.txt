@@ -1,0 +1,8 @@
+train labels
+
+['Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls']
+
+test labels
+
+['Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick', 'Tick', 'Tick', 'Tick_controls', 'Tick', 'Tick_controls', 'Tick_controls', 'Tick']
+

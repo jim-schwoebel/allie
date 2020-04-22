@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6563492063492063 (+/- 0.11871249125829522) 
+
+MODEL FILE NAME: 
+
+ Clock_Clock_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:19:37.736905
+
+EXECUTION TIME: 
+
+ 2.049578905105591
+
+GROUPS: 
+
+['Clock', 'Clock_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls']
+
+test labels
+
+['Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock', 'Clock', 'Clock', 'Clock_controls', 'Clock', 'Clock_controls', 'Clock_controls', 'Clock']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.5638888888888889 (+/- 0.11916925003410532)
+adaboost: 0.5674603174603174 (+/- 0.10299129014291007)
+gradient boosting: 0.5674603174603174 (+/- 0.06600913455955232)
+random forest: 0.5761904761904761 (+/- 0.20298928180097858)
+hard voting: 0.5924603174603174 (+/- 0.09866199862300182)
+decision-tree: 0.6119047619047618 (+/- 0.08702698515474792)
+knn: 0.6432539682539682 (+/- 0.0769718530552656)
+gaussian-nb: 0.6563492063492063 (+/- 0.11871249125829522)
+
+
+(C) 2018, NeuroLex Laboratories

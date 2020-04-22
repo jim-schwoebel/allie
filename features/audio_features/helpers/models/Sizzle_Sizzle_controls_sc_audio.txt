@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6805555555555555 (+/- 0.19492974747325614) 
+
+MODEL FILE NAME: 
+
+ Sizzle_Sizzle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:22:14.827653
+
+EXECUTION TIME: 
+
+ 2.01825213432312
+
+GROUPS: 
+
+['Sizzle', 'Sizzle_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls']
+
+test labels
+
+['Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.49523809523809514 (+/- 0.2018339947859309)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gaussian-nb: 0.5583333333333333 (+/- 0.08554878201534133)
+knn: 0.5833333333333333 (+/- 0.11468185313135519)
+logistic regression: 0.5932539682539683 (+/- 0.1468897327943758)
+gradient boosting: 0.6468253968253969 (+/- 0.09963399889825533)
+adaboost: 0.6654761904761904 (+/- 0.14257909449123685)
+hard voting: 0.6753968253968254 (+/- 0.10390916774930513)
+random forest: 0.6805555555555555 (+/- 0.19492974747325614)
+
+
+(C) 2018, NeuroLex Laboratories

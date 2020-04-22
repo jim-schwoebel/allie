@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8666666666666666 (+/- 0.08079466429027216) 
+
+MODEL FILE NAME: 
+
+ Busysignal_Busysignal_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:21:52.296231
+
+EXECUTION TIME: 
+
+ 2.318639039993286
+
+GROUPS: 
+
+['Busysignal', 'Busysignal_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Busysignal', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls']
+
+test labels
+
+['Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal', 'Busysignal', 'Busysignal_controls', 'Busysignal_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5583333333333333 (+/- 0.07264831572567787)
+logistic regression: 0.5916666666666667 (+/- 0.15898986690282427)
+knn: 0.65 (+/- 0.1457737973711325)
+adaboost: 0.7416666666666667 (+/- 0.06666666666666668)
+hard voting: 0.7916666666666667 (+/- 0.052704627669472995)
+gaussian-nb: 0.8416666666666666 (+/- 0.12190615698606495)
+random forest: 0.8416666666666666 (+/- 0.0485912657903775)
+decision-tree: 0.8666666666666666 (+/- 0.08079466429027216)
+gradient boosting: 0.8666666666666666 (+/- 0.08079466429027216)
+
+
+(C) 2018, NeuroLex Laboratories

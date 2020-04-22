@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6412698412698413 (+/- 0.08786255557522572) 
+
+MODEL FILE NAME: 
+
+ Smash,crash_Smash,crash_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:29:05.010979
+
+EXECUTION TIME: 
+
+ 2.0163509845733643
+
+GROUPS: 
+
+['Smash,crash', 'Smash,crash_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls']
+
+test labels
+
+['Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash_controls', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash', 'Smash,crash_controls', 'Smash,crash_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.5904761904761905 (+/- 0.03809523809523809)
+hard voting: 0.5904761904761905 (+/- 0.03809523809523809)
+decision-tree: 0.5968253968253968 (+/- 0.14076063033266897)
+random forest: 0.5968253968253968 (+/- 0.14076063033266897)
+gaussian-nb: 0.6031746031746031 (+/- 0.10188448594210296)
+adaboost: 0.6253968253968255 (+/- 0.14706329932572024)
+knn: 0.6412698412698411 (+/- 0.08786255557522572)
+gradient boosting: 0.6412698412698413 (+/- 0.08786255557522572)
+
+
+(C) 2018, NeuroLex Laboratories

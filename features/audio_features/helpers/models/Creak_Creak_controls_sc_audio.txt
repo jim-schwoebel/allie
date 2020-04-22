@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6238095238095238 (+/- 0.1493751156319821) 
+
+MODEL FILE NAME: 
+
+ Creak_Creak_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:31:08.874551
+
+EXECUTION TIME: 
+
+ 2.0796821117401123
+
+GROUPS: 
+
+['Creak', 'Creak_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak', 'Creak', 'Creak', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls']
+
+test labels
+
+['Creak', 'Creak', 'Creak', 'Creak', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak', 'Creak', 'Creak', 'Creak_controls', 'Creak_controls', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak_controls', 'Creak', 'Creak', 'Creak_controls', 'Creak']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.45 (+/- 0.1720520701416001)
+decision-tree: 0.4619047619047619 (+/- 0.22201804679245538)
+gradient boosting: 0.490079365079365 (+/- 0.12027148679823955)
+hard voting: 0.49722222222222223 (+/- 0.16630535287706658)
+gaussian-nb: 0.5480158730158731 (+/- 0.2041719691723543)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.5507936507936508 (+/- 0.07505771693674214)
+logistic regression: 0.5607142857142857 (+/- 0.1379880079942245)
+random forest: 0.6238095238095238 (+/- 0.1493751156319821)
+
+
+(C) 2018, NeuroLex Laboratories

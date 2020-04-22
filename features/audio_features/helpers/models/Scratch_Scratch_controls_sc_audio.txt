@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.8 (+/- 0.12747548783981963) 
+
+MODEL FILE NAME: 
+
+ Scratch_Scratch_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:56:40.415828
+
+EXECUTION TIME: 
+
+ 2.5438449382781982
+
+GROUPS: 
+
+['Scratch', 'Scratch_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Scratch', 'Scratch', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls']
+
+test labels
+
+['Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch', 'Scratch', 'Scratch_controls', 'Scratch_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.4583333333333333 (+/- 0.17280367794439766)
+sk: 0.4833333333333333 (+/- 0.10736748938937604)
+random forest: 0.5666666666666667 (+/- 0.22142217092644037)
+knn: 0.6333333333333333 (+/- 0.1379412113103904)
+decision-tree: 0.6583333333333333 (+/- 0.0485912657903775)
+adaboost: 0.6833333333333333 (+/- 0.12527746981977425)
+gaussian-nb: 0.7166666666666667 (+/- 0.13794121131039042)
+gradient boosting: 0.775 (+/- 0.18371173070873836)
+hard voting: 0.8 (+/- 0.12747548783981963)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls']
+
+test labels
+
+['Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk_controls', 'Squawk_controls', 'Squawk', 'Squawk_controls', 'Squawk', 'Squawk', 'Squawk_controls', 'Squawk_controls']
+

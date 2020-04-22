@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7682539682539683 (+/- 0.11988068310158223) 
+
+MODEL FILE NAME: 
+
+ Wail,moan_Wail,moan_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:11:44.197878
+
+EXECUTION TIME: 
+
+ 2.166193962097168
+
+GROUPS: 
+
+['Wail,moan', 'Wail,moan_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls']
+
+test labels
+
+['Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan_controls', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan', 'Wail,moan_controls', 'Wail,moan_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.5555555555555555 (+/- 0.25574773410949625)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+gradient boosting: 0.5682539682539682 (+/- 0.0905736039218229)
+decision-tree: 0.5968253968253968 (+/- 0.1901054593216491)
+knn: 0.6317460317460317 (+/- 0.24659944744048828)
+hard voting: 0.6603174603174603 (+/- 0.14076063033266897)
+random forest: 0.6761904761904762 (+/- 0.13932132226978852)
+logistic regression: 0.7333333333333333 (+/- 0.11106575037800571)
+adaboost: 0.7682539682539683 (+/- 0.11988068310158223)
+
+
+(C) 2018, NeuroLex Laboratories

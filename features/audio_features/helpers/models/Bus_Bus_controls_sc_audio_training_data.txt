@@ -1,0 +1,8 @@
+train labels
+
+['Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls']
+
+test labels
+
+['Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus', 'Bus', 'Bus_controls', 'Bus_controls', 'Bus_controls', 'Bus', 'Bus_controls', 'Bus', 'Bus', 'Bus_controls', 'Bus_controls']
+

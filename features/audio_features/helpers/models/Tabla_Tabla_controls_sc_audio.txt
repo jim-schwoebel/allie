@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7075396825396825 (+/- 0.12816661727542253) 
+
+MODEL FILE NAME: 
+
+ Tabla_Tabla_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:13:09.968929
+
+EXECUTION TIME: 
+
+ 2.0042309761047363
+
+GROUPS: 
+
+['Tabla', 'Tabla_controls']
+(62 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls']
+
+test labels
+
+['Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla_controls', 'Tabla', 'Tabla', 'Tabla_controls', 'Tabla_controls', 'Tabla', 'Tabla_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4515873015873016 (+/- 0.13879021438113606)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+gradient boosting: 0.6031746031746031 (+/- 0.13271421831897334)
+knn: 0.6281746031746032 (+/- 0.09329701809428835)
+adaboost: 0.6309523809523808 (+/- 0.03511400286607767)
+random forest: 0.6845238095238095 (+/- 0.19842063476191113)
+logistic regression: 0.6908730158730159 (+/- 0.10428583508485186)
+hard voting: 0.7039682539682539 (+/- 0.10461750510021639)
+gaussian-nb: 0.7075396825396825 (+/- 0.12816661727542253)
+
+
+(C) 2018, NeuroLex Laboratories

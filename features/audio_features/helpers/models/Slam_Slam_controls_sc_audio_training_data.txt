@@ -1,0 +1,8 @@
+train labels
+
+['Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls']
+
+test labels
+
+['Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam_controls', 'Slam_controls', 'Slam', 'Slam', 'Slam', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam', 'Slam_controls', 'Slam_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6555555555555554 (+/- 0.15660582437369686) 
+
+MODEL FILE NAME: 
+
+ Pour_Pour_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:02:15.889783
+
+EXECUTION TIME: 
+
+ 2.0214409828186035
+
+GROUPS: 
+
+['Pour', 'Pour_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls']
+
+test labels
+
+['Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.35952380952380947 (+/- 0.04770824978455685)
+random forest: 0.4646825396825397 (+/- 0.13052117557650372)
+gradient boosting: 0.5111111111111111 (+/- 0.0503452429433451)
+hard voting: 0.5111111111111111 (+/- 0.0503452429433451)
+adaboost: 0.5138888888888888 (+/- 0.07476763365641577)
+knn: 0.5333333333333333 (+/- 0.08053111678708458)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.5496031746031746 (+/- 0.14017544706074517)
+gaussian-nb: 0.6555555555555554 (+/- 0.15660582437369686)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls']
+
+test labels
+
+['Zither', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither']
+

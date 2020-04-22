@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.8492063492063492 (+/- 0.09387248444487266) 
+
+MODEL FILE NAME: 
+
+ Stringsection_Stringsection_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:07:58.444295
+
+EXECUTION TIME: 
+
+ 2.4282357692718506
+
+GROUPS: 
+
+['Stringsection', 'Stringsection_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls']
+
+test labels
+
+['Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection', 'Stringsection', 'Stringsection_controls', 'Stringsection', 'Stringsection_controls', 'Stringsection_controls', 'Stringsection']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.5619047619047619 (+/- 0.06135285107964344)
+decision-tree: 0.5896825396825397 (+/- 0.08435130321007253)
+random forest: 0.7154761904761905 (+/- 0.09977298495122365)
+gradient boosting: 0.7170634920634921 (+/- 0.19306931956350426)
+adaboost: 0.7384920634920635 (+/- 0.085795082436699)
+gaussian-nb: 0.7476190476190476 (+/- 0.14234033502509644)
+logistic regression: 0.7984126984126985 (+/- 0.049013960814744455)
+hard voting: 0.8492063492063492 (+/- 0.09387248444487266)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8706349206349205 (+/- 0.12066624488887003) 
+
+MODEL FILE NAME: 
+
+ Environmentalnoise_Environmentalnoise_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:31:59.479160
+
+EXECUTION TIME: 
+
+ 2.078136920928955
+
+GROUPS: 
+
+['Environmentalnoise', 'Environmentalnoise_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls']
+
+test labels
+
+['Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise', 'Environmentalnoise_controls', 'Environmentalnoise_controls', 'Environmentalnoise']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gaussian-nb: 0.7126984126984126 (+/- 0.107914621964129)
+logistic regression: 0.7634920634920634 (+/- 0.13637983099358664)
+random forest: 0.8206349206349206 (+/- 0.133693061596602)
+knn: 0.8261904761904761 (+/- 0.12078494222200753)
+adaboost: 0.8420634920634921 (+/- 0.1021438129726741)
+hard voting: 0.8420634920634921 (+/- 0.1021438129726741)
+decision-tree: 0.8484126984126984 (+/- 0.1253968253968254)
+gradient boosting: 0.8706349206349205 (+/- 0.12066624488887003)
+
+
+(C) 2018, NeuroLex Laboratories

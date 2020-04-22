@@ -1,0 +1,8 @@
+train labels
+
+['Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls']
+
+test labels
+
+['Maraca', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca_controls', 'Maraca_controls', 'Maraca_controls', 'Maraca', 'Maraca', 'Maraca', 'Maraca', 'Maraca', 'Maraca_controls', 'Maraca_controls']
+

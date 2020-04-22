@@ -1,0 +1,8 @@
+train labels
+
+['Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls']
+
+test labels
+
+['Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter', 'Chatter', 'Chatter_controls', 'Chatter_controls', 'Chatter']
+

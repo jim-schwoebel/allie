@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6860681114551084 (+/- 0.11124162561136779) 
+
+MODEL FILE NAME: 
+
+ Emergencyvehicle_Emergencyvehicle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:26:48.052982
+
+EXECUTION TIME: 
+
+ 2.968057870864868
+
+GROUPS: 
+
+['Emergencyvehicle', 'Emergencyvehicle_controls']
+(137 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle']
+
+test labels
+
+['Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle', 'Emergencyvehicle', 'Emergencyvehicle_controls', 'Emergencyvehicle_controls', 'Emergencyvehicle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5170278637770898 (+/- 0.021716009804024997)
+knn: 0.5839009287925696 (+/- 0.07685505188520772)
+random forest: 0.6037151702786379 (+/- 0.0523942930063311)
+decision-tree: 0.6693498452012383 (+/- 0.037938015311555134)
+adaboost: 0.6705882352941177 (+/- 0.05435530983864951)
+hard voting: 0.6730650154798762 (+/- 0.07906807987588796)
+gaussian-nb: 0.6798761609907121 (+/- 0.1051465389331386)
+logistic regression: 0.6811145510835914 (+/- 0.17869973331273126)
+gradient boosting: 0.6860681114551084 (+/- 0.11124162561136779)
+
+
+(C) 2018, NeuroLex Laboratories

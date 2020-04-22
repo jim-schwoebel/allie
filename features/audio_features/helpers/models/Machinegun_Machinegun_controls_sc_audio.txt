@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6761904761904762 (+/- 0.26289315660812324) 
+
+MODEL FILE NAME: 
+
+ Machinegun_Machinegun_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:20:37.774502
+
+EXECUTION TIME: 
+
+ 2.005298137664795
+
+GROUPS: 
+
+['Machinegun', 'Machinegun_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Machinegun', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls']
+
+test labels
+
+['Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun', 'Machinegun', 'Machinegun_controls', 'Machinegun_controls', 'Machinegun']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.519047619047619 (+/- 0.20403386629210435)
+adaboost: 0.5642857142857143 (+/- 0.30106104879582285)
+sk: 0.5714285714285714 (+/- 0.14285714285714285)
+hard voting: 0.6178571428571429 (+/- 0.31371701794282497)
+logistic regression: 0.6511904761904762 (+/- 0.2483391543855037)
+knn: 0.6511904761904762 (+/- 0.08663526380314406)
+gradient boosting: 0.6547619047619048 (+/- 0.2598676184874175)
+random forest: 0.6595238095238096 (+/- 0.16368073564092583)
+gaussian-nb: 0.6761904761904762 (+/- 0.26289315660812324)
+
+
+(C) 2018, NeuroLex Laboratories

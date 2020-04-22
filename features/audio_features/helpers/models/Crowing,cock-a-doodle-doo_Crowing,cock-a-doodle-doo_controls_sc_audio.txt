@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8678571428571429 (+/- 0.12037356818823369) 
+
+MODEL FILE NAME: 
+
+ Crowing,cock-a-doodle-doo_Crowing,cock-a-doodle-doo_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:36:37.771492
+
+EXECUTION TIME: 
+
+ 2.0299432277679443
+
+GROUPS: 
+
+['Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls']
+
+test labels
+
+['Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo_controls', 'Crowing,cock-a-doodle-doo']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+knn: 0.6476190476190475 (+/- 0.09891703846590948)
+random forest: 0.7047619047619047 (+/- 0.18135137715348304)
+adaboost: 0.7214285714285714 (+/- 0.14223076965528483)
+gaussian-nb: 0.7559523809523809 (+/- 0.1528267289131544)
+gradient boosting: 0.7845238095238096 (+/- 0.09913171795983833)
+decision-tree: 0.8380952380952381 (+/- 0.09178254889236373)
+hard voting: 0.8380952380952381 (+/- 0.12113643663728571)
+logistic regression: 0.8678571428571429 (+/- 0.12037356818823369)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.6932539682539682 (+/- 0.1187403441858098) 
+
+MODEL FILE NAME: 
+
+ Ringtone_Ringtone_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:35:51.558281
+
+EXECUTION TIME: 
+
+ 2.035710096359253
+
+GROUPS: 
+
+['Ringtone', 'Ringtone_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls']
+
+test labels
+
+['Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone', 'Ringtone', 'Ringtone_controls', 'Ringtone', 'Ringtone_controls', 'Ringtone_controls', 'Ringtone']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.5146825396825397 (+/- 0.11717844772713537)
+knn: 0.538888888888889 (+/- 0.08599857323313888)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6333333333333332 (+/- 0.14515024665603704)
+random forest: 0.6376984126984127 (+/- 0.1965371673517955)
+gaussian-nb: 0.6654761904761904 (+/- 0.14257909449123685)
+adaboost: 0.6869047619047619 (+/- 0.11527350892295433)
+gradient boosting: 0.6932539682539682 (+/- 0.1187403441858098)
+hard voting: 0.6932539682539682 (+/- 0.1187403441858098)
+
+
+(C) 2018, NeuroLex Laboratories

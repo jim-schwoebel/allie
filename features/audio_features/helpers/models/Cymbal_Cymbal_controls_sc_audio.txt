@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7972222222222223 (+/- 0.1277777777777778) 
+
+MODEL FILE NAME: 
+
+ Cymbal_Cymbal_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:42:58.522962
+
+EXECUTION TIME: 
+
+ 2.086866855621338
+
+GROUPS: 
+
+['Cymbal', 'Cymbal_controls']
+(63 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls']
+
+test labels
+
+['Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal_controls', 'Cymbal', 'Cymbal_controls', 'Cymbal', 'Cymbal', 'Cymbal', 'Cymbal_controls', 'Cymbal']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5726190476190476 (+/- 0.026902303582029028)
+knn: 0.6261904761904763 (+/- 0.08724384815023044)
+decision-tree: 0.6575396825396825 (+/- 0.20135751182575012)
+random forest: 0.7436507936507936 (+/- 0.1579265371344136)
+logistic regression: 0.7436507936507937 (+/- 0.1579265371344136)
+adaboost: 0.7658730158730159 (+/- 0.06116777418411966)
+hard voting: 0.7658730158730159 (+/- 0.116696357306113)
+gradient boosting: 0.7686507936507937 (+/- 0.11376922533757898)
+gaussian-nb: 0.7972222222222223 (+/- 0.1277777777777778)
+
+
+(C) 2018, NeuroLex Laboratories

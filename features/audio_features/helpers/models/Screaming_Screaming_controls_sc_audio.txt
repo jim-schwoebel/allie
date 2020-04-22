@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.725 (+/- 0.1224744871391589) 
+
+MODEL FILE NAME: 
+
+ Screaming_Screaming_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:58:21.586191
+
+EXECUTION TIME: 
+
+ 1.991866111755371
+
+GROUPS: 
+
+['Screaming', 'Screaming_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Screaming', 'Screaming', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls']
+
+test labels
+
+['Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming', 'Screaming', 'Screaming_controls', 'Screaming_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.55 (+/- 0.1274754878398196)
+sk: 0.575 (+/- 0.15)
+gradient boosting: 0.575 (+/- 0.09999999999999999)
+decision-tree: 0.6333333333333333 (+/- 0.24636242498490807)
+logistic regression: 0.65 (+/- 0.1224744871391589)
+random forest: 0.65 (+/- 0.1224744871391589)
+hard voting: 0.675 (+/- 0.1274754878398196)
+gaussian-nb: 0.725 (+/- 0.1457737973711325)
+adaboost: 0.725 (+/- 0.1224744871391589)
+
+
+(C) 2018, NeuroLex Laboratories

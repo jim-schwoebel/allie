@@ -1,0 +1,8 @@
+train labels
+
+['Crow', 'Crow', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls']
+
+test labels
+
+['Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow', 'Crow', 'Crow_controls', 'Crow_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.778968253968254 (+/- 0.14243544461647872) 
+
+MODEL FILE NAME: 
+
+ Steam_Steam_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:01:50.197394
+
+EXECUTION TIME: 
+
+ 1.986495018005371
+
+GROUPS: 
+
+['Steam', 'Steam_controls']
+(62 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls']
+
+test labels
+
+['Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+decision-tree: 0.605952380952381 (+/- 0.09470419130025995)
+logistic regression: 0.6515873015873016 (+/- 0.22051712625789652)
+adaboost: 0.7059523809523809 (+/- 0.15112953402436524)
+gradient boosting: 0.7059523809523809 (+/- 0.10168645954315536)
+hard voting: 0.7309523809523808 (+/- 0.14591955662899586)
+knn: 0.7503968253968253 (+/- 0.12144672548183222)
+random forest: 0.7630952380952382 (+/- 0.11386607259975208)
+gaussian-nb: 0.778968253968254 (+/- 0.14243544461647872)
+
+
+(C) 2018, NeuroLex Laboratories

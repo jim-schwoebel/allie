@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7781746031746033 (+/- 0.08015873015873015) 
+
+MODEL FILE NAME: 
+
+ Clatter_Clatter_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:15:33.325498
+
+EXECUTION TIME: 
+
+ 2.376664876937866
+
+GROUPS: 
+
+['Clatter', 'Clatter_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls']
+
+test labels
+
+['Clatter', 'Clatter', 'Clatter', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter_controls', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter_controls', 'Clatter', 'Clatter', 'Clatter_controls', 'Clatter']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.525 (+/- 0.07599594875889887)
+knn: 0.5444444444444444 (+/- 0.2559250016117757)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.5658730158730159 (+/- 0.12796250080588786)
+decision-tree: 0.6035714285714285 (+/- 0.23092510611869044)
+hard voting: 0.6194444444444444 (+/- 0.1485654082350985)
+gradient boosting: 0.6416666666666666 (+/- 0.19373697015655578)
+random forest: 0.7051587301587302 (+/- 0.13688808271989253)
+gaussian-nb: 0.7781746031746033 (+/- 0.08015873015873015)
+
+
+(C) 2018, NeuroLex Laboratories

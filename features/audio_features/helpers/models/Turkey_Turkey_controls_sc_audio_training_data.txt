@@ -1,0 +1,8 @@
+train labels
+
+['Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls']
+
+test labels
+
+['Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey_controls', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey_controls', 'Turkey', 'Turkey', 'Turkey_controls', 'Turkey']
+

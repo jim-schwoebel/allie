@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6346320346320347 (+/- 0.14793716884164887) 
+
+MODEL FILE NAME: 
+
+ Insect_Insect_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:50:48.783731
+
+EXECUTION TIME: 
+
+ 3.151528835296631
+
+GROUPS: 
+
+['Insect', 'Insect_controls']
+(168 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect']
+
+test labels
+
+['Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect', 'Insect', 'Insect_controls', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect', 'Insect_controls', 'Insect_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.507133446263881 (+/- 0.12039451017645476)
+decision-tree: 0.5307735742518351 (+/- 0.06575986617322167)
+sk: 0.531639375117636 (+/- 0.011305344965488878)
+hard voting: 0.5340109166196122 (+/- 0.1328977739439999)
+adaboost: 0.5696593261810653 (+/- 0.07978246366983135)
+logistic regression: 0.576661020139281 (+/- 0.1182328333495314)
+knn: 0.6229813664596273 (+/- 0.11377403797019672)
+random forest: 0.6321099190664408 (+/- 0.08839807291081617)
+gaussian-nb: 0.6346320346320347 (+/- 0.14793716884164887)
+
+
+(C) 2018, NeuroLex Laboratories

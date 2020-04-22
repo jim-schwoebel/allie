@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8698412698412697 (+/- 0.11551368507085874) 
+
+MODEL FILE NAME: 
+
+ Civildefensesiren_Civildefensesiren_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:10:49.223325
+
+EXECUTION TIME: 
+
+ 2.316239833831787
+
+GROUPS: 
+
+['Civildefensesiren', 'Civildefensesiren_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls']
+
+test labels
+
+['Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren_controls', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren', 'Civildefensesiren_controls', 'Civildefensesiren_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.7174603174603175 (+/- 0.1507184440694504)
+gradient boosting: 0.7555555555555556 (+/- 0.10652674117817469)
+decision-tree: 0.7841269841269842 (+/- 0.11070219539150916)
+adaboost: 0.8063492063492064 (+/- 0.14869890068102057)
+hard voting: 0.8063492063492064 (+/- 0.11810206500151285)
+knn: 0.8126984126984127 (+/- 0.10737482238277944)
+random forest: 0.8476190476190476 (+/- 0.13932132226978852)
+gaussian-nb: 0.8698412698412697 (+/- 0.11551368507085874)
+
+
+(C) 2018, NeuroLex Laboratories

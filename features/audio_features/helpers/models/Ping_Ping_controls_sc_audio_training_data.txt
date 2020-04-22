@@ -1,0 +1,8 @@
+train labels
+
+['Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls']
+
+test labels
+
+['Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls']
+

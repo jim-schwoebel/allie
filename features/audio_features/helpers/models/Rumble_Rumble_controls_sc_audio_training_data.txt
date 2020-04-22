@@ -1,0 +1,8 @@
+train labels
+
+['Rumble', 'Rumble', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls']
+
+test labels
+
+['Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble', 'Rumble', 'Rumble_controls', 'Rumble_controls']
+

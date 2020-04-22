@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6341269841269841 (+/- 0.2517656220484684) 
+
+MODEL FILE NAME: 
+
+ Burst,pop_Burst,pop_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:19:21.534149
+
+EXECUTION TIME: 
+
+ 2.3635330200195312
+
+GROUPS: 
+
+['Burst,pop', 'Burst,pop_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls']
+
+test labels
+
+['Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop', 'Burst,pop_controls', 'Burst,pop_controls', 'Burst,pop']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.4325396825396825 (+/- 0.20799102641650405)
+hard voting: 0.4575396825396826 (+/- 0.156982441771172)
+logistic regression: 0.4674603174603174 (+/- 0.1187403441858098)
+adaboost: 0.5075396825396826 (+/- 0.11785380252868871)
+decision-tree: 0.5083333333333333 (+/- 0.1642512041048303)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gaussian-nb: 0.5861111111111111 (+/- 0.19923480477216493)
+knn: 0.6083333333333332 (+/- 0.15487175588523253)
+random forest: 0.6341269841269841 (+/- 0.2517656220484684)
+
+
+(C) 2018, NeuroLex Laboratories

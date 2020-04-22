@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8297619047619047 (+/- 0.12478502552434774) 
+
+MODEL FILE NAME: 
+
+ Violin,fiddle_Violin,fiddle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:10:03.415798
+
+EXECUTION TIME: 
+
+ 2.0259640216827393
+
+GROUPS: 
+
+['Violin,fiddle', 'Violin,fiddle_controls']
+(61 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls']
+
+test labels
+
+['Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle', 'Violin,fiddle_controls', 'Violin,fiddle_controls', 'Violin,fiddle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+gradient boosting: 0.5658730158730159 (+/- 0.19960909139515387)
+decision-tree: 0.5865079365079365 (+/- 0.16131135417458592)
+random forest: 0.6123015873015873 (+/- 0.07661505377603385)
+knn: 0.6281746031746032 (+/- 0.09329701809428835)
+adaboost: 0.6345238095238095 (+/- 0.07295977831449792)
+hard voting: 0.638095238095238 (+/- 0.1324802642213672)
+gaussian-nb: 0.7575396825396825 (+/- 0.07531741850233839)
+logistic regression: 0.8297619047619047 (+/- 0.12478502552434774)
+
+
+(C) 2018, NeuroLex Laboratories

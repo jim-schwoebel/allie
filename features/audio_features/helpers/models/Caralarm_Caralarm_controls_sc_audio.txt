@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7400793650793651 (+/- 0.22507382400773385) 
+
+MODEL FILE NAME: 
+
+ Caralarm_Caralarm_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:35:16.678795
+
+EXECUTION TIME: 
+
+ 5.727557897567749
+
+GROUPS: 
+
+['Caralarm', 'Caralarm_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls']
+
+test labels
+
+['Caralarm', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm_controls', 'Caralarm', 'Caralarm', 'Caralarm_controls', 'Caralarm']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.46865079365079365 (+/- 0.10176385946876391)
+decision-tree: 0.5 (+/- 0.05723097262641254)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gradient boosting: 0.6107142857142858 (+/- 0.1688462919189657)
+adaboost: 0.6392857142857143 (+/- 0.17184143405491553)
+logistic regression: 0.6642857142857144 (+/- 0.17696099215297187)
+gaussian-nb: 0.6682539682539682 (+/- 0.17054445737858148)
+knn: 0.7186507936507937 (+/- 0.19235351315659288)
+hard voting: 0.7400793650793651 (+/- 0.22507382400773385)
+
+
+(C) 2018, NeuroLex Laboratories

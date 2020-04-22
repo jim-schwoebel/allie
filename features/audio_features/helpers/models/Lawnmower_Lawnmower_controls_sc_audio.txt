@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7218253968253967 (+/- 0.2074998444267798) 
+
+MODEL FILE NAME: 
+
+ Lawnmower_Lawnmower_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:15:33.336692
+
+EXECUTION TIME: 
+
+ 2.0538408756256104
+
+GROUPS: 
+
+['Lawnmower', 'Lawnmower_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls']
+
+test labels
+
+['Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower', 'Lawnmower_controls', 'Lawnmower_controls', 'Lawnmower']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.4702380952380952 (+/- 0.23449661432847868)
+decision-tree: 0.5202380952380952 (+/- 0.1359229807256389)
+logistic regression: 0.5210317460317461 (+/- 0.11620684679538672)
+hard voting: 0.5238095238095237 (+/- 0.194343187110887)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.6083333333333333 (+/- 0.1071693089040657)
+adaboost: 0.6238095238095237 (+/- 0.21910584112367354)
+gaussian-nb: 0.6869047619047619 (+/- 0.14646244284980667)
+random forest: 0.7218253968253967 (+/- 0.2074998444267798)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.8194444444444444 (+/- 0.11180339887498948) 
+
+MODEL FILE NAME: 
+
+ Typing_Typing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:52:24.616790
+
+EXECUTION TIME: 
+
+ 2.032938003540039
+
+GROUPS: 
+
+['Typing', 'Typing_controls']
+(66 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls']
+
+test labels
+
+['Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls', 'Typing', 'Typing', 'Typing_controls', 'Typing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5694444444444444 (+/- 0.027777777777777766)
+logistic regression: 0.6166666666666666 (+/- 0.23596400646217003)
+decision-tree: 0.7027777777777777 (+/- 0.23100692095879768)
+adaboost: 0.7277777777777777 (+/- 0.22798093920759102)
+random forest: 0.7333333333333333 (+/- 0.19372884193514103)
+gradient boosting: 0.7527777777777778 (+/- 0.2357677241546994)
+hard voting: 0.7527777777777778 (+/- 0.2357677241546994)
+gaussian-nb: 0.775 (+/- 0.13844373104863456)
+knn: 0.8194444444444444 (+/- 0.11180339887498948)
+
+
+(C) 2018, NeuroLex Laboratories

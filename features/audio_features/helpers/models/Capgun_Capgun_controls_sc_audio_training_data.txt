@@ -1,0 +1,8 @@
+train labels
+
+['Capgun', 'Capgun', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls']
+
+test labels
+
+['Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun', 'Capgun', 'Capgun_controls', 'Capgun_controls']
+

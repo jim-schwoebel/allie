@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6051587301587302 (+/- 0.15738517472263444) 
+
+MODEL FILE NAME: 
+
+ Rattle_Rattle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:29:33.172348
+
+EXECUTION TIME: 
+
+ 2.0213258266448975
+
+GROUPS: 
+
+['Rattle', 'Rattle_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls']
+
+test labels
+
+['Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle_controls', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle_controls', 'Rattle', 'Rattle', 'Rattle_controls', 'Rattle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.3706349206349206 (+/- 0.16418408021031586)
+logistic regression: 0.4119047619047619 (+/- 0.15109410335126683)
+adaboost: 0.4599206349206349 (+/- 0.243355904481288)
+knn: 0.47777777777777775 (+/- 0.13823200671160155)
+hard voting: 0.4821428571428571 (+/- 0.2357356625441134)
+gradient boosting: 0.5043650793650795 (+/- 0.2109096186070291)
+decision-tree: 0.5293650793650795 (+/- 0.1519089913328708)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gaussian-nb: 0.6051587301587302 (+/- 0.15738517472263444)
+
+
+(C) 2018, NeuroLex Laboratories

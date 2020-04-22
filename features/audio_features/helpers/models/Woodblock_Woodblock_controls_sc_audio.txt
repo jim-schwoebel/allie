@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7503968253968254 (+/- 0.11505473190108012) 
+
+MODEL FILE NAME: 
+
+ Woodblock_Woodblock_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:43:55.374606
+
+EXECUTION TIME: 
+
+ 2.478961229324341
+
+GROUPS: 
+
+['Woodblock', 'Woodblock_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls']
+
+test labels
+
+['Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock', 'Woodblock', 'Woodblock_controls', 'Woodblock', 'Woodblock_controls', 'Woodblock_controls', 'Woodblock']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.39682539682539686 (+/- 0.1570546489646227)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.5515873015873016 (+/- 0.2328624716716413)
+adaboost: 0.5896825396825396 (+/- 0.12360585608845578)
+gaussian-nb: 0.6146825396825397 (+/- 0.11530082686274656)
+logistic regression: 0.6654761904761904 (+/- 0.14257909449123685)
+decision-tree: 0.6896825396825397 (+/- 0.17632895316099426)
+gradient boosting: 0.6968253968253968 (+/- 0.07241818869536755)
+hard voting: 0.7503968253968254 (+/- 0.11505473190108012)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.7825396825396825 (+/- 0.1629286021632551) 
+
+MODEL FILE NAME: 
+
+ Mediumengine(midfrequency)_Mediumengine(midfrequency)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:31:12.486947
+
+EXECUTION TIME: 
+
+ 2.0503718852996826
+
+GROUPS: 
+
+['Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls']
+
+test labels
+
+['Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)', 'Mediumengine(midfrequency)_controls', 'Mediumengine(midfrequency)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.6150793650793651 (+/- 0.28182985562801116)
+knn: 0.6392857142857143 (+/- 0.17184143405491553)
+adaboost: 0.6900793650793651 (+/- 0.16556894739548164)
+gaussian-nb: 0.7095238095238094 (+/- 0.21482002756466248)
+random forest: 0.7123015873015873 (+/- 0.15300179412277198)
+hard voting: 0.7317460317460318 (+/- 0.16268099016278043)
+gradient boosting: 0.7603174603174604 (+/- 0.16950716284714276)
+decision-tree: 0.7825396825396825 (+/- 0.1629286021632551)
+
+
+(C) 2018, NeuroLex Laboratories

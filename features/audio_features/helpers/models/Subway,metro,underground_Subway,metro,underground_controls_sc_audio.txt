@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.86984126984127 (+/- 0.09167954970281683) 
+
+MODEL FILE NAME: 
+
+ Subway,metro,underground_Subway,metro,underground_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:09:42.139037
+
+EXECUTION TIME: 
+
+ 2.1707382202148438
+
+GROUPS: 
+
+['Subway,metro,underground', 'Subway,metro,underground_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls']
+
+test labels
+
+['Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground', 'Subway,metro,underground', 'Subway,metro,underground_controls', 'Subway,metro,underground_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5587301587301587 (+/- 0.23765037805984635)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gradient boosting: 0.5714285714285714 (+/- 0.18319413392067946)
+random forest: 0.6571428571428571 (+/- 0.1916892589136575)
+knn: 0.6825396825396824 (+/- 0.1170735804100684)
+gaussian-nb: 0.6952380952380952 (+/- 0.19528325713307554)
+hard voting: 0.7523809523809524 (+/- 0.12562767579307543)
+logistic regression: 0.7619047619047619 (+/- 0.1131335217854315)
+adaboost: 0.86984126984127 (+/- 0.09167954970281683)
+
+
+(C) 2018, NeuroLex Laboratories

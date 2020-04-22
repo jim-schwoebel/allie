@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7682539682539683 (+/- 0.08786255557522568) 
+
+MODEL FILE NAME: 
+
+ Acousticguitar_Acousticguitar_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:02:22.244930
+
+EXECUTION TIME: 
+
+ 2.3901641368865967
+
+GROUPS: 
+
+['Acousticguitar', 'Acousticguitar_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls']
+
+test labels
+
+['Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar', 'Acousticguitar', 'Acousticguitar_controls', 'Acousticguitar_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6095238095238094 (+/- 0.10168645954315535)
+gaussian-nb: 0.6317460317460317 (+/- 0.12188161155842837)
+adaboost: 0.653968253968254 (+/- 0.19911621308656152)
+logistic regression: 0.6888888888888889 (+/- 0.06853026395213621)
+gradient boosting: 0.7047619047619047 (+/- 0.15211617207251987)
+hard voting: 0.7047619047619047 (+/- 0.15211617207251987)
+random forest: 0.711111111111111 (+/- 0.07539264817166932)
+knn: 0.7682539682539683 (+/- 0.08786255557522568)
+
+
+(C) 2018, NeuroLex Laboratories

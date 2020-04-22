@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7396825396825397 (+/- 0.11205944504585895) 
+
+MODEL FILE NAME: 
+
+ Snicker_Snicker_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:33:40.367407
+
+EXECUTION TIME: 
+
+ 1.9678881168365479
+
+GROUPS: 
+
+['Snicker', 'Snicker_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls']
+
+test labels
+
+['Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.5111111111111111 (+/- 0.14457520681569144)
+decision-tree: 0.5460317460317461 (+/- 0.050793650793650794)
+adaboost: 0.5523809523809524 (+/- 0.1227057021592869)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+gradient boosting: 0.5746031746031746 (+/- 0.23722592625104005)
+hard voting: 0.5746031746031746 (+/- 0.1782872518361774)
+knn: 0.653968253968254 (+/- 0.11681504439983553)
+gaussian-nb: 0.7047619047619047 (+/- 0.09233675918888246)
+random forest: 0.7396825396825397 (+/- 0.11205944504585895)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8551515151515151 (+/- 0.05493166674539744) 
+
+MODEL FILE NAME: 
+
+ Clickety-clack_Clickety-clack_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:16:46.669876
+
+EXECUTION TIME: 
+
+ 2.8063979148864746
+
+GROUPS: 
+
+['Clickety-clack', 'Clickety-clack_controls']
+(73 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls']
+
+test labels
+
+['Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack_controls', 'Clickety-clack_controls', 'Clickety-clack', 'Clickety-clack', 'Clickety-clack_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5313131313131313 (+/- 0.02583174111625136)
+decision-tree: 0.7206060606060605 (+/- 0.10359047559508999)
+logistic regression: 0.7507070707070707 (+/- 0.1465647863864623)
+gaussian-nb: 0.7907070707070706 (+/- 0.0771241061022242)
+random forest: 0.7907070707070706 (+/- 0.09974030149376499)
+gradient boosting: 0.8169696969696968 (+/- 0.038172731535940765)
+hard voting: 0.8369696969696969 (+/- 0.04876853036669372)
+knn: 0.8529292929292929 (+/- 0.11275840415861295)
+adaboost: 0.8551515151515151 (+/- 0.05493166674539744)
+
+
+(C) 2018, NeuroLex Laboratories

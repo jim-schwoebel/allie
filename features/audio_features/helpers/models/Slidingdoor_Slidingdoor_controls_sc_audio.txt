@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6444444444444445 (+/- 0.06853026395213621) 
+
+MODEL FILE NAME: 
+
+ Slidingdoor_Slidingdoor_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:27:26.910995
+
+EXECUTION TIME: 
+
+ 2.0337820053100586
+
+GROUPS: 
+
+['Slidingdoor', 'Slidingdoor_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls']
+
+test labels
+
+['Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor', 'Slidingdoor', 'Slidingdoor_controls', 'Slidingdoor_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.492063492063492 (+/- 0.09576573415237051)
+gaussian-nb: 0.5428571428571429 (+/- 0.10306465448093924)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+logistic regression: 0.5873015873015873 (+/- 0.09887245398347579)
+adaboost: 0.6158730158730158 (+/- 0.14246860744328174)
+hard voting: 0.6158730158730158 (+/- 0.14246860744328174)
+decision-tree: 0.6222222222222222 (+/- 0.1641610599853701)
+gradient boosting: 0.6444444444444445 (+/- 0.17578245333215403)
+knn: 0.6444444444444445 (+/- 0.06853026395213621)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7892857142857144 (+/- 0.17068290207640743) 
+
+MODEL FILE NAME: 
+
+ Jazz_Jazz_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:06:12.472982
+
+EXECUTION TIME: 
+
+ 2.051971197128296
+
+GROUPS: 
+
+['Jazz', 'Jazz_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls']
+
+test labels
+
+['Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz', 'Jazz', 'Jazz_controls', 'Jazz', 'Jazz_controls', 'Jazz_controls', 'Jazz']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gaussian-nb: 0.5765873015873015 (+/- 0.1881370926576173)
+random forest: 0.6190476190476191 (+/- 0.09874495882537009)
+gradient boosting: 0.6412698412698413 (+/- 0.19708444294718308)
+knn: 0.6563492063492063 (+/- 0.11871249125829522)
+adaboost: 0.6876984126984127 (+/- 0.1361267287074126)
+decision-tree: 0.694047619047619 (+/- 0.1501888455991444)
+hard voting: 0.7670634920634921 (+/- 0.14745467892922362)
+logistic regression: 0.7892857142857144 (+/- 0.17068290207640743)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.5932539682539683 (+/- 0.07245731838922985) 
+
+MODEL FILE NAME: 
+
+ Whitenoise_Whitenoise_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:29:19.582961
+
+EXECUTION TIME: 
+
+ 2.019953727722168
+
+GROUPS: 
+
+['Whitenoise', 'Whitenoise_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls']
+
+test labels
+
+['Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise', 'Whitenoise_controls', 'Whitenoise_controls', 'Whitenoise']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.5075396825396826 (+/- 0.11785380252868871)
+gradient boosting: 0.5075396825396826 (+/- 0.22669256443578195)
+hard voting: 0.5075396825396826 (+/- 0.1624485111365172)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.5396825396825398 (+/- 0.09615956337054579)
+logistic regression: 0.5460317460317461 (+/- 0.09328689050739755)
+knn: 0.5646825396825397 (+/- 0.14920634920634923)
+gaussian-nb: 0.5896825396825397 (+/- 0.12360585608845578)
+decision-tree: 0.5932539682539683 (+/- 0.07245731838922985)
+
+
+(C) 2018, NeuroLex Laboratories

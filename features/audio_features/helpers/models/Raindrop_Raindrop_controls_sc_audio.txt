@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7944444444444445 (+/- 0.12589187992916287) 
+
+MODEL FILE NAME: 
+
+ Raindrop_Raindrop_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:26:07.718914
+
+EXECUTION TIME: 
+
+ 2.033839225769043
+
+GROUPS: 
+
+['Raindrop', 'Raindrop_controls']
+(65 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls']
+
+test labels
+
+['Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop_controls', 'Raindrop', 'Raindrop_controls', 'Raindrop', 'Raindrop', 'Raindrop_controls', 'Raindrop_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5333333333333334 (+/- 0.027216552697590882)
+random forest: 0.675 (+/- 0.0812707713240433)
+logistic regression: 0.6777777777777778 (+/- 0.18724777273725243)
+gaussian-nb: 0.6805555555555556 (+/- 0.15713484026367724)
+gradient boosting: 0.7 (+/- 0.1133796201775475)
+decision-tree: 0.7472222222222222 (+/- 0.20794408080236554)
+adaboost: 0.7472222222222222 (+/- 0.07777777777777779)
+hard voting: 0.7472222222222222 (+/- 0.1532568247125969)
+knn: 0.7944444444444445 (+/- 0.12589187992916287)
+
+
+(C) 2018, NeuroLex Laboratories

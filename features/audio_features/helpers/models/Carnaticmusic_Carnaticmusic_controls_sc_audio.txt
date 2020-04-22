@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.719047619047619 (+/- 0.0954164995691137) 
+
+MODEL FILE NAME: 
+
+ Carnaticmusic_Carnaticmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:36:38.002755
+
+EXECUTION TIME: 
+
+ 2.810929298400879
+
+GROUPS: 
+
+['Carnaticmusic', 'Carnaticmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls']
+
+test labels
+
+['Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic', 'Carnaticmusic_controls', 'Carnaticmusic_controls', 'Carnaticmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gaussian-nb: 0.636111111111111 (+/- 0.15734314636884145)
+adaboost: 0.6369047619047619 (+/- 0.11243541860111995)
+knn: 0.6369047619047619 (+/- 0.1303014123096393)
+random forest: 0.6619047619047619 (+/- 0.12060881087537087)
+gradient boosting: 0.6626984126984127 (+/- 0.16730791229271566)
+decision-tree: 0.6876984126984127 (+/- 0.1495226299956846)
+hard voting: 0.6876984126984127 (+/- 0.1495226299956846)
+logistic regression: 0.719047619047619 (+/- 0.0954164995691137)
+
+
+(C) 2018, NeuroLex Laboratories

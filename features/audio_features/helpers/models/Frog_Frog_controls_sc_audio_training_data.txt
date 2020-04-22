@@ -1,0 +1,8 @@
+train labels
+
+['Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog', 'Frog', 'Frog', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls']
+
+test labels
+
+['Frog', 'Frog', 'Frog', 'Frog', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog', 'Frog', 'Frog', 'Frog_controls', 'Frog_controls', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog_controls', 'Frog', 'Frog', 'Frog_controls', 'Frog']
+

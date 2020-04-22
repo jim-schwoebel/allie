@@ -1,0 +1,8 @@
+train labels
+
+['Cough', 'Cough', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls']
+
+test labels
+
+['Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough', 'Cough', 'Cough', 'Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough_controls', 'Cough', 'Cough', 'Cough_controls', 'Cough_controls']
+

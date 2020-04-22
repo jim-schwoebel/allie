@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.746031746031746 (+/- 0.14373627203392728) 
+
+MODEL FILE NAME: 
+
+ Scissors_Scissors_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:55:00.193150
+
+EXECUTION TIME: 
+
+ 1.9757239818572998
+
+GROUPS: 
+
+['Scissors', 'Scissors_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls']
+
+test labels
+
+['Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors_controls', 'Scissors_controls', 'Scissors', 'Scissors_controls', 'Scissors', 'Scissors', 'Scissors_controls', 'Scissors_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6380952380952382 (+/- 0.12793296304514215)
+adaboost: 0.6380952380952382 (+/- 0.12793296304514215)
+gaussian-nb: 0.6603174603174603 (+/- 0.08068739699770691)
+random forest: 0.6952380952380952 (+/- 0.09331389496316869)
+hard voting: 0.7174603174603174 (+/- 0.1388866212966816)
+gradient boosting: 0.7238095238095238 (+/- 0.15700651452543793)
+knn: 0.7301587301587302 (+/- 0.11577512716705057)
+logistic regression: 0.746031746031746 (+/- 0.14373627203392728)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.9242063492063493 (+/- 0.06269841269841271) 
+
+MODEL FILE NAME: 
+
+ Fixed-wingaircraft,airplane_Fixed-wingaircraft,airplane_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:45:37.696111
+
+EXECUTION TIME: 
+
+ 2.033704996109009
+
+GROUPS: 
+
+['Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls']
+
+test labels
+
+['Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane', 'Fixed-wingaircraft,airplane_controls', 'Fixed-wingaircraft,airplane']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.790873015873016 (+/- 0.15874801486866455)
+decision-tree: 0.8103174603174603 (+/- 0.15025802951795383)
+random forest: 0.8226190476190476 (+/- 0.06644426243159075)
+logistic regression: 0.8388888888888889 (+/- 0.16887426837300734)
+gradient boosting: 0.8547619047619047 (+/- 0.08850540863143269)
+adaboost: 0.8769841269841269 (+/- 0.07991870396935939)
+hard voting: 0.8769841269841269 (+/- 0.07991870396935939)
+gaussian-nb: 0.9242063492063493 (+/- 0.06269841269841271)
+
+
+(C) 2018, NeuroLex Laboratories

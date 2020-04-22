@@ -1,0 +1,8 @@
+train labels
+
+['Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls']
+
+test labels
+
+['Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls']
+

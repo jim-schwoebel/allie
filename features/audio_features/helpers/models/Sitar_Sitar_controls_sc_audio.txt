@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7523809523809525 (+/- 0.14394646411116996) 
+
+MODEL FILE NAME: 
+
+ Sitar_Sitar_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:21:23.622069
+
+EXECUTION TIME: 
+
+ 2.0022189617156982
+
+GROUPS: 
+
+['Sitar', 'Sitar_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls']
+
+test labels
+
+['Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.4507936507936508 (+/- 0.15211617207251985)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.5714285714285714 (+/- 0.08577305451496062)
+gaussian-nb: 0.6666666666666666 (+/- 0.13801311186847084)
+adaboost: 0.6793650793650794 (+/- 0.1710754740991426)
+logistic regression: 0.6793650793650794 (+/- 0.11375538328361215)
+gradient boosting: 0.7047619047619047 (+/- 0.15211617207251987)
+hard voting: 0.7238095238095239 (+/- 0.09917777366230669)
+random forest: 0.7523809523809525 (+/- 0.14394646411116996)
+
+
+(C) 2018, NeuroLex Laboratories

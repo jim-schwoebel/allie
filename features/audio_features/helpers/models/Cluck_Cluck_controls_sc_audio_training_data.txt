@@ -1,0 +1,8 @@
+train labels
+
+['Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls']
+
+test labels
+
+['Cluck', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck_controls', 'Cluck_controls', 'Cluck_controls', 'Cluck', 'Cluck', 'Cluck', 'Cluck', 'Cluck', 'Cluck_controls', 'Cluck_controls']
+

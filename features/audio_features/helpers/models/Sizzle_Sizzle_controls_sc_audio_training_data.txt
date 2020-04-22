@@ -1,0 +1,8 @@
+train labels
+
+['Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls']
+
+test labels
+
+['Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle', 'Sizzle', 'Sizzle_controls', 'Sizzle', 'Sizzle_controls', 'Sizzle_controls', 'Sizzle']
+

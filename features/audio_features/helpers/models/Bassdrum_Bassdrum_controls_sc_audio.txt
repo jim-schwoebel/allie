@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8933333333333333 (+/- 0.07039570693980955) 
+
+MODEL FILE NAME: 
+
+ Bassdrum_Bassdrum_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:40:47.792827
+
+EXECUTION TIME: 
+
+ 2.4524688720703125
+
+GROUPS: 
+
+['Bassdrum', 'Bassdrum_controls']
+(85 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls']
+
+test labels
+
+['Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum_controls', 'Bassdrum', 'Bassdrum', 'Bassdrum_controls', 'Bassdrum']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.4909090909090909 (+/- 0.018181818181818188)
+knn: 0.746969696969697 (+/- 0.16525573581134523)
+gaussian-nb: 0.7636363636363637 (+/- 0.16888333082536697)
+decision-tree: 0.7721212121212121 (+/- 0.06542648107669383)
+random forest: 0.7884848484848485 (+/- 0.07395802050529426)
+adaboost: 0.806969696969697 (+/- 0.06115358737516677)
+gradient boosting: 0.8087878787878788 (+/- 0.0818709145441847)
+hard voting: 0.8451515151515151 (+/- 0.07786994407986253)
+logistic regression: 0.8933333333333333 (+/- 0.07039570693980955)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7574615384615384 (+/- 0.0764073480775029) 
+
+MODEL FILE NAME: 
+
+ Fowl_Fowl_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:54:32.442763
+
+EXECUTION TIME: 
+
+ 4.559300899505615
+
+GROUPS: 
+
+['Fowl', 'Fowl_controls']
+(192 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl']
+
+test labels
+
+['Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl', 'Fowl', 'Fowl_controls', 'Fowl', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl_controls', 'Fowl']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5434102564102564 (+/- 0.008387241806163478)
+knn: 0.6462307692307693 (+/- 0.08597522692596056)
+decision-tree: 0.6545897435897436 (+/- 0.04374304866350065)
+logistic regression: 0.6606923076923077 (+/- 0.07794262796722902)
+gaussian-nb: 0.685974358974359 (+/- 0.07718347378748908)
+random forest: 0.7023333333333333 (+/- 0.051176326915429324)
+adaboost: 0.7257435897435898 (+/- 0.061461832631967195)
+gradient boosting: 0.7417179487179486 (+/- 0.06698796343548143)
+hard voting: 0.7574615384615384 (+/- 0.0764073480775029)
+
+
+(C) 2018, NeuroLex Laboratories

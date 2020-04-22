@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7809523809523811 (+/- 0.1476787726934985) 
+
+MODEL FILE NAME: 
+
+ Birdflight,flappingwings_Birdflight,flappingwings_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:55:04.567852
+
+EXECUTION TIME: 
+
+ 2.1294283866882324
+
+GROUPS: 
+
+['Birdflight,flappingwings', 'Birdflight,flappingwings_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls']
+
+test labels
+
+['Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings', 'Birdflight,flappingwings', 'Birdflight,flappingwings_controls', 'Birdflight,flappingwings_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.45396825396825397 (+/- 0.17347398212462542)
+gradient boosting: 0.5428571428571429 (+/- 0.10306465448093924)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gaussian-nb: 0.5968253968253967 (+/- 0.1717222645879177)
+adaboost: 0.6 (+/- 0.13706052790427237)
+hard voting: 0.6 (+/- 0.2080273641321381)
+knn: 0.6603174603174603 (+/- 0.1280117152613076)
+logistic regression: 0.7619047619047619 (+/- 0.19310357239041967)
+random forest: 0.7809523809523811 (+/- 0.1476787726934985)
+
+
+(C) 2018, NeuroLex Laboratories

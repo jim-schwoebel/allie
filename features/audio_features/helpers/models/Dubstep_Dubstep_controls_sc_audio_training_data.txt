@@ -1,0 +1,8 @@
+train labels
+
+['Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls']
+
+test labels
+
+['Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep_controls', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep', 'Dubstep_controls', 'Dubstep_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6833333333333333 (+/- 0.1527525231651947) 
+
+MODEL FILE NAME: 
+
+ Run_Run_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:45:33.290713
+
+EXECUTION TIME: 
+
+ 1.9815800189971924
+
+GROUPS: 
+
+['Run', 'Run_controls']
+(54 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls']
+
+test labels
+
+['Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run_controls', 'Run', 'Run_controls', 'Run_controls', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run', 'Run', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls', 'Run', 'Run', 'Run_controls', 'Run_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.45 (+/- 0.12747548783981963)
+adaboost: 0.4833333333333333 (+/- 0.1550089603144856)
+knn: 0.5 (+/- 0.07905694150420949)
+decision-tree: 0.5083333333333333 (+/- 0.14529663145135577)
+gaussian-nb: 0.5166666666666667 (+/- 0.10736748938937606)
+hard voting: 0.5333333333333333 (+/- 0.17159383568311667)
+random forest: 0.5583333333333333 (+/- 0.1740051084818425)
+sk: 0.575 (+/- 0.12190615698606495)
+logistic regression: 0.6833333333333333 (+/- 0.1527525231651947)
+
+
+(C) 2018, NeuroLex Laboratories

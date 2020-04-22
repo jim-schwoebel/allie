@@ -1,0 +1,8 @@
+train labels
+
+['Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls']
+
+test labels
+
+['Drill', 'Drill', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill', 'Drill_controls', 'Drill_controls', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill_controls', 'Drill', 'Drill', 'Drill_controls', 'Drill']
+

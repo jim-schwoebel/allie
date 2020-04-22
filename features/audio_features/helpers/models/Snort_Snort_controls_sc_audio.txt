@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6603174603174603 (+/- 0.1280117152613076) 
+
+MODEL FILE NAME: 
+
+ Snort_Snort_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:36:12.069521
+
+EXECUTION TIME: 
+
+ 1.9986062049865723
+
+GROUPS: 
+
+['Snort', 'Snort_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls']
+
+test labels
+
+['Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4222222222222222 (+/- 0.18930859067778505)
+gradient boosting: 0.4793650793650793 (+/- 0.13027482240433771)
+knn: 0.5587301587301586 (+/- 0.20875279013045836)
+adaboost: 0.5587301587301587 (+/- 0.11810206500151287)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.5936507936507937 (+/- 0.1994196669782782)
+hard voting: 0.6095238095238095 (+/- 0.1480876671706743)
+gaussian-nb: 0.6222222222222223 (+/- 0.07539264817166932)
+logistic regression: 0.6603174603174603 (+/- 0.1280117152613076)
+
+
+(C) 2018, NeuroLex Laboratories

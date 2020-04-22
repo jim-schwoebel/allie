@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7238095238095238 (+/- 0.06998542122237651) 
+
+MODEL FILE NAME: 
+
+ Childrenplaying_Childrenplaying_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:52:48.540234
+
+EXECUTION TIME: 
+
+ 2.586024045944214
+
+GROUPS: 
+
+['Childrenplaying', 'Childrenplaying_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls']
+
+test labels
+
+['Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying', 'Childrenplaying', 'Childrenplaying_controls', 'Childrenplaying_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.5142857142857142 (+/- 0.06396648152257106)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gradient boosting: 0.6317460317460316 (+/- 0.12871831703310027)
+decision-tree: 0.6380952380952382 (+/- 0.20213025244103625)
+hard voting: 0.6666666666666667 (+/- 0.0875177698545411)
+gaussian-nb: 0.6888888888888889 (+/- 0.06853026395213621)
+random forest: 0.6952380952380952 (+/- 0.0233284737407922)
+knn: 0.707936507936508 (+/- 0.16237094415929423)
+adaboost: 0.7238095238095238 (+/- 0.06998542122237651)
+
+
+(C) 2018, NeuroLex Laboratories

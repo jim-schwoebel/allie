@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.775 (+/- 0.1457737973711325) 
+
+MODEL FILE NAME: 
+
+ Whistling_Whistling_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:28:28.570182
+
+EXECUTION TIME: 
+
+ 1.9874930381774902
+
+GROUPS: 
+
+['Whistling', 'Whistling_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whistling', 'Whistling', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls']
+
+test labels
+
+['Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling', 'Whistling', 'Whistling_controls', 'Whistling_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.55 (+/- 0.06123724356957946)
+knn: 0.575 (+/- 0.09999999999999999)
+decision-tree: 0.7083333333333333 (+/- 0.052704627669472995)
+gaussian-nb: 0.7083333333333333 (+/- 0.0950146187582615)
+logistic regression: 0.725 (+/- 0.16583123951777)
+adaboost: 0.7416666666666667 (+/- 0.1301708279317776)
+gradient boosting: 0.7416666666666667 (+/- 0.06666666666666668)
+hard voting: 0.7416666666666667 (+/- 0.10341394704992381)
+random forest: 0.775 (+/- 0.1457737973711325)
+
+
+(C) 2018, NeuroLex Laboratories

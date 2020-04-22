@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7904761904761906 (+/- 0.07197323205558495) 
+
+MODEL FILE NAME: 
+
+ Trickle,dribble_Trickle,dribble_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:44:39.737090
+
+EXECUTION TIME: 
+
+ 2.4871699810028076
+
+GROUPS: 
+
+['Trickle,dribble', 'Trickle,dribble_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls']
+
+test labels
+
+['Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble', 'Trickle,dribble', 'Trickle,dribble_controls', 'Trickle,dribble_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.638095238095238 (+/- 0.1566209064577017)
+adaboost: 0.6380952380952382 (+/- 0.09057360392182291)
+knn: 0.6444444444444445 (+/- 0.15078529634333865)
+random forest: 0.6603174603174603 (+/- 0.0806873969977069)
+gaussian-nb: 0.7174603174603174 (+/- 0.09702036057102302)
+logistic regression: 0.7333333333333332 (+/- 0.1370605279042724)
+gradient boosting: 0.7555555555555555 (+/- 0.13968253968253969)
+hard voting: 0.7904761904761906 (+/- 0.07197323205558495)
+
+
+(C) 2018, NeuroLex Laboratories

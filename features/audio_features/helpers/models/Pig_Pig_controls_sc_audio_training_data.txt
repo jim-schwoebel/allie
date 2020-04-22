@@ -1,0 +1,8 @@
+train labels
+
+['Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls']
+
+test labels
+
+['Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig', 'Pig', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig', 'Pig', 'Pig_controls', 'Pig_controls', 'Pig']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8261904761904761 (+/- 0.10470176243835226) 
+
+MODEL FILE NAME: 
+
+ Fill(withliquid)_Fill(withliquid)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:39:39.012099
+
+EXECUTION TIME: 
+
+ 2.0599441528320312
+
+GROUPS: 
+
+['Fill(withliquid)', 'Fill(withliquid)_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls']
+
+test labels
+
+['Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)', 'Fill(withliquid)', 'Fill(withliquid)_controls', 'Fill(withliquid)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.6452380952380953 (+/- 0.13288852486318156)
+logistic regression: 0.6460317460317461 (+/- 0.09933008156928265)
+decision-tree: 0.648809523809524 (+/- 0.08505404148119718)
+adaboost: 0.6710317460317461 (+/- 0.07116795488822932)
+gradient boosting: 0.7182539682539681 (+/- 0.07702911465746623)
+hard voting: 0.769047619047619 (+/- 0.11100902339622769)
+random forest: 0.7976190476190477 (+/- 0.06554229467321451)
+gaussian-nb: 0.8261904761904761 (+/- 0.10470176243835226)
+
+
+(C) 2018, NeuroLex Laboratories

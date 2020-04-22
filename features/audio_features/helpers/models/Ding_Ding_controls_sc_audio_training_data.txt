@@ -1,0 +1,8 @@
+train labels
+
+['Ding', 'Ding', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls']
+
+test labels
+
+['Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding', 'Ding', 'Ding_controls', 'Ding_controls']
+

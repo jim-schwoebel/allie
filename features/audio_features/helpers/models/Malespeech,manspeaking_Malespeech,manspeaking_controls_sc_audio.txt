@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8083333333333333 (+/- 0.16158932858054434) 
+
+MODEL FILE NAME: 
+
+ Malespeech,manspeaking_Malespeech,manspeaking_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:23:18.483123
+
+EXECUTION TIME: 
+
+ 2.0862960815429688
+
+GROUPS: 
+
+['Malespeech,manspeaking', 'Malespeech,manspeaking_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls']
+
+test labels
+
+['Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking', 'Malespeech,manspeaking', 'Malespeech,manspeaking_controls', 'Malespeech,manspeaking_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.4333333333333333 (+/- 0.140929454377398)
+sk: 0.525 (+/- 0.049999999999999996)
+knn: 0.55 (+/- 0.1274754878398196)
+decision-tree: 0.5833333333333333 (+/- 0.10540925533894598)
+hard voting: 0.6333333333333333 (+/- 0.08079466429027214)
+adaboost: 0.6583333333333333 (+/- 0.19965247584518234)
+gradient boosting: 0.6833333333333333 (+/- 0.056519416526043906)
+random forest: 0.7833333333333333 (+/- 0.1379412113103904)
+gaussian-nb: 0.8083333333333333 (+/- 0.16158932858054434)
+
+
+(C) 2018, NeuroLex Laboratories

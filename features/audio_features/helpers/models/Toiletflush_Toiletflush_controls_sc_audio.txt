@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7214285714285714 (+/- 0.14223076965528483) 
+
+MODEL FILE NAME: 
+
+ Toiletflush_Toiletflush_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:32:50.058747
+
+EXECUTION TIME: 
+
+ 1.9865238666534424
+
+GROUPS: 
+
+['Toiletflush', 'Toiletflush_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls']
+
+test labels
+
+['Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush', 'Toiletflush', 'Toiletflush_controls', 'Toiletflush_controls', 'Toiletflush']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+adaboost: 0.530952380952381 (+/- 0.15610225441100953)
+gaussian-nb: 0.555952380952381 (+/- 0.13809523809523813)
+gradient boosting: 0.5642857142857143 (+/- 0.18543935693924526)
+random forest: 0.5642857142857143 (+/- 0.056015668361993294)
+decision-tree: 0.5809523809523809 (+/- 0.18825339944773406)
+knn: 0.5857142857142856 (+/- 0.1114606181023374)
+hard voting: 0.6392857142857142 (+/- 0.09871624972203753)
+logistic regression: 0.7214285714285714 (+/- 0.14223076965528483)
+
+
+(C) 2018, NeuroLex Laboratories

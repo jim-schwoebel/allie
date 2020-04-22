@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.5988095238095237 (+/- 0.14704188244423344) 
+
+MODEL FILE NAME: 
+
+ Pulse_Pulse_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:10:28.670215
+
+EXECUTION TIME: 
+
+ 2.6573498249053955
+
+GROUPS: 
+
+['Pulse', 'Pulse_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls']
+
+test labels
+
+['Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse', 'Pulse', 'Pulse_controls', 'Pulse', 'Pulse_controls', 'Pulse_controls', 'Pulse']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.3408730158730159 (+/- 0.08818456789378316)
+knn: 0.4095238095238095 (+/- 0.08702698515474794)
+logistic regression: 0.44523809523809527 (+/- 0.18933437529654837)
+random forest: 0.4666666666666666 (+/- 0.11285061263003873)
+decision-tree: 0.4825396825396825 (+/- 0.16538814223315054)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.5765873015873015 (+/- 0.1881370926576173)
+gradient boosting: 0.596031746031746 (+/- 0.11874034418580981)
+hard voting: 0.5988095238095237 (+/- 0.14704188244423344)
+
+
+(C) 2018, NeuroLex Laboratories

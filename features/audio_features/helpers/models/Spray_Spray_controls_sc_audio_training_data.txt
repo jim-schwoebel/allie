@@ -1,0 +1,8 @@
+train labels
+
+['Spray', 'Spray', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls']
+
+test labels
+
+['Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray', 'Spray', 'Spray_controls', 'Spray_controls']
+

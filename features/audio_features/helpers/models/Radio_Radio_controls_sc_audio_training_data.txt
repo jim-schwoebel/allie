@@ -1,0 +1,8 @@
+train labels
+
+['Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls']
+
+test labels
+
+['Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls', 'Radio_controls', 'Radio', 'Radio_controls', 'Radio', 'Radio', 'Radio_controls', 'Radio_controls']
+

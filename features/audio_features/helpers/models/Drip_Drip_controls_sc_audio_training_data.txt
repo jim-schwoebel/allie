@@ -1,0 +1,8 @@
+train labels
+
+['Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls']
+
+test labels
+
+['Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls']
+

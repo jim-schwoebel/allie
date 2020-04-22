@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.6369047619047619 (+/- 0.06692128248835807) 
+
+MODEL FILE NAME: 
+
+ MusicofLatinAmerica_MusicofLatinAmerica_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:14:01.564216
+
+EXECUTION TIME: 
+
+ 2.5547776222229004
+
+GROUPS: 
+
+['MusicofLatinAmerica', 'MusicofLatinAmerica_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls']
+
+test labels
+
+['MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica_controls', 'MusicofLatinAmerica']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.41666666666666663 (+/- 0.17861110670291958)
+logistic regression: 0.5119047619047619 (+/- 0.1676839701110382)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gaussian-nb: 0.5547619047619048 (+/- 0.2097874423674036)
+random forest: 0.5583333333333333 (+/- 0.1407785285628046)
+adaboost: 0.5638888888888889 (+/- 0.1634053553396923)
+gradient boosting: 0.5797619047619047 (+/- 0.15818557373212466)
+knn: 0.6154761904761904 (+/- 0.14790678562378431)
+hard voting: 0.6369047619047619 (+/- 0.06692128248835807)
+
+
+(C) 2018, NeuroLex Laboratories

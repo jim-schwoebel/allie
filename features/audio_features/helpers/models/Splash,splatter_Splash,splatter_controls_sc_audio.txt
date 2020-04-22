@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7206349206349205 (+/- 0.2593866440103555) 
+
+MODEL FILE NAME: 
+
+ Splash,splatter_Splash,splatter_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 02:54:43.763629
+
+EXECUTION TIME: 
+
+ 1.9651188850402832
+
+GROUPS: 
+
+['Splash,splatter', 'Splash,splatter_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls']
+
+test labels
+
+['Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter', 'Splash,splatter', 'Splash,splatter_controls', 'Splash,splatter_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.48571428571428565 (+/- 0.21191516531147472)
+gradient boosting: 0.5428571428571429 (+/- 0.04958888683115336)
+decision-tree: 0.5650793650793651 (+/- 0.1566852403714675)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+hard voting: 0.5936507936507937 (+/- 0.09288088151319235)
+logistic regression: 0.6158730158730158 (+/- 0.14246860744328171)
+adaboost: 0.6444444444444445 (+/- 0.06853026395213621)
+knn: 0.6666666666666666 (+/- 0.1043281061914602)
+gaussian-nb: 0.7206349206349205 (+/- 0.2593866440103555)
+
+
+(C) 2018, NeuroLex Laboratories

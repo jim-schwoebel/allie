@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6753968253968254 (+/- 0.13056460141383358) 
+
+MODEL FILE NAME: 
+
+ Whip_Whip_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:25:07.269266
+
+EXECUTION TIME: 
+
+ 2.0066041946411133
+
+GROUPS: 
+
+['Whip', 'Whip_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls']
+
+test labels
+
+['Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.46388888888888885 (+/- 0.14424152849895133)
+hard voting: 0.5055555555555555 (+/- 0.20004644837306346)
+decision-tree: 0.5325396825396825 (+/- 0.08859610226959523)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.5515873015873016 (+/- 0.1709530073237261)
+adaboost: 0.5682539682539682 (+/- 0.1695266705067422)
+logistic regression: 0.6376984126984127 (+/- 0.16163804672993198)
+knn: 0.6404761904761905 (+/- 0.047708249784556865)
+gaussian-nb: 0.6753968253968254 (+/- 0.13056460141383358)
+
+
+(C) 2018, NeuroLex Laboratories

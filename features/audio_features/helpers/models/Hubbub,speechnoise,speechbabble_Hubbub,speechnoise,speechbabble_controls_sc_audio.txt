@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.8 (+/- 0.1695582495781317) 
+
+MODEL FILE NAME: 
+
+ Hubbub,speechnoise,speechbabble_Hubbub,speechnoise,speechbabble_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:43:37.449957
+
+EXECUTION TIME: 
+
+ 2.5204579830169678
+
+GROUPS: 
+
+['Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls']
+
+test labels
+
+['Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble', 'Hubbub,speechnoise,speechbabble_controls', 'Hubbub,speechnoise,speechbabble_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5 (+/- 0.0)
+gaussian-nb: 0.6 (+/- 0.09354143466934853)
+decision-tree: 0.65 (+/- 0.09354143466934853)
+knn: 0.675 (+/- 0.12747548783981963)
+adaboost: 0.7 (+/- 0.12747548783981963)
+random forest: 0.7083333333333333 (+/- 0.052704627669472995)
+logistic regression: 0.75 (+/- 0.1767766952966369)
+gradient boosting: 0.775 (+/- 0.16583123951777)
+hard voting: 0.8 (+/- 0.1695582495781317)
+
+
+(C) 2018, NeuroLex Laboratories

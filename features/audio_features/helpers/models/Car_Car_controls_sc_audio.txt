@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7000693000693001 (+/- 0.05437896557292015) 
+
+MODEL FILE NAME: 
+
+ Car_Car_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:33:46.500051
+
+EXECUTION TIME: 
+
+ 9.343232154846191
+
+GROUPS: 
+
+['Car', 'Car_controls']
+(283 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car']
+
+test labels
+
+['Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car', 'Car', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car', 'Car_controls', 'Car', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car_controls', 'Car', 'Car_controls', 'Car', 'Car_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5133749133749135 (+/- 0.00027720027720028466)
+decision-tree: 0.5706167706167706 (+/- 0.08364905907709405)
+gaussian-nb: 0.6516978516978517 (+/- 0.10572438195912384)
+random forest: 0.6522522522522521 (+/- 0.07866263046105613)
+gradient boosting: 0.6562716562716562 (+/- 0.08788822654185827)
+adaboost: 0.6568260568260569 (+/- 0.07035564748383256)
+knn: 0.6681912681912683 (+/- 0.06395221265606779)
+logistic regression: 0.690921690921691 (+/- 0.0710127924055119)
+hard voting: 0.7000693000693001 (+/- 0.05437896557292015)
+
+
+(C) 2018, NeuroLex Laboratories

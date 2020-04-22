@@ -1,0 +1,8 @@
+train labels
+
+['Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls']
+
+test labels
+
+['Sniff', 'Sniff', 'Sniff', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff_controls', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff_controls', 'Sniff', 'Sniff', 'Sniff_controls', 'Sniff']
+

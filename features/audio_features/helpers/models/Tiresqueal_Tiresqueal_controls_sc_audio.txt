@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7123015873015873 (+/- 0.18244476483216407) 
+
+MODEL FILE NAME: 
+
+ Tiresqueal_Tiresqueal_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:32:01.035033
+
+EXECUTION TIME: 
+
+ 2.0653371810913086
+
+GROUPS: 
+
+['Tiresqueal', 'Tiresqueal_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls']
+
+test labels
+
+['Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal', 'Tiresqueal', 'Tiresqueal_controls', 'Tiresqueal']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.5607142857142857 (+/- 0.16493621693350616)
+random forest: 0.5666666666666667 (+/- 0.1582214069127252)
+adaboost: 0.5702380952380952 (+/- 0.19814108392971289)
+knn: 0.5765873015873015 (+/- 0.11677459644289769)
+gaussian-nb: 0.6396825396825396 (+/- 0.1468232518075832)
+decision-tree: 0.6432539682539682 (+/- 0.1691444688659567)
+hard voting: 0.6623015873015874 (+/- 0.22807071479000185)
+gradient boosting: 0.7123015873015873 (+/- 0.18244476483216407)
+
+
+(C) 2018, NeuroLex Laboratories

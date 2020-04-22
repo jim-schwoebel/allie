@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7670634920634921 (+/- 0.09613991022525677) 
+
+MODEL FILE NAME: 
+
+ Croak_Croak_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:32:56.667692
+
+EXECUTION TIME: 
+
+ 2.2623190879821777
+
+GROUPS: 
+
+['Croak', 'Croak_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls']
+
+test labels
+
+['Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak', 'Croak', 'Croak', 'Croak_controls', 'Croak', 'Croak_controls', 'Croak_controls', 'Croak']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+gradient boosting: 0.6126984126984126 (+/- 0.11373323249316099)
+logistic regression: 0.6146825396825397 (+/- 0.13278183373154104)
+knn: 0.634126984126984 (+/- 0.10946628348931219)
+decision-tree: 0.6654761904761906 (+/- 0.0632634774075544)
+random forest: 0.669047619047619 (+/- 0.12652695481510878)
+gaussian-nb: 0.6876984126984127 (+/- 0.07765620560252419)
+hard voting: 0.7134920634920635 (+/- 0.12464108209143224)
+adaboost: 0.7670634920634921 (+/- 0.09613991022525677)
+
+
+(C) 2018, NeuroLex Laboratories

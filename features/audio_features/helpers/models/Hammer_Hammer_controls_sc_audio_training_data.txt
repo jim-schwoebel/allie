@@ -1,0 +1,8 @@
+train labels
+
+['Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls']
+
+test labels
+
+['Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls']
+

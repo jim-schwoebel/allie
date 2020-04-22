@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8827777777777778 (+/- 0.07970625081982645) 
+
+MODEL FILE NAME: 
+
+ Trombone_Trombone_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:45:35.295204
+
+EXECUTION TIME: 
+
+ 2.0820260047912598
+
+GROUPS: 
+
+['Trombone', 'Trombone_controls']
+(64 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls']
+
+test labels
+
+['Trombone', 'Trombone', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone_controls', 'Trombone_controls', 'Trombone', 'Trombone_controls', 'Trombone', 'Trombone', 'Trombone_controls', 'Trombone_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5111111111111111 (+/- 0.022222222222222233)
+knn: 0.6905555555555556 (+/- 0.11289676263004923)
+logistic regression: 0.7011111111111111 (+/- 0.15627413393863876)
+gaussian-nb: 0.7183333333333334 (+/- 0.06333333333333335)
+adaboost: 0.7255555555555555 (+/- 0.0636929362131845)
+random forest: 0.7483333333333333 (+/- 0.10611838253154406)
+decision-tree: 0.8405555555555555 (+/- 0.042766953897594946)
+hard voting: 0.8655555555555555 (+/- 0.11091093078638027)
+gradient boosting: 0.8827777777777778 (+/- 0.07970625081982645)
+
+
+(C) 2018, NeuroLex Laboratories

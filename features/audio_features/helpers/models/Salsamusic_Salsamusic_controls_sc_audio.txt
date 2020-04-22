@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8714285714285716 (+/- 0.11203133672398659) 
+
+MODEL FILE NAME: 
+
+ Salsamusic_Salsamusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:49:46.870200
+
+EXECUTION TIME: 
+
+ 1.9593479633331299
+
+GROUPS: 
+
+['Salsamusic', 'Salsamusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls']
+
+test labels
+
+['Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic', 'Salsamusic_controls', 'Salsamusic_controls', 'Salsamusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.7384920634920634 (+/- 0.12459559172154697)
+knn: 0.7448412698412697 (+/- 0.14876242640939913)
+decision-tree: 0.7448412698412699 (+/- 0.07618220854613623)
+gradient boosting: 0.7984126984126985 (+/- 0.10278926821838821)
+adaboost: 0.8492063492063492 (+/- 0.09387248444487266)
+logistic regression: 0.8492063492063492 (+/- 0.09387248444487266)
+hard voting: 0.8555555555555555 (+/- 0.11837375418145843)
+gaussian-nb: 0.8714285714285716 (+/- 0.11203133672398659)
+
+
+(C) 2018, NeuroLex Laboratories

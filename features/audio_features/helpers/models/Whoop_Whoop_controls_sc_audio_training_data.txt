@@ -1,0 +1,8 @@
+train labels
+
+['Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls']
+
+test labels
+
+['Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop']
+

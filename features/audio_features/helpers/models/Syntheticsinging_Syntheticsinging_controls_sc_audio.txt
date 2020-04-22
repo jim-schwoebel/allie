@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8253968253968254 (+/- 0.03888078956798692) 
+
+MODEL FILE NAME: 
+
+ Syntheticsinging_Syntheticsinging_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:12:15.424064
+
+EXECUTION TIME: 
+
+ 2.052046060562134
+
+GROUPS: 
+
+['Syntheticsinging', 'Syntheticsinging_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls']
+
+test labels
+
+['Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging', 'Syntheticsinging', 'Syntheticsinging_controls', 'Syntheticsinging_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+knn: 0.5650793650793651 (+/- 0.18086881946976652)
+logistic regression: 0.6666666666666666 (+/- 0.14991389146815995)
+decision-tree: 0.6730158730158731 (+/- 0.1093280975093496)
+adaboost: 0.6793650793650794 (+/- 0.23955110450683784)
+gaussian-nb: 0.7555555555555555 (+/- 0.12071843391639073)
+random forest: 0.761904761904762 (+/- 0.06808765266516574)
+hard voting: 0.7746031746031746 (+/- 0.1881873058448118)
+gradient boosting: 0.8253968253968254 (+/- 0.03888078956798692)
+
+
+(C) 2018, NeuroLex Laboratories

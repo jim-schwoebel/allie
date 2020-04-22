@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7904761904761906 (+/- 0.07197323205558495) 
+
+MODEL FILE NAME: 
+
+ Trancemusic_Trancemusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:43:48.169799
+
+EXECUTION TIME: 
+
+ 2.1650280952453613
+
+GROUPS: 
+
+['Trancemusic', 'Trancemusic_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls']
+
+test labels
+
+['Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic', 'Trancemusic', 'Trancemusic_controls', 'Trancemusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6158730158730159 (+/- 0.11767462217682946)
+logistic regression: 0.7396825396825397 (+/- 0.18335909940563366)
+gradient boosting: 0.746031746031746 (+/- 0.06582997255024671)
+hard voting: 0.7682539682539683 (+/- 0.13823200671160155)
+knn: 0.7682539682539683 (+/- 0.052740468970908394)
+gaussian-nb: 0.7746031746031746 (+/- 0.07605808603625992)
+adaboost: 0.7904761904761906 (+/- 0.14665154872953776)
+random forest: 0.7904761904761906 (+/- 0.07197323205558495)
+
+
+(C) 2018, NeuroLex Laboratories

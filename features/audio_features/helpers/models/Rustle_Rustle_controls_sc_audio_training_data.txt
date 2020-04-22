@@ -1,0 +1,8 @@
+train labels
+
+['Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls']
+
+test labels
+
+['Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls']
+

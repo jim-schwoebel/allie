@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6916666666666667 (+/- 0.11666666666666668) 
+
+MODEL FILE NAME: 
+
+ Drip_Drip_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:05:15.602151
+
+EXECUTION TIME: 
+
+ 2.026735305786133
+
+GROUPS: 
+
+['Drip', 'Drip_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls']
+
+test labels
+
+['Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip', 'Drip', 'Drip_controls', 'Drip_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5833333333333333 (+/- 0.13176156917368248)
+adaboost: 0.6 (+/- 0.1457737973711325)
+gaussian-nb: 0.6083333333333333 (+/- 0.097182531580755)
+sk: 0.625 (+/- 0.19364916731037085)
+knn: 0.6416666666666667 (+/- 0.13333333333333336)
+gradient boosting: 0.6583333333333333 (+/- 0.1452966314513558)
+decision-tree: 0.6833333333333333 (+/- 0.16791201399674904)
+hard voting: 0.6833333333333333 (+/- 0.16791201399674904)
+logistic regression: 0.6916666666666667 (+/- 0.11666666666666668)
+
+
+(C) 2018, NeuroLex Laboratories

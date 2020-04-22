@@ -1,0 +1,8 @@
+train labels
+
+['Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls']
+
+test labels
+
+['Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling']
+

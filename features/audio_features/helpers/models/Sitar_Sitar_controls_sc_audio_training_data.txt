@@ -1,0 +1,8 @@
+train labels
+
+['Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls']
+
+test labels
+
+['Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls', 'Sitar_controls', 'Sitar', 'Sitar_controls', 'Sitar', 'Sitar', 'Sitar_controls', 'Sitar_controls']
+

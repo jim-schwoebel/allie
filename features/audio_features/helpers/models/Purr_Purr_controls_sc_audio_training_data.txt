@@ -1,0 +1,8 @@
+train labels
+
+['Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls']
+
+test labels
+
+['Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr', 'Purr', 'Purr_controls', 'Purr_controls', 'Purr_controls', 'Purr', 'Purr_controls', 'Purr', 'Purr', 'Purr_controls', 'Purr_controls']
+

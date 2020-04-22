@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7416666666666667 (+/- 0.1522972240208089) 
+
+MODEL FILE NAME: 
+
+ Rustle_Rustle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:46:22.411803
+
+EXECUTION TIME: 
+
+ 1.9762318134307861
+
+GROUPS: 
+
+['Rustle', 'Rustle_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls']
+
+test labels
+
+['Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle', 'Rustle', 'Rustle_controls', 'Rustle_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.4 (+/- 0.1224744871391589)
+sk: 0.55 (+/- 0.06123724356957946)
+decision-tree: 0.5833333333333333 (+/- 0.10540925533894598)
+hard voting: 0.6333333333333333 (+/- 0.016666666666666653)
+gradient boosting: 0.6416666666666667 (+/- 0.10736748938937606)
+knn: 0.6416666666666667 (+/- 0.15500896031448563)
+random forest: 0.6916666666666667 (+/- 0.11666666666666668)
+adaboost: 0.7333333333333333 (+/- 0.08579691784155835)
+gaussian-nb: 0.7416666666666667 (+/- 0.1522972240208089)
+
+
+(C) 2018, NeuroLex Laboratories

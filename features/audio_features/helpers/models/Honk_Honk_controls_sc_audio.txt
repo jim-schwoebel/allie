@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.8253968253968254 (+/- 0.12088528739466521) 
+
+MODEL FILE NAME: 
+
+ Honk_Honk_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:39:08.593119
+
+EXECUTION TIME: 
+
+ 2.5179810523986816
+
+GROUPS: 
+
+['Honk', 'Honk_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls']
+
+test labels
+
+['Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk', 'Honk', 'Honk_controls', 'Honk_controls', 'Honk_controls', 'Honk', 'Honk_controls', 'Honk', 'Honk', 'Honk_controls', 'Honk_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+logistic regression: 0.6063492063492063 (+/- 0.17486272195454491)
+random forest: 0.6444444444444445 (+/- 0.14499285392595856)
+decision-tree: 0.6507936507936508 (+/- 0.13837774423938645)
+knn: 0.6603174603174603 (+/- 0.12113513668786613)
+gradient boosting: 0.7682539682539682 (+/- 0.1260281475636775)
+gaussian-nb: 0.7873015873015874 (+/- 0.20661765200346643)
+adaboost: 0.7968253968253969 (+/- 0.13888662129668164)
+hard voting: 0.8253968253968254 (+/- 0.12088528739466521)
+
+
+(C) 2018, NeuroLex Laboratories

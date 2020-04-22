@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.775 (+/- 0.07264831572567791) 
+
+MODEL FILE NAME: 
+
+ Folkmusic_Folkmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:51:47.921653
+
+EXECUTION TIME: 
+
+ 1.979766845703125
+
+GROUPS: 
+
+['Folkmusic', 'Folkmusic_controls']
+(54 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls']
+
+test labels
+
+['Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls', 'Folkmusic', 'Folkmusic', 'Folkmusic_controls', 'Folkmusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5416666666666667 (+/- 0.11486707293408518)
+sk: 0.6083333333333333 (+/- 0.05651941652604389)
+random forest: 0.625 (+/- 0.11180339887498948)
+logistic regression: 0.6333333333333334 (+/- 0.181429508808977)
+gradient boosting: 0.6833333333333333 (+/- 0.1947220240924654)
+hard voting: 0.7333333333333334 (+/- 0.09354143466934854)
+gaussian-nb: 0.75 (+/- 0.0950146187582615)
+adaboost: 0.7583333333333334 (+/- 0.109924216318941)
+knn: 0.775 (+/- 0.07264831572567791)
+
+
+(C) 2018, NeuroLex Laboratories

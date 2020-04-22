@@ -1,0 +1,8 @@
+train labels
+
+['Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls']
+
+test labels
+
+['Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls', 'Choir', 'Choir', 'Choir_controls', 'Choir_controls', 'Choir', 'Choir_controls']
+

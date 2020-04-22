@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8285714285714285 (+/- 0.1665986255670086) 
+
+MODEL FILE NAME: 
+
+ Buzzer_Buzzer_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:23:55.298479
+
+EXECUTION TIME: 
+
+ 2.2890498638153076
+
+GROUPS: 
+
+['Buzzer', 'Buzzer_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls']
+
+test labels
+
+['Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer_controls', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer', 'Buzzer_controls', 'Buzzer_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5682539682539682 (+/- 0.09057360392182291)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+random forest: 0.6063492063492063 (+/- 0.15171813517902882)
+gradient boosting: 0.6190476190476191 (+/- 0.10858813572372744)
+adaboost: 0.6476190476190476 (+/- 0.06459361888690733)
+hard voting: 0.6476190476190476 (+/- 0.06459361888690734)
+knn: 0.6476190476190476 (+/- 0.2929248856996133)
+gaussian-nb: 0.7047619047619048 (+/- 0.09233675918888246)
+logistic regression: 0.8285714285714285 (+/- 0.1665986255670086)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8670634920634921 (+/- 0.09126984126984125) 
+
+MODEL FILE NAME: 
+
+ Propeller,airscrew_Propeller,airscrew_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:07:23.554456
+
+EXECUTION TIME: 
+
+ 2.2266979217529297
+
+GROUPS: 
+
+['Propeller,airscrew', 'Propeller,airscrew_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls']
+
+test labels
+
+['Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew', 'Propeller,airscrew', 'Propeller,airscrew_controls', 'Propeller,airscrew']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.7317460317460317 (+/- 0.16786417862098135)
+decision-tree: 0.7690476190476191 (+/- 0.11100902339622769)
+gradient boosting: 0.7690476190476191 (+/- 0.11100902339622769)
+hard voting: 0.8198412698412698 (+/- 0.07341162590379158)
+random forest: 0.8198412698412698 (+/- 0.07341162590379158)
+gaussian-nb: 0.8484126984126984 (+/- 0.10385611303463865)
+knn: 0.8642857142857142 (+/- 0.17554579610635013)
+adaboost: 0.8670634920634921 (+/- 0.09126984126984125)
+
+
+(C) 2018, NeuroLex Laboratories

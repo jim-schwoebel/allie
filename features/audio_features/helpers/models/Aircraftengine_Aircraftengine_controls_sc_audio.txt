@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8285714285714285 (+/- 0.20995626366712958) 
+
+MODEL FILE NAME: 
+
+ Aircraftengine_Aircraftengine_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:09:27.672289
+
+EXECUTION TIME: 
+
+ 1.9102091789245605
+
+GROUPS: 
+
+['Aircraftengine', 'Aircraftengine_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls']
+
+test labels
+
+['Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine', 'Aircraftengine', 'Aircraftengine_controls', 'Aircraftengine_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gaussian-nb: 0.7333333333333333 (+/- 0.1641610599853701)
+knn: 0.746031746031746 (+/- 0.11178931340735879)
+decision-tree: 0.7904761904761906 (+/- 0.14665154872953776)
+random forest: 0.7904761904761906 (+/- 0.07197323205558495)
+adaboost: 0.7968253968253969 (+/- 0.13888662129668164)
+gradient boosting: 0.7968253968253969 (+/- 0.1556527069476986)
+hard voting: 0.819047619047619 (+/- 0.14289241187208762)
+logistic regression: 0.8285714285714285 (+/- 0.20995626366712958)
+
+
+(C) 2018, NeuroLex Laboratories

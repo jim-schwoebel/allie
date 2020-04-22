@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8134920634920635 (+/- 0.11330042650630427) 
+
+MODEL FILE NAME: 
+
+ Hiphopmusic_Hiphopmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:36:55.592699
+
+EXECUTION TIME: 
+
+ 2.0362370014190674
+
+GROUPS: 
+
+['Hiphopmusic', 'Hiphopmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls']
+
+test labels
+
+['Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic', 'Hiphopmusic_controls', 'Hiphopmusic_controls', 'Hiphopmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6154761904761905 (+/- 0.07449756117696199)
+gradient boosting: 0.6468253968253969 (+/- 0.06063772535688939)
+knn: 0.6753968253968254 (+/- 0.13056460141383358)
+hard voting: 0.694047619047619 (+/- 0.043513492577373976)
+adaboost: 0.7162698412698413 (+/- 0.051495645071455036)
+logistic regression: 0.7511904761904762 (+/- 0.09541649956911369)
+gaussian-nb: 0.8011904761904761 (+/- 0.13778701234505036)
+random forest: 0.8134920634920635 (+/- 0.11330042650630427)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.9492063492063492 (+/- 0.06301407378183878) 
+
+MODEL FILE NAME: 
+
+ Afrobeat_Afrobeat_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:03:41.783447
+
+EXECUTION TIME: 
+
+ 2.1753859519958496
+
+GROUPS: 
+
+['Afrobeat', 'Afrobeat_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls']
+
+test labels
+
+['Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat_controls', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat', 'Afrobeat_controls', 'Afrobeat_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+decision-tree: 0.7555555555555555 (+/- 0.13968253968253969)
+random forest: 0.761904761904762 (+/- 0.15058465048420855)
+adaboost: 0.8 (+/- 0.19378085666072195)
+gradient boosting: 0.8412698412698413 (+/- 0.09576573415237051)
+knn: 0.8476190476190476 (+/- 0.10605265453009569)
+hard voting: 0.8920634920634921 (+/- 0.10595758265573738)
+gaussian-nb: 0.9047619047619048 (+/- 0.13127665478181164)
+logistic regression: 0.9492063492063492 (+/- 0.06301407378183878)
+
+
+(C) 2018, NeuroLex Laboratories

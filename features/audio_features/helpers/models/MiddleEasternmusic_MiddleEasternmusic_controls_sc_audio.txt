@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.7666666666666667 (+/- 0.11666666666666667) 
+
+MODEL FILE NAME: 
+
+ MiddleEasternmusic_MiddleEasternmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:33:43.586306
+
+EXECUTION TIME: 
+
+ 2.0362792015075684
+
+GROUPS: 
+
+['MiddleEasternmusic', 'MiddleEasternmusic_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls']
+
+test labels
+
+['MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic', 'MiddleEasternmusic', 'MiddleEasternmusic_controls', 'MiddleEasternmusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.525 (+/- 0.1224744871391589)
+logistic regression: 0.55 (+/- 0.1695582495781317)
+random forest: 0.6666666666666667 (+/- 0.1148670729340852)
+gradient boosting: 0.6916666666666667 (+/- 0.11666666666666667)
+hard voting: 0.6916666666666667 (+/- 0.11666666666666667)
+adaboost: 0.7 (+/- 0.1695582495781317)
+knn: 0.725 (+/- 0.21505813167606566)
+gaussian-nb: 0.7416666666666667 (+/- 0.10341394704992382)
+decision-tree: 0.7666666666666667 (+/- 0.11666666666666667)
+
+
+(C) 2018, NeuroLex Laboratories

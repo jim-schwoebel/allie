@@ -1,0 +1,8 @@
+train labels
+
+['Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls']
+
+test labels
+
+['Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant', 'Chant', 'Chant_controls', 'Chant_controls', 'Chant_controls', 'Chant', 'Chant_controls', 'Chant', 'Chant', 'Chant_controls', 'Chant_controls']
+

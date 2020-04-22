@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6369047619047619 (+/- 0.15856141824545172) 
+
+MODEL FILE NAME: 
+
+ Malletpercussion_Malletpercussion_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:24:10.366623
+
+EXECUTION TIME: 
+
+ 2.0263240337371826
+
+GROUPS: 
+
+['Malletpercussion', 'Malletpercussion_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls']
+
+test labels
+
+['Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion', 'Malletpercussion_controls', 'Malletpercussion_controls', 'Malletpercussion']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5638888888888889 (+/- 0.17472218166545428)
+random forest: 0.571031746031746 (+/- 0.15883131697243075)
+gradient boosting: 0.5988095238095237 (+/- 0.14704188244423344)
+logistic regression: 0.6055555555555554 (+/- 0.13722587140667294)
+gaussian-nb: 0.6083333333333332 (+/- 0.1071693089040657)
+hard voting: 0.6146825396825396 (+/- 0.11530082686274655)
+adaboost: 0.621031746031746 (+/- 0.1086171350928447)
+knn: 0.6369047619047619 (+/- 0.15856141824545172)
+
+
+(C) 2018, NeuroLex Laboratories

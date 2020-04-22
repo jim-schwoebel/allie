@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8083333333333332 (+/- 0.10628403594282772) 
+
+MODEL FILE NAME: 
+
+ Thunder_Thunder_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:26:53.706872
+
+EXECUTION TIME: 
+
+ 2.0303142070770264
+
+GROUPS: 
+
+['Thunder', 'Thunder_controls']
+(65 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls']
+
+test labels
+
+['Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls', 'Thunder_controls', 'Thunder', 'Thunder_controls', 'Thunder', 'Thunder', 'Thunder_controls', 'Thunder_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5333333333333334 (+/- 0.027216552697590882)
+knn: 0.6722222222222223 (+/- 0.0898386757155346)
+decision-tree: 0.7166666666666666 (+/- 0.12957670877434)
+adaboost: 0.7222222222222222 (+/- 0.046481112585226435)
+random forest: 0.7388888888888888 (+/- 0.1625415426480866)
+hard voting: 0.7444444444444444 (+/- 0.0812707713240433)
+gradient boosting: 0.7444444444444445 (+/- 0.10743933114340952)
+logistic regression: 0.7694444444444444 (+/- 0.09686442096757053)
+gaussian-nb: 0.8083333333333332 (+/- 0.10628403594282772)
+
+
+(C) 2018, NeuroLex Laboratories

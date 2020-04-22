@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7817460317460319 (+/- 0.11528443687566628) 
+
+MODEL FILE NAME: 
+
+ Trainwhistle_Trainwhistle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:42:57.268476
+
+EXECUTION TIME: 
+
+ 1.9995601177215576
+
+GROUPS: 
+
+['Trainwhistle', 'Trainwhistle_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls']
+
+test labels
+
+['Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle', 'Trainwhistle', 'Trainwhistle_controls', 'Trainwhistle']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.440079365079365 (+/- 0.10475288561464845)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+adaboost: 0.6523809523809524 (+/- 0.13914036190991189)
+decision-tree: 0.6801587301587302 (+/- 0.1128994406481478)
+hard voting: 0.6837301587301587 (+/- 0.10116790909267583)
+knn: 0.7023809523809523 (+/- 0.09583148474999098)
+gradient boosting: 0.7273809523809524 (+/- 0.11859437528964067)
+gaussian-nb: 0.7817460317460319 (+/- 0.11528443687566628)
+random forest: 0.7817460317460319 (+/- 0.11528443687566628)
+
+
+(C) 2018, NeuroLex Laboratories

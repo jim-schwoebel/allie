@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8003968253968253 (+/- 0.15230859723977136) 
+
+MODEL FILE NAME: 
+
+ Zither_Zither_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:49:52.144056
+
+EXECUTION TIME: 
+
+ 2.0420830249786377
+
+GROUPS: 
+
+['Zither', 'Zither_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls']
+
+test labels
+
+['Zither', 'Zither', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither', 'Zither_controls', 'Zither_controls', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither_controls', 'Zither', 'Zither', 'Zither_controls', 'Zither']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.6238095238095237 (+/- 0.0773717943298663)
+random forest: 0.6301587301587303 (+/- 0.08717162043013321)
+adaboost: 0.6551587301587303 (+/- 0.059924576765119586)
+logistic regression: 0.6738095238095239 (+/- 0.15770302595084826)
+decision-tree: 0.6924603174603174 (+/- 0.17931063930116103)
+gaussian-nb: 0.7087301587301587 (+/- 0.1985650208956895)
+hard voting: 0.7468253968253968 (+/- 0.02843884582090304)
+gradient boosting: 0.8003968253968253 (+/- 0.15230859723977136)
+
+
+(C) 2018, NeuroLex Laboratories

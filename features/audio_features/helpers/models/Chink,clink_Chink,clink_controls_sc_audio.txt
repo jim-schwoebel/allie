@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.6412698412698413 (+/- 0.08786255557522572) 
+
+MODEL FILE NAME: 
+
+ Chink,clink_Chink,clink_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:59:54.579663
+
+EXECUTION TIME: 
+
+ 2.5614781379699707
+
+GROUPS: 
+
+['Chink,clink', 'Chink,clink_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls']
+
+test labels
+
+['Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink_controls', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink', 'Chink,clink_controls', 'Chink,clink_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.45396825396825397 (+/- 0.10364969979247307)
+decision-tree: 0.47619047619047616 (+/- 0.13127665478181164)
+gradient boosting: 0.492063492063492 (+/- 0.20598258028582012)
+hard voting: 0.5555555555555556 (+/- 0.1281690745281673)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.5682539682539682 (+/- 0.20213025244103625)
+gaussian-nb: 0.5904761904761905 (+/- 0.03809523809523809)
+knn: 0.6190476190476191 (+/- 0.10858813572372744)
+adaboost: 0.6412698412698413 (+/- 0.08786255557522572)
+
+
+(C) 2018, NeuroLex Laboratories

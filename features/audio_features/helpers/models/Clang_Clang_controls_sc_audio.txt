@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+sk: 0.8416666666666666 (+/- 0.0927960727138337) 
+
+MODEL FILE NAME: 
+
+ Clang_Clang_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:11:43.177058
+
+EXECUTION TIME: 
+
+ 2.350180149078369
+
+GROUPS: 
+
+['Clang', 'Clang_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clang', 'Clang', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls']
+
+test labels
+
+['Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang', 'Clang', 'Clang_controls', 'Clang_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.55 (+/- 0.1274754878398196)
+decision-tree: 0.5666666666666667 (+/- 0.16158932858054434)
+gaussian-nb: 0.6083333333333333 (+/- 0.21666666666666667)
+random forest: 0.6083333333333333 (+/- 0.12527746981977425)
+gradient boosting: 0.6166666666666667 (+/- 0.24636242498490807)
+knn: 0.6166666666666667 (+/- 0.1715938356831167)
+hard voting: 0.625 (+/- 0.15811388300841897)
+logistic regression: 0.7166666666666667 (+/- 0.11303883305208781)
+sk: 0.8416666666666666 (+/- 0.0927960727138337)
+
+
+(C) 2018, NeuroLex Laboratories

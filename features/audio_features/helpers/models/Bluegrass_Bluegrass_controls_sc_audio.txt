@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8297619047619047 (+/- 0.12478502552434774) 
+
+MODEL FILE NAME: 
+
+ Bluegrass_Bluegrass_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:00:42.149173
+
+EXECUTION TIME: 
+
+ 2.2024240493774414
+
+GROUPS: 
+
+['Bluegrass', 'Bluegrass_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls']
+
+test labels
+
+['Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass', 'Bluegrass', 'Bluegrass_controls', 'Bluegrass']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gradient boosting: 0.6543650793650795 (+/- 0.24531513661196047)
+decision-tree: 0.6865079365079365 (+/- 0.24101385751912882)
+adaboost: 0.7059523809523809 (+/- 0.22573889759326218)
+hard voting: 0.7337301587301588 (+/- 0.27133224875865253)
+logistic regression: 0.7373015873015873 (+/- 0.15250490989952367)
+gaussian-nb: 0.738095238095238 (+/- 0.22290145627354865)
+knn: 0.7559523809523809 (+/- 0.22991914185509485)
+random forest: 0.8297619047619047 (+/- 0.12478502552434774)
+
+
+(C) 2018, NeuroLex Laboratories

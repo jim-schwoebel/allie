@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8698412698412697 (+/- 0.11551368507085874) 
+
+MODEL FILE NAME: 
+
+ Fireengine,firetruck(siren)_Fireengine,firetruck(siren)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:43:56.252832
+
+EXECUTION TIME: 
+
+ 2.2259068489074707
+
+GROUPS: 
+
+['Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls']
+
+test labels
+
+['Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)_controls', 'Fireengine,firetruck(siren)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6646825396825397 (+/- 0.1559680310415538)
+knn: 0.6904761904761905 (+/- 0.06692128248835809)
+gradient boosting: 0.784920634920635 (+/- 0.1475507607886935)
+random forest: 0.7884920634920636 (+/- 0.07753444280520513)
+gaussian-nb: 0.7976190476190477 (+/- 0.15572047461124672)
+logistic regression: 0.8134920634920635 (+/- 0.08116025287362315)
+hard voting: 0.8384920634920634 (+/- 0.11028319668883052)
+adaboost: 0.8698412698412697 (+/- 0.11551368507085874)
+
+
+(C) 2018, NeuroLex Laboratories

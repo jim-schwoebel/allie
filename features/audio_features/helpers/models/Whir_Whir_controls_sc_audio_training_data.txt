@@ -1,0 +1,8 @@
+train labels
+
+['Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir', 'Whir', 'Whir', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls']
+
+test labels
+
+['Whir', 'Whir', 'Whir', 'Whir', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir', 'Whir', 'Whir', 'Whir_controls', 'Whir_controls', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir_controls', 'Whir', 'Whir', 'Whir_controls', 'Whir']
+

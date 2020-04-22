@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8305555555555555 (+/- 0.09638528651609707) 
+
+MODEL FILE NAME: 
+
+ Sink(fillingorwashing)_Sink(fillingorwashing)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:17:45.617349
+
+EXECUTION TIME: 
+
+ 2.060021162033081
+
+GROUPS: 
+
+['Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls']
+(64 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls']
+
+test labels
+
+['Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)', 'Sink(fillingorwashing)_controls', 'Sink(fillingorwashing)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5111111111111111 (+/- 0.022222222222222233)
+decision-tree: 0.5166666666666666 (+/- 0.15500896031448563)
+random forest: 0.6288888888888888 (+/- 0.10370601849268411)
+gaussian-nb: 0.6455555555555555 (+/- 0.12143178748723779)
+gradient boosting: 0.6833333333333333 (+/- 0.12527746981977425)
+adaboost: 0.6927777777777777 (+/- 0.10226750204883583)
+hard voting: 0.7205555555555556 (+/- 0.09572014249369015)
+knn: 0.7211111111111111 (+/- 0.11609117319515365)
+logistic regression: 0.8305555555555555 (+/- 0.09638528651609707)
+
+
+(C) 2018, NeuroLex Laboratories

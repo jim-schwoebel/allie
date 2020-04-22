@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7218253968253967 (+/- 0.1362585392508318) 
+
+MODEL FILE NAME: 
+
+ Electricshaver,electricrazor_Electricshaver,electricrazor_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:18:57.240880
+
+EXECUTION TIME: 
+
+ 2.0328760147094727
+
+GROUPS: 
+
+['Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls']
+
+test labels
+
+['Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor_controls', 'Electricshaver,electricrazor']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.4138888888888889 (+/- 0.10424958906565422)
+gradient boosting: 0.469047619047619 (+/- 0.21340427179406377)
+decision-tree: 0.49404761904761896 (+/- 0.2614172952724699)
+adaboost: 0.5011904761904761 (+/- 0.13741622886198168)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+hard voting: 0.5511904761904761 (+/- 0.16960003636674406)
+gaussian-nb: 0.5896825396825397 (+/- 0.08435130321007253)
+random forest: 0.6503968253968254 (+/- 0.12576548179923813)
+logistic regression: 0.7218253968253967 (+/- 0.1362585392508318)
+
+
+(C) 2018, NeuroLex Laboratories

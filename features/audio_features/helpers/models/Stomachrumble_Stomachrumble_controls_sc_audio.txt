@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7059523809523809 (+/- 0.14646244284980667) 
+
+MODEL FILE NAME: 
+
+ Stomachrumble_Stomachrumble_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:06:14.046673
+
+EXECUTION TIME: 
+
+ 1.9735190868377686
+
+GROUPS: 
+
+['Stomachrumble', 'Stomachrumble_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls']
+
+test labels
+
+['Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble', 'Stomachrumble', 'Stomachrumble_controls', 'Stomachrumble_controls', 'Stomachrumble']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+decision-tree: 0.5607142857142857 (+/- 0.15955934216920487)
+gradient boosting: 0.6428571428571429 (+/- 0.1803483024707514)
+adaboost: 0.6595238095238096 (+/- 0.18177288912253844)
+gaussian-nb: 0.669047619047619 (+/- 0.12449444249906069)
+knn: 0.675 (+/- 0.1695582495781317)
+logistic regression: 0.6880952380952381 (+/- 0.19858484595528406)
+hard voting: 0.6880952380952381 (+/- 0.19858484595528406)
+random forest: 0.7059523809523809 (+/- 0.14646244284980667)
+
+
+(C) 2018, NeuroLex Laboratories

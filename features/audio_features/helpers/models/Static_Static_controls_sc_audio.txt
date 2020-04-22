@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8484126984126984 (+/- 0.036209094347683775) 
+
+MODEL FILE NAME: 
+
+ Static_Static_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:00:56.722560
+
+EXECUTION TIME: 
+
+ 1.9946770668029785
+
+GROUPS: 
+
+['Static', 'Static_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static_controls']
+
+test labels
+
+['Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5924603174603175 (+/- 0.17434866009926106)
+random forest: 0.6626984126984127 (+/- 0.0735894483163323)
+gradient boosting: 0.753968253968254 (+/- 0.14248187041277036)
+knn: 0.7734126984126984 (+/- 0.12444383705715072)
+gaussian-nb: 0.7948412698412699 (+/- 0.06180292804422787)
+adaboost: 0.8011904761904761 (+/- 0.12103109549656034)
+hard voting: 0.8261904761904761 (+/- 0.12078494222200753)
+logistic regression: 0.8484126984126984 (+/- 0.036209094347683775)
+
+
+(C) 2018, NeuroLex Laboratories

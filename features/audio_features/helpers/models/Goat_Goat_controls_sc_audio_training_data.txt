@@ -1,0 +1,8 @@
+train labels
+
+['Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls']
+
+test labels
+
+['Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls', 'Goat_controls', 'Goat', 'Goat_controls', 'Goat', 'Goat', 'Goat_controls', 'Goat_controls']
+

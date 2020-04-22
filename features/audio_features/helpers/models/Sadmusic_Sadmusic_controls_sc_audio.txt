@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.8476190476190476 (+/- 0.09764162856653777) 
+
+MODEL FILE NAME: 
+
+ Sadmusic_Sadmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:48:05.555558
+
+EXECUTION TIME: 
+
+ 1.9924674034118652
+
+GROUPS: 
+
+['Sadmusic', 'Sadmusic_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls']
+
+test labels
+
+['Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic', 'Sadmusic', 'Sadmusic_controls', 'Sadmusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+adaboost: 0.6253968253968253 (+/- 0.22550857949432432)
+gradient boosting: 0.6253968253968253 (+/- 0.22550857949432432)
+hard voting: 0.6476190476190475 (+/- 0.24413503402832226)
+decision-tree: 0.6698412698412698 (+/- 0.25954201188532944)
+gaussian-nb: 0.7523809523809524 (+/- 0.12562767579307543)
+random forest: 0.7968253968253969 (+/- 0.12674580811223574)
+logistic regression: 0.819047619047619 (+/- 0.11070219539150916)
+knn: 0.8476190476190476 (+/- 0.09764162856653777)
+
+
+(C) 2018, NeuroLex Laboratories

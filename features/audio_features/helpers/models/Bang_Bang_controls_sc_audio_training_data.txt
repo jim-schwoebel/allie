@@ -1,0 +1,8 @@
+train labels
+
+['Bang', 'Bang', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls']
+
+test labels
+
+['Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang', 'Bang', 'Bang_controls', 'Bang_controls']
+

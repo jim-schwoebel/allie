@@ -1,0 +1,8 @@
+train labels
+
+['Slosh', 'Slosh', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls']
+
+test labels
+
+['Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh', 'Slosh', 'Slosh_controls', 'Slosh_controls']
+

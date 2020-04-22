@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8638888888888889 (+/- 0.16301556390134678) 
+
+MODEL FILE NAME: 
+
+ Thunderstorm_Thunderstorm_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:27:45.175601
+
+EXECUTION TIME: 
+
+ 1.7431468963623047
+
+GROUPS: 
+
+['Thunderstorm', 'Thunderstorm_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls']
+
+test labels
+
+['Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm', 'Thunderstorm', 'Thunderstorm_controls', 'Thunderstorm']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.6071428571428571 (+/- 0.1696631613208885)
+logistic regression: 0.6674603174603175 (+/- 0.22364059818819634)
+gradient boosting: 0.7496031746031747 (+/- 0.12269800201167431)
+hard voting: 0.7496031746031747 (+/- 0.12269800201167431)
+decision-tree: 0.7781746031746033 (+/- 0.12767914955284068)
+adaboost: 0.7781746031746033 (+/- 0.12767914955284068)
+random forest: 0.8353174603174605 (+/- 0.14853148628740398)
+gaussian-nb: 0.8638888888888889 (+/- 0.16301556390134678)
+
+
+(C) 2018, NeuroLex Laboratories

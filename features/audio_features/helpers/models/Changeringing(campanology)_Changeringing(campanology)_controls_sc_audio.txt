@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.9555555555555555 (+/- 0.054433105395181765) 
+
+MODEL FILE NAME: 
+
+ Changeringing(campanology)_Changeringing(campanology)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:46:53.564340
+
+EXECUTION TIME: 
+
+ 2.2823610305786133
+
+GROUPS: 
+
+['Changeringing(campanology)', 'Changeringing(campanology)_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls']
+
+test labels
+
+['Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)', 'Changeringing(campanology)', 'Changeringing(campanology)_controls', 'Changeringing(campanology)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6793650793650794 (+/- 0.13371072818192184)
+gradient boosting: 0.7015873015873015 (+/- 0.16568874096126843)
+adaboost: 0.707936507936508 (+/- 0.15211617207251987)
+hard voting: 0.7746031746031746 (+/- 0.07605808603625992)
+knn: 0.86984126984127 (+/- 0.09167954970281683)
+logistic regression: 0.9047619047619048 (+/- 0.08577305451496062)
+gaussian-nb: 0.9269841269841269 (+/- 0.06073373482447301)
+random forest: 0.9555555555555555 (+/- 0.054433105395181765)
+
+
+(C) 2018, NeuroLex Laboratories

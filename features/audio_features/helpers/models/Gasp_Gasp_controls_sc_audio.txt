@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6984126984126984 (+/- 0.170662603882103) 
+
+MODEL FILE NAME: 
+
+ Gasp_Gasp_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:01:34.403806
+
+EXECUTION TIME: 
+
+ 1.990828037261963
+
+GROUPS: 
+
+['Gasp', 'Gasp_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls']
+
+test labels
+
+['Gasp', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp_controls', 'Gasp_controls', 'Gasp_controls', 'Gasp', 'Gasp', 'Gasp', 'Gasp', 'Gasp', 'Gasp_controls', 'Gasp_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.4888888888888888 (+/- 0.21305348235634938)
+gradient boosting: 0.49523809523809514 (+/- 0.2055907918564086)
+adaboost: 0.5460317460317461 (+/- 0.1877047047504061)
+hard voting: 0.5523809523809524 (+/- 0.21842561792723267)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+decision-tree: 0.5746031746031746 (+/- 0.19987398398345643)
+random forest: 0.6126984126984127 (+/- 0.21824098085456778)
+knn: 0.6476190476190476 (+/- 0.1918994445677132)
+gaussian-nb: 0.6984126984126984 (+/- 0.170662603882103)
+
+
+(C) 2018, NeuroLex Laboratories

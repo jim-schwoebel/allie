@@ -1,0 +1,8 @@
+train labels
+
+['Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls']
+
+test labels
+
+['Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl', 'Owl', 'Owl', 'Owl_controls', 'Owl', 'Owl_controls', 'Owl_controls', 'Owl']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7103030303030302 (+/- 0.08983291181805042) 
+
+MODEL FILE NAME: 
+
+ Song_Song_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:38:04.490789
+
+EXECUTION TIME: 
+
+ 2.142782211303711
+
+GROUPS: 
+
+['Song', 'Song_controls']
+(73 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Song', 'Song', 'Song', 'Song_controls', 'Song', 'Song', 'Song', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song_controls']
+
+test labels
+
+['Song', 'Song_controls', 'Song', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls', 'Song_controls', 'Song_controls', 'Song', 'Song_controls', 'Song_controls', 'Song', 'Song', 'Song_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.4446464646464646 (+/- 0.11628434447737845)
+decision-tree: 0.4505050505050505 (+/- 0.05003824677374075)
+sk: 0.5313131313131313 (+/- 0.02583174111625136)
+random forest: 0.5917171717171718 (+/- 0.05898989898989897)
+adaboost: 0.5995959595959596 (+/- 0.21162770875657996)
+hard voting: 0.6018181818181818 (+/- 0.18530704285763)
+knn: 0.6317171717171717 (+/- 0.050422558894454635)
+gaussian-nb: 0.7062626262626261 (+/- 0.11445367138533513)
+logistic regression: 0.7103030303030302 (+/- 0.08983291181805042)
+
+
+(C) 2018, NeuroLex Laboratories

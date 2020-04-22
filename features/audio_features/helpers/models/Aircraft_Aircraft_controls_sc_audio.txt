@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.8733333333333334 (+/- 0.08305941375396247) 
+
+MODEL FILE NAME: 
+
+ Aircraft_Aircraft_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:08:15.935802
+
+EXECUTION TIME: 
+
+ 2.879793882369995
+
+GROUPS: 
+
+['Aircraft', 'Aircraft_controls']
+(106 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft']
+
+test labels
+
+['Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft_controls', 'Aircraft_controls', 'Aircraft', 'Aircraft']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5143589743589743 (+/- 0.017660692674587235)
+logistic regression: 0.7616117216117215 (+/- 0.11793766016466437)
+decision-tree: 0.7617582417582417 (+/- 0.11471264298275655)
+knn: 0.7903296703296704 (+/- 0.11709645907099558)
+gradient boosting: 0.816043956043956 (+/- 0.1051565098269739)
+adaboost: 0.8179487179487179 (+/- 0.08723487636192133)
+gaussian-nb: 0.8466666666666665 (+/- 0.10049311525249843)
+hard voting: 0.8598534798534798 (+/- 0.0950258553666051)
+random forest: 0.8733333333333334 (+/- 0.08305941375396247)
+
+
+(C) 2018, NeuroLex Laboratories

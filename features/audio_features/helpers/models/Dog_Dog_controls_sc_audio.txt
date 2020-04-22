@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7005415499533146 (+/- 0.07139205965268808) 
+
+MODEL FILE NAME: 
+
+ Dog_Dog_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:54:28.483939
+
+EXECUTION TIME: 
+
+ 4.356519937515259
+
+GROUPS: 
+
+['Dog', 'Dog_controls']
+(268 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog']
+
+test labels
+
+['Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog_controls', 'Dog', 'Dog', 'Dog', 'Dog_controls', 'Dog', 'Dog', 'Dog_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.49714285714285716 (+/- 0.005714285714285716)
+adaboost: 0.6213165266106442 (+/- 0.07457430240077147)
+logistic regression: 0.6441736694677871 (+/- 0.053196239621049676)
+hard voting: 0.6668814192343605 (+/- 0.04580297430017229)
+decision-tree: 0.6670494864612512 (+/- 0.09053142227392963)
+gaussian-nb: 0.6670681605975723 (+/- 0.08899457718153238)
+random forest: 0.6784967320261438 (+/- 0.07276491458854888)
+knn: 0.6951540616246498 (+/- 0.07449690524841616)
+gradient boosting: 0.7005415499533146 (+/- 0.07139205965268808)
+
+
+(C) 2018, NeuroLex Laboratories

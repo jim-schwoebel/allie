@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7357142857142858 (+/- 0.1309307341415954) 
+
+MODEL FILE NAME: 
+
+ MusicofBollywood_MusicofBollywood_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:13:09.059413
+
+EXECUTION TIME: 
+
+ 2.0005390644073486
+
+GROUPS: 
+
+['MusicofBollywood', 'MusicofBollywood_controls']
+(52 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls']
+
+test labels
+
+['MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood', 'MusicofBollywood_controls', 'MusicofBollywood_controls', 'MusicofBollywood']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.48571428571428577 (+/- 0.05345224838248488)
+logistic regression: 0.5011904761904762 (+/- 0.19123361311385742)
+sk: 0.5428571428571429 (+/- 0.03499271061118824)
+hard voting: 0.65 (+/- 0.16035674514745463)
+random forest: 0.65 (+/- 0.16035674514745463)
+gradient boosting: 0.6535714285714287 (+/- 0.12351154618421845)
+adaboost: 0.6916666666666667 (+/- 0.15596601176345065)
+knn: 0.7071428571428571 (+/- 0.21476137683389868)
+gaussian-nb: 0.7357142857142858 (+/- 0.1309307341415954)
+
+
+(C) 2018, NeuroLex Laboratories

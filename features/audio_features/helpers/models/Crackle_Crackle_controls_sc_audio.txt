@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+sk: 0.5650793650793651 (+/- 0.007776157913597362) 
+
+MODEL FILE NAME: 
+
+ Crackle_Crackle_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:30:15.088146
+
+EXECUTION TIME: 
+
+ 2.0936279296875
+
+GROUPS: 
+
+['Crackle', 'Crackle_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls']
+
+test labels
+
+['Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle_controls', 'Crackle_controls', 'Crackle', 'Crackle_controls', 'Crackle', 'Crackle', 'Crackle_controls', 'Crackle_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.3555555555555555 (+/- 0.11340045142534445)
+random forest: 0.3682539682539683 (+/- 0.17658328870061435)
+knn: 0.3841269841269841 (+/- 0.06301407378183875)
+adaboost: 0.3904761904761904 (+/- 0.19941966697827823)
+hard voting: 0.3904761904761904 (+/- 0.19941966697827823)
+gaussian-nb: 0.4793650793650793 (+/- 0.18247756016761796)
+decision-tree: 0.48571428571428565 (+/- 0.06396648152257108)
+logistic regression: 0.526984126984127 (+/- 0.1629286021632551)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+
+
+(C) 2018, NeuroLex Laboratories

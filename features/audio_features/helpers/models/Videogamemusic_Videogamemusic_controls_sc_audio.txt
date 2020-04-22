@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8083333333333333 (+/- 0.14092945437739804) 
+
+MODEL FILE NAME: 
+
+ Videogamemusic_Videogamemusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:09:10.478916
+
+EXECUTION TIME: 
+
+ 2.0138258934020996
+
+GROUPS: 
+
+['Videogamemusic', 'Videogamemusic_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls']
+
+test labels
+
+['Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic', 'Videogamemusic', 'Videogamemusic_controls', 'Videogamemusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.475 (+/- 0.1457737973711325)
+sk: 0.55 (+/- 0.06123724356957946)
+adaboost: 0.6333333333333333 (+/- 0.20982797186690286)
+random forest: 0.6833333333333333 (+/- 0.12527746981977425)
+gaussian-nb: 0.725 (+/- 0.18371173070873836)
+gradient boosting: 0.7416666666666667 (+/- 0.17159383568311667)
+knn: 0.7416666666666667 (+/- 0.25873624493766706)
+hard voting: 0.7916666666666667 (+/- 0.12360330811826105)
+logistic regression: 0.8083333333333333 (+/- 0.14092945437739804)
+
+
+(C) 2018, NeuroLex Laboratories

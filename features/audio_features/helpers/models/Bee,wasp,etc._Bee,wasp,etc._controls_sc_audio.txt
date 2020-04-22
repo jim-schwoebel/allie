@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6928571428571428 (+/- 0.1660153562580265) 
+
+MODEL FILE NAME: 
+
+ Bee,wasp,etc._Bee,wasp,etc._controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:45:19.866572
+
+EXECUTION TIME: 
+
+ 2.281414747238159
+
+GROUPS: 
+
+['Bee,wasp,etc.', 'Bee,wasp,etc._controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls']
+
+test labels
+
+['Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.', 'Bee,wasp,etc.', 'Bee,wasp,etc._controls', 'Bee,wasp,etc.']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4805555555555555 (+/- 0.1651880747063639)
+gradient boosting: 0.49642857142857133 (+/- 0.12062708830045933)
+adaboost: 0.5242063492063492 (+/- 0.2888289227837689)
+random forest: 0.5444444444444444 (+/- 0.12694443824210924)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.5876984126984126 (+/- 0.19186169380312681)
+hard voting: 0.6035714285714285 (+/- 0.24179792874876066)
+gaussian-nb: 0.607936507936508 (+/- 0.12694443824210921)
+knn: 0.6928571428571428 (+/- 0.1660153562580265)
+
+
+(C) 2018, NeuroLex Laboratories

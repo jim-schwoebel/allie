@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.746031746031746 (+/- 0.06582997255024671) 
+
+MODEL FILE NAME: 
+
+ Gears_Gears_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:02:26.483147
+
+EXECUTION TIME: 
+
+ 2.1911098957061768
+
+GROUPS: 
+
+['Gears', 'Gears_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls']
+
+test labels
+
+['Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls', 'Gears_controls', 'Gears', 'Gears_controls', 'Gears', 'Gears', 'Gears_controls', 'Gears_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5301587301587302 (+/- 0.12840475184861386)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+logistic regression: 0.5746031746031746 (+/- 0.1632375889800945)
+gradient boosting: 0.6031746031746031 (+/- 0.1157751271670506)
+gaussian-nb: 0.6158730158730158 (+/- 0.11767462217682946)
+random forest: 0.6222222222222223 (+/- 0.10306465448093922)
+hard voting: 0.6603174603174603 (+/- 0.08068739699770691)
+decision-tree: 0.6888888888888889 (+/- 0.11340045142534447)
+adaboost: 0.746031746031746 (+/- 0.06582997255024671)
+
+
+(C) 2018, NeuroLex Laboratories

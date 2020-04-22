@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8476190476190476 (+/- 0.03702191679266855) 
+
+MODEL FILE NAME: 
+
+ Banjo_Banjo_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:37:38.955257
+
+EXECUTION TIME: 
+
+ 2.2056689262390137
+
+GROUPS: 
+
+['Banjo', 'Banjo_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls']
+
+test labels
+
+['Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls', 'Banjo_controls', 'Banjo', 'Banjo_controls', 'Banjo', 'Banjo', 'Banjo_controls', 'Banjo_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5587301587301587 (+/- 0.14869890068102057)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.5809523809523809 (+/- 0.2379046856532723)
+gradient boosting: 0.653968253968254 (+/- 0.25954201188532944)
+adaboost: 0.6761904761904762 (+/- 0.27356902251187964)
+hard voting: 0.6761904761904762 (+/- 0.27356902251187964)
+random forest: 0.6825396825396826 (+/- 0.17329960716134832)
+logistic regression: 0.6888888888888889 (+/- 0.1507852963433386)
+gaussian-nb: 0.8476190476190476 (+/- 0.03702191679266855)
+
+
+(C) 2018, NeuroLex Laboratories

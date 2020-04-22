@@ -1,0 +1,8 @@
+train labels
+
+['Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls']
+
+test labels
+
+['Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake', 'Snake', 'Snake_controls', 'Snake_controls', 'Snake_controls', 'Snake', 'Snake_controls', 'Snake', 'Snake', 'Snake_controls', 'Snake_controls']
+

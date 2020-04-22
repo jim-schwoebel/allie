@@ -1,0 +1,8 @@
+train labels
+
+['Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls']
+
+test labels
+
+['Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark', 'Bark', 'Bark', 'Bark_controls', 'Bark', 'Bark_controls', 'Bark_controls', 'Bark']
+

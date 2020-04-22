@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7845238095238095 (+/- 0.1321589436797897) 
+
+MODEL FILE NAME: 
+
+ Canidae,dogs,wolves_Canidae,dogs,wolves_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:27:16.435787
+
+EXECUTION TIME: 
+
+ 2.640329122543335
+
+GROUPS: 
+
+['Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls']
+
+test labels
+
+['Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves', 'Canidae,dogs,wolves_controls', 'Canidae,dogs,wolves']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.6452380952380953 (+/- 0.09744790779791003)
+gradient boosting: 0.6488095238095238 (+/- 0.15349501810980742)
+random forest: 0.6646825396825397 (+/- 0.13066346194413342)
+logistic regression: 0.6773809523809524 (+/- 0.17045764138984343)
+decision-tree: 0.6896825396825396 (+/- 0.09708526148173353)
+gaussian-nb: 0.7396825396825396 (+/- 0.19636402659291574)
+hard voting: 0.7781746031746033 (+/- 0.08015873015873015)
+adaboost: 0.7845238095238095 (+/- 0.1321589436797897)
+
+
+(C) 2018, NeuroLex Laboratories

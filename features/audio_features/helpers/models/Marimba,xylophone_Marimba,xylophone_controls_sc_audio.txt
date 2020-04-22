@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6927272727272727 (+/- 0.11360363164955135) 
+
+MODEL FILE NAME: 
+
+ Marimba,xylophone_Marimba,xylophone_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:27:48.515316
+
+EXECUTION TIME: 
+
+ 2.234611988067627
+
+GROUPS: 
+
+['Marimba,xylophone', 'Marimba,xylophone_controls']
+(78 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls']
+
+test labels
+
+['Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls', 'Marimba,xylophone_controls', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone', 'Marimba,xylophone_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4418181818181818 (+/- 0.07376531918218471)
+sk: 0.5181818181818182 (+/- 0.022268088570756142)
+knn: 0.54 (+/- 0.1386594615631827)
+gradient boosting: 0.5781818181818181 (+/- 0.11275659442700836)
+adaboost: 0.5781818181818182 (+/- 0.08955352986199819)
+gaussian-nb: 0.6 (+/- 0.09394916860191864)
+random forest: 0.6563636363636365 (+/- 0.11955841616562617)
+hard voting: 0.6727272727272726 (+/- 0.04706246947470831)
+logistic regression: 0.6927272727272727 (+/- 0.11360363164955135)
+
+
+(C) 2018, NeuroLex Laboratories

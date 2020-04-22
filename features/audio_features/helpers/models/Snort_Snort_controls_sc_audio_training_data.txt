@@ -1,0 +1,8 @@
+train labels
+
+['Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls']
+
+test labels
+
+['Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls', 'Snort_controls', 'Snort', 'Snort_controls', 'Snort', 'Snort', 'Snort_controls', 'Snort_controls']
+

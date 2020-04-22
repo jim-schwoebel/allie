@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6115079365079366 (+/- 0.16315460627269146) 
+
+MODEL FILE NAME: 
+
+ Clip-clop_Clip-clop_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:18:39.921707
+
+EXECUTION TIME: 
+
+ 2.3957669734954834
+
+GROUPS: 
+
+['Clip-clop', 'Clip-clop_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls']
+
+test labels
+
+['Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop', 'Clip-clop', 'Clip-clop_controls', 'Clip-clop']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.46865079365079365 (+/- 0.20738597907878953)
+hard voting: 0.475 (+/- 0.1486671276375853)
+logistic regression: 0.48690476190476184 (+/- 0.155784169551958)
+adaboost: 0.5130952380952382 (+/- 0.17090049469773771)
+sk: 0.5222222222222223 (+/- 0.05274046897090842)
+decision-tree: 0.548015873015873 (+/- 0.09504278915955176)
+knn: 0.5507936507936508 (+/- 0.09412042590713394)
+gaussian-nb: 0.5857142857142857 (+/- 0.11070219539150918)
+random forest: 0.6115079365079366 (+/- 0.16315460627269146)
+
+
+(C) 2018, NeuroLex Laboratories

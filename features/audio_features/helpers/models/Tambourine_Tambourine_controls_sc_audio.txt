@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.6428571428571429 (+/- 0.1784567533022882) 
+
+MODEL FILE NAME: 
+
+ Tambourine_Tambourine_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:14:02.065130
+
+EXECUTION TIME: 
+
+ 2.0162789821624756
+
+GROUPS: 
+
+['Tambourine', 'Tambourine_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls']
+
+test labels
+
+['Tambourine', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine_controls', 'Tambourine', 'Tambourine', 'Tambourine_controls', 'Tambourine']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.4714285714285714 (+/- 0.11106575037800571)
+hard voting: 0.4714285714285714 (+/- 0.04958888683115339)
+random forest: 0.47698412698412695 (+/- 0.14207014261279766)
+adaboost: 0.49365079365079356 (+/- 0.09040654518030566)
+gradient boosting: 0.49642857142857133 (+/- 0.07992264463670085)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.598015873015873 (+/- 0.1854308649986013)
+gaussian-nb: 0.6293650793650795 (+/- 0.11018891677338796)
+logistic regression: 0.6428571428571429 (+/- 0.1784567533022882)
+
+
+(C) 2018, NeuroLex Laboratories

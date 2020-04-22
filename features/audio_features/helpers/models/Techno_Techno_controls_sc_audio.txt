@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8 (+/- 0.19378085666072192) 
+
+MODEL FILE NAME: 
+
+ Techno_Techno_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:17:20.320927
+
+EXECUTION TIME: 
+
+ 1.984302043914795
+
+GROUPS: 
+
+['Techno', 'Techno_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls']
+
+test labels
+
+['Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+decision-tree: 0.584126984126984 (+/- 0.21234274931035738)
+random forest: 0.6984126984126984 (+/- 0.14478418096496992)
+adaboost: 0.7206349206349205 (+/- 0.18608699542543297)
+gradient boosting: 0.7492063492063491 (+/- 0.1456170786181551)
+gaussian-nb: 0.7777777777777778 (+/- 0.11962821385026522)
+hard voting: 0.7777777777777778 (+/- 0.11962821385026522)
+knn: 0.7777777777777779 (+/- 0.07840691450938705)
+logistic regression: 0.8 (+/- 0.19378085666072192)
+
+
+(C) 2018, NeuroLex Laboratories

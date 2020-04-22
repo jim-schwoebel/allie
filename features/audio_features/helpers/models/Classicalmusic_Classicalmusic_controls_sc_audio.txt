@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7404761904761905 (+/- 0.10273410238275812) 
+
+MODEL FILE NAME: 
+
+ Classicalmusic_Classicalmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:14:36.085107
+
+EXECUTION TIME: 
+
+ 2.573000907897949
+
+GROUPS: 
+
+['Classicalmusic', 'Classicalmusic_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls']
+
+test labels
+
+['Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic', 'Classicalmusic', 'Classicalmusic_controls', 'Classicalmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.5416666666666667 (+/- 0.18922372616485966)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gradient boosting: 0.6103174603174603 (+/- 0.1775437802423568)
+decision-tree: 0.6166666666666666 (+/- 0.1684260874650228)
+knn: 0.6424603174603174 (+/- 0.0765410255785996)
+hard voting: 0.6646825396825397 (+/- 0.13066346194413345)
+gaussian-nb: 0.6702380952380951 (+/- 0.17902235834414656)
+random forest: 0.7182539682539681 (+/- 0.07702911465746623)
+adaboost: 0.7404761904761905 (+/- 0.10273410238275812)
+
+
+(C) 2018, NeuroLex Laboratories

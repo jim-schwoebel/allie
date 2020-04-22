@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.705952380952381 (+/- 0.12360585608845578) 
+
+MODEL FILE NAME: 
+
+ Camera_Camera_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:26:08.155372
+
+EXECUTION TIME: 
+
+ 2.3261351585388184
+
+GROUPS: 
+
+['Camera', 'Camera_controls']
+(62 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera', 'Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls']
+
+test labels
+
+['Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera', 'Camera', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera_controls', 'Camera', 'Camera', 'Camera_controls', 'Camera_controls', 'Camera', 'Camera_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.4579365079365079 (+/- 0.08207093699918636)
+gaussian-nb: 0.48650793650793656 (+/- 0.12071843391639075)
+knn: 0.5301587301587302 (+/- 0.07926978405830966)
+decision-tree: 0.5337301587301587 (+/- 0.14724307814453094)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+random forest: 0.605952380952381 (+/- 0.09470419130025995)
+gradient boosting: 0.6761904761904762 (+/- 0.15433600330072048)
+hard voting: 0.678968253968254 (+/- 0.1268128805632329)
+logistic regression: 0.705952380952381 (+/- 0.12360585608845578)
+
+
+(C) 2018, NeuroLex Laboratories

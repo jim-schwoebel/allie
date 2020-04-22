@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.8178571428571428 (+/- 0.12494896917525643) 
+
+MODEL FILE NAME: 
+
+ Chopping(food)_Chopping(food)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:04:44.979471
+
+EXECUTION TIME: 
+
+ 2.338839054107666
+
+GROUPS: 
+
+['Chopping(food)', 'Chopping(food)_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls']
+
+test labels
+
+['Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)', 'Chopping(food)_controls', 'Chopping(food)_controls', 'Chopping(food)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5583333333333333 (+/- 0.15376971326159547)
+gradient boosting: 0.6154761904761905 (+/- 0.07449756117696199)
+random forest: 0.6654761904761906 (+/- 0.06326347740755439)
+hard voting: 0.694047619047619 (+/- 0.043513492577373976)
+knn: 0.7134920634920635 (+/- 0.09636077700456316)
+gaussian-nb: 0.7261904761904762 (+/- 0.10799922314325451)
+adaboost: 0.7511904761904762 (+/- 0.13140614025282504)
+logistic regression: 0.8178571428571428 (+/- 0.12494896917525643)
+
+
+(C) 2018, NeuroLex Laboratories

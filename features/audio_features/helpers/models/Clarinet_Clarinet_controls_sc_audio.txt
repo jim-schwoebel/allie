@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8769841269841269 (+/- 0.07124093520638519) 
+
+MODEL FILE NAME: 
+
+ Clarinet_Clarinet_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:13:38.512058
+
+EXECUTION TIME: 
+
+ 2.358327865600586
+
+GROUPS: 
+
+['Clarinet', 'Clarinet_controls']
+(61 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls']
+
+test labels
+
+['Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet', 'Clarinet_controls', 'Clarinet_controls', 'Clarinet']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5365079365079366 (+/- 0.03036686741223649)
+decision-tree: 0.5615079365079365 (+/- 0.039959351984679696)
+knn: 0.5615079365079365 (+/- 0.039959351984679696)
+hard voting: 0.6559523809523808 (+/- 0.05861206488138653)
+adaboost: 0.6781746031746032 (+/- 0.07672596214988542)
+gradient boosting: 0.6845238095238095 (+/- 0.08251678559092082)
+logistic regression: 0.6880952380952381 (+/- 0.11148887031259094)
+random forest: 0.7317460317460318 (+/- 0.038276684291388884)
+gaussian-nb: 0.8769841269841269 (+/- 0.07124093520638519)
+
+
+(C) 2018, NeuroLex Laboratories

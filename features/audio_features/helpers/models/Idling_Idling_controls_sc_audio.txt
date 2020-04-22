@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.8769841269841269 (+/- 0.07124093520638519) 
+
+MODEL FILE NAME: 
+
+ Idling_Idling_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:47:32.972960
+
+EXECUTION TIME: 
+
+ 2.042545795440674
+
+GROUPS: 
+
+['Idling', 'Idling_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls']
+
+test labels
+
+['Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling', 'Idling', 'Idling', 'Idling_controls', 'Idling', 'Idling_controls', 'Idling_controls', 'Idling']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.653968253968254 (+/- 0.2901404295920337)
+decision-tree: 0.734920634920635 (+/- 0.10130789950139987)
+gradient boosting: 0.7448412698412699 (+/- 0.07618220854613623)
+hard voting: 0.7662698412698413 (+/- 0.10811143621497031)
+adaboost: 0.7884920634920635 (+/- 0.11905820058793128)
+random forest: 0.7948412698412699 (+/- 0.06180292804422787)
+gaussian-nb: 0.8706349206349205 (+/- 0.09116108081621646)
+knn: 0.8769841269841269 (+/- 0.07124093520638519)
+
+
+(C) 2018, NeuroLex Laboratories

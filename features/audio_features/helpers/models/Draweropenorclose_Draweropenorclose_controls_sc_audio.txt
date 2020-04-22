@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6773809523809524 (+/- 0.03375582590180436) 
+
+MODEL FILE NAME: 
+
+ Draweropenorclose_Draweropenorclose_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:03:33.322433
+
+EXECUTION TIME: 
+
+ 2.0552520751953125
+
+GROUPS: 
+
+['Draweropenorclose', 'Draweropenorclose_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls']
+
+test labels
+
+['Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose', 'Draweropenorclose', 'Draweropenorclose_controls', 'Draweropenorclose']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.5666666666666667 (+/- 0.09331389496316868)
+decision-tree: 0.6202380952380953 (+/- 0.12215262912527584)
+adaboost: 0.621031746031746 (+/- 0.14024283370692295)
+gradient boosting: 0.6432539682539682 (+/- 0.15385571079101457)
+hard voting: 0.6432539682539682 (+/- 0.15385571079101457)
+random forest: 0.6587301587301588 (+/- 0.12518567716273238)
+knn: 0.6646825396825395 (+/- 0.11767729851607668)
+gaussian-nb: 0.6773809523809524 (+/- 0.03375582590180436)
+
+
+(C) 2018, NeuroLex Laboratories

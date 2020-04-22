@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.746031746031746 (+/- 0.19231912674109156) 
+
+MODEL FILE NAME: 
+
+ Hammer_Hammer_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:23:52.483294
+
+EXECUTION TIME: 
+
+ 2.5110931396484375
+
+GROUPS: 
+
+['Hammer', 'Hammer_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls']
+
+test labels
+
+['Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls', 'Hammer_controls', 'Hammer', 'Hammer_controls', 'Hammer', 'Hammer', 'Hammer_controls', 'Hammer_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.5746031746031746 (+/- 0.21139138812173322)
+logistic regression: 0.6158730158730159 (+/- 0.1101546131612538)
+gaussian-nb: 0.6603174603174604 (+/- 0.1978977444509041)
+knn: 0.6666666666666666 (+/- 0.1043281061914602)
+gradient boosting: 0.711111111111111 (+/- 0.19579865327122892)
+adaboost: 0.7174603174603175 (+/- 0.09702036057102302)
+hard voting: 0.746031746031746 (+/- 0.14373627203392728)
+random forest: 0.746031746031746 (+/- 0.19231912674109156)
+
+
+(C) 2018, NeuroLex Laboratories

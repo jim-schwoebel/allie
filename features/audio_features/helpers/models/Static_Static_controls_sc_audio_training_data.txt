@@ -1,0 +1,8 @@
+train labels
+
+['Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static_controls']
+
+test labels
+
+['Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static', 'Static_controls', 'Static_controls', 'Static', 'Static_controls', 'Static', 'Static', 'Static', 'Static_controls', 'Static', 'Static_controls', 'Static_controls', 'Static']
+

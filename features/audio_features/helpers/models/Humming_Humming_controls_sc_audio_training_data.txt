@@ -1,0 +1,8 @@
+train labels
+
+['Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls']
+
+test labels
+
+['Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming_controls', 'Humming_controls', 'Humming_controls', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming', 'Humming_controls', 'Humming_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7904761904761906 (+/- 0.1227057021592869) 
+
+MODEL FILE NAME: 
+
+ Crack_Crack_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:29:20.714582
+
+EXECUTION TIME: 
+
+ 2.5446200370788574
+
+GROUPS: 
+
+['Crack', 'Crack_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls']
+
+test labels
+
+['Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls', 'Crack_controls', 'Crack', 'Crack_controls', 'Crack', 'Crack', 'Crack_controls', 'Crack_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6317460317460318 (+/- 0.1572630612888995)
+adaboost: 0.6666666666666667 (+/- 0.0875177698545411)
+random forest: 0.6825396825396824 (+/- 0.17329960716134832)
+knn: 0.7047619047619047 (+/- 0.12237673185648497)
+gaussian-nb: 0.7174603174603175 (+/- 0.03535088484336523)
+gradient boosting: 0.7333333333333334 (+/- 0.14317425122259916)
+logistic regression: 0.7396825396825396 (+/- 0.1595534206111627)
+hard voting: 0.7904761904761906 (+/- 0.1227057021592869)
+
+
+(C) 2018, NeuroLex Laboratories

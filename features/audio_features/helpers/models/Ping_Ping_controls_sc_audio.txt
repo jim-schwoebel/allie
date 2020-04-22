@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6476190476190476 (+/- 0.06459361888690734) 
+
+MODEL FILE NAME: 
+
+ Ping_Ping_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:39:42.457855
+
+EXECUTION TIME: 
+
+ 1.9762661457061768
+
+GROUPS: 
+
+['Ping', 'Ping_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls']
+
+test labels
+
+['Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping_controls', 'Ping_controls', 'Ping_controls', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping', 'Ping_controls', 'Ping_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gaussian-nb: 0.5047619047619047 (+/- 0.2055907918564086)
+adaboost: 0.5047619047619047 (+/- 0.09805362039035238)
+random forest: 0.5333333333333334 (+/- 0.09233675918888244)
+knn: 0.5619047619047619 (+/- 0.19610724078070477)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+logistic regression: 0.5682539682539682 (+/- 0.15662090645770171)
+hard voting: 0.5841269841269842 (+/- 0.11151852743016064)
+decision-tree: 0.6476190476190476 (+/- 0.14317425122259914)
+gradient boosting: 0.6476190476190476 (+/- 0.06459361888690734)
+
+
+(C) 2018, NeuroLex Laboratories

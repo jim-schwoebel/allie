@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8589010989010989 (+/- 0.05966779991804236) 
+
+MODEL FILE NAME: 
+
+ Effectsunit_Effectsunit_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:15:55.768914
+
+EXECUTION TIME: 
+
+ 2.7402801513671875
+
+GROUPS: 
+
+['Effectsunit', 'Effectsunit_controls']
+(106 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit']
+
+test labels
+
+['Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit_controls', 'Effectsunit_controls', 'Effectsunit', 'Effectsunit']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5143589743589743 (+/- 0.017660692674587235)
+gaussian-nb: 0.7578021978021978 (+/- 0.07137478955815192)
+logistic regression: 0.7681318681318682 (+/- 0.1652156780189254)
+knn: 0.7871794871794873 (+/- 0.09491633446131434)
+decision-tree: 0.8158974358974358 (+/- 0.0490829369459957)
+random forest: 0.8270329670329671 (+/- 0.10140326854512069)
+gradient boosting: 0.8568498168498169 (+/- 0.04564014368940736)
+hard voting: 0.857948717948718 (+/- 0.06283451183741473)
+adaboost: 0.8589010989010989 (+/- 0.05966779991804236)
+
+
+(C) 2018, NeuroLex Laboratories

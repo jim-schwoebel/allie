@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7088888888888888 (+/- 0.07316478948068593) 
+
+MODEL FILE NAME: 
+
+ Rub_Rub_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:43:55.583123
+
+EXECUTION TIME: 
+
+ 3.730595111846924
+
+GROUPS: 
+
+['Rub', 'Rub_controls']
+(144 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub']
+
+test labels
+
+['Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub', 'Rub', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub_controls', 'Rub_controls', 'Rub', 'Rub']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.51 (+/- 0.020000000000000018)
+gaussian-nb: 0.6255555555555555 (+/- 0.10083601159589713)
+knn: 0.6322222222222222 (+/- 0.11511668798159476)
+logistic regression: 0.6433333333333333 (+/- 0.10700178837780883)
+random forest: 0.6677777777777778 (+/- 0.027977062915587037)
+adaboost: 0.6788888888888889 (+/- 0.07407037027777313)
+decision-tree: 0.6866666666666668 (+/- 0.13492567684323448)
+gradient boosting: 0.6966666666666668 (+/- 0.10083601159589713)
+hard voting: 0.7088888888888888 (+/- 0.07316478948068593)
+
+
+(C) 2018, NeuroLex Laboratories

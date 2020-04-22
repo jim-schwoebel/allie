@@ -1,0 +1,8 @@
+train labels
+
+['Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls']
+
+test labels
+
+['Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls']
+

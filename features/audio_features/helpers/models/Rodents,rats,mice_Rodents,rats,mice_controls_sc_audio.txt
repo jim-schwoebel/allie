@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7682539682539682 (+/- 0.15506888561041032) 
+
+MODEL FILE NAME: 
+
+ Rodents,rats,mice_Rodents,rats,mice_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:40:09.302837
+
+EXECUTION TIME: 
+
+ 2.013321876525879
+
+GROUPS: 
+
+['Rodents,rats,mice', 'Rodents,rats,mice_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls']
+
+test labels
+
+['Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice', 'Rodents,rats,mice', 'Rodents,rats,mice_controls', 'Rodents,rats,mice']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.5277777777777778 (+/- 0.12248991505219349)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gaussian-nb: 0.5630952380952381 (+/- 0.13127905382156443)
+decision-tree: 0.5793650793650794 (+/- 0.10038976698947237)
+random forest: 0.5944444444444443 (+/- 0.10859973640061793)
+logistic regression: 0.6194444444444445 (+/- 0.21971516640000738)
+hard voting: 0.6257936507936508 (+/- 0.1693454415059081)
+adaboost: 0.682936507936508 (+/- 0.11942005235305352)
+knn: 0.7682539682539682 (+/- 0.15506888561041032)
+
+
+(C) 2018, NeuroLex Laboratories

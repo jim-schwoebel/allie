@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.6952380952380952 (+/- 0.09331389496316869) 
+
+MODEL FILE NAME: 
+
+ Single-lensreflexcamera_Single-lensreflexcamera_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:16:51.041683
+
+EXECUTION TIME: 
+
+ 2.1932239532470703
+
+GROUPS: 
+
+['Single-lensreflexcamera', 'Single-lensreflexcamera_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls']
+
+test labels
+
+['Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera', 'Single-lensreflexcamera', 'Single-lensreflexcamera_controls', 'Single-lensreflexcamera_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.49523809523809514 (+/- 0.1493751156319821)
+logistic regression: 0.49523809523809526 (+/- 0.17457431218879388)
+decision-tree: 0.4984126984126984 (+/- 0.13188938462121264)
+random forest: 0.5523809523809524 (+/- 0.13997084244475302)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gradient boosting: 0.5777777777777777 (+/- 0.15078529634333862)
+gaussian-nb: 0.6317460317460318 (+/- 0.12188161155842837)
+hard voting: 0.6444444444444445 (+/- 0.11340045142534444)
+adaboost: 0.6952380952380952 (+/- 0.09331389496316869)
+
+
+(C) 2018, NeuroLex Laboratories

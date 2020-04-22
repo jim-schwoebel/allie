@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.875 (+/- 0.11180339887498948) 
+
+MODEL FILE NAME: 
+
+ Doorbell_Doorbell_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:01:45.157652
+
+EXECUTION TIME: 
+
+ 2.045232057571411
+
+GROUPS: 
+
+['Doorbell', 'Doorbell_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Doorbell', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls']
+
+test labels
+
+['Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell', 'Doorbell', 'Doorbell_controls', 'Doorbell_controls', 'Doorbell']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5428571428571429 (+/- 0.08571428571428573)
+random forest: 0.6845238095238095 (+/- 0.11393796299052761)
+knn: 0.7428571428571429 (+/- 0.15875793407780622)
+logistic regression: 0.7595238095238096 (+/- 0.08833622123375785)
+adaboost: 0.7880952380952382 (+/- 0.09210624349468903)
+gaussian-nb: 0.7964285714285715 (+/- 0.12555997022319249)
+hard voting: 0.8464285714285715 (+/- 0.09285714285714286)
+decision-tree: 0.8666666666666666 (+/- 0.08079466429027214)
+gradient boosting: 0.875 (+/- 0.11180339887498948)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls']
+
+test labels
+
+['Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno_controls', 'Techno_controls', 'Techno_controls', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno', 'Techno_controls', 'Techno_controls']
+

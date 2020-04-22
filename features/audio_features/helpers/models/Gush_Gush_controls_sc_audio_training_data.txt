@@ -1,0 +1,8 @@
+train labels
+
+['Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls']
+
+test labels
+
+['Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush', 'Gush', 'Gush_controls', 'Gush_controls', 'Gush_controls', 'Gush', 'Gush_controls', 'Gush', 'Gush', 'Gush_controls', 'Gush_controls']
+

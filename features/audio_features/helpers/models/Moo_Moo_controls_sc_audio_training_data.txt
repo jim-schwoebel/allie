@@ -1,0 +1,8 @@
+train labels
+
+['Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo', 'Moo', 'Moo', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls']
+
+test labels
+
+['Moo', 'Moo', 'Moo', 'Moo', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo', 'Moo', 'Moo', 'Moo_controls', 'Moo_controls', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo_controls', 'Moo', 'Moo', 'Moo_controls', 'Moo']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.817063492063492 (+/- 0.07096853620986715) 
+
+MODEL FILE NAME: 
+
+ Jackhammer_Jackhammer_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:05:20.032168
+
+EXECUTION TIME: 
+
+ 2.0249109268188477
+
+GROUPS: 
+
+['Jackhammer', 'Jackhammer_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls']
+
+test labels
+
+['Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer', 'Jackhammer_controls', 'Jackhammer_controls', 'Jackhammer']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.42658730158730157 (+/- 0.18939840577431308)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.6277777777777777 (+/- 0.14903210866437594)
+gradient boosting: 0.7134920634920634 (+/- 0.1539437061105312)
+hard voting: 0.7420634920634921 (+/- 0.1372809416535851)
+knn: 0.7734126984126984 (+/- 0.12444383705715072)
+adaboost: 0.7920634920634921 (+/- 0.10435376243790076)
+gaussian-nb: 0.7956349206349207 (+/- 0.14829806284876548)
+random forest: 0.817063492063492 (+/- 0.07096853620986715)
+
+
+(C) 2018, NeuroLex Laboratories

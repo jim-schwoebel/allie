@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6380952380952382 (+/- 0.05714285714285716) 
+
+MODEL FILE NAME: 
+
+ Breathing_Breathing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:17:32.242744
+
+EXECUTION TIME: 
+
+ 2.37801194190979
+
+GROUPS: 
+
+['Breathing', 'Breathing_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls']
+
+test labels
+
+['Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing_controls', 'Breathing_controls', 'Breathing', 'Breathing_controls', 'Breathing', 'Breathing', 'Breathing_controls', 'Breathing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.42857142857142855 (+/- 0.15936381457791915)
+gaussian-nb: 0.4349206349206349 (+/- 0.09068480544181395)
+adaboost: 0.4507936507936508 (+/- 0.16237094415929423)
+hard voting: 0.5301587301587302 (+/- 0.13491129752937003)
+logistic regression: 0.5365079365079366 (+/- 0.15071844406945042)
+gradient boosting: 0.5587301587301587 (+/- 0.11810206500151287)
+random forest: 0.5587301587301587 (+/- 0.07605808603625994)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+knn: 0.6380952380952382 (+/- 0.05714285714285716)
+
+
+(C) 2018, NeuroLex Laboratories

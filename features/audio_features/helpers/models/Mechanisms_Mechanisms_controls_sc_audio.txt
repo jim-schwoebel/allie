@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.6897619047619048 (+/- 0.12001417149880347) 
+
+MODEL FILE NAME: 
+
+ Mechanisms_Mechanisms_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:30:20.383357
+
+EXECUTION TIME: 
+
+ 2.629056930541992
+
+GROUPS: 
+
+['Mechanisms', 'Mechanisms_controls']
+(115 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms']
+
+test labels
+
+['Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms', 'Mechanisms_controls', 'Mechanisms_controls', 'Mechanisms', 'Mechanisms_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5133333333333333 (+/- 0.016329931618554516)
+gaussian-nb: 0.5791666666666666 (+/- 0.07499999999999998)
+random forest: 0.6317857142857143 (+/- 0.08694356602687396)
+knn: 0.645357142857143 (+/- 0.11156762792542928)
+logistic regression: 0.6551190476190476 (+/- 0.08467759316714488)
+adaboost: 0.6602380952380952 (+/- 0.11141063652978916)
+gradient boosting: 0.6691666666666667 (+/- 0.14523926619356228)
+hard voting: 0.6816666666666666 (+/- 0.11620742948136607)
+decision-tree: 0.6897619047619048 (+/- 0.12001417149880347)
+
+
+(C) 2018, NeuroLex Laboratories

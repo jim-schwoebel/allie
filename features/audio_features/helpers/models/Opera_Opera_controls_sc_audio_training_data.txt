@@ -1,0 +1,8 @@
+train labels
+
+['Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls']
+
+test labels
+
+['Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera', 'Opera', 'Opera', 'Opera_controls', 'Opera', 'Opera_controls', 'Opera_controls', 'Opera']
+

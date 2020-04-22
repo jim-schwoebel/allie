@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.7650793650793651 (+/- 0.19216185333868643) 
+
+MODEL FILE NAME: 
+
+ Whalevocalization_Whalevocalization_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:21:53.849230
+
+EXECUTION TIME: 
+
+ 2.0084331035614014
+
+GROUPS: 
+
+['Whalevocalization', 'Whalevocalization_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls']
+
+test labels
+
+['Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization', 'Whalevocalization', 'Whalevocalization_controls', 'Whalevocalization_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.5936507936507937 (+/- 0.15796641656666321)
+gradient boosting: 0.6 (+/- 0.1370605279042724)
+hard voting: 0.6222222222222222 (+/- 0.11767462217682942)
+logistic regression: 0.6603174603174603 (+/- 0.12113513668786613)
+gaussian-nb: 0.6666666666666666 (+/- 0.13801311186847084)
+adaboost: 0.6793650793650794 (+/- 0.18494617985561285)
+knn: 0.746031746031746 (+/- 0.06582997255024671)
+random forest: 0.7650793650793651 (+/- 0.19216185333868643)
+
+
+(C) 2018, NeuroLex Laboratories

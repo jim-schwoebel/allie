@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7884920634920635 (+/- 0.19663329078669112) 
+
+MODEL FILE NAME: 
+
+ Tapping(guitartechnique)_Tapping(guitartechnique)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:15:41.062911
+
+EXECUTION TIME: 
+
+ 2.024790048599243
+
+GROUPS: 
+
+['Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls']
+
+test labels
+
+['Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)_controls', 'Tapping(guitartechnique)']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5952380952380952 (+/- 0.15338212769910864)
+random forest: 0.6126984126984126 (+/- 0.11373323249316099)
+hard voting: 0.644047619047619 (+/- 0.16419942523396824)
+knn: 0.644047619047619 (+/- 0.16419942523396824)
+gaussian-nb: 0.6626984126984127 (+/- 0.0735894483163323)
+adaboost: 0.6976190476190476 (+/- 0.1732705276062881)
+gradient boosting: 0.6976190476190476 (+/- 0.11703053073756674)
+logistic regression: 0.7884920634920635 (+/- 0.19663329078669112)
+
+
+(C) 2018, NeuroLex Laboratories

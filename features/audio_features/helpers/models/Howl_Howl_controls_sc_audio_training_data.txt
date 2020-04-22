@@ -1,0 +1,8 @@
+train labels
+
+['Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl', 'Howl', 'Howl', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls']
+
+test labels
+
+['Howl', 'Howl', 'Howl', 'Howl', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl', 'Howl', 'Howl', 'Howl_controls', 'Howl_controls', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl_controls', 'Howl', 'Howl', 'Howl_controls', 'Howl']
+

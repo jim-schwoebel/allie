@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7126984126984126 (+/- 0.107914621964129) 
+
+MODEL FILE NAME: 
+
+ Artilleryfire_Artilleryfire_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:31:14.760367
+
+EXECUTION TIME: 
+
+ 2.7953460216522217
+
+GROUPS: 
+
+['Artilleryfire', 'Artilleryfire_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls']
+
+test labels
+
+['Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire', 'Artilleryfire_controls', 'Artilleryfire_controls', 'Artilleryfire']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+random forest: 0.5646825396825397 (+/- 0.14920634920634923)
+knn: 0.6190476190476191 (+/- 0.12649334722989994)
+decision-tree: 0.6226190476190476 (+/- 0.16834192070774795)
+gaussian-nb: 0.6849206349206349 (+/- 0.23201699206242227)
+adaboost: 0.6876984126984127 (+/- 0.1867003397983689)
+logistic regression: 0.6904761904761905 (+/- 0.1035782701626486)
+gradient boosting: 0.7011904761904761 (+/- 0.1781105162787147)
+hard voting: 0.7126984126984126 (+/- 0.107914621964129)
+
+
+(C) 2018, NeuroLex Laboratories

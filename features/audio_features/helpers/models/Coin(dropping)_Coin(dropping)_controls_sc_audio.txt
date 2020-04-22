@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7797619047619049 (+/- 0.0855156428384189) 
+
+MODEL FILE NAME: 
+
+ Coin(dropping)_Coin(dropping)_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:23:15.708707
+
+EXECUTION TIME: 
+
+ 2.0632097721099854
+
+GROUPS: 
+
+['Coin(dropping)', 'Coin(dropping)_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls']
+
+test labels
+
+['Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)', 'Coin(dropping)_controls', 'Coin(dropping)_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+knn: 0.5190476190476191 (+/- 0.1862400981251349)
+adaboost: 0.5238095238095238 (+/- 0.21312516416628757)
+gradient boosting: 0.555952380952381 (+/- 0.1380952380952381)
+gaussian-nb: 0.5678571428571428 (+/- 0.08777289805317506)
+hard voting: 0.5809523809523809 (+/- 0.1768408203355816)
+decision-tree: 0.5928571428571429 (+/- 0.13387432763942095)
+random forest: 0.6226190476190475 (+/- 0.08464947064110084)
+logistic regression: 0.7797619047619049 (+/- 0.0855156428384189)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.8269841269841269 (+/- 0.12358674503154887) 
+
+MODEL FILE NAME: 
+
+ Whoop_Whoop_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:30:11.324701
+
+EXECUTION TIME: 
+
+ 2.005645990371704
+
+GROUPS: 
+
+['Whoop', 'Whoop_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls']
+
+test labels
+
+['Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop', 'Whoop', 'Whoop_controls', 'Whoop', 'Whoop_controls', 'Whoop_controls', 'Whoop']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.6396825396825395 (+/- 0.11998703423696923)
+logistic regression: 0.6404761904761905 (+/- 0.09233675918888247)
+gaussian-nb: 0.6626984126984127 (+/- 0.17440013447099786)
+hard voting: 0.6690476190476191 (+/- 0.12652695481510878)
+gradient boosting: 0.7003968253968254 (+/- 0.10381364974083111)
+random forest: 0.719047619047619 (+/- 0.0954164995691137)
+knn: 0.7376984126984126 (+/- 0.09879597663235198)
+decision-tree: 0.8269841269841269 (+/- 0.12358674503154887)
+
+
+(C) 2018, NeuroLex Laboratories

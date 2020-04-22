@@ -1,0 +1,8 @@
+train labels
+
+['Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls']
+
+test labels
+
+['Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae']
+

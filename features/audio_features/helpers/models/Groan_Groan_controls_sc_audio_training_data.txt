@@ -1,0 +1,8 @@
+train labels
+
+['Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls']
+
+test labels
+
+['Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan_controls', 'Groan_controls', 'Groan_controls', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan', 'Groan_controls', 'Groan_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8245098039215687 (+/- 0.07663083386074433) 
+
+MODEL FILE NAME: 
+
+ Organ_Organ_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:22:56.406442
+
+EXECUTION TIME: 
+
+ 2.6415579319000244
+
+GROUPS: 
+
+['Organ', 'Organ_controls']
+(119 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ']
+
+test labels
+
+['Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls', 'Organ', 'Organ', 'Organ_controls', 'Organ_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5192156862745098 (+/- 0.0157547524914515)
+gaussian-nb: 0.6476470588235295 (+/- 0.06335916579952126)
+knn: 0.6844117647058823 (+/- 0.06618202591061428)
+random forest: 0.7110784313725491 (+/- 0.05217800507650649)
+decision-tree: 0.7119117647058824 (+/- 0.08574783538135214)
+logistic regression: 0.7502450980392157 (+/- 0.09616542680092026)
+adaboost: 0.750343137254902 (+/- 0.10732021168190038)
+hard voting: 0.8121078431372549 (+/- 0.06472511597684527)
+gradient boosting: 0.8245098039215687 (+/- 0.07663083386074433)
+
+
+(C) 2018, NeuroLex Laboratories

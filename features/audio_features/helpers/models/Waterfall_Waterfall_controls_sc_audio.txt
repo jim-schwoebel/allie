@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.7698412698412699 (+/- 0.04807978168527287) 
+
+MODEL FILE NAME: 
+
+ Waterfall_Waterfall_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:17:13.131062
+
+EXECUTION TIME: 
+
+ 1.9949219226837158
+
+GROUPS: 
+
+['Waterfall', 'Waterfall_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls']
+
+test labels
+
+['Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall', 'Waterfall', 'Waterfall_controls', 'Waterfall', 'Waterfall_controls', 'Waterfall_controls', 'Waterfall']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+adaboost: 0.6976190476190476 (+/- 0.1732705276062881)
+gaussian-nb: 0.7134920634920635 (+/- 0.15394370611053118)
+decision-tree: 0.7190476190476189 (+/- 0.19960988028749987)
+gradient boosting: 0.7226190476190476 (+/- 0.15047166961261868)
+random forest: 0.7484126984126984 (+/- 0.15939543124613578)
+hard voting: 0.7511904761904762 (+/- 0.13140614025282504)
+logistic regression: 0.7698412698412699 (+/- 0.04807978168527287)
+knn: 0.7698412698412699 (+/- 0.04807978168527287)
+
+
+(C) 2018, NeuroLex Laboratories

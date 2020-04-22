@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7559523809523809 (+/- 0.0917516612761795) 
+
+MODEL FILE NAME: 
+
+ Stream_Stream_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:07:05.770427
+
+EXECUTION TIME: 
+
+ 2.0085289478302
+
+GROUPS: 
+
+['Stream', 'Stream_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream', 'Stream', 'Stream', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls']
+
+test labels
+
+['Stream', 'Stream', 'Stream', 'Stream', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream', 'Stream', 'Stream', 'Stream_controls', 'Stream_controls', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream_controls', 'Stream', 'Stream', 'Stream_controls', 'Stream']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.5408730158730158 (+/- 0.16645678394750585)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.5543650793650794 (+/- 0.12863265248160952)
+gradient boosting: 0.6265873015873016 (+/- 0.11556002520572588)
+knn: 0.6265873015873016 (+/- 0.05897097774050769)
+hard voting: 0.6488095238095238 (+/- 0.1484890729552179)
+adaboost: 0.6515873015873016 (+/- 0.17916831460508809)
+random forest: 0.7496031746031746 (+/- 0.11550550547009761)
+gaussian-nb: 0.7559523809523809 (+/- 0.0917516612761795)
+
+
+(C) 2018, NeuroLex Laboratories

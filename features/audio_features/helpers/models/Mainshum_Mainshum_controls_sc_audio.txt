@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6333333333333334 (+/- 0.11967032904743341) 
+
+MODEL FILE NAME: 
+
+ Mainshum_Mainshum_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:21:35.849344
+
+EXECUTION TIME: 
+
+ 2.092231035232544
+
+GROUPS: 
+
+['Mainshum', 'Mainshum_controls']
+(66 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls']
+
+test labels
+
+['Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls', 'Mainshum', 'Mainshum', 'Mainshum_controls', 'Mainshum_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+hard voting: 0.4583333333333333 (+/- 0.1689656258416172)
+decision-tree: 0.45833333333333337 (+/- 0.1689656258416172)
+adaboost: 0.45833333333333337 (+/- 0.11719457283182771)
+gradient boosting: 0.4805555555555555 (+/- 0.14153043558729997)
+random forest: 0.5222222222222221 (+/- 0.08314794192830981)
+gaussian-nb: 0.5416666666666666 (+/- 0.18299632324445114)
+logistic regression: 0.5638888888888889 (+/- 0.12777777777777777)
+sk: 0.5694444444444444 (+/- 0.027777777777777766)
+knn: 0.6333333333333334 (+/- 0.11967032904743341)
+
+
+(C) 2018, NeuroLex Laboratories

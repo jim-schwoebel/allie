@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6515873015873016 (+/- 0.07679981208509806) 
+
+MODEL FILE NAME: 
+
+ Cowbell_Cowbell_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:28:29.362262
+
+EXECUTION TIME: 
+
+ 2.1172702312469482
+
+GROUPS: 
+
+['Cowbell', 'Cowbell_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls']
+
+test labels
+
+['Cowbell', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell_controls', 'Cowbell', 'Cowbell', 'Cowbell_controls', 'Cowbell']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.47777777777777775 (+/- 0.13823200671160155)
+adaboost: 0.5472222222222222 (+/- 0.09543960163945842)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.6043650793650794 (+/- 0.15305118804753332)
+knn: 0.6051587301587302 (+/- 0.12886748199740589)
+gaussian-nb: 0.6194444444444445 (+/- 0.21971516640000738)
+random forest: 0.6202380952380953 (+/- 0.04265826873135456)
+hard voting: 0.6230158730158729 (+/- 0.07470442302063551)
+gradient boosting: 0.6515873015873016 (+/- 0.07679981208509806)
+
+
+(C) 2018, NeuroLex Laboratories

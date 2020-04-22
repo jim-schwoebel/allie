@@ -1,0 +1,8 @@
+train labels
+
+['Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls']
+
+test labels
+
+['Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues', 'Blues', 'Blues_controls', 'Blues_controls', 'Blues_controls', 'Blues', 'Blues_controls', 'Blues', 'Blues', 'Blues_controls', 'Blues_controls']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7133333333333333 (+/- 0.055239378063921846) 
+
+MODEL FILE NAME: 
+
+ Cat_Cat_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 16:40:45.979900
+
+EXECUTION TIME: 
+
+ 3.010633945465088
+
+GROUPS: 
+
+['Cat', 'Cat_controls']
+(116 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat']
+
+test labels
+
+['Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat', 'Cat_controls', 'Cat_controls', 'Cat', 'Cat_controls', 'Cat_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5199999999999999 (+/- 0.01632993161855452)
+knn: 0.5966666666666667 (+/- 0.10860223038429939)
+decision-tree: 0.5974999999999999 (+/- 0.04666666666666666)
+gaussian-nb: 0.6483333333333333 (+/- 0.08868640131259008)
+adaboost: 0.6766666666666666 (+/- 0.10509915952724519)
+random forest: 0.6858333333333333 (+/- 0.09397103572673633)
+logistic regression: 0.6866666666666668 (+/- 0.1443231328189167)
+gradient boosting: 0.7133333333333333 (+/- 0.055239378063921846)
+hard voting: 0.7133333333333333 (+/- 0.055239378063921846)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7226190476190476 (+/- 0.13716848305556262) 
+
+MODEL FILE NAME: 
+
+ Airconditioning_Airconditioning_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:06:01.829328
+
+EXECUTION TIME: 
+
+ 2.25610089302063
+
+GROUPS: 
+
+['Airconditioning', 'Airconditioning_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls']
+
+test labels
+
+['Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning', 'Airconditioning_controls', 'Airconditioning_controls', 'Airconditioning']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5146825396825396 (+/- 0.11717844772713537)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+hard voting: 0.5424603174603174 (+/- 0.11019749100791455)
+logistic regression: 0.5702380952380952 (+/- 0.17546504455135908)
+knn: 0.5996031746031746 (+/- 0.1426607998172054)
+gradient boosting: 0.6218253968253968 (+/- 0.08525375990375667)
+adaboost: 0.6531746031746032 (+/- 0.15604070765008898)
+random forest: 0.6662698412698413 (+/- 0.14757637205294552)
+gaussian-nb: 0.7226190476190476 (+/- 0.13716848305556262)
+
+
+(C) 2018, NeuroLex Laboratories

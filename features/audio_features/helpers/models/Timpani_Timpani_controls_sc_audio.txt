@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.719047619047619 (+/- 0.15565270694769856) 
+
+MODEL FILE NAME: 
+
+ Timpani_Timpani_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:31:08.353465
+
+EXECUTION TIME: 
+
+ 2.0117058753967285
+
+GROUPS: 
+
+['Timpani', 'Timpani_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls']
+
+test labels
+
+['Timpani', 'Timpani', 'Timpani', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani_controls', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani_controls', 'Timpani', 'Timpani', 'Timpani_controls', 'Timpani']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.5380952380952381 (+/- 0.10816968277714806)
+hard voting: 0.5380952380952381 (+/- 0.10816968277714806)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+logistic regression: 0.5722222222222222 (+/- 0.12448938288057902)
+adaboost: 0.5952380952380952 (+/- 0.06388765649999398)
+decision-tree: 0.598015873015873 (+/- 0.09947265843317026)
+random forest: 0.657936507936508 (+/- 0.08460481251578685)
+knn: 0.7087301587301588 (+/- 0.09898705922329436)
+gaussian-nb: 0.719047619047619 (+/- 0.15565270694769856)
+
+
+(C) 2018, NeuroLex Laboratories

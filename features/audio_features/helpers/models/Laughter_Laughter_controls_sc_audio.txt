@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8238095238095238 (+/- 0.07158712561129957) 
+
+MODEL FILE NAME: 
+
+ Laughter_Laughter_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:14:42.546588
+
+EXECUTION TIME: 
+
+ 2.4742629528045654
+
+GROUPS: 
+
+['Laughter', 'Laughter_controls']
+(103 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter']
+
+test labels
+
+['Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter_controls', 'Laughter_controls', 'Laughter', 'Laughter_controls', 'Laughter', 'Laughter', 'Laughter']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5714285714285714 (+/- 0.10101525445522108)
+sk: 0.6047619047619047 (+/- 0.08857654875113465)
+logistic regression: 0.6309523809523809 (+/- 0.06818010030131598)
+random forest: 0.719047619047619 (+/- 0.059093684028527875)
+gaussian-nb: 0.7333333333333332 (+/- 0.13586040588273435)
+decision-tree: 0.7642857142857143 (+/- 0.0832993127835043)
+adaboost: 0.7642857142857143 (+/- 0.0832993127835043)
+hard voting: 0.7642857142857143 (+/- 0.08329931278350426)
+gradient boosting: 0.8238095238095238 (+/- 0.07158712561129957)
+
+
+(C) 2018, NeuroLex Laboratories

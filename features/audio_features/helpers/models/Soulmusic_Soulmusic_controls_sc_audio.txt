@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8357142857142857 (+/- 0.1622545241657221) 
+
+MODEL FILE NAME: 
+
+ Soulmusic_Soulmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:38:56.188043
+
+EXECUTION TIME: 
+
+ 1.993143081665039
+
+GROUPS: 
+
+['Soulmusic', 'Soulmusic_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls']
+
+test labels
+
+['Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic', 'Soulmusic_controls', 'Soulmusic_controls', 'Soulmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5547619047619048 (+/- 0.2097874423674036)
+knn: 0.609126984126984 (+/- 0.0932159665900197)
+gradient boosting: 0.6432539682539683 (+/- 0.0769718530552656)
+random forest: 0.6563492063492063 (+/- 0.14262768167768422)
+logistic regression: 0.6904761904761905 (+/- 0.1035782701626486)
+hard voting: 0.7119047619047618 (+/- 0.1376326406205023)
+adaboost: 0.7626984126984127 (+/- 0.11347124906256917)
+gaussian-nb: 0.8357142857142857 (+/- 0.1622545241657221)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.8253968253968254 (+/- 0.09836148180844233) 
+
+MODEL FILE NAME: 
+
+ Walk,footsteps_Walk,footsteps_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:12:35.202439
+
+EXECUTION TIME: 
+
+ 2.0117697715759277
+
+GROUPS: 
+
+['Walk,footsteps', 'Walk,footsteps_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls']
+
+test labels
+
+['Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps', 'Walk,footsteps', 'Walk,footsteps_controls', 'Walk,footsteps_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.6 (+/- 0.1918994445677132)
+gaussian-nb: 0.6603174603174604 (+/- 0.1978977444509041)
+adaboost: 0.6952380952380952 (+/- 0.19528325713307554)
+gradient boosting: 0.7142857142857143 (+/- 0.2638933643253385)
+hard voting: 0.7809523809523811 (+/- 0.1476787726934985)
+knn: 0.7904761904761906 (+/- 0.1227057021592869)
+logistic regression: 0.7968253968253968 (+/- 0.1556527069476986)
+decision-tree: 0.8253968253968254 (+/- 0.09836148180844233)
+
+
+(C) 2018, NeuroLex Laboratories

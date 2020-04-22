@@ -1,0 +1,8 @@
+train labels
+
+['Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls']
+
+test labels
+
+['Strum', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum']
+

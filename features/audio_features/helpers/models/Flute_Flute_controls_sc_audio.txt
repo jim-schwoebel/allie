@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7968253968253969 (+/- 0.08888888888888886) 
+
+MODEL FILE NAME: 
+
+ Flute_Flute_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:48:28.933241
+
+EXECUTION TIME: 
+
+ 2.010840892791748
+
+GROUPS: 
+
+['Flute', 'Flute_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls']
+
+test labels
+
+['Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls', 'Flute_controls', 'Flute', 'Flute_controls', 'Flute', 'Flute', 'Flute_controls', 'Flute_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+decision-tree: 0.6158730158730158 (+/- 0.06301407378183876)
+gradient boosting: 0.6444444444444445 (+/- 0.17578245333215403)
+random forest: 0.6444444444444445 (+/- 0.14499285392595856)
+knn: 0.6730158730158731 (+/- 0.1093280975093496)
+gaussian-nb: 0.711111111111111 (+/- 0.07539264817166932)
+adaboost: 0.7174603174603175 (+/- 0.1388866212966816)
+hard voting: 0.7682539682539682 (+/- 0.15506888561041032)
+logistic regression: 0.7968253968253969 (+/- 0.08888888888888886)
+
+
+(C) 2018, NeuroLex Laboratories

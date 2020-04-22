@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.6916666666666667 (+/- 0.2) 
+
+MODEL FILE NAME: 
+
+ Crying,sobbing_Crying,sobbing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:39:57.977207
+
+EXECUTION TIME: 
+
+ 1.9957020282745361
+
+GROUPS: 
+
+['Crying,sobbing', 'Crying,sobbing_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls']
+
+test labels
+
+['Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing', 'Crying,sobbing_controls', 'Crying,sobbing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.5071428571428571 (+/- 0.18095238095238098)
+decision-tree: 0.5107142857142857 (+/- 0.12305171008973857)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+logistic regression: 0.5178571428571429 (+/- 0.10949792654825638)
+hard voting: 0.5523809523809524 (+/- 0.16355080621370208)
+knn: 0.5595238095238095 (+/- 0.15166311575420077)
+adaboost: 0.5773809523809524 (+/- 0.18132793109199782)
+random forest: 0.6464285714285715 (+/- 0.17942652410114956)
+gaussian-nb: 0.6916666666666667 (+/- 0.2)
+
+
+(C) 2018, NeuroLex Laboratories

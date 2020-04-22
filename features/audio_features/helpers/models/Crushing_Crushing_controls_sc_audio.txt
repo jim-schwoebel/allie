@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7825396825396825 (+/- 0.16597835950094622) 
+
+MODEL FILE NAME: 
+
+ Crushing_Crushing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:39:10.398847
+
+EXECUTION TIME: 
+
+ 2.0214948654174805
+
+GROUPS: 
+
+['Crushing', 'Crushing_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls']
+
+test labels
+
+['Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing', 'Crushing', 'Crushing_controls', 'Crushing', 'Crushing_controls', 'Crushing_controls', 'Crushing']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5111111111111111 (+/- 0.09372642896763132)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+decision-tree: 0.5932539682539681 (+/- 0.1468897327943758)
+hard voting: 0.5968253968253968 (+/- 0.15499270539325286)
+random forest: 0.6246031746031746 (+/- 0.12632766826077169)
+adaboost: 0.6503968253968254 (+/- 0.12576548179923813)
+gradient boosting: 0.6503968253968254 (+/- 0.16827642856976288)
+logistic regression: 0.659920634920635 (+/- 0.1341692428967272)
+gaussian-nb: 0.7825396825396825 (+/- 0.16597835950094622)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls']
+
+test labels
+
+['Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker_controls', 'Snicker_controls', 'Snicker_controls', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker', 'Snicker_controls', 'Snicker_controls']
+

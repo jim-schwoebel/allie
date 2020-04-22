@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6642857142857143 (+/- 0.17401325307256904) 
+
+MODEL FILE NAME: 
+
+ Icecreamtruck,icecreamvan_Icecreamtruck,icecreamvan_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 19:46:41.605019
+
+EXECUTION TIME: 
+
+ 2.017583131790161
+
+GROUPS: 
+
+['Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls']
+
+test labels
+
+['Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan', 'Icecreamtruck,icecreamvan_controls', 'Icecreamtruck,icecreamvan_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.45595238095238094 (+/- 0.25977488946639726)
+gradient boosting: 0.4726190476190476 (+/- 0.24279877916812695)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+hard voting: 0.5142857142857142 (+/- 0.10921280896361633)
+adaboost: 0.5178571428571429 (+/- 0.15198982541432982)
+knn: 0.5428571428571429 (+/- 0.08571428571428573)
+logistic regression: 0.5726190476190476 (+/- 0.13010548659346904)
+gaussian-nb: 0.6511904761904763 (+/- 0.17241778085934928)
+random forest: 0.6642857142857143 (+/- 0.17401325307256904)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.8126984126984127 (+/- 0.08118547207964709) 
+
+MODEL FILE NAME: 
+
+ Psychedelicrock_Psychedelicrock_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:08:18.701884
+
+EXECUTION TIME: 
+
+ 2.023563861846924
+
+GROUPS: 
+
+['Psychedelicrock', 'Psychedelicrock_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls']
+
+test labels
+
+['Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock', 'Psychedelicrock', 'Psychedelicrock_controls', 'Psychedelicrock_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+random forest: 0.7396825396825396 (+/- 0.11861296312552001)
+decision-tree: 0.7523809523809524 (+/- 0.08728715609439694)
+gradient boosting: 0.7523809523809524 (+/- 0.16995249288030698)
+logistic regression: 0.7682539682539683 (+/- 0.052740468970908394)
+adaboost: 0.8031746031746032 (+/- 0.07485603887334345)
+hard voting: 0.8095238095238095 (+/- 0.14582455971880445)
+knn: 0.8095238095238095 (+/- 0.15649215928719032)
+gaussian-nb: 0.8126984126984127 (+/- 0.08118547207964709)
+
+
+(C) 2018, NeuroLex Laboratories

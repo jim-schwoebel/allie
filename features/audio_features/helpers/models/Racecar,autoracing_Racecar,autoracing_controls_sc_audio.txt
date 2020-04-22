@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+decision-tree: 0.759126984126984 (+/- 0.16867460149416816) 
+
+MODEL FILE NAME: 
+
+ Racecar,autoracing_Racecar,autoracing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:16:32.668264
+
+EXECUTION TIME: 
+
+ 2.0524489879608154
+
+GROUPS: 
+
+['Racecar,autoracing', 'Racecar,autoracing_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls']
+
+test labels
+
+['Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing', 'Racecar,autoracing_controls', 'Racecar,autoracing_controls', 'Racecar,autoracing']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.5575396825396826 (+/- 0.21823232215890992)
+knn: 0.5797619047619047 (+/- 0.15818557373212466)
+gaussian-nb: 0.5888888888888889 (+/- 0.16126644322129344)
+random forest: 0.5896825396825396 (+/- 0.12360585608845578)
+adaboost: 0.6424603174603174 (+/- 0.15161846268266102)
+gradient boosting: 0.7376984126984126 (+/- 0.09879597663235198)
+hard voting: 0.7404761904761905 (+/- 0.14293648590289176)
+decision-tree: 0.759126984126984 (+/- 0.16867460149416816)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7718253968253969 (+/- 0.17715487528214058) 
+
+MODEL FILE NAME: 
+
+ Strum_Strum_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:08:51.445163
+
+EXECUTION TIME: 
+
+ 2.491670846939087
+
+GROUPS: 
+
+['Strum', 'Strum_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls']
+
+test labels
+
+['Strum', 'Strum', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum', 'Strum_controls', 'Strum_controls', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum_controls', 'Strum', 'Strum', 'Strum_controls', 'Strum']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+knn: 0.5444444444444444 (+/- 0.07898320828333161)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+random forest: 0.5785714285714285 (+/- 0.1395652465690747)
+decision-tree: 0.5849206349206348 (+/- 0.22979719826525702)
+gradient boosting: 0.682936507936508 (+/- 0.20537161593044348)
+gaussian-nb: 0.746031746031746 (+/- 0.17474741516854456)
+adaboost: 0.7531746031746033 (+/- 0.11815538662823127)
+logistic regression: 0.7654761904761905 (+/- 0.11632061841557371)
+hard voting: 0.7718253968253969 (+/- 0.17715487528214058)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8198412698412698 (+/- 0.1473628088429477) 
+
+MODEL FILE NAME: 
+
+ Popmusic_Popmusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:01:18.198036
+
+EXECUTION TIME: 
+
+ 2.3173611164093018
+
+GROUPS: 
+
+['Popmusic', 'Popmusic_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls']
+
+test labels
+
+['Popmusic', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic_controls', 'Popmusic', 'Popmusic', 'Popmusic_controls', 'Popmusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+decision-tree: 0.6718253968253969 (+/- 0.15110452499986432)
+knn: 0.6801587301587302 (+/- 0.1128994406481478)
+logistic regression: 0.6924603174603174 (+/- 0.14925066886521662)
+gradient boosting: 0.7253968253968253 (+/- 0.17629769367510884)
+random forest: 0.7809523809523808 (+/- 0.18220120447341898)
+gaussian-nb: 0.7940476190476191 (+/- 0.12483549265636504)
+hard voting: 0.7976190476190477 (+/- 0.1436047457547117)
+adaboost: 0.8198412698412698 (+/- 0.1473628088429477)
+
+
+(C) 2018, NeuroLex Laboratories

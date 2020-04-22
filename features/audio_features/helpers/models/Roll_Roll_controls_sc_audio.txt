@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.8761904761904761 (+/- 0.11551368507085874) 
+
+MODEL FILE NAME: 
+
+ Roll_Roll_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:40:59.418926
+
+EXECUTION TIME: 
+
+ 2.021946907043457
+
+GROUPS: 
+
+['Roll', 'Roll_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls']
+
+test labels
+
+['Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll', 'Roll', 'Roll_controls', 'Roll_controls', 'Roll_controls', 'Roll', 'Roll_controls', 'Roll', 'Roll', 'Roll_controls', 'Roll_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+logistic regression: 0.6317460317460316 (+/- 0.12188161155842837)
+adaboost: 0.6825396825396824 (+/- 0.23350064188486722)
+random forest: 0.6888888888888889 (+/- 0.06853026395213621)
+hard voting: 0.7619047619047619 (+/- 0.17066260388210303)
+decision-tree: 0.7904761904761906 (+/- 0.14665154872953773)
+knn: 0.8031746031746032 (+/- 0.11733154674651639)
+gaussian-nb: 0.819047619047619 (+/- 0.11070219539150916)
+gradient boosting: 0.8761904761904761 (+/- 0.11551368507085874)
+
+
+(C) 2018, NeuroLex Laboratories

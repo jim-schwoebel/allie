@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.7523809523809524 (+/- 0.1547435886597326) 
+
+MODEL FILE NAME: 
+
+ Thememusic_Thememusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:22:19.578574
+
+EXECUTION TIME: 
+
+ 2.1929140090942383
+
+GROUPS: 
+
+['Thememusic', 'Thememusic_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls']
+
+test labels
+
+['Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic_controls', 'Thememusic', 'Thememusic_controls', 'Thememusic', 'Thememusic', 'Thememusic_controls', 'Thememusic_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+decision-tree: 0.5206349206349206 (+/- 0.06220926330877912)
+gradient boosting: 0.5428571428571428 (+/- 0.10306465448093924)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gaussian-nb: 0.6825396825396824 (+/- 0.09363734097620717)
+random forest: 0.6952380952380952 (+/- 0.0233284737407922)
+logistic regression: 0.7174603174603174 (+/- 0.09702036057102302)
+hard voting: 0.7238095238095237 (+/- 0.19378085666072195)
+knn: 0.7238095238095239 (+/- 0.09917777366230669)
+adaboost: 0.7523809523809524 (+/- 0.1547435886597326)
+
+
+(C) 2018, NeuroLex Laboratories

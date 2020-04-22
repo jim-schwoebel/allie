@@ -1,0 +1,8 @@
+train labels
+
+['Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom', 'Boom', 'Boom', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls']
+
+test labels
+
+['Boom', 'Boom', 'Boom', 'Boom', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom', 'Boom', 'Boom', 'Boom_controls', 'Boom_controls', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom_controls', 'Boom', 'Boom', 'Boom_controls', 'Boom']
+

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6214285714285714 (+/- 0.13044273119821195) 
+
+MODEL FILE NAME: 
+
+ Sheep_Sheep_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:00:49.591620
+
+EXECUTION TIME: 
+
+ 2.0121347904205322
+
+GROUPS: 
+
+['Sheep', 'Sheep_controls']
+(55 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sheep', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls']
+
+test labels
+
+['Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep', 'Sheep', 'Sheep_controls', 'Sheep_controls', 'Sheep']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.4321428571428571 (+/- 0.08777289805317506)
+gaussian-nb: 0.4845238095238096 (+/- 0.13275811294714904)
+sk: 0.48571428571428577 (+/- 0.02857142857142858)
+knn: 0.5095238095238096 (+/- 0.1827526363068328)
+logistic regression: 0.544047619047619 (+/- 0.11836710258790949)
+decision-tree: 0.575 (+/- 0.2318404623873926)
+adaboost: 0.5916666666666667 (+/- 0.2377557102947851)
+hard voting: 0.5964285714285714 (+/- 0.1599585405468478)
+gradient boosting: 0.6214285714285714 (+/- 0.13044273119821195)
+
+
+(C) 2018, NeuroLex Laboratories

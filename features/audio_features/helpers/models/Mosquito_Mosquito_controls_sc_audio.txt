@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.6833333333333333 (+/- 0.12527746981977425) 
+
+MODEL FILE NAME: 
+
+ Mosquito_Mosquito_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:35:25.116355
+
+EXECUTION TIME: 
+
+ 2.228184223175049
+
+GROUPS: 
+
+['Mosquito', 'Mosquito_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mosquito', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls']
+
+test labels
+
+['Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito', 'Mosquito', 'Mosquito_controls', 'Mosquito_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.45 (+/- 0.1)
+random forest: 0.4666666666666667 (+/- 0.10341394704992381)
+sk: 0.5 (+/- 0.07905694150420949)
+decision-tree: 0.55 (+/- 0.1274754878398196)
+hard voting: 0.575 (+/- 0.1695582495781317)
+logistic regression: 0.625 (+/- 0.13693063937629152)
+gaussian-nb: 0.6333333333333333 (+/- 0.08079466429027216)
+knn: 0.6416666666666667 (+/- 0.1740051084818425)
+adaboost: 0.6833333333333333 (+/- 0.12527746981977425)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.6087301587301588 (+/- 0.2253968253968254) 
+
+MODEL FILE NAME: 
+
+ Scrape_Scrape_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:55:50.510875
+
+EXECUTION TIME: 
+
+ 2.046515941619873
+
+GROUPS: 
+
+['Scrape', 'Scrape_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls']
+
+test labels
+
+['Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape', 'Scrape', 'Scrape_controls', 'Scrape', 'Scrape_controls', 'Scrape_controls', 'Scrape']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.48531746031746026 (+/- 0.11717844772713536)
+decision-tree: 0.4924603174603174 (+/- 0.07567201242433494)
+random forest: 0.513888888888889 (+/- 0.13449981056707846)
+gaussian-nb: 0.5388888888888889 (+/- 0.11681504439983555)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+knn: 0.546031746031746 (+/- 0.22367157743616883)
+hard voting: 0.5515873015873016 (+/- 0.17095300732372612)
+logistic regression: 0.5646825396825397 (+/- 0.09880553953846427)
+gradient boosting: 0.6087301587301588 (+/- 0.2253968253968254)
+
+
+(C) 2018, NeuroLex Laboratories

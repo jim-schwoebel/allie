@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gradient boosting: 0.7055555555555555 (+/- 0.19421593310593657) 
+
+MODEL FILE NAME: 
+
+ Cutlery,silverware_Cutlery,silverware_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 17:41:41.792183
+
+EXECUTION TIME: 
+
+ 2.110917806625366
+
+GROUPS: 
+
+['Cutlery,silverware', 'Cutlery,silverware_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls']
+
+test labels
+
+['Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware', 'Cutlery,silverware_controls', 'Cutlery,silverware_controls', 'Cutlery,silverware']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+logistic regression: 0.4825396825396825 (+/- 0.10255000193786093)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+hard voting: 0.6019841269841268 (+/- 0.1876090427864504)
+knn: 0.6305555555555555 (+/- 0.17994358176325118)
+random forest: 0.6535714285714285 (+/- 0.17771221863749612)
+gaussian-nb: 0.6777777777777778 (+/- 0.16025851501612196)
+decision-tree: 0.684126984126984 (+/- 0.09257520622857963)
+adaboost: 0.684126984126984 (+/- 0.12173811567567511)
+gradient boosting: 0.7055555555555555 (+/- 0.19421593310593657)
+
+
+(C) 2018, NeuroLex Laboratories

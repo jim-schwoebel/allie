@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7666666666666667 (+/- 0.14092945437739804) 
+
+MODEL FILE NAME: 
+
+ Sailboat,sailingship_Sailboat,sailingship_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:48:55.360079
+
+EXECUTION TIME: 
+
+ 1.9722518920898438
+
+GROUPS: 
+
+['Sailboat,sailingship', 'Sailboat,sailingship_controls']
+(57 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls']
+
+test labels
+
+['Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship', 'Sailboat,sailingship', 'Sailboat,sailingship_controls', 'Sailboat,sailingship_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5916666666666667 (+/- 0.1301708279317776)
+knn: 0.6416666666666667 (+/- 0.1740051084818425)
+decision-tree: 0.6666666666666667 (+/- 0.2006932429798716)
+random forest: 0.6916666666666667 (+/- 0.14092945437739804)
+gradient boosting: 0.7166666666666667 (+/- 0.11303883305208781)
+adaboost: 0.7416666666666667 (+/- 0.10341394704992381)
+hard voting: 0.7416666666666667 (+/- 0.06666666666666668)
+logistic regression: 0.75 (+/- 0.15811388300841897)
+gaussian-nb: 0.7666666666666667 (+/- 0.14092945437739804)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7601731601731603 (+/- 0.11686227167014779) 
+
+MODEL FILE NAME: 
+
+ Wind_Wind_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:34:15.460949
+
+EXECUTION TIME: 
+
+ 3.027045249938965
+
+GROUPS: 
+
+['Wind', 'Wind_controls']
+(165 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind']
+
+test labels
+
+['Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind', 'Wind', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind_controls', 'Wind', 'Wind_controls', 'Wind', 'Wind_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5411255411255411 (+/- 0.00865800865800863)
+decision-tree: 0.6502164502164501 (+/- 0.06943431458510453)
+logistic regression: 0.6783549783549783 (+/- 0.06704508331221534)
+gradient boosting: 0.6787878787878788 (+/- 0.09111088714165402)
+adaboost: 0.6874458874458874 (+/- 0.06991844566659934)
+hard voting: 0.696969696969697 (+/- 0.0691015409150993)
+random forest: 0.696969696969697 (+/- 0.06910154091509926)
+knn: 0.7432900432900432 (+/- 0.053627261123643064)
+gaussian-nb: 0.7601731601731603 (+/- 0.11686227167014779)
+
+
+(C) 2018, NeuroLex Laboratories

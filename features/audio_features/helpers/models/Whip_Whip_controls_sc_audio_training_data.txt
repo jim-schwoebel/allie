@@ -1,0 +1,8 @@
+train labels
+
+['Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls']
+
+test labels
+
+['Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip', 'Whip', 'Whip', 'Whip_controls', 'Whip', 'Whip_controls', 'Whip_controls', 'Whip']
+

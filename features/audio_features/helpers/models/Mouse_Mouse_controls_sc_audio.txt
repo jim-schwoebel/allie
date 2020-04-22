@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+knn: 0.6749999999999999 (+/- 0.22257766358404119) 
+
+MODEL FILE NAME: 
+
+ Mouse_Mouse_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 20:38:51.127935
+
+EXECUTION TIME: 
+
+ 2.0486631393432617
+
+GROUPS: 
+
+['Mouse', 'Mouse_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls']
+
+test labels
+
+['Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse', 'Mouse', 'Mouse_controls', 'Mouse', 'Mouse_controls', 'Mouse_controls', 'Mouse']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.42976190476190473 (+/- 0.17546504455135908)
+gaussian-nb: 0.4769841269841269 (+/- 0.17707752535938143)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.6083333333333332 (+/- 0.1071693089040657)
+hard voting: 0.6119047619047618 (+/- 0.03638263521413364)
+decision-tree: 0.6126984126984126 (+/- 0.13851082330757916)
+random forest: 0.6412698412698413 (+/- 0.14174723154898464)
+adaboost: 0.6619047619047619 (+/- 0.07989505588363105)
+knn: 0.6749999999999999 (+/- 0.22257766358404119)
+
+
+(C) 2018, NeuroLex Laboratories

@@ -1,0 +1,8 @@
+train labels
+
+['Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls']
+
+test labels
+
+['Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls', 'Fire', 'Fire', 'Fire_controls', 'Fire_controls', 'Fire', 'Fire_controls']
+

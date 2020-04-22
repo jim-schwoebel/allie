@@ -1,0 +1,8 @@
+train labels
+
+['Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls']
+
+test labels
+
+['Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls', 'Steam', 'Steam', 'Steam_controls', 'Steam_controls', 'Steam', 'Steam_controls']
+

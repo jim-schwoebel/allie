@@ -1,0 +1,8 @@
+train labels
+
+['Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls']
+
+test labels
+
+['Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour', 'Pour', 'Pour', 'Pour_controls', 'Pour', 'Pour_controls', 'Pour_controls', 'Pour']
+

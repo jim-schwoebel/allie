@@ -1,0 +1,8 @@
+train labels
+
+['Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls']
+
+test labels
+
+['Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop', 'Chop', 'Chop_controls', 'Chop_controls', 'Chop_controls', 'Chop', 'Chop_controls', 'Chop', 'Chop', 'Chop_controls', 'Chop_controls']
+

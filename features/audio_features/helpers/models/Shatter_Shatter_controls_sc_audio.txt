@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.834920634920635 (+/- 0.1681640969923686) 
+
+MODEL FILE NAME: 
+
+ Shatter_Shatter_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 01:00:02.061031
+
+EXECUTION TIME: 
+
+ 1.9616608619689941
+
+GROUPS: 
+
+['Shatter', 'Shatter_controls']
+(56 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls']
+
+test labels
+
+['Shatter', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter_controls', 'Shatter_controls', 'Shatter_controls', 'Shatter', 'Shatter', 'Shatter', 'Shatter', 'Shatter', 'Shatter_controls', 'Shatter_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5682539682539682 (+/- 0.006349206349206327)
+knn: 0.5746031746031746 (+/- 0.15369801189727242)
+logistic regression: 0.5904761904761905 (+/- 0.16106223357416918)
+adaboost: 0.6698412698412699 (+/- 0.08363136426869519)
+hard voting: 0.692063492063492 (+/- 0.11733154674651637)
+gradient boosting: 0.7206349206349206 (+/- 0.13528429049309534)
+decision-tree: 0.7269841269841271 (+/- 0.09385235237520306)
+random forest: 0.7269841269841271 (+/- 0.15853956811661934)
+gaussian-nb: 0.834920634920635 (+/- 0.1681640969923686)
+
+
+(C) 2018, NeuroLex Laboratories

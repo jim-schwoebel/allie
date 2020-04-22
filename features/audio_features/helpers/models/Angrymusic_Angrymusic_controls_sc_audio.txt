@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8992063492063492 (+/- 0.09429426501764536) 
+
+MODEL FILE NAME: 
+
+ Angrymusic_Angrymusic_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 15:16:21.202451
+
+EXECUTION TIME: 
+
+ 2.1017870903015137
+
+GROUPS: 
+
+['Angrymusic', 'Angrymusic_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls']
+
+test labels
+
+['Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic', 'Angrymusic', 'Angrymusic_controls', 'Angrymusic']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+gaussian-nb: 0.8261904761904763 (+/- 0.10470176243835225)
+knn: 0.8484126984126984 (+/- 0.10385611303463865)
+decision-tree: 0.8547619047619047 (+/- 0.13307798678554403)
+gradient boosting: 0.8547619047619047 (+/- 0.13307798678554403)
+random forest: 0.8706349206349205 (+/- 0.07998173134821666)
+logistic regression: 0.8769841269841269 (+/- 0.10642025582134433)
+hard voting: 0.8769841269841269 (+/- 0.10642025582134433)
+adaboost: 0.8992063492063492 (+/- 0.09429426501764536)
+
+
+(C) 2018, NeuroLex Laboratories

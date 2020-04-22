@@ -1,0 +1,8 @@
+train labels
+
+['Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls']
+
+test labels
+
+['Bleat', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat_controls', 'Bleat_controls', 'Bleat_controls', 'Bleat', 'Bleat', 'Bleat', 'Bleat', 'Bleat', 'Bleat_controls', 'Bleat_controls']
+

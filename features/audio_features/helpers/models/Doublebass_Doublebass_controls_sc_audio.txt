@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7690476190476191 (+/- 0.11100902339622769) 
+
+MODEL FILE NAME: 
+
+ Doublebass_Doublebass_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 18:02:39.831985
+
+EXECUTION TIME: 
+
+ 2.578733205795288
+
+GROUPS: 
+
+['Doublebass', 'Doublebass_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls']
+
+test labels
+
+['Doublebass', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass_controls', 'Doublebass', 'Doublebass', 'Doublebass_controls', 'Doublebass']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5257936507936508 (+/- 0.07573025687596983)
+decision-tree: 0.6424603174603175 (+/- 0.11841365589637999)
+logistic regression: 0.6746031746031746 (+/- 0.16403823089223887)
+knn: 0.696031746031746 (+/- 0.07254853893350122)
+random forest: 0.6996031746031746 (+/- 0.10393189719340355)
+gaussian-nb: 0.7337301587301588 (+/- 0.11984126984126983)
+gradient boosting: 0.7404761904761905 (+/- 0.10273410238275812)
+adaboost: 0.744047619047619 (+/- 0.20066185523445287)
+hard voting: 0.7690476190476191 (+/- 0.11100902339622769)
+
+
+(C) 2018, NeuroLex Laboratories

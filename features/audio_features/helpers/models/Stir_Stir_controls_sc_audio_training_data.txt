@@ -1,0 +1,8 @@
+train labels
+
+['Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls']
+
+test labels
+
+['Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir', 'Stir', 'Stir', 'Stir_controls', 'Stir', 'Stir_controls', 'Stir_controls', 'Stir']
+

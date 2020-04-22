@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+adaboost: 0.8107142857142857 (+/- 0.11157499537009506) 
+
+MODEL FILE NAME: 
+
+ Reggae_Reggae_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:31:16.677486
+
+EXECUTION TIME: 
+
+ 2.1771528720855713
+
+GROUPS: 
+
+['Reggae', 'Reggae_controls']
+(59 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls']
+
+test labels
+
+['Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae', 'Reggae', 'Reggae_controls', 'Reggae', 'Reggae_controls', 'Reggae_controls', 'Reggae']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5396825396825398 (+/- 0.032914986275123355)
+logistic regression: 0.6591269841269841 (+/- 0.12625285470331238)
+decision-tree: 0.7412698412698413 (+/- 0.08269407111657526)
+knn: 0.759920634920635 (+/- 0.11626374652209516)
+hard voting: 0.7626984126984127 (+/- 0.13829578577751242)
+gaussian-nb: 0.7726190476190476 (+/- 0.08095238095238094)
+gradient boosting: 0.7912698412698413 (+/- 0.10705757923122063)
+random forest: 0.8019841269841269 (+/- 0.12398745862666684)
+adaboost: 0.8107142857142857 (+/- 0.11157499537009506)
+
+
+(C) 2018, NeuroLex Laboratories

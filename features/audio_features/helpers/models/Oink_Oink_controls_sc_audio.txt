@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7416666666666667 (+/- 0.1301708279317776) 
+
+MODEL FILE NAME: 
+
+ Oink_Oink_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-04 22:19:30.491072
+
+EXECUTION TIME: 
+
+ 2.0146260261535645
+
+GROUPS: 
+
+['Oink', 'Oink_controls']
+(54 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls']
+
+test labels
+
+['Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink', 'Oink', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls', 'Oink', 'Oink', 'Oink_controls', 'Oink_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.575 (+/- 0.09999999999999999)
+adaboost: 0.6 (+/- 0.25630927498716166)
+knn: 0.6083333333333334 (+/- 0.17795130420052185)
+gaussian-nb: 0.6833333333333333 (+/- 0.28698625596204275)
+decision-tree: 0.7 (+/- 0.18708286933869706)
+random forest: 0.7 (+/- 0.1695582495781317)
+gradient boosting: 0.7083333333333333 (+/- 0.12360330811826105)
+hard voting: 0.7083333333333334 (+/- 0.19364916731037088)
+logistic regression: 0.7416666666666667 (+/- 0.1301708279317776)
+
+
+(C) 2018, NeuroLex Laboratories

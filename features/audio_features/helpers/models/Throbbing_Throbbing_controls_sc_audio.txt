@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7904761904761906 (+/- 0.11551368507085874) 
+
+MODEL FILE NAME: 
+
+ Throbbing_Throbbing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 03:25:06.996887
+
+EXECUTION TIME: 
+
+ 1.9934871196746826
+
+GROUPS: 
+
+['Throbbing', 'Throbbing_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls']
+
+test labels
+
+['Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing_controls', 'Throbbing', 'Throbbing_controls', 'Throbbing', 'Throbbing', 'Throbbing_controls', 'Throbbing_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+knn: 0.6476190476190476 (+/- 0.2080273641321381)
+decision-tree: 0.6888888888888889 (+/- 0.21731544241428355)
+random forest: 0.6952380952380952 (+/- 0.1731250565642664)
+logistic regression: 0.711111111111111 (+/- 0.1641610599853701)
+adaboost: 0.746031746031746 (+/- 0.11178931340735879)
+gradient boosting: 0.7523809523809525 (+/- 0.16995249288030698)
+hard voting: 0.7809523809523811 (+/- 0.1476787726934985)
+gaussian-nb: 0.7904761904761906 (+/- 0.11551368507085874)
+
+
+(C) 2018, NeuroLex Laboratories

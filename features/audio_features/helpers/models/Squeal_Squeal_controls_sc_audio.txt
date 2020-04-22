@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+sk: 0.5507936507936508 (+/- 0.026370234485454197) 
+
+MODEL FILE NAME: 
+
+ Squeal_Squeal_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 02:58:54.636763
+
+EXECUTION TIME: 
+
+ 2.0227038860321045
+
+GROUPS: 
+
+['Squeal', 'Squeal_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls']
+
+test labels
+
+['Squeal', 'Squeal', 'Squeal', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal_controls', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal_controls', 'Squeal', 'Squeal', 'Squeal_controls', 'Squeal']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+gradient boosting: 0.4111111111111111 (+/- 0.1581258337195209)
+hard voting: 0.4583333333333333 (+/- 0.13956750313546806)
+logistic regression: 0.46785714285714286 (+/- 0.17279183105930213)
+gaussian-nb: 0.4833333333333333 (+/- 0.20420744421325301)
+adaboost: 0.490079365079365 (+/- 0.13929645416017372)
+decision-tree: 0.4932539682539683 (+/- 0.24591523098711002)
+random forest: 0.5 (+/- 0.14000683854730125)
+knn: 0.5063492063492063 (+/- 0.05687769164180608)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+
+
+(C) 2018, NeuroLex Laboratories

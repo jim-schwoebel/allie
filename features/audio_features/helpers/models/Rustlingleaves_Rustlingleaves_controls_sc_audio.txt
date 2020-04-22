@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+logistic regression: 0.7531746031746033 (+/- 0.06390737187046791) 
+
+MODEL FILE NAME: 
+
+ Rustlingleaves_Rustlingleaves_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:47:14.517473
+
+EXECUTION TIME: 
+
+ 2.017583131790161
+
+GROUPS: 
+
+['Rustlingleaves', 'Rustlingleaves_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls']
+
+test labels
+
+['Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves', 'Rustlingleaves', 'Rustlingleaves_controls', 'Rustlingleaves']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+random forest: 0.5472222222222222 (+/- 0.09543960163945842)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.5821428571428571 (+/- 0.15537931383083364)
+gaussian-nb: 0.6115079365079366 (+/- 0.25039776872008057)
+gradient boosting: 0.6392857142857142 (+/- 0.1896825396825397)
+adaboost: 0.6515873015873016 (+/- 0.07679981208509806)
+decision-tree: 0.6738095238095237 (+/- 0.06004533434723092)
+hard voting: 0.6865079365079365 (+/- 0.17311777980337953)
+logistic regression: 0.7531746031746033 (+/- 0.06390737187046791)
+
+
+(C) 2018, NeuroLex Laboratories

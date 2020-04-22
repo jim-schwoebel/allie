@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+gaussian-nb: 0.7238095238095238 (+/- 0.06998542122237651) 
+
+MODEL FILE NAME: 
+
+ Reversingbeeps_Reversingbeeps_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:32:58.236035
+
+EXECUTION TIME: 
+
+ 1.996814250946045
+
+GROUPS: 
+
+['Reversingbeeps', 'Reversingbeeps_controls']
+(58 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls']
+
+test labels
+
+['Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps', 'Reversingbeeps', 'Reversingbeeps_controls', 'Reversingbeeps_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5650793650793651 (+/- 0.007776157913597362)
+gradient boosting: 0.6 (+/- 0.14317425122259914)
+adaboost: 0.6222222222222221 (+/- 0.18330412740637525)
+decision-tree: 0.6380952380952382 (+/- 0.09057360392182291)
+logistic regression: 0.6507936507936508 (+/- 0.11920624352710213)
+hard voting: 0.6507936507936508 (+/- 0.18429111458666658)
+knn: 0.6507936507936508 (+/- 0.11920624352710213)
+random forest: 0.6507936507936508 (+/- 0.13837774423938645)
+gaussian-nb: 0.7238095238095238 (+/- 0.06998542122237651)
+
+
+(C) 2018, NeuroLex Laboratories

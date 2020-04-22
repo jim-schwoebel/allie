@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+random forest: 0.6738095238095237 (+/- 0.06004533434723093) 
+
+MODEL FILE NAME: 
+
+ Sawing_Sawing_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 00:52:26.536359
+
+EXECUTION TIME: 
+
+ 2.0490002632141113
+
+GROUPS: 
+
+['Sawing', 'Sawing_controls']
+(60 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls']
+
+test labels
+
+['Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing_controls', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing_controls', 'Sawing', 'Sawing', 'Sawing_controls', 'Sawing']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+adaboost: 0.4492063492063492 (+/- 0.07505771693674217)
+logistic regression: 0.4999999999999999 (+/- 0.05723097262641254)
+hard voting: 0.5027777777777778 (+/- 0.10644688714716244)
+gradient boosting: 0.5472222222222223 (+/- 0.09543960163945842)
+sk: 0.5507936507936508 (+/- 0.026370234485454197)
+knn: 0.6202380952380951 (+/- 0.09991492980170139)
+gaussian-nb: 0.6202380952380953 (+/- 0.08220705259340427)
+decision-tree: 0.6424603174603175 (+/- 0.15459087008171868)
+random forest: 0.6738095238095237 (+/- 0.06004533434723093)
+
+
+(C) 2018, NeuroLex Laboratories

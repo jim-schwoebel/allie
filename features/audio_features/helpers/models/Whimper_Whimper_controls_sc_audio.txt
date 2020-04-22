@@ -1,0 +1,52 @@
+SUMMARY OF MODEL SELECTION 
+
+WINNING MODEL: 
+
+hard voting: 0.7630952380952382 (+/- 0.1778716447201882) 
+
+MODEL FILE NAME: 
+
+ Whimper_Whimper_controls_sc_audio.pickle
+
+DATE CREATED: 
+
+ 2018-09-05 04:23:26.033349
+
+EXECUTION TIME: 
+
+ 2.432474136352539
+
+GROUPS: 
+
+['Whimper', 'Whimper_controls']
+(53 in each class, 33% used for testing)
+
+TRAINING SUMMARY:
+
+train labels
+
+['Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls']
+
+test labels
+
+['Whimper_controls', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper_controls', 'Whimper', 'Whimper', 'Whimper', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper', 'Whimper_controls', 'Whimper_controls']
+
+FEATURES: 
+
+ audio features (mfcc coefficients).
+
+MODELS, ACCURACIES, AND STANDARD DEVIATIONS: 
+
+svm: 0 (+/- 0)
+sk: 0.5142857142857142 (+/- 0.02857142857142856)
+logistic regression: 0.5892857142857142 (+/- 0.09313146293146642)
+decision-tree: 0.6345238095238095 (+/- 0.0729597783144979)
+gaussian-nb: 0.6464285714285715 (+/- 0.23915241489690298)
+gradient boosting: 0.6678571428571429 (+/- 0.10913492034634134)
+knn: 0.6845238095238095 (+/- 0.04325214791567846)
+random forest: 0.7380952380952381 (+/- 0.20259092748745378)
+adaboost: 0.7583333333333333 (+/- 0.2048034287907418)
+hard voting: 0.7630952380952382 (+/- 0.1778716447201882)
+
+
+(C) 2018, NeuroLex Laboratories

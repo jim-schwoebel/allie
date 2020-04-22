@@ -77,6 +77,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ### model training 
 * [MLBlocks](https://github.com/HDI-Project/MLBlocks) - most recent framework @ MIT
+* [MLBox](https://github.com/AxeldeRomblay/MLBox)
 * [Auto-Pytorch](https://github.com/automl/Auto-PyTorch)
 * [SMAC3](https://github.com/automl/SMAC3)
 * [Keras-tuner](https://github.com/keras-team/keras-tuner)

@@ -428,9 +428,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		# import train_adanet as ta 
 		# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_featurenames)
 	elif default_training_script=='alphapy':
-		print('Alphapy training is coming soon! Please use a different model setting for now.') 
-		# import train_alphapy as talpy
-		# talpy.train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+		import train_alphapy as talpy
+		modelname, modeldir=talpy.train_alphapy(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+
 	elif default_training_script=='atm':
 		import train_atm as tatm
 		modelname, modeldir=tatm.train_atm(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

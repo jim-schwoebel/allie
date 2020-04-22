@@ -58,45 +58,47 @@ def transcribe(file, default_audio_transcriber):
 def audio_featurize(feature_set, audiofile, transcript):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	if feature_set == 'librosa_features':
-		features, labels = lf.librosa_featurize(audiofile, False)
-	elif feature_set == 'standard_features':
-		features, labels = sf.standard_featurize(audiofile)
-	elif feature_set == 'audioset_features':
+	if feature_set == 'audioset_features':
 		features, labels = af.audioset_featurize(audiofile, basedir, foldername)
+	elif feature_set == 'audiotext_features':
+		features, labels = atf.audiotext_featurize(audiofile, transcript)
 	elif feature_set == 'sox_features':
 		features, labels = soxf.sox_featurize(audiofile)
 	elif feature_set == 'sa_features':
 		features, labels = saf.sa_featurize(audiofile)
 	elif feature_set == 'pyaudio_features':
 		features, labels = pf.pyaudio_featurize(audiofile, basedir)
-	elif feature_set == 'spectrogram_features':
-		features, labels= specf.spectrogram_featurize(audiofile)
+	elif feature_set == 'librosa_features':
+		features, labels = lf.librosa_featurize(audiofile, False)
 	elif feature_set == 'meta_features':
 		features, labels = mf.meta_featurize(audiofile, cur_dir, help_dir)
-	elif feature_set == 'opensmile_features':
-		features, labels = osm.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
-	elif feature_set == 'praat_features':
-		features, labels = prf.praat_featurize(audiofile)
-	elif feature_set == 'pspeech_features':
-		features, labels = psf.pspeech_featurize(audiofile)
-	elif feature_set == 'specimage_features':
-		features, labels = sif.specimage_featurize(audiofile,cur_dir, haar_dir)
-	elif feature_set == 'specimage2_features':
-		features, labels = sif2.specimage2_featurize(audiofile, cur_dir, haar_dir)
+	elif feature_set == 'mixed_features':
+		features, labels = mixf.mixed_featurize(audiofile, transcript, help_dir)
 	elif feature_set == 'myprosody_features':
 		print('Myprosody features are coming soon!! Currently debugging this feature set.')
 		# features, labels = mpf.myprosody_featurize(audiofile, cur_dir, help_dir)
 	elif feature_set == 'nltk_features':
 		features, labels = nf.nltk_featurize(transcript)
-	elif feature_set == 'mixed_features':
-		features, labels = mixf.mixed_featurize(audiofile, transcript, help_dir)
-	elif feature_set == 'audiotext_features':
-		features, labels = atf.audiotext_featurize(audiofile, transcript)
+	elif feature_set == 'opensmile_features':
+		features, labels = osm.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
+	elif feature_set == 'praat_features':
+		features, labels = prf.praat_featurize(audiofile)
 	elif feature_set == 'prosody_features':
 		features, labels = prosf.prosody_featurize(audiofile, 20)
+	elif feature_set == 'pspeech_features':
+		features, labels = psf.pspeech_featurize(audiofile)
+	elif feature_set == 'pyaudiolex_features':
+		features, labels = pyaudiolex.pyaudiolex_featurize(audiofile)
 	elif feature_set == 'pyworld_features':
 		features, labels = pywf.pyworld_featurize(audiofile)
+	elif feature_set == 'specimage_features':
+		features, labels = sif.specimage_featurize(audiofile,cur_dir, haar_dir)
+	elif feature_set == 'specimage2_features':
+		features, labels = sif2.specimage2_featurize(audiofile, cur_dir, haar_dir)
+	elif feature_set == 'spectrogram_features':
+		features, labels= specf.spectrogram_featurize(audiofile)
+	elif feature_set == 'standard_features':
+		features, labels = sf.standard_featurize(audiofile)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))
@@ -219,6 +221,8 @@ if 'audiotext_features' in feature_sets:
 	import audiotext_features as atf
 if 'pyworld_features' in feature_sets:
 	import pyworld_features as pywf
+if 'pyaudiolex_features' in feature_sets:
+	import pyaudiolex_features as pyaudiolex
 
 ################################################
 ##	   		Get featurization folder     	  ##
@@ -250,90 +254,90 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 			filename=listdir[i][0:-4]+'.wav'
 			os.remove(listdir[i])
 
-		try:
-			os.chdir(foldername)
-			sampletype='audio'
+		# try:
+		os.chdir(foldername)
+		sampletype='audio'
 
-			if listdir[i][0:-4]+'.json' not in listdir:
+		if listdir[i][0:-4]+'.json' not in listdir:
 
-				# make new .JSON if it is not there with base array schema.
-				basearray=make_features(sampletype)
+			# make new .JSON if it is not there with base array schema.
+			basearray=make_features(sampletype)
 
-				# get the audio transcript  
-				if audio_transcribe==True:
-					transcript = transcribe(filename, default_audio_transcriber)
-					transcript_list=basearray['transcripts']
-					transcript_list['audio'][default_audio_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
-				else:
-					transcript=''
+			# get the audio transcript  
+			if audio_transcribe==True:
+				transcript = transcribe(filename, default_audio_transcriber)
+				transcript_list=basearray['transcripts']
+				transcript_list['audio'][default_audio_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
+			else:
+				transcript=''
 
-				# featurize the audio file 
-				for j in range(len(feature_sets)):
-					feature_set=feature_sets[j]
+			# featurize the audio file 
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				features, labels = audio_featurize(feature_set, filename, transcript)
+				try:
+					data={'features':features.tolist(),
+						  'labels': labels}
+				except:
+					data={'features':features,
+						  'labels': labels}
+				print(features)
+				audio_features=basearray['features']['audio']
+				audio_features[feature_set]=data
+				basearray['features']['audio']=audio_features
+			
+			basearray['labels']=[labelname]
+
+			# write to .JSON 
+			jsonfile=open(listdir[i][0:-4]+'.json','w')
+			json.dump(basearray, jsonfile)
+			jsonfile.close()
+
+		elif listdir[i][0:-4]+'.json' in listdir:
+			# load the .JSON file if it is there 
+			basearray=json.load(open(listdir[i][0:-4]+'.json'))
+			transcript_list=basearray['transcripts']
+
+			# only transcribe if you need to (checks within schema)
+			if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
+				transcript = transcribe(filename, default_audio_transcriber)
+				transcript_list['audio'][default_audio_transcriber]=transcript 
+				basearray['transcripts']=transcript_list
+			elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
+				transcript = transcript_list['audio'][default_audio_transcriber]
+			else:
+				transcript=''
+				
+			# only re-featurize if necessary (checks if relevant feature embedding exists)
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				if feature_set not in list(basearray['features']['audio']):
 					features, labels = audio_featurize(feature_set, filename, transcript)
+					print(features)
 					try:
 						data={'features':features.tolist(),
 							  'labels': labels}
 					except:
 						data={'features':features,
 							  'labels': labels}
-					print(features)
-					audio_features=basearray['features']['audio']
-					audio_features[feature_set]=data
-					basearray['features']['audio']=audio_features
-				
-				basearray['labels']=[labelname]
-
-				# write to .JSON 
-				jsonfile=open(listdir[i][0:-4]+'.json','w')
-				json.dump(basearray, jsonfile)
-				jsonfile.close()
-
-			elif listdir[i][0:-4]+'.json' in listdir:
-				# load the .JSON file if it is there 
-				basearray=json.load(open(listdir[i][0:-4]+'.json'))
-				transcript_list=basearray['transcripts']
-
-				# only transcribe if you need to (checks within schema)
-				if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-					transcript = transcribe(filename, default_audio_transcriber)
-					transcript_list['audio'][default_audio_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
-				elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
-					transcript = transcript_list['audio'][default_audio_transcriber]
-				else:
-					transcript=''
 					
-				# only re-featurize if necessary (checks if relevant feature embedding exists)
-				for j in range(len(feature_sets)):
-					feature_set=feature_sets[j]
-					if feature_set not in list(basearray['features']['audio']):
-						features, labels = audio_featurize(feature_set, filename, transcript)
-						print(features)
-						try:
-							data={'features':features.tolist(),
-								  'labels': labels}
-						except:
-							data={'features':features,
-								  'labels': labels}
-						
-						basearray['features']['audio'][feature_set]=data
+					basearray['features']['audio'][feature_set]=data
 
-				# only add the label if necessary 
-				label_list=basearray['labels']
-				if labelname not in label_list:
-					label_list.append(labelname)
-				basearray['labels']=label_list
-				transcript_list=basearray['transcripts']
+			# only add the label if necessary 
+			label_list=basearray['labels']
+			if labelname not in label_list:
+				label_list.append(labelname)
+			basearray['labels']=label_list
+			transcript_list=basearray['transcripts']
 
-				# overwrite .JSON 
-				jsonfile=open(listdir[i][0:-4]+'.json','w')
-				json.dump(basearray, jsonfile)
-				jsonfile.close()
+			# overwrite .JSON 
+			jsonfile=open(listdir[i][0:-4]+'.json','w')
+			json.dump(basearray, jsonfile)
+			jsonfile.close()
 
-		except:
-			print('error')
+		# except:
+			# print('error')
 	
 
 

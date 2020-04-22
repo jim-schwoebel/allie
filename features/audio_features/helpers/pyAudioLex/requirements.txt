@@ -1,0 +1,11 @@
+librosa
+numpy
+matplotlib
+scipy
+sklearn
+hmmlearn
+simplejson
+eyed3
+pydub
+nltk
+colorama

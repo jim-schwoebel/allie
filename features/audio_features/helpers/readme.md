@@ -12,5 +12,6 @@ Looking into
 ## Featurizers
 
 Looking into
+* [tsfresh](https://tsfresh.readthedocs.io/en/latest/text/introduction.html) - time series features
 * [sonopy]()
 * [speechpy]()

@@ -8,7 +8,7 @@ Here are some things that Allie can do:
 - create visualizations from featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
 - train machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig training scripts)
 - make predictions from machine learning models (with all models trained in ./models directory)
-- prepare machine learning models for deployment (including repositories with readmes)
+- prepare compressed machine learning models for deployment (including repositories with readmes)
 
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 

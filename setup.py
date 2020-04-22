@@ -51,7 +51,14 @@ elif sys.platform.lower() in ['win32', 'cygwin', 'msys']:
 # now install all modules with pip3 - install individually to reduce errors
 requirements=open('requirements.txt').read().split('\n')
 for i in range(len(requirements)):
-  os.system('pip3 install %s'%(requirements[i]))
+	# skip pyobjc installations if not on mac computer
+	if requirements[i].find('pyobjc')==0:
+		if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
+			os.system('pip3 install %s'%(requirements[i]))
+		else:
+			pass
+	else:
+		os.system('pip3 install %s'%(requirements[i]))
 
 # install add-ons to NLTK 
 import nltk

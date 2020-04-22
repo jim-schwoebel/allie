@@ -1,5 +1,4 @@
 import os, sys, shutil, pickle, json
-from hyperband import HyperbandSearchCV
 from scipy.stats import randint as sp_randint
 from sklearn.datasets import load_digits
 from sklearn.ensemble import RandomForestClassifier
@@ -7,6 +6,10 @@ from sklearn.preprocessing import LabelBinarizer
 from sklearn.model_selection import train_test_split
 
 def train_hyperband(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+	# install
+	os.system('pip3 install scikit-hyperband==0.0.1')
+	from hyperband import HyperbandSearchCV
+	
 	# training and testing sets
 	X, X_test, y, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 

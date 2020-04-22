@@ -376,6 +376,7 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 	else:
 		print('making transformer...')
 		os.chdir(preprocess_dir)
+		print('python3 transform.py %s %s'%(problemtype, transform_command))
 		os.system('python3 transform.py %s %s'%(problemtype, transform_command))
 		os.chdir(problemtype+'_transformer')
 		transform_model=pickle.load(open(transform_file,'rb'))
@@ -502,7 +503,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		if mtype == 'c':
 			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, classes, minlength, settings)
 		elif mtype == 'r':
-			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels)
+			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels, settings)
 
 	elif default_training_script=='tpot':
 		import train_TPOT as tt

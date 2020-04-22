@@ -43,12 +43,21 @@ def get_classes():
 
 	return classes
 
-def get_features(classes, problem_type):
+def get_features(classes, problem_type, settings):
 
 	features=list()
 	feature_labels=list()
 	class_labels=list()
 	curdir=os.getcwd()
+
+	# get defaults (if multiple feature arrays)
+	default_audio_features=settings["default_audio_features"]
+	default_text_features=settings["default_text_features"]
+	default_image_features=settings["default_image_features"]
+	default_video_features=settings["default_video_features"]
+	default_csv_features=settings["default_csv_features"]
+
+	defaults=default_audio_features+default_text_features+default_image_features+default_video_features+default_csv_features
 
 	for i in range(len(classes)):
 
@@ -70,8 +79,9 @@ def get_features(classes, problem_type):
 			label_=list()
 			try:
 				for k in range(len(feature_list)):
-					feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
-					label_=label_+g['features'][problem_type][feature_list[k]]['labels']
+					if feature_list[k] in defaults:
+						feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
+						label_=label_+g['features'][problem_type][feature_list[k]]['labels']
 
 				# quick quality check to only add to list if the feature_labels match in length the features_
 				if len(feature_) == len(label_):
@@ -122,7 +132,7 @@ os.chdir(basedir+'/train_dir')
 problem_type=sys.argv[1]
 
 classes=get_classes()
-features, feature_labels, class_labels = get_features(classes, problem_type)
+features, feature_labels, class_labels = get_features(classes, problem_type, settings)
 X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 
 print(features[0])

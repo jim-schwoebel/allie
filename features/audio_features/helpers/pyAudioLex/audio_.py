@@ -27,11 +27,11 @@ def get_duration(filepath):
     return 0.0
 
 # process audio
-def audio(wav):
+def audio_featurize(wav):
   [Fs, x] = audioBasicIO.readAudioFile(wav)
   x = audioBasicIO.stereo2mono(x) # convert to mono
-  F = audioFeatureExtraction.stFeatureExtraction(x, Fs, 0.050*Fs, 0.025*Fs)
-
+  F = audioFeatureExtraction.stFeatureExtraction(x, Fs, 0.050*Fs, 0.025*Fs)[0]
+  print(F)
   results = {}
   results['ZCR'] = F[0].tolist()
   results['energy'] = F[1].tolist()

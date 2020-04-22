@@ -6,7 +6,6 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_squared_error
 from sklearn.pipeline import Pipeline
-from SafeTransformer import SafeTransformer
 from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
 import numpy as np
@@ -21,12 +20,17 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 def train_safe(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+
+	print('installing library')
+	os.system('pip3 install safe-transformer==0.0.5')
+	from SafeTransformer import SafeTransformer
+
 	# training and testing sets
 	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 	X_train=pd.DataFrame(X_train)
 	X_test=pd.DataFrame(X_test)
-	y_train=pd.DataFrame(y_train)
-	y_test=pd.DataFrame(y_test)
+	y_train=pd.DataFrame(y_train).values.ravel()
+	y_test=pd.DataFrame(y_test).values.ravel()
 
 	if mtype in ['classification', 'c']:
 

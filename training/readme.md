@@ -77,6 +77,9 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ### model training 
 * [MLBlocks](https://github.com/HDI-Project/MLBlocks) - most recent framework @ MIT
+* [Auto-Pytorch](https://github.com/automl/Auto-PyTorch)
+* [SMAC3](https://github.com/automl/SMAC3)
+* [Keras-tuner](https://github.com/keras-team/keras-tuner)
 * [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 
 * '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
@@ -98,6 +101,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * CSV file training example
 
 ## Additional documentation
+* [Automated Machine Learning tools](https://www.kdnuggets.com/2019/11/github-repo-raider-automated-machine-learning.html)
 * [Keras compression](https://github.com/DwangoMediaVillage/keras_compressor)
 * [Ludwig](https://uber.github.io/ludwig/examples/#time-series-forecasting)
 * [Model compression](https://www.slideshare.net/AnassBensrhirDatasci/deploying-machine-learning-models-to-production)

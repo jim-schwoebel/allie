@@ -78,13 +78,13 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ## Actively working on (in future)
 
 ### Exploring now
+* '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [MLBox](https://github.com/AxeldeRomblay/MLBox)
 * [Auto-Pytorch](https://github.com/automl/Auto-PyTorch)
 * [SMAC3](https://github.com/automl/SMAC3)
 * [Keras-tuner](https://github.com/keras-team/keras-tuner)
 * [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 
 * '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
-* '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [Misvm](https://github.com/garydoranjr/misvm)
 * '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.

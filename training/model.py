@@ -459,6 +459,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		print('Autosklearn training is unstable! Please use a different model setting for now.') 
 		# import train_autosklearn as taskl
 		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+	elif default_training_script=='autopytorch':
+		import train_autopytorch as autotorch_
+		modelname, modeldir=autotorch_.train_autopytorch(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='cvopt':
 		import train_cvopt as tcvopt
 		modelname, modeldir = tcvopt.train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
@@ -489,6 +492,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='mlblocks':
 		import train_mlblocks as mlb
 		modelname, modeldir=mlb.train_mlblocks(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+	elif default_training_script=='mlbox':
+		import train_mlbox as mlbox_
+		modelname, modeldir=mlbox_.train_mlbox(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='neuraxle':
 		import train_neuraxle as tneuraxle
 		modelname, modeldir=tneuraxle.train_neuraxle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

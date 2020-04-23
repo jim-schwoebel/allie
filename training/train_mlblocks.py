@@ -1,6 +1,6 @@
 import os, json, shutil, pickle
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, mean_squared_log_error
 '''
 From the documentation: https://hdi-project.github.io/MLBlocks/pipeline_examples/single_table.html
 '''
@@ -15,13 +15,16 @@ def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_featur
 
 	# name model
 	modelname=jsonfile[0:-5]+'_mlblocks_'+str(default_features).replace("'",'').replace('"','')
-	model_name=modelname+'.pickle'
-	jsonfilename=modelname+'.json'
 
 	# training and testing sets
 	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 
-	if mtype=='c': #classification
+	if mtype=='c': 
+
+		# rename files with classification
+		modelname=modelname+'_classification'
+		model_name=modelname+'.pickle'
+		jsonfilename=modelname+'.json'
 
 		from mlblocks import MLPipeline
 
@@ -58,7 +61,11 @@ def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_featur
 		json.dump(data,jsonfile)
 		jsonfile.close()
 
-	if mtype=='r': #regression
+	if mtype=='r': 
+		# rename files for regression
+		modelname=modelname+'_regression'
+		model_name=modelname+'.pickle'
+		jsonfilename=modelname+'.json'
 
 		from mlblocks import MLPipeline
 
@@ -68,6 +75,7 @@ def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_featur
 		pipeline = MLPipeline(primitives)
 		pipeline.fit(X_train, y_train)
 		predictions = pipeline.predict(X_test)
+		mse_error=mean_squared_log_error(y_test, predictions)
 
 		# saving model
 		print('saving model')

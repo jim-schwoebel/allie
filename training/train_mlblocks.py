@@ -1,5 +1,6 @@
-import os, json, shutil
+import os, json, shutil, pickle
 from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
 '''
 From the documentation: https://hdi-project.github.io/MLBlocks/pipeline_examples/single_table.html
 '''
@@ -8,7 +9,9 @@ From the documentation: https://hdi-project.github.io/MLBlocks/pipeline_examples
 def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
 
 	print('installing library')
+	os.system('pip3 install mlprimitives')
 	os.system('pip3 install mlblocks==0.3.4')
+	# os.system('pip3 install xgboost==0.80')
 
 	# name model
 	modelname=jsonfile[0:-5]+'_mlblocks_'+str(default_features).replace("'",'').replace('"','')
@@ -18,23 +21,21 @@ def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_featur
 	# training and testing sets
 	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 
-	if mtype=='classification':
+	if mtype=='c': #classification
 
 		from mlblocks import MLPipeline
 
-		primitives = [
-			'sklearn.preprocessing.StandardScaler',
-			'xgboost.XGBClassifier'
-		]
-		init_params = {
-			'xgboost.XGBClassifier': {
-				'learning_rate': 0.1
-			}
-		}
-		pipeline = MLPipeline(primitives, init_params)
+		primitives = ['sklearn.impute.SimpleImputer',
+					  'xgboost.XGBClassifier']
+
+		init_params = {'sklearn.impute.SimpleImputer': {'strategy': 'median'},
+		  			    'xgboost.XGBClassifier': {'learning_rate': 0.1}}
+
+		pipeline = MLPipeline(primitives, init_params=init_params)
+
 		pipeline.fit(X_train, y_train)
 		predictions = pipeline.predict(X_test)
-		accuracy=dataset.score(y_test, predictions)
+		accuracy=accuracy_score(y_test, predictions)
 
 		# saving model
 		print('saving model')
@@ -57,7 +58,7 @@ def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_featur
 		json.dump(data,jsonfile)
 		jsonfile.close()
 
-	if mtype=='regression':
+	if mtype=='r': #regression
 
 		from mlblocks import MLPipeline
 
@@ -100,7 +101,7 @@ def train_mlblocks(alldata, labels, mtype, jsonfile, problemtype, default_featur
 	shutil.copy(cur_dir2+'/'+model_name, os.getcwd()+'/'+model_name)
 	shutil.copy(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
 	os.remove(cur_dir2+'/'+model_name)
-	os.remove(curdir2+'/'+jsonfilename)
+	os.remove(cur_dir2+'/'+jsonfilename)
 
 	# get model directory
 	model_dir=os.getcwd()

@@ -77,7 +77,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## Actively working on (in future)
 
-### model training 
+### Exploring now
 * [MLBox](https://github.com/AxeldeRomblay/MLBox)
 * [Auto-Pytorch](https://github.com/automl/Auto-PyTorch)
 * [SMAC3](https://github.com/automl/SMAC3)

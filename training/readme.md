@@ -67,7 +67,7 @@ There are 13 potential training script settings (customized in the 'settings.jso
 * '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data. &#x2611; 
-* [MLBlocks](https://github.com/HDI-Project/MLBlocks) - most recent framework @ MIT, regression and classification. &#x2611; 
+* '[MLBlocks](https://github.com/HDI-Project/MLBlocks)' - most recent framework @ MIT, regression and classification. &#x2611; 
 * '[neuraxle](https://github.com/Neuraxio/Neuraxle)' - A sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. &#x2611;
 * '[safe](https://github.com/ModelOriented/SAFE)' - black box trainer / helps reduce opacity of ML models while increasing accuracy.&#x2611;
 * '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;

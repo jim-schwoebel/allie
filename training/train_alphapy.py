@@ -195,7 +195,8 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	os.chdir(hostdir)
 
 	os.chdir(basedir)
-	shutil.move(folder, basedir+'/%s_models/'%(problemtype)+folder)
+	shutil.copy(folder, basedir+'/%s_models/'%(problemtype)+folder)
+	# shutil.rmtree(folder)
 
 	# get variables
 	model_name=folder

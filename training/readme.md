@@ -90,9 +90,10 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.
-
-### Other stuff 
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
+
+## Discarded 
+* [autokeras]() - not enough support/functionality
 
 ### Data modeling tutorials (Readmes)
 * Audio file training example

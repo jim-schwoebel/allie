@@ -17,7 +17,7 @@ from gensim.models import KeyedVectors
 from tqdm import tqdm
 import helpers.transcribe as ts
 import json, os, sys
-import os, wget, zipfile 
+import os, wget, zipfile, uuid
 import shutil
 
 ##################################################
@@ -214,9 +214,19 @@ for j in range(len(feature_sets)):
 			print('loaded Facebook FastText model...')
 
 
-# change to folder directory 
+# # rename files appropriately to eliminate ( and ) 
+# os.chdir(foldername)
+# listdir=os.listdir()
+# for i in range(len(listdir)):
+# 	if listdir[i].endswith('.txt'):
+# 		id_=str(uuid.uuid4())
+# 		os.rename(listdir[i], id_+'.txt')
+# 		if listdir[i][0:-4]+'.json' in listdir:
+# 			os.rename(listdir[i][0:-4]+'.json', id_+'.json')
+
+# now get files and directory
 os.chdir(foldername)
-listdir=os.listdir() 
+listdir=os.listdir()
 cur_dir=os.getcwd()
 
 # featurize all files accoridng to librosa featurize

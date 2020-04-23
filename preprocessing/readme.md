@@ -74,3 +74,14 @@ Note you can extend this to any of the feature types. The table below overviews 
 ## Future
 
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in
+
+https://github.com/jiankaiwang/sophia
+
+### dimensionality reduction
+- Principal Components Analysis (PCA): Rscript, RPubs
+- Factor Analysis (FA): Rscript, RPubs
+- Multidimensional Scaling (MDS)
+- Linear Discriminate Analysis (LDA): Rscript, RPubs
+- Quadratic Discriminate Analysis (QDA): Rscript, RPubs
+- Singular Value Decomposition (SVD): notebook
+- t-SNE

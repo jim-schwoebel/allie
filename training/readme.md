@@ -59,6 +59,7 @@ There are 17 potential training script settings (customized in the 'settings.jso
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
+* '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time). &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. &#x2611;
@@ -93,7 +94,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
 
 ### Discarded (due to lack of functionality)
-* '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time). (cannot make predictions from MLP models trained... WTF?) 👎 
 * '[autosklearn](https://github.com/automl/auto-sklearn)' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). 👎 
 * '[pLDA](https://github.com/RaviSoji/plda)' - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 👎 
 

@@ -38,7 +38,7 @@ def convert_(X_train, y_train, labels):
 				data[feature_list[j]]=[X_train[i][j]]
 				print(data)
 
-	data['class']=y_train
+	data['class_']=y_train
 	data=pd.DataFrame(data, columns = list(data))
 	print(data)
 	print(list(data))
@@ -60,7 +60,7 @@ def prev_dir(directory):
 
 def edit_modelfile(data_,problemtype,csvfilename):
 	# open the yml file
-	list_doc=yaml.load(open("model.yml"), Loader=yaml.FullLoader)
+	list_doc=yaml.load(open("model.yml"), Loader=yaml.Loader)
 	os.remove('model.yml')
 
 	# load sections / format and modify appropriately
@@ -75,7 +75,7 @@ def edit_modelfile(data_,problemtype,csvfilename):
 	data['drop']=['Unnamed: 0']
 	data['shuffle']=True
 	data['split']=0.4
-	data['target']='class'
+	data['target']='class_'
 
 	# ----> now set right model parameters here
 	model=list_doc['model']
@@ -92,7 +92,7 @@ def edit_modelfile(data_,problemtype,csvfilename):
 
 	# just remove the target class
 	features=list_doc['features']
-	features['factors']=list(data_).remove('class')
+	# features['factors']=list(data_).remove('class_')
 
 	# everything else remains the same
 	pipeline=list_doc['pipeline']
@@ -126,7 +126,7 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	os.system('pip3 install imbalance-learn==0.5.0')
 	os.system('pip3 install xgboost==0.80')
 	os.system('pip3 install pandas==1.0')
-	os.system('pip3 install pandas-datareader==0.8')
+	os.system('pip3 install pandas-datareader==0.8.1')
 	# os.system('pip3 install scikit-learn==0.20.1')
 
 	# get train and test data
@@ -193,5 +193,12 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	os.chdir(folder)
 	os.system('alphapy')
 	os.chdir(hostdir)
+
+	os.chdir(basedir)
+	shutil.move(folder, basedir+'/%s_models/'%(problemtype)+folder)
+
+	# get variables
+	model_name=folder
+	model_dir=basedir+'/%s_models/'%(problemtype)
 
 	return model_name, model_dir

@@ -58,7 +58,7 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def edit_modelfile(data_,problemtype,csvfilename):
+def edit_modelfile(data_,mtype,csvfilename):
 	# open the yml file
 	list_doc=yaml.load(open("model.yml"), Loader=yaml.Loader)
 	os.remove('model.yml')
@@ -66,7 +66,7 @@ def edit_modelfile(data_,problemtype,csvfilename):
 	# load sections / format and modify appropriately
 	# ----> just change file name
 	project=list_doc['project']
-	project['submission_file']=csvfilename[0:-4]
+	# project['submission_file']=csvfilename[0:-4]
 
 	# ----> set right target value here
 	# { 'features': '*', 'sampling': {'option': False, 'method': 'under_random', 'ratio': 0.0}, 'sentinel': -1, 'separator': ',', 'shuffle': False, 'split': 0.4, 'target': 'won_on_spread', 'target_value': True}
@@ -80,12 +80,12 @@ def edit_modelfile(data_,problemtype,csvfilename):
 	# ----> now set right model parameters here
 	model=list_doc['model']
 	# {'algorithms': ['RF', 'XGB'], 'balance_classes': False, 'calibration': {'option': False, 'type': 'isotonic'}, 'cv_folds': 3, 'estimators': 201, 'feature_selection': {'option': False, 'percentage': 50, 'uni_grid': [5, 10, 15, 20, 25], 'score_func': 'f_classif'}, 'grid_search': {'option': True, 'iterations': 50, 'random': True, 'subsample': False, 'sampling_pct': 0.25}, 'pvalue_level': 0.01, 'rfe': {'option': True, 'step': 5}, 'scoring_function': 'roc_auc', 'type': 'classification'}
-	if problemtype in ['classification', 'c']:
-		model['algorithms']=['AB','GB','KERASC','KNN','LOGR','LSVC','LSVM','NB','RBF','RF','SVM','XGB','XGBM','XT']
+	if mtype in ['classification', 'c']:
+		model['algorithms']=['AB','GB','KERASC','KNN','LOGR','RF','XGB','XT'] # removed 'LSVC', 'LSVM', 'NB', 'RBF', 'SVM', 'XGBM'
 		model['scoring_function']='roc_auc'
 		model['type']='classification'
 
-	elif problemtype in ['regression','r']:
+	elif mtype in ['regression','r']:
 		model['algorithms']=['GBR','KERASR','KNR','LR','RFR','XGBR','XTR']
 		model['scoring_function']='mse'
 		model['type']='regression'
@@ -124,9 +124,9 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	print('installing dependencies')
 	os.system('pip3 install alphpy==2.4.0')
 	os.system('pip3 install imbalance-learn==0.5.0')
-	os.system('pip3 install xgboost==0.80')
 	os.system('pip3 install pandas==1.0')
 	os.system('pip3 install pandas-datareader==0.8.1')
+	os.system('pip3 install xgboost==0.80')
 	# os.system('pip3 install scikit-learn==0.20.1')
 
 	# get train and test data
@@ -187,16 +187,22 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	shutil.copytree(prev_dir(hostdir)+'/training/helpers/alphapy/config/', basedir+'/'+folder+'/config')
 	os.chdir(folder)
 	os.chdir('config')
-	edit_modelfile(data, problemtype, csvfilename)
+	edit_modelfile(data, mtype, csvfilename)
 
 	os.chdir(basedir)
 	os.chdir(folder)
 	os.system('alphapy')
 	os.chdir(hostdir)
 
-	os.chdir(basedir)
-	shutil.copy(folder, basedir+'/%s_models/'%(problemtype)+folder)
-	# shutil.rmtree(folder)
+	try:
+		# put directory in proper location
+		shutil.copytree(hostdir+'/'+folder, hostdir+'/%s_models/'%(problemtype)+folder)
+		shutil.rmtree(folder)
+	except:
+		# replace directory if it exists
+		shutil.rmtree(hostdir+'/%s_models/'%(problemtype)+folder)
+		shutil.copytree(hostdir+'/'+folder, hostdir+'/%s_models/'%(problemtype)+folder)
+		shutil.rmtree(folder)
 
 	# get variables
 	model_name=folder

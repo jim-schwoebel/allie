@@ -461,7 +461,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
 	elif default_training_script=='cvopt':
 		import train_cvopt as tcvopt
-		modelname, modeldir = tcvopt.train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_features, settings)
+		modelname, modeldir = tcvopt.train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
 	elif default_training_script=='devol':
 		import train_devol as td 
 		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
@@ -486,6 +486,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='ludwig':
 		import train_ludwig as tl
 		modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, default_label, problemtype, default_featurenames, settings)
+	elif default_training_script=='mlblocks':
+		import train_mlblocks as mlb
+		modelname, modeldir=mlb.train_mlblocks(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='neuraxle':
 		import train_neuraxle as tneuraxle
 		modelname, modeldir=tneuraxle.train_neuraxle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

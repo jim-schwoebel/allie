@@ -53,7 +53,7 @@ Now you're ready to go to load these models and [make predictions](https://githu
 
 ## Default_training scripts 
 
-There are 13 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
+There are 17 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
 
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines/feature selection. &#x2611;
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;

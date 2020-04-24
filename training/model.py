@@ -462,6 +462,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='autopytorch':
 		import train_autopytorch as autotorch_
 		modelname, modeldir=autotorch_.train_autopytorch(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+	elif default_training_script=='btb':
+		import train_btb as tbtb
+		modelname, modeldir=tbtb.train_btb(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 	elif default_training_script=='cvopt':
 		import train_cvopt as tcvopt
 		modelname, modeldir = tcvopt.train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)

@@ -84,8 +84,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * [MLBox](https://github.com/AxeldeRomblay/MLBox) - State-of-the art predictive models for classification and regression (Deep Learning, Stacking, LightGBM,…).
 * [SMAC3](https://github.com/automl/SMAC3) - SMAC performs Bayesian Optimization in combination with a aggressive racing mechanism to efficiently decide which of two configuration performs better.
 * [Keras-tuner](https://github.com/keras-team/keras-tuner) - Hyperparameter tuning for humans.
-* [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework.
-* '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning
+* '[BTB](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with [autobazaar](https://hdi-project.github.io/AutoBazaar/)
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.

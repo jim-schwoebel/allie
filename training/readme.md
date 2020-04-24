@@ -77,6 +77,14 @@ There are 17 potential training script settings (customized in the 'settings.jso
 
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
 
+## Qualtitative observations 
+
+Rank on these axes:
+- ease of setup / support (setup properly) 
+- accuracy on most problems (less accurate --> more accurate) 
+- speed of modeling process (slow --> fast) 
+- documentation quality (poor --> great) 
+
 ## Actively working on (in future)
 
 ### Exploring now

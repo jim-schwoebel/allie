@@ -60,6 +60,7 @@ There are 17 potential training script settings (customized in the 'settings.jso
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
 * '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time). &#x2611;
+* [auto-pytorch](https://github.com/automl/Auto-PyTorch) - automated machine learning with the PyTorch framework.
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. &#x2611;
@@ -81,7 +82,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ### Exploring now
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [MLBox](https://github.com/AxeldeRomblay/MLBox)
-* [Auto-Pytorch](https://github.com/automl/Auto-PyTorch)
 * [SMAC3](https://github.com/automl/SMAC3)
 * [Keras-tuner](https://github.com/keras-team/keras-tuner)
 * [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 

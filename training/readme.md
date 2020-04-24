@@ -80,7 +80,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 ## Qualtitative observations 
 
 Rank on these axes:
-- ease of setup / support (setup properly) 
+- ease of setup / future support (setup properly) 
 - accuracy on most problems (less accurate --> more accurate) 
 - speed of modeling process (slow --> fast) 
 - documentation quality (poor --> great) 

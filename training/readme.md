@@ -85,6 +85,10 @@ Rank on these axes:
 - speed of modeling process (slow --> fast) 
 - documentation quality (poor --> great) 
 
+| Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | 
+| --------- |  --------- |  --------- | --------- | --------- | 
+| alphapy |  4/5 |  5/5 | 4/5 | 5/5 | 
+
 ## Actively working on (in future)
 
 ### Exploring now

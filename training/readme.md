@@ -83,15 +83,17 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [MLBox](https://github.com/AxeldeRomblay/MLBox) - State-of-the art predictive models for classification and regression (Deep Learning, Stacking, LightGBM,…).
 * [SMAC3](https://github.com/automl/SMAC3) - SMAC performs Bayesian Optimization in combination with a aggressive racing mechanism to efficiently decide which of two configuration performs better.
-* [Keras-tuner](https://github.com/keras-team/keras-tuner)
-* [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 
-* '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
-* [Misvm](https://github.com/garydoranjr/misvm)
+* [Keras-tuner](https://github.com/keras-team/keras-tuner) - Hyperparameter tuning for humans.
+* [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework.
 * '[BTB](https://github.com/HDI-Project/BTB)' - BTB for hyperparameter tuning
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.
+* [Misvm](https://github.com/garydoranjr/misvm)
+
+#### Model compression 
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
+* '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 
 ### Discarded (due to lack of functionality)
 * '[autosklearn](https://github.com/automl/auto-sklearn)' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). Recommended alternative is TPOT, as it is much more stable. 👎 

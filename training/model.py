@@ -448,9 +448,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		modelname, modeldir=autokag.train_autokaggle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
 
 	elif default_training_script=='autokeras':
-		print('Autokeras training is unstable! Please use a different model setting for now.') 
-		# import train_autokeras as tak 
-		# tak.train_autokeras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+		import train_autokeras as autokeras_
+		modelname, modeldir=autokeras_.train_autokeras(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		
 	elif default_training_script=='automl':
 		import train_automl as auto_ml
 		modelname, modeldir=auto_ml.train_automl(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

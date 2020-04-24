@@ -94,6 +94,7 @@ Rank on these axes:
 # gray
 ```
 
+Metrics = https://scikit-learn.org/stable/modules/model_evaluation.html
 
 
 | Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | 

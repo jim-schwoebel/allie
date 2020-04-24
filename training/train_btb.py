@@ -329,6 +329,9 @@ def train_btb(alldata, labels, mtype, jsonfile, problemtype, default_features, s
 
 		r2_score=r2_score(y_test, pred)
 
+		print('R2 score!!')
+		print(r2_score)
+		
 		# now save the model in .pickle
 		f=open(model_name,'wb')
 		pickle.dump(best_model, f)
@@ -344,7 +347,6 @@ def train_btb(alldata, labels, mtype, jsonfile, problemtype, default_features, s
 			'r2_score': float(r2_score),
 			'model type':'BTB_%s'%(mtype),
 			'settings': settings,
-			'architecture': [best_model['name'], best_proposal['config']],
 		}
 
 		json.dump(data,jsonfile)

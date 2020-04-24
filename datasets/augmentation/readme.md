@@ -43,6 +43,7 @@ General
 * [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
 
 Audio 
+* [ESC-10 augmentation](https://github.com/JasonZhang156/Sound-Recognition-Tutorial/blob/master/data_augmentation.py) - script
 * [adding noise with ffmpeg[(https://stackoverflow.com/questions/15792105/simulating-tv-noise)
 * [Audio data augmentation](https://github.com/sid0710/audio_data_augmentation)
 * [Keras-AudioDataGenerator](https://github.com/AhmedImtiazPrio/Keras-AudioDataGenerator)'

@@ -434,7 +434,11 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='atm':
 		import train_atm as tatm
 		modelname, modeldir=tatm.train_atm(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-		
+	
+	elif default_training_script=='autobazaar':
+		import train_autobazaar as autobzr
+		modelname, modeldir=autobzr.train_autobazaar(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+	
 	elif default_training_script=='autogbt':
 		import train_autogbt as autogbt
 		modelname, modeldir=autogbt.train_autogbt(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)

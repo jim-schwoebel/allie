@@ -94,7 +94,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
 
 ### Discarded (due to lack of functionality)
-* '[autosklearn](https://github.com/automl/auto-sklearn)' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). 👎 
+* '[autosklearn](https://github.com/automl/auto-sklearn)' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). Recommended alternative is TPOT, as it is much more stable. 👎 
 * '[pLDA](https://github.com/RaviSoji/plda)' - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 👎 
 
 ### Data modeling tutorials (Readmes)

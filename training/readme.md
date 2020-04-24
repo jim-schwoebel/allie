@@ -85,9 +85,20 @@ Rank on these axes:
 - speed of modeling process (slow --> fast) 
 - documentation quality (poor --> great) 
 
+<h2>
+
+```diff
+- red
++ green
+! orange
+# gray
+```
+
+</h2>
+
 | Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | 
 | --------- |  --------- |  --------- | --------- | --------- | 
-| alphapy |  4/5 |  5/5 | 4/5 | 5/5 | 
+| alphapy | ```diff + green 4/5 ```|  5/5 | 4/5 | 5/5 | 
 
 ## Actively working on (in future)
 

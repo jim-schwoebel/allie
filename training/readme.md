@@ -94,8 +94,10 @@ Rank on these axes:
 # gray
 ```
 
+```
 Metrics = https://scikit-learn.org/stable/modules/model_evaluation.html
-
+from sklearn.metrics import classification_report
+```
 
 | Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | 
 | --------- |  --------- |  --------- | --------- | --------- | 

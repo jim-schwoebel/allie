@@ -81,7 +81,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ### Exploring now
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
-* [MLBox](https://github.com/AxeldeRomblay/MLBox)
+* [MLBox](https://github.com/AxeldeRomblay/MLBox) - State-of-the art predictive models for classification and regression (Deep Learning, Stacking, LightGBM,…).
 * [SMAC3](https://github.com/automl/SMAC3) - SMAC performs Bayesian Optimization in combination with a aggressive racing mechanism to efficiently decide which of two configuration performs better.
 * [Keras-tuner](https://github.com/keras-team/keras-tuner)
 * [BTB](https://github.com/HDI-Project/BTB) - hyperparameter tuning framework 

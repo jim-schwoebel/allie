@@ -98,8 +98,7 @@ Rank on these axes:
 
 | Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | 
 | --------- |  --------- |  --------- | --------- | --------- | 
-| alphapy | <h2>```diff 
- + green 4/5 ```</h2>|  5/5 | 4/5 | 5/5 | 
+| alphapy | 4/5|  5/5 | 4/5 | 5/5 | 
 
 ## Actively working on (in future)
 

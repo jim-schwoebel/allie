@@ -1,0 +1,12 @@
+{
+    "metadata": {
+        "name": "graph/community_detection/default",
+        "data_type": "graph",
+        "task_type": "community_detection"
+    },
+    "primitives": [
+        "community.CommunityBestPartition"
+    ],
+    "hyperparameters": {
+    }
+}

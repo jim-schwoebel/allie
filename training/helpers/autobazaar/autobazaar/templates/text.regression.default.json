@@ -1,0 +1,14 @@
+{
+    "metadata": {
+        "name": "text/regression/default",
+        "data_type": "text",
+        "task_type": "regression"
+    },
+    "primitives": [
+        "mlprimitives.custom.feature_extraction.StringVectorizer",
+        "sklearn.preprocessing.Imputer",
+        "xgboost.XGBRegressor"
+    ],
+    "hyperparameters": {
+    }
+}

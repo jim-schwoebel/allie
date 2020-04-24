@@ -1,0 +1,16 @@
+{
+    "metadata": {
+        "name": "single_table/collaborative_filtering/default",
+        "data_type": "single_table",
+        "task_type": "collaborative_filtering"
+    },
+    "primitives": [
+        "featuretools.dfs",
+        "lightfm.LightFM"
+    ],
+    "hyperparameters": {
+        "featuretools.dfs#1": {
+            "encode": true
+        }
+    }
+}

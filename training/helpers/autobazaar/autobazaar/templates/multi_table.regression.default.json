@@ -1,0 +1,26 @@
+{
+    "metadata": {
+        "name": "multi_table/regression/default",
+        "data_type": "multi_table",
+        "task_type": "regression"
+    },
+    "primitives": [
+        "featuretools.dfs",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "xgboost.XGBRegressor"
+    ],
+    "hyperparameters": {
+        "featuretools.dfs#1": {
+            "encode": true
+        },
+        "xgboost.XGBRegressor#1": {
+            "n_jobs": -1,
+            "learning_rate": 0.1,
+            "n_estimators": 300,
+            "max_depth": 3,
+            "gamma": 0,
+            "min_child_weight": 1
+        }
+    }
+}

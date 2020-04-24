@@ -1,0 +1,25 @@
+{
+    "metadata": {
+        "name": "single_table/classification/default",
+        "data_type": "single_table",
+        "task_type": "classification"
+    },
+    "primitives": [
+        "mlprimitives.custom.preprocessing.ClassEncoder",
+        "mlprimitives.custom.feature_extraction.CategoricalEncoder",
+        "sklearn.impute.SimpleImputer",
+        "sklearn.preprocessing.RobustScaler",
+        "xgboost.XGBClassifier",
+        "mlprimitives.custom.preprocessing.ClassDecoder"
+    ],
+    "hyperparameters": {
+        "xgboost.XGBClassifier#1": {
+            "n_jobs": -1,
+            "learning_rate": 0.1,
+            "n_estimators": 300,
+            "max_depth": 3,
+            "gamma": 0,
+            "min_child_weight": 1
+        }
+    }
+}

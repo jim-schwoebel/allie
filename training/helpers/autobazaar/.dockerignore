@@ -1,0 +1,11 @@
+data/
+input/
+input_dir/
+output/
+docs/
+tests/
+logs/
+static/
+notebooks/
+.tox/
+.git/

@@ -62,7 +62,7 @@ There are 21 potential training script settings (customized in the 'settings.jso
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
 * '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time). &#x2611;
 * '[auto-pytorch](https://github.com/automl/Auto-PyTorch)' - automated machine learning with the PyTorch framework. &#x2611;
-* '[BTB](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
+* '[btb](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. &#x2611;

@@ -44,7 +44,7 @@ def get_classes():
 
 	return classes
 
-def get_features(classes, problem_type):
+def get_features(classes, problem_type, default_features):
 
 	features=list()
 	feature_labels=list()
@@ -71,8 +71,9 @@ def get_features(classes, problem_type):
 			label_=list()
 			try:
 				for k in range(len(feature_list)):
-					feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
-					label_=label_+g['features'][problem_type][feature_list[k]]['labels']
+					if feature_list[k] in default_features:
+						feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
+						label_=label_+g['features'][problem_type][feature_list[k]]['labels']
 
 				# quick quality check to only add to list if the feature_labels match in length the features_
 				if len(feature_) == len(label_):
@@ -85,9 +86,9 @@ def get_features(classes, problem_type):
 
 	return features, feature_labels, class_labels 
 
-def visualize_features(classes, problem_type, curdir):
+def visualize_features(classes, problem_type, curdir, default_features):
 
-	features, feature_labels, class_labels = get_features(classes, problem_type)
+	features, feature_labels, class_labels = get_features(classes, problem_type, default_features)
 	print(features)
 	os.chdir(curdir)
 	le = preprocessing.LabelEncoder()
@@ -192,4 +193,17 @@ problem_type=sys.argv[1]
 print(problem_type)
 classes=get_classes()
 
-visualize_features(classes, problem_type, curdir)
+# get default features to use in visualization
+settings=json.load(open(basedir+'/settings.json'))
+if problem_type=='audio':
+	default_features=settings['default_audio_features']
+elif problem_type=='text':
+	default_features=settings['default_text_features']
+elif problem_type=='image':
+	default_features=settings['default_image_features']
+elif problem_type=='video':
+	default_features=settings['default_video_features']
+elif problem_type=='csv':
+	default_features=settings['default_csv_features']
+
+visualize_features(classes, problem_type, curdir, default_features)

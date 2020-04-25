@@ -73,10 +73,9 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 ## Future
 
+### Feature transformations 
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)
 * https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model
-
-https://github.com/jiankaiwang/sophia
 
 ### dimensionality reduction
 - Principal Components Analysis (PCA): Rscript, RPubs
@@ -86,3 +85,6 @@ https://github.com/jiankaiwang/sophia
 - Quadratic Discriminate Analysis (QDA): Rscript, RPubs
 - Singular Value Decomposition (SVD): notebook
 - t-SNE
+
+## References
+* [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

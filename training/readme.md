@@ -106,6 +106,8 @@ from sklearn.metrics import classification_report
 | --------- |  --------- |  --------- | --------- | --------- | 
 | alphapy | 4/5|  5/5 | 4/5 | 5/5 | 
 
+['alphapy', 'atm', 'autobazaar', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']
+
 ## Actively working on (in future)
 
 ### Exploring now

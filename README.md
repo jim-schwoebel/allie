@@ -191,7 +191,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | default_video_transcriber | the default video transcriber if transcribe_video == True (boolean). | 'tesseract_connected_over_frames' | 'tesseract_connected_over_frames' | 
 | transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber (boolean). | True | True, False | 
 | default_csv_transcriber | the default video transcriber if transcribe_csv == True (string). | 'raw text' | 'raw text' | 
-| default_training_script | the specified traning script(s) to train machine learning models. Note that if you specify multiple training scripts here that the training scripts will be executed serially (list). | ['tpot'] | ["alphapy", "atm", "autogbt", "autokaggle", "cvopt", "hyperband", "hypsklearn", "hungabunga", "gama", "keras", "ludwig", "neuraxle", "safe", "scsr", "tpot"]| 
+| default_training_script | the specified traning script(s) to train machine learning models. Note that if you specify multiple training scripts here that the training scripts will be executed serially (list). | ['tpot'] |['alphapy', 'atm', 'autobazaar', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']| 
 | clean_data | specifies whether or not you'd like to clean / pre-process data in folders before model training (boolean). |  True | True, False | 
 | default_audio_cleaners | the specified cleaning scripts to employ when cleaning audio data | [] | [] |
 | default_text_cleaners | the specified cleaning scripts to employ when cleaning text data | [] | [] |

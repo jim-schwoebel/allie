@@ -278,7 +278,6 @@ for i in range(len(classes)):
 
 # perform class balance such that both classes have the same number
 # of members. 
-
 os.chdir(prevdir+'/training/')
 model_dir=prevdir+'/models'
 
@@ -317,6 +316,29 @@ for i in range(len(classes)):
     for j in range(len(class_)):
         alldata.append(class_[j])
         labels.append(i)
+
+# create data for imbalanced model training (if necessary)
+alldata_imbalance=list()
+labels_imbalance=list()
+
+if 'imbalance-learn' in settings['default_training_script']:
+	# now load all the classes
+	lengths_imbalance=list()
+	for i in range(len(classes)):
+	    class_=g[classes[i]]
+	    print(len(class_))
+	    lengths_imbalance.append(len(class_))
+	    random.shuffle(class_)
+
+	    for j in range(len(class_)):
+	        alldata_imbalance.append(class_[j])
+	        labels_imbalance.append(i)
+
+	# pritnt for testing
+	print(len(alldata_imbalance))
+	print(len(labels_imbalance))
+	distributions=list(1/len(labels_imbalance)*np.array(lengths_imbalance))
+	print(distributions)
 
 ############################################################
 ## 			        DATA TRANSFORMATION 			      ##
@@ -490,6 +512,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='hungabunga':
 		import train_hungabunga as thung
 		modelname, modeldir=thung.train_hungabunga(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+	elif default_training_script=='imbalance-learn':
+		import train_imbalance as timb
+		modelname, modeldir=timb.train_imbalance(alldata_imbalance,labels_imbalance,mtype,jsonfile,problemtype,default_featurenames, settings, distributions)
 	elif default_training_script=='keras':
 		import train_keras as tk
 		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)

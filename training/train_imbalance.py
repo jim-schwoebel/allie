@@ -3,7 +3,7 @@ import warnings, datetime, uuid, os, json, shutil, pickle
 warnings.filterwarnings('ignore')
 
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import r2_score, mean_squared_error
+from sklearn.metrics import r2_score, mean_squared_error, accuracy_score
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import ExtraTreesRegressor
 from sklearn.model_selection import cross_val_score
@@ -70,30 +70,29 @@ def convert_(X_train, y_train, labels):
 
 	return data
 
-def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_features, settings, distributions):
 	print('installing package configuration')
-	# os.system('pip3 install -U imbalanced-learn')
+	os.system('pip3 install -U imbalanced-learn')
+	# os.system('pip3 install scipy==1.4.1')
+	# os.system('pip3 install scikit-learn==0.20.1')
 
 	# Authors: Guillaume Lemaitre <g.lemaitre58@gmail.com>
 	# License: MIT
-
 	from collections import Counter
-
 	from sklearn.datasets import load_iris
 	from sklearn.svm import LinearSVC
 	from sklearn.model_selection import train_test_split
-
-	from imblearn.datasets import make_imbalance
+	# from imblearn.datasets import make_imbalance
 	from imblearn.under_sampling import NearMiss
 	from imblearn.pipeline import make_pipeline
 	from imblearn.metrics import classification_report_imbalanced
 
 	# get train and test data
 	print('creating training data')
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
-
+	# we need to load the classes into this one to pull the dataset and load the imbalance
+	
 	# create file names
-	model_name=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_btb'
+	model_name=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_imbalancedlearn'
 
 	if mtype == 'c':
 		model_name=model_name+'_classification'
@@ -112,78 +111,33 @@ def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_featu
 	# this should be the model directory
 	hostdir=os.getcwd()
 
-	# open a sample featurization 
-	labels_dir=prev_dir(hostdir)+'/train_dir/'+jsonfilename.split('_')[0]
-	os.chdir(labels_dir)
-	listdir=os.listdir()
-	features_file=''
-	for i in range(len(listdir)):
-		if listdir[i].endswith('.json'):
-			features_file=listdir[i]
+	# make dataset
+	RANDOM_STATE = 42
 
-	# load features file and get labels 
-	labels_=json.load(open(features_file))['features'][problemtype][default_features]['labels']
-	os.chdir(hostdir)
+	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, random_state=RANDOM_STATE)
 
-	# make a temporary folder for the training session
-	try:
-		os.mkdir(folder)
-		os.chdir(folder)
-	except:
-		shutil.rmtree(folder)
-		os.mkdir(folder)
-		os.chdir(folder)
+	print('Training target statistics: {}'.format(Counter(y_train)))
+	print('Testing target statistics: {}'.format(Counter(y_test)))
 
-	all_data = convert_(alldata, labels, labels_)
-	train_data= convert_(X_train, y_train, labels_)
-	test_data= convert_(X_test, y_test, labels_)
-	all_data.to_csv(csvfilename)
-	data=pd.read_csv(csvfilename)
-	os.remove(csvfilename)
-	train_data.to_csv(trainfile)
-	test_data.to_csv(testfile)
-
-	dataset_id, filename=create_json(folder, trainfile)
-
-	abz_dir=os.getcwd()
-
-	os.mkdir(dataset_id)
-	os.chdir(dataset_id)
-	os.mkdir('tables')
-	shutil.copy(hostdir+'/'+folder+'/'+trainfile, os.getcwd()+'/tables/'+trainfile)
 
 	if mtype=='classification':
-
-		RANDOM_STATE = 42
-
-		# Create a folder to fetch the dataset
-		iris = load_iris()
-
-		# sampling strategy here to create imbalance
-		X, y = make_imbalance(iris.data, iris.target,
-		                      sampling_strategy={0: 25, 1: 50, 2: 50},
-		                      random_state=RANDOM_STATE)
-
-		X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=RANDOM_STATE)
-
-		print('Training target statistics: {}'.format(Counter(y_train)))
-		print('Testing target statistics: {}'.format(Counter(y_test)))
 
 		# Create a pipeline
 		pipeline = make_pipeline(NearMiss(version=2),
 		                         LinearSVC(random_state=RANDOM_STATE))
+
 		pipeline.fit(X_train, y_train)
 
 		# Classify and report the results
-		print(classification_report_imbalanced(y_test, pipeline.predict(X_test)))
-
-		# tuner.record(parameters, score)
-		print('ACCURACY:')
+		label_predictions = pipeline.predict(X_test)
+		report=classification_report_imbalanced(y_test, label_predictions)
+		print(report)
+		accuracy=accuracy_score(y_test, label_predictions)
 		print(accuracy)
 
 		# now save the model in .pickle
 		f=open(model_name,'wb')
-		pickle.dump(best_model, f)
+		pickle.dump(pipeline, f)
 		f.close()
 
 		# SAVE JSON FILE 
@@ -194,8 +148,10 @@ def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_featu
 			'feature_set':default_features,
 			'model name':jsonfilename[0:-5]+'.pickle',
 			'accuracy': float(accuracy),
-			'model type':'BTB_%s'%(mtype),
+			'report': report,
+			'model type':'imbalancedlearn_%s'%(mtype),
 			'settings': settings,
+			'distributions': distributions,
 		}
 
 		json.dump(data,jsonfile)
@@ -203,12 +159,28 @@ def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_featu
 
 	elif mtype == 'regression':
 
-
-		# do regression analysis...
+		from sklearn.model_selection import StratifiedKFold
+		from imblearn.over_sampling import ADASYN, SMOTE, RandomOverSampler
+		from imblearn.pipeline import make_pipeline
+		from sklearn.linear_model import LogisticRegression
 		
+
+		# Create a pipeline (usually works well with logistic regression 2 classes)
+		pipeline = make_pipeline(SMOTE(random_state=RANDOM_STATE),
+		                         LogisticRegression(random_state=0))
+		pipeline.fit(X_train, y_train)
+		predictions=pipeline.predict(X_test)
+		mse_error=mean_squared_error(y_test,predictions)
+		r2_score_=r2_score(y_test, predictions)
+
+		print('MSE_Error')
+		print(mse_error)
+		print('R^2')
+		print(r2_score_)
+
 		# now save the model in .pickle
 		f=open(model_name,'wb')
-		pickle.dump(best_model, f)
+		pickle.dump(pipeline, f)
 		f.close()
 		
 		# save the .JSON file
@@ -217,10 +189,12 @@ def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_featu
 
 		data={'sample type': problemtype,
 			'feature_set':default_features,
-			'model name':jsonfilename[0:-5]+'.pickle',
-			'r2_score': float(r2_score),
-			'model type':'BTB_%s'%(mtype),
+			'model name':model_name,
+			'mse_error': mse_error,
+			'r2_score': float(r2_score_),
+			'model type':'imbalancedlearn_%s'%(mtype),
 			'settings': settings,
+			'distributions': distributions,
 		}
 
 		json.dump(data,jsonfile)
@@ -237,8 +211,8 @@ def train_imbalance(alldata, labels, mtype, jsonfile, problemtype, default_featu
 		os.chdir(problemtype+'_models')
 
 	# now move all the files over to proper model directory 
-	shutil.copy(hostdir+'/'+folder+'/'+dataset_id+'/'+model_name, hostdir+'/%s_models/%s'%(problemtype,model_name))
-	shutil.copy(hostdir+'/'+folder+'/'+dataset_id+'/'+jsonfilename, hostdir+'/%s_models/%s'%(problemtype,jsonfilename))
+	shutil.copy(hostdir+'/'+model_name, hostdir+'/%s_models/%s'%(problemtype,model_name))
+	shutil.copy(hostdir+'/'+jsonfilename, hostdir+'/%s_models/%s'%(problemtype,jsonfilename))
 
 	# get variables
 	model_dir=hostdir+'/%s_models/'%(problemtype)

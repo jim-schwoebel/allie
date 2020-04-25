@@ -74,6 +74,7 @@ Note you can extend this to any of the feature types. The table below overviews 
 ## Future
 
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in
+* https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model
 
 https://github.com/jiankaiwang/sophia
 

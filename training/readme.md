@@ -65,10 +65,11 @@ There are 21 potential training script settings (customized in the 'settings.jso
 * '[btb](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
+* '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
 * '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. &#x2611;
 * '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' - seems stable - hyperparameter optimization of the data. &#x2611;
 * '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;
-* '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
+* '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques to work on data with different numbers of samples. (could use expanding a bit). &#x2611;
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data. &#x2611; 
 * '[mlblocks](https://github.com/HDI-Project/MLBlocks)' - most recent framework @ MIT, regression and classification. &#x2611; 
@@ -114,7 +115,6 @@ from sklearn.metrics import classification_report
 * [Keras-tuner](https://github.com/keras-team/keras-tuner) - Hyperparameter tuning for humans.
 * '[gentun](https://github.com/gmontamat/gentun)' - genetic algorithm approach with distributed training capability.
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
-* '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques.
 * [Misvm](https://github.com/garydoranjr/misvm)
 
 #### Model compression 

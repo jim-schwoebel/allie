@@ -119,6 +119,7 @@ from sklearn.metrics import classification_report
 * '[python-sherpa](https://github.com/sherpa-ai/sherpa)' - sherpa bayesian hyperparameter optimization
 * [Misvm](https://github.com/garydoranjr/misvm)
 * [Tacotron architecture](https://github.com/KinglittleQ/GST-Tacotron) 
+* getting into various other ML architectures for keyword spotting, etc.
 
 #### Model compression 
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.

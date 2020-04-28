@@ -193,17 +193,17 @@ Here are some settings that you can modify in this settings.json file and the va
 | default_csv_transcriber | the default video transcriber if transcribe_csv == True (string). | 'raw text' | 'raw text' | 
 | default_training_script | the specified traning script(s) to train machine learning models. Note that if you specify multiple training scripts here that the training scripts will be executed serially (list). | ['tpot'] |['alphapy', 'atm', 'autobazaar', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']| 
 | clean_data | specifies whether or not you'd like to clean / pre-process data in folders before model training (boolean). |  True | True, False | 
-| default_audio_cleaners | the specified cleaning scripts to employ when cleaning audio data | [] | [] |
-| default_text_cleaners | the specified cleaning scripts to employ when cleaning text data | [] | [] |
-| default_image_cleaners | the specified cleaning scripts to employ when cleaning image data | [] | [] |
-| default_video_cleaners | the specified cleaning scripts to employ when cleaning video data | [] | [] |
-| default_csv_cleaners | the specified cleaning scripts to employ when cleaning csv data | [] | [] |
+| default_audio_cleaners | the specified cleaning scripts to employ when cleaning audio data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_text_cleaners | the specified cleaning scripts to employ when cleaning text data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_image_cleaners | the specified cleaning scripts to employ when cleaning image data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_video_cleaners | the specified cleaning scripts to employ when cleaning video data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_csv_cleaners | the specified cleaning scripts to employ when cleaning csv data | ['remove_duplicates'] | ['remove_duplicates'] |
 | augment_data | specifies whether or not you'd like to augment data during training (boolean). |  False | True, False | 
 | default_audio_augmenters | the specified cleaning scripts to employ when augmenting audio data | ['normalize_volume', 'add_noise', 'time_stretch'] | ['normalize_volume', 'normalize_pitch', 'time_stretch', 'opus_enhance', 'trim_silence', 'remove_noise', 'add_noise'] |
-| default_text_augmenters | the specified cleaning scripts to employ when augmenting text data | [] | [] |
-| default_image_augmenters | the specified cleaning scripts to employ when augmenting image data | [] | [] |
-| default_video_augmenters | the specified cleaning scripts to employ when augmenting video data | [] | [] |
-| default_csv_augmenters | the specified cleaning scripts to employ when augmenting csv data | [] | [] |
+| default_text_augmenters | the specified cleaning scripts to employ when augmenting text data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_image_augmenters | the specified cleaning scripts to employ when augmenting image data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_video_augmenters | the specified cleaning scripts to employ when augmenting video data | ['remove_duplicates'] | ['remove_duplicates'] |
+| default_csv_augmenters | the specified cleaning scripts to employ when augmenting csv data | ['remove_duplicates'] | ['remove_duplicates'] |
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
 | default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
 | select_features | if True, select features via the default_feature_selector (or set of feature selectors) | False | True, False | 

@@ -26,7 +26,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 8. add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2)
 9. tie new datasets with SurveyLex product / CLI interface with downloads
 10. documentation of the repository / jupyter notebooks with examples in research paper 
-11. make sure Allie passes all tests on linux, etc.
+11. make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
 
 ## getting started 
 

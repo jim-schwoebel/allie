@@ -14,6 +14,17 @@ Here are some things that Allie can do:
 
 You can read more about Allie in the [wiki documentation](https://github.com/jim-schwoebel/allie/wiki).
 
+## active things to finish before a live launch
+1. add in default_augmenters / get live into Allie
+2. add in default_cleaners / get live into Allie 
+3. add in transcriber settings as a list ['pocketsphinx', 'google', 'aws'], etc.
+4. finish up model trainers and clean them up
+5. add in all model loaders from the model trainers 
+6. test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)
+7. create docker containers for production for any arbitrary data type 
+8. add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2)
+9. tie new datasets with SurveyLex product / CLI interface with downloads
+10. documentation of the repository / jupyter notebooks with examples in research paper 
 ## getting started 
 
 ### MacOS

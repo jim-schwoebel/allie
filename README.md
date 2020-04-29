@@ -14,7 +14,8 @@ Here are some things that Allie can do:
 
 You can read more about Allie in the [wiki documentation](https://github.com/jim-schwoebel/allie/wiki).
 
-## active things to finish before a live launch
+## active things to finish before a live launch [ongoing list]
+
 1. add in default_augmenters / get live into Allie
 2. add in default_cleaners / get live into Allie 
 3. add in transcriber settings as a list ['pocketsphinx', 'google', 'aws'], etc.

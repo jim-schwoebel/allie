@@ -18,7 +18,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 1. add in default_augmenters / get live into Allie
 2. add in default_cleaners / get live into Allie 
-3. add in transcriber settings as a list ['pocketsphinx', 'google', 'aws'], etc.
+3. add in transcriber settings as a list ['pocketsphinx', 'deepspeech', 'google', 'aws'], etc.
 4. finish up model trainers and clean them up
 5. add in all model loaders from the model trainers 
 6. test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)

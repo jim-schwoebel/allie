@@ -173,6 +173,7 @@ tried but not user friendly
 * input text files 
 
 ### Images 
+* [kornia[(https://github.com/kornia/kornia)
 * SURF, ORB, BRIEF, AKAZE - corner detectors - SIFT is most accurate but also the slowest (patented), BRIEF is the fastest but least accurate
 * allow Ludwig model type to dictate featurization (.JSON files --> .CSV). - 'image_ludwig_features'
 * Yolo-9000 classes - https://github.com/philipperemy/yolo-9000

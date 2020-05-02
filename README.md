@@ -28,6 +28,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 10. documentation of the repository / jupyter notebooks with examples in research paper 
 11. Create nice CLI interface for all of Allie's functionality using OptionParser()
 12. make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
+13. Add in ![statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
 
 ## getting started 
 

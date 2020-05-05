@@ -110,8 +110,11 @@ def visualize_features(classes, problem_type, curdir, default_features):
 
 	plt.bar(y_pos, performance, align='center', alpha=0.5)
 	plt.xticks(y_pos, objects)
-	plt.tight_layout()
 	plt.xticks(rotation=90)
+	plt.title('Counts per class')
+	plt.ylabel('Count')
+	plt.xlabel('Class')
+	plt.tight_layout()
 	plt.savefig('classes.png')
 
 	# Manifold type options 

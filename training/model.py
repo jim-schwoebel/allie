@@ -151,37 +151,43 @@ except:
 	count=0
 	availableclasses=list()
 	for i in range(len(folders)):
-	    if data[folders[i]]==problemtype:
-	    	availableclasses.append(folders[i])
-	    	count=count+1
+		if data[folders[i]]==problemtype:
+			availableclasses.append(folders[i])
+			count=count+1
 
 	classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
 	print('these are the available classes: ')
 	print(availableclasses)
+	# get all if all (good for many classes)
 	classes=list()
-	stillavailable=list()
-	for i in range(int(classnum)):
-		class_=input('what is class #%s \n'%(str(i+1)))
-
-		while class_ not in availableclasses and class_ not in '' or class_ in classes:
-			print('\n')
-			print('------------------ERROR------------------')
-			print('the input class does not exist (for %s files).'%(problemtype))
-			print('these are the available classes: ')
-			if len(stillavailable)==0:
-				print(availableclasses)
-			else:
-				print(stillavailable)
-			print('------------------------------------')
+	if classnum=='all':
+		for i in range(len(availableclasses)):
+			classes.append(availableclasses[i])
+	else:
+				
+		stillavailable=list()
+		for i in range(int(classnum)):
 			class_=input('what is class #%s \n'%(str(i+1)))
-		for j in range(len(availableclasses)):
-			stillavailable=list()
-			if availableclasses[j] not in classes:
-				stillavailable.append(availableclasses[j])
-		if class_ == '':
-			class_=stillavailable[0]
 
-		classes.append(class_)
+			while class_ not in availableclasses and class_ not in '' or class_ in classes:
+				print('\n')
+				print('------------------ERROR------------------')
+				print('the input class does not exist (for %s files).'%(problemtype))
+				print('these are the available classes: ')
+				if len(stillavailable)==0:
+					print(availableclasses)
+				else:
+					print(stillavailable)
+				print('------------------------------------')
+				class_=input('what is class #%s \n'%(str(i+1)))
+			for j in range(len(availableclasses)):
+				stillavailable=list()
+				if availableclasses[j] not in classes:
+					stillavailable.append(availableclasses[j])
+			if class_ == '':
+				class_=stillavailable[0]
+
+			classes.append(class_)
 
 	common_name=input('what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) \n')
 	mtype=input('is this a classification (c) or regression (r) problem? \n')
@@ -278,15 +284,16 @@ for i in range(len(classes)):
 
 # perform class balance such that both classes have the same number
 # of members. 
+
 os.chdir(prevdir+'/training/')
 model_dir=prevdir+'/models'
 
 jsonfile=''
 for i in range(len(classes)):
-    if i==0:
-        jsonfile=classes[i]
-    else:
-        jsonfile=jsonfile+'_'+classes[i]
+	if i==0:
+		jsonfile=classes[i]
+	else:
+		jsonfile=jsonfile+'_'+classes[i]
 
 jsonfile=jsonfile+'.json'
 
@@ -298,47 +305,24 @@ lengths=list()
 
 # check to see all classes are same length and reshape if necessary
 for i in range(len(classes)):
-    class_=g[classes[i]]
-    lengths.append(len(class_))
+	class_=g[classes[i]]
+	lengths.append(len(class_))
 
 lengths=np.array(lengths)
 minlength=np.amin(lengths)
 
 # now load all the classes
 for i in range(len(classes)):
-    class_=g[classes[i]]
-    random.shuffle(class_)
+	class_=g[classes[i]]
+	random.shuffle(class_)
 
-    if len(class_) > minlength:
-        print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
-        class_=class_[0:minlength]
+	if len(class_) > minlength:
+		print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
+		class_=class_[0:minlength]
 
-    for j in range(len(class_)):
-        alldata.append(class_[j])
-        labels.append(i)
-
-# create data for imbalanced model training (if necessary)
-alldata_imbalance=list()
-labels_imbalance=list()
-
-if 'imbalance-learn' in settings['default_training_script']:
-	# now load all the classes
-	lengths_imbalance=list()
-	for i in range(len(classes)):
-	    class_=g[classes[i]]
-	    print(len(class_))
-	    lengths_imbalance.append(len(class_))
-	    random.shuffle(class_)
-
-	    for j in range(len(class_)):
-	        alldata_imbalance.append(class_[j])
-	        labels_imbalance.append(i)
-
-	# pritnt for testing
-	print(len(alldata_imbalance))
-	print(len(labels_imbalance))
-	distributions=list(1/len(labels_imbalance)*np.array(lengths_imbalance))
-	print(distributions)
+	for j in range(len(class_)):
+		alldata.append(class_[j])
+		labels.append(i)
 
 ############################################################
 ## 			        DATA TRANSFORMATION 			      ##
@@ -512,9 +496,6 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='hungabunga':
 		import train_hungabunga as thung
 		modelname, modeldir=thung.train_hungabunga(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-	elif default_training_script=='imbalance-learn':
-		import train_imbalance as timb
-		modelname, modeldir=timb.train_imbalance(alldata_imbalance,labels_imbalance,mtype,jsonfile,problemtype,default_featurenames, settings, distributions)
 	elif default_training_script=='keras':
 		import train_keras as tk
 		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
@@ -584,7 +565,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 			from keras_compressor.compressor import compress
 
 			logging.basicConfig(
-			    level=logging.INFO,
+				level=logging.INFO,
 			)
 
 			try:

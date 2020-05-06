@@ -139,6 +139,7 @@ looking into actively
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [Essentia](https://github.com/kushagrasurana/Essentia-feature-extraction)
 * [Wav2Letter](https://github.com/facebookresearch/wav2letter/wiki/Python-bindings) 
+* [Formant extraction](https://github.com/danilobellini/audiolazy/blob/master/examples/formants.py)
 
 tried but not user friendly
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths

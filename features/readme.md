@@ -131,6 +131,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Audio
 looking into actively
+* [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [speechpy](https://github.com/astorfi/speechpy)
 * [sigfeat](https://github.com/SiggiGue/sigfeat)
 * [pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - f0 and other estimators

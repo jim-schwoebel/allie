@@ -189,7 +189,7 @@ def librosa_featurize(filename, categorize):
         spectral_labels=stats_labels('mfcc_'+str(i), spectral_labels)
     for i in range(2):
         spectral_labels=stats_labels('poly_'+str(i), spectral_labels)
-    spectral_labels=stats_labels('spectral_cenroid', spectral_labels)
+    spectral_labels=stats_labels('spectral_centroid', spectral_labels)
     spectral_labels=stats_labels('spectral_bandwidth', spectral_labels)
     spectral_labels=stats_labels('spectral_contrast', spectral_labels)
     spectral_labels=stats_labels('spectral_flatness', spectral_labels)

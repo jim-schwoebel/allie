@@ -35,6 +35,10 @@ Once you run this script, you output many visualizations. These visualizations c
 ## tSNE plot
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/tsne.png)
 
+## Working on now
+
+https://umap-learn.readthedocs.io/en/latest/basic_usage.html
+
 ## Using streamlit
 
 ```

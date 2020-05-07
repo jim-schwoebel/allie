@@ -37,9 +37,9 @@ Once you run this script, you output many visualizations. These visualizations c
 
 ## Working on now
 
-https://umap-learn.readthedocs.io/en/latest/basic_usage.html
-https://github.com/sepandhaghighi/pycm - confusion matrix / ROC curve
-https://github.com/wcipriano/pretty-print-confusion-matrix
+- https://umap-learn.readthedocs.io/en/latest/basic_usage.html
+- https://github.com/sepandhaghighi/pycm - confusion matrix / ROC curve
+- https://github.com/wcipriano/pretty-print-confusion-matrix
 
 ## Using streamlit
 

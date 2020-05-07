@@ -39,14 +39,15 @@ def convert_(X_train, y_train):
 
     data['class']=y_train
     data=pd.DataFrame(data, columns = list(data))
-
+    
     return data
 
 def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
 
     # convert to proper format 
     all_data = convert_(alldata, labels)
-
+    print(all_data)
+    
     # create file names 
     jsonfilename=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_atm.json'
     csvfilename=jsonfilename[0:-5]+'.csv'
@@ -67,9 +68,9 @@ def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, s
         os.chdir('atm_temp')
         
     # train models 
-    all_data.to_csv(csvfilename)
+    all_data.to_csv(csvfilename,index=False)
     results = atm.run(train_path=csvfilename)
-    results.describe()
+    data_results_=str(results.describe())
     bestclassifier=str(results.get_best_classifier())
     scores=str(results.get_scores())
 
@@ -88,7 +89,6 @@ def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, s
 
     # now export model 
     print('exporting .PICKLE model %s'%(picklefilename))
-    
 
     # same json files 
     print('saving .JSON file (%s)'%(jsonfilename))
@@ -98,6 +98,7 @@ def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, s
             'feature_set':default_features,
             'model name':jsonfilename[0:-5]+'.pickle',
             'accuracy':bestclassifier,
+            'results': data_results_,
             'model type':'ATM_classification - '+bestclassifier,
             'scores': scores,
             'settings': settings,
@@ -107,6 +108,7 @@ def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, s
             'feature_set':default_features,
             'model name':jsonfilename[0:-5]+'.pickle',
             'accuracy':bestclassifier,
+            'results': data_results_,
             'model type':'ATM_regression - '+bestclassifier,
             'scores': scores,
             'settings': settings,

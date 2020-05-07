@@ -6,6 +6,8 @@ from atm import ATM
 def convert_(X_train, y_train):
 
     os.system('pip3 install atm==0.2.2')
+    os.system('pip3 install pandas==0.24.2')
+
     feature_list=list()
     for i in range(len(X_train[0])):
         feature_list.append('feature_'+str(i))

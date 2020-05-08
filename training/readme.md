@@ -111,6 +111,7 @@ from sklearn.metrics import classification_report
 ## Actively working on (in future)
 
 ### Exploring now
+* [hyperparameter tuning w/ Ray](https://github.com/ray-project/ray) - tuning hyperparameters 
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [MLBox](https://github.com/AxeldeRomblay/MLBox) - State-of-the art predictive models for classification and regression (Deep Learning, Stacking, LightGBM,…).
 * [SMAC3](https://github.com/automl/SMAC3) - SMAC performs Bayesian Optimization in combination with a aggressive racing mechanism to efficiently decide which of two configuration performs better.

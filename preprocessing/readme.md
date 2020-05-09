@@ -74,6 +74,7 @@ Note you can extend this to any of the feature types. The table below overviews 
 ## Future
 
 * RFE - correlation matrix to reduce - https://towardsdatascience.com/feature-selection-in-python-recursive-feature-elimination-19f1c39b8d15
+* support vector machine based on recursive feature elimination and particle swarm optimization (SVM-RFE-PSO)
 
 ### Feature transformations 
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)

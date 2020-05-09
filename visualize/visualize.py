@@ -8,15 +8,30 @@ Note that this automatically happens as part of the modeling process
 if visualize==True in settings.
 ML models: https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f
 '''
-import os, sys, json, time
+import os, sys, json, time, shutil
 from tqdm import tqdm
-from yellowbrick.features import Rank1D, Rank2D, Manifold
+from yellowbrick.features import Rank1D, Rank2D, Manifold, FeatureImportances
 from yellowbrick.features.pca import PCADecomposition
 from sklearn.ensemble import ExtraTreesClassifier
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
 import numpy as np
+from yellowbrick.text import UMAPVisualizer
 import pandas as pd
+from sklearn.linear_model import LogisticRegression
+from sklearn.naive_bayes import GaussianNB
+from yellowbrick.classifier import precision_recall_curve, discrimination_threshold
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import Lasso
+from yellowbrick.regressor import residuals_plot
+from yellowbrick.regressor import prediction_error
+from sklearn.cluster import KMeans
+from yellowbrick.cluster import silhouette_visualizer
+from sklearn.cluster import MiniBatchKMeans
+from yellowbrick.cluster import intercluster_distance
+from sklearn.metrics import auc, roc_curve
+from yellowbrick.classifier.rocauc import roc_auc
+from yellowbrick.regressor import cooks_distance
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -102,6 +117,14 @@ def visualize_features(classes, problem_type, curdir, default_features):
 
 	# Visualize each class (quick plot)
 	##################################
+	visualization_dir='visualization_session'
+	try:
+		os.mkdir(visualization_dir)
+	except:
+		shutil.rmtree(visualization_dir)
+		os.mkdir(visualization_dir)
+		os.chdir(visualization_dir)
+
 	objects = tuple(set(class_labels))
 	y_pos = np.arange(len(objects))
 	performance=list()
@@ -117,6 +140,11 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	plt.tight_layout()
 	plt.savefig('classes.png')
 
+	##################################
+	# CLUSTERING!!!
+	##################################
+
+	##################################
 	# Manifold type options 
 	##################################
 	'''
@@ -137,6 +165,11 @@ def visualize_features(classes, problem_type, curdir, default_features):
 		"tsne" (default)
 		t-SNE: converts the similarity of points into probabilities then uses those probabilities to create an embedding.
 	'''
+	curdir=visualization_dir
+	os.mkdir('clustering')
+	os.chdir('clustering')
+
+	# tSNE 
 	plt.figure()
 	viz = Manifold(manifold="tsne", classes=set(classes))
 	viz.fit_transform(np.array(features), tclass_labels)
@@ -152,6 +185,76 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	visualizer.poof(outpath="pca.png") 
 	plt.close()
 	# os.system('open pca.png')
+
+	# spectral embedding
+	plt.figure()
+	viz = Manifold(manifold="spectral", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="spectral.png")   
+	plt.close()
+
+	# lle embedding
+	plt.figure()
+	viz = Manifold(manifold="lle", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="lle.png")   
+	plt.close()
+
+	# ltsa
+	plt.figure()
+	viz = Manifold(manifold="ltsa", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="ltsa.png")   
+	plt.close()
+
+	# hessian
+	# plt.figure()
+	# viz = Manifold(manifold="hessian", method='dense', classes=set(classes))
+	# viz.fit_transform(np.array(features), tclass_labels)
+	# viz.poof(outpath="hessian.png")   
+	# plt.close()
+
+	# modified
+	plt.figure()
+	viz = Manifold(manifold="modified", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="modified.png")   
+	plt.close()
+
+	# isomap
+	plt.figure()
+	viz = Manifold(manifold="isomap", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="isomap.png")   
+	plt.close()
+
+	# mds
+	plt.figure()
+	viz = Manifold(manifold="mds", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="mds.png")   
+	plt.close()
+
+	# spectral
+	plt.figure()
+	viz = Manifold(manifold="spectral", classes=set(classes))
+	viz.fit_transform(np.array(features), tclass_labels)
+	viz.poof(outpath="spectral.png")   
+	plt.close()
+
+	# UMAP embedding
+	plt.figure()
+	umap = UMAPVisualizer(metric='cosine', classes=set(classes))
+	umap.fit(np.array(features), tclass_labels)
+	umap.poof(outpath="umap.png") 
+	plt.close()
+
+	#################################
+	# 	  FEATURE RANKING!!
+	#################################
+	os.chdir(curdir)
+	os.mkdir('feature_ranking')
+	os.chdir('feature_ranking')
 
 	# Shapiro rank algorithm (1D)
 	plt.figure()
@@ -180,10 +283,74 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	model.fit(np.array(features),tclass_labels)
 	print(model.feature_importances_)
 	feat_importances = pd.Series(model.feature_importances_, index=feature_labels[0])
-	feat_importances.nlargest(10).plot(kind='barh')
+	feat_importances.nlargest(20).plot(kind='barh')
 	plt.tight_layout()
 	plt.savefig('feature_importance.png')
-	os.system('open feature_importance.png')
+	plt.close()
+	# os.system('open feature_importance.png')
+
+	# now do feature importances with lasso
+	plt.figure()
+	viz = FeatureImportances(Lasso())
+	viz.fit(np.array(features), tclass_labels)
+	viz.poof(outpath="lasso.png")
+	plt.close()
+
+	##################################################
+	# PRECISION-RECALL CURVES
+	##################################################
+
+	os.chdir(curdir)
+	os.mkdir('modeling')
+	os.chdir('modeling')
+
+	plt.figure()
+	visualizer = precision_recall_curve(GaussianNB(), np.array(features), tclass_labels)
+	visualizer.poof(outpath="precision-recall.png")
+	plt.close()
+
+	plt.figure()
+	visualizer = roc_auc(LogisticRegression(), np.array(features), tclass_labels)
+	visualizer.poof(outpath="roc_curve.png")
+	plt.close()
+
+	plt.figure()
+	visualizer = discrimination_threshold(
+	    LogisticRegression(multi_class="auto", solver="liblinear"), np.array(features), tclass_labels)
+	visualizer.poof(outpath="thresholds.png")
+	plt.close()
+
+	plt.figure()
+	visualizer = residuals_plot(
+	    Ridge(), np.array(features), tclass_labels, train_color="maroon", test_color="gold"
+	)
+	visualizer.poof(outpath="residuals.png")
+	plt.close()
+
+	plt.figure()
+	visualizer = prediction_error(Lasso(), np.array(features), tclass_labels)
+	visualizer.poof(outpath='prediction_error.png')
+	plt.close()
+
+	# outlier detection
+	plt.figure()
+	visualizer = cooks_distance(np.array(features), tclass_labels, draw_threshold=True, linefmt="C0-", markerfmt=",")
+	visualizer.poof(outpath='outliers.png')
+	plt.close()
+
+	# cluster numbers
+	plt.figure()
+	visualizer = silhouette_visualizer(KMeans(len(set(tclass_labels)), random_state=42), np.array(features))
+	visualizer.poof(outpath='siloutte.png')
+	plt.close()
+
+	# cluster distance
+	plt.figure()
+	visualizer = intercluster_distance(KMeans(len(set(tclass_labels)), random_state=777), np.array(features))
+	visualizer.poof(outpath='cluster_distance.png')
+	plt.close()
+
+	os.chdir(curdir)
 
 	return ''
 

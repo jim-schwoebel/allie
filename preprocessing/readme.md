@@ -73,6 +73,8 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 ## Future
 
+* RFE - correlation matrix to reduce - https://towardsdatascience.com/feature-selection-in-python-recursive-feature-elimination-19f1c39b8d15
+
 ### Feature transformations 
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)
 * https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model

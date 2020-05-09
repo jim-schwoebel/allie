@@ -76,6 +76,27 @@ Note you can extend this to any of the feature types. The table below overviews 
 * RFE - correlation matrix to reduce - https://towardsdatascience.com/feature-selection-in-python-recursive-feature-elimination-19f1c39b8d15
 * support vector machine based on recursive feature elimination and particle swarm optimization (SVM-RFE-PSO)
 
+make all train and test data into binary labels - https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+
+```python3
+le=preprocessing.LabelEncoder()
+le.fit(y_train)
+y_train=le.transform(y_train)
+y_test=le.transform(y_test)
+
+'''
+>>> le = preprocessing.LabelEncoder()
+>>> le.fit(["paris", "paris", "tokyo", "amsterdam"])
+LabelEncoder()
+>>> list(le.classes_)
+['amsterdam', 'paris', 'tokyo']
+>>> le.transform(["tokyo", "tokyo", "paris"])
+array([2, 2, 1]...)
+>>> list(le.inverse_transform([2, 2, 1]))
+['tokyo', 'tokyo', 'paris']
+'''
+```
+
 ### Feature transformations 
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)
 * https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model

@@ -32,6 +32,7 @@ from yellowbrick.cluster import intercluster_distance
 from sklearn.metrics import auc, roc_curve
 from yellowbrick.classifier.rocauc import roc_auc
 from yellowbrick.regressor import cooks_distance
+import seaborn as sns
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -165,7 +166,7 @@ def visualize_features(classes, problem_type, curdir, default_features):
 		"tsne" (default)
 		t-SNE: converts the similarity of points into probabilities then uses those probabilities to create an embedding.
 	'''
-	curdir=visualization_dir
+	curdir=os.getcwd()
 	os.mkdir('clustering')
 	os.chdir('clustering')
 
@@ -295,6 +296,61 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	viz.fit(np.array(features), tclass_labels)
 	viz.poof(outpath="lasso.png")
 	plt.close()
+
+	# correlation plots with feature removal if corr > 0.90
+	# https://towardsdatascience.com/feature-selection-correlation-and-p-value-da8921bfb3cf
+	pfeatures=dict()
+	for i in range(len(feature_labels[0])):
+		feature=list()
+		for j in range(len(features)):
+			feature.append(features[j][i])
+
+		print(feature_labels[0][i])
+		print(feature)
+		pfeatures[feature_labels[0][i]]=feature
+
+	data=pd.DataFrame(pfeatures)
+	newdata=data
+
+	# now remove correlated features
+	corr = data.corr()
+
+	fig=sns.heatmap(corr)
+	fig = fig.get_figure()
+	fig.tight_layout()
+	fig.savefig('heatmap.png')
+	plt.close(fig)
+
+	columns = np.full((corr.shape[0],), True, dtype=bool)
+	for i in range(corr.shape[0]):
+	    for j in range(i+1, corr.shape[0]):
+	        if corr.iloc[i,j] >= 0.9:
+	            if columns[j]:
+	                columns[j] = False
+	selected_columns = data.columns[columns]
+	data = data[selected_columns]
+	corr=data.corr()
+
+	fig=sns.heatmap(corr)
+	fig = fig.get_figure()
+	fig.tight_layout()
+	fig.savefig('heatmap_clean.png')
+	plt.close(fig)
+
+	# --> p values
+	# --> https://towardsdatascience.com/the-next-level-of-data-visualization-in-python-dd6e99039d5e / https://github.com/WillKoehrsen/Data-Analysis/blob/master/plotly/Plotly%20Whirlwind%20Introduction.ipynb- plotly for correlation heatmap and scatterplot matrix
+	# --> https://seaborn.pydata.org/tutorial/distributions.html
+	os.mkdir('feature_plots')
+	os.chdir('feature_plots')
+
+	newdata['classes']=class_labels
+
+	for j in range(len(feature_labels[0])):
+		fig=sns.violinplot(x=newdata.classes, y=newdata[feature_labels[0][j]])
+		fig = fig.get_figure()
+		fig.tight_layout()
+		fig.savefig('%s_%s.png'%(str(j), feature_labels[0][j]))
+		plt.close(fig)
 
 	##################################################
 	# PRECISION-RECALL CURVES

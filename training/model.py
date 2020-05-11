@@ -488,7 +488,6 @@ Now we can train the machine learning model via the default_training script.
 Note you can specify multiple training scripts and it will consecutively model the 
 files appropriately. 
 '''
-
 print('----------------------------------')
 print('          MODELING DATA           ')
 print('----------------------------------')

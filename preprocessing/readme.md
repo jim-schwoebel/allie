@@ -117,7 +117,7 @@ array([2, 2, 1]...)
 - All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
 - FCBF - https://github.com/shiralkarprashant/FCBF
 - wkNN-FS - https://github.com/bugatap/WkNN-FS
-- https://github.com/chasedehan/BoostARoota - random forest methods (faster than Boruta)
+- https://github.com/chasedehan/BoostARoota - random forest methods (faster than Boruta) or [here](https://github.com/dawidkopczyk/feature_selection/blob/master/algorithms.py)
 - https://github.com/danielhomola/mifs - MRMR / mutual information
 - https://github.com/manuel-calzolari/sklearn-genetic - genetic algo feature selection
 - https://github.com/cod3licious/autofeat - automated feature engineering using combinatorics

@@ -33,6 +33,15 @@ from sklearn.metrics import auc, roc_curve
 from yellowbrick.classifier.rocauc import roc_auc
 from yellowbrick.regressor import cooks_distance
 import seaborn as sns
+import umap
+
+# feature selection
+from sklearn.feature_selection import SelectPercentile, chi2
+from sklearn.model_selection import cross_val_score
+from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.svm import SVC
+from sklearn.preprocessing import MinMaxScaler
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -60,12 +69,30 @@ def get_classes():
 
 	return classes
 
-def get_features(classes, problem_type, default_features):
+def get_features(classes, problem_type, default_features, balance_data):
 
 	features=list()
 	feature_labels=list()
 	class_labels=list()
 	curdir=os.getcwd()
+	lengths=list()
+	minlength=0
+
+	if balance_data == True:
+		for i in range(len(classes)):
+			os.chdir(curdir+'/'+classes[i])
+			listdir=os.listdir()
+			jsonfiles=list()
+			for j in range(len(listdir)):
+				if listdir[j].endswith('.json'):
+					jsonfiles.append(listdir[j])
+
+			lengths.append(len(jsonfiles))
+		minlength=np.amin(lengths)
+
+		print('minimum length is...')
+		print(minlength)
+		time.sleep(2)
 
 	for i in range(len(classes)):
 
@@ -82,29 +109,53 @@ def get_features(classes, problem_type, default_features):
 		feature_list=list(g['features'][problem_type])
 
 		for j in tqdm(range(len(jsonfiles))):
-			g=json.load(open(jsonfiles[j]))
-			feature_=list()
-			label_=list()
-			try:
-				for k in range(len(feature_list)):
-					if feature_list[k] in default_features:
-						feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
-						label_=label_+g['features'][problem_type][feature_list[k]]['labels']
+			if balance_data==True:
+				if class_labels.count(classes[i]) > minlength:
+					break 
+				else:
+					g=json.load(open(jsonfiles[j]))
+					feature_=list()
+					label_=list()
+					try:
+						for k in range(len(feature_list)):
+							if feature_list[k] in default_features:
+								feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
+								label_=label_+g['features'][problem_type][feature_list[k]]['labels']
 
-				# quick quality check to only add to list if the feature_labels match in length the features_
-				if len(feature_) == len(label_):
-					features.append(feature_)
-					feature_labels.append(label_)
-					class_labels.append(classes[i])
-			except:
-				print('error loading feature embedding: %s'%(feature_list[k].upper()))
+						# quick quality check to only add to list if the feature_labels match in length the features_
+						if len(feature_) == len(label_):
+							features.append(feature_)
+							feature_labels.append(label_)
+							class_labels.append(classes[i])
+					except:
+						print('error loading feature embedding: %s'%(feature_list[k].upper()))
+
+			else:
+				g=json.load(open(jsonfiles[j]))
+				feature_=list()
+				label_=list()
+				try:
+					for k in range(len(feature_list)):
+						if feature_list[k] in default_features:
+							feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
+							label_=label_+g['features'][problem_type][feature_list[k]]['labels']
+
+					# quick quality check to only add to list if the feature_labels match in length the features_
+					if len(feature_) == len(label_):
+						features.append(feature_)
+						feature_labels.append(label_)
+						class_labels.append(classes[i])
+				except:
+					print('error loading feature embedding: %s'%(feature_list[k].upper()))
 
 
 	return features, feature_labels, class_labels 
 
-def visualize_features(classes, problem_type, curdir, default_features):
+def visualize_features(classes, problem_type, curdir, default_features, balance_data):
 
-	features, feature_labels, class_labels = get_features(classes, problem_type, default_features)
+	# make features into label encoder here
+	features, feature_labels, class_labels = get_features(classes, problem_type, default_features, balance_data)
+
 	print(features)
 	os.chdir(curdir)
 	le = preprocessing.LabelEncoder()
@@ -140,6 +191,7 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	plt.xlabel('Class')
 	plt.tight_layout()
 	plt.savefig('classes.png')
+	plt.close()
 
 	##################################
 	# CLUSTERING!!!
@@ -202,11 +254,11 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	plt.close()
 
 	# ltsa
-	plt.figure()
-	viz = Manifold(manifold="ltsa", classes=set(classes))
-	viz.fit_transform(np.array(features), tclass_labels)
-	viz.poof(outpath="ltsa.png")   
-	plt.close()
+	# plt.figure()
+	# viz = Manifold(manifold="ltsa", classes=set(classes))
+	# viz.fit_transform(np.array(features), tclass_labels)
+	# viz.poof(outpath="ltsa.png")   
+	# plt.close()
 
 	# hessian
 	# plt.figure()
@@ -245,8 +297,8 @@ def visualize_features(classes, problem_type, curdir, default_features):
 
 	# UMAP embedding
 	plt.figure()
-	umap = UMAPVisualizer(metric='cosine', classes=set(classes))
-	umap.fit(np.array(features), tclass_labels)
+	umap = UMAPVisualizer(metric='cosine', classes=set(classes), title="UMAP embedding")
+	umap.fit_transform(np.array(features), class_labels)
 	umap.poof(outpath="umap.png") 
 	plt.close()
 
@@ -367,7 +419,7 @@ def visualize_features(classes, problem_type, curdir, default_features):
 
 	plt.figure()
 	visualizer = roc_auc(LogisticRegression(), np.array(features), tclass_labels)
-	visualizer.poof(outpath="roc_curve.png")
+	visualizer.poof(outpath="roc_curve_train.png")
 	plt.close()
 
 	plt.figure()
@@ -406,6 +458,30 @@ def visualize_features(classes, problem_type, curdir, default_features):
 	visualizer.poof(outpath='cluster_distance.png')
 	plt.close()
 
+	# plot percentile of features plot with SVM to see which percentile for features is optimal
+	features=preprocessing.MinMaxScaler().fit_transform(features)
+	clf = Pipeline([('anova', SelectPercentile(chi2)),
+	                ('scaler', StandardScaler()),
+	                ('logr', LogisticRegression())])
+	score_means = list()
+	score_stds = list()
+	percentiles = (1, 3, 6, 10, 15, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+
+	for percentile in percentiles:
+	    clf.set_params(anova__percentile=percentile)
+	    this_scores = cross_val_score(clf, np.array(features), class_labels)
+	    score_means.append(this_scores.mean())
+	    score_stds.append(this_scores.std())
+
+	plt.errorbar(percentiles, score_means, np.array(score_stds))
+	plt.title('Performance of the LogisticRegression-Anova varying the percent features selected')
+	plt.xticks(np.linspace(0, 100, 11, endpoint=True))
+	plt.xlabel('Percentile')
+	plt.ylabel('Accuracy Score')
+	plt.axis('tight')
+	plt.savefig('logr_percentile_plot.png')
+	plt.close()
+
 	os.chdir(curdir)
 
 	return ''
@@ -415,8 +491,6 @@ curdir=os.getcwd()
 basedir=prev_dir(curdir)
 os.chdir(basedir+'/train_dir')
 problem_type=sys.argv[1]
-# 	plt.ylabel('Usage')
-# 	plt.title('Programming language usage')
 print(problem_type)
 classes=get_classes()
 
@@ -433,4 +507,6 @@ elif problem_type=='video':
 elif problem_type=='csv':
 	default_features=settings['default_csv_features']
 
-visualize_features(classes, problem_type, curdir, default_features)
+balance_data=settings['balance_data']
+
+visualize_features(classes, problem_type, curdir, default_features, balance_data)

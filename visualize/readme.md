@@ -56,8 +56,41 @@ This then generates a tree structure of graphs, for example below:
 
 Once you run this script, you output many visualizations. These visualizations can be customized within the script itself with some simple modifications. See below for some of the visualizations you can make.
 
-Note that this script considers whether or not to balance datasets (e.g. "balance_data": true in settings.json) - so make sure you adjust your settings as to whether or not you'd like to balance the data before running the script above.
+Note that this script considers whether or not to balance datasets (e.g. "balance_data": true in settings.json) - so make sure you adjust your settings as to whether or not you'd like to balance the data before running the script above. These were the settings used to create the visualizations below:
 
+```
+{
+  "augment_data": false,
+  "balance_data": true,
+  "clean_data": false,
+  "create_YAML": true,
+  "default_audio_features": [ "spectrogram_features", "librosa_features" ],
+  "default_audio_transcriber": "pocketsphinx",
+  "default_csv_features": [ "csv_features" ],
+  "default_csv_transcriber": "raw text",
+  "default_dimensionality_reducer": [ "pca" ],
+  "default_feature_selector": [ "lasso" ],
+  "default_image_features": [ "image_features" ],
+  "default_image_transcriber": "tesseract",
+  "default_scaler": [ "standard_scaler" ],
+  "default_text_features": [ "nltk_features" ],
+  "default_text_transcriber": "raw text",
+  "default_training_script": [ "tpot" ],
+  "default_video_features": [ "video_features" ],
+  "default_video_transcriber": "tesseract (averaged over frames)",
+  "model_compress": false,
+  "reduce_dimensions": true,
+  "scale_features": true,
+  "select_features": true,
+  "test_size": 0.25,
+  "transcribe_audio": false,
+  "transcribe_csv": true,
+  "transcribe_image": true,
+  "transcribe_text": true,
+  "transcribe_videos": true,
+  "visualize_data": true
+}
+```
 ### numbers in each class
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)
 

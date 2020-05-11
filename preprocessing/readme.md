@@ -119,6 +119,7 @@ array([2, 2, 1]...)
 - https://github.com/danielhomola/mifs - MRMR / mutual information
 - https://github.com/manuel-calzolari/sklearn-genetic - genetic algo feature selection
 - https://github.com/cod3licious/autofeat - automated feature engineering using combinatorics
+- https://github.com/LastShekel/ITMO_FS - Feature selection library in python (many methods)
 
 ## References
 * [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

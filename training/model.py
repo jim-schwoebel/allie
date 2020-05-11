@@ -27,6 +27,8 @@ female = second class [via N number of classes]
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
 import os, sys, pickle, json, random, shutil, time
+import pandas as pd
+from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
@@ -82,6 +84,32 @@ def classifyfolder(listdir):
 	maxind=countvalues.index(maxvalue)
 	return countlist[maxind]
 
+def convert_csv(X_train, y_train, labels):
+	'''
+	Take in a array of features and labels and output a 
+	pandas DataFrame format for easy .CSV expor and for model training.
+
+	This is important to make sure all machine learning training sessions
+	use the same dataset (so they can be benchmarked appropriately).
+	'''
+	feature_list=labels
+	data=dict()
+
+	for i in range(len(X_train)):
+		for j in range(len(feature_list)-1):
+			if i > 0:
+				try:
+					data[feature_list[j]]=data[feature_list[j]]+[X_train[i][j]]
+				except:
+					pass
+			else:
+				data[feature_list[j]]=[X_train[i][j]]
+				# print(data)
+
+	data['class_']=y_train
+	data=pd.DataFrame(data, columns = list(data))
+
+	return data
 ###############################################################
 ##                    LOADING SETTINGS                       ##
 ###############################################################
@@ -198,7 +226,6 @@ except:
 # print(problemtype)
 # time.sleep(10)
 
-
 ###############################################################
 ##                    CLEAN THE DATA                        ##
 ###############################################################
@@ -279,14 +306,15 @@ for i in range(len(classes)):
 	data[class_type]=feature_list
 
 ###############################################################
-##                    DATA PRE-PROCESSING                    ##
+##                  GENERATE TRAINING DATA                   ##
 ###############################################################
 
 # perform class balance such that both classes have the same number
-# of members. 
+# of members (true by default, but can also be false)
 
 os.chdir(prevdir+'/training/')
 model_dir=prevdir+'/models'
+balance=settings['balance_data']
 
 jsonfile=''
 for i in range(len(classes)):
@@ -316,13 +344,52 @@ for i in range(len(classes)):
 	class_=g[classes[i]]
 	random.shuffle(class_)
 
-	if len(class_) > minlength:
-		print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
-		class_=class_[0:minlength]
+	# only balance if specified in settings
+	if balance==True:
+		if len(class_) > minlength:
+			print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
+			class_=class_[0:minlength]
 
 	for j in range(len(class_)):
 		alldata.append(class_[j])
 		labels.append(i)
+
+# load features file and get feature labels by loading in classes
+labels_dir=prevdir+'/train_dir/'+classes[0]
+os.chdir(labels_dir)
+listdir=os.listdir()
+features_file=''
+for i in range(len(listdir)):
+	if listdir[i].endswith('.json'):
+		features_file=listdir[i]
+
+labels_=list()
+
+for i in range(len(default_features)):
+	tlabel=json.load(open(features_file))['features'][problemtype][default_features[i]]['labels']
+	labels_=labels_+tlabel
+
+# print(labels_)
+os.chdir(model_dir)
+
+# get the split from the settings.json
+try:
+	test_size=settings['test_size'][0]
+except:
+	test_size=0.25
+
+# split the data 
+X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=test_size)
+
+# create training and testing datasets and save to a .CSV file for archive purposes
+# this ensures that all machine learning training methods use the same training data
+all_data = convert_csv(alldata, labels, labels_)
+train_data= convert_csv(X_train, y_train, labels_)
+test_data= convert_csv(X_test, y_test, labels_)
+basefile=jsonfile[0:-5]
+all_data.to_csv(basefile+'_all.csv',index=False)
+train_data.to_csv(basefile+'_train.csv',index=False)
+test_data.to_csv(basefile+'_test.csv',index=False)
 
 ############################################################
 ## 			        DATA TRANSFORMATION 			      ##
@@ -391,9 +458,26 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 	os.chdir(preprocess_dir)
 	os.system('python3 load_transformer.py %s %s'%(problemtype, transform_file))
 
-os.chdir(model_dir)
-alldata=np.asarray(alldata)
-labels=np.asarray(labels)
+	# now make new files as .CSV
+	os.chdir(model_dir)
+	alldata=np.asarray(alldata)
+	labels=np.asarray(labels)
+
+	# split the data 
+	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=test_size)
+
+	# get new labels_ array 
+	labels_=list()
+	for i in range(len(alldata[0].tolist())):
+		labels_.append('transformed_feature_%s'%(str(i)))
+
+	# now create transformed excel sheets
+	all_data = convert_csv(alldata, labels, labels_)
+	train_data= convert_csv(X_train, y_train, labels_)
+	test_data= convert_csv(X_test, y_test, labels_)
+	all_data.to_csv(basefile+'_all_transformed.csv',index=False)
+	train_data.to_csv(basefile+'_train_transformed.csv',index=False)
+	test_data.to_csv(basefile+'_test_transformed.csv',index=False)
 
 ############################################################
 ## 					TRAIN THE MODEL 					  ##
@@ -419,6 +503,7 @@ for i in range(len(default_features)):
 	else:
 		default_featurenames=default_featurenames+'_|_'+default_features[i] 
 
+i=0
 for i in tqdm(range(len(default_training_scripts)), desc=default_training_scripts[i]):
 	# go to model directory 
 	os.chdir(model_dir)

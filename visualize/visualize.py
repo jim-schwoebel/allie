@@ -334,7 +334,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	plt.figure()
 	model = ExtraTreesClassifier()
 	model.fit(np.array(features),tclass_labels)
-	print(model.feature_importances_)
+	# print(model.feature_importances_)
 	feat_importances = pd.Series(model.feature_importances_, index=feature_labels[0])
 	feat_importances.nlargest(20).plot(kind='barh')
 	plt.tight_layout()
@@ -357,8 +357,8 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 		for j in range(len(features)):
 			feature.append(features[j][i])
 
-		print(feature_labels[0][i])
-		print(feature)
+		# print(feature_labels[0][i])
+		# print(feature)
 		pfeatures[feature_labels[0][i]]=feature
 
 	data=pd.DataFrame(pfeatures)

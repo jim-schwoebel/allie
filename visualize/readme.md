@@ -64,7 +64,7 @@ Note that this script considers whether or not to balance datasets (e.g. "balanc
   "balance_data": true,
   "clean_data": false,
   "create_YAML": true,
-  "default_audio_features": [ "spectrogram_features", "librosa_features" ],
+  "default_audio_features": [ "librosa_features", "pyworld_features" ],
   "default_audio_transcriber": "pocketsphinx",
   "default_csv_features": [ "csv_features" ],
   "default_csv_transcriber": "raw text",

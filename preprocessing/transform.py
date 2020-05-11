@@ -17,6 +17,17 @@ from sklearn.pipeline import Pipeline
 from tqdm import tqdm
 import pickle
 
+class NpEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        elif isinstance(obj, np.floating):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        else:
+            return super(NpEncoder, self).default(obj)
+            
 def prev_dir(directory):
 	g=directory.split('/')
 	dir_=''
@@ -141,7 +152,7 @@ print(class_labels[0])
 
 component_num=int(len(features[0])/3)
 
-# create a scikit-learn pipeline 
+# create a scikit-learn pipeline
 estimators = []
 
 ################################################
@@ -181,6 +192,26 @@ if select_features == True:
 
 print(estimators)
 model=Pipeline(estimators)
+
+# make all train and test data into binary labels
+# https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
+le=preprocessing.LabelEncoder()
+le.fit(y_train)
+y_train=le.transform(y_train)
+y_test=le.transform(y_test)
+
+'''
+>>> le = preprocessing.LabelEncoder()
+>>> le.fit(["paris", "paris", "tokyo", "amsterdam"])
+LabelEncoder()
+>>> list(le.classes_)
+['amsterdam', 'paris', 'tokyo']
+>>> le.transform(["tokyo", "tokyo", "paris"])
+array([2, 2, 1]...)
+>>> list(le.inverse_transform([2, 2, 1]))
+['tokyo', 'tokyo', 'paris']
+'''
+
 model=model.fit(X_train, y_train)
 print(len(X_test))
 X_test=model.transform(X_test)
@@ -214,6 +245,7 @@ if select_features == True:
 		filename=filename+'_'+default_selectors[i]
 
 model_file=filename+'.pickle'
+le_file=filename+'_encoder.pickle'
 json_file=filename+'.json'
 
 # create model
@@ -221,19 +253,30 @@ modelfile=open(model_file,'wb')
 pickle.dump(model, modelfile)
 modelfile.close()
 
-print(type(X_train[0]))
-print(type(y_train[0]))
-print(type(X_test[0]))
+# save encoder (to decode classes into the future)
+modelfile=open(le_file,'wb')
+pickle.dump(le, modelfile)
+modelfile.close()
 
 # write json file 
 data={'estimators': str(estimators),
 	  'settings': settings,
-	  'classes': list(set(y_test)),
+	  'classes': np.array(list(set(y_test))).tolist(),
 	  'sample input X': X_train[0],
-	  'sample input Y': y_train[0],
+	  'sample input Y': int(y_train[0]),
 	  'sample transformed X': X_test[0].tolist(),
-	  'sample transformed y': y_train[0],
+	  'sample transformed y': int(y_train[0]),
 	 }
+
+# for testing purposes
+# data_list=list(data)
+# for i in range(len(data_list)):
+# 	print(data_list[i])
+# 	print(type(data[data_list[i]]))
+# 	if str(type(data[data_list[i]])) == "<class 'list'>":
+# 		for j in range(len(data[data_list[i]])):
+# 			print(type(data[data_list[i]][j]))
+
 jsonfile=open(json_file,'w')
 json.dump(data,jsonfile)
 jsonfile.close()

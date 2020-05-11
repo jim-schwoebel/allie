@@ -98,6 +98,7 @@ array([2, 2, 1]...)
 ```
 
 ### Feature transformations 
+
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)
 * https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model
 * https://pypi.org/project/umap-learn/ - add in UMAP embedding
@@ -110,6 +111,10 @@ array([2, 2, 1]...)
 - Quadratic Discriminate Analysis (QDA): Rscript, RPubs
 - Singular Value Decomposition (SVD): notebook
 - t-SNE
+
+### Feature selection techniques
+
+All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
 
 ## References
 * [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

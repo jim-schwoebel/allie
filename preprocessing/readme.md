@@ -115,6 +115,7 @@ array([2, 2, 1]...)
 ### Feature selection techniques
 
 - All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
+- FCBF - https://github.com/shiralkarprashant/FCBF
 - https://github.com/chasedehan/BoostARoota - random forest methods (faster than Boruta)
 - https://github.com/danielhomola/mifs - MRMR / mutual information
 - https://github.com/manuel-calzolari/sklearn-genetic - genetic algo feature selection

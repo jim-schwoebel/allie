@@ -1,6 +1,6 @@
 {
   "augment_data": false,
-  "bias_discovery": true,
+  "balance_data": true,
   "clean_data": false,
   "create_YAML": true,
   "default_audio_features": [ "spectrogram_features", "librosa_features" ],

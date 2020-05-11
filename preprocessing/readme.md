@@ -7,6 +7,9 @@ This is done via a convention for transformers, which are in the proper folders 
 These are added during the modeling process.
 
 ## Scaling data
+https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing techniques 
+--> default scaling to quantile transformer could work here 
+--> visualization could use which feature selection strategy works best in terms of model accuracy
 
 * scaler = preprocessing.StandardScaler().fit(X_train)
 * quantile_transformer = preprocessing.QuantileTransformer(random_state=0)

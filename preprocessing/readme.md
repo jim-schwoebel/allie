@@ -118,6 +118,7 @@ array([2, 2, 1]...)
 - https://github.com/chasedehan/BoostARoota - random forest methods (faster than Boruta)
 - https://github.com/danielhomola/mifs - MRMR / mutual information
 - https://github.com/manuel-calzolari/sklearn-genetic - genetic algo feature selection
+- https://github.com/cod3licious/autofeat - automated feature engineering using combinatorics
 
 ## References
 * [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

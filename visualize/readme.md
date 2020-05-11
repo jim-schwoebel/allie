@@ -2,7 +2,7 @@
 
 This is a univeral visualizer for all types of data. 
 
-Note that this is a setting in the Allie Framework (e.g. visualization == True | False).
+Note that this is a setting in the Allie Framework (e.g. "visualize_data": true). 
 
 ## Getting started
 To get started, you first need to featurize some data using featurizations scripts. This data must be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) in the form of directories. To read more about featurization, [see this page](https://github.com/jim-schwoebel/allie/tree/master/features).
@@ -51,9 +51,12 @@ This then generates a tree structure of graphs, for example below:
     ├── siloutte.png
     └── thresholds.png
 ```
+
 ## Output graphs
 
 Once you run this script, you output many visualizations. These visualizations can be customized within the script itself with some simple modifications. See below for some of the visualizations you can make.
+
+Note that this script considers whether or not to balance datasets (e.g. "balance_data": true in settings.json) - so make sure you adjust your settings as to whether or not you'd like to balance the data before running the script above.
 
 ### numbers in each class
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)

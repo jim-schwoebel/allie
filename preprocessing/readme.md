@@ -114,9 +114,9 @@ array([2, 2, 1]...)
 
 ### Feature selection techniques
 
-All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
-https://github.com/scikit-learn-contrib/boruta_py - add in bortua (random forest method published on)
-https://github.com/danielhomola/mifs - MRMR / mutual information
+- All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
+- https://github.com/scikit-learn-contrib/boruta_py - add in bortua (random forest method published on)
+- https://github.com/danielhomola/mifs - MRMR / mutual information
 
 ## References
 * [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

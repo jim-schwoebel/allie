@@ -16,6 +16,41 @@ Note you need to pass through the problem_type (e.g. 'audio'|'text'|'image'|'vid
 python3 visualize.py audio males females 
 ```
 
+This then generates a tree structure of graphs, for example below:
+
+```
+├── classes.png
+├── clustering
+│   ├── isomap.png
+│   ├── lle.png
+│   ├── mds.png
+│   ├── modified.png
+│   ├── pca.png
+│   ├── spectral.png
+│   ├── tsne.png
+│   └── umap.png
+├── feature_ranking
+│   ├── feature_importance.png
+│   ├── feature_plots
+│   │   ├── 0_log_spectrogram_mean_feature_1.png
+│   │   ├── 100_log_spectrogram_mean_feature_101.png
+        ... [all the features in the current feature set]
+│   ├── heatmap.png
+│   ├── heatmap_clean.png
+│   ├── lasso.png
+│   ├── pearson.png
+│   └── shapiro.png
+└── modeling
+    ├── cluster_distance.png
+    ├── logr_percentile_plot.png
+    ├── outliers.png
+    ├── precision-recall.png
+    ├── prediction_error.png
+    ├── residuals.png
+    ├── roc_curve_train.png
+    ├── siloutte.png
+    └── thresholds.png
+```
 ## Output graphs
 
 Once you run this script, you output many visualizations. These visualizations can be customized within the script itself with some simple modifications. See below for some of the visualizations you can make.

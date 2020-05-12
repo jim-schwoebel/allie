@@ -169,9 +169,11 @@ def train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype
 	# now move all the files over to proper model directory 
 	if transform_model != '':
 		shutil.move(cur_dir2+'/transform.pickle', model_dir_temp+'/'+jsonfilename[0:-5]+'_transform.pickle')
+	if mtype in ['classification', 'c']:
+		shutil.move(cur_dir2+'/'+confname, model_dir_temp+'/'+confname)
+
 	shutil.move(cur_dir2+'/'+jsonfilename, model_dir_temp+'/'+jsonfilename)
 	shutil.move(cur_dir2+'/'+tpotname, model_dir_temp+'/'+tpotname)
-	shutil.move(cur_dir2+'/'+confname, model_dir_temp+'/'+confname)
 	shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', model_dir_temp+'/'+jsonfilename[0:-5]+'.pickle')
 	os.chdir(cur_dir2)
 

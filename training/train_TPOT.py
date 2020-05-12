@@ -10,6 +10,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.preprocessing import StandardScaler
+from sklearn.pipeline import Pipeline
 
 def plot_confusion_matrix(cm, classes,
 						  normalize=False,
@@ -43,28 +44,25 @@ def plot_confusion_matrix(cm, classes,
 	plt.ylabel('True label')
 	plt.xlabel('Predicted label')
 	
-def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
-	
-	# get train and test data
-	classes=jsonfile[0:-5].split('_')
-	
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
-	modelname=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')
+def train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_features,transform_model,settings):
+			   
+	# get modelname 
+	modelname=common_name_model
 	confname=modelname+'.png'
 	
-	if mtype in [' classification', 'c']:
+	if mtype in ['classification', 'c']:
 		tpot=TPOTClassifier(generations=5, population_size=50, verbosity=2, n_jobs=-1)
-		tpotname='%s_tpotclassifier.py'%(modelname)
+		tpotname='%s_classifier.py'%(modelname)
 	elif mtype in ['regression','r']:
 		tpot = TPOTRegressor(generations=5, population_size=20, verbosity=2)
-		tpotname='%s_tpotregression.py'%(modelname)
+		tpotname='%s_regression.py'%(modelname)
 	tpot.fit(X_train, y_train)
 	tpot.export(tpotname)
 
-	# export data to .json format 
+	# export data to .json format (use all data to improve model accuracy, as it's already tested)
 	data={
-		'data': alldata.tolist(),
-		'labels': labels.tolist(),
+		'data': X_train.tolist(),
+		'labels': y_train.tolist(),
 	}
 
 	jsonfilename='%s_.json'%(tpotname[0:-3])
@@ -95,11 +93,21 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, 
 
 	# get confusion matrix
 	# plot https://pythonhealthcare.org/2018/04/21/77-machine-learning-visualising-accuracy-and-error-in-a-classification-model-with-a-confusion-matrix/
+	if transform_model == '':
+		pass
+	else:
+		# dump the tranform model into the current working directory
+		tmodel=open('transform.pickle','wb')
+		pickle.dump(transform_model, tmodel)
+		tmodel.close()
+
 	model=pickle.load(open(tpotname[0:-3]+'.pickle','rb'))
 	y_pred=model.predict(X_test)
 	accuracy=accuracy_score(y_test,y_pred)
 	cnf_matrix = confusion_matrix(y_test, y_pred)
-	np.set_printoptions(precision=2) # set NumPy to 2 decimal places
+	np.set_printoptions(precision=2) 
+	# set NumPy to 2 decimal places
+	
 	# Plot normalized confusion matrix
 	plt.figure()
 	plot_confusion_matrix(cnf_matrix, classes, normalize=True, title='Normalized confusion matrix')
@@ -134,18 +142,31 @@ def train_TPOT(alldata, labels, mtype, jsonfile, problemtype, default_features, 
 	json.dump(data,jsonfile)
 	jsonfile.close()
 
+	# copy the folder in case there are multiple models being trained 
+	shutil.copytree('model_session', jsonfilename[0:-5])
 	cur_dir2=os.getcwd()
+	os.chdir(jsonfilename[0:-5])
+	os.mkdir('model')
+	os.chdir('model')
+	model_dir_temp=os.getcwd()
+
+	# now move all the files over to proper model directory 
+	if transform_model != '':
+		shutil.move(cur_dir2+'/transform.pickle', model_dir_temp+'/'+jsonfilename[0:-5]+'_transform.pickle')
+	shutil.move(cur_dir2+'/'+jsonfilename, model_dir_temp+'/'+jsonfilename)
+	shutil.move(cur_dir2+'/'+tpotname, model_dir_temp+'/'+tpotname)
+	shutil.move(cur_dir2+'/'+confname, model_dir_temp+'/'+confname)
+	shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', model_dir_temp+'/'+jsonfilename[0:-5]+'.pickle')
+	os.chdir(cur_dir2)
+
 	try:
 		os.chdir(problemtype+'_models')
 	except:
 		os.mkdir(problemtype+'_models')
 		os.chdir(problemtype+'_models')
 
-	# now move all the files over to proper model directory 
-	shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
-	shutil.move(cur_dir2+'/'+tpotname, os.getcwd()+'/'+tpotname)
-	shutil.move(cur_dir2+'/'+confname, os.getcwd()+'/'+confname)
-	shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-5]+'.pickle')
+	# copy directory to proper location and delete temporary folder
+	shutil.move(cur_dir2+'/'+jsonfilename[0:-5], os.getcwd()+'/'+jsonfilename[0:-5])
 
 	# get model_name 
 	model_name=jsonfilename[0:-5]+'.pickle'

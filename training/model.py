@@ -95,7 +95,7 @@ def convert_csv(X_train, y_train, labels):
 	feature_list=labels
 	data=dict()
 
-	for i in range(len(X_train)):
+	for i in tqdm(range(len(X_train)), desc='converting csv...'):
 		for j in range(len(feature_list)-1):
 			if i > 0:
 				try:
@@ -108,6 +108,8 @@ def convert_csv(X_train, y_train, labels):
 
 	data['class_']=y_train
 	data=pd.DataFrame(data, columns = list(data))
+	# print this because in pretty much every case you will write the .CSV file afterwards
+	print('writing csv file...')
 
 	return data
 ###############################################################
@@ -383,13 +385,27 @@ X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=t
 
 # create training and testing datasets and save to a .CSV file for archive purposes
 # this ensures that all machine learning training methods use the same training data
-all_data = convert_csv(alldata, labels, labels_)
-train_data= convert_csv(X_train, y_train, labels_)
-test_data= convert_csv(X_test, y_test, labels_)
-basefile=jsonfile[0:-5]
-all_data.to_csv(basefile+'_all.csv',index=False)
-train_data.to_csv(basefile+'_train.csv',index=False)
-test_data.to_csv(basefile+'_test.csv',index=False)
+basefile=common_name
+try:
+	print(basefile+'_all.csv'.upper())
+	all_data = convert_csv(alldata, labels, labels_)
+	all_data.to_csv(basefile+'_all.csv',index=False)
+except:
+	print('error exporting data into excel sheet %s'%(basefile+'_all.csv'))
+
+try:
+	print(basefile+'_train.csv'.upper())
+	train_data= convert_csv(X_train, y_train, labels_)
+	train_data.to_csv(basefile+'_train.csv',index=False)
+except:
+	print('error exporting data into excel sheet %s'%(basefile+'_train.csv'))
+
+try:
+	print(basefile+'_test.csv'.upper())
+	test_data= convert_csv(X_test, y_test, labels_)
+	test_data.to_csv(basefile+'_test.csv',index=False)
+except:
+	print('error exporting data into excel sheet %s'%(basefile+'_test.csv'))
 
 ############################################################
 ## 			        DATA TRANSFORMATION 			      ##
@@ -472,12 +488,79 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 		labels_.append('transformed_feature_%s'%(str(i)))
 
 	# now create transformed excel sheets
-	all_data = convert_csv(alldata, labels, labels_)
-	train_data= convert_csv(X_train, y_train, labels_)
-	test_data= convert_csv(X_test, y_test, labels_)
-	all_data.to_csv(basefile+'_all_transformed.csv',index=False)
-	train_data.to_csv(basefile+'_train_transformed.csv',index=False)
-	test_data.to_csv(basefile+'_test_transformed.csv',index=False)
+	try:
+		print(basefile+'_all_transformed.csv'.upper())
+		all_data = convert_csv(alldata, labels, labels_)
+		all_data.to_csv(basefile+'_all_transformed.csv',index=False)
+	except:
+		print('error exporting data into excel sheet %s'%(basefile+'_all_transformed.csv'))
+	try:
+		print(basefile+'_train_transformed.csv'.upper())
+		train_data= convert_csv(X_train, y_train, labels_)
+		train_data.to_csv(basefile+'_train_transformed.csv',index=False)
+	except:
+		print('error exporting data into excel sheet %s'%(basefile+'_train_transformed.csv'))
+
+	try:
+		print(basefile+'_test_transformed.csv'.upper())
+		test_data= convert_csv(X_test, y_test, labels_)
+		test_data.to_csv(basefile+'_test_transformed.csv',index=False)
+	except:
+		print('error exporting data into excel sheet %s'%(basefile+'_test_transformed.csv'))
+else:
+	# make a transform model == '' so that later during model training this can be skipped
+	transform_model=''
+
+############################################################
+## 					VISUALIZE DATA  					  ##
+############################################################
+
+visualize_data=settings['visualize_data']
+visual_dir=prevdir+'/visualize'
+os.chdir(visual_dir)
+
+if visualize_data == True:
+	print('----------------------------------')
+	print('       VISUALIZING DATA           ')
+	print('----------------------------------')
+
+	command='python3 visualize.py %s'%(problemtype)
+	for i in range(len(classes)):
+		command=command+' '+classes[i]
+	os.system(command)
+
+	# restructure the visualization directory 
+	os.chdir(visual_dir+'/visualization_session')
+	os.mkdir('visualizations')
+	vizdir=os.getcwd()
+
+	# move directories so that visualization is separate from main model directory 
+	shutil.move(vizdir+'/clustering', vizdir+'/visualizations/clustering')
+	shutil.move(vizdir+'/feature_ranking', vizdir+'/visualizations/feature_ranking')
+	shutil.move(vizdir+'/model_selection', vizdir+'/visualizations/model_selection')
+	
+	# go back to main direcotry
+	os.chdir(visual_dir)
+
+	# now copy over the visualization directory to 
+	try:
+		shutil.copytree(visual_dir+'/visualization_session', model_dir+'/model_session')
+	except:
+		shutil.rmtree(model_dir+'/model_session')
+		shutil.copytree(visual_dir+'/visualization_session', model_dir+'/model_session')
+	# copy over settings.json 
+	shutil.copy(prevdir+'/settings.json',model_dir+'/model_session/settings.json')
+
+else:
+	# make a model session for next section if it doesn't exist from visualization directory
+	os.chdir(model_dir)
+	try:
+		os.mkdir('model_session')
+	except:
+		shutil.rmtree('model_session')
+		os.mkdir('model_session')
+	# copy over settings.json
+	shutil.copy(prevdir+'/settings.json', model_dir+'/model_session/settings.json')
 
 ############################################################
 ## 					TRAIN THE MODEL 					  ##
@@ -487,21 +570,68 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 Now we can train the machine learning model via the default_training script.
 Note you can specify multiple training scripts and it will consecutively model the 
 files appropriately. 
+
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
+#  Here is what all the variables below mean:
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^#
+
+# alldata = list of features in an array for model training  
+	# [[39.0, 112.15384615384616, 70.98195453650514, 248.0, 14.0, 103.0, 143.5546875...],
+		...
+	   [39.0, 112.15384615384616, 70.98195453650514, 248.0, 14.0, 103.0, 143.5546875,...]]
+# labels = list of labels in an array for model training 
+	# ['males','females',...,'males','females']
+# mtype = classification or regression problem?
+	# 'c' --> classification
+	# 'r' --> regression
+# jsonfile = filename of the .JSON document seprating classes
+	#  males_females.json
+# problemtype = type of problem selected
+	# 'audio' --> audio files
+	# 'image' --> images files
+	# 'text' --> text files
+	# 'video' --> video files
+	# 'csv' --> csv files 
+# default_featurenames = default feature array(s) to use for modeling 
+	# ['librosa_features']
+# settings = overall settings currenty used for model training 
+	# output of the settings.json document 
+
+-----
+
+# transform_model = transformer model if applicable 
+	# useful for data transformation as part of the model initialization process (if pickle file)
+	# uses scikit-learn pipeline 
+
+# X_train, X_test, y_train, y_test
+	# training datasets used in the .CSV documents 
+	# also can use pandas dataframe if applicable (loading in the model dir)
 '''
 print('----------------------------------')
 print('          MODELING DATA           ')
 print('----------------------------------')
 
+# get defaults 
 default_training_scripts=settings['default_training_script']
 model_compress=settings['model_compress']
-
 default_featurenames=''
+
 for i in range(len(default_features)):
 	if i ==0:
 		default_featurenames=default_features[i]
 	else:
 		default_featurenames=default_featurenames+'_|_'+default_features[i] 
 
+# just move all .csv files into model_session directory
+os.chdir(model_dir)
+listdir=os.listdir()
+os.chdir('model_session')
+os.mkdir('data')
+for i in range(len(listdir)):
+	if listdir[i].endswith('.csv'):
+		shutil.move(model_dir+'/'+listdir[i], os.getcwd()+'/data/'+listdir[i])
+
+# initialize i (for tqdm) and go through all model training scripts 
 i=0
 for i in tqdm(range(len(default_training_scripts)), desc=default_training_scripts[i]):
 	# go to model directory 
@@ -520,35 +650,27 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='alphapy':
 		import train_alphapy as talpy
 		modelname, modeldir=talpy.train_alphapy(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-
 	elif default_training_script=='atm':
 		import train_atm as tatm
 		modelname, modeldir=tatm.train_atm(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-	
 	elif default_training_script=='autobazaar':
 		import train_autobazaar as autobzr
 		modelname, modeldir=autobzr.train_autobazaar(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-	
 	elif default_training_script=='autogbt':
 		import train_autogbt as autogbt
 		modelname, modeldir=autogbt.train_autogbt(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-
 	elif default_training_script=='autogluon':
 		import train_autogluon as tautg
 		modelname, modeldir=tautg.train_autogluon(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-		
 	elif default_training_script=='autokaggle':
 		import train_autokaggle as autokag
 		modelname, modeldir=autokag.train_autokaggle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-
 	elif default_training_script=='autokeras':
 		import train_autokeras as autokeras_
 		modelname, modeldir=autokeras_.train_autokeras(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-		
 	elif default_training_script=='automl':
 		import train_automl as auto_ml
 		modelname, modeldir=auto_ml.train_automl(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-
 	elif default_training_script=='autosklearn':
 		print('Autosklearn training is unstable! Please use a different model setting for now.') 
 		# import train_autosklearn as taskl
@@ -599,21 +721,19 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp
 		# tp.train_pLDA(alldata,labels)
-
 	elif default_training_script=='safe':
 		import train_safe as tsafe
 		modelname, modeldir=tsafe.train_safe(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
-
 	elif default_training_script=='scsr':
 		import train_scsr as scsr
 		if mtype == 'c':
 			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, classes, minlength, settings)
 		elif mtype == 'r':
 			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels, settings)
-
 	elif default_training_script=='tpot':
 		import train_TPOT as tt
-		modelname, modeldir=tt.train_TPOT(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		common_name_model=common_name+'_tpot'
+		modelname, modeldir=tt.train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings)
 
 	############################################################
 	## 					COMPRESS MODELS 					  ##

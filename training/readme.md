@@ -49,6 +49,245 @@ Where:
 - male = first class
 - female = second class [via N number of classes]
 
+Goal is to make an output folder like this:
+```
+└── commonname_tpot
+    ├── classes.png
+    ├── clustering
+    │   ├── isomap.png
+    │   ├── lle.png
+    │   ├── mds.png
+    │   ├── modified.png
+    │   ├── pca.png
+    │   ├── spectral.png
+    │   ├── tsne.png
+    │   └── umap.png
+    ├── data
+    │   ├── m_f_all.csv
+    │   ├── m_f_all_transformed.csv
+    │   ├── m_f_test.csv
+    │   ├── m_f_test_transformed.csv
+    │   ├── m_f_train.csv
+    │   └── m_f_train_transformed.csv
+    ├── feature_ranking
+    │   ├── feature_importance.png
+    │   ├── feature_plots
+    │   │   ├── 0_onset_length.png
+    │   │   ├── 100_mfcc_4_minv.png
+    │   │   ├── 101_mfcc_4_median.png
+    │   │   ├── 102_mfcc_5_mean.png
+    │   │   ├── 103_mfcc_5_std.png
+    │   │   ├── 104_mfcc_5_maxv.png
+    │   │   ├── 105_mfcc_5_minv.png
+    │   │   ├── 106_mfcc_5_median.png
+    │   │   ├── 107_mfcc_6_mean.png
+    │   │   ├── 108_mfcc_6_std.png
+    │   │   ├── 109_mfcc_6_maxv.png
+    │   │   ├── 10_onset_strength_minv.png
+    │   │   ├── 110_mfcc_6_minv.png
+    │   │   ├── 111_mfcc_6_median.png
+    │   │   ├── 112_mfcc_7_mean.png
+    │   │   ├── 113_mfcc_7_std.png
+    │   │   ├── 114_mfcc_7_maxv.png
+    │   │   ├── 115_mfcc_7_minv.png
+    │   │   ├── 116_mfcc_7_median.png
+    │   │   ├── 117_mfcc_8_mean.png
+    │   │   ├── 118_mfcc_8_std.png
+    │   │   ├── 119_mfcc_8_maxv.png
+    │   │   ├── 11_onset_strength_median.png
+    │   │   ├── 120_mfcc_8_minv.png
+    │   │   ├── 121_mfcc_8_median.png
+    │   │   ├── 122_mfcc_9_mean.png
+    │   │   ├── 123_mfcc_9_std.png
+    │   │   ├── 124_mfcc_9_maxv.png
+    │   │   ├── 125_mfcc_9_minv.png
+    │   │   ├── 126_mfcc_9_median.png
+    │   │   ├── 127_mfcc_10_mean.png
+    │   │   ├── 128_mfcc_10_std.png
+    │   │   ├── 129_mfcc_10_maxv.png
+    │   │   ├── 12_rhythm_0_mean.png
+    │   │   ├── 130_mfcc_10_minv.png
+    │   │   ├── 131_mfcc_10_median.png
+    │   │   ├── 132_mfcc_11_mean.png
+    │   │   ├── 133_mfcc_11_std.png
+    │   │   ├── 134_mfcc_11_maxv.png
+    │   │   ├── 135_mfcc_11_minv.png
+    │   │   ├── 136_mfcc_11_median.png
+    │   │   ├── 137_mfcc_12_mean.png
+    │   │   ├── 138_mfcc_12_std.png
+    │   │   ├── 139_mfcc_12_maxv.png
+    │   │   ├── 13_rhythm_0_std.png
+    │   │   ├── 140_mfcc_12_minv.png
+    │   │   ├── 141_mfcc_12_median.png
+    │   │   ├── 142_poly_0_mean.png
+    │   │   ├── 143_poly_0_std.png
+    │   │   ├── 144_poly_0_maxv.png
+    │   │   ├── 145_poly_0_minv.png
+    │   │   ├── 146_poly_0_median.png
+    │   │   ├── 147_poly_1_mean.png
+    │   │   ├── 148_poly_1_std.png
+    │   │   ├── 149_poly_1_maxv.png
+    │   │   ├── 14_rhythm_0_maxv.png
+    │   │   ├── 150_poly_1_minv.png
+    │   │   ├── 151_poly_1_median.png
+    │   │   ├── 152_spectral_centroid_mean.png
+    │   │   ├── 153_spectral_centroid_std.png
+    │   │   ├── 154_spectral_centroid_maxv.png
+    │   │   ├── 155_spectral_centroid_minv.png
+    │   │   ├── 156_spectral_centroid_median.png
+    │   │   ├── 157_spectral_bandwidth_mean.png
+    │   │   ├── 158_spectral_bandwidth_std.png
+    │   │   ├── 159_spectral_bandwidth_maxv.png
+    │   │   ├── 15_rhythm_0_minv.png
+    │   │   ├── 160_spectral_bandwidth_minv.png
+    │   │   ├── 161_spectral_bandwidth_median.png
+    │   │   ├── 162_spectral_contrast_mean.png
+    │   │   ├── 163_spectral_contrast_std.png
+    │   │   ├── 164_spectral_contrast_maxv.png
+    │   │   ├── 165_spectral_contrast_minv.png
+    │   │   ├── 166_spectral_contrast_median.png
+    │   │   ├── 167_spectral_flatness_mean.png
+    │   │   ├── 168_spectral_flatness_std.png
+    │   │   ├── 169_spectral_flatness_maxv.png
+    │   │   ├── 16_rhythm_0_median.png
+    │   │   ├── 170_spectral_flatness_minv.png
+    │   │   ├── 171_spectral_flatness_median.png
+    │   │   ├── 172_spectral_rolloff_mean.png
+    │   │   ├── 173_spectral_rolloff_std.png
+    │   │   ├── 174_spectral_rolloff_maxv.png
+    │   │   ├── 175_spectral_rolloff_minv.png
+    │   │   ├── 176_spectral_rolloff_median.png
+    │   │   ├── 177_zero_crossings_mean.png
+    │   │   ├── 178_zero_crossings_std.png
+    │   │   ├── 179_zero_crossings_maxv.png
+    │   │   ├── 17_rhythm_1_mean.png
+    │   │   ├── 180_zero_crossings_minv.png
+    │   │   ├── 181_zero_crossings_median.png
+    │   │   ├── 182_RMSE_mean.png
+    │   │   ├── 183_RMSE_std.png
+    │   │   ├── 184_RMSE_maxv.png
+    │   │   ├── 185_RMSE_minv.png
+    │   │   ├── 186_RMSE_median.png
+    │   │   ├── 18_rhythm_1_std.png
+    │   │   ├── 19_rhythm_1_maxv.png
+    │   │   ├── 1_onset_detect_mean.png
+    │   │   ├── 20_rhythm_1_minv.png
+    │   │   ├── 21_rhythm_1_median.png
+    │   │   ├── 22_rhythm_2_mean.png
+    │   │   ├── 23_rhythm_2_std.png
+    │   │   ├── 24_rhythm_2_maxv.png
+    │   │   ├── 25_rhythm_2_minv.png
+    │   │   ├── 26_rhythm_2_median.png
+    │   │   ├── 27_rhythm_3_mean.png
+    │   │   ├── 28_rhythm_3_std.png
+    │   │   ├── 29_rhythm_3_maxv.png
+    │   │   ├── 2_onset_detect_std.png
+    │   │   ├── 30_rhythm_3_minv.png
+    │   │   ├── 31_rhythm_3_median.png
+    │   │   ├── 32_rhythm_4_mean.png
+    │   │   ├── 33_rhythm_4_std.png
+    │   │   ├── 34_rhythm_4_maxv.png
+    │   │   ├── 35_rhythm_4_minv.png
+    │   │   ├── 36_rhythm_4_median.png
+    │   │   ├── 37_rhythm_5_mean.png
+    │   │   ├── 38_rhythm_5_std.png
+    │   │   ├── 39_rhythm_5_maxv.png
+    │   │   ├── 3_onset_detect_maxv.png
+    │   │   ├── 40_rhythm_5_minv.png
+    │   │   ├── 41_rhythm_5_median.png
+    │   │   ├── 42_rhythm_6_mean.png
+    │   │   ├── 43_rhythm_6_std.png
+    │   │   ├── 44_rhythm_6_maxv.png
+    │   │   ├── 45_rhythm_6_minv.png
+    │   │   ├── 46_rhythm_6_median.png
+    │   │   ├── 47_rhythm_7_mean.png
+    │   │   ├── 48_rhythm_7_std.png
+    │   │   ├── 49_rhythm_7_maxv.png
+    │   │   ├── 4_onset_detect_minv.png
+    │   │   ├── 50_rhythm_7_minv.png
+    │   │   ├── 51_rhythm_7_median.png
+    │   │   ├── 52_rhythm_8_mean.png
+    │   │   ├── 53_rhythm_8_std.png
+    │   │   ├── 54_rhythm_8_maxv.png
+    │   │   ├── 55_rhythm_8_minv.png
+    │   │   ├── 56_rhythm_8_median.png
+    │   │   ├── 57_rhythm_9_mean.png
+    │   │   ├── 58_rhythm_9_std.png
+    │   │   ├── 59_rhythm_9_maxv.png
+    │   │   ├── 5_onset_detect_median.png
+    │   │   ├── 60_rhythm_9_minv.png
+    │   │   ├── 61_rhythm_9_median.png
+    │   │   ├── 62_rhythm_10_mean.png
+    │   │   ├── 63_rhythm_10_std.png
+    │   │   ├── 64_rhythm_10_maxv.png
+    │   │   ├── 65_rhythm_10_minv.png
+    │   │   ├── 66_rhythm_10_median.png
+    │   │   ├── 67_rhythm_11_mean.png
+    │   │   ├── 68_rhythm_11_std.png
+    │   │   ├── 69_rhythm_11_maxv.png
+    │   │   ├── 6_tempo.png
+    │   │   ├── 70_rhythm_11_minv.png
+    │   │   ├── 71_rhythm_11_median.png
+    │   │   ├── 72_rhythm_12_mean.png
+    │   │   ├── 73_rhythm_12_std.png
+    │   │   ├── 74_rhythm_12_maxv.png
+    │   │   ├── 75_rhythm_12_minv.png
+    │   │   ├── 76_rhythm_12_median.png
+    │   │   ├── 77_mfcc_0_mean.png
+    │   │   ├── 78_mfcc_0_std.png
+    │   │   ├── 79_mfcc_0_maxv.png
+    │   │   ├── 7_onset_strength_mean.png
+    │   │   ├── 80_mfcc_0_minv.png
+    │   │   ├── 81_mfcc_0_median.png
+    │   │   ├── 82_mfcc_1_mean.png
+    │   │   ├── 83_mfcc_1_std.png
+    │   │   ├── 84_mfcc_1_maxv.png
+    │   │   ├── 85_mfcc_1_minv.png
+    │   │   ├── 86_mfcc_1_median.png
+    │   │   ├── 87_mfcc_2_mean.png
+    │   │   ├── 88_mfcc_2_std.png
+    │   │   ├── 89_mfcc_2_maxv.png
+    │   │   ├── 8_onset_strength_std.png
+    │   │   ├── 90_mfcc_2_minv.png
+    │   │   ├── 91_mfcc_2_median.png
+    │   │   ├── 92_mfcc_3_mean.png
+    │   │   ├── 93_mfcc_3_std.png
+    │   │   ├── 94_mfcc_3_maxv.png
+    │   │   ├── 95_mfcc_3_minv.png
+    │   │   ├── 96_mfcc_3_median.png
+    │   │   ├── 97_mfcc_4_mean.png
+    │   │   ├── 98_mfcc_4_std.png
+    │   │   ├── 99_mfcc_4_maxv.png
+    │   │   └── 9_onset_strength_maxv.png
+    │   ├── heatmap.png
+    │   ├── heatmap_clean.png
+    │   ├── lasso.png
+    │   ├── pearson.png
+    │   └── shapiro.png
+    ├── modeling
+    │   ├── calibration.png
+    │   ├── cluster_distance.png
+    │   ├── elbow.png
+    │   ├── ks.png
+    │   ├── learning_curve.png
+    │   ├── logr_percentile_plot.png
+    │   ├── outliers.png
+    │   ├── pca_explained_variance.png
+    │   ├── precision-recall.png
+    │   ├── prediction_error.png
+    │   ├── residuals.png
+    │   ├── roc_curve.png
+    │   ├── roc_curve_train.png
+    │   ├── siloutte.png
+    │   └── thresholds.png
+    └── models
+        ├── m_f_librosa_features.png
+        ├── m_f_librosa_features_tpotclassifier.json
+        ├── m_f_librosa_features_tpotclassifier.pickle
+        ├── m_f_librosa_features_tpotclassifier.py
+        └── m_f_librosa_features_tpotclassifier_transform.pickle
+```
+
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
 ## Default_training scripts 

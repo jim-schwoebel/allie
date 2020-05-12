@@ -164,6 +164,7 @@ resampy==0.2.2
 rsa==4.0
 s3transfer==0.3.3
 scikit-learn==0.22.2.post1
+scikit-plot==0.3.7
 scikit-video==1.1.11
 scipy==1.4.1
 seaborn==0.10.0

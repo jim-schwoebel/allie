@@ -32,21 +32,26 @@ This then generates a tree structure of graphs, for example below:
 ├── feature_ranking
 │   ├── feature_importance.png
 │   ├── feature_plots
-│   │   ├── 0_log_spectrogram_mean_feature_1.png
-│   │   ├── 100_log_spectrogram_mean_feature_101.png
-        ... [all the features in the current feature set]
+│   │   └── 128_mfcc_10_std.png
+            ... [all feature plots (many files)]
 │   ├── heatmap.png
 │   ├── heatmap_clean.png
 │   ├── lasso.png
 │   ├── pearson.png
 │   └── shapiro.png
 └── modeling
+    ├── calibration.png
     ├── cluster_distance.png
+    ├── elbow.png
+    ├── ks.png
+    ├── learning_curve.png
     ├── logr_percentile_plot.png
     ├── outliers.png
+    ├── pca_explained_variance.png
     ├── precision-recall.png
     ├── prediction_error.png
     ├── residuals.png
+    ├── roc_curve.png
     ├── roc_curve_train.png
     ├── siloutte.png
     └── thresholds.png

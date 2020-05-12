@@ -167,28 +167,50 @@ Heatmap with removed correlated variables
     ├── roc_curve_train.png
     ├── siloutte.png
     └── thresholds.png
-### Cluster distance 
+### Calibration plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/calibration.png)
 
-### Logr percentile plot 
+### Cluster distance 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/cluster_distance.png)
+
+### Elbow plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/elbow.png)
+
+### KS stat plot
+![](![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/ks.png)
+
+### Learning curve
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/learning_curve.png)
+
+### logr percentile plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/logr_percentile_plot.png)
 
 ### Outlier detection 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/outliers.png)
+
+### PCA explained variance plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/pca_explained_variance.png)
 
 ### Precision/recall graphs 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/precision-recall.png)
 
 ### Prediction error graphs
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/prediction_error.png)
 
 ### Residuals 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/residuals.png)
 
 ### ROC curve_train
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve_train.png)
 
 ### ROC curve_test
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve.png)
 
 ### siloutte graph
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/siloutte.png)
 
 ### Threshold graph 
-
-
-
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds.png)
 
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)

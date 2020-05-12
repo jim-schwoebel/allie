@@ -34,6 +34,7 @@ from yellowbrick.classifier.rocauc import roc_auc
 from yellowbrick.regressor import cooks_distance
 import seaborn as sns
 import umap
+import umap.plot
 from sklearn.model_selection import train_test_split
 
 # feature selection
@@ -358,12 +359,21 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	viz.poof(outpath="spectral.png")   
 	plt.close()
 
-	# UMAP embedding
+	UMAP embedding
 	plt.figure()
 	umap = UMAPVisualizer(metric='cosine', classes=set(classes), title="UMAP embedding")
 	umap.fit_transform(np.array(features), class_labels)
 	umap.poof(outpath="umap.png") 
 	plt.close()
+
+	# alternative UMAP
+	# plt.figure()
+	# mapper = umap.UMAP().fit(np.array(features))
+	# fig=umap.plot.points(mapper, labels=np.array(tclass_labels))
+	# fig = fig.get_figure()
+	# fig.tight_layout()
+	# fig.savefig('umap2.png')
+	# plt.close(fig)
 
 	#################################
 	# 	  FEATURE RANKING!!

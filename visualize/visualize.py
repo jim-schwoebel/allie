@@ -190,7 +190,7 @@ def plot_roc_curve(y_test, probs, clf_names):
 	plt.savefig('roc_curve.png')
 	plt.close()
 
-def visualize_features(classes, problem_type, curdir, default_features, balance_data):
+def visualize_features(classes, problem_type, curdir, default_features, balance_data, test_size):
 
 	# make features into label encoder here
 	features, feature_labels, class_labels = get_features(classes, problem_type, default_features, balance_data)
@@ -201,7 +201,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	le = preprocessing.LabelEncoder()
 	le.fit(class_labels)
 	tclass_labels = le.transform(class_labels)
-	X_train, X_test, y_train, y_test = train_test_split(features, tclass_labels, test_size=0.25, random_state=42)
+	X_train, X_test, y_train, y_test = train_test_split(features, tclass_labels, test_size=test_size, random_state=42)
 
 	# print(len(features))
 	# print(len(feature_labels))
@@ -359,7 +359,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	viz.poof(outpath="spectral.png")   
 	plt.close()
 
-	UMAP embedding
+	# UMAP embedding
 	plt.figure()
 	umap = UMAPVisualizer(metric='cosine', classes=set(classes), title="UMAP embedding")
 	umap.fit_transform(np.array(features), class_labels)
@@ -387,6 +387,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	visualizer = Rank1D(algorithm='shapiro', classes=set(classes))
 	visualizer.fit(np.array(features), tclass_labels)
 	visualizer.transform(np.array(features))
+	# plt.tight_layout()
 	visualizer.poof(outpath="shapiro.png")
 	plt.close()
 	# os.system('open shapiro.png')
@@ -397,6 +398,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	visualizer = Rank2D(algorithm='pearson', classes=set(classes))
 	visualizer.fit(np.array(features), tclass_labels)
 	visualizer.transform(np.array(features))
+	plt.tight_layout()
 	visualizer.poof(outpath="pearson.png")
 	plt.close()
 	# os.system('open pearson.png')
@@ -410,6 +412,8 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	# print(model.feature_importances_)
 	feat_importances = pd.Series(model.feature_importances_, index=feature_labels[0])
 	feat_importances.nlargest(20).plot(kind='barh')
+	plt.title('Feature importances')
+	plt.title('Feature importances with %s features'%(str(len(features[0]))))
 	plt.tight_layout()
 	plt.savefig('feature_importance.png')
 	plt.close()
@@ -419,6 +423,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	plt.figure()
 	viz = FeatureImportances(Lasso())
 	viz.fit(np.array(features), tclass_labels)
+	plt.tight_layout()
 	viz.poof(outpath="lasso.png")
 	plt.close()
 
@@ -442,6 +447,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 
 	fig=sns.heatmap(corr)
 	fig = fig.get_figure()
+	plt.title('Heatmap with correlated features')
 	fig.tight_layout()
 	fig.savefig('heatmap.png')
 	plt.close(fig)
@@ -458,6 +464,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 
 	fig=sns.heatmap(corr)
 	fig = fig.get_figure()
+	plt.title('Heatmap without correlated features')
 	fig.tight_layout()
 	fig.savefig('heatmap_clean.png')
 	plt.close(fig)
@@ -656,5 +663,6 @@ elif problem_type=='csv':
 	default_features=settings['default_csv_features']
 
 balance_data=settings['balance_data']
+test_size=settings['test_size']
 
-visualize_features(classes, problem_type, curdir, default_features, balance_data)
+visualize_features(classes, problem_type, curdir, default_features, balance_data, test_size)

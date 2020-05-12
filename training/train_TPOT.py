@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, accuracy_score
 from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
+from sklearn import metrics
 
 def plot_confusion_matrix(cm, classes,
 						  normalize=False,
@@ -103,21 +104,34 @@ def train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype
 		pickle.dump(transform_model, tmodel)
 		tmodel.close()
 
-	model=pickle.load(open(tpotname[0:-3]+'.pickle','rb'))
-	y_pred=model.predict(X_test)
-	accuracy=accuracy_score(y_test,y_pred)
-	cnf_matrix = confusion_matrix(y_test, y_pred)
-	np.set_printoptions(precision=2) 
-	# set NumPy to 2 decimal places
-	
-	# Plot normalized confusion matrix
-	plt.figure()
-	plot_confusion_matrix(cnf_matrix, classes, normalize=True, title='Normalized confusion matrix')
-	plt.show()
-	plt.savefig(confname)
+	if mtype in ['classification', 'c']:
+		model=pickle.load(open(tpotname[0:-3]+'.pickle','rb'))
+		y_pred=model.predict(X_test)
+		accuracy=accuracy_score(y_test,y_pred)
+		cnf_matrix = confusion_matrix(y_test, y_pred)
+		# set NumPy to 2 decimal places
+		np.set_printoptions(precision=2) 
+		# Plot normalized confusion matrix
+		plt.figure()
+		plot_confusion_matrix(cnf_matrix, classes, normalize=True, title='Normalized confusion matrix')
+		plt.show()
+		plt.savefig(confname)
+		print(type(cnf_matrix))
+		print(type(accuracy))
 
-	print(type(cnf_matrix))
-	print(type(accuracy))
+	elif mtype in ['regression','r']:
+		model=pickle.load(open(tpotname[0:-3]+'.pickle','rb'))
+		predictions=model.predict(X_test)
+
+		explained_variance=metrics.explained_variance_score(y_test,predictions)
+		mean_absolute_error=metrics.mean_absolute_error(y_test,predictions)
+		median_absolute_error=metrics.median_absolute_error(y_test,predictions)
+		r2_score=metrics.r2_score(y_test,predictions)
+
+		regression_metrics={'explained_variance': explained_variance,
+							'mean_absolute_error': mean_absolute_error,
+							'median_absolute_error': median_absolute_error,
+							'r2_score': r2_score}
 
 	jsonfilename='%s.json'%(tpotname[0:-3])
 	print('saving .JSON file (%s)'%(jsonfilename))
@@ -131,12 +145,12 @@ def train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype
 			'model type':'TPOTclassification_'+modeltype,
 			'settings': settings,
 		}
+		
 	elif mtype in ['regression', 'r']:
 		data={'sample type': problemtype,
 			'feature_set':default_features,
 			'model name':jsonfilename[0:-5]+'.pickle',
-			'accuracy':float(accuracy),
-                        'confusion_matrix': cnf_matrix.tolist(),
+			'metrics': regression_metrics,
 			'model type':'TPOTregression_'+modeltype,
 			'settings': settings,
 		}

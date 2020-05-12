@@ -94,30 +94,81 @@ Note that this script considers whether or not to balance datasets (e.g. "balanc
 ### numbers in each class
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)
 
-## top 10 features (if 10 features exist)
+## Clustering
+Quickly iterate and see which cluster method works best with your dataset.
+
+### Isomap embedding
+### LLE embedding
+### MDS embedding
+### Modified embedding
+### PCA embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/pca.png)
+### Spectral embedding
+### tSNE embedding
+### UMAP embedding
+
+## Feature ranking
+
+│   ├── feature_importance.png
+│   ├── feature_plots
+│   │   ├── 0_log_spectrogram_mean_feature_1.png
+│   │   ├── 100_log_spectrogram_mean_feature_101.png
+        ... [all the features in the current feature set]
+│   ├── heatmap.png
+│   ├── heatmap_clean.png
+│   ├── lasso.png
+│   ├── pearson.png
+│   └── shapiro.png
+
+### Feature importances (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_importance.png)
 
-## PCA plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/pca.png)
+### Feature_plots
+Easily plots all the features via violin plots (to spot distributions).
 
-## Pearson ranking plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/pearson.png)
+### Lasso plot 
 
-## tSNE plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/tsne.png)
+### Heatmaps
 
-## Working on now
+### Lasso method
 
-- https://umap-learn.readthedocs.io/en/latest/basic_usage.html
-- https://github.com/sepandhaghighi/pycm - confusion matrix / ROC curve
-- https://github.com/wcipriano/pretty-print-confusion-matrix
+### Pearson ranking plot
 
-## Using streamlit
+### Shapiro plot 
 
-```
-streamlit run test.py
-```
-Outputs various graphs on the data.
+## Modeling graphs
+
+    ├── cluster_distance.png
+    ├── logr_percentile_plot.png
+    ├── outliers.png
+    ├── precision-recall.png
+    ├── prediction_error.png
+    ├── residuals.png
+    ├── roc_curve_train.png
+    ├── siloutte.png
+    └── thresholds.png
+### Cluster distance 
+
+### Logr percentile plot 
+
+### Outlier detection 
+
+### Precision/recall graphs 
+
+### Prediction error graphs
+
+### Residuals 
+
+### ROC curve_train
+
+### ROC curve_test
+
+### siloutte graph
+
+### Threshold graph 
+
+
+
 
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)
@@ -135,3 +186,16 @@ Outputs various graphs on the data.
 * [Streamit](https://github.com/streamlit/streamlit)
 * [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)
+
+## Working on now
+
+- https://umap-learn.readthedocs.io/en/latest/basic_usage.html
+- https://github.com/sepandhaghighi/pycm - confusion matrix / ROC curve
+- https://github.com/wcipriano/pretty-print-confusion-matrix
+
+## Using streamlit
+
+```
+streamlit run test.py
+```
+Outputs various graphs on the data.

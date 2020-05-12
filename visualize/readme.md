@@ -133,20 +133,28 @@ Quickly iterate and see which cluster method works best with your dataset.
 │   └── shapiro.png
 
 ### Feature importances (top 20 features)
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_importance.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance.png)
 
 ### Feature_plots
 Easily plots all the features via violin plots (to spot distributions).
 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/128_mfcc_10_std.png)
+
 ### Lasso plot 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso.png)
 
 ### Heatmaps
+Heatmap with correlated variables
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap.png)
 
-### Lasso method
+Heatmap with removed correlated variables 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean.png)
 
 ### Pearson ranking plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/pearson.png)
 
 ### Shapiro plot 
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro.png)
 
 ## Modeling graphs
 

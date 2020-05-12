@@ -200,7 +200,7 @@ Heatmap with removed correlated variables
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/elbow.png)
 
 ### KS stat plot
-![](![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/ks.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/ks.png)
 
 ### Learning curve
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/learning_curve.png)

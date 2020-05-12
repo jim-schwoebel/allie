@@ -39,7 +39,7 @@ This then generates a tree structure of graphs, for example below:
 │   ├── lasso.png
 │   ├── pearson.png
 │   └── shapiro.png
-└── modeling
+└── model_selection
     ├── calibration.png
     ├── cluster_distance.png
     ├── elbow.png
@@ -172,7 +172,7 @@ Heatmap with removed correlated variables
 ## Modeling graphs
 
 ```
-└── modeling
+└── model_selection
     ├── calibration.png
     ├── cluster_distance.png
     ├── elbow.png

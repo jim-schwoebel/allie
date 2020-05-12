@@ -103,14 +103,21 @@ Note that this script considers whether or not to balance datasets (e.g. "balanc
 Quickly iterate and see which cluster method works best with your dataset.
 
 ### Isomap embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/isomap.png)
 ### LLE embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/lle.png)
 ### MDS embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/mds.png)
 ### Modified embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/modified.png)
 ### PCA embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/pca.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/pca.png)
 ### Spectral embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/spectral.png)
 ### tSNE embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/tsne.png)
 ### UMAP embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/umap.png)
 
 ## Feature ranking
 

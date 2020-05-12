@@ -34,6 +34,7 @@ from yellowbrick.classifier.rocauc import roc_auc
 from yellowbrick.regressor import cooks_distance
 import seaborn as sns
 import umap
+from sklearn.model_selection import train_test_split
 
 # feature selection
 from sklearn.feature_selection import SelectPercentile, chi2
@@ -42,6 +43,23 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.svm import SVC
 from sklearn.preprocessing import MinMaxScaler
+
+# other things in scikitlearn
+import scikitplot as skplt
+import matplotlib.pyplot as plt
+from sklearn.decomposition import PCA
+from sklearn.datasets import load_digits
+from sklearn.ensemble import AdaBoostClassifier, RandomForestClassifier, GradientBoostingClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import cross_val_predict
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.svm import LinearSVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.metrics import roc_curve  
+from sklearn.cluster import KMeans
+from sklearn import metrics
+from itertools import cycle
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -151,22 +169,67 @@ def get_features(classes, problem_type, default_features, balance_data):
 
 	return features, feature_labels, class_labels 
 
+def plot_roc_curve(y_test, probs, clf_names):  
+	cycol = cycle('bgrcmyk')
+
+	for i in range(len(probs)):
+		print(y_test)
+		print(probs[i])
+		try:
+			fper, tper, thresholds = roc_curve(y_test, probs[i]) 
+			plt.plot(fper, tper, color=next(cycol), label=clf_names[i]+' = %s'%(str(round(metrics.auc(fper, tper), 2))))
+			plt.plot([0, 1], [0, 1], color='darkblue', linestyle='--')
+		except:
+			print('passing %s'%(clf_names[i]))
+
+	plt.xlabel('False Positive Rate')
+	plt.ylabel('True Positive Rate')
+	plt.title('Receiver Operating Characteristic (ROC) Curve')
+	plt.legend()
+	plt.savefig('roc_curve.png')
+	plt.close()
+
 def visualize_features(classes, problem_type, curdir, default_features, balance_data):
 
 	# make features into label encoder here
 	features, feature_labels, class_labels = get_features(classes, problem_type, default_features, balance_data)
 
+	# now preprocess features for all the other plots
 	print(features)
 	os.chdir(curdir)
 	le = preprocessing.LabelEncoder()
 	le.fit(class_labels)
 	tclass_labels = le.transform(class_labels)
+	X_train, X_test, y_train, y_test = train_test_split(features, tclass_labels, test_size=0.25, random_state=42)
 
-	print(len(features))
-	print(len(feature_labels))
-	print(len(class_labels))
-	print(class_labels)
+	# print(len(features))
+	# print(len(feature_labels))
+	# print(len(class_labels))
+	# print(class_labels)
+	
+	# GET TRAINING DATA DURING MODELING PROCESS
+	##################################
+	# get filename
+	# csvfile=''
+	# print(classes)
+	# for i in range(len(classes)):
+	# 	csvfile=csvfile+classes[i]+'_'
 
+	# get training and testing data for later
+	# try:
+		# print('loading training files...')
+		# X_train=pd.read_csv(prev_dir(curdir)+'/models/'+csvfile+'train.csv')
+		# y_train=X_train['class_']
+		# X_train.drop(['class_'], axis=1)
+		# X_test=pd.read_csv(prev_dir(curdir)+'/models/'+csvfile+'test.csv')
+		# y_test=X_test['class_']
+		# X_test.drop(['class_'], axis=1)
+		# y_train=le.inverse_transform(y_train)
+		# y_test=le.inverse_transform(y_test)
+	# except:
+	# print('error loading in training files, making new test data')
+
+	
 	# Visualize each class (quick plot)
 	##################################
 	visualization_dir='visualization_session'
@@ -481,6 +544,81 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	plt.axis('tight')
 	plt.savefig('logr_percentile_plot.png')
 	plt.close()
+
+	# get PCA
+	pca = PCA(random_state=1)
+	pca.fit(X_train)
+	skplt.decomposition.plot_pca_component_variance(pca)
+	plt.savefig('pca_explained_variance.png')
+	plt.close()
+
+	# estimators
+	rf = RandomForestClassifier()
+	skplt.estimators.plot_learning_curve(rf, X_train, y_train)
+	plt.title('Learning Curve (Random Forest)')
+	plt.savefig('learning_curve.png')
+	plt.close()
+
+	# elbow plot
+	kmeans = KMeans(random_state=1)
+	skplt.cluster.plot_elbow_curve(kmeans, X_train, cluster_ranges=range(1, 30), title='Elbow plot (KMeans clustering)')
+	plt.savefig('elbow.png')
+	plt.close()
+
+	# KS statistic (only if 2 classes)
+	lr = LogisticRegression()
+	lr = lr.fit(X_train, y_train)
+	y_probas = lr.predict_proba(X_test)
+	skplt.metrics.plot_ks_statistic(y_test, y_probas)
+	plt.savefig('ks.png')
+	plt.close()
+
+	# precision-recall
+	nb = GaussianNB()
+	nb.fit(X_train, y_train)
+	y_probas = nb.predict_proba(X_test)
+	skplt.metrics.plot_precision_recall(y_test, y_probas)
+	plt.tight_layout()
+	plt.savefig('precision-recall.png')
+	plt.close()
+
+	## plot calibration curve 
+	rf = RandomForestClassifier()
+	lr = LogisticRegression()
+	nb = GaussianNB()
+	svm = LinearSVC()
+	dt = DecisionTreeClassifier(random_state=0)
+	ab = AdaBoostClassifier(n_estimators=100)
+	gb = GradientBoostingClassifier(n_estimators=100, learning_rate=1.0, max_depth=1, random_state=0)
+	knn = KNeighborsClassifier(n_neighbors=7)
+
+	rf_probas = rf.fit(X_train, y_train).predict_proba(X_test)
+	lr_probas = lr.fit(X_train, y_train).predict_proba(X_test)
+	nb_probas = nb.fit(X_train, y_train).predict_proba(X_test)
+	# svm_scores = svm.fit(X_train, y_train).predict_proba(X_test)
+	dt_scores= dt.fit(X_train, y_train).predict_proba(X_test)
+	ab_scores= ab.fit(X_train, y_train).predict_proba(X_test)
+	gb_scores= gb.fit(X_train, y_train).predict_proba(X_test)
+	knn_scores= knn.fit(X_train, y_train).predict_proba(X_test)
+
+	probas_list = [rf_probas, lr_probas, nb_probas, # svm_scores,
+				   dt_scores, ab_scores, gb_scores, knn_scores]
+
+	clf_names = ['Random Forest', 'Logistic Regression', 'Gaussian NB', # 'SVM',
+				 'Decision Tree', 'Adaboost', 'Gradient Boost', 'KNN']
+
+	skplt.metrics.plot_calibration_curve(y_test,probas_list, clf_names)
+	plt.savefig('calibration.png')
+	plt.tight_layout()
+	plt.close()
+
+	# pick classifier type by ROC (without optimization)
+	probs = [rf_probas[:, 1], lr_probas[:, 1], nb_probas[:, 1], # svm_scores[:, 1],
+			 dt_scores[:, 1], ab_scores[:, 1], gb_scores[:, 1], knn_scores[:, 1]]
+
+	plot_roc_curve(y_test, probs, clf_names)
+	# more elaborate ROC example with CV = 5 fold 
+	# https://scikit-learn.org/stable/auto_examples/model_selection/plot_roc_crossval.html#sphx-glr-auto-examples-model-selection-plot-roc-crossval-py
 
 	os.chdir(curdir)
 

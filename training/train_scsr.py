@@ -67,9 +67,7 @@ def update_list(y_test, predictions, explained_variances, mean_absolute_errors, 
 
 	return explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores
 
-def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, settings):
-	testing_set=0.25
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=testing_set, random_state=42)
+def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_features,transform_model,modeldir,settings):
 
 	# metrics 
 	modeltypes=list()
@@ -85,13 +83,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, 
 
 	# make a temp folder to dump files into
 	foldername=''
-	for i in range(len(classes)):
-		if i==0:
-			foldername=classes[i]
-		else:
-			foldername=foldername+'_'+classes[i]
-
-	foldername=foldername+'_sc_regression_%s'%(str(default_features).replace("'",'').replace('"',''))
+	foldername=common_name_model+'_temp'
 	tempdir=os.getcwd()+'/'+foldername 
 
 	try:
@@ -646,7 +638,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, 
 
 	print(table)
 
-	filename=foldername+'.xlsx'
+	filename=common_name_model+'.xlsx'
 	workbook  = xlsxwriter.Workbook(filename)
 	worksheet = workbook.add_worksheet()
 
@@ -677,7 +669,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, 
 	print('%s has the lowest mean absolute error (%s)'%(modeltypes[ind], str(minval)))
 	# rename file 
 	os.chdir(tempdir)
-	newname= foldername+'.pickle'
+	newname= common_name_model+'.pickle'
 	print('saving file to disk (%s)...'%(newname))
 	os.rename(varnames[ind], newname)
 	# move to models directory
@@ -703,7 +695,7 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, 
 		'settings': settings,
 		}
 
-	jsonfilename=foldername+'.json'
+	jsonfilename=common_name_model+'.json'
 	jsonfile=open(jsonfilename,'w')
 	json.dump(data,jsonfile)
 	jsonfile.close()
@@ -724,20 +716,42 @@ def train_sr(classes, problemtype, default_features, modeldir, alldata, labels, 
 
 	workbook.close()
 
-	shutil.move(os.getcwd()+'/'+foldername+'.json', os.getcwd()+'/'+problemtype+'_models'+'/'+foldername+'.json')
-	shutil.move(os.getcwd()+'/'+foldername+'.pickle', os.getcwd()+'/'+problemtype+'_models'+'/'+foldername+'.pickle')
-	shutil.move(os.getcwd()+'/'+foldername+'.xlsx', os.getcwd()+'/'+problemtype+'_models'+'/'+foldername+'.xlsx')
+	# copy the folder in case there are multiple models being trained 
+	shutil.copytree('model_session', common_name_model)
+	cur_dir2=os.getcwd()
+	os.chdir(common_name_model)
+	os.mkdir('model')
+	os.chdir('model')
+	model_dir_temp=os.getcwd()
 
-	return foldername+'.pickle', os.getcwd()+'/'+problemtype+'_models'
+	# now move all the files over to proper model directory 
+	if transform_model != '':
+		shutil.move(cur_dir2+'/transform.pickle', model_dir_temp+'/'+common_name_model+'_transform.pickle')
+	shutil.move(cur_dir2+'/'+common_name_model+'.json', model_dir_temp+'/'+common_name_model+'.json')
+	shutil.move(cur_dir2+'/'+common_name_model+'.xlsx', model_dir_temp+'/'+common_name_model+'.xlsx')
+	shutil.move(cur_dir2+'/'+common_name_model+'.pickle', model_dir_temp+'/'+common_name_model+'.pickle')
+	os.chdir(cur_dir2)
 
-def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes, min_num, settings):
+	try:
+		os.chdir(problemtype+'_models')
+	except:
+		os.mkdir(problemtype+'_models')
+		os.chdir(problemtype+'_models')
 
+	# copy directory to proper location and delete temporary folder
+	shutil.move(cur_dir2+'/'+common_name_model, os.getcwd()+'/'+common_name_model)
+
+	# get model_name 
+	model_name=common_name_model+'.pickle'
+	model_dir=os.getcwd()
+
+	return model_name, model_dir
+
+def train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_features,transform_model,settings,min_num):
+
+	# create common_name
 	selectedfeature=str(default_features) + ' (%s)'%(problemtype)
-	modelname=jsonfile[0:-5]+'_sc_classification_%s'%(str(default_features).replace("'",'').replace('"',''))
-	testing_set=0.250
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=testing_set)
-	print(X_train.shape)
-	print(X_test.shape)
+	modelname=common_name_model
 	training_data='train labels'+'\n\n'+str(y_train)+'\n\n'+'test labels'+'\n\n'+str(y_test)+'\n\n'
 	filename=modelname
 	start=time.time()
@@ -989,7 +1003,7 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
 	training=len(X_train)
 	testing=len(y_train)
 	
-	summary='SUMMARY OF MODEL SELECTION \n\n'+'WINNING MODEL: \n\n'+'%s: %s (+/- %s) \n\n'%(str(model_accuracy[len(model_accuracy)-1][0]),str(model_accuracy[len(model_accuracy)-1][1]),str(model_accuracy[len(model_accuracy)-1][2]))+'MODEL FILE NAME: \n\n %s.pickle'%(filename)+'\n\n'+'DATE CREATED: \n\n %s'%(datetime.datetime.now())+'\n\n'+'EXECUTION TIME: \n\n %s\n\n'%(str(execution))+'GROUPS: \n\n'+str(classes)+'\n'+'('+str(min_num)+' in each class, '+str(int(testing_set*100))+'% used for testing)'+'\n\n'+'TRAINING SUMMARY:'+'\n\n'+training_data+'FEATURES: \n\n %s'%(selectedfeature)+'\n\n'+'MODELS, ACCURACIES, AND STANDARD DEVIATIONS: \n\n'+accstring+'\n\n'+'(C) 2019, NeuroLex Laboratories'
+	summary='SUMMARY OF MODEL SELECTION \n\n'+'WINNING MODEL: \n\n'+'%s: %s (+/- %s) \n\n'%(str(model_accuracy[len(model_accuracy)-1][0]),str(model_accuracy[len(model_accuracy)-1][1]),str(model_accuracy[len(model_accuracy)-1][2]))+'MODEL FILE NAME: \n\n %s.pickle'%(filename)+'\n\n'+'DATE CREATED: \n\n %s'%(datetime.datetime.now())+'\n\n'+'EXECUTION TIME: \n\n %s\n\n'%(str(execution))+'GROUPS: \n\n'+str(classes)+'\n'+'('+str(min_num)+' in each class, '+str(len(y_test))+'% used for testing)'+'\n\n'+'TRAINING SUMMARY:'+'\n\n'+str(y_train)+'\n\n'+'FEATURES: \n\n %s'%(selectedfeature)+'\n\n'+'MODELS, ACCURACIES, AND STANDARD DEVIATIONS: \n\n'+accstring+'\n\n'+'(C) 2019, NeuroLex Laboratories'
 
 	data={'sample type': problemtype,
 		'feature_set':default_features,
@@ -1009,17 +1023,33 @@ def train_sc(alldata,labels,mtype,jsonfile,problemtype,default_features, classes
 	json.dump(data,g2)
 	g2.close()
 
-	
+	# copy the folder in case there are multiple models being trained 
+	shutil.copytree('model_session', common_name_model)
 	cur_dir2=os.getcwd()
+	os.chdir(common_name_model)
+	os.mkdir('model')
+	os.chdir('model')
+	model_dir_temp=os.getcwd()
+
+	# now move all the files over to proper model directory 
+	if transform_model != '':
+		shutil.move(cur_dir2+'/transform.pickle', model_dir_temp+'/'+common_name_model+'_transform.pickle')
+	shutil.move(cur_dir2+'/'+common_name_model+'.json', model_dir_temp+'/'+common_name_model+'.json')
+	shutil.move(cur_dir2+'/'+common_name_model+'.txt', model_dir_temp+'/'+common_name_model+'.txt')
+	shutil.move(cur_dir2+'/'+common_name_model+'.pickle', model_dir_temp+'/'+common_name_model+'.pickle')
+	os.chdir(cur_dir2)
+
 	try:
 		os.chdir(problemtype+'_models')
 	except:
 		os.mkdir(problemtype+'_models')
 		os.chdir(problemtype+'_models')
 
-	# now move all the files over to proper model directory 
-	shutil.move(cur_dir2+'/'+modelname+'.json', os.getcwd()+'/'+modelname+'.json')
-	shutil.move(cur_dir2+'/'+modelname+'.pickle', os.getcwd()+'/'+modelname+'.pickle')
-	shutil.move(cur_dir2+'/'+modelname+'.txt', os.getcwd()+'/'+modelname+'.txt')
+	# copy directory to proper location and delete temporary folder
+	shutil.move(cur_dir2+'/'+common_name_model, os.getcwd()+'/'+common_name_model)
 
-	return modelname+'.pickle', os.getcwd()
+	# get model_name 
+	model_name=common_name_model+'.pickle'
+	model_dir=os.getcwd()
+	
+	return model_name, model_dir

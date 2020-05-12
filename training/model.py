@@ -383,6 +383,12 @@ except:
 # split the data 
 X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=test_size)
 
+# convert everything to numpy arrays (for testing later)
+X_train=np.array(X_train)
+X_test=np.array(X_test)
+y_train=np.array(y_train)
+y_test=np.array(y_test)
+
 # create training and testing datasets and save to a .CSV file for archive purposes
 # this ensures that all machine learning training methods use the same training data
 basefile=common_name
@@ -482,6 +488,12 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 	# split the data 
 	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=test_size)
 
+	# convert to numpy arrays 
+	X_train=np.array(X_train)
+	X_test=np.array(X_test)
+	y_train=np.array(y_train)
+	y_test=np.array(y_test)
+	
 	# get new labels_ array 
 	labels_=list()
 	for i in range(len(alldata[0].tolist())):
@@ -637,7 +649,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	# go to model directory 
 	os.chdir(model_dir)
 
+	# get common name and default training script to select proper model trainer
 	default_training_script=default_training_scripts[i]
+	common_name_model=common_name+'_'+default_training_script
 
 	print('----------------------------------')
 	print('       .... training %s           '%(default_training_script.upper()))
@@ -727,12 +741,11 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='scsr':
 		import train_scsr as scsr
 		if mtype == 'c':
-			modelname, modeldir=scsr.train_sc(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, classes, minlength, settings)
+			modelname, modeldir=scsr.train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,minlength)
 		elif mtype == 'r':
-			modelname, modeldir=scsr.train_sr(classes, problemtype, default_featurenames, model_dir, alldata, labels, settings)
+			modelname, modeldir=scsr.train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_featurenames,transform_model,model_dir,settings)
 	elif default_training_script=='tpot':
 		import train_TPOT as tt
-		common_name_model=common_name+'_tpot'
 		modelname, modeldir=tt.train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings)
 
 	############################################################

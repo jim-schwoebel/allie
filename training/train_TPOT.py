@@ -56,6 +56,8 @@ def train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype
 	elif mtype in ['regression','r']:
 		tpot = TPOTRegressor(generations=5, population_size=20, verbosity=2)
 		tpotname='%s_regression.py'%(modelname)
+
+	# fit classifier
 	tpot.fit(X_train, y_train)
 	tpot.export(tpotname)
 

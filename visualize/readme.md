@@ -238,6 +238,7 @@ Heatmap with removed correlated variables
 ## Working on now 
 * [Probability calibration curves](https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py)
 * Making heatmaps work with top 20 features (to make axes readable)
+* add in RFE in feature section (https://www.scikit-yb.org/en/latest/api/model_selection/rfecv.html) 
 
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)

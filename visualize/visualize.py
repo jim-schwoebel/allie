@@ -235,6 +235,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	visualization_dir='visualization_session'
 	try:
 		os.mkdir(visualization_dir)
+		os.chdir(visualization_dir)
 	except:
 		shutil.rmtree(visualization_dir)
 		os.mkdir(visualization_dir)

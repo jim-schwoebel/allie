@@ -235,6 +235,10 @@ Heatmap with removed correlated variables
 ### Threshold graph 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds.png)
 
+## Working on now 
+* [Probability calibration curves](https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py)
+* Making heatmaps work with top 20 features (to make axes readable)
+
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)
 * [How to visualize anything in Yellowbrick](https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f)

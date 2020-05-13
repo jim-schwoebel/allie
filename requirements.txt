@@ -202,6 +202,7 @@ update-checker==0.16
 urllib3==1.25.8
 uuid==1.30
 umap==0.1.1
+umap-learn==0.4.2
 validators==0.14.2
 wasabi==0.6.0
 Wave==0.0.2

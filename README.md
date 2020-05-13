@@ -180,6 +180,8 @@ There are many advantages for having this schema including:
 - **model predictions** - one survey schema can be used for making model predictions and updating the schema with these predictions. Note that any model that is used for training can be used to make predictions in the load_dir. 
 - **visualization flexibility** - can easily visualize features of any sample tpye through Allie's [visualization script](https://github.com/jim-schwoebel/allie/tree/master/visualize) (e.g. tSNE plots, correlation matrices, and more).
 
+This schema is inspired by [D3 schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md) by the MIT media lab.
+
 We are currently in process to implement this schema into the SurveyLex architecture. 
 
 ## settings 

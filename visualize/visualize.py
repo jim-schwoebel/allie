@@ -200,6 +200,11 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	le = preprocessing.LabelEncoder()
 	le.fit(class_labels)
 	tclass_labels = le.transform(class_labels)
+
+	# process features to help with clustering
+	se=preprocessing.StandardScaler()
+	t_features=se.fit_transform(features)
+
 	X_train, X_test, y_train, y_test = train_test_split(features, tclass_labels, test_size=test_size, random_state=42)
 
 	# print(len(features))

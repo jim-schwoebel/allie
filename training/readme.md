@@ -373,6 +373,7 @@ from sklearn.metrics import classification_report
 ## Actively working on (in future)
 
 ### Exploring now
+* [metric_learn](https://github.com/scikit-learn-contrib/metric-learn)
 * [hyperparameter tuning w/ Ray](https://github.com/ray-project/ray) - tuning hyperparameters 
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
 * [MLBox](https://github.com/AxeldeRomblay/MLBox) - State-of-the art predictive models for classification and regression (Deep Learning, Stacking, LightGBM,…).

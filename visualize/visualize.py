@@ -34,7 +34,6 @@ from yellowbrick.classifier.rocauc import roc_auc
 from yellowbrick.regressor import cooks_distance
 import seaborn as sns
 import umap
-import umap.plot
 from sklearn.model_selection import train_test_split
 
 # feature selection
@@ -367,6 +366,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	plt.close()
 
 	# alternative UMAP
+	# import umap.plot
 	# plt.figure()
 	# mapper = umap.UMAP().fit(np.array(features))
 	# fig=umap.plot.points(mapper, labels=np.array(tclass_labels))
@@ -489,8 +489,8 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	##################################################
 
 	os.chdir(curdir)
-	os.mkdir('modeling')
-	os.chdir('modeling')
+	os.mkdir('model_selection')
+	os.chdir('model_selection')
 
 	plt.figure()
 	visualizer = precision_recall_curve(GaussianNB(), np.array(features), tclass_labels)

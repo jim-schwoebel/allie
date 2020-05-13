@@ -240,6 +240,7 @@ Heatmap with removed correlated variables
 * Making heatmaps work with top 20 features (to make axes readable)
 * add in RFE in feature section (https://www.scikit-yb.org/en/latest/api/model_selection/rfecv.html) 
 * stacked bar chart of feature importances - https://www.scikit-yb.org/en/latest/api/model_selection/importances.html
+* cross validation scores bar graph - https://www.scikit-yb.org/en/latest/api/model_selection/cross_validation.html
 
 ## Featurization tutorials (Readmes)
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)

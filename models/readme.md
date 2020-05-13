@@ -345,6 +345,7 @@ N/A - no text models trained yet.
 
 ## Image models
 * age and gender model (https://github.com/deepinx/age-gender-estimation) - 96% accuracy gender, 4.1 MAE age.
+* Teachable image models - https://github.com/googlecreativelab/teachablemachine-community
 
 ## Video models
 N/A - no video models trained yet. 

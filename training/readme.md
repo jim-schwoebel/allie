@@ -319,6 +319,29 @@ There are 21 potential training script settings (customized in the 'settings.jso
 
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
 
+## Metrics
+Various metrics are used based on the problem type. Here are the standard metrics calculated for every model trained.
+
+### Classification
+- accuracy	sklearn.metrics.accuracy_score
+- precision	sklearn.metrics.precision_score
+- recall	sklearn.metrics.recall_score
+- f1	sklearn.metrics.f1_score (pos_label=1)
+- f1Micro	sklearn.metrics.f1_score(average='micro')
+- f1Macro	sklearn.metrics.f1_score(average='macro')
+- normalizedMutualInformation	sklearn.metrics.normalized_mutual_info_score
+- jaccardSimilarityScore	sklearn.metrics.jaccard_similarity_score
+
+### Regression
+- rocAuc	sklearn.metrics.roc_auc_score
+- rocAucMicro	sklearn.metrics.roc_auc_score(average='micro')
+- rocAucMacro	sklearn.metrics.roc_auc_score(average='macro')
+- meanSquaredError	sklearn.metrics.mean_squared_error
+- rootMeanSquaredError	sqrt(sklearn.metrics.mean_squared_error)
+- rootMeanSquaredErrorAvg	sum(root_mean_squared_error_list)/len(root_mean_squared_error_list)
+- meanAbsoluteError	sklearn.metrics.mean_absolute_error
+- rSquared	sklearn.metrics.r2_score
+
 ## Qualtitative observations 
 
 Rank on these axes:

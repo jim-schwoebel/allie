@@ -65,6 +65,14 @@ def video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_mo
 
 	return features, labels, audio_transcript, image_transcript 
 
+def video_transcribe(default_video_transcriber, videofile):
+	# this is a placeholder function now
+	return ''
+
+def audio_transcribe(default_audio_transcriber, audiofile):
+	# this is a placeholder function now until we have more audio transcription engines
+	return ''
+
 ##################################################
 ##				   Main script  		    	##
 ##################################################
@@ -89,7 +97,7 @@ os.chdir(basedir)
 
 # load settings
 audio_transcribe_setting=settings['transcribe_audio']
-video_transcribe_setting=settings['transcribe_videos']
+video_transcribe_setting=settings['transcribe_video']
 default_audio_transcriber=settings['default_audio_transcriber']
 default_video_transcriber=settings['default_video_transcriber']
 try:
@@ -195,10 +203,25 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				# only add transcripts in schema if they are true 
 				transcript_list=basearray['transcripts']
 
+				# video transcription setting
 				if video_transcribe_setting == True:	
-					transcript_list['video'][default_video_transcriber] = video_transcript
+					for j in range(len(default_video_transcribers)):
+						default_video_transcriber=default_video_transcribers[j]
+						if default_video_transcriber=='tesseract (averaged over frames)':
+							transcript_list['video'][default_video_transcriber] = video_transcript
+						else:
+							print('cannot transcribe video file, as the %s transcriber is not supported'%(default_video_transcriber.upper()))
+				
+				# audio transcriber setting
 				if audio_transcribe_setting == True:
-					transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+					for j in range(len(default_audio_transcribers)):
+						default_audio_transcriber=default_audio_transcribers[j]
+						if default_audio_transcriber == 'pocketsphinx':
+							transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+						else:
+							print('cannot transcribe audio file, as the %s transcriber is not supported'%(default_audio_transcriber.upper()))
+				
+				# update transcript list
 				basearray['transcripts']=transcript_list
 
 				# write to .JSON 
@@ -229,10 +252,24 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 
 				# make transcript additions, as necessary 
 				transcript_list=basearray['transcripts']
-				if video_transcribe_setting == True and default_video_transcriber not in list(transcript_list):	
-					transcript_list['video'][default_video_transcriber] = video_transcript
-				if audio_transcribe_setting == True and default_audio_transcriber not in list(transcript_list):	
-					transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+
+				if video_transcribe_setting == True:
+					for j in range(len(default_video_transcribers)):
+						default_video_transcriber=default_video_transcribers[j]
+						if default_video_transcriber not in list(transcript_list):
+							if default_video_transcriber == 'tesseract (averaged over frames)':
+								transcript_list['video'][default_video_transcriber] = video_transcript
+							else:
+								print('cannot transcribe video file, as the %s transcriber is not supported'%(default_video_transcriber.upper()))
+				
+				if audio_transcribe_setting == True:
+					for j in range(len(default_audio_transcribers)):
+						default_audio_transcriber=default_audio_transcribers[j]
+						if default_audio_transcriber not in list(transcript_list):	
+							if default_audio_transcriber == 'pocketsphinx':
+								transcript_list['audio'][default_audio_transcriber] = audio_transcript
+							else:
+								print('cannot transcribe audio file, as the %s transcriber is not supported'%(default_audio_transcriber.upper()))
 				
 				basearray['transcripts']=transcript_list
 

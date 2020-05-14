@@ -26,12 +26,14 @@ female = second class [via N number of classes]
 ###############################################################
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
-import os, sys, pickle, json, random, shutil, time
+import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
 import numpy as np
 import matplotlib.pyplot as plt
+from sklearn import metrics
+from sklearn.metrics import roc_curve
 
 ###############################################################
 ##                  HELPER FUNCTIONS                         ##
@@ -112,6 +114,178 @@ def convert_csv(X_train, y_train, labels):
 	print('writing csv file...')
 
 	return data
+
+def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files):
+	'''
+	get the metrics associated iwth a classification and regression problem
+	and output a .JSON file with the training session.
+	'''
+	metrics_=dict()
+	y_true=y_test
+	y_pred=clf.predict(X_test)
+
+	if mtype in ['c', 'classification']:
+		# now get all classification metrics
+		mtype='classification'
+		metrics_['accuracy']=metrics.accuracy_score(y_true, y_pred)
+		metrics_['balanced_accuracy']=metrics.balanced_accuracy_score(y_true, y_pred)
+		metrics_['precision']=metrics.precision_score(y_true, y_pred)
+		metrics_['recall']=metrics.recall_score(y_true, y_pred)
+		metrics_['f1_score']=metrics.f1_score (y_true, y_pred, pos_label=1)
+		metrics_['f1_micro']=metrics.f1_score(y_true, y_pred, average='micro')
+		metrics_['f1_macro']=metrics.f1_score(y_true, y_pred, average='macro')
+		metrics_['roc_auc']=metrics.roc_auc_score(y_true, y_pred)
+		metrics_['roc_auc_micro']=metrics.roc_auc_score(y_true, y_pred, average='micro')
+		metrics_['roc_auc_macro']=metrics.roc_auc_score(y_true, y_pred, average='macro')
+		metrics_['confusion_matrix']=metrics.confusion_matrix(y_true, y_pred).tolist()
+		metrics_['classification_report']=metrics.classification_report(y_true, y_pred, target_names=classes)
+
+		plot_confusion_matrix(np.array(metrics_['confusion_matrix']), classes)
+		try:
+			# predict_proba only works for or log loss and modified Huber loss.
+			# https://stackoverflow.com/questions/47788981/sgdclassifier-with-predict-proba
+			try:
+				y_probas = clf.predict_proba(X_test)[:, 1]
+			except:
+				try:
+					y_probas = clf.decision_function(X_test)[:, 1]
+				except:
+					print('error making y_probas')
+				
+			plot_roc_curve(y_test, [y_probas], [default_training_script])
+		except:
+			print('error plotting ROC curve')
+			print('predict_proba only works for or log loss and modified Huber loss.')
+
+	elif mtype in ['r', 'regression']:
+		# now get all regression metrics
+		mtype='regression'
+		metrics_['max_error'] = metrics.max_error(y_true, y_pred)
+		metrics_['mean_absolute_error'] = metrics.mean_absolute_error(y_true, y_pred)
+		metrics_['mean_squared_error'] = metrics.mean_squared_error(y_true, y_pred)
+		metrics_['median_absolute_error'] = metrics.median_absolute_error(y_true, y_pred)
+		metrics_['r2_score'] = metrics.r2_score(y_true, y_pred)
+
+		plot_regressor(clf, classes, X_test, y_test)
+
+	data={'sample type': problemtype,
+		  'created date': str(datetime.datetime.now()),
+		  'session id': model_session,
+		  'classes': classes,
+	      'model type': mtype,
+	      'model name': modelname, 
+	      'metrics': metrics_,
+	      'settings': settings,
+	      'transformer name': transformer_name,
+	      'training data': created_csv_files,
+	      'sample X_test': X_test[0].tolist(),
+	      'sample y_test': y_test[0].tolist()}
+
+	if modelname.endswith('.pickle'):
+		jsonfilename=modelname[0:-7]+'.json'
+	elif modelname.endswith('.h5'):
+		jsonfilename=modelname[0:-3]+'.json'
+
+	jsonfile=open(jsonfilename,'w')
+	json.dump(data,jsonfile)
+	jsonfile.close()
+
+def plot_roc_curve(y_test, probs, clf_names):  
+	'''
+	This function plots an ROC curve with the appropriate 
+	list of classifiers.
+	'''
+	cycol = itertools.cycle('bgrcmyk')
+
+	for i in range(len(probs)):
+		print(y_test)
+		print(probs[i])
+		try:
+			fper, tper, thresholds = roc_curve(y_test, probs[i]) 
+			plt.plot(fper, tper, color=next(cycol), label=clf_names[i]+' = %s'%(str(round(metrics.auc(fper, tper), 3))))
+			plt.plot([0, 1], [0, 1], color='darkblue', linestyle='--')
+		except:
+			print('passing %s'%(clf_names[i]))
+
+	plt.xlabel('False Positive Rate')
+	plt.ylabel('True Positive Rate')
+	plt.title('Receiver Operating Characteristic (ROC) Curve')
+	plt.legend()
+	plt.tight_layout()
+	plt.savefig('roc_curve.png')
+	plt.close()
+
+def plot_confusion_matrix(cm, classes, normalize=True, title='Confusion matrix', cmap=plt.cm.Blues):
+	"""
+	This function prints and plots the confusion matrix.
+	Normalization can be applied by setting `normalize=True`.
+	"""
+	if normalize:
+		cm = cm.astype('float') / cm.sum(axis=1)[:, np.newaxis]
+		print("\nNormalized confusion matrix")
+	else:
+		print('\nConfusion matrix, without normalization')
+
+	plt.imshow(cm, interpolation='nearest', cmap=cmap)
+	plt.title(title)
+	plt.colorbar()
+	tick_marks = np.arange(len(classes))
+	plt.xticks(tick_marks, classes, rotation=45)
+	plt.yticks(tick_marks, classes)
+
+	fmt = '.2f' if normalize else 'd'
+	thresh = cm.max() / 2.
+	for i, j in itertools.product(range(cm.shape[0]), range(cm.shape[1])):
+		plt.text(j, i, format(cm[i, j], fmt),
+				 horizontalalignment="center",
+				 color="white" if cm[i, j] > thresh else "black")
+
+	plt.tight_layout()
+	plt.ylabel('True label')
+	plt.xlabel('Predicted label')
+	plt.tight_layout()
+	plt.savefig('confusion_matrix.png')
+	plt.close()
+
+def plot_regressor(regressor, classes, X_test, y_test):
+	'''
+	plot regression models with a bar chart.
+	'''
+
+	try:
+		y_pred = regressor.predict(X_test)
+
+		# plot the first 25 records
+		if len(classes) == 2:
+			df = pd.DataFrame({'Actual': y_test.flatten(), 'Predicted': y_pred.flatten()})
+			df1 = df.head(25)
+			df1.plot(kind='bar',figsize=(16,10))
+			plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')
+			plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+			plt.tight_layout()
+			plt.savefig('bar_graph_predictions.png')
+			plt.close()
+
+			# plot a straight line on the data
+			plt.scatter(X_test, y_test,  color='gray')
+			plt.plot(X_test, y_pred, color='red', linewidth=2)
+			plt.tight_layout()
+			plt.savefig('straight_line_predictions.png')
+			plt.close()
+		else:
+			# multi-dimensional generalization 
+			df = pd.DataFrame({'Actual': y_test, 'Predicted': y_pred})
+			df1 = df.head(25)
+
+			df1.plot(kind='bar',figsize=(10,8))
+			plt.grid(which='major', linestyle='-', linewidth='0.5', color='green')
+			plt.grid(which='minor', linestyle=':', linewidth='0.5', color='black')
+			plt.tight_layout()
+			plt.savefig('bar_graph_predictions.png')
+			plt.close()
+	except:
+		print('error plotting regressor')
+
 ###############################################################
 ##                    LOADING SETTINGS                       ##
 ###############################################################
@@ -389,6 +563,9 @@ X_test=np.array(X_test)
 y_train=np.array(y_train)
 y_test=np.array(y_test)
 
+# create list of created csv files
+created_csv_files=list()
+
 # create training and testing datasets and save to a .CSV file for archive purposes
 # this ensures that all machine learning training methods use the same training data
 basefile=common_name
@@ -396,6 +573,7 @@ try:
 	print(basefile+'_all.csv'.upper())
 	all_data = convert_csv(alldata, labels, labels_)
 	all_data.to_csv(basefile+'_all.csv',index=False)
+	created_csv_files.append(basefile+'_all.csv')
 except:
 	print('error exporting data into excel sheet %s'%(basefile+'_all.csv'))
 
@@ -403,6 +581,7 @@ try:
 	print(basefile+'_train.csv'.upper())
 	train_data= convert_csv(X_train, y_train, labels_)
 	train_data.to_csv(basefile+'_train.csv',index=False)
+	created_csv_files.append(basefile+'_train.csv')
 except:
 	print('error exporting data into excel sheet %s'%(basefile+'_train.csv'))
 
@@ -410,6 +589,7 @@ try:
 	print(basefile+'_test.csv'.upper())
 	test_data= convert_csv(X_test, y_test, labels_)
 	test_data.to_csv(basefile+'_test.csv',index=False)
+	created_csv_files.append(basefile+'_test.csv')
 except:
 	print('error exporting data into excel sheet %s'%(basefile+'_test.csv'))
 
@@ -504,12 +684,14 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 		print(basefile+'_all_transformed.csv'.upper())
 		all_data = convert_csv(alldata, labels, labels_)
 		all_data.to_csv(basefile+'_all_transformed.csv',index=False)
+		created_csv_files.append(basefile+'_all_transformed.csv')
 	except:
 		print('error exporting data into excel sheet %s'%(basefile+'_all_transformed.csv'))
 	try:
 		print(basefile+'_train_transformed.csv'.upper())
 		train_data= convert_csv(X_train, y_train, labels_)
 		train_data.to_csv(basefile+'_train_transformed.csv',index=False)
+		created_csv_files.append(basefile+'_train_transformed.csv')
 	except:
 		print('error exporting data into excel sheet %s'%(basefile+'_train_transformed.csv'))
 
@@ -517,6 +699,7 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 		print(basefile+'_test_transformed.csv'.upper())
 		test_data= convert_csv(X_test, y_test, labels_)
 		test_data.to_csv(basefile+'_test_transformed.csv',index=False)
+		created_csv_files.append(basefile+'_test_transformed.csv')
 	except:
 		print('error exporting data into excel sheet %s'%(basefile+'_test_transformed.csv'))
 else:
@@ -529,6 +712,7 @@ else:
 
 visualize_data=settings['visualize_data']
 visual_dir=prevdir+'/visualize'
+model_session=str(uuid.uuid4())
 os.chdir(visual_dir)
 
 if visualize_data == True:
@@ -556,23 +740,23 @@ if visualize_data == True:
 
 	# now copy over the visualization directory to 
 	try:
-		shutil.copytree(visual_dir+'/visualization_session', model_dir+'/model_session')
+		shutil.copytree(visual_dir+'/visualization_session', model_dir+'/'+model_session)
 	except:
-		shutil.rmtree(model_dir+'/model_session')
-		shutil.copytree(visual_dir+'/visualization_session', model_dir+'/model_session')
+		shutil.rmtree(model_dir+'/'+model_session)
+		shutil.copytree(visual_dir+'/visualization_session', model_dir+'/'+model_session)
 	# copy over settings.json 
-	shutil.copy(prevdir+'/settings.json',model_dir+'/model_session/settings.json')
+	shutil.copy(prevdir+'/settings.json',model_dir+'/%s/settings.json'%(model_session))
 
 else:
 	# make a model session for next section if it doesn't exist from visualization directory
 	os.chdir(model_dir)
 	try:
-		os.mkdir('model_session')
+		os.mkdir(model_session)
 	except:
-		shutil.rmtree('model_session')
-		os.mkdir('model_session')
+		shutil.rmtree(model_session)
+		os.mkdir(model_session)
 	# copy over settings.json
-	shutil.copy(prevdir+'/settings.json', model_dir+'/model_session/settings.json')
+	shutil.copy(prevdir+'/settings.json', model_dir+'/%s/settings.json'%(model_session))
 
 ############################################################
 ## 					TRAIN THE MODEL 					  ##
@@ -634,14 +818,12 @@ for i in range(len(default_features)):
 	else:
 		default_featurenames=default_featurenames+'_|_'+default_features[i] 
 
-# just move all .csv files into model_session directory
+# just move all created .csv files into model_session directory
 os.chdir(model_dir)
-listdir=os.listdir()
-os.chdir('model_session')
+os.chdir(model_session)
 os.mkdir('data')
-for i in range(len(listdir)):
-	if listdir[i].endswith('.csv'):
-		shutil.move(model_dir+'/'+listdir[i], os.getcwd()+'/data/'+listdir[i])
+for i in range(len(created_csv_files)):
+	shutil.move(model_dir+'/'+created_csv_files[i], os.getcwd()+'/data/'+created_csv_files[i])
 
 # initialize i (for tqdm) and go through all model training scripts 
 i=0
@@ -741,19 +923,66 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='scsr':
 		import train_scsr as scsr
 		if mtype == 'c':
-			modelname, modeldir=scsr.train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,minlength)
+			modelname, modeldir, files=scsr.train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,minlength)
 		elif mtype == 'r':
-			modelname, modeldir=scsr.train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_featurenames,transform_model,model_dir,settings)
+			modelname, modeldir, files=scsr.train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_featurenames,transform_model,model_dir,settings)
 	elif default_training_script=='tpot':
 		import train_TPOT as tt
-		modelname, modeldir=tt.train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings)
+		modelname, modeldir, files=tt.train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 
+	############################################################
+	## 		  CALCULATE METRICS / PLOT ROC CURVE        	  ##
+	############################################################
+
+	if modelname.endswith('.pickle'):
+		foldername=modelname[0:-7]
+	elif modelname.endswith('.h5'):
+		foldername=modelname[0:-3]
+
+	# copy the folder in case there are multiple models being trained 
+	shutil.copytree(model_session, foldername)
+	cur_dir2=os.getcwd()
+	os.chdir(foldername)
+	os.mkdir('model')
+	os.chdir('model')
+	model_dir_temp=os.getcwd()
+
+	# dump transform model to the models directory if necessary
+	if transform_model == '':
+		pass
+	else:
+		# dump the tranform model into the current working directory
+		transformer_name=modelname.split('.')[0]+'_transform.pickle'
+		tmodel=open(transformer_name,'wb')
+		pickle.dump(transform_model, tmodel)
+		tmodel.close()
+
+	# move all supplementary files into model folder
+	for j in range(len(files)):
+		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
+	
+	# load model for getting metrics
+	loadmodel=open(modelname, 'rb')
+	clf=pickle.load(loadmodel)
+	loadmodel.close()
+
+	# now make main .JSON file for the session summary with metrics
+	get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files)
+	
+	# now move to the proper models directory
+	os.chdir(model_dir)
+
+	try:
+		os.chdir(problemtype+'_models')
+	except:
+		os.mkdir(problemtype+'_models')
+		os.chdir(problemtype+'_models')
+
+	shutil.move(model_dir+'/'+foldername, os.getcwd()+'/'+foldername)
+	
 	############################################################
 	## 					COMPRESS MODELS 					  ##
 	############################################################
-
-	# go to model directory 
-	os.chdir(modeldir)
 
 	if model_compress == True:
 		# now compress the model according to model type 

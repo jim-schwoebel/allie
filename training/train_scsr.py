@@ -42,7 +42,7 @@ warnings.filterwarnings("ignore")
 
 # INITIAL FUNCTIONS
 #############################################################
-def update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores):
+def update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores):
 
 	try:
 		explained_variances.append(metrics.explained_variance_score(y_test,predictions))
@@ -53,10 +53,6 @@ def update_list(y_test, predictions, explained_variances, mean_absolute_errors, 
 	except:
 		mean_absolute_errors.append('n/a')
 	try:
-		mean_squared_log_errors.append(metrics.mean_squared_log_error(y_test,predictions))
-	except:
-		mean_squared_log_errors.append('n/a')
-	try:
 		median_absolute_errors.append(metrics.median_absolute_error(y_test,predictions))
 	except:
 		median_absolute_errors.append('n/a')
@@ -65,7 +61,7 @@ def update_list(y_test, predictions, explained_variances, mean_absolute_errors, 
 	except:
 		r2_scores.append('n/a')
 
-	return explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores
+	return explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores
 
 def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_features,transform_model,modeldir,settings):
 
@@ -74,7 +70,6 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 	explained_variances=list()
 	mean_absolute_errors=list()
 	mean_squared_errors=list()
-	mean_squared_log_errors=list()
 	median_absolute_errors=list()
 	r2_scores=list()
 
@@ -121,7 +116,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(ols,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('linear regression')
 	except:
 		print('error - ORDINARY LEAST SQUARES')
@@ -148,7 +143,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(ridge,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('ridge regression')
 	except:
 		print('error - RIDGE REGRESSION')
@@ -179,7 +174,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(lasso,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('LASSO')
 	except:
 		print('error - LASSO')
@@ -228,7 +223,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(enet,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(ytest, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(ytest, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('elastic net')
 	except:
 		print('error - ELASTIC NET')
@@ -280,7 +275,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(lars,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('Least angle regression (LARS)')
 	except:
 		print('error - LARS')
@@ -306,7 +301,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(lars_lasso,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('LARS lasso')
 	except:
 		print('error - LARS LASSO')
@@ -330,7 +325,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(omp,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('orthogonal matching pursuit (OMP)')
 	except:
 		print('error - ORTHOGONAL MATCHING PURSUIT (OMP)')
@@ -398,7 +393,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(lr,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('logistic regression')
 	except:
 		print('error - LOGISTIC REGRESSION')
@@ -435,7 +430,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(sgd,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('stochastic gradient descent (SGD)')
 	except: 
 		print('error - STOCHASTIC GRADIENT DESCENT')
@@ -466,7 +461,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(nn,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('perceptron')
 	except:
 		print('error - MLP REGRESSOR')
@@ -491,7 +486,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(pa_regr,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('passive-agressive algorithm')
 	except:
 		print('error - PASSIVE-AGGRESSIVE')
@@ -522,7 +517,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(ransac,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('RANSAC')
 	except:
 		print('error - RANSAC')
@@ -554,7 +549,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(theilsen,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('Theil-Sen')
 	except:
 		print('error - THEILSEN')
@@ -581,7 +576,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(huber,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('huber regression')
 	except:
 		print('error - HUBER')
@@ -612,7 +607,7 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 		pickle.dump(poly_lr,f)
 		f.close()
 		# get stats 
-		explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, mean_squared_log_errors, median_absolute_errors, r2_scores)
+		explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores = update_list(y_test, predictions, explained_variances, mean_absolute_errors, mean_squared_errors, median_absolute_errors, r2_scores)
 		modeltypes.append('polynomial (linear regression)')
 	except:
 		print('error - POLYNOMIAL')
@@ -678,28 +673,6 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 	os.chdir(modeldir)
 	shutil.rmtree(foldername)
 
-	# output stats of saved file (for analysis later)
-	data={
-		'sample type': problemtype,
-		'feature_set': default_features, 
-		'model name':newname,
-		'model type':modeltypes[ind],
-		'stats':{
-				'explained_variance':explained_variances[ind],
-				'mean_absolute_error':mean_absolute_errors[ind],
-				'mean_squared_log_error':mean_squared_log_errors[ind],
-				'median_absolute_error':median_absolute_errors[ind],
-				'r2_score':r2_scores[ind-1]
-				},
-		'classes':classes,
-		'settings': settings,
-		}
-
-	jsonfilename=common_name_model+'.json'
-	jsonfile=open(jsonfilename,'w')
-	json.dump(data,jsonfile)
-	jsonfile.close()
-
 	# output spreadsheet of results and open up for analyis
 	for i in range(len(modeltypes)):
 		try:
@@ -707,7 +680,6 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 			worksheet.write('B'+str(i+2), str(r2_scores[i]))
 			worksheet.write('C'+str(i+2), str(explained_variances[i]))
 			worksheet.write('D'+str(i+2), str(mean_absolute_errors[i]))
-			worksheet.write('E'+str(i+2), str(mean_squared_log_errors[i]))
 			worksheet.write('F'+str(i+2), str(median_absolute_errors[i]))
 			#worksheet.write('G'+str(i+2), str(mean_squared_errors[i]))
 			
@@ -716,36 +688,14 @@ def train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes
 
 	workbook.close()
 
-	# copy the folder in case there are multiple models being trained 
-	shutil.copytree('model_session', common_name_model)
-	cur_dir2=os.getcwd()
-	os.chdir(common_name_model)
-	os.mkdir('model')
-	os.chdir('model')
-	model_dir_temp=os.getcwd()
+	files=list()
+	files.append(common_name_model+'.xlsx')
+	files.append(common_name_model+'.pickle')
 
-	# now move all the files over to proper model directory 
-	if transform_model != '':
-		shutil.move(cur_dir2+'/transform.pickle', model_dir_temp+'/'+common_name_model+'_transform.pickle')
-	shutil.move(cur_dir2+'/'+common_name_model+'.json', model_dir_temp+'/'+common_name_model+'.json')
-	shutil.move(cur_dir2+'/'+common_name_model+'.xlsx', model_dir_temp+'/'+common_name_model+'.xlsx')
-	shutil.move(cur_dir2+'/'+common_name_model+'.pickle', model_dir_temp+'/'+common_name_model+'.pickle')
-	os.chdir(cur_dir2)
-
-	try:
-		os.chdir(problemtype+'_models')
-	except:
-		os.mkdir(problemtype+'_models')
-		os.chdir(problemtype+'_models')
-
-	# copy directory to proper location and delete temporary folder
-	shutil.move(cur_dir2+'/'+common_name_model, os.getcwd()+'/'+common_name_model)
-
-	# get model_name 
 	model_name=common_name_model+'.pickle'
 	model_dir=os.getcwd()
 
-	return model_name, model_dir
+	return model_name, model_dir, files
 
 def train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_features,transform_model,settings,min_num):
 
@@ -1005,51 +955,16 @@ def train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,c
 	
 	summary='SUMMARY OF MODEL SELECTION \n\n'+'WINNING MODEL: \n\n'+'%s: %s (+/- %s) \n\n'%(str(model_accuracy[len(model_accuracy)-1][0]),str(model_accuracy[len(model_accuracy)-1][1]),str(model_accuracy[len(model_accuracy)-1][2]))+'MODEL FILE NAME: \n\n %s.pickle'%(filename)+'\n\n'+'DATE CREATED: \n\n %s'%(datetime.datetime.now())+'\n\n'+'EXECUTION TIME: \n\n %s\n\n'%(str(execution))+'GROUPS: \n\n'+str(classes)+'\n'+'('+str(min_num)+' in each class, '+str(len(y_test))+'% used for testing)'+'\n\n'+'TRAINING SUMMARY:'+'\n\n'+str(y_train)+'\n\n'+'FEATURES: \n\n %s'%(selectedfeature)+'\n\n'+'MODELS, ACCURACIES, AND STANDARD DEVIATIONS: \n\n'+accstring+'\n\n'+'(C) 2019, NeuroLex Laboratories'
 
-	data={'sample type': problemtype,
-		'feature_set':default_features,
-		'model name':modelname+'.pickle',
-		'accuracy':model_accuracy[len(model_accuracy)-1][1],
-		'deviation': model_accuracy[len(model_accuracy)-1][2],
-		'model type':'sc_'+classifiername,
-		'settings': settings,
-		}
-
 	# write to .JSON and move to proper directory...
 	g=open(modelname+'.txt','w')
 	g.write(summary)
 	g.close()
 
-	g2=open(modelname+'.json','w')
-	json.dump(data,g2)
-	g2.close()
+	files=list()
+	files.append(common_name_model+'.txt')
+	files.append(common_name_model+'.pickle')
 
-	# copy the folder in case there are multiple models being trained 
-	shutil.copytree('model_session', common_name_model)
-	cur_dir2=os.getcwd()
-	os.chdir(common_name_model)
-	os.mkdir('model')
-	os.chdir('model')
-	model_dir_temp=os.getcwd()
-
-	# now move all the files over to proper model directory 
-	if transform_model != '':
-		shutil.move(cur_dir2+'/transform.pickle', model_dir_temp+'/'+common_name_model+'_transform.pickle')
-	shutil.move(cur_dir2+'/'+common_name_model+'.json', model_dir_temp+'/'+common_name_model+'.json')
-	shutil.move(cur_dir2+'/'+common_name_model+'.txt', model_dir_temp+'/'+common_name_model+'.txt')
-	shutil.move(cur_dir2+'/'+common_name_model+'.pickle', model_dir_temp+'/'+common_name_model+'.pickle')
-	os.chdir(cur_dir2)
-
-	try:
-		os.chdir(problemtype+'_models')
-	except:
-		os.mkdir(problemtype+'_models')
-		os.chdir(problemtype+'_models')
-
-	# copy directory to proper location and delete temporary folder
-	shutil.move(cur_dir2+'/'+common_name_model, os.getcwd()+'/'+common_name_model)
-
-	# get model_name 
 	model_name=common_name_model+'.pickle'
 	model_dir=os.getcwd()
 	
-	return model_name, model_dir
+	return model_name, model_dir, files

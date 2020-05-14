@@ -40,7 +40,8 @@ os.chdir(directory)
 ################################################
 
 def transcribe(file, default_audio_transcriber):
-	# get transcript 
+	# create all transcription methods here
+	print('%s transcribing: %s'%(default_audio_transcriber, file))
 	try:
 		if file[-4:]=='.wav':
 			transcript=ts.transcribe_sphinx(file)
@@ -52,6 +53,8 @@ def transcribe(file, default_audio_transcriber):
 			transcript=file
 	except:
 		transcript=''
+
+	print('--> '+ transcript)
 
 	return transcript 
 
@@ -148,7 +151,7 @@ settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
 
 audio_transcribe=settings['transcribe_audio']
-default_audio_transcriber=settings['default_audio_transcriber']
+default_audio_transcribers=settings['default_audio_transcriber']
 try:
 	# assume 1 type of feature_set 
 	feature_sets=[sys.argv[2]]
@@ -264,14 +267,16 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				# make new .JSON if it is not there with base array schema.
 				basearray=make_features(sampletype)
 
-				# get the audio transcript  
-				if audio_transcribe==True:
-					transcript = transcribe(filename, default_audio_transcriber)
-					transcript_list=basearray['transcripts']
-					transcript_list['audio'][default_audio_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
-				else:
-					transcript=''
+				# get the first audio transcriber and loop through transcript list
+				for j in range(len(default_audio_transcribers)):
+					default_audio_transcriber=default_audio_transcribers[j]
+					if audio_transcribe==True:
+						transcript = transcribe(filename, default_audio_transcriber)
+						transcript_list=basearray['transcripts']
+						transcript_list['audio'][default_audio_transcriber]=transcript 
+						basearray['transcripts']=transcript_list
+					else:
+						transcript=''
 
 				# featurize the audio file 
 				for j in range(len(feature_sets)):
@@ -301,14 +306,19 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				transcript_list=basearray['transcripts']
 
 				# only transcribe if you need to (checks within schema)
-				if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-					transcript = transcribe(filename, default_audio_transcriber)
-					transcript_list['audio'][default_audio_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
-				elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
-					transcript = transcript_list['audio'][default_audio_transcriber]
-				else:
-					transcript=''
+				for j in range(len(default_audio_transcribers)):
+
+					# get the first audio transcriber and loop through transcript list
+					default_audio_transcriber=default_audio_transcribers[j]
+
+					if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
+						transcript = transcribe(filename, default_audio_transcriber)
+						transcript_list['audio'][default_audio_transcriber]=transcript 
+						basearray['transcripts']=transcript_list
+					elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
+						transcript = transcript_list['audio'][default_audio_transcriber]
+					else:
+						transcript=''
 					
 				# only re-featurize if necessary (checks if relevant feature embedding exists)
 				for j in range(len(feature_sets)):

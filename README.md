@@ -16,6 +16,9 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ## active things to finish before a live launch [ongoing list]
 
+### ongoing 
+
+1. test transcribers in lists
 1. add in default_augmenters / get live into Allie
 2. add in default_cleaners / get live into Allie 
 3. add in transcriber settings as a list ['pocketsphinx', 'deepspeech', 'google', 'aws'], etc.
@@ -29,6 +32,10 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 11. Create nice CLI interface for all of Allie's functionality using OptionParser()
 12. make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
 13. Add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
+14. add in deepspeech functionality to transcription for open source (and other open source audio transcribers)
+
+### recently completed
+- added in transcribers as lists (can be adapted into future)
 
 ## getting started 
 

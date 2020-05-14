@@ -90,6 +90,14 @@ def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel, ber
 
 	return features, labels 
 
+def transcribe_text(default_text_transcriber, transcript):
+	## create a simple function to expand into the future
+	if default_text_transcriber == 'raw text':
+		transcript=transcript
+	else:
+		transcript=''
+	return transcript
+
 # type in folder before downloading and loading large files.
 foldername=sys.argv[1]
 
@@ -115,7 +123,8 @@ try:
 	feature_sets=[sys.argv[2]]
 except:
 	feature_sets=settings['default_text_features']
-default_text_transcriber=settings['default_text_transcriber']
+default_text_transcribers=settings['default_text_transcriber']
+text_transcribe=settings['transcribe_text']
 
 # contextually load repositories heere
 if 'nltk_features' in feature_sets:
@@ -243,10 +252,14 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				# make new .JSON if it is not there with base array schema.
 				basearray=make_features(sampletype)
 
-				# assume text_transcribe==True and add to transcript list 
-				transcript_list=basearray['transcripts']
-				transcript_list['text'][default_text_transcriber]=transcript 
-				basearray['transcripts']=transcript_list
+				# assume text_transcribe==True and add to transcript list
+				if text_transcribe==True: 
+					transcript_list=basearray['transcripts']
+					for j in range(len(default_text_transcribers)):
+						default_text_transcriber=default_text_transcribers[j]
+						transcript_=transcribe_text(default_text_transcriber, transcript)
+						transcript_list['text'][default_text_transcriber]=transcript_
+						basearray['transcripts']=transcript_list
 
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]
@@ -278,9 +291,14 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				# get transcript and update if necessary 
 				transcript_list=basearray['transcripts']
 
-				if default_text_transcriber not in list(transcript_list['text']):
-					transcript_list['text'][default_text_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
+				# assume text_transcribe==True and add to transcript list 
+				if text_transcribe==True:
+					for j in range(len(default_text_transcribers)):
+						default_text_transcriber=default_text_transcribers[j]
+						if default_text_transcriber not in list(transcript_list['text']):
+							transcript_=transcribe_text(default_text_transcriber, transcript)
+							transcript_list['text'][default_text_transcriber]=transcript_
+							basearray['transcripts']=transcript_list
 
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]

@@ -10,10 +10,10 @@ def train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype
 	files=list()
 	
 	if mtype in ['classification', 'c']:
-		tpot=TPOTClassifier(generations=1, population_size=50, verbosity=2, n_jobs=-1, scoring='accuracy')
+		tpot=TPOTClassifier(generations=10, population_size=50, verbosity=2, n_jobs=-1, scoring='accuracy')
 		tpotname='%s_classifier.py'%(modelname)
 	elif mtype in ['regression','r']:
-		tpot = TPOTRegressor(generations=1, population_size=20, verbosity=2)
+		tpot = TPOTRegressor(generations=10, population_size=20, verbosity=2)
 		tpotname='%s_regression.py'%(modelname)
 
 	# fit classifier

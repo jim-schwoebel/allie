@@ -234,19 +234,10 @@ from sklearn.base import ClassifierMixin
 from sklearn.base import RegressorMixin
 from sklearn.base import is_classifier
 
-def train_hungabunga(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
-		# scale data to allow for convergence to happen faster for SVM
-		scaler = StandardScaler()
-		scaler.fit(alldata)
-		alldata=scaler.transform(alldata)
+def train_hungabunga(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
 
-		print(os.getcwd())
-
-		X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
-		modelname=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')
-		f=open(modelname+'_hungabunga_scaler.pickle','wb')
-		pickle.dump(scaler,f)
-		f.close()
+		model_name=common_name_model+'.pickle'
+		files=list()
 
 		if mtype in [' classification', 'c']:
 
@@ -422,7 +413,7 @@ def train_hungabunga(alldata, labels, mtype, jsonfile, problemtype, default_feat
 								return self.model.predict(x)
 
 				clf = HungaBungaClassifier(brain=False)
-				modelname=modelname+'_HungaBungaClassifier.pickle'
+
 		elif mtype in ['regression','r']:
 			# regression path
 
@@ -713,56 +704,17 @@ def train_hungabunga(alldata, labels, mtype, jsonfile, problemtype, default_feat
 							return self.model.predict(x)
 
 			clf = HungaBungaRegressor(brain=True)
-			modelname=modelname+'_HungaBungaRegressor.pickle'
 
 		# write model to .pickle file
 		clf.fit(X_train, y_train)
-		test=clf.predict(X_test)
-		print(test)
-		accuracy=clf.score(X_test,y_test)
-		print(accuracy)
 
 		# now save the model
-		f=open(modelname,'wb')
+		f=open(model_name,'wb')
 		pickle.dump(clf.model,f)
 		f.close()
 
-		jsonfilename='%s.json'%(modelname[0:-7])
-		print('saving .JSON file (%s)'%(jsonfilename))
-		jsonfile=open(jsonfilename,'w')
-		if mtype in ['classification', 'c']:
-				data={'sample type': problemtype,
-						'feature_set':default_features,
-						'model name':modelname,
-						'accuracy':accuracy,
-						'model type':'HungaBungaclassification'+' - '+str(clf.model),
-						'settings': settings,
-				}
-		elif mtype in ['regression', 'r']:
-				data={'sample type': problemtype,
-						'feature_set':default_features,
-						'model name':modelname,
-						'accuracy':accuracy,
-						'model type':'HungaBungaregression'+' - '+str(clf.model),
-						'settings': settings,
-				}
-
-		json.dump(data,jsonfile)
-		jsonfile.close()
-
-		cur_dir2=os.getcwd()
-		try:
-			os.chdir(problemtype+'_models')
-		except:
-			os.mkdir(problemtype+'_models')
-			os.chdir(problemtype+'_models')
-
-		# now move all the files over to proper model directory 
-		shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
-		shutil.move(cur_dir2+'/'+modelname, os.getcwd()+'/'+modelname)
-
-		# get model_name 
-		model_name=modelname
+		# files to put into model folder
+		files.append(model_name)
 		model_dir=os.getcwd()
 		
-		return model_name, model_dir
+		return model_name, model_dir, files

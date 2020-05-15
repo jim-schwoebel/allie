@@ -160,7 +160,6 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	elif mtype in ['r', 'regression']:
 		# now get all regression metrics
 		mtype='regression'
-		metrics_['max_error'] = metrics.max_error(y_true, y_pred)
 		metrics_['mean_absolute_error'] = metrics.mean_absolute_error(y_true, y_pred)
 		metrics_['mean_squared_error'] = metrics.mean_squared_error(y_true, y_pred)
 		metrics_['median_absolute_error'] = metrics.median_absolute_error(y_true, y_pred)
@@ -845,81 +844,81 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_featurenames)
 	elif default_training_script=='alphapy':
 		import train_alphapy as talpy
-		modelname, modeldir=talpy.train_alphapy(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=talpy.train_alphapy(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='atm':
 		import train_atm as tatm
-		modelname, modeldir=tatm.train_atm(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tatm.train_atm(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autobazaar':
 		import train_autobazaar as autobzr
-		modelname, modeldir=autobzr.train_autobazaar(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=autobzr.train_autobazaar(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autogbt':
 		import train_autogbt as autogbt
-		modelname, modeldir=autogbt.train_autogbt(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=autogbt.train_autogbt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autogluon':
 		import train_autogluon as tautg
-		modelname, modeldir=tautg.train_autogluon(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tautg.train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autokaggle':
 		import train_autokaggle as autokag
-		modelname, modeldir=autokag.train_autokaggle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=autokag.train_autokaggle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autokeras':
 		import train_autokeras as autokeras_
-		modelname, modeldir=autokeras_.train_autokeras(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=autokeras_.train_autokeras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='automl':
 		import train_automl as auto_ml
-		modelname, modeldir=auto_ml.train_automl(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=auto_ml.train_automl(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autosklearn':
 		print('Autosklearn training is unstable! Please use a different model setting for now.') 
 		# import train_autosklearn as taskl
 		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
 	elif default_training_script=='autopytorch':
 		import train_autopytorch as autotorch_
-		modelname, modeldir=autotorch_.train_autopytorch(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=autotorch_.train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='btb':
 		import train_btb as tbtb
-		modelname, modeldir=tbtb.train_btb(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tbtb.train_btb(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='cvopt':
 		import train_cvopt as tcvopt
-		modelname, modeldir = tcvopt.train_cvopt(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+		modelname, modeldir, files = tcvopt.train_cvopt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='devol':
 		import train_devol as td 
-		modelname, modeldir=td.train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+		modelname, modeldir, files=td.train_devol(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='gama':
 		import train_gama as tgama
-		modelname, modeldir=tgama.train_gama(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tgama.train_gama(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='gentun':
 		import train_gentun as tgentun 
-		modelname, modeldir=tgentun.train_gentun(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tgentun.train_gentun(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='hyperband':
 		import train_hyperband as thband
-		modelname, modeldir = thband.train_hyperband(alldata, labels, mtype, jsonfile, problemtype, default_features, settings)
+		modelname, modeldir, files = thband.train_hyperband(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='hypsklearn':
 		import train_hypsklearn as th 
-		modelname, modeldir=th.train_hypsklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+		modelname, modeldir, files=th.train_hypsklearn(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='hungabunga':
 		import train_hungabunga as thung
-		modelname, modeldir=thung.train_hungabunga(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=thung.train_hungabunga(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='keras':
 		import train_keras as tk
-		modelname, modeldir=tk.train_keras(classes, alldata, labels, mtype, jsonfile, problemtype, default_featurenames, settings)
+		modelname, modeldir, files=tk.train_keras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='ludwig':
 		import train_ludwig as tl
-		modelname, modeldir=tl.train_ludwig(mtype, classes, jsonfile, alldata, labels, default_label, problemtype, default_featurenames, settings)
+		modelname, modeldir, files=tl.train_ludwig(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='mlblocks':
 		import train_mlblocks as mlb
-		modelname, modeldir=mlb.train_mlblocks(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=mlb.train_mlblocks(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='mlbox':
 		import train_mlbox as mlbox_
-		modelname, modeldir=mlbox_.train_mlbox(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=mlbox_.train_mlbox(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='neuraxle':
 		import train_neuraxle as tneuraxle
-		modelname, modeldir=tneuraxle.train_neuraxle(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tneuraxle.train_neuraxle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='plda':
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp
 		# tp.train_pLDA(alldata,labels)
 	elif default_training_script=='safe':
 		import train_safe as tsafe
-		modelname, modeldir=tsafe.train_safe(alldata,labels,mtype,jsonfile,problemtype,default_featurenames, settings)
+		modelname, modeldir, files=tsafe.train_safe(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='scsr':
 		import train_scsr as scsr
 		if mtype == 'c':

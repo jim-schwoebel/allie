@@ -123,12 +123,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy']:
+	if default_training_script not in ['autogluon', 'alphapy', 'atm']:
 		y_pred=clf.predict(X_test)
-	elif default_training_script == 'autogluon':
-		from autogluon import TabularPrediction as task
-		test_data=test_data.drop(labels=['class'],axis=1)
-		y_pred=clf.predict(test_data)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
 		curdir=os.getcwd()
@@ -146,7 +142,18 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 				csvfile=listdir[k]
 		y_pred=pd.read_csv(csvfile)['prediction']
 		os.chdir(curdir)
+	elif default_training_script == 'autogluon':
+		from autogluon import TabularPrediction as task
+		test_data=test_data.drop(labels=['class'],axis=1)
+		y_pred=clf.predict(test_data)
+	elif default_training_script == 'atm':
+		curdir=os.getcwd()
+		os.chdir('atm_temp')
+		data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+		print(data)
+		y_pred = clf.predict(data.head())
 
+	# get classification or regression metrics
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics
 		mtype='classification'
@@ -989,10 +996,13 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
 	
 	# load model for getting metrics
-	if default_training_script != 'alphapy':
+	if default_training_script not in ['alphapy', 'atm']:
 		loadmodel=open(modelname, 'rb')
 		clf=pickle.load(loadmodel)
 		loadmodel.close()
+	elif default_training_script == 'atm':
+		from atm import Model
+		clf=Model.load(modelname)
 	else: 
 		clf=''
 

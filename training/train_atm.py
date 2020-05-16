@@ -1,12 +1,11 @@
 import pandas as pd
 import os, sys, pickle, json, random, shutil, time
+os.system('pip3 install atm==0.2.2')
+os.system('pip3 install pandas==0.24.2')
 import numpy as np
 from atm import ATM
 
 def convert_(X_train, y_train):
-
-    os.system('pip3 install atm==0.2.2')
-    os.system('pip3 install pandas==0.24.2')
 
     feature_list=list()
     for i in range(len(X_train[0])):
@@ -18,21 +17,10 @@ def convert_(X_train, y_train):
     for i in range(len(X_train)):
         for j in range(len(feature_list)-1):
             if i > 0:
-                # print(data[feature_list[j]])
                 try:
-                    # print(feature_list[j])
-                    # print(data)
-                    # print(X_train[i][j])
-                    # print(data[feature_list[j]])
-                    # time.sleep(2)
                     data[feature_list[j]]=data[feature_list[j]]+[X_train[i][j]]
                 except:
                     pass
-                    # print(data)
-                    # time.sleep(50)
-                    # print(str(i)+'-i')
-                    # print(j)
-
             else:
                 data[feature_list[j]]=[X_train[i][j]]
                 print(data)
@@ -42,17 +30,12 @@ def convert_(X_train, y_train):
     
     return data
 
-def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
-
-    # convert to proper format 
-    all_data = convert_(alldata, labels)
-    print(all_data)
+def train_atm(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
     
     # create file names 
-    jsonfilename=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_atm.json'
-    csvfilename=jsonfilename[0:-5]+'.csv'
-    picklefilename=jsonfilename[0:-5]+'.pickle'
-    all_data.to_csv(csvfilename)
+    model_name=common_name_model+'.pickle'
+    csvname=common_name_model.split('_')[0]
+    files=list()
 
     # initialize and train classifier 
     atm = ATM()
@@ -66,77 +49,26 @@ def train_atm(alldata, labels, mtype, jsonfile, problemtype, default_features, s
         shutil.rmtree('atm_temp')
         os.mkdir('atm_temp')
         os.chdir('atm_temp')
-        
+
+    try:
+        shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_train_transformed.csv',os.getcwd()+'/train.csv')
+        shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_test_transformed.csv',os.getcwd()+'/test.csv')
+    except:
+        shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_train.csv',os.getcwd()+'/train.csv')
+        shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_test.csv',os.getcwd()+'/test.csv')     
+    
     # train models 
-    all_data.to_csv(csvfilename,index=False)
-    results = atm.run(train_path=csvfilename)
+    results = atm.run(train_path='train.csv', class_column='class_')
     data_results_=str(results.describe())
     bestclassifier=str(results.get_best_classifier())
     scores=str(results.get_scores())
 
     # export classifier / transfer to model directory
-    results.export_best_classifier(picklefilename, force=True)
-    shutil.copy(os.getcwd()+'/'+picklefilename, curdir+'/'+picklefilename)
-
-    # go back out and remove temp directory
+    results.export_best_classifier(model_name, force=True)
+    shutil.move(os.getcwd()+'/'+model_name, curdir+'/'+model_name)
+    files.append('atm_temp')
+    files.append(model_name)
     os.chdir(curdir)
-    shutil.rmtree('atm_temp')
-    os.remove('atm.db')
-
-    print('------------------------------------')
-    print('          EXPORTING FILES           ')
-    print('------------------------------------')
-
-    # now export model 
-    print('exporting .PICKLE model %s'%(picklefilename))
-
-    # same json files 
-    print('saving .JSON file (%s)'%(jsonfilename))
-    jsonfile=open(jsonfilename,'w')
-    if mtype in ['classification', 'c']:
-        data={'sample type': problemtype,
-            'feature_set':default_features,
-            'model name':jsonfilename[0:-5]+'.pickle',
-            'accuracy':bestclassifier,
-            'results': data_results_,
-            'model type':'ATM_classification - '+bestclassifier,
-            'scores': scores,
-            'settings': settings,
-        }
-    elif mtype in ['regression', 'r']:
-        data={'sample type': problemtype,
-            'feature_set':default_features,
-            'model name':jsonfilename[0:-5]+'.pickle',
-            'accuracy':bestclassifier,
-            'results': data_results_,
-            'model type':'ATM_regression - '+bestclassifier,
-            'scores': scores,
-            'settings': settings,
-        }
-
-    json.dump(data,jsonfile)
-    jsonfile.close()
-
-    cur_dir2=os.getcwd()
-    try:
-    	os.chdir(problemtype+'_models')
-    except:
-    	os.mkdir(problemtype+'_models')
-    	os.chdir(problemtype+'_models')
-
-    # now move all the files over to proper model directory 
-    shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
-    shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-5]+'.pickle')
-    shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.csv', os.getcwd()+'/'+jsonfilename[0:-5]+'.csv')
-
-    # remove temporary files
-    try:
-        shutil.rmtree(curdir+'/'+newdir)
-    except:
-        pass
-
-    # get model_name 
-    model_name=jsonfilename[0:-5]+'.pickle'
     model_dir=os.getcwd()
 
-    return model_name, model_dir
+    return model_name, model_dir, files

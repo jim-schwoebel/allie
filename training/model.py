@@ -151,7 +151,9 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		os.chdir('atm_temp')
 		data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
 		print(data)
-		y_pred = clf.predict(data.head())
+		y_pred = clf.predict(data)
+		print(y_pred)
+		os.chdir(curdir)
 
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:

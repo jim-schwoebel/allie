@@ -290,7 +290,7 @@ Goal is to make an output folder like this:
 
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
-## Default_training scripts 
+## V1 training scripts
 
 There are 21 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
 

@@ -9,6 +9,7 @@ Can do this through scikit-leran pipelines.
 '''
 
 import json, os, sys
+os.system('pip3 install scikit-learn==0.22.2.post1')
 import numpy as np 
 from sklearn import preprocessing
 import numpy as np

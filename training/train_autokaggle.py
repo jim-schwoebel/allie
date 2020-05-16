@@ -1,17 +1,13 @@
-import os, sys, shutil, pickle, json
-from sklearn.datasets import load_breast_cancer
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import log_loss, accuracy_score, mean_squared_error
+import pickle
 curdir=os.getcwd()
 print(os.getcwd())
+print('initializing installation')
+os.system('pip3 install autokaggle==0.1.0')
 from helpers.autokaggle.tabular_supervised import TabularClassifier
 from helpers.autokaggle.tabular_supervised import TabularRegressor
-import numpy as np
 os.chdir(curdir)
 
 def train_autokaggle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
-	print('initializing installation')
-	os.system('pip3 install autokaggle==0.1.0')
 	
 	model_name=common_name_model+'.pickle'
 	files=list()

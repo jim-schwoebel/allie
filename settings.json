@@ -23,7 +23,7 @@
   "scale_features": true,
   "select_features": false,
   "test_size": 0.25,
-  "transcribe_audio": false,
+  "transcribe_audio": true,
   "transcribe_csv": true,
   "transcribe_image": true,
   "transcribe_text": true,

@@ -645,6 +645,7 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 		os.chdir(problemtype+'_transformer')
 	# train transformer if it doesn't already exist
 	if transform_file in os.listdir():
+		os.system('pip3 install scikit-learn==0.22.2.post1')
 		transform_model=pickle.load(open(transform_file,'rb'))
 		alldata=transform_model.transform(alldata)
 	else:

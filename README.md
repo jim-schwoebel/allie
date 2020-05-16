@@ -215,15 +215,15 @@ Here are some settings that you can modify in this settings.json file and the va
 | [default_video_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/video_features) | default set of video features used for featurization (list). | ["video_features"] | ["video_features", "y8m_features"] | 
 | [default_csv_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of csv features used for featurization (list). | ["csv_features"] | ["csv_features"] | 
 | transcribe_audio | determines whether or not to transcribe an audio file via default_audio_transcriber (boolean). | True | True, False | 
-| default_audio_transcriber | the default audio transcriber if transcribe_audio == True (string). | ['pocketsphinx'] | ['pocketsphinx', 'deepspeech_nodict', 'deepspeech_dict', 'google', 'wit', 'azure', 'bing', 'houndify', 'ibm'] | 
+| default_audio_transcriber | the default audio transcriber if transcribe_audio == True (list). | ['pocketsphinx'] | ['pocketsphinx', 'deepspeech_nodict', 'deepspeech_dict', 'google', 'wit', 'azure', 'bing', 'houndify', 'ibm'] | 
 | transcribe_text | determines whether or not to transcribe a text file via default_text_transcriber (boolean). | True | True, False | 
-| default_text_transcriber | the default text transcriber if transcribe_text == True (string). | ['raw text'] | ['raw text'] | 
+| default_text_transcriber | the default text transcriber if transcribe_text == True (list). | ['raw text'] | ['raw text'] | 
 | transcribe_image | determines whether or not to transcribe an image file via default_image_transcriber (boolean). | True | True, False | 
-| default_image_transcriber | the default image transcriber if transcribe_image == True (string). | ['tesseract'] | ['tesseract'] | 
+| default_image_transcriber | the default image transcriber if transcribe_image == True (list). | ['tesseract'] | ['tesseract'] | 
 | transcribe_video | determines whether or not to transcribe a video file via default_video_transcriber (boolean). | True | True, False | 
 | default_video_transcriber | the default video transcriber if transcribe_video == True (boolean). | ['tesseract_connected_over_frames'] | ['tesseract_connected_over_frames'] | 
 | transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber (boolean). | True | True, False | 
-| default_csv_transcriber | the default video transcriber if transcribe_csv == True (string). | ['raw text'] | ['raw text'] | 
+| default_csv_transcriber | the default video transcriber if transcribe_csv == True (list). | ['raw text'] | ['raw text'] | 
 | default_training_script | the specified traning script(s) to train machine learning models. Note that if you specify multiple training scripts here that the training scripts will be executed serially (list). | ['tpot'] |['alphapy', 'atm', 'autobazaar', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']| 
 | clean_data | specifies whether or not you'd like to clean / pre-process data in folders before model training (boolean). |  True | True, False | 
 | default_audio_cleaners | the specified cleaning scripts to employ when cleaning audio data | ['remove_duplicates'] | ['remove_duplicates'] |

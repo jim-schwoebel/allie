@@ -68,6 +68,7 @@ def train_atm(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,
     shutil.move(os.getcwd()+'/'+model_name, curdir+'/'+model_name)
     files.append('atm_temp')
     files.append(model_name)
+    files.append('atm.db')
     os.chdir(curdir)
     model_dir=os.getcwd()
 

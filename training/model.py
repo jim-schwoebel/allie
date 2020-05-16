@@ -123,12 +123,29 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon']:
+	if default_training_script not in ['autogluon', 'alphapy']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script == 'autogluon':
 		from autogluon import TabularPrediction as task
 		test_data=test_data.drop(labels=['class'],axis=1)
 		y_pred=clf.predict(test_data)
+	elif default_training_script=='alphapy':
+		# go to the right folder 
+		curdir=os.getcwd()
+		print(os.listdir())
+		os.chdir(common_name+'_alphapy_session')
+		alphapy_dir=os.getcwd()
+		os.chdir('input')
+		os.rename('test.csv', 'predict.csv')
+		os.chdir(alphapy_dir)
+		os.system('alphapy --predict')
+		os.chdir('output')
+		listdir=os.listdir()
+		for k in range(len(listdir)):
+			if listdir[k].startswith('predictions'):
+				csvfile=listdir[k]
+		y_pred=pd.read_csv(csvfile)['prediction']
+		os.chdir(curdir)
 
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics
@@ -190,6 +207,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		jsonfilename=modelname[0:-7]+'.json'
 	elif modelname.endswith('.h5'):
 		jsonfilename=modelname[0:-3]+'.json'
+	else:
+		jsonfilename=modelname+'.json'
 
 	jsonfile=open(jsonfilename,'w')
 	json.dump(data,jsonfile)
@@ -944,6 +963,8 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		foldername=modelname[0:-7]
 	elif modelname.endswith('.h5'):
 		foldername=modelname[0:-3]
+	else:
+		foldername=common_name_model
 
 	# copy the folder in case there are multiple models being trained 
 	shutil.copytree(model_session, foldername)
@@ -968,9 +989,12 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
 	
 	# load model for getting metrics
-	loadmodel=open(modelname, 'rb')
-	clf=pickle.load(loadmodel)
-	loadmodel.close()
+	if default_training_script != 'alphapy':
+		loadmodel=open(modelname, 'rb')
+		clf=pickle.load(loadmodel)
+		loadmodel.close()
+	else: 
+		clf=''
 
 	# create test_data variable for anything other than autogluon
 	if default_training_script != 'autogluon':

@@ -1,38 +1,32 @@
-import os, sys, pickle, json, random, shutil, time, yaml
+import os
+
+# install required dependencies (important to have this config for everything to work)
+print('installing dependencies')
+# 2.4.0 before
+os.system('pip3 install alphapy==2.4.2')
+os.system('pip3 install imbalanced-learn==0.5.0')
+os.system('pip3 install pandas==1.0')
+os.system('pip3 install pandas-datareader==0.8.1')
+os.system('pip3 install xgboost==0.80')
+
+import sys, pickle, json, random, shutil, time, yaml
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
 import pandas as pd
 import time
 
 def convert_(X_train, y_train, labels):
-
+	# create proper training data
 	feature_list=labels
 	data=dict()
-
-	print(len(feature_list))
-	print(len(X_train[0]))
-	# time.sleep(50)
 
 	for i in range(len(X_train)):
 		for j in range(len(feature_list)-1):
 			if i > 0:
-				# print(data[feature_list[j]])
 				try:
-					# print(feature_list[j])
-					# print(data)
-					# print(X_train[i][j])
-					# print(data[feature_list[j]])
-					# time.sleep(2)
 					data[feature_list[j]]=data[feature_list[j]]+[X_train[i][j]]
 				except:
 					pass
-					# print(data)
-					# time.sleep(50)
-					# print(str(i)+'-i')
-					# print(j)
 
 			else:
 				data[feature_list[j]]=[X_train[i][j]]
@@ -42,7 +36,6 @@ def convert_(X_train, y_train, labels):
 	data=pd.DataFrame(data, columns = list(data))
 	print(data)
 	print(list(data))
-	# time.sleep(500)
 
 	return data
 
@@ -81,12 +74,12 @@ def edit_modelfile(data_,mtype,csvfilename):
 	model=list_doc['model']
 	# {'algorithms': ['RF', 'XGB'], 'balance_classes': False, 'calibration': {'option': False, 'type': 'isotonic'}, 'cv_folds': 3, 'estimators': 201, 'feature_selection': {'option': False, 'percentage': 50, 'uni_grid': [5, 10, 15, 20, 25], 'score_func': 'f_classif'}, 'grid_search': {'option': True, 'iterations': 50, 'random': True, 'subsample': False, 'sampling_pct': 0.25}, 'pvalue_level': 0.01, 'rfe': {'option': True, 'step': 5}, 'scoring_function': 'roc_auc', 'type': 'classification'}
 	if mtype in ['classification', 'c']:
-		model['algorithms']=['AB','GB','KERASC','KNN','LOGR','RF','XGB','XT'] # removed 'LSVC', 'LSVM', 'NB', 'RBF', 'SVM', 'XGBM'
+		model['algorithms']=['AB','GB','KNN','LOGR','RF','XGB','XT'] # removed 'KERASC', 'LSVC', 'LSVM', 'NB', 'RBF', 'SVM', 'XGBM'
 		model['scoring_function']='roc_auc'
 		model['type']='classification'
 
 	elif mtype in ['regression','r']:
-		model['algorithms']=['GBR','KERASR','KNR','LR','RFR','XGBR','XTR']
+		model['algorithms']=['GBR','KNR','LR','RFR','XGBR','XTR'] # remove 'KERASR'
 		model['scoring_function']='mse'
 		model['type']='regression'
 
@@ -119,41 +112,19 @@ def edit_modelfile(data_,mtype,csvfilename):
 	print(list_doc)
 	file.close()
 
-def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
-	# install required dependencies
-	print('installing dependencies')
-	os.system('pip3 install alphpy==2.4.0')
-	os.system('pip3 install imbalance-learn==0.5.0')
-	os.system('pip3 install pandas==1.0')
-	os.system('pip3 install pandas-datareader==0.8.1')
-	os.system('pip3 install xgboost==0.80')
-	# os.system('pip3 install scikit-learn==0.20.1')
-
-	# get train and test data
-	print('creating training data')
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
+def train_alphapy(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
 
 	# create file names
-	jsonfilename=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_alphapy.json'
-	csvfilename=jsonfilename[0:-5]+'.csv'
-	picklefilename=jsonfilename[0:-5]+'.pickle'
-	folder=jsonfilename[0:-5]
+	csvfilename=common_name_model+'.csv'
+	picklefilename=common_name_model+'.pickle'
+	folder=common_name_model+'_session'
+	csvname=common_name_model.split('_')[0]
+
+	# files
+	files=list()
 
 	# this should be the model directory
 	hostdir=os.getcwd()
-
-	# open a sample featurization 
-	labels_dir=prev_dir(hostdir)+'/train_dir/'+jsonfilename.split('_')[0]
-	os.chdir(labels_dir)
-	listdir=os.listdir()
-	features_file=''
-	for i in range(len(listdir)):
-		if listdir[i].endswith('.json'):
-			features_file=listdir[i]
-
-	# load features file and get labels 
-	labels_=json.load(open(features_file))['features'][problemtype][default_features]['labels']
-	os.chdir(hostdir)
 
 	try:
 		os.mkdir(folder)
@@ -170,19 +141,23 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	
 	# now make a .CSV of all the data
 	os.chdir('data')
-	all_data = convert_(alldata, labels, labels_)
-	train_data= convert_(X_train, y_train, labels_)
-	test_data= convert_(X_test, y_test, labels_)
-	all_data.to_csv(csvfilename)
+	try:
+		shutil.copy(hostdir+'/'+model_session+'/data/'+csvname+'_all_transformed.csv',os.getcwd()+'/'+csvfilename)
+	except:
+		shutil.copy(hostdir+'/'+model_session+'/data/'+csvname+'_all.csv',os.getcwd()+'/'+csvfilename)
 	data=pd.read_csv(csvfilename)
 	os.remove(csvfilename)
 
 	os.chdir(basedir)
 	os.chdir(folder)
 	os.chdir('input')
-	train_data.to_csv('train.csv')
-	test_data.to_csv('test.csv')
-
+	try:
+		shutil.copy(hostdir+'/'+model_session+'/data/'+csvname+'_train_transformed.csv',os.getcwd()+'/train.csv')
+		shutil.copy(hostdir+'/'+model_session+'/data/'+csvname+'_test_transformed.csv',os.getcwd()+'/test.csv')
+	except:
+		shutil.copy(hostdir+'/'+model_session+'/data/'+csvname+'_train.csv',os.getcwd()+'/train.csv')
+		shutil.copy(hostdir+'/'+model_session+'/data/'+csvname+'_test.csv',os.getcwd()+'/test.csv')		
+	
 	os.chdir(basedir)
 	shutil.copytree(prev_dir(hostdir)+'/training/helpers/alphapy/config/', basedir+'/'+folder+'/config')
 	os.chdir(folder)
@@ -194,18 +169,9 @@ def train_alphapy(alldata, labels, mtype, jsonfile, problemtype, default_feature
 	os.system('alphapy')
 	os.chdir(hostdir)
 
-	try:
-		# put directory in proper location
-		shutil.copytree(hostdir+'/'+folder, hostdir+'/%s_models/'%(problemtype)+folder)
-		shutil.rmtree(folder)
-	except:
-		# replace directory if it exists
-		shutil.rmtree(hostdir+'/%s_models/'%(problemtype)+folder)
-		shutil.copytree(hostdir+'/'+folder, hostdir+'/%s_models/'%(problemtype)+folder)
-		shutil.rmtree(folder)
-
 	# get variables
 	model_name=folder
-	model_dir=basedir+'/%s_models/'%(problemtype)
+	model_dir=os.getcwd()
+	files.append(folder)
 
-	return model_name, model_dir
+	return model_name, model_dir, files

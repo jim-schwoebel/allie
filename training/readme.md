@@ -319,6 +319,14 @@ There are 21 potential training script settings (customized in the 'settings.jso
 
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
 
+
+## V2 architecture model training
+
+* '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
+* '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;
+* '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
+* **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
+
 ## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)
 Various [metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics) are used based on the problem type. 
 

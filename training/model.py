@@ -977,7 +977,12 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		foldername=common_name_model
 
 	# copy the folder in case there are multiple models being trained 
-	shutil.copytree(model_session, foldername)
+	try:
+		shutil.copytree(model_session, foldername)
+	except:
+		shutil.rmtree(foldername)
+		shutil.copytree(model_session, foldername)
+		
 	cur_dir2=os.getcwd()
 	os.chdir(foldername)
 	os.mkdir('model')

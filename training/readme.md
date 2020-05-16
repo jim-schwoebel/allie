@@ -6,10 +6,11 @@ Quickly train according to the default_training_script using model.py.
 
 ## Getting started
 
-All you need to do to get started is go to this repository and run model.py:
+All you need to do to get started is go to this repository and run upgrade.py followed by model.py:
 
 ```
 cd allie/training
+python3 upgrade.py
 python3 model.py 
 ```
 

@@ -27,6 +27,7 @@ female = second class [via N number of classes]
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
 import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime
+os.system('python3 upgrade.py')
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
@@ -887,8 +888,8 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		import train_autobazaar as autobzr
 		modelname, modeldir, files=autobzr.train_autobazaar(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autogbt':
-		import train_autogbt as autogbt
-		modelname, modeldir, files=autogbt.train_autogbt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		import train_autogbt as tautogbt
+		modelname, modeldir, files=tautogbt.train_autogbt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autogluon':
 		import train_autogluon as tautg
 		modelname, modeldir, files, test_data=tautg.train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)

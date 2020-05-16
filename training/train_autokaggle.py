@@ -1,4 +1,4 @@
-import pickle
+import os, pickle
 curdir=os.getcwd()
 print(os.getcwd())
 print('initializing installation')

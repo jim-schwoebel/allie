@@ -1,10 +1,12 @@
+import os 
+# install dependencies
+os.system('pip3 install autogluon==0.0.6')
+os.system('pip3 install pillow==7.0.0')
+os.system('pip3 install numpy==1.18.4')
 from autogluon import TabularPrediction as task
 import pandas as pd
 import os, sys, pickle, json, random, shutil, time
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.model_selection import train_test_split
-from sklearn.model_selection import cross_val_score
 
 def convert_gluon(X_train, y_train):
 
@@ -18,20 +20,10 @@ def convert_gluon(X_train, y_train):
 	for i in range(len(X_train)):
 		for j in range(len(feature_list)-1):
 			if i > 0:
-				# print(data[feature_list[j]])
 				try:
-					# print(feature_list[j])
-					# print(data)
-					# print(X_train[i][j])
-					# print(data[feature_list[j]])
-					# time.sleep(2)
 					data[feature_list[j]]=data[feature_list[j]]+[X_train[i][j]]
 				except:
 					pass
-					# print(data)
-					# time.sleep(50)
-					# print(str(i)+'-i')
-					# print(j)
 
 			else:
 				data[feature_list[j]]=[X_train[i][j]]
@@ -43,74 +35,30 @@ def convert_gluon(X_train, y_train):
 
 	return data
 
-def train_autogluon(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+def train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
 	# get train and test data 
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 	train_data = convert_gluon(X_train, y_train)
 	test_data = convert_gluon(X_test, y_test)
 	predictor = task.fit(train_data=train_data, label='class')
-	accuracy = predictor.evaluate(test_data)
-	print(accuracy)
 
-	jsonfilename=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_autogluon.json'
-	print('saving .JSON file (%s)'%(jsonfilename))
-	jsonfile=open(jsonfilename,'w')
-	if mtype in ['classification', 'c']:
-		data={'sample type': problemtype,
-			'feature_set':default_features,
-			'model name':jsonfilename[0:-5]+'.pickle',
-			'accuracy':accuracy,
-			'model type':'AutoGluon_classification',
-			'settings': settings,
-		}
-	elif mtype in ['regression', 'r']:
-		data={'sample type': problemtype,
-			'feature_set':default_features,
-			'model name':jsonfilename[0:-5]+'.pickle',
-			'accuracy':accuracy,
-			'model type':'AutoGluon_regression',
-			'settings': settings,
-		}
+	# get summary
+	results = predictor.fit_summary(verbosity=3)
 
-	json.dump(data,jsonfile)
-	jsonfile.close()
-
+	# get model name
+	files=list()
+	model_name=common_name_model+'.pickle'
 	# pickle store classifier
-	f=open(jsonfilename[0:-5]+'.pickle','wb')
+	f=open(model_name,'wb')
 	pickle.dump(predictor, f)
 	f.close()
 
 	# now rename current directory with models (keep this info in a folder)
-	newdir=jsonfilename[0:-5]
-	os.mkdir(newdir)
-	curdir=os.getcwd()
-	shutil.copytree(curdir+'/dask-worker-space',newdir+'/dask-worker-space')
-	shutil.copytree(curdir+'/AutogluonModels',newdir+'/AutoGluonModels')
-	shutil.copytree(curdir+'/catboost_info',newdir+'/catboost_info')
-	shutil.rmtree('dask-worker-space')
-	shutil.rmtree('AutogluonModels')
-	shutil.rmtree('catboost_info')
-
-	cur_dir2=os.getcwd()
-	try:
-		os.chdir(problemtype+'_models')
-	except:
-		os.mkdir(problemtype+'_models')
-		os.chdir(problemtype+'_models')
-
-	# now move all the files over to proper model directory 
-	shutil.copytree(curdir+'/'+newdir, os.getcwd()+'/'+newdir)
-	shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
-	shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-5]+'.pickle')
-
-	# remove temporary files
-	try:
-		shutil.rmtree(curdir+'/'+newdir)
-	except:
-		pass
+	files.append(model_name)
+	files.append('AutogluonModels')
+	files.append('catboost_info')
+	files.append('dask-worker-space')
 
 	# get model_name 
-	model_name=jsonfilename[0:-5]+'.pickle'
 	model_dir=os.getcwd()
 
-	return model_name, model_dir
+	return model_name, model_dir, files, test_data

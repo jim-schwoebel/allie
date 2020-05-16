@@ -115,14 +115,20 @@ def convert_csv(X_train, y_train, labels):
 
 	return data
 
-def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files):
+def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data):
 	'''
 	get the metrics associated iwth a classification and regression problem
 	and output a .JSON file with the training session.
 	'''
 	metrics_=dict()
 	y_true=y_test
-	y_pred=clf.predict(X_test)
+
+	if default_training_script not in ['autogluon']:
+		y_pred=clf.predict(X_test)
+	elif default_training_script == 'autogluon':
+		from autogluon import TabularPrediction as task
+		test_data=test_data.drop(labels=['class'],axis=1)
+		y_pred=clf.predict(test_data)
 
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics
@@ -857,7 +863,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		modelname, modeldir, files=autogbt.train_autogbt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autogluon':
 		import train_autogluon as tautg
-		modelname, modeldir, files=tautg.train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		modelname, modeldir, files, test_data=tautg.train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='autokaggle':
 		import train_autokaggle as autokag
 		modelname, modeldir, files=autokag.train_autokaggle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
@@ -966,8 +972,12 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	clf=pickle.load(loadmodel)
 	loadmodel.close()
 
+	# create test_data variable for anything other than autogluon
+	if default_training_script != 'autogluon':
+		test_data=''
+
 	# now make main .JSON file for the session summary with metrics
-	get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files)
+	get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data)
 	
 	# now move to the proper models directory
 	os.chdir(model_dir)

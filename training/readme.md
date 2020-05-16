@@ -315,6 +315,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## V2 architecture model training
 
+* '[autogluon](https://github.com/awslabs/autogluon)' - AutoGluon: AutoML Toolkit for Deep Learning. &#x2611;
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;

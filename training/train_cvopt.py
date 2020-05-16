@@ -1,4 +1,8 @@
 import os, sys, shutil
+# downloading library
+os.system('pip3 install cvopt==0.4.2')
+os.system('pip3 install scikit-learn==0.22')
+os.system('pip3 install bokeh==1.4.0')
 import numpy as np, pandas as pd, scipy as sp
 from sklearn import datasets
 from sklearn.model_selection import train_test_split, StratifiedKFold
@@ -8,10 +12,6 @@ from cvopt.search_setting import search_category, search_numeric
 
 
 def train_cvopt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
-	# downloading library
-	os.system('pip3 install cvopt==0.4.2')
-	os.system('pip3 install scikit-learn==0.22')
-	os.system('pip3 install bokeh==1.4.0')
 
 	# create model name
 	model_name=common_name_model

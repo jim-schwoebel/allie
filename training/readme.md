@@ -398,11 +398,14 @@ from sklearn.metrics import classification_report
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
 * '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 
-### Discarded (due to lack of functionality)
-* '[autobazaar](https://github.com/HDI-Project/AutoBazaar)' - AutoBazaar: An AutoML System from the Machine Learning Bazaar (from the Data to AI Lab at MIT). - this was a bit hard to extract a machine learning model from and the schema was a little hard to make interoperable with Allie; may get to this later if the framework is further supported. 👎 
-* '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. 👎 
-* '[autosklearn](https://github.com/automl/auto-sklearn)' - added to pip3 installation + script. (segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in). 👎 
-* '[pLDA](https://github.com/RaviSoji/plda)' - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 👎  
+### 👎 Discarded (due to lack of functionality)
+
+Note these are in the 'archived' folder in case you'd like to expand upon them and use these training back-ends in an expeirmental way.
+
+* '[autobazaar](https://github.com/HDI-Project/AutoBazaar)' - AutoBazaar: An AutoML System from the Machine Learning Bazaar (from the Data to AI Lab at MIT). - this was a bit hard to extract a machine learning model from and the schema was a little hard to make interoperable with Allie; may get to this later if the framework is further supported. 
+* '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. 
+* '[autosklearn](https://github.com/automl/auto-sklearn)' - segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in. 
+* '[pLDA](https://github.com/RaviSoji/plda)' - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 
 
 ### Data modeling tutorials (Readmes)
 * Audio file training example

@@ -17,6 +17,7 @@ def train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,prob
 
 	# name model
 	model_name=common_name_model+'.pickle'
+	files=list()
 
 	if mtype=='c': 
 		from autoPyTorch import AutoNetClassification
@@ -53,7 +54,7 @@ def train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,prob
 		torch.save(pytorch_model, model_name)
 
 	# get model directory
-	files.append(modelfile)
+	files.append(model_name)
 	model_dir=os.getcwd()
 
 	return model_name, model_dir, files

@@ -1004,13 +1004,17 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
 	
 	# load model for getting metrics
-	if default_training_script not in ['alphapy', 'atm']:
+	if default_training_script not in ['alphapy', 'atm', 'autokeras']:
 		loadmodel=open(modelname, 'rb')
 		clf=pickle.load(loadmodel)
 		loadmodel.close()
 	elif default_training_script == 'atm':
 		from atm import Model
 		clf=Model.load(modelname)
+	elif default_training_script == 'autokeras':
+		import tensorflow as tf
+		import autokeras as ak
+		clf = tf.keras.models.load_model(modelname, custom_objects=ak.CUSTOM_OBJECTS)
 	else: 
 		clf=''
 

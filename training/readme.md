@@ -407,7 +407,7 @@ Note these are in the 'archived' folder in case you'd like to expand upon them a
 * '[autosklearn](https://github.com/automl/auto-sklearn)' - segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in. 
 * '[pLDA](https://github.com/RaviSoji/plda)' - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 
 
-### Data modeling tutorials (Readmes)
+### Data modeling notebooks (jupyter)
 * Audio file training example
 * Text file training example 
 * Image file training example

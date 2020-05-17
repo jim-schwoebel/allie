@@ -381,7 +381,7 @@ from sklearn.metrics import classification_report
 
 ## Actively working on (in future)
 
-### Exploring now
+### 😉 Exploring now
 * [metric_learn](https://github.com/scikit-learn-contrib/metric-learn)
 * [hyperparameter tuning w/ Ray](https://github.com/ray-project/ray) - tuning hyperparameters 
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).
@@ -394,7 +394,7 @@ from sklearn.metrics import classification_report
 * [Tacotron architecture](https://github.com/KinglittleQ/GST-Tacotron) 
 * getting into various other ML architectures for keyword spotting, etc.
 
-#### Model compression 
+#### 🗜️ Model compression 
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
 * '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 
@@ -407,7 +407,7 @@ Note these are in the 'archived' folder in case you'd like to expand upon them a
 * '[autosklearn](https://github.com/automl/auto-sklearn)' - segmentation faults are common, thus archived. If documentation and community improves, may be good to add back in. 
 * '[pLDA](https://github.com/RaviSoji/plda)' - this works only for symmetrical images (as it cannot compute eigenvector for many of the feature arrays we have created). For this reason, it is probably not a good idea to use this as a standard training method. 
 
-### Data modeling notebooks (jupyter)
+### 💻 Data modeling notebooks (jupyter)
 * Audio file training example
 * Text file training example 
 * Image file training example

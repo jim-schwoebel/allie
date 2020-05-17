@@ -312,7 +312,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 
 ## V2 architecture model training
 
-* '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - keras, scikit-learn, xgboost - highly customizable setttings for data science pipelines/feature selection. &#x2611;
+* '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - highly customizable setttings for data science pipelines/feature selection. &#x2611;
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;
 * '[autogluon](https://github.com/awslabs/autogluon)' - AutoGluon: AutoML Toolkit for Deep Learning. &#x2611;

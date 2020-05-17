@@ -351,9 +351,6 @@ See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evalu
 - Mean squared error regression loss
 - Median absolute error regression loss
 - R^2 (coefficient of determination) regression score function.
-- Mean Poisson deviance regression loss.
-- Mean Gamma deviance regression loss.
-- Mean Tweedie deviance regression loss.
 
 ## Qualtitative observations 
 

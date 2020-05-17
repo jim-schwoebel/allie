@@ -295,7 +295,6 @@ Now you're ready to go to load these models and [make predictions](https://githu
 
 There are 21 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT.
 
-* '[autokeras](https://autokeras.com/)' - automatic optimization of a neural network using neural architecture search (takes a very long time). &#x2611;
 * '[btb](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
 * '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 

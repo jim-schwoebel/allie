@@ -16,7 +16,7 @@ From the documentation:
 def train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
 
 	# name model
-	modelname=common_name_model+'.pickle'
+	model_name=common_name_model+'.pickle'
 
 	if mtype=='c': 
 		from autoPyTorch import AutoNetClassification
@@ -45,11 +45,12 @@ def train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,prob
 		autonet = AutoNetRegression(budget_type='epochs', min_budget=1, max_budget=9, num_iterations=1, log_level='info')
 		pipeline = autonet.fit(X_train, y_train)
 
+		# save model
+		pytorch_model = autonet.get_pytorch_model()
+		print(pytorch_model)
 		# saving model
 		print('saving model')
-		modelfile=open(model_name,'wb')
-		pickle.dump(pipeline, modelfile)
-		modelfile.close()
+		torch.save(pytorch_model, model_name)
 
 	# get model directory
 	files.append(modelfile)

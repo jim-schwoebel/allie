@@ -1004,7 +1004,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
 	
 	# load model for getting metrics
-	if default_training_script not in ['alphapy', 'atm', 'autokeras']:
+	if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch']:
 		loadmodel=open(modelname, 'rb')
 		clf=pickle.load(loadmodel)
 		loadmodel.close()
@@ -1015,6 +1015,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		import tensorflow as tf
 		import autokeras as ak
 		clf = tf.keras.models.load_model(modelname, custom_objects=ak.CUSTOM_OBJECTS)
+	elif default_training_script=='autopytorch':
+		import torch
+		clf=torch.load(modelname)
 	else: 
 		clf=''
 

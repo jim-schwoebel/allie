@@ -329,7 +329,7 @@ Metrics are standardized across all model training methods to allow for interope
 See the [Classification metrics section](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics) of the user guide for further details.
 
 - accuracy	sklearn.metrics.accuracy_score
-- balanced accuracy sklearn.metrics.balanced_accuracy
+- balanced_accuracy metrics.balanced_accuracy_score
 - precision	sklearn.metrics.precision_score
 - recall	sklearn.metrics.recall_score
 - f1	sklearn.metrics.f1_score (pos_label=1)

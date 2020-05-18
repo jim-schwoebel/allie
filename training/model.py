@@ -158,7 +158,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	elif default_training_script == 'ludwig':
 		data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
 		pred=clf.predict(data)['class__predictions']
-		y_pred=np.array(list(pred), dtype=int)
+		y_pred=np.array(list(pred), dtype=np.int64)
 		
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:

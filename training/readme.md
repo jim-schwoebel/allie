@@ -305,7 +305,7 @@ Here is a quick review of all the potential default_training_script settings:
 | '[autokeras](https://autokeras.com/)'| MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. |
 | '[autopytorch](https://github.com/automl/Auto-PyTorch)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Brute-Force all sklearn models with all parameters using .fit/.predict. |
 | '[btb](https://github.com/HDI-Project/BTB)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. |
-| '[cvopt](https://github.com/genfifth/cvopt)' | SD 2-Clause "Simplified" License|  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |
+| '[cvopt](https://github.com/genfifth/cvopt)' | BSD 2-Clause "Simplified" License|  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |
 | '[devol](https://github.com/joeddav/devol)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Genetic programming keras cnn layers. |
 | '[gama](https://github.com/PGijsbers/gama)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An automated machine learning tool based on genetic programming. |
 | '[hungabunga](https://github.com/ypeleg/HungaBunga)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | HungaBunga: Brute-Force all sklearn models with all parameters using .fit .predict! |

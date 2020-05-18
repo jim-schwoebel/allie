@@ -117,7 +117,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras', 'devol', 'safe', 'neuraxle']:
+	if default_training_script not in ['autogluon',  'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -140,6 +140,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		from autogluon import TabularPrediction as task
 		test_data=test_data.drop(labels=['class'],axis=1)
 		y_pred=clf.predict(test_data)
+	elif default_training_script == 'autopytorch':
+		y_pred=clf.predict(X_test).flatten()
 	elif default_training_script == 'atm':
 		curdir=os.getcwd()
 		os.chdir('atm_temp')
@@ -153,7 +155,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	elif default_training_script == 'devol':
 		X_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
 		y_pred=clf.predict_classes(X_test).flatten()
-	elif default_training_script=='keras':
+	elif default_training_script==['keras']:
 		if mtype == 'c':
 		    y_pred=clf.predict_classes(X_test).flatten()
 		elif mtype == 'r':
@@ -1058,7 +1060,6 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='autopytorch':
 		import torch
 		clf=torch.load(modelname)
-		clf.eval()
 	elif default_training_script == 'ludwig':
 		from ludwig.api import LudwigModel
 		clf=LudwigModel.load('ludwig_files/experiment_run/model/')

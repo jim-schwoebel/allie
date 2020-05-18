@@ -291,28 +291,6 @@ Goal is to make an output folder like this:
 
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
-## Model training scripts
-* '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - highly customizable setttings for data science pipelines/feature selection. &#x2611;
-* '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;
-* '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;
-* '[autogluon](https://github.com/awslabs/autogluon)' - AutoGluon: AutoML Toolkit for Deep Learning. &#x2611;
-* '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
-* '[btb](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
-* '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
-* '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
-* '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
-* '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;
-* '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. &#x2611;
-* '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' - seems stable - hyperparameter optimization of the data. &#x2611;
-* '[imbalance-learn](https://pypi.org/project/imbalanced-learn/)' - imbalance learn different ML techniques to work on data with different numbers of samples. (could use expanding a bit). &#x2611;
-* '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
-* '[ludwig](https://github.com/uber/ludwig)' - deep learning (simple ludwig). - convert every feature to numerical data. &#x2611; 
-* '[mlblocks](https://github.com/HDI-Project/MLBlocks)' - most recent framework @ MIT, regression and classification. &#x2611;
-* '[neuraxle](https://github.com/Neuraxio/Neuraxle)' - A sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. &#x2611;
-* '[safe](https://github.com/ModelOriented/SAFE)' - black box trainer / helps reduce opacity of ML models while increasing accuracy.&#x2611;
-* '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' - simple classification / regression (built by Jim from NLX-model). &#x2611;
-* **'[tpot](https://epistasislab.github.io/tpot/)'** - TPOT classification / regression (autoML). &#x2611;
-
 ## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)
 Various [metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics) are used based on the problem type. 
 
@@ -349,26 +327,26 @@ Here is a quick review of all these model training scripts:
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 
 | [alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Highly customizable setttings for data science pipelines/feature selection. |
 | [atm](https://github.com/HDI-Project/ATM) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
-| [autogbt](https://github.com/pfnet-research/autogbt-alt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [autogluon](https://github.com/awslabs/autogluon)| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [autokaggle](https://github.com/datamllab/autokaggle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [autogbt](https://github.com/pfnet-research/autogbt-alt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An experimental Python package that reimplements AutoGBT using LightGBM and Optuna. |
+| [autogluon](https://github.com/awslabs/autogluon)| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | AutoGluon: AutoML Toolkit for Deep Learning. |
+| [autokaggle](https://github.com/datamllab/autokaggle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automated ML system trained using gbdt (regression and classification). |
 | [autokeras](https://autokeras.com/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [auto-pytorch](https://github.com/automl/Auto-PyTorch) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [btb](https://github.com/HDI-Project/BTB) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [cvopt](https://github.com/genfifth/cvopt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [devol](https://github.com/joeddav/devol) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [gama](https://github.com/PGijsbers/gama) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [auto-pytorch](https://github.com/automl/Auto-PyTorch) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Brute-Force all sklearn models with all parameters using .fit/.predict. |
+| [btb](https://github.com/HDI-Project/BTB) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. |
+| [cvopt](https://github.com/genfifth/cvopt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |
+| [devol](https://github.com/joeddav/devol) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Genetic programming keras cnn layers. |
+| [gama](https://github.com/PGijsbers/gama) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An automated machine learning tool based on genetic programming. |
 | [hungabunga](https://github.com/ypeleg/HungaBunga) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [hyperband](https://github.com/thuijskens/scikit-hyperband) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [hypsklearn](https://github.com/hyperopt/hyperopt-sklearn) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [imbalance-learn](https://pypi.org/project/imbalanced-learn/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [keras](https://keras.io/getting-started/faq/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [ludwig](https://github.com/uber/ludwig) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [mlblocks](https://github.com/HDI-Project/MLBlocks) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [neuraxle](https://github.com/Neuraxio/Neuraxle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  | Description |
-| [safe](https://github.com/ModelOriented/SAFE) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
-| [scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py) | Apache 2.0 |  5/5 | 4/5 | 3/5 | ✅ | ✅  | Description |
-| [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  | Description |
+| [hyperband](https://github.com/thuijskens/scikit-hyperband) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. |
+| [hypsklearn](https://github.com/hyperopt/hyperopt-sklearn) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter optimization on scikit-learn models. |
+| [imbalance-learn](https://pypi.org/project/imbalanced-learn/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Imbalance learn different ML techniques to work on data with different numbers of samples. |
+| [keras](https://keras.io/getting-started/faq/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Simple MLP network architecture (quick prototype - if works may want to use autoML settings). |
+| [ludwig](https://github.com/uber/ludwig) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Deep learning (simple ludwig). - convert every feature to numerical data. |
+| [mlblocks](https://github.com/HDI-Project/MLBlocks) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Most recent framework @ MIT, regression and classification. |
+| [neuraxle](https://github.com/Neuraxio/Neuraxle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  | A Sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. |
+| [safe](https://github.com/ModelOriented/SAFE) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Black box trainer / helps reduce opacity of ML models while increasing accuracy. |
+| [scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py) | Apache 2.0 |  5/5 | 4/5 | 3/5 | ✅ | ✅  | Simple classification / regression (built by Jim from NLX-model). |
+| [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  | TPOT classification / regression (autoML). |
 
 ## Actively working on (in future)
 

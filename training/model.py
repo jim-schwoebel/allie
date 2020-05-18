@@ -117,7 +117,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras']:
+	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras', 'devol']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -154,7 +154,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		y_pred=np.array(list(pred), dtype=np.int64)
 	elif default_training_script == 'devol':
 		X_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
-		y_pred=clf.predict(X_test)
+		y_pred=clf.predict_classes(X_test).flatten()
+		print(y_pred)
 	elif default_training_script=='keras':
 		if mtype == 'c':
 		    y_pred=clf.predict_classes(X_test).flatten()

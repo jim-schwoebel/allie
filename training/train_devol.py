@@ -5,28 +5,20 @@ from helpers.devol.devol import DEvol, GenomeHandler
 from sklearn.model_selection import train_test_split
 import time, os, shutil, json
 
-def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
+def train_devol(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
 	print('training DEVOL CNN network (may take up to 1 day)')
-	x_train, x_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
 
 	# reshape the data (to accomodate library needs)
-	x_train=x_train.reshape(x_train.shape+ (1,)+ (1,))
-	x_test=x_test.reshape(x_test.shape+ (1,)+ (1,))
+	x_train=X_train.reshape(X_train.shape+ (1,)+ (1,))
+	x_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
 	y_train = to_categorical(y_train)
 	y_test = to_categorical(y_test)
 	dataset = ((x_train, y_train), (x_test, y_test))
-	# print(dataset)
-	# time.sleep(10)
+
 	print(x_train.shape)
 	print(x_train[0].shape)
 	print(x_test.shape)
 	print(x_test[0])
-	# time.sleep(10)
-	# print(x_train)
-	# time.sleep(10)
-	# print(y_train.shape)
-	# time.sleep(10)
-	# print(y_train)
 
 	'''
 	The GenomeHandler class handles the constraints that are imposed upon models in a particular genetic program. 
@@ -58,43 +50,11 @@ def train_devol(classes, alldata, labels, mtype, jsonfile, problemtype, default_
 	summary = str(model.to_json()) 
 
 	# get model name 
-	modelname=jsonfile[0:-5]+'_devol_%s'%(str(default_features.replace("'",'').replace('"','')))
+	files=list()
+	model_name=common_name_model+".h5"
+	model.save(model_name)
+	print("\n Saved %s.json model to disk"%(model_name))
+	files.append(model_name)
+	model_dir=os.getcwd()
 
-	score = model.evaluate(x_test, y_test, verbose=0)
-	jsonfile=open(modelname+'.json','w')
-	data={'accuracy': score[1],
-		  'sampletype': problemtype,
-		  'feature_set': default_features,
-		  'model_name': modelname+".h5",
-		  'training_type': 'devol',
-		  'model summary': summary,
-		  'settings': settings,
-		}
-
-	json.dump(data,jsonfile)
-	jsonfile.close()
-
-	os.remove('best-model.h5')
-	
-	# save the model in .h5 format
-	model.save(modelname+".h5")
-	print("\n Saved %s.json model to disk"%(modelname))
-
-	listdir=os.listdir()
-	for i in range(len(listdir)):
-		if listdir[i][-4:]=='.csv':
-			os.rename(listdir[i], modelname+'.csv')
-
-	cur_dir2=os.getcwd()
-	try:
-	    os.chdir(problemtype+'_models')
-	except:
-	    os.mkdir(problemtype+'_models')
-	    os.chdir(problemtype+'_models')
-
-	# now move all the files over to proper model directory 
-	shutil.move(cur_dir2+'/'+modelname+'.json', os.getcwd()+'/'+modelname+'.json')
-	shutil.move(cur_dir2+'/'+modelname+'.csv', os.getcwd()+'/'+modelname+'.csv')
-	shutil.move(cur_dir2+'/'+modelname+'.h5', os.getcwd()+'/'+modelname+'.h5')
-
-	return modelname+'.h5', os.getcwd()
+	return model_name, model_dir, files

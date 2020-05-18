@@ -415,7 +415,7 @@ The output .JSON will look something like this:
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
 * '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 
-### 👎 Discarded (due to lack of functionality)
+### 👎 Discarded (in archived folder)
 
 Note these are in the 'archived' folder in case you'd like to expand upon them and use these training back-ends in an expeirmental way.
 

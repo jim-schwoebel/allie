@@ -117,7 +117,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras', 'devol']:
+	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras', 'devol', 'safe']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -144,9 +144,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		curdir=os.getcwd()
 		os.chdir('atm_temp')
 		data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
-		print(data)
 		y_pred = clf.predict(data)
-		print(y_pred)
 		os.chdir(curdir)
 	elif default_training_script == 'ludwig':
 		data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
@@ -155,15 +153,18 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	elif default_training_script == 'devol':
 		X_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
 		y_pred=clf.predict_classes(X_test).flatten()
-		print(y_pred)
 	elif default_training_script=='keras':
 		if mtype == 'c':
 		    y_pred=clf.predict_classes(X_test).flatten()
-		    print(y_pred)
 		elif mtype == 'r':
 			y_pred=clf.predict(X_test).flatten()
-			print(y_pred)
-			
+	elif default_training_script=='safe':
+		# have to make into a pandas dataframe
+		test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
+		y_pred=clf.predict(test_data)
+	
+	print(y_pred)
+	
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics

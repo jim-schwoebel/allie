@@ -321,7 +321,7 @@ See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evalu
 
 ## Model training scripts
 
-Here is a quick review of all these model default_training_script settings:
+Here is a quick review of all the potential default_training_script settings:
 
 | Setting | License | Accuracy | Speed | Documentation quality | Classification | Regression | Description |
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 

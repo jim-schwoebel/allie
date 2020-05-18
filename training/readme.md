@@ -317,7 +317,7 @@ Here is a quick review of all the potential default_training_script settings:
 | '[mlblocks](https://github.com/HDI-Project/MLBlocks)' | MIT License | ✅ | ❌ | ❌ | ✅ | ✅  | Most recent framework @ MIT, regression and classification. |
 | '[neuraxle](https://github.com/Neuraxio/Neuraxle)' | Apache 2.0 | ✅ | ✅ | ❌ | ❌ | ✅  | A Sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. |
 | '[safe](https://github.com/ModelOriented/SAFE)' | MIT License | ❌ | ✅ | ❌ | ✅ | ✅  | Black box trainer / helps reduce opacity of ML models while increasing accuracy. |
-| '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' | Apache 2.0 |  ❌ | ✅ | ✅ | ❌ | ✅  | Simple classification / regression (built by Jim from NLX-model). |
+| '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' | Apache 2.0 |  ❌ | ✅ | ✅ | ✅ | ✅  | Simple classification / regression (built by Jim from NLX-model). |
 | '[tpot](https://github.com/EpistasisLab/tpot)' | LGPL-3.0 |  ❌ | ✅ | ✅ | ✅ | ✅  | TPOT classification / regression (autoML). |
 
 Note that you can customize the default_training_script in the settings.json. If you include multiple default training scripts in series e.g. ['keras','tpot'] it will go through and model each of these sessions serially.

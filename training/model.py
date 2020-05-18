@@ -124,7 +124,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy', 'atm']:
+	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -155,7 +155,10 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		y_pred = clf.predict(data)
 		print(y_pred)
 		os.chdir(curdir)
-
+	elif default_training_script == 'ludwig':
+		data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+		y_pred=clf.predict(data)
+		
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics
@@ -952,6 +955,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp
 		# tp.train_pLDA(alldata,labels)
+	elif default_training_script=='pytorch':
+		import train_pytorch as t_pytorch
+		modelname, modeldir, files = t_pytorch.train_pytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='safe':
 		import train_safe as tsafe
 		modelname, modeldir, files=tsafe.train_safe(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
@@ -1004,7 +1010,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
 	
 	# load model for getting metrics
-	if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch']:
+	if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig']:
 		loadmodel=open(modelname, 'rb')
 		clf=pickle.load(loadmodel)
 		loadmodel.close()
@@ -1018,6 +1024,10 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='autopytorch':
 		import torch
 		clf=torch.load(modelname)
+		clf.eval()
+	elif default_training_script == 'ludwig':
+		from ludwig.api import LudwigModel
+		clf=LudwigModel.load('ludwig_files/experiment_run/model/')
 	else: 
 		clf=''
 

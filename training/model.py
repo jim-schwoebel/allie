@@ -117,7 +117,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon',  'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
+	if default_training_script not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -140,6 +140,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		from autogluon import TabularPrediction as task
 		test_data=test_data.drop(labels=['class'],axis=1)
 		y_pred=clf.predict(test_data)
+	elif default_training_script == 'autokeras':
+		y_pred=clf.predict(X_test).flatten()
 	elif default_training_script == 'autopytorch':
 		y_pred=clf.predict(X_test).flatten()
 	elif default_training_script == 'atm':
@@ -1056,7 +1058,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script == 'autokeras':
 		import tensorflow as tf
 		import autokeras as ak
-		clf = tf.keras.models.load_model(modelname, custom_objects=ak.CUSTOM_OBJECTS)
+		clf = pickle.load(open(modelname, 'rb'))
 	elif default_training_script=='autopytorch':
 		import torch
 		clf=torch.load(modelname)

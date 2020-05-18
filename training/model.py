@@ -27,17 +27,10 @@ female = second class [via N number of classes]
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
 import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime
-os.system('python3 upgrade.py')
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from tqdm import tqdm
-import numpy as np
 import matplotlib.pyplot as plt
-from sklearn import metrics
-from sklearn.metrics import roc_curve
 
 ###############################################################
-##                  HELPER FUNCTIONS                         ##
+##               CREATE HELPER FUNCTIONS                     ##
 ###############################################################
 
 def prev_dir(directory):
@@ -124,7 +117,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig']:
+	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -162,7 +155,14 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	elif default_training_script == 'devol':
 		X_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
 		y_pred=clf.predict(X_test)
-		
+	elif default_training_script=='keras':
+		if mtype == 'c':
+		    y_pred=clf.predict_classes(X_test).flatten()
+		    print(y_pred)
+		elif mtype == 'r':
+			y_pred=clf.predict(X_test).flatten()
+			print(y_pred)
+			
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics
@@ -444,12 +444,32 @@ except:
 # time.sleep(10)
 
 ###############################################################
+##      	      UPGRADE MODULES / LOAD MODULES             ##
+###############################################################
+
+print('-----------------------------------')
+print('          LOADING MODULES          ')
+print('-----------------------------------')
+
+os.chdir(cur_dir)
+os.system('python3 upgrade.py')
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from tqdm import tqdm
+import numpy as np
+from sklearn import metrics
+from sklearn.metrics import roc_curve
+
+###############################################################
 ##                    CLEAN THE DATA                        ##
 ###############################################################
 clean_data=settings['clean_data']
 clean_dir=prevdir+'/datasets/cleaning'
 
 if clean_data == True:
+	print('-----------------------------------')
+	print('            CLEANING DATA          ')
+	print('-----------------------------------')
 	for i in range(len(classes)):
 		os.chdir(clean_dir)
 		os.system('python3 clean.py %s %s'%(clean_dir, data_dir+'/'+classes[i]))
@@ -461,6 +481,9 @@ augment_data=settings['augment_data']
 augment_dir=prevdir+'/datasets/augmentation'
 
 if augment_data == True:
+	print('-----------------------------------')
+	print('            AUGMENTING DATA          ')
+	print('-----------------------------------')
 	for i in range(len(classes)):
 		os.chdir(augment_dir)
 		os.system('python3 augment.py %s'%(data_dir+'/'+classes[i]))

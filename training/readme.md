@@ -340,7 +340,7 @@ Note that you can customize the default_training_script in the settings.json. If
   "default_scaler": [ "standard_scaler" ],
   "default_text_features": [ "nltk_features" ],
   "default_text_transcriber": "raw text",
-  "default_training_script": [ "tpot" ],
+  **"default_training_script": [ "tpot" ],**
   "default_video_features": [ "video_features" ],
   "default_video_transcriber": ["tesseract (averaged over frames)"],
   "model_compress": false,

@@ -57,7 +57,6 @@ def train_ludwig(X_train,X_test,y_train,y_test,mtype,common_name_model,problemty
 
     model_definition = make_yaml(feature_labels, epochs)
     print(os.getcwd())
-    time.sleep(10)
     os.system('ludwig experiment --data_csv %s --model_definition_file model_definition.yaml --output_directory %s'%('train.csv', 'ludwig_files'))
     os.rename('model_definition.yaml', common_name_model+'.yaml')
     

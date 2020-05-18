@@ -393,7 +393,7 @@ from sklearn.metrics import classification_report
 | mlblocks | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
 | neuraxle | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  |
 | safe | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| scsr | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| scsr | Apache 2.0 |  5/5 | 4/5 | 3/5 | ✅ | ✅  |
 | [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  |
 
 ## Actively working on (in future)

@@ -159,6 +159,9 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
 		pred=clf.predict(data)['class__predictions']
 		y_pred=np.array(list(pred), dtype=np.int64)
+	elif default_training_script == 'devol':
+		X_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
+		y_pred=clf.predict(X_test)
 		
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:
@@ -937,6 +940,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script=='hungabunga':
 		import train_hungabunga as thung
 		modelname, modeldir, files=thung.train_hungabunga(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+	elif default_training_script=='imbalance':
+		import train_imbalance as timb
+		modelname, modeldir, files=timb.train_imbalance(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='keras':
 		import train_keras as tk
 		modelname, modeldir, files=tk.train_keras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
@@ -1011,7 +1017,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
 	
 	# load model for getting metrics
-	if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig']:
+	if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig', 'keras', 'devol']:
 		loadmodel=open(modelname, 'rb')
 		clf=pickle.load(loadmodel)
 		loadmodel.close()
@@ -1029,6 +1035,9 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	elif default_training_script == 'ludwig':
 		from ludwig.api import LudwigModel
 		clf=LudwigModel.load('ludwig_files/experiment_run/model/')
+	elif default_training_script in ['devol', 'keras']: 
+		from keras.models import load_model
+		clf = load_model(modelname)
 	else: 
 		clf=''
 

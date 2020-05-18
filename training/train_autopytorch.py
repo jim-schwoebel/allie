@@ -21,40 +21,23 @@ def train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,prob
 
 	if mtype=='c': 
 		from autoPyTorch import AutoNetClassification
-
-		# running Auto-PyTorch
-		autonet = AutoNetClassification("tiny_cs",  # config preset
-		                                    log_level='info',
-		                                    max_runtime=600,
-		                                    min_budget=30,
-		                                    max_budget=90)
-
+		autonet = AutoNetClassification(log_level='debug', max_runtime=900, min_budget=50, max_budget=150)
 		autonet.fit(X_train, y_train, validation_split=0.30)
-
-		pytorch_model = autonet.get_pytorch_model()
-		print(pytorch_model)
-		# saving model
-		print('saving model')
-		torch.save(pytorch_model, model_name)
+		print(autonet.predict(X_test).flatten())
 
 	if mtype=='r': 
-
-		# run model session
 		from autoPyTorch import AutoNetRegression
-
-		# Note: every parameter has a default value, you do not have to specify anything. The given parameter allow a fast test.
 		autonet = AutoNetRegression(budget_type='epochs', min_budget=1, max_budget=9, num_iterations=1, log_level='info')
-		pipeline = autonet.fit(X_train, y_train)
+		autonet.fit(X_train, y_train)
+		print(autonet.predict(X_test).flatten())
 
-		# save model
-		pytorch_model = autonet.get_pytorch_model()
-		print(pytorch_model)
-		# saving model
-		print('saving model')
-		torch.save(pytorch_model, model_name)
+	print('saving model -->')
+	torch.save(autonet, model_name)
 
 	# get model directory
 	files.append(model_name)
+	files.append('configs.json')
+	files.append('results.json')
 	model_dir=os.getcwd()
 
 	return model_name, model_dir, files

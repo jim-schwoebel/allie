@@ -295,14 +295,14 @@ Now you're ready to go to load these models and [make predictions](https://githu
 
 Here is a quick review of all the potential default_training_script settings:
 
-| Setting | License | Accurate? | Quick? | Good documentation? | Classification | Regression | Description |
+| Setting | License | Accurate? | Quick? | Good docs? | Classification | Regression | Description |
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 
 | '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' | Apache 2.0 |  ✅ | ❌ | ✅ | ✅ | ✅  | Highly customizable setttings for data science pipelines/feature selection. |
 | '[atm](https://github.com/HDI-Project/ATM)' | MIT License | ✅ | ✅ | ✅ | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
 | '[autogbt](https://github.com/pfnet-research/autogbt-alt)' | MIT License |  ✅ | ✅ | ✅ | ✅ | ✅  | An experimental Python package that reimplements AutoGBT using LightGBM and Optuna. |
 | '[autogluon](https://github.com/awslabs/autogluon)'| Apache 2.0 | ✅ | ✅ | ✅ | ✅ | ✅  | AutoGluon: AutoML Toolkit for Deep Learning. |
 | '[autokaggle](https://github.com/datamllab/autokaggle)' | Apache 2.0 | ❌ | ✅ | ❌ | ✅ | ✅  | Automated ML system trained using gbdt (regression and classification). |
-| '[autokeras](https://autokeras.com/)'| MIT License |  5/5 | ✅ | ❌ | ✅ | ✅ | Automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. |
+| '[autokeras](https://autokeras.com/)'| MIT License | ✅ | ❌ | ✅ | ✅ | ✅ | Automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. |
 | '[autopytorch](https://github.com/automl/Auto-PyTorch)' | Apache 2.0 | ❌ | ✅ | ❌ | ✅ | ✅  | Brute-Force all sklearn models with all parameters using .fit/.predict. |
 | '[btb](https://github.com/HDI-Project/BTB)' | MIT License | ❌ | ✅ | ❌ | ✅ | ✅  | Hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. |
 | '[cvopt](https://github.com/genfifth/cvopt)' | BSD 2-Clause "Simplified" License| ✅ | ✅ | ❌ | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |

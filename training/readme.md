@@ -291,32 +291,6 @@ Goal is to make an output folder like this:
 
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
-## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)
-Metrics are standardized across all model training methods to allow for interoperability across the various AutoML frameworks used. These methods differ between classification and regression models, and use the [scikit-learn metrics API](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics).
-
-### Classification
-See the [Classification metrics section](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics) of the user guide for further details.
-
-- accuracy	sklearn.metrics.accuracy_score
-- precision	sklearn.metrics.precision_score
-- recall	sklearn.metrics.recall_score
-- f1	sklearn.metrics.f1_score (pos_label=1)
-- f1Micro	sklearn.metrics.f1_score(average='micro')
-- f1Macro	sklearn.metrics.f1_score(average='macro')
-- rocAuc	sklearn.metrics.roc_auc_score
-- rocAucMicro	sklearn.metrics.roc_auc_score(average='micro')
-- rocAucMacro	sklearn.metrics.roc_auc_score(average='macro')
-
-### Regression
-
-See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics) section of the user guide for further details.
-
-- max_error metric calculates the maximum residual error.
-- Mean absolute error regression loss
-- Mean squared error regression loss
-- Median absolute error regression loss
-- R^2 (coefficient of determination) regression score function.
-
 ## Model training scripts
 
 Here is a quick review of all the potential default_training_script settings:
@@ -347,6 +321,32 @@ Here is a quick review of all the potential default_training_script settings:
 | '[tpot](https://github.com/EpistasisLab/tpot)' | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  | TPOT classification / regression (autoML). |
 
 Note that you can customize the default_training_script in the settings.json. If you include multiple default training scripts in series e.g. ['keras','tpot'] it will go through and model each of these sessions serially.
+
+## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)
+Metrics are standardized across all model training methods to allow for interoperability across the various AutoML frameworks used. These methods differ between classification and regression models, and use the [scikit-learn metrics API](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics).
+
+### Classification
+See the [Classification metrics section](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics) of the user guide for further details.
+
+- accuracy	sklearn.metrics.accuracy_score
+- precision	sklearn.metrics.precision_score
+- recall	sklearn.metrics.recall_score
+- f1	sklearn.metrics.f1_score (pos_label=1)
+- f1Micro	sklearn.metrics.f1_score(average='micro')
+- f1Macro	sklearn.metrics.f1_score(average='macro')
+- rocAuc	sklearn.metrics.roc_auc_score
+- rocAucMicro	sklearn.metrics.roc_auc_score(average='micro')
+- rocAucMacro	sklearn.metrics.roc_auc_score(average='macro')
+
+### Regression
+
+See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evaluation.html#regression-metrics) section of the user guide for further details.
+
+- max_error metric calculates the maximum residual error.
+- Mean absolute error regression loss
+- Mean squared error regression loss
+- Median absolute error regression loss
+- R^2 (coefficient of determination) regression score function.
 
 ## Actively working on (in future)
 

@@ -320,7 +320,42 @@ Here is a quick review of all the potential default_training_script settings:
 | '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' | Apache 2.0 |  ❌ | ✅ | ✅ | ✅ | ✅  | Simple classification / regression (built by Jim from NLX-model). |
 | '[tpot](https://github.com/EpistasisLab/tpot)' | LGPL-3.0 |  ❌ | ✅ | ✅ | ✅ | ✅  | TPOT classification / regression (autoML). |
 
-Note that you can customize the default_training_script in the settings.json. If you include multiple default training scripts in series e.g. ['keras','tpot'] it will go through and model each of these sessions serially.
+Note that you can customize the default_training_script in the settings.json. If you include multiple default training scripts in series e.g. ['keras','tpot'] it will go through and model each of these sessions serially. A sample settings.json with the ['tpot'] setting is shown below, for reference (this is the default setting):
+
+```
+{
+  "version": 1.0,
+  "augment_data": false,
+  "balance_data": true,
+  "clean_data": false,
+  "create_YAML": true,
+  "default_audio_features": [ "librosa_features" ],
+  "default_audio_transcriber": ["pocketsphinx"],
+  "default_csv_features": [ "csv_features" ],
+  "default_csv_transcriber": ["raw text"],
+  "default_dimensionality_reducer": [ "pca" ],
+  "default_feature_selector": [ "lasso" ],
+  "default_image_features": [ "image_features" ],
+  "default_image_transcriber": ["tesseract"],
+  "default_scaler": [ "standard_scaler" ],
+  "default_text_features": [ "nltk_features" ],
+  "default_text_transcriber": "raw text",
+  "default_training_script": [ "tpot" ],
+  "default_video_features": [ "video_features" ],
+  "default_video_transcriber": ["tesseract (averaged over frames)"],
+  "model_compress": false,
+  "reduce_dimensions": false,
+  "scale_features": true,
+  "select_features": false,
+  "test_size": 0.25,
+  "transcribe_audio": true,
+  "transcribe_csv": true,
+  "transcribe_image": true,
+  "transcribe_text": true,
+  "transcribe_videos": true,
+  "visualize_data": false
+}
+```
 
 ## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)
 Metrics are standardized across all model training methods to allow for interoperability across the various AutoML frameworks used. These methods differ between classification and regression models, and use the [scikit-learn metrics API](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics).

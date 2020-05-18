@@ -336,7 +336,7 @@ Here is a quick review of all these model training scripts:
 | [cvopt](https://github.com/genfifth/cvopt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |
 | [devol](https://github.com/joeddav/devol) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Genetic programming keras cnn layers. |
 | [gama](https://github.com/PGijsbers/gama) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An automated machine learning tool based on genetic programming. |
-| [hungabunga](https://github.com/ypeleg/HungaBunga) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [hungabunga](https://github.com/ypeleg/HungaBunga) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | HungaBunga: Brute-Force all sklearn models with all parameters using .fit .predict! |
 | [hyperband](https://github.com/thuijskens/scikit-hyperband) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. |
 | [hypsklearn](https://github.com/hyperopt/hyperopt-sklearn) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter optimization on scikit-learn models. |
 | [imbalance-learn](https://pypi.org/project/imbalanced-learn/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Imbalance learn different ML techniques to work on data with different numbers of samples. |

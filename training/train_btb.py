@@ -111,7 +111,7 @@ def train_btb(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,
 	# create file names
 	model_name=common_name_model+'.pickle'
 	folder='btb_session'
-	csvname=common_name_model[0]
+	csvname=common_name_model.split('_')[0]
 	curdir=os.getcwd()
 	files=list()
 

@@ -14,35 +14,33 @@ from sklearn.model_selection import train_test_split
 from sklearn.utils import shuffle
 from sklearn.model_selection import GridSearchCV
 
-def train_neuraxle(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
-	# install library
-	os.system('pip3 install neuraxle==0.4.0')
-	from neuraxle.pipeline import Pipeline
-	from neuraxle.steps.numpy import NumpyShapePrinter
-	from neuraxle.steps.sklearn import RidgeModelStacking
-	from neuraxle.union import AddFeatures
-	from neuraxle.checkpoints import DefaultCheckpoint
-	from neuraxle.hyperparams.distributions import RandInt
-	from neuraxle.hyperparams.space import HyperparameterSpace
-	from neuraxle.metaopt.auto_ml import RandomSearchHyperparameterSelectionStrategy
-	from neuraxle.metaopt.callbacks import MetricCallback, ScoringCallback
-	from neuraxle.pipeline import ResumablePipeline, DEFAULT_CACHE_FOLDER, Pipeline
-	from neuraxle.steps.flow import ExpandDim
-	from neuraxle.steps.loop import ForEachDataInput
-	from neuraxle.steps.misc import Sleep
-	from neuraxle.steps.numpy import MultiplyByN
-	from neuraxle.steps.numpy import NumpyShapePrinter
-	from neuraxle.union import AddFeatures
-	
+# install library
+os.system('pip3 install neuraxle==0.4.0')
+from neuraxle.pipeline import Pipeline
+from neuraxle.steps.numpy import NumpyShapePrinter
+from neuraxle.steps.sklearn import RidgeModelStacking
+from neuraxle.union import AddFeatures
+from neuraxle.checkpoints import DefaultCheckpoint
+from neuraxle.hyperparams.distributions import RandInt
+from neuraxle.hyperparams.space import HyperparameterSpace
+from neuraxle.metaopt.auto_ml import RandomSearchHyperparameterSelectionStrategy
+from neuraxle.metaopt.callbacks import MetricCallback, ScoringCallback
+from neuraxle.pipeline import ResumablePipeline, DEFAULT_CACHE_FOLDER, Pipeline
+from neuraxle.steps.flow import ExpandDim
+from neuraxle.steps.loop import ForEachDataInput
+from neuraxle.steps.misc import Sleep
+from neuraxle.steps.numpy import MultiplyByN
+from neuraxle.steps.numpy import NumpyShapePrinter
+from neuraxle.union import AddFeatures
+
+def train_neuraxle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
+
 	# get train and test data 
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
-	modelname=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_neuraxle'
+	model_name=common_name_model+'.pickle'
+	files=list()
 
 	if mtype in ['classification', 'c']:
-		print('neuraxle currently does not support training classification models. We are working on this soon')
-		print('----> please use another model training script')
-		model_name=''
-		model_dir=os.getcwd()
+		print('neuraxle currently does not support classsification...')
 
 	elif mtype in ['regression', 'r']:
 
@@ -66,46 +64,15 @@ def train_neuraxle(alldata, labels, mtype, jsonfile, problemtype, default_featur
 		# X_train data shape: (batch, different_lengths, n_feature_columns)
 		# y_train data shape: (batch, different_lengths)
 		pipeline = p.fit(X_train, y_train)
-		y_test_predicted = pipeline.predict(X_test)
-		r2score = r2_score(y_test_predicted, y_test)
-
-		print('------R2SCORE-------')
-		print(r2score)
 
 		# export pickle file 
-		print('saving model - %s'%(modelname+'.pickle'))
-		f=open(modelname+'.pickle','wb')
+		print('saving model - %s'%(model_name))
+		f=open(model_name,'wb')
 		pickle.dump(pipeline, f)
 		f.close()
 
-		jsonfilename='%s.json'%(modelname)
-		print('saving .JSON file (%s)'%(jsonfilename))
-		jsonfile=open(jsonfilename,'w')
-
-		data={'sample type': problemtype,
-			'feature_set':default_features,
-			'model name':jsonfilename[0:-5]+'.pickle',
-			'r2_score':r2score,
-			'model type':'neuraxle_regression',
-			'settings': settings,
-		}
-
-		json.dump(data,jsonfile)
-		jsonfile.close()
-
-		cur_dir2=os.getcwd()
-		try:
-			os.chdir(problemtype+'_models')
-		except:
-			os.mkdir(problemtype+'_models')
-			os.chdir(problemtype+'_models')
-
-		# now move all the files over to proper model directory 
-		shutil.move(cur_dir2+'/'+jsonfilename, os.getcwd()+'/'+jsonfilename)
-		shutil.move(cur_dir2+'/'+jsonfilename[0:-5]+'.pickle', os.getcwd()+'/'+jsonfilename[0:-5]+'.pickle')
-
-		# get model_name 
-		model_name=jsonfilename[0:-5]+'.pickle'
-		model_dir=os.getcwd()
+		files.append(model_name)
 	
-	return model_name, model_dir
+	model_dir=os.getcwd()
+
+	return model_name, model_dir, files

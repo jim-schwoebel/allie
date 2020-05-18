@@ -117,7 +117,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	metrics_=dict()
 	y_true=y_test
 
-	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras', 'devol', 'safe']:
+	if default_training_script not in ['autogluon', 'alphapy', 'atm', 'ludwig', 'keras', 'devol', 'safe', 'neuraxle']:
 		y_pred=clf.predict(X_test)
 	elif default_training_script=='alphapy':
 		# go to the right folder 
@@ -158,6 +158,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		    y_pred=clf.predict_classes(X_test).flatten()
 		elif mtype == 'r':
 			y_pred=clf.predict(X_test).flatten()
+	elif default_training_script=='neuraxle':
+		y_pred=clf.transform(X_test)
 	elif default_training_script=='safe':
 		# have to make into a pandas dataframe
 		test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)

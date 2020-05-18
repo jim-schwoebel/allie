@@ -330,7 +330,7 @@ Here is a quick review of all these model training scripts:
 | '[autogbt](https://github.com/pfnet-research/autogbt-alt)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An experimental Python package that reimplements AutoGBT using LightGBM and Optuna. |
 | '[autogluon](https://github.com/awslabs/autogluon)'| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | AutoGluon: AutoML Toolkit for Deep Learning. |
 | '[autokaggle](https://github.com/datamllab/autokaggle)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automated ML system trained using gbdt (regression and classification). |
-| '[autokeras](https://autokeras.com/)'| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| '[autokeras](https://autokeras.com/)'| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. |
 | '[autopytorch](https://github.com/automl/Auto-PyTorch)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Brute-Force all sklearn models with all parameters using .fit/.predict. |
 | '[btb](https://github.com/HDI-Project/BTB)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. |
 | '[cvopt](https://github.com/genfifth/cvopt)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |

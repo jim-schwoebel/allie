@@ -345,30 +345,30 @@ See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evalu
 
 Here is a quick review of all these model training scripts:
 
-| Modeling script | License | Accuracy | Speed | Documentation quality | Classification | Regression | 
-| --------- |  --------- |  --------- | --------- | --------- | --------- | --------- | 
-| [alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [atm](https://github.com/HDI-Project/ATM) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [autogbt](https://github.com/pfnet-research/autogbt-alt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [autogluon](https://github.com/awslabs/autogluon)| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [autokaggle](https://github.com/datamllab/autokaggle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [autokeras](https://autokeras.com/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [auto-pytorch](https://github.com/automl/Auto-PyTorch) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [btb](https://github.com/HDI-Project/BTB) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [cvopt](https://github.com/genfifth/cvopt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [devol](https://github.com/joeddav/devol) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [gama](https://github.com/PGijsbers/gama) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [hungabunga](https://github.com/ypeleg/HungaBunga) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [hyperband](https://github.com/thuijskens/scikit-hyperband) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [hypsklearn](https://github.com/hyperopt/hyperopt-sklearn) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [imbalance-learn](https://pypi.org/project/imbalanced-learn/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [keras](https://keras.io/getting-started/faq/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [ludwig](https://github.com/uber/ludwig) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [mlblocks](https://github.com/HDI-Project/MLBlocks) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| [neuraxle](https://github.com/Neuraxio/Neuraxle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  |
-| [safe](https://github.com/ModelOriented/SAFE) | Apache 2.0 |  5/5 | 4/5 | 5/5 ⭐⭐⭐⭐⭐ | ✅ | ✅  |
-| [scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py) | Apache 2.0 |  5/5 | 4/5 | 3/5 ⭐⭐⭐ | ✅ | ✅  |
-| [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  |
+| Modeling script | License | Accuracy | Speed | Documentation quality | Classification | Regression | Description |
+| --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 
+| [alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [atm](https://github.com/HDI-Project/ATM) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
+| [autogbt](https://github.com/pfnet-research/autogbt-alt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [autogluon](https://github.com/awslabs/autogluon)| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [autokaggle](https://github.com/datamllab/autokaggle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [autokeras](https://autokeras.com/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [auto-pytorch](https://github.com/automl/Auto-PyTorch) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [btb](https://github.com/HDI-Project/BTB) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [cvopt](https://github.com/genfifth/cvopt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [devol](https://github.com/joeddav/devol) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [gama](https://github.com/PGijsbers/gama) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [hungabunga](https://github.com/ypeleg/HungaBunga) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [hyperband](https://github.com/thuijskens/scikit-hyperband) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [hypsklearn](https://github.com/hyperopt/hyperopt-sklearn) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [imbalance-learn](https://pypi.org/project/imbalanced-learn/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [keras](https://keras.io/getting-started/faq/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [ludwig](https://github.com/uber/ludwig) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [mlblocks](https://github.com/HDI-Project/MLBlocks) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [neuraxle](https://github.com/Neuraxio/Neuraxle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  | Description |
+| [safe](https://github.com/ModelOriented/SAFE) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py) | Apache 2.0 |  5/5 | 4/5 | 3/5 | ✅ | ✅  | Description |
+| [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  | Description |
 
 ## Actively working on (in future)
 

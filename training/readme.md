@@ -321,9 +321,9 @@ See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evalu
 
 ## Model training scripts
 
-Here is a quick review of all these model training scripts:
+Here is a quick review of all these model default_training_script settings:
 
-| default_training_script Setting | License | Accuracy | Speed | Documentation quality | Classification | Regression | Description |
+| Setting | License | Accuracy | Speed | Documentation quality | Classification | Regression | Description |
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 
 | '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Highly customizable setttings for data science pipelines/feature selection. |
 | '[atm](https://github.com/HDI-Project/ATM)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
@@ -347,6 +347,8 @@ Here is a quick review of all these model training scripts:
 | '[safe](https://github.com/ModelOriented/SAFE)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Black box trainer / helps reduce opacity of ML models while increasing accuracy. |
 | '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' | Apache 2.0 |  5/5 | 4/5 | 3/5 | ✅ | ✅  | Simple classification / regression (built by Jim from NLX-model). |
 | '[tpot](https://github.com/EpistasisLab/tpot)' | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  | TPOT classification / regression (autoML). |
+
+Note that you can customize the default_training_script in the settings.json. If you include multiple default training scripts in series e.g. ['keras','tpot'] it will go through and model each of these sessions serially.
 
 ## Actively working on (in future)
 

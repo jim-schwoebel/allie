@@ -291,15 +291,7 @@ Goal is to make an output folder like this:
 
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
-## V1 training scripts
-
-There are 21 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT. 
-
-Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
-* '[auto-pytorch](https://github.com/automl/Auto-PyTorch)' - automated machine learning with the PyTorch framework. &#x2611;
-
-## V2 architecture model training
-
+## Model training scripts
 * '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' - highly customizable setttings for data science pipelines/feature selection. &#x2611;
 * '[atm](https://github.com/HDI-Project/ATM)' -  give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. &#x2611;
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;

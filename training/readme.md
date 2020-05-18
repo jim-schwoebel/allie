@@ -296,7 +296,7 @@ Now you're ready to go to load these models and [make predictions](https://githu
 There are 21 potential training script settings (customized in the 'settings.json'). Recommended setting is TPOT. 
 
 Note some of the deep learning autoML techniques can take days for optimization, and there are compromises in accuracy vs. speed in training.
-
+* '[auto-pytorch](https://github.com/automl/Auto-PyTorch)' - automated machine learning with the PyTorch framework. &#x2611;
 
 ## V2 architecture model training
 
@@ -305,7 +305,6 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[autogbt](https://github.com/pfnet-research/autogbt-alt)' - an experimental Python package that reimplements AutoGBT using LightGBM and Optuna. &#x2611;
 * '[autogluon](https://github.com/awslabs/autogluon)' - AutoGluon: AutoML Toolkit for Deep Learning. &#x2611;
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
-* '[auto-pytorch](https://github.com/automl/Auto-PyTorch)' - automated machine learning with the PyTorch framework. &#x2611;
 * '[btb](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;

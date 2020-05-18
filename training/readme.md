@@ -347,7 +347,7 @@ Here is a quick review of all these model training scripts:
 
 | Modeling script | License | Accuracy | Speed | Documentation quality | Classification | Regression | Description |
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 
-| [alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
+| [alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Highly customizable setttings for data science pipelines/feature selection. |
 | [atm](https://github.com/HDI-Project/ATM) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
 | [autogbt](https://github.com/pfnet-research/autogbt-alt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |
 | [autogluon](https://github.com/awslabs/autogluon)| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Description |

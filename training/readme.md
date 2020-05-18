@@ -351,49 +351,31 @@ See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evalu
 
 ## Qualtitative observations 
 
-Rank on these axes:
-- ease of setup / future support (setup properly) 
-- accuracy on most problems (less accurate --> more accurate) 
-- speed of modeling process (slow --> fast) 
-- documentation quality (poor --> great) 
-
-
-
-```diff
-- red
-+ green
-! orange
-# gray
-```
-
-```
-Metrics = https://scikit-learn.org/stable/modules/model_evaluation.html
-from sklearn.metrics import classification_report
-```
+Here is a quick review of all these model training scripts:
 
 | Modeling script | License | Accuracy | Speed | Documentation quality | Classification | Regression | 
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- | 
-| alphapy | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| atm | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| autogbt | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| autogluon | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| autokaggle | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| autokeras | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| autopytorch | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| btb | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| cvopt | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| devol | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| gama | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| hungabunga | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| hyperband | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| hypsklearn | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| imbalance | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| keras | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| ludwig | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| mlblocks | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
-| neuraxle | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  |
-| safe | Apache 2.0 |  5/5 | 4/5 | 5/5 ⭐⭐⭐⭐⭐ | ✅ | ✅  |
-| scsr | Apache 2.0 |  5/5 | 4/5 | 3/5 ⭐⭐⭐ | ✅ | ✅  |
+| [alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [atm](https://github.com/HDI-Project/ATM) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [autogbt](https://github.com/pfnet-research/autogbt-alt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [autogluon](https://github.com/awslabs/autogluon)| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [autokaggle](https://github.com/datamllab/autokaggle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [autokeras](https://autokeras.com/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [auto-pytorch](https://github.com/automl/Auto-PyTorch) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [btb](https://github.com/HDI-Project/BTB) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [cvopt](https://github.com/genfifth/cvopt) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [devol](https://github.com/joeddav/devol) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [gama](https://github.com/PGijsbers/gama) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [hungabunga](https://github.com/ypeleg/HungaBunga) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [hyperband](https://github.com/thuijskens/scikit-hyperband) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [hypsklearn](https://github.com/hyperopt/hyperopt-sklearn) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [imbalance-learn](https://pypi.org/project/imbalanced-learn/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [keras](https://keras.io/getting-started/faq/) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [ludwig](https://github.com/uber/ludwig) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [mlblocks](https://github.com/HDI-Project/MLBlocks) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [neuraxle](https://github.com/Neuraxio/Neuraxle) | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  |
+| [safe](https://github.com/ModelOriented/SAFE) | Apache 2.0 |  5/5 | 4/5 | 5/5 ⭐⭐⭐⭐⭐ | ✅ | ✅  |
+| [scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py) | Apache 2.0 |  5/5 | 4/5 | 3/5 ⭐⭐⭐ | ✅ | ✅  |
 | [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  |
 
 ## Actively working on (in future)

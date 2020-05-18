@@ -27,7 +27,7 @@ def train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,prob
 
 	if mtype=='r': 
 		from autoPyTorch import AutoNetRegression
-		autonet = AutoNetRegression(budget_type='epochs', min_budget=1, max_budget=9, num_iterations=1, log_level='info')
+		autonet = AutoNetRegression(log_level='debug', max_runtime=900, min_budget=50, max_budget=150)
 		autonet.fit(X_train, y_train)
 		print(autonet.predict(X_test).flatten())
 

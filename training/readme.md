@@ -298,25 +298,25 @@ Here is a quick review of all the potential default_training_script settings:
 | Setting | License | Accuracy | Speed | Documentation quality | Classification | Regression | Description |
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- |  --------- | 
 | '[alphapy](https://alphapy.readthedocs.io/en/latest/user_guide/pipelines.html#model-object-creation)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Highly customizable setttings for data science pipelines/feature selection. |
-| '[atm](https://github.com/HDI-Project/ATM)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
-| '[autogbt](https://github.com/pfnet-research/autogbt-alt)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An experimental Python package that reimplements AutoGBT using LightGBM and Optuna. |
+| '[atm](https://github.com/HDI-Project/ATM)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | give ATM a classification problem and a dataset as a CSV file, and ATM will build the best model it can. |
+| '[autogbt](https://github.com/pfnet-research/autogbt-alt)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An experimental Python package that reimplements AutoGBT using LightGBM and Optuna. |
 | '[autogluon](https://github.com/awslabs/autogluon)'| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | AutoGluon: AutoML Toolkit for Deep Learning. |
 | '[autokaggle](https://github.com/datamllab/autokaggle)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automated ML system trained using gbdt (regression and classification). |
-| '[autokeras](https://autokeras.com/)'| Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. |
+| '[autokeras](https://autokeras.com/)'| MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Automatic optimization of a neural network using neural architecture search (takes a very long time) - consistently has problems associated with saving and loading models in keras. |
 | '[autopytorch](https://github.com/automl/Auto-PyTorch)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Brute-Force all sklearn models with all parameters using .fit/.predict. |
-| '[btb](https://github.com/HDI-Project/BTB)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. |
-| '[cvopt](https://github.com/genfifth/cvopt)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |
-| '[devol](https://github.com/joeddav/devol)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Genetic programming keras cnn layers. |
+| '[btb](https://github.com/HDI-Project/BTB)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. |
+| '[cvopt](https://github.com/genfifth/cvopt)' | SD 2-Clause "Simplified" License|  5/5 | 4/5 | 5/5 | ✅ | ✅  | Machine learning parameter search / feature selection module with visualization. |
+| '[devol](https://github.com/joeddav/devol)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Genetic programming keras cnn layers. |
 | '[gama](https://github.com/PGijsbers/gama)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | An automated machine learning tool based on genetic programming. |
-| '[hungabunga](https://github.com/ypeleg/HungaBunga)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | HungaBunga: Brute-Force all sklearn models with all parameters using .fit .predict! |
-| '[hyperband](https://github.com/thuijskens/scikit-hyperband)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. |
-| '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter optimization on scikit-learn models. |
-| '[imbalance](https://pypi.org/project/imbalanced-learn/)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Imbalance learn different ML techniques to work on data with different numbers of samples. |
-| '[keras](https://keras.io/getting-started/faq/)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Simple MLP network architecture (quick prototype - if works may want to use autoML settings). |
+| '[hungabunga](https://github.com/ypeleg/HungaBunga)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | HungaBunga: Brute-Force all sklearn models with all parameters using .fit .predict! |
+| '[hyperband](https://github.com/thuijskens/scikit-hyperband)' | BSD 3-Clause "New" or "Revised" License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. |
+| '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' | [BSD 3-Clause "New" or "Revised" License](https://github.com/hyperopt/hyperopt-sklearn/blob/master/LICENSE.txt) |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Hyperparameter optimization on scikit-learn models. |
+| '[imbalance](https://pypi.org/project/imbalanced-learn/)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Imbalance learn different ML techniques to work on data with different numbers of samples. |
+| '[keras](https://keras.io/getting-started/faq/)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Simple MLP network architecture (quick prototype - if works may want to use autoML settings). |
 | '[ludwig](https://github.com/uber/ludwig)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Deep learning (simple ludwig). - convert every feature to numerical data. |
-| '[mlblocks](https://github.com/HDI-Project/MLBlocks)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Most recent framework @ MIT, regression and classification. |
+| '[mlblocks](https://github.com/HDI-Project/MLBlocks)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Most recent framework @ MIT, regression and classification. |
 | '[neuraxle](https://github.com/Neuraxio/Neuraxle)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  | A Sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. |
-| '[safe](https://github.com/ModelOriented/SAFE)' | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Black box trainer / helps reduce opacity of ML models while increasing accuracy. |
+| '[safe](https://github.com/ModelOriented/SAFE)' | MIT License |  5/5 | 4/5 | 5/5 | ✅ | ✅  | Black box trainer / helps reduce opacity of ML models while increasing accuracy. |
 | '[scsr](https://github.com/jim-schwoebel/voicebook/blob/master/chapter_4_modeling/train_audioregression.py)' | Apache 2.0 |  5/5 | 4/5 | 3/5 | ✅ | ✅  | Simple classification / regression (built by Jim from NLX-model). |
 | '[tpot](https://github.com/EpistasisLab/tpot)' | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  | TPOT classification / regression (autoML). |
 

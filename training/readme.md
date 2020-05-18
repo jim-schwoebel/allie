@@ -371,9 +371,9 @@ Metrics = https://scikit-learn.org/stable/modules/model_evaluation.html
 from sklearn.metrics import classification_report
 ```
 
-| Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | 
-| --------- |  --------- |  --------- | --------- | --------- | 
-| alphapy | 4/5|  5/5 | 4/5 | 5/5 | 
+| Modeling script | Ease of setup | Accuracy | Speed | Documentation quality | Classification | Regression | 
+| --------- |  --------- |  --------- | --------- | --------- | --------- | --------- | 
+| alphapy | 4/5|  5/5 | 4/5 | 5/5 | &#x2611; | &#x2611; |
 
 ['alphapy', 'atm', 'autobazaar', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']
 

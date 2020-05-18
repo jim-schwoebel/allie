@@ -10,6 +10,23 @@ from sklearn.model_selection import cross_val_score
 from sklearn.metrics import make_scorer
 import pandas as pd
 
+os.system('pip3 install baytune==0.3.7')
+# os.system('pip3 install autobazaar==0.2.0')
+# os.system('pip3 install gitpython==3.0.2')
+# os.system('pip3 install --upgrade GitPython==2.1.15')
+# os.system('pip3 install --upgrade gitdb2==2.0.6 gitdb==0.6.4 ')
+
+# make imports 
+print('installing package configuration')
+from btb.session import BTBSession
+from btb.tuning import Tunable
+from btb.tuning.tuners import GPTuner
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import make_scorer, r2_score
+from sklearn.model_selection import cross_val_score
+from sklearn.svm import SVC
+from btb.selection import UCB1
+from btb.tuning.hyperparams import FloatHyperParam, IntHyperParam
 
 '''
 Taken from the example here:
@@ -39,57 +56,6 @@ In many openml and other tabular cases, all the learning data is contained in a 
 		...
 '''
 
-def prev_dir(directory):
-	g=directory.split('/')
-	dir_=''
-	for i in range(len(g)):
-		if i != len(g)-1:
-			if i==0:
-				dir_=dir_+g[i]
-			else:
-				dir_=dir_+'/'+g[i]
-	# print(dir_)
-	return dir_
-
-def convert_(X_train, y_train, labels):
-
-	feature_list=labels
-	data=dict()
-
-	print(len(feature_list))
-	print(len(X_train[0]))
-	# time.sleep(50)
-
-	for i in range(len(X_train)):
-		for j in range(len(feature_list)-1):
-			if i > 0:
-				# print(data[feature_list[j]])
-				try:
-					# print(feature_list[j])
-					# print(data)
-					# print(X_train[i][j])
-					# print(data[feature_list[j]])
-					# time.sleep(2)
-					data[feature_list[j]]=data[feature_list[j]]+[X_train[i][j]]
-				except:
-					pass
-					# print(data)
-					# time.sleep(50)
-					# print(str(i)+'-i')
-					# print(j)
-
-			else:
-				data[feature_list[j]]=[X_train[i][j]]
-				print(data)
-
-	data['class_']=y_train
-	data=pd.DataFrame(data, columns = list(data))
-	print(data)
-	print(list(data))
-	# time.sleep(500)
-
-	return data
-
 def create_json(foldername, trainingcsv):
 
 	# create the template .JSON file necessary for the featurization
@@ -102,14 +68,14 @@ def create_json(foldername, trainingcsv):
 	for i in range(len(colnames)):
 		if colnames[i] != 'class_':
 			columns.append({"colIndex": i,
-					    "colName": colnames[i],
-					    "colType": "real",
-					    "role": ["attribute"]})
+						"colName": colnames[i],
+						"colType": "real",
+						"role": ["attribute"]})
 		else:
 			columns.append({"colIndex": i,
-					    "colName": 'class_',
-					    "colType": "real",
-					    "role": ["suggestedTarget"]})	
+						"colName": 'class_',
+						"colType": "real",
+						"role": ["suggestedTarget"]})	
 
 	data={"about": 
 	  {
@@ -122,14 +88,14 @@ def create_json(foldername, trainingcsv):
 	  },
 	"dataResources":
 	  [
-	    {
-	      "resID": "0",
-	      "resPath": os.getcwd()+'/'+trainingcsv,
-	      "resType": "table",
-	      "resFormat": ["text/csv"],
-	      "isCollection": False,
-	      "columns":columns,
-	    }
+		{
+		  "resID": "0",
+		  "resPath": os.getcwd()+'/'+trainingcsv,
+		  "resType": "table",
+		  "resFormat": ["text/csv"],
+		  "isCollection": False,
+		  "columns":columns,
+		}
 	  ]
 	}
 
@@ -140,61 +106,14 @@ def create_json(foldername, trainingcsv):
 
 	return dataset_id, filename
 
-def train_btb(alldata, labels, mtype, jsonfile, problemtype, default_features, settings):
-	print('installing package configuration')
-	os.system('pip3 install baytune==0.3.7')
-	# os.system('pip3 install autobazaar==0.2.0')
-	# os.system('pip3 install gitpython==3.0.2')
-	# os.system('pip3 install --upgrade GitPython==2.1.15')
-	# os.system('pip3 install --upgrade gitdb2==2.0.6 gitdb==0.6.4 ')
-
-	# make imports 
-	from btb.session import BTBSession
-	from btb.tuning import Tunable
-	from btb.tuning.tuners import GPTuner
-	from sklearn.ensemble import RandomForestClassifier
-	from sklearn.metrics import make_scorer, r2_score
-	from sklearn.model_selection import cross_val_score
-	from sklearn.svm import SVC
-	from btb.selection import UCB1
-	from btb.tuning.hyperparams import FloatHyperParam, IntHyperParam
-
-	# get train and test data
-	print('creating training data')
-	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, train_size=0.750, test_size=0.250)
+def train_btb(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):
 
 	# create file names
-	model_name=jsonfile[0:-5]+'_'+str(default_features).replace("'",'').replace('"','')+'_btb'
-
-	if mtype == 'c':
-		model_name=model_name+'_classification'
-		mtype='classification'
-	elif mtype == 'r':
-		model_name=model_name+'_regression'
-		mtype='regression'
-
-	folder=model_name
-	jsonfilename=model_name+'.json'
-	csvfilename=model_name+'.csv'
-	trainfile=model_name+'_train.csv'
-	testfile=model_name+'_test.csv'
-	model_name=model_name+'.pickle'
-
-	# this should be the model directory
-	hostdir=os.getcwd()
-
-	# open a sample featurization 
-	labels_dir=prev_dir(hostdir)+'/train_dir/'+jsonfilename.split('_')[0]
-	os.chdir(labels_dir)
-	listdir=os.listdir()
-	features_file=''
-	for i in range(len(listdir)):
-		if listdir[i].endswith('.json'):
-			features_file=listdir[i]
-
-	# load features file and get labels 
-	labels_=json.load(open(features_file))['features'][problemtype][default_features]['labels']
-	os.chdir(hostdir)
+	model_name=common_name_model+'.pickle'
+	folder='btb_session'
+	csvname=common_name_model[0]
+	curdir=os.getcwd()
+	files=list()
 
 	# make a temporary folder for the training session
 	try:
@@ -205,34 +124,31 @@ def train_btb(alldata, labels, mtype, jsonfile, problemtype, default_features, s
 		os.mkdir(folder)
 		os.chdir(folder)
 
-	all_data = convert_(alldata, labels, labels_)
-	train_data= convert_(X_train, y_train, labels_)
-	test_data= convert_(X_test, y_test, labels_)
-	all_data.to_csv(csvfilename)
-	data=pd.read_csv(csvfilename)
-	os.remove(csvfilename)
-	train_data.to_csv(trainfile)
-	test_data.to_csv(testfile)
+	# get training and testing data
+	try:
+		shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_train_transformed.csv',os.getcwd()+'/train.csv')
+		shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_test_transformed.csv',os.getcwd()+'/test.csv')
+	except:
+		shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_train.csv',os.getcwd()+'/train.csv')  
+		shutil.copy(curdir+'/'+model_session+'/data/'+csvname+'_test.csv',os.getcwd()+'/test.csv')
 
-	dataset_id, filename=create_json(folder, trainfile)
-
-	abz_dir=os.getcwd()
-
+	# create required .JSON
+	dataset_id, filename=create_json(folder, 'train.csv')
 	os.mkdir(dataset_id)
 	os.chdir(dataset_id)
 	os.mkdir('tables')
-	shutil.copy(hostdir+'/'+folder+'/'+trainfile, os.getcwd()+'/tables/'+trainfile)
+	shutil.copy(curdir+'/'+folder+'/train.csv', os.getcwd()+'/tables/train.csv')
 
-	if mtype=='classification':
+	if mtype=='c':
 
 		def build_model(name, hyperparameters):
-		    model_class = models[name]
-		    return model_class(random_state=0, **hyperparameters)
+			model_class = models[name]
+			return model_class(random_state=0, **hyperparameters)
 
 		def score_model(name, hyperparameters):
-		    model = build_model(name, hyperparameters)
-		    scores = cross_val_score(model, X_train, y_train)
-		    return scores.mean()
+			model = build_model(name, hyperparameters)
+			scores = cross_val_score(model, X_train, y_train)
+			return scores.mean()
 
 		rf_hyperparams = {'n_estimators': IntHyperParam(min=10, max=500),
 						'max_depth': IntHyperParam(min=10, max=500)}
@@ -267,57 +183,44 @@ def train_btb(alldata, labels, mtype, jsonfile, problemtype, default_features, s
 		print(accuracy)
 
 		# now save the model in .pickle
+		os.chdir(curdir)
 		f=open(model_name,'wb')
 		pickle.dump(best_model, f)
 		f.close()
 
-		# SAVE JSON FILE 
-		print('saving .JSON file (%s)'%(jsonfilename))
-		jsonfile=open(jsonfilename,'w')
 
-		data={'sample type': problemtype,
-			'feature_set':default_features,
-			'model name':jsonfilename[0:-5]+'.pickle',
-			'accuracy': float(accuracy),
-			'model type':'BTB_%s'%(mtype),
-			'settings': settings,
-		}
-
-		json.dump(data,jsonfile)
-		jsonfile.close()
-
-	elif mtype == 'regression':
+	elif mtype == 'r':
 
 
 		tunables = {
-		    'random_forest': {
-		        'n_estimators': {'type': 'int', 'default': 2, 'range': [1, 1000]},
-		        'max_features': {'type': 'str', 'default': 'log2', 'range': [None, 'auto', 'log2', 'sqrt']},
-		        'min_samples_split': {'type': 'int', 'default': 2, 'range': [2, 20]},
-		        'min_samples_leaf': {'type': 'int', 'default': 2, 'range': [1, 20]},
-		    },
-		    'extra_trees': {
-		        'n_estimators': {'type': 'int', 'default': 2, 'range': [1, 1000]},
-		        'max_features': {'type': 'str', 'default': 'log2', 'range': [None, 'auto', 'log2', 'sqrt']},
-		        'min_samples_split': {'type': 'int', 'default': 2, 'range': [2, 20]},
-		        'min_samples_leaf': {'type': 'int', 'default': 2, 'range': [1, 20]},
-		    }
+			'random_forest': {
+				'n_estimators': {'type': 'int', 'default': 2, 'range': [1, 1000]},
+				'max_features': {'type': 'str', 'default': 'log2', 'range': [None, 'auto', 'log2', 'sqrt']},
+				'min_samples_split': {'type': 'int', 'default': 2, 'range': [2, 20]},
+				'min_samples_leaf': {'type': 'int', 'default': 2, 'range': [1, 20]},
+			},
+			'extra_trees': {
+				'n_estimators': {'type': 'int', 'default': 2, 'range': [1, 1000]},
+				'max_features': {'type': 'str', 'default': 'log2', 'range': [None, 'auto', 'log2', 'sqrt']},
+				'min_samples_split': {'type': 'int', 'default': 2, 'range': [2, 20]},
+				'min_samples_leaf': {'type': 'int', 'default': 2, 'range': [1, 20]},
+			}
 		}
 
 		models = {
-		    'random_forest': RandomForestRegressor,
-		    'extra_trees': ExtraTreesRegressor,
+			'random_forest': RandomForestRegressor,
+			'extra_trees': ExtraTreesRegressor,
 		}
 
 		def build_model(name, hyperparameters):
-		    model_class = models[name]
-		    return model_class(random_state=0, **hyperparameters)
+			model_class = models[name]
+			return model_class(random_state=0, **hyperparameters)
 
 		def score_model(name, hyperparameters):
-		    model = build_model(name, hyperparameters)
-		    r2_scorer = make_scorer(r2_score)
-		    scores = cross_val_score(model, X_train, y_train, scoring=r2_scorer)
-		    return scores.mean()
+			model = build_model(name, hyperparameters)
+			r2_scorer = make_scorer(r2_score)
+			scores = cross_val_score(model, X_train, y_train, scoring=r2_scorer)
+			return scores.mean()
 
 
 		session = BTBSession(tunables, score_model, verbose=True)
@@ -333,40 +236,13 @@ def train_btb(alldata, labels, mtype, jsonfile, problemtype, default_features, s
 		print(r2_score)
 		
 		# now save the model in .pickle
+		os.chdir(curdir)
 		f=open(model_name,'wb')
 		pickle.dump(best_model, f)
 		f.close()
-		
-		# save the .JSON file
-		print('saving .JSON file (%s)'%(jsonfilename))
-		jsonfile=open(jsonfilename,'w')
 
-		data={'sample type': problemtype,
-			'feature_set':default_features,
-			'model name':jsonfilename[0:-5]+'.pickle',
-			'r2_score': float(r2_score),
-			'model type':'BTB_%s'%(mtype),
-			'settings': settings,
-		}
+	files.append(model_name)
+	files.append(folder)
+	model_dir=os.getcwd()
 
-		json.dump(data,jsonfile)
-		jsonfile.close()
-
-	# tf.keras.utils.plot_model(model, show_shapes=True, expand_nested=True)
-
-	# now get all them transferred
-	os.chdir(hostdir)
-	try:
-		os.chdir(problemtype+'_models')
-	except:
-		os.mkdir(problemtype+'_models')
-		os.chdir(problemtype+'_models')
-
-	# now move all the files over to proper model directory 
-	shutil.copy(hostdir+'/'+folder+'/'+dataset_id+'/'+model_name, hostdir+'/%s_models/%s'%(problemtype,model_name))
-	shutil.copy(hostdir+'/'+folder+'/'+dataset_id+'/'+jsonfilename, hostdir+'/%s_models/%s'%(problemtype,jsonfilename))
-
-	# get variables
-	model_dir=hostdir+'/%s_models/'%(problemtype)
-
-	return model_name, model_dir
+	return model_name, model_dir, files

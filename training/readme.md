@@ -292,9 +292,7 @@ Goal is to make an output folder like this:
 Now you're ready to go to load these models and [make predictions](https://github.com/jim-schwoebel/allie/tree/master/models).
 
 ## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)
-Various [metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics) are used based on the problem type. 
-
-Here are the standard metrics calculated for every model trained.
+Metrics are standardized across all model training methods to allow for interoperability across the various AutoML frameworks used. These methods differ between classification and regression models, and use the [scikit-learn metrics API](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics).
 
 ### Classification
 See the [Classification metrics section](https://scikit-learn.org/stable/modules/model_evaluation.html#classification-metrics) of the user guide for further details.

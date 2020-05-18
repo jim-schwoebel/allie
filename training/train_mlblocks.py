@@ -16,30 +16,26 @@ def train_mlblocks(X_train,X_test,y_train,y_test,mtype,common_name_model,problem
 	files=list()
 
 	if mtype=='c': 
-
+		# aet up primitives and train model
 		primitives = ['sklearn.impute.SimpleImputer',
 					  'xgboost.XGBClassifier']
-
 		init_params = {'sklearn.impute.SimpleImputer': {'strategy': 'median'},
 		  			    'xgboost.XGBClassifier': {'learning_rate': 0.1}}
-
 		pipeline = MLPipeline(primitives, init_params=init_params)
-
 		pipeline.fit(X_train, y_train)
 
-		# saving model
-		print('saving model')
-		modelfile=open(model_name,'wb')
-		pickle.dump(pipeline, modelfile)
-		modelfile.close()
-
-
 	if mtype=='r': 
-
+		# aet up primitives and train model
 		primitives = ['sklearn.impute.SimpleImputer',
 					  'xgboost.XGBRegressor']
 		pipeline = MLPipeline(primitives)
 		pipeline.fit(X_train, y_train)
+
+	# saving model
+	print('saving model')
+	modelfile=open(model_name,'wb')
+	pickle.dump(pipeline, modelfile)
+	modelfile.close()
 
 	# get model directory
 	files.append(model_name)

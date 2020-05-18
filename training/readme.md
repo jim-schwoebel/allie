@@ -319,7 +319,7 @@ See the [Regression metrics](https://scikit-learn.org/stable/modules/model_evalu
 - Median absolute error regression loss
 - R^2 (coefficient of determination) regression score function.
 
-## Qualtitative observations 
+## Model training scripts
 
 Here is a quick review of all these model training scripts:
 

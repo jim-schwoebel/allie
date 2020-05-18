@@ -373,11 +373,28 @@ from sklearn.metrics import classification_report
 
 | Modeling script | License | Accuracy | Speed | Documentation quality | Classification | Regression | 
 | --------- |  --------- |  --------- | --------- | --------- | --------- | --------- | 
-| alphapy | Apache 2.0 |  5/5 | 4/5 | 5/5 | &#x2611; | &#x2611; |
-
-NeurAxle cannot ❌ classification.
-
-['alphapy', 'atm', 'autobazaar', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']
+| alphapy | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| atm | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| autogbt | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| autogluon | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| autokaggle | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| autokeras | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| autopytorch | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| btb | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| cvopt | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| devol | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| gama | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| hungabunga | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| hyperband | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| hypsklearn | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| imbalance | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| keras | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| ludwig | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| mlblocks | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| neuraxle | Apache 2.0 |  5/5 | 4/5 | 5/5 | ❌ | ✅  |
+| safe | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| scsr | Apache 2.0 |  5/5 | 4/5 | 5/5 | ✅ | ✅  |
+| [tpot](https://github.com/EpistasisLab/tpot) | LGPL-3.0 |  5/5 | 5/5 | 5/5 | ✅ | ✅  |
 
 ## Actively working on (in future)
 

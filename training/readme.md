@@ -297,7 +297,6 @@ There are 21 potential training script settings (customized in the 'settings.jso
 
 * '[btb](https://github.com/HDI-Project/BTB)' - hyperparameter tuning with various ML algorithms in scikit-learn using genetic algorithms. &#x2611;
 * '[devol](https://github.com/joeddav/devol)' - genetic programming keras cnn layers. &#x2611;
-* '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
 * '[keras](https://keras.io/getting-started/faq/)' - simple MLP network architecture (quick prototype - if works may want to use autoML settings). &#x2611;
 * '[mlblocks](https://github.com/HDI-Project/MLBlocks)' - most recent framework @ MIT, regression and classification. &#x2611; 
 * '[neuraxle](https://github.com/Neuraxio/Neuraxle)' - A sklearn-like Framework for Hyperparameter Tuning and AutoML in Deep Learning projects. &#x2611;
@@ -315,6 +314,7 @@ Note some of the deep learning autoML techniques can take days for optimization,
 * '[autokaggle](https://github.com/datamllab/autokaggle)' - automated ML system trained using gbdt (regression and classification). &#x2611;
 * '[auto-pytorch](https://github.com/automl/Auto-PyTorch)' - automated machine learning with the PyTorch framework. &#x2611;
 * '[cvopt](https://github.com/genfifth/cvopt)' - Machine learning parameter search / feature selection module with visualization. &#x2611;
+* '[gama](https://github.com/PGijsbers/gama)' - An automated machine learning tool based on genetic programming. &#x2611; 
 * '[hungabunga](https://github.com/ypeleg/HungaBunga)' - brute-Force all sklearn models with all parameters using .fit .predict &#x2611;
 * '[hyperband](https://github.com/thuijskens/scikit-hyperband)' - implements a class HyperbandSearchCV that works exactly as GridSearchCV and RandomizedSearchCV from scikit-learn do, except that it runs the hyperband algorithm under the hood. &#x2611;
 * '[hypsklearn](https://github.com/hyperopt/hyperopt-sklearn)' - seems stable - hyperparameter optimization of the data. &#x2611;

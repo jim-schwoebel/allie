@@ -18,16 +18,17 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ### ongoing 
 
-1. add in default_augmenters / get live into Allie
-2. add in default_cleaners / get live into Allie 
-5. add in all model loaders from the model trainers 
-7. create docker containers for production for any arbitrary data type 
-8. add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2)
-9. tie new datasets with SurveyLex product / CLI interface with downloads
-10. documentation of the repository / jupyter notebooks with examples in research paper 
-11. Create nice CLI interface for all of Allie's functionality using OptionParser()
-12. make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
-13. Add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
+- add in default_augmenters / get live into Allie
+- add in default_cleaners / get live into Allie 
+- add in all model loaders from the model trainers 
+- create docker containers for production for any arbitrary data type 
+- add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2)
+- tie new datasets with SurveyLex product / CLI interface with downloads
+- documentation of the repository / jupyter notebooks with examples in research paper 
+- Create nice CLI interface for all of Allie's functionality using OptionParser()
+- make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
+- Add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
+- add new test cases into Allie / make tests work with new framework
 
 ### recently completed
 - test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)

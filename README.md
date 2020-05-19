@@ -33,6 +33,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ### recently completed
 - finish up model trainers and clean them up
+- add in version to Allie (to assess deprecation issues into the future)
 - add in transcriber settings as a list ['pocketsphinx', 'deepspeech', 'google', 'aws'], etc.
 - added in transcribers as lists (can be adapted into future)
 

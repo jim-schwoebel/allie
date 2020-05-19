@@ -88,3 +88,4 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 
 ### Video
 * [Video stabilization](https://github.com/abhiTronix/vidgear#camgear) - video stabilization for the camera / cleaning it
+* [Near-duplicate video detection](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)

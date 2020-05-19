@@ -131,6 +131,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Audio
 looking into actively
+* [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [speechpy](https://github.com/astorfi/speechpy)
 * [sigfeat](https://github.com/SiggiGue/sigfeat)
@@ -139,7 +140,6 @@ looking into actively
 * [pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - f0 and other estimators
 * [sonopy](https://github.com/MycroftAI/sonopy) - MFCCs fastest featurizer
 * [spafe](https://github.com/SuperKogito/spafe) - many features
-* [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [Essentia](https://github.com/kushagrasurana/Essentia-feature-extraction)
 * [Wav2Letter](https://github.com/facebookresearch/wav2letter/wiki/Python-bindings) 
 * [Formant extraction](https://github.com/danilobellini/audiolazy/blob/master/examples/formants.py)

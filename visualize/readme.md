@@ -261,6 +261,7 @@ Heatmap with removed correlated variables
 
 ## Working on now
 
+- LDA - http://rasbt.github.io/mlxtend/user_guide/feature_extraction/LinearDiscriminantAnalysis/
 - https://umap-learn.readthedocs.io/en/latest/basic_usage.html
 - https://github.com/sepandhaghighi/pycm - confusion matrix / ROC curve
 - https://github.com/wcipriano/pretty-print-confusion-matrix

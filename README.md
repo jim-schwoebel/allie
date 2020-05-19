@@ -29,11 +29,11 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 11. Create nice CLI interface for all of Allie's functionality using OptionParser()
 12. make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
 13. Add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
-14. add in deepspeech functionality to transcription for open source (and other open source audio transcribers)
 
 ### recently completed
 - finish up model trainers and clean them up
 - add in version to Allie (to assess deprecation issues into the future)
+- add in deepspeech functionality to transcription for open source (and other open source audio transcribers)
 - add in transcriber settings as a list ['pocketsphinx', 'deepspeech', 'google', 'aws'], etc.
 - added in transcribers as lists (can be adapted into future)
 

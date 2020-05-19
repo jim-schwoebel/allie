@@ -86,6 +86,8 @@ cd tests
 python3 test.py
 ```
 
+Note you can quickly download datasets from AWS buckets and train machine learning models from there. 
+
 #### alternative
 
 Note that there are many incomptible Python libraries with Windows, so I encourage you to instead run Allie in a Docker container with Ubuntu or on [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).

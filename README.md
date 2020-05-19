@@ -29,6 +29,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
 - Add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
 - add new test cases into Allie / make tests work with new framework
+- enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 
 ### recently completed
 - test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)

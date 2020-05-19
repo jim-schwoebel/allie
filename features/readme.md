@@ -134,6 +134,8 @@ looking into actively
 * [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [speechpy](https://github.com/astorfi/speechpy)
 * [sigfeat](https://github.com/SiggiGue/sigfeat)
+* [kapre-kears](https://github.com/keunwoochoi/kapre)
+* [torchaudio-contrib](https://github.com/keunwoochoi/torchaudio-contrib)
 * [pyworld](https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder) - f0 and other estimators
 * [sonopy](https://github.com/MycroftAI/sonopy) - MFCCs fastest featurizer
 * [spafe](https://github.com/SuperKogito/spafe) - many features

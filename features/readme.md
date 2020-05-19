@@ -186,6 +186,7 @@ tried but not user friendly
 
 ### Videos 
 * add in transcription to the standard video array {'transcript': video_transcript, 'type': video} if settings.JSON video transcript == True.
+* [video_feature_extraction](https://github.com/antoine77340/video_feature_extractor) - general-purpose video feature extractor
 * [Age](https://github.com/deepinsight/insightface) - age/gender with video 
 * [Near duplicate](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
 * [pliers](https://github.com/tyarkoni/pliers) - multiple feature extractors / video

@@ -155,10 +155,11 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				basearray=make_features(sampletype)
 
 				if image_transcribe==True:
-					transcript, features, labels = tf.tesseract_featurize(imgfile)
-					transcript_list=basearray['transcripts']
-					transcript_list['image'][default_image_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
+					for j in range(len(default_image_transcriber)):
+						transcript, features, labels = tf.tesseract_featurize(imgfile)
+						transcript_list=basearray['transcripts']
+						transcript_list['image'][default_image_transcriber[j]]=transcript 
+						basearray['transcripts']=transcript_list
 				
 				# featurize the image file with specified featurizers 
 				for j in range(len(feature_sets)):
@@ -189,10 +190,12 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				transcript_list=basearray['transcripts']
 
 				# only re-transcribe if necessary 
-				if image_transcribe==True and default_image_transcriber not in list(transcript_list['image']):
-					transcript, features, labels = tf.tesseract_featurize(imgfile)
-					transcript_list['image'][default_image_transcriber]=transcript 
-					basearray['transcripts']=transcript_list
+				if image_transcribe==True:
+					for j in range(len(default_image_transcriber)):
+						if default_image_transcriber[j] not in list(transcript_list['image']):
+							transcript, features, labels = tf.tesseract_featurize(imgfile)
+							transcript_list['image'][default_image_transcriber[j]]=transcript 
+							basearray['transcripts']=transcript_list
 
 				# only re-featurize if necessary (checks if relevant feature embedding exists)
 				for j in range(len(feature_sets)):

@@ -433,6 +433,8 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 						transcript_list=basearray['transcripts']
 						transcript_list['audio'][default_audio_transcriber]=transcript 
 						basearray['transcripts']=transcript_list
+				else:
+					transcript=''
 
 				# featurize the audio file 
 				for j in range(len(feature_sets)):

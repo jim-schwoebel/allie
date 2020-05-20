@@ -175,9 +175,9 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 			if listdir[i][0:-4]+'.json' not in listdir:
 
 				# rename to avoid conflicts
-				newfile=str(uuid.uuid4())+'.mp4'
-				os.rename(listdir[i], newfile)
-				videofile=newfile
+				# newfile=str(uuid.uuid4())+'.mp4'
+				# os.rename(listdir[i], newfile)
+				# videofile=newfile
 				
 				# make new .JSON if it is not there with base array schema.
 				basearray=make_features(sampletype)
@@ -205,21 +205,21 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 
 				# video transcription setting
 				if video_transcribe_setting == True:	
-					for j in range(len(default_video_transcribers)):
-						default_video_transcriber=default_video_transcribers[j]
-						if default_video_transcriber=='tesseract (averaged over frames)':
-							transcript_list['video'][default_video_transcriber] = video_transcript
+					for j in range(len(default_video_transcriber)):
+						video_transcriber=default_video_transcriber[j]
+						if video_transcriber=='tesseract (averaged over frames)':
+							transcript_list['video'][video_transcriber] = video_transcript
 						else:
-							print('cannot transcribe video file, as the %s transcriber is not supported'%(default_video_transcriber.upper()))
+							print('cannot transcribe video file, as the %s transcriber is not supported'%(video_transcriber.upper()))
 				
 				# audio transcriber setting
 				if audio_transcribe_setting == True:
-					for j in range(len(default_audio_transcribers)):
-						default_audio_transcriber=default_audio_transcribers[j]
-						if default_audio_transcriber == 'pocketsphinx':
-							transcript_list['audio'][default_audio_transcriber] = audio_transcript 
+					for j in range(len(default_audio_transcriber)):
+						audio_transcriber=default_audio_transcriber[j]
+						if audio_transcriber == 'pocketsphinx':
+							transcript_list['audio'][audio_transcriber] = audio_transcript 
 						else:
-							print('cannot transcribe audio file, as the %s transcriber is not supported'%(default_audio_transcriber.upper()))
+							print('cannot transcribe audio file, as the %s transcriber is not supported'%(audio_transcriber.upper()))
 				
 				# update transcript list
 				basearray['transcripts']=transcript_list
@@ -254,22 +254,22 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				transcript_list=basearray['transcripts']
 
 				if video_transcribe_setting == True:
-					for j in range(len(default_video_transcribers)):
-						default_video_transcriber=default_video_transcribers[j]
-						if default_video_transcriber not in list(transcript_list):
-							if default_video_transcriber == 'tesseract (averaged over frames)':
-								transcript_list['video'][default_video_transcriber] = video_transcript
+					for j in range(len(default_video_transcriber)):
+						default_video_transcriber=default_video_transcriber[j]
+						if video_transcriber not in list(transcript_list):
+							if video_transcriber == 'tesseract (averaged over frames)':
+								transcript_list['video'][video_transcriber] = video_transcript
 							else:
-								print('cannot transcribe video file, as the %s transcriber is not supported'%(default_video_transcriber.upper()))
+								print('cannot transcribe video file, as the %s transcriber is not supported'%(video_transcriber.upper()))
 				
 				if audio_transcribe_setting == True:
-					for j in range(len(default_audio_transcribers)):
-						default_audio_transcriber=default_audio_transcribers[j]
-						if default_audio_transcriber not in list(transcript_list):	
-							if default_audio_transcriber == 'pocketsphinx':
-								transcript_list['audio'][default_audio_transcriber] = audio_transcript
+					for j in range(len(default_audio_transcriber)):
+						audio_transcriber=default_audio_transcriber[j]
+						if audio_transcriber not in list(transcript_list):	
+							if audio_transcriber == 'pocketsphinx':
+								transcript_list['audio'][audio_transcriber] = audio_transcript
 							else:
-								print('cannot transcribe audio file, as the %s transcriber is not supported'%(default_audio_transcriber.upper()))
+								print('cannot transcribe audio file, as the %s transcriber is not supported'%(audio_transcriber.upper()))
 				
 				basearray['transcripts']=transcript_list
 

@@ -18,6 +18,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ### ongoing 
 
+- work on cvopt and autokaggle training script bugs
 - add in all model loaders from the model trainers 
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 

@@ -18,9 +18,9 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ### ongoing 
 
+- add in all model loaders from the model trainers 
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 
-- add in all model loaders from the model trainers 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
 - tie new datasets with SurveyLex product / CLI interface with downloads
 - make sure Allie passes all tests on linux, etc. / contextualize tests around default settings

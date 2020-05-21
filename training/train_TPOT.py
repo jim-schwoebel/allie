@@ -1,6 +1,6 @@
 import os, sys, pickle, json, random, shutil, time
 import numpy as np
-os.system('pip3 install tpot=0.11.3')
+os.system('pip3 install tpot==0.11.3')
 from tpot import TPOTClassifier
 from tpot import TPOTRegressor
 	

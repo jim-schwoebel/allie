@@ -157,7 +157,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	elif default_training_script == 'devol':
 		X_test=X_test.reshape(X_test.shape+ (1,)+ (1,))
 		y_pred=clf.predict_classes(X_test).flatten()
-	elif default_training_script==['keras']:
+	elif default_training_script=='keras':
 		if mtype == 'c':
 		    y_pred=clf.predict_classes(X_test).flatten()
 		elif mtype == 'r':

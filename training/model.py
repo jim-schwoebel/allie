@@ -221,6 +221,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		  'classes': classes,
 	      'model type': mtype,
 	      'model name': modelname, 
+	      'model type': default_training_script,
 	      'metrics': metrics_,
 	      'settings': settings,
 	      'transformer name': transformer_name,

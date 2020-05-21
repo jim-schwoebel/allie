@@ -31,6 +31,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 
 ### recently completed
+- minor bug fixes associated with transcription during featurization for audio, image, video, and .CSV fileas
 - add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2) - did this in the [featurize_csv script](https://github.com/jim-schwoebel/allie/blob/master/train_dir/featurize_csv.py) where .CSV files can contain audio, text, image, video, numerical, and categorical data.
 - test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)
 - finish up model trainers and clean them up

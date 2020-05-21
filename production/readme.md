@@ -272,3 +272,6 @@ if __name__ == '__main__':
 * add in all types of feature arrays and data types (to production training) - rename to include type of file (e.g. nlx-model-audio-age vs. nlx-model-video-age).
 * adapt testing scripts in this folder to keras/devol and ludwig (to allow for any model type to be spun up into production).
 * make 100 different types of gifs to make the automated documentation more interesting!! :-)
+
+## References
+* [Deploying machine learning models](https://christophergs.com/machine%20learning/2019/03/17/how-to-deploy-machine-learning-models/)

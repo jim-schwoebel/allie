@@ -2,8 +2,9 @@ import os, pickle
 curdir=os.getcwd()
 print(os.getcwd())
 print('initializing installation')
-from helpers.autokaggle.tabular_supervised import TabularClassifier
-from helpers.autokaggle.tabular_supervised import TabularRegressor
+os.system('pip3 install autokaggle==0.1.0')
+from autokaggle.tabular_supervised import TabularClassifier
+from autokaggle.tabular_supervised import TabularRegressor
 os.chdir(curdir)
 
 def train_autokaggle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session):

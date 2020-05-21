@@ -987,8 +987,12 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		import train_mlbox as mlbox_
 		modelname, modeldir, files=mlbox_.train_mlbox(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='neuraxle':
-		import train_neuraxle as tneuraxle
-		modelname, modeldir, files=tneuraxle.train_neuraxle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		if mtype=='c':
+			print('Neuraxle does not support classification at this time. Please use a different model training script')
+			break
+		else:
+			import train_neuraxle as tneuraxle
+			modelname, modeldir, files=tneuraxle.train_neuraxle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 	elif default_training_script=='plda':
 		print('PLDA training is unstable! Please use a different model setting for now.') 
 		# import train_pLDA as tp

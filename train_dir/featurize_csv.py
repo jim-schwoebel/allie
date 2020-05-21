@@ -315,9 +315,10 @@ def csv_featurize(csvfile, settings):
 		newdict=dict(zip(labels, features))
 		print(newdict)
 		df = pd.DataFrame(newdict)
-		df.to_csv('lol2332.csv')
+		filename=str(uuid.uuid1())+'.csv'
+		df.to_csv(filename,index=False)
 
-		return df
+		return df, filename
 
 	else:
 		print('file cannot be read, as it does not end with .CSV extension!')
@@ -332,5 +333,5 @@ basedir=prev_dir(os.getcwd())
 os.chdir(basedir)
 settings=json.load(open('settings.json'))
 os.chdir(curdir)
-df=csv_featurize('test2.csv', settings)
+df, filename=csv_featurize('wine.csv', settings)
 

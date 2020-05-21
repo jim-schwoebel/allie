@@ -118,16 +118,16 @@ def video_featurize_columns(filepaths, directory, settings, basedir):
 
 	return features, labels
 
-def csv_featurize_columns(filepaths, directory, settings, basedir):
-	'''
-	get csv features using default_csv_featurizer - likely this script.
-	'''
-	features=list()
-	labels=list()
-	default_features=settings['default_csv_features']
-	features, labels = element_featurize('csv', default_features, filepaths, directory)
+# def csv_featurize_columns(filepaths, directory, settings, basedir):
+# 	'''
+# 	get csv features using default_csv_featurizer - likely this script.
+# 	'''
+# 	features=list()
+# 	labels=list()
+# 	default_features=settings['default_csv_features']
+# 	features, labels = element_featurize('csv', default_features, filepaths, directory)
 
-	return features, labels
+# 	return features, labels
 
 def category_featurize_columns(columns, directory, settings, basedir):
 	'''
@@ -212,8 +212,8 @@ class ColumnSample:
 			features_, labels = image_featurize_columns(self.column, self.directory, self.settings, self.basedir)
 		elif self.sampletype == 'video':
 			features_, labels = video_featurize_columns(self.column, self.directory, self.settings, self.basedir)
-		elif self.sampletype == 'csv':
-			features_, labels = csv_featurize_columns(self.column, self.directory, self.settings, self.basedir)
+		# elif self.sampletype == 'csv':
+			# features_, labels = csv_featurize_columns(self.column, self.directory, self.settings, self.basedir)
 		elif self.sampletype == 'categorical':
 			features_, labels = category_featurize_columns(self.column, self.directory, self.settings, self.basedir)
 		elif self.sampletype == 'typedtext':
@@ -249,19 +249,15 @@ def csv_featurize(csvfile, settings):
 					elif coldata[j].endswith('.mp4'):
 						sampletypes.append('video')
 					else:
-						# find out whether column is numerical or categorical
-						if coldata[j].endswith('.csv'):
-							sampletypes.append('csv')
-						else:
-							sampletypes.append('other')
+						sampletypes.append('other')
 
 			coltype=most_common(sampletypes)
 
 			# correct the other category if needed
 			if coltype == 'other':
-				if coltype.endswith('.csv'):
-					coltype='csv'
-				elif len(set(list(coldata))) < 10:
+				# if coltype.endswith('.csv'):
+					# coltype='csv'
+				if len(set(list(coldata))) < 10:
 					coltype='categorical'
 				else:
 					# if less than 5 unique answers then we can interpret this as text input

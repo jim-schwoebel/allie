@@ -144,7 +144,7 @@ def category_featurize_columns(columns, directory, settings, basedir):
 	# feature and labels must be arrays of arrays
 	features=list()
 	labels=list()
-	for i in range(len(features)):
+	for i in range(len(features_)):
 		features.append([features_[i]])
 		labels.append([labels_[i]])
 
@@ -175,6 +175,17 @@ def typedtext_featurize_columns(columns, directory, settings, basedir):
 
 	return features, labels
 
+def numerical_featurize_columns(columns, directory, settings, basedir):
+	'''
+	Get numerical features from responses
+	'''
+	features=list()
+	labels=list()
+	for i in range(len(columns)):
+		features.append([columns[i]])
+		labels.append(['numerical_'+str(i)])
+
+	return features, labels
 # create all featurizers in a master class structure
 class ColumnSample:
 
@@ -207,7 +218,8 @@ class ColumnSample:
 			features_, labels = category_featurize_columns(self.column, self.directory, self.settings, self.basedir)
 		elif self.sampletype == 'typedtext':
 			features_, labels = typedtext_featurize_columns(self.column, self.directory, self.settings, self.basedir)
-		
+		elif self.sampletype == 'numerical':
+			features_, labels = numerical_featurize_columns(self.column, self.directory, self.settings, self.basedir)
 		self.features = features_
 		self.labels = labels
 
@@ -224,23 +236,23 @@ def csv_featurize(csvfile, settings):
 			coldata=data[columns[i]]
 			sampletypes=list()
 			for j in range(len(coldata)):
-				if coldata[j].endswith('.wav'):
-					sampletypes.append('audio')
-				elif coldata[j].endswith('.txt'):
-					sampletypes.append('text')
-				elif coldata[j].endswith('.png'):
-					sampletypes.append('image')
-				elif coldata[j].endswith('.mp4'):
-					sampletypes.append('video')
-				else:
-					# find out whether column is numerical or categorical
-					if coldata[j].endswith('.csv'):
-						sampletypes.append('csv')
+				try:
+					values=float(coldata[j])
+					sampletypes.append('numerical')
+				except:
+					if coldata[j].endswith('.wav'):
+						sampletypes.append('audio')
+					elif coldata[j].endswith('.txt'):
+						sampletypes.append('text')
+					elif coldata[j].endswith('.png'):
+						sampletypes.append('image')
+					elif coldata[j].endswith('.mp4'):
+						sampletypes.append('video')
 					else:
-						try:
-							values=float(coldata[j])
-							sampletypes.append('numerical')
-						except:
+						# find out whether column is numerical or categorical
+						if coldata[j].endswith('.csv'):
+							sampletypes.append('csv')
+						else:
 							sampletypes.append('other')
 
 			coltype=most_common(sampletypes)
@@ -279,11 +291,37 @@ def csv_featurize(csvfile, settings):
 			new_column_values.append(features)
 			new_column_labels.append(labels)
 
+		print(coltypes)
 		print(lengths)
 		 #print(new_column_labels)
 		# print(new_column_values)
+		old_column_labels=columns 
+		old_column_values=data
 
-		return new_column_labels, new_column_values, headers, columns, data
+		print('-------------')
+		labels=[]
+		features=[]
+
+		for i in range(len(old_column_labels)):
+			column=old_column_labels[i]
+			for j in range(len(new_column_labels[0])):
+				print(column)
+				for k in range(len(new_column_labels[i][j])):
+					print(column+'_'+new_column_labels[i][j][k])
+					labels.append(column+'_'+new_column_labels[i][j][k])
+					features_=list()
+					for l in range(len(new_column_labels[i])):
+						features_.append(new_column_values[i][l][k])
+					print(features_)
+					features.append(features_)
+				break
+
+		newdict=dict(zip(labels, features))
+		print(newdict)
+		df = pd.DataFrame(newdict)
+		df.to_csv('lol2332.csv')
+
+		return df
 
 	else:
 		print('file cannot be read, as it does not end with .CSV extension!')
@@ -298,4 +336,5 @@ basedir=prev_dir(os.getcwd())
 os.chdir(basedir)
 settings=json.load(open('settings.json'))
 os.chdir(curdir)
-new_column_labels, new_column_values, headers, old_column_labels, old_column_values=csv_featurize('test.csv', settings)
+df=csv_featurize('test2.csv', settings)
+

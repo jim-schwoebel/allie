@@ -3,6 +3,7 @@ curdir=os.getcwd()
 print(os.getcwd())
 print('initializing installation')
 os.system('pip3 install autokaggle==0.1.0')
+os.system('pip3 install scikit-learn==0.22')
 from autokaggle.tabular_supervised import TabularClassifier
 from autokaggle.tabular_supervised import TabularRegressor
 os.chdir(curdir)

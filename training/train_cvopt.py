@@ -4,6 +4,7 @@ os.system('pip3 install cvopt==0.4.3')
 # os.system('pip3 install scikit-learn==0.22')
 os.system('pip3 install bokeh==1.4.0')
 os.system('pip3 install pandas==1.0.3')
+os.system('pip3 install numpy==1.17')
 import numpy as np
 import pandas as pd
 import scipy as sp

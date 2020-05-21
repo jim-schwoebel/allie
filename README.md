@@ -22,7 +22,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in default_cleaners / get live into Allie 
 - add in all model loaders from the model trainers 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
-- add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2)
 - tie new datasets with SurveyLex product / CLI interface with downloads
 - documentation of the repository / jupyter notebooks with examples in research paper 
 - Create nice CLI interface for all of Allie's functionality using OptionParser()
@@ -32,6 +31,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 
 ### recently completed
+- add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2) - did this in the train_csv script.
 - test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)
 - finish up model trainers and clean them up
 - add in version to Allie (to assess deprecation issues into the future)

@@ -1,4 +1,5 @@
 import os, pickle
+os.system('export OMP_NUM_THREADS=1')
 from hpsklearn import HyperoptEstimator, any_preprocessing, any_classifier, any_regressor
 from hyperopt import tpe
 

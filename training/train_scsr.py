@@ -3,7 +3,7 @@ train simple classifier or regressor (SCSR).
 '''
 import os
 os.system('pip3 install scikit-learn==0.22.2.post1')
-
+os.system('pip3 install xslxwriter==1.2.8')
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import GaussianNB, BernoulliNB, MultinomialNB
 from sklearn.svm import SVC

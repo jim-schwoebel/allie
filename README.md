@@ -19,6 +19,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ### ongoing 
 
 - add in all model loaders from the model trainers 
+- fix bugs associated with model loading with different model types (may require different configurations)
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)

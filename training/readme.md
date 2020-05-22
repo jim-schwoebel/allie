@@ -324,7 +324,7 @@ Note that you can customize the default_training_script in the settings.json. If
 
 ```python3
 {
-  "version": 1.0,
+  "version": "1.0.0",
   "augment_data": false,
   "balance_data": true,
   "clean_data": false,

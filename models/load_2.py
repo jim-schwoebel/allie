@@ -9,7 +9,8 @@ Note that the general flow here is
 3. apply all machine learning models available
 '''
 
-import os, json
+import os, json, pickle, time
+import numpy as np
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -40,8 +41,12 @@ def featurize(features_dir, load_dir, model_dir):
 
 def find_files(model_dir):
 
+	print(model_dir)
+	jsonfiles=list()
 	if model_dir == 'audio_models':
 		listdir=os.listdir()
+		print(listdir)
+		time.sleep(5)
 		for i in range(len(listdir)):
 			jsonfile=listdir[i][0:-4]+'.json'
 			if listdir[i].endswith('.wav') and jsonfile in listdir:
@@ -79,86 +84,95 @@ def find_files(model_dir):
 	else:
 		jsonfiles=[]
 
+	print(jsonfiles)
 	return jsonfiles
 
-def make_prediction(transformer, clf, modeltype, jsonfiles):
+def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default_features):
 	'''
 	get the metrics associated iwth a classification and regression problem
 	and output a .JSON file with the training session.
 	'''
+	sampletype=sampletype.split('_')[0]
 
 	for k in range(len(jsonfiles)):
+		try:
+			g=json.load(open(jsonfiles[k]))
+			print(sampletype)
+			print(g)
+			features=g['features'][sampletype][default_features[0]]['features']
+			print(transformer)
+			if transformer != '':
+				features=np.array(transformer.transform(features)).reshape(1, -1)
+			else:
+				features=np.array(features).reshape(1,-1)
+			print(features)
+			metrics_=dict()
 
-		g=json.load(open(jsonfiles[k]))
+			if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
+				y_pred=clf.predict(features)
 
-		metrics_=dict()
-		y_true=y_test
+			elif modeltype=='alphapy':
+				# go to the right folder 
+				curdir=os.getcwd()
+				print(os.listdir())
+				os.chdir(common_name+'_alphapy_session')
+				alphapy_dir=os.getcwd()
+				os.chdir('input')
+				os.rename('test.csv', 'predict.csv')
+				os.chdir(alphapy_dir)
+				os.system('alphapy --predict')
+				os.chdir('output')
+				listdir=os.listdir()
+				for k in range(len(listdir)):
+					if listdir[k].startswith('predictions'):
+						csvfile=listdir[k]
+				y_pred=pd.read_csv(csvfile)['prediction']
+				os.chdir(curdir)
 
-		if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
-			y_pred=clf.predict(features)
+			elif modeltype == 'autogluon':
+				from autogluon import TabularPrediction as task
+				test_data=test_data.drop(labels=['class'],axis=1)
+				y_pred=clf.predict(test_data)
 
-		elif modeltype=='alphapy':
-			# go to the right folder 
-			curdir=os.getcwd()
-			print(os.listdir())
-			os.chdir(common_name+'_alphapy_session')
-			alphapy_dir=os.getcwd()
-			os.chdir('input')
-			os.rename('test.csv', 'predict.csv')
-			os.chdir(alphapy_dir)
-			os.system('alphapy --predict')
-			os.chdir('output')
-			listdir=os.listdir()
-			for k in range(len(listdir)):
-				if listdir[k].startswith('predictions'):
-					csvfile=listdir[k]
-			y_pred=pd.read_csv(csvfile)['prediction']
-			os.chdir(curdir)
+			elif modeltype == 'autokeras':
+				y_pred=clf.predict(features).flatten()
 
-		elif modeltpe == 'autogluon':
-			from autogluon import TabularPrediction as task
-			test_data=test_data.drop(labels=['class'],axis=1)
-			y_pred=clf.predict(test_data)
+			elif modeltype == 'autopytorch':
+				y_pred=clf.predict(features).flatten()
 
-		elif modeltype == 'autokeras':
-			y_pred=clf.predict(features).flatten()
+			elif modeltype == 'atm':
+				curdir=os.getcwd()
+				os.chdir('atm_temp')
+				data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+				y_pred = clf.predict(data)
+				os.chdir(curdir)
 
-		elif modeltype == 'autopytorch':
-			y_pred=clf.predict(features).flatten()
+			elif modeltype == 'ludwig':
+				data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+				pred=clf.predict(data)['class__predictions']
+				y_pred=np.array(list(pred), dtype=np.int64)
 
-		elif modeltype == 'atm':
-			curdir=os.getcwd()
-			os.chdir('atm_temp')
-			data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
-			y_pred = clf.predict(data)
-			os.chdir(curdir)
+			elif modeltype== 'devol':
+				features=features.reshape(features.shape+ (1,)+ (1,))
+				y_pred=clf.predict_classes(features).flatten()
 
-		elif modeltype == 'ludwig':
-			data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
-			pred=clf.predict(data)['class__predictions']
-			y_pred=np.array(list(pred), dtype=np.int64)
+			elif modeltype=='keras':
+				if mtype == 'c':
+				    y_pred=clf.predict_classes(features).flatten()
+				elif mtype == 'r':
+					y_pred=clf.predict(feaures).flatten()
 
-		elif modeltype== 'devol':
-			features=features.reshape(features.shape+ (1,)+ (1,))
-			y_pred=clf.predict_classes(features).flatten()
+			elif modeltype =='neuraxle':
+				y_pred=clf.transform(features)
 
-		elif modeltype ='keras':
-			if mtype == 'c':
-			    y_pred=clf.predict_classes(features).flatten()
-			elif mtype == 'r':
-				y_pred=clf.predict(feaures).flatten()
-
-		elif modeltype =='neuraxle':
-			y_pred=clf.transform(features)
-
-		elif modeltype=='safe':
-			# have to make into a pandas dataframe
-			test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
-			y_pred=clf.predict(test_data)
-
-		# update model in schema
-
-	return y_pred
+			elif modeltype=='safe':
+				# have to make into a pandas dataframe
+				test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
+				y_pred=clf.predict(test_data)
+				# update model in schema
+			print(y_pred)
+		except:
+			print('error %s'%(modeltype.upper()))
 
 def load_model(folder_name):
 
@@ -167,18 +181,21 @@ def load_model(folder_name):
 	# load in a transform if necessary
 	if listdir[i].endswith('transform.pickle') in listdir:
 		transform_=open(listdir[i],'rb')
-		transform=pickle.load(transform_name)
+		transformer=pickle.load(transform_name)
 		transform_.close()
 	else:
-		transform=''
+		transformer=''
 
 	jsonfile=open(folder_name+'.json')
-	g=json.load()
+	g=json.load(jsonfile)
 	jsonfile.close()
 
 	# get model name
-	model_name=g['model name']
-	model_type=g['model type']
+	modelname=g['model name']
+	model_type=modelname.split('_')[1].split('.')[0]
+	print(model_type)
+	time.sleep(5)
+	# g['model type']
 
 	# load model for getting metrics
 	if model_type not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig', 'keras', 'devol']:
@@ -204,7 +221,7 @@ def load_model(folder_name):
 	else: 
 		clf=''
 
-	return transformer, clf, modeltype
+	return transformer, clf, model_type
 
 def find_models():
 
@@ -256,14 +273,18 @@ settings=json.load(open('settings.json'))
 
 # get the base audio, text, image, and video features from required models
 default_audio_features=settings['default_audio_features']
-default_text_features=settings['defualt_text_features']
+default_text_features=settings['default_text_features']
 default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
 default_csv_features=settings['default_csv_features']
 
 features_dir=basedir+'/features'
 model_dir=basedir+'/models'
-load_dir=basedir+'/load_dir'
+
+try:
+	load_dir=sys.argv[1]
+except:
+	load_dir=basedir+'/load_dir'
 
 # find all machine learning models
 os.chdir(model_dir)
@@ -272,16 +293,40 @@ model_dirs=list(models)
 
 # now that we have all the models we can begin to load all of them 
 for i in range(len(model_dirs)):
+	print('-----------------------')
+	print('FEATURIZING %s'%(model_dirs[i].upper()))
+	print('-----------------------')
 	featurize(features_dir, load_dir, model_dirs[i])
 
 # now model everything
 for i in range(len(model_dirs)):
+	print('-----------------------')
+	print('MODELING %s'%(model_dirs[i].upper()))
+	print('-----------------------')
 	os.chdir(model_dir)
 	os.chdir(model_dirs[i])
 	models_=models[model_dirs[i]]
+
+	# get default features
+	if model_dirs[i] == 'audio_models':
+		default_features=default_audio_features
+	elif model_dirs[i] == 'text_models':
+		default_features=default_text_features
+	elif model_dirs[i] == 'image_models':
+		default_features == default_image_features
+	elif model_dirs[i] == 'video_models':
+		default_features == default_video_features
+	elif model_dirs[i] == 'csv_models':
+		default_features == default_csv_features
+
+	# loop through models
 	for j in range(len(models_)):
+		os.chdir(model_dir)
+		os.chdir(model_dirs[i])
+		print('--> predicting %s'%(models_[j]))
 		os.chdir(models_[j])
 		os.chdir('model')
 		transformer, clf, modeltype = load_model(models_[j])
+		os.chdir(load_dir)
 		jsonfiles=find_files(model_dirs[i])
-		make_prediction(transformer, clf, modeltype, jsonfiles)
+		make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, default_features)

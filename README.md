@@ -18,6 +18,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ### ongoing 
 
+- add in single model prediction mode in ./load.py script (-audio (sampletype) -c_autokeras (folder) -directory)
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)

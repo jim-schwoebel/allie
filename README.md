@@ -18,8 +18,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ### ongoing 
 
-- add in all model loaders from the model trainers 
-- fix bugs associated with model loading with different model types (may require different configurations)
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
@@ -30,8 +28,10 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 - documentation of the repository / jupyter notebooks with examples in research paper 
 - Create nice CLI interface for all of Allie's functionality using OptionParser()
+- fix bugs associated with model loading with different model types (may require different configurations)
 
 ### recently completed
+- add in all model loaders from the model trainers 
 - fixed cvopt and autokaggle training script bugs
 - added in the ability to quickly visualize ML models trained in a spreadhseet with the [model2csv.py script](https://github.com/jim-schwoebel/allie/blob/master/models/model2csv.py)
 - minor bug fixes associated with transcription during featurization for audio, image, video, and .CSV files

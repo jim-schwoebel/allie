@@ -16,6 +16,12 @@ python3 model.py
 
 You then will be asked a few questions regarding the training process (in terms of data type, number of classes, and the name of the model). Note that --> indicates typed responses. 
 
+### regression model example 
+For regression model training, you need to insert a .CSV file for training. You can then specify the target classes here from the spreadsheet and the models will then be trained with the specified model trainers.
+
+### classification model example 
+You can take in any list of files in folders for classification problems. 
+
 ```
 what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)
 --> 1

@@ -24,12 +24,12 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
 - tie new datasets with SurveyLex product / CLI interface with downloads
 - make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
-- Add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
 - add new test cases into Allie / make tests work with new framework
 - enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 - documentation of the repository / jupyter notebooks with examples in research paper 
 - Create nice CLI interface for all of Allie's functionality using OptionParser()
 - fix bugs associated with model loading with different model types (may require different configurations)
+- add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
 
 ### recently completed
 - add in all model loaders from the model trainers 

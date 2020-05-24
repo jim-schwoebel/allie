@@ -31,7 +31,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - fix bugs associated with model loading with different model types (may require different configurations)
 - add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
 
-### recently completed
+### recently completed (version 1.0.0 release)
 - add in all model loaders from the model trainers 
 - fixed cvopt and autokaggle training script bugs
 - added in the ability to quickly visualize ML models trained in a spreadhseet with the [model2csv.py script](https://github.com/jim-schwoebel/allie/blob/master/models/model2csv.py)

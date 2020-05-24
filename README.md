@@ -43,6 +43,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in deepspeech functionality to transcription for open source (and other open source audio transcribers)
 - add in transcriber settings as a list ['pocketsphinx', 'deepspeech', 'google', 'aws'], etc.
 - added in transcribers as lists (can be adapted into future)
+- created a version 2 trainer for machine learning models (as part of Allie release 1.0.0)
 
 ## getting started 
 

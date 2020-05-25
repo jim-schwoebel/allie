@@ -26,12 +26,19 @@ female = second class [via N number of classes]
 ###############################################################
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
-import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime
+import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime, uuid
+import pandas as pd
 import matplotlib.pyplot as plt
 
 ###############################################################
 ##               CREATE HELPER FUNCTIONS                     ##
 ###############################################################
+
+def most_common(lst):
+	'''
+	get most common item in a list
+	'''
+	return max(set(lst), key=lst.count)
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -80,7 +87,7 @@ def classifyfolder(listdir):
 	maxind=countvalues.index(maxvalue)
 	return countlist[maxind]
 
-def convert_csv(X_train, y_train, labels):
+def convert_csv(X_train, y_train, labels, mtype, classes):
 	'''
 	Take in a array of features and labels and output a 
 	pandas DataFrame format for easy .CSV expor and for model training.
@@ -102,7 +109,16 @@ def convert_csv(X_train, y_train, labels):
 				data[feature_list[j]]=[X_train[i][j]]
 				# print(data)
 
-	data['class_']=y_train
+	if mtype == 'c':
+		data['class_']=y_train
+	elif mtype == 'r':
+		y_train=np.array(y_train)
+		print(y_train.shape)
+		for i in range(len(classes)):
+			data[classes[i]]=list(y_train[:,i])
+
+	print(data)
+
 	data=pd.DataFrame(data, columns = list(data))
 	# print this because in pretty much every case you will write the .CSV file afterwards
 	print('writing csv file...')
@@ -385,72 +401,160 @@ try:
 		classes.append(sys.argv[i+4])
 except:
 	# now ask user what type of problem they are trying to solve 
-	problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
-	while problemtype not in ['1','2','3','4','5']:
-		print('answer not recognized...')
-		problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
-
-	if problemtype=='1':
-		problemtype='audio'
-	elif problemtype=='2':
-		problemtype='text'
-	elif problemtype=='3':
-		problemtype='image'
-	elif problemtype=='4':
-		problemtype='video'
-	elif problemtype=='5':
-		problemtype='csv'
-
-	print('\n OK cool, we got you modeling %s files \n'%(problemtype))
-	count=0
-	availableclasses=list()
-	for i in range(len(folders)):
-		if data[folders[i]]==problemtype:
-			availableclasses.append(folders[i])
-			count=count+1
-
-	classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
-	print('these are the available classes: ')
-	print(availableclasses)
-	# get all if all (good for many classes)
-	classes=list()
-	if classnum=='all':
-		for i in range(len(availableclasses)):
-			classes.append(availableclasses[i])
-	else:
-				
-		stillavailable=list()
-		for i in range(int(classnum)):
-			class_=input('what is class #%s \n'%(str(i+1)))
-
-			while class_ not in availableclasses and class_ not in '' or class_ in classes:
-				print('\n')
-				print('------------------ERROR------------------')
-				print('the input class does not exist (for %s files).'%(problemtype))
-				print('these are the available classes: ')
-				if len(stillavailable)==0:
-					print(availableclasses)
-				else:
-					print(stillavailable)
-				print('------------------------------------')
-				class_=input('what is class #%s \n'%(str(i+1)))
-			for j in range(len(availableclasses)):
-				stillavailable=list()
-				if availableclasses[j] not in classes:
-					stillavailable.append(availableclasses[j])
-			if class_ == '':
-				class_=stillavailable[0]
-
-			classes.append(class_)
-
-	common_name=input('what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) \n')
 	mtype=input('is this a classification (c) or regression (r) problem? \n')
 	while mtype not in ['c','r']:
 		print('input not recognized...')
 		mtype=input('is this a classification (c) or regression (r) problem? \n')
 
-# print(problemtype)
-# time.sleep(10)
+	if mtype == 'c':
+		problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
+		while problemtype not in ['1','2','3','4','5']:
+			print('answer not recognized...')
+			problemtype=input('what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)\n')
+
+		if problemtype=='1':
+			problemtype='audio'
+		elif problemtype=='2':
+			problemtype='text'
+		elif problemtype=='3':
+			problemtype='image'
+		elif problemtype=='4':
+			problemtype='video'
+		elif problemtype=='5':
+			problemtype='csv'
+
+		print('\n OK cool, we got you modeling %s files \n'%(problemtype))
+		count=0
+		availableclasses=list()
+		for i in range(len(folders)):
+			if data[folders[i]]==problemtype:
+				availableclasses.append(folders[i])
+				count=count+1
+
+		classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
+		print('these are the available classes: ')
+		print(availableclasses)
+		# get all if all (good for many classes)
+		classes=list()
+		if classnum=='all':
+			for i in range(len(availableclasses)):
+				classes.append(availableclasses[i])
+		else:
+					
+			stillavailable=list()
+			for i in range(int(classnum)):
+				class_=input('what is class #%s \n'%(str(i+1)))
+
+				while class_ not in availableclasses and class_ not in '' or class_ in classes:
+					print('\n')
+					print('------------------ERROR------------------')
+					print('the input class does not exist (for %s files).'%(problemtype))
+					print('these are the available classes: ')
+					if len(stillavailable)==0:
+						print(availableclasses)
+					else:
+						print(stillavailable)
+					print('------------------------------------')
+					class_=input('what is class #%s \n'%(str(i+1)))
+				for j in range(len(availableclasses)):
+					stillavailable=list()
+					if availableclasses[j] not in classes:
+						stillavailable.append(availableclasses[j])
+				if class_ == '':
+					class_=stillavailable[0]
+
+				classes.append(class_)
+
+	elif mtype =='r':
+		# for regression problems we need a target column to predict / classes from a .CSV 
+		problemtype='csv'
+		# assumes the .CSV file is in the train dir
+		os.chdir(prevdir+'/train_dir')
+		listdir=os.listdir()
+		csvfiles=list()
+		for i in range(len(listdir)):
+			if listdir[i].endswith('.csv'):
+				csvfiles.append(listdir[i])
+
+		csvfile=input('what is the name of the spreadsheet (in ./train_dir) used for prediction? \n\n available: %s\n\n'%(str(csvfiles)))
+		while csvfile not in csvfiles:
+			print('answer not recognized...')
+			csvfile=input('what is the name of the spreadsheet (in ./train_dir) used for prediction? \n\n available: %s\n\n'%(str(csvfiles)))
+
+		# the available classes are only the numeric columns from the spreadsheet
+		data = pd.read_csv(csvfile)
+		columns = list(data)
+		availableclasses=list()
+
+		for i in range(len(columns)):
+			# look at filetype extension in each column
+			coldata=data[columns[i]]
+			sampletypes=list()
+			for j in range(len(coldata)):
+				try:
+					values=float(coldata[j])
+					sampletypes.append('numerical')
+				except:
+					if coldata[j].endswith('.wav'):
+						sampletypes.append('audio')
+					elif coldata[j].endswith('.txt'):
+						sampletypes.append('text')
+					elif coldata[j].endswith('.png'):
+						sampletypes.append('image')
+					elif coldata[j].endswith('.mp4'):
+						sampletypes.append('video')
+					else:
+						sampletypes.append('other')
+
+			coltype=most_common(sampletypes)
+
+			# correct the other category if needed
+			if coltype == 'other':
+				# if coltype.endswith('.csv'):
+					# coltype='csv'
+				if len(set(list(coldata))) < 10:
+					coltype='categorical'
+				else:
+					# if less than 5 unique answers then we can interpret this as text input
+					coltype='typedtext'
+
+			if coltype == 'numerical':
+				availableclasses.append(columns[i])
+
+		if len(availableclasses) > 0:
+			classnum=input('how many classes would you like to model? (%s available) \n'%(str(len(availableclasses))))
+			print('these are the available classes: %s'%(str(availableclasses)))
+
+			classes=list()	
+			stillavailable=list()
+			for i in range(int(classnum)):
+				class_=input('what is class #%s \n'%(str(i+1)))
+
+				while class_ not in availableclasses and class_ not in '' or class_ in classes:
+					print('\n')
+					print('------------------ERROR------------------')
+					print('the input class does not exist (for %s files).'%(problemtype))
+					print('these are the available classes: ')
+					if len(stillavailable)==0:
+						print(availableclasses)
+					else:
+						print(stillavailable)
+					print('------------------------------------')
+					class_=input('what is class #%s \n'%(str(i+1)))
+				for j in range(len(availableclasses)):
+					stillavailable=list()
+					if availableclasses[j] not in classes:
+						stillavailable.append(availableclasses[j])
+				if class_ == '':
+					class_=stillavailable[0]
+
+				classes.append(class_)
+
+		else:
+			print('no classes available... ending session')
+			sys.exit()
+
+	common_name=input('what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) \n')
 
 ###############################################################
 ##      	      UPGRADE MODULES / LOAD MODULES             ##
@@ -459,7 +563,7 @@ except:
 print('-----------------------------------')
 print('          LOADING MODULES          ')
 print('-----------------------------------')
-
+# upgrade to have the proper scikit-learn version later
 os.chdir(cur_dir)
 os.system('python3 upgrade.py')
 import pandas as pd
@@ -475,7 +579,8 @@ from sklearn.metrics import roc_curve
 clean_data=settings['clean_data']
 clean_dir=prevdir+'/datasets/cleaning'
 
-if clean_data == True:
+if clean_data == True and mtype == 'c':
+	# only pursue augmentation strategies on directories of files and classification problems
 	print('-----------------------------------')
 	print('            CLEANING DATA          ')
 	print('-----------------------------------')
@@ -489,7 +594,8 @@ if clean_data == True:
 augment_data=settings['augment_data']
 augment_dir=prevdir+'/datasets/augmentation'
 
-if augment_data == True:
+if augment_data == True and mtype == 'c':
+	# only pursue augmentation strategies on directories of files and classification problems
 	print('-----------------------------------')
 	print('            AUGMENTING DATA          ')
 	print('-----------------------------------')
@@ -502,57 +608,65 @@ if augment_data == True:
 ###############################################################
 
 # now featurize each class (in proper folder)
-data={}
-for i in range(len(classes)):
-	class_type=classes[i]
-	if problemtype == 'audio':
-		# featurize audio 
-		os.chdir(prevdir+'/features/audio_features')
-		default_features=default_audio_features
-	elif problemtype == 'text':
-		# featurize text
-		os.chdir(prevdir+'/features/text_features')
-		default_features=default_text_features
-	elif problemtype == 'image':
-		# featurize images
-		os.chdir(prevdir+'/features/image_features')
-		default_features=default_image_features
-	elif problemtype == 'video':
-		# featurize video 
-		os.chdir(prevdir+'/features/video_features')
-		default_features=default_video_features
-	elif problemtype == 'csv':
-		# featurize .CSV 
-		os.chdir(prevdir+'/features/csv_features')
-		default_features=default_csv_features
+if mtype == 'c':
+	data={}
+	for i in range(len(classes)):
+		class_type=classes[i]
+		if problemtype == 'audio':
+			# featurize audio 
+			os.chdir(prevdir+'/features/audio_features')
+			default_features=default_audio_features
+		elif problemtype == 'text':
+			# featurize text
+			os.chdir(prevdir+'/features/text_features')
+			default_features=default_text_features
+		elif problemtype == 'image':
+			# featurize images
+			os.chdir(prevdir+'/features/image_features')
+			default_features=default_image_features
+		elif problemtype == 'video':
+			# featurize video 
+			os.chdir(prevdir+'/features/video_features')
+			default_features=default_video_features
+		elif problemtype == 'csv':
+			# featurize .CSV 
+			os.chdir(prevdir+'/features/csv_features')
+			default_features=default_csv_features
 
-	print('-----------------------------------')
-	print('           FEATURIZING %s'%(classes[i].upper()))
-	print('-----------------------------------')
-	
-	os.system('python3 featurize.py %s'%(data_dir+'/'+classes[i]))
-	os.chdir(data_dir+'/'+classes[i])
-	# load audio features 
-	listdir=os.listdir()
-	feature_list=list()
-	label_list=list()
-	for j in range(len(listdir)):
-		if listdir[j][-5:]=='.json':
-			try:
-				g=json.load(open(listdir[j]))
-				# consolidate all features into one array (if featurizing with multiple featurizers)
-				default_feature=list()
-				default_label=list()
-				for k in range(len(default_features)):
-					default_feature=default_feature+g['features'][problemtype][default_features[k]]['features']
-					default_label=default_label+g['features'][problemtype][default_features[k]]['labels']
+		print('-----------------------------------')
+		print('           FEATURIZING %s'%(classes[i].upper()))
+		print('-----------------------------------')
+		
+		os.system('python3 featurize.py %s'%(data_dir+'/'+classes[i]))
+		os.chdir(data_dir+'/'+classes[i])
+		# load audio features 
+		listdir=os.listdir()
+		feature_list=list()
+		label_list=list()
+		for j in range(len(listdir)):
+			if listdir[j][-5:]=='.json':
+				try:
+					g=json.load(open(listdir[j]))
+					# consolidate all features into one array (if featurizing with multiple featurizers)
+					default_feature=list()
+					default_label=list()
+					for k in range(len(default_features)):
+						default_feature=default_feature+g['features'][problemtype][default_features[k]]['features']
+						default_label=default_label+g['features'][problemtype][default_features[k]]['labels']
 
-				feature_list.append(default_feature)
-				label_list.append(default_label)
-			except:
-				print('ERROR - skipping ' + listdir[j])
-	
-	data[class_type]=feature_list
+					feature_list.append(default_feature)
+					label_list.append(default_label)
+				except:
+					print('ERROR - skipping ' + listdir[j])
+		
+		data[class_type]=feature_list
+elif mtype == 'r':
+	# featurize .CSV 
+	os.chdir(prevdir+'/features/csv_features')
+	output_file=str(uuid.uuid1())+'.csv'
+	os.system('python3 featurize_csv_regression.py --input %s --output %s'%(prevdir+'/train_dir/'+csvfile, prevdir+'/train_dir/'+output_file))
+	csvfile=output_file
+	default_features=['csv_regression']
 
 ###############################################################
 ##                  GENERATE TRAINING DATA                   ##
@@ -560,63 +674,92 @@ for i in range(len(classes)):
 
 # perform class balance such that both classes have the same number
 # of members (true by default, but can also be false)
-
 os.chdir(prevdir+'/training/')
 model_dir=prevdir+'/models'
 balance=settings['balance_data']
 
-jsonfile=''
-for i in range(len(classes)):
-	if i==0:
-		jsonfile=classes[i]
-	else:
-		jsonfile=jsonfile+'_'+classes[i]
+if mtype == 'c':
+	jsonfile=''
+	for i in range(len(classes)):
+		if i==0:
+			jsonfile=classes[i]
+		else:
+			jsonfile=jsonfile+'_'+classes[i]
 
-jsonfile=jsonfile+'.json'
+	jsonfile=jsonfile+'.json'
 
-#try:
-g=data
-alldata=list()
-labels=list()
-lengths=list()
+	#try:
+	g=data
+	alldata=list()
+	labels=list()
+	lengths=list()
 
-# check to see all classes are same length and reshape if necessary
-for i in range(len(classes)):
-	class_=g[classes[i]]
-	lengths.append(len(class_))
+	# check to see all classes are same length and reshape if necessary
+	for i in range(len(classes)):
+		class_=g[classes[i]]
+		lengths.append(len(class_))
 
-lengths=np.array(lengths)
-minlength=np.amin(lengths)
+	lengths=np.array(lengths)
+	minlength=np.amin(lengths)
 
-# now load all the classes
-for i in range(len(classes)):
-	class_=g[classes[i]]
-	random.shuffle(class_)
+	# now load all the classes
+	for i in range(len(classes)):
+		class_=g[classes[i]]
+		random.shuffle(class_)
 
-	# only balance if specified in settings
-	if balance==True:
-		if len(class_) > minlength:
-			print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
-			class_=class_[0:minlength]
+		# only balance if specified in settings
+		if balance==True:
+			if len(class_) > minlength:
+				print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
+				class_=class_[0:minlength]
 
-	for j in range(len(class_)):
-		alldata.append(class_[j])
-		labels.append(i)
+		for j in range(len(class_)):
+			alldata.append(class_[j])
+			labels.append(i)
 
-# load features file and get feature labels by loading in classes
-labels_dir=prevdir+'/train_dir/'+classes[0]
-os.chdir(labels_dir)
-listdir=os.listdir()
-features_file=''
-for i in range(len(listdir)):
-	if listdir[i].endswith('.json'):
-		features_file=listdir[i]
+	# load features file and get feature labels by loading in classes
+	labels_dir=prevdir+'/train_dir/'+classes[0]
+	os.chdir(labels_dir)
+	listdir=os.listdir()
+	features_file=''
+	for i in range(len(listdir)):
+		if listdir[i].endswith('.json'):
+			features_file=listdir[i]
 
-labels_=list()
+	labels_=list()
 
-for i in range(len(default_features)):
-	tlabel=json.load(open(features_file))['features'][problemtype][default_features[i]]['labels']
-	labels_=labels_+tlabel
+	for i in range(len(default_features)):
+		tlabel=json.load(open(features_file))['features'][problemtype][default_features[i]]['labels']
+		labels_=labels_+tlabel
+
+elif mtype == 'r':
+	regression_data=pd.read_csv(prevdir+'/train_dir/'+csvfile)
+	print(csvfile)
+	# get features and labels
+	features_=regression_data.drop(columns=classes, axis=1)
+	labels_=list(features_)
+	labels_csv=regression_data.drop(columns=list(features_), axis=1)
+	# iterate through each column and make into proper features and labels
+	features=list()
+	labels=list()
+
+	# testing
+	# print(len(features_))
+	# print(len(labels_))
+	# print(features_)
+	# print(labels_)
+	# print(features_.iloc[0,:])
+	# print(labels_.iloc[0,:])
+
+	# get features and labels 
+	for i in range(len(features_)):
+		features.append(list(features_.iloc[i,:]))
+		labels.append(list(labels_csv.iloc[i,:]))
+
+	# convert to name alldata just to be consistent
+	alldata=features
+	# print(alldata[0])
+	# print(labels[0])
 
 # print(labels_)
 os.chdir(model_dir)
@@ -642,17 +785,17 @@ created_csv_files=list()
 # create training and testing datasets and save to a .CSV file for archive purposes
 # this ensures that all machine learning training methods use the same training data
 basefile=common_name
-try:
-	print(basefile+'_all.csv'.upper())
-	all_data = convert_csv(alldata, labels, labels_)
-	all_data.to_csv(basefile+'_all.csv',index=False)
-	created_csv_files.append(basefile+'_all.csv')
-except:
-	print('error exporting data into excel sheet %s'%(basefile+'_all.csv'))
+# try:
+print(basefile+'_all.csv'.upper())
+all_data = convert_csv(alldata, labels, labels_, mtype, classes)
+all_data.to_csv(basefile+'_all.csv',index=False)
+created_csv_files.append(basefile+'_all.csv')
+# except:
+	# print('error exporting data into excel sheet %s'%(basefile+'_all.csv'))
 
 try:
 	print(basefile+'_train.csv'.upper())
-	train_data= convert_csv(X_train, y_train, labels_)
+	train_data= convert_csv(X_train, y_train, labels_, mtype, classes)
 	train_data.to_csv(basefile+'_train.csv',index=False)
 	created_csv_files.append(basefile+'_train.csv')
 except:
@@ -660,7 +803,7 @@ except:
 
 try:
 	print(basefile+'_test.csv'.upper())
-	test_data= convert_csv(X_test, y_test, labels_)
+	test_data= convert_csv(X_test, y_test, labels_, mtype, classes)
 	test_data.to_csv(basefile+'_test.csv',index=False)
 	created_csv_files.append(basefile+'_test.csv')
 except:
@@ -691,7 +834,11 @@ for i in range(len(classes)):
 	transform_command=transform_command+' '+classes[i]
 
 # get filename / create a unique file name
-t_filename=problemtype
+if mtype=='r':
+	t_filename=''
+elif mtype=='c':
+	t_filename=problemtype
+	
 for i in range(len(classes)):
 	t_filename=t_filename+'_'+classes[i]
 # only add names in if True 
@@ -704,7 +851,10 @@ if reduce_dimensions == True:
 if select_features == True:
 	for i in range(len(default_selectors)):
 		t_filename=t_filename+'_'+default_selectors[i]
-	
+
+if mtype=='r':
+	t_filename=t_filename[1:]
+
 transform_file=t_filename+'.pickle'
 
 if scale_features == True or reduce_dimensions == True or select_features == True:
@@ -725,12 +875,21 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 	else:
 		print('making transformer...')
 		os.chdir(preprocess_dir)
-		print('python3 transform.py %s %s'%(problemtype, transform_command))
-		os.system('python3 transform.py %s %s'%(problemtype, transform_command))
-		os.chdir(problemtype+'_transformer')
-		transform_model=pickle.load(open(transform_file,'rb'))
-		alldata=transform_model.transform(alldata)
-	
+		if mtype == 'c':
+			print('python3 transform.py %s %s %s'%(problemtype, 'c', transform_command))
+			os.system('python3 transform.py %s %s %s'%(problemtype, 'c', transform_command))
+			os.chdir(problemtype+'_transformer')
+			transform_model=pickle.load(open(transform_file,'rb'))
+			alldata=transform_model.transform(alldata)
+		elif mtype == 'r':
+			command='python3 transform.py %s %s %s %s %s'%('csv', 'r', classes[0], csvfile, prevdir+'/train_dir/')
+			print(command)
+			os.system(command)
+			os.chdir(problemtype+'_transformer')
+			transform_model=pickle.load(open(transform_file,'rb'))
+			alldata=transform_model.transform(alldata)
+
+
 	os.chdir(preprocess_dir)
 	os.system('python3 load_transformer.py %s %s'%(problemtype, transform_file))
 
@@ -756,14 +915,14 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 	# now create transformed excel sheets
 	try:
 		print(basefile+'_all_transformed.csv'.upper())
-		all_data = convert_csv(alldata, labels, labels_)
+		all_data = convert_csv(alldata, labels, labels_, mtype, classes)
 		all_data.to_csv(basefile+'_all_transformed.csv',index=False)
 		created_csv_files.append(basefile+'_all_transformed.csv')
 	except:
 		print('error exporting data into excel sheet %s'%(basefile+'_all_transformed.csv'))
 	try:
 		print(basefile+'_train_transformed.csv'.upper())
-		train_data= convert_csv(X_train, y_train, labels_)
+		train_data= convert_csv(X_train, y_train, labels_, mtype, classes)
 		train_data.to_csv(basefile+'_train_transformed.csv',index=False)
 		created_csv_files.append(basefile+'_train_transformed.csv')
 	except:
@@ -771,7 +930,7 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 
 	try:
 		print(basefile+'_test_transformed.csv'.upper())
-		test_data= convert_csv(X_test, y_test, labels_)
+		test_data= convert_csv(X_test, y_test, labels_, mtype, classes)
 		test_data.to_csv(basefile+'_test_transformed.csv',index=False)
 		created_csv_files.append(basefile+'_test_transformed.csv')
 	except:
@@ -1040,7 +1199,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 
 	# dump transform model to the models directory if necessary
 	if transform_model == '':
-		pass
+		transformer_name=''
 	else:
 		# dump the tranform model into the current working directory
 		transformer_name=modelname.split('.')[0]+'_transform.pickle'

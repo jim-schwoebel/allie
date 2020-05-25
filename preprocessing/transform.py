@@ -12,6 +12,7 @@ import json, os, sys
 os.system('pip3 install scikit-learn==0.22.2.post1')
 import numpy as np 
 from sklearn import preprocessing
+import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
@@ -42,7 +43,7 @@ def prev_dir(directory):
 	return dir_
 
 def get_classes():
-	count=2
+	count=3
 	classes=list()
 	while True:
 		try:
@@ -141,20 +142,38 @@ os.chdir(basedir)
 curdir=os.getcwd()
 basedir=prev_dir(curdir)
 os.chdir(basedir+'/train_dir')
-problem_type=sys.argv[1]
+problem_type=sys.argv[1] #audio, text, image, video, csv
+train_type=sys.argv[2] #c = classification, r=regression
 
-classes=get_classes()
-features, feature_labels, class_labels = get_features(classes, problem_type, settings)
-X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
+if train_type == 'c':
+	classes=get_classes()
+	features, feature_labels, class_labels = get_features(classes, problem_type, settings)
+	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
+	print(features[0])
+	print(feature_labels[1])
+	print(class_labels[0])
 
-print(features[0])
-print(feature_labels[1])
-print(class_labels[0])
+elif train_type == 'r':
+	# only 1 class here 
+	target=[sys.argv[3]]
+	spreadsheet=sys.argv[4]
+	spreadsheet_dir=sys.argv[5]
+	os.chdir(spreadsheet_dir)
+	data=pd.read_csv(spreadsheet)
+	features=np.array(data.drop(columns=target, axis=1))
+	feature_labels=list(features)
+	class_labels=np.array(data.pop(target[0]))
 
-component_num=int(len(features[0])/3)
+	print(features)
+	print(feature_labels)
+	print(class_labels)
+
+	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 
 # create a scikit-learn pipeline
+component_num=int(len(features[0])/3)
 estimators = []
+os.chdir(basedir+'/train_dir')
 
 ################################################
 ##	    	    Scale features               ##
@@ -196,10 +215,11 @@ model=Pipeline(estimators)
 
 # make all train and test data into binary labels
 # https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
-le=preprocessing.LabelEncoder()
-le.fit(y_train)
-y_train=le.transform(y_train)
-y_test=le.transform(y_test)
+if train_type == 'c':
+	le=preprocessing.LabelEncoder()
+	le.fit(y_train)
+	y_train=le.transform(y_train)
+	y_test=le.transform(y_test)
 
 '''
 >>> le = preprocessing.LabelEncoder()
@@ -231,8 +251,11 @@ except:
 # get filename / create a unique file name
 filename=problem_type
 
-for i in range(len(classes)):
-	filename=filename+'_'+classes[i]
+if train_type == 'c':
+	for i in range(len(classes)):
+		filename=filename+'_'+classes[i]
+else:
+	filename=target[0]
 
 # only add names in if True 
 if scale_features == True:
@@ -255,19 +278,31 @@ pickle.dump(model, modelfile)
 modelfile.close()
 
 # save encoder (to decode classes into the future)
-modelfile=open(le_file,'wb')
-pickle.dump(le, modelfile)
-modelfile.close()
+if train_type == 'c':
+	modelfile=open(le_file,'wb')
+	pickle.dump(le, modelfile)
+	modelfile.close()
+
 
 # write json file 
-data={'estimators': str(estimators),
-	  'settings': settings,
-	  'classes': np.array(list(set(y_test))).tolist(),
-	  'sample input X': X_train[0],
-	  'sample input Y': int(y_train[0]),
-	  'sample transformed X': X_test[0].tolist(),
-	  'sample transformed y': int(y_train[0]),
-	 }
+if train_type=='c':
+	data={'estimators': str(estimators),
+		  'settings': settings,
+		  'classes': np.array(list(set(y_test))).tolist(),
+		  'sample input X': X_train[0],
+		  'sample input Y': int(y_train[0]),
+		  'sample transformed X': X_test[0].tolist(),
+		  'sample transformed y': int(y_train[0]),
+		 }
+else:
+	data={'estimators': str(estimators),
+		  'settings': settings,
+		  'classes': np.array(list(set(y_test))).tolist(),
+		  'sample input X': X_train[0].tolist(),
+		  'sample input Y': float(y_train[0]),
+		  'sample transformed X': X_test[0].tolist(),
+		  'sample transformed y': float(y_train[0]),
+		 }
 
 # for testing purposes
 # data_list=list(data)

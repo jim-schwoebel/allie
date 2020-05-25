@@ -17,6 +17,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
+-  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
@@ -30,7 +31,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
 
 ### recently completed (version 1.0.0 release)
-- come up with the ability to train regression models by a class and value --> {class: {value: value}} prediction / only allow for csv files for training
+- come up with the ability to train regression models by a class and value
 - add in single model prediction mode in ./load.py script (-audio (sampletype) -c_autokeras (folder) -directory)
 - add in all model loaders from the model trainers 
 - fixed cvopt and autokaggle training script bugs

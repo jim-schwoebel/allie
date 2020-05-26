@@ -10,6 +10,12 @@ Converting to csv
 python3 annotate2csv --directory {dirname}
 ```
 
+## Annotation 
+- Audio - sound_event_detection (can make this)
+- Text - No tool available
+- Image - https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5
+- Video - 
+
 ## Can now use for classification and/or regression
 
 ### classiifcation

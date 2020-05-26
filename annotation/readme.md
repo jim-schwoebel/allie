@@ -7,9 +7,13 @@ python3 annotate.py --directory {dirname} --sampletype {audio}
 Converting to csv
 
 ```
-python3 annotate2csv --directory {dirname}
+python3 annotate2csv.py --directory {dirname}
 ```
 
+Visualizing annotations
+```
+python3 avisualize.py --directory {dirname}
+```
 ## Annotation 
 - Audio - https://github.com/jim-schwoebel/sound_event_detection/tree/94da2fe402ef330e0b6dc9ed41b59b0902e67842 (audio frames, text transcription frames)
 - Text - https://github.com/doccano/doccano

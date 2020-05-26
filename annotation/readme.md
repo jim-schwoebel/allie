@@ -3,6 +3,13 @@
 ```python3
 python3 annotate.py --directory {dirname} --sampletype {audio}
 ```
+
+Converting to csv
+
+```
+python3 annotate2csv --directory {dirname}
+```
+
 ### things to do
 
 - add classnames (to Optparser)

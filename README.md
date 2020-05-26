@@ -21,11 +21,11 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - create single-file prediction mode (instead of folders)
 - create single-file featurization mode (instead of folders)
 - clean up datasets folder --> cleaning dir / augmentation dir (these can change to main directory tree), change labeling directory to annotation in main directory
+- tie new datasets with SurveyLex product / CLI interface with downloads
 -  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
-- tie new datasets with SurveyLex product / CLI interface with downloads
 - make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
 - add new test cases into Allie / make tests work with new framework
 - enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses

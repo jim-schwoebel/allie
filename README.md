@@ -36,7 +36,10 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - documentation of the repository / jupyter notebooks with examples in research paper 
 - Create nice CLI interface for all of Allie's functionality using OptionParser()
 - fix bugs associated with model loading with different model types (may require different configurations)
-- add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques 
+- add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques
+- add in augmentation policies into visualizer to show which augmentation methods work to increase AUC / MSE
+- add in cleaning policies into visualizer to show which cleaning methods work to increase AUC / MSE
+- add in both cleaning and augmentation policies (in combinatoric fashion) to show which combinations work best for AUC / MSE
 
 ### recently completed (version 1.0.0 release)
 - added annotate.py script to annotate files (beta version) - need to add to .JSON schema (in labels (regression)

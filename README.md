@@ -40,6 +40,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in augmentation policies into visualizer to show which augmentation methods work to increase AUC / MSE
 - add in cleaning policies into visualizer to show which cleaning methods work to increase AUC / MSE
 - add in both cleaning and augmentation policies (in combinatoric fashion) to show which combinations work best for AUC / MSE
+- use combinatoric policies to select optimal model from configurations (clean, augmentation, preprocessing techniques, etc.)
 
 ### recently completed (version 1.0.0 release)
 - added annotate.py script to annotate files (beta version) - need to add to .JSON schema (in labels (regression)

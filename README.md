@@ -17,6 +17,9 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
+- create single-file annotation mode (instead of folders)
+- create single-file prediction mode (instead of folders)
+- create single-file featurization mode (instead of folders)
 -  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
 - add in default_augmenters / get live into Allie
 - add in default_cleaners / get live into Allie 

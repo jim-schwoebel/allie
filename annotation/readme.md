@@ -10,6 +10,14 @@ Converting to csv
 python3 annotate2csv --directory {dirname}
 ```
 
+## Can now use for classification and/or regression
+
+### classiifcation
+Sort files into folders {A} or {B} or {C} in train_dir
+
+### regression
+Create .CSV spreadsheet useful for regression problems in train_dir (copy here)
+
 ### things to do
 - classification and/or regression problem (if regression, float, if classification, integer value)
 - add classnames (to Optparser)

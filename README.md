@@ -7,7 +7,7 @@ Here are some things that Allie can do:
 - featurize files and export data in .CSV format (via audio, text, image, video, or csv featurizers)
 - transform features (via NNI and scikit-learn preprocessing techniques)
 - create visualizations from featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
-- train machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
+- train machine learning models on classification and regression problems (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
 - make predictions from machine learning models (with all models trained in ./models directory)
 - prepare compressed machine learning models for deployment (including repositories with readmes)
 

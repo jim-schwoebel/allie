@@ -18,10 +18,12 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
+- clean up datasets folder --> cleaning dir / augmentation dir (these can change to main directory tree), change labeling directory to annotation in main directory
 - create single-file annotation mode (instead of folders)
 - create single-file prediction mode (instead of folders)
 - create single-file featurization mode (instead of folders)
-- clean up datasets folder --> cleaning dir / augmentation dir (these can change to main directory tree), change labeling directory to annotation in main directory
+- add single-file cleaning mode (instead of folders)
+- add single-file augmentation mode (instead of folders)
 - tie new datasets with SurveyLex product / CLI interface with downloads
 -  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
 - add in default_augmenters / get live into Allie

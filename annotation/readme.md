@@ -14,7 +14,7 @@ python3 annotate2csv --directory {dirname}
 - Audio - sound_event_detection (can make this)
 - Text - https://github.com/doccano/doccano
 - Image - https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5
-- Video - 
+- Video - https://github.com/ElbitSystems/AnnotationTool (audio, image(s), and text frames)
 
 ## Can now use for classification and/or regression
 

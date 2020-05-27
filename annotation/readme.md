@@ -15,6 +15,9 @@ Visualizing annotations
 python3 avisualize.py --directory {dirname}
 ```
 ## Annotation 
+
+timesplit
+
 - Audio - https://github.com/jim-schwoebel/sound_event_detection/tree/94da2fe402ef330e0b6dc9ed41b59b0902e67842 (audio frames, text transcription frames)
 - Text - https://github.com/doccano/doccano
 - Image - https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5

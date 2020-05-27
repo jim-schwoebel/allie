@@ -150,6 +150,7 @@ looking into actively
 
 tried but not user friendly
 * [Gammatone](https://github.com/detly/gammatone) - spectrograms of fixed lengths
+* [surfboard](https://github.com/novoic/surfboard) - GPL
 * [Shennong](https://github.com/bootphon/shennong) - using kaldi / post-processing
 * Ludwig audio features - add them in.
 * [pyspk](https://nbviewer.jupyter.org/github/r9y9/pysptk/blob/master/examples/pysptk%20introduction.ipynb) - Fundamental frequency estimation using pyspk (bottom)

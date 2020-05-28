@@ -136,6 +136,8 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Audio
 looking into actively
 * [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
+* [PyLoudNorm](https://github.com/csteinmetz1/pyloudnorm) - estimating loudness
+* [Pysptk](https://github.com/r9y9/pysptk) - Tokoyo based lab
 * [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [speechpy](https://github.com/astorfi/speechpy)
 * [sigfeat](https://github.com/SiggiGue/sigfeat)

@@ -25,7 +25,7 @@ timesplit
 
 ## Can now use for classification and/or regression
 
-### classiifcation
+### classification
 Sort files into folders {A} or {B} or {C} in train_dir
 
 ### regression

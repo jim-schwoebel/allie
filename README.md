@@ -55,7 +55,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in all model loaders from the model trainers 
 - fixed cvopt and autokaggle training script bugs
 - added in the ability to quickly visualize ML models trained in a spreadhseet with the [model2csv.py script](https://github.com/jim-schwoebel/allie/blob/master/models/model2csv.py)
-- minor bug fixes associated with transcription during featurization for audio, image, video, and .CSV files
+- bug fix - minor bug fixes associated with transcription during featurization for audio, image, video, and .CSV files
 - add notion of "tabular" data instead of .CSV to tie to audio, video, and image data (e.g. for loading datasets) - as laid out in the [d3m-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md#case-2) - did this in the [featurize_csv script](https://github.com/jim-schwoebel/allie/blob/master/train_dir/featurize_csv.py) where .CSV files can contain audio, text, image, video, numerical, and categorical data.
 - test and validate model compression works for all training scripts / can load compressed models and make predictions (w/ production)
 - finish up model trainers and clean them up with standard metrics for accuracy

@@ -478,6 +478,8 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 							transcript = transcript_list['audio'][default_audio_transcriber]
 						else:
 							transcript=''
+				else:
+					transcript=''
 					
 				# only re-featurize if necessary (checks if relevant feature embedding exists)
 				for j in range(len(feature_sets)):

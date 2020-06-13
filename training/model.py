@@ -953,7 +953,7 @@ visual_dir=prevdir+'/visualize'
 model_session=str(uuid.uuid4())
 os.chdir(visual_dir)
 
-if visualize_data == True:
+if visualize_data == True and mtype == 'c':
 	print('----------------------------------')
 	print('       VISUALIZING DATA           ')
 	print('----------------------------------')

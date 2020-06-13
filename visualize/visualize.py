@@ -132,10 +132,11 @@ def get_features(classes, problem_type, default_features, balance_data):
 				if class_labels.count(classes[i]) > minlength:
 					break 
 				else:
-					g=json.load(open(jsonfiles[j]))
-					feature_=list()
-					label_=list()
 					try:
+						g=json.load(open(jsonfiles[j]))
+						feature_=list()
+						label_=list()
+						
 						for k in range(len(feature_list)):
 							if feature_list[k] in default_features:
 								feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
@@ -150,10 +151,11 @@ def get_features(classes, problem_type, default_features, balance_data):
 						print('error loading feature embedding: %s'%(feature_list[k].upper()))
 
 			else:
-				g=json.load(open(jsonfiles[j]))
-				feature_=list()
-				label_=list()
 				try:
+					g=json.load(open(jsonfiles[j]))
+					feature_=list()
+					label_=list()
+				
 					for k in range(len(feature_list)):
 						if feature_list[k] in default_features:
 							feature_=feature_+g['features'][problem_type][feature_list[k]]['features']

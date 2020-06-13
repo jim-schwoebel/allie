@@ -335,7 +335,7 @@ Note that you can customize the default_training_script in the settings.json. If
   "balance_data": true,
   "clean_data": false,
   "create_YAML": true,
-  "create_csv": false,
+  "create_csv": true,
   "default_audio_features": [ "pspeech_features" ],
   "default_audio_transcriber": ["pocketsphinx"],
   "default_csv_features": [ "csv_features" ],

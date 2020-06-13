@@ -159,10 +159,11 @@ if train_type == 'c':
 
 elif train_type == 'r':
 	# only 1 class here 
-	target=[sys.argv[4]]
-	spreadsheet=sys.argv[5]
-	spreadsheet_dir=sys.argv[6]
-	common_name=sys.argv[7] #common_name = 'gender'
+	target=[sys.argv[3]]
+	spreadsheet=sys.argv[4]
+	spreadsheet_dir=sys.argv[5]
+	print(spreadsheet_dir)
+	common_name=sys.argv[6] #common_name = 'gender'
 	os.chdir(spreadsheet_dir)
 	data=pd.read_csv(spreadsheet)
 	features=np.array(data.drop(columns=target, axis=1))
@@ -254,8 +255,7 @@ except:
 	os.chdir('%s_transformer'%(problem_type))
 
 # get filename / create a unique file name
-if train_type == 'c':
-	filename=train_type+'_'+common_name
+filename=train_type+'_'+common_name
 
 # only add names in if True 
 if scale_features == True:

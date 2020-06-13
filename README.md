@@ -18,6 +18,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
+- solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
 - add Figlet for cool text renderings / messages (http://www.figlet.org/)

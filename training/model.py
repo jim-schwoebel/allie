@@ -368,6 +368,7 @@ default_text_features=settings['default_text_features']
 default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
 default_csv_features=settings['default_csv_features']
+create_excel=settings['create_excel']
 
 # prepare training and testing data (should have been already featurized) - # of classes/folders
 os.chdir(prevdir+'/train_dir')
@@ -787,31 +788,31 @@ created_csv_files=list()
 basefile=common_name
 temp_listdir=os.listdir()
 
-# try:
-print(basefile+'_all.csv'.upper())
-if basefile+'_all.csv' not in temp_listdir:
-	all_data = convert_csv(alldata, labels, labels_, mtype, classes)
-	all_data.to_csv(basefile+'_all.csv',index=False)
-created_csv_files.append(basefile+'_all.csv')
-# except:
-	# print('error exporting data into excel sheet %s'%(basefile+'_all.csv'))
-try:
-	print(basefile+'_train.csv'.upper())
-	if basefile+'_train.csv' not in temp_listdir:
-		train_data= convert_csv(X_train, y_train, labels_, mtype, classes)
-		train_data.to_csv(basefile+'_train.csv',index=False)
-	created_csv_files.append(basefile+'_train.csv')
-except:
-	print('error exporting data into excel sheet %s'%(basefile+'_train.csv'))
-
-try:
-	print(basefile+'_test.csv'.upper())
-	if basefile+'_test.csv' not in temp_listdir:
-		test_data= convert_csv(X_test, y_test, labels_, mtype, classes)
-		test_data.to_csv(basefile+'_test.csv',index=False)
-	created_csv_files.append(basefile+'_test.csv')
-except:
-	print('error exporting data into excel sheet %s'%(basefile+'_test.csv'))
+if create_excel == True:
+	try:
+		print(basefile+'_all.csv'.upper())
+		if basefile+'_all.csv' not in temp_listdir:
+			all_data = convert_csv(alldata, labels, labels_, mtype, classes)
+			all_data.to_csv(basefile+'_all.csv',index=False)
+		created_csv_files.append(basefile+'_all.csv')
+	except:
+		print('error exporting data into excel sheet %s'%(basefile+'_all.csv'))
+	try:
+		print(basefile+'_train.csv'.upper())
+		if basefile+'_train.csv' not in temp_listdir:
+			train_data= convert_csv(X_train, y_train, labels_, mtype, classes)
+			train_data.to_csv(basefile+'_train.csv',index=False)
+		created_csv_files.append(basefile+'_train.csv')
+	except:
+		print('error exporting data into excel sheet %s'%(basefile+'_train.csv'))
+	try:
+		print(basefile+'_test.csv'.upper())
+		if basefile+'_test.csv' not in temp_listdir:
+			test_data= convert_csv(X_test, y_test, labels_, mtype, classes)
+			test_data.to_csv(basefile+'_test.csv',index=False)
+		created_csv_files.append(basefile+'_test.csv')
+	except:
+		print('error exporting data into excel sheet %s'%(basefile+'_test.csv'))
 
 ############################################################
 ## 			        DATA TRANSFORMATION 			      ##
@@ -916,31 +917,32 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 
 	# now create transformed excel sheets
 	temp_listdir=os.listdir()
-	try:
-		print(basefile+'_all_transformed.csv'.upper())
-		if basefile+'_all_transformed.csv' not in temp_listdir:
-			all_data = convert_csv(alldata, labels, labels_, mtype, classes)
-			all_data.to_csv(basefile+'_all_transformed.csv',index=False)
-		created_csv_files.append(basefile+'_all_transformed.csv')
-	except:
-		print('error exporting data into excel sheet %s'%(basefile+'_all_transformed.csv'))
-	try:
-		print(basefile+'_train_transformed.csv'.upper())
-		if basefile+'_train_transformed.csv' not in temp_listdir:
-			train_data= convert_csv(X_train, y_train, labels_, mtype, classes)
-			train_data.to_csv(basefile+'_train_transformed.csv',index=False)
-		created_csv_files.append(basefile+'_train_transformed.csv')
-	except:
-		print('error exporting data into excel sheet %s'%(basefile+'_train_transformed.csv'))
+	if create_excel == True:
+		try:
+			print(basefile+'_all_transformed.csv'.upper())
+			if basefile+'_all_transformed.csv' not in temp_listdir:
+				all_data = convert_csv(alldata, labels, labels_, mtype, classes)
+				all_data.to_csv(basefile+'_all_transformed.csv',index=False)
+			created_csv_files.append(basefile+'_all_transformed.csv')
+		except:
+			print('error exporting data into excel sheet %s'%(basefile+'_all_transformed.csv'))
+		try:
+			print(basefile+'_train_transformed.csv'.upper())
+			if basefile+'_train_transformed.csv' not in temp_listdir:
+				train_data= convert_csv(X_train, y_train, labels_, mtype, classes)
+				train_data.to_csv(basefile+'_train_transformed.csv',index=False)
+			created_csv_files.append(basefile+'_train_transformed.csv')
+		except:
+			print('error exporting data into excel sheet %s'%(basefile+'_train_transformed.csv'))
 
-	try:
-		print(basefile+'_test_transformed.csv'.upper())
-		if basefile+'_test_transformed.csv' not in temp_listdir:
-			test_data= convert_csv(X_test, y_test, labels_, mtype, classes)
-			test_data.to_csv(basefile+'_test_transformed.csv',index=False)
-		created_csv_files.append(basefile+'_test_transformed.csv')
-	except:
-		print('error exporting data into excel sheet %s'%(basefile+'_test_transformed.csv'))
+		try:
+			print(basefile+'_test_transformed.csv'.upper())
+			if basefile+'_test_transformed.csv' not in temp_listdir:
+				test_data= convert_csv(X_test, y_test, labels_, mtype, classes)
+				test_data.to_csv(basefile+'_test_transformed.csv',index=False)
+			created_csv_files.append(basefile+'_test_transformed.csv')
+		except:
+			print('error exporting data into excel sheet %s'%(basefile+'_test_transformed.csv'))
 else:
 	# make a transform model == '' so that later during model training this can be skipped
 	transform_model=''

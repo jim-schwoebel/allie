@@ -4,7 +4,7 @@
   "balance_data": true,
   "clean_data": false,
   "create_YAML": true,
-  "create_excel": false,
+  "create_csv": false,
   "default_audio_features": [ "pspeech_features" ],
   "default_audio_transcriber": ["pocketsphinx"],
   "default_csv_features": [ "csv_features" ],

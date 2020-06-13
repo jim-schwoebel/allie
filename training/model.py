@@ -840,7 +840,7 @@ for i in range(len(classes)):
 
 # get filename / create a unique file name
 if mtype=='r':
-	t_filename=''
+	t_filename='r_'+common_name
 elif mtype=='c':
 	t_filename='c_'+common_name
 
@@ -854,9 +854,6 @@ if reduce_dimensions == True:
 if select_features == True:
 	for i in range(len(default_selectors)):
 		t_filename=t_filename+'_'+default_selectors[i]
-
-if mtype=='r':
-	t_filename=t_filename[1:]
 
 transform_file=t_filename+'.pickle'
 

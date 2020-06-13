@@ -368,7 +368,7 @@ default_text_features=settings['default_text_features']
 default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
 default_csv_features=settings['default_csv_features']
-create_excel=settings['create_excel']
+create_excel=settings['create_csv']
 
 # prepare training and testing data (should have been already featurized) - # of classes/folders
 os.chdir(prevdir+'/train_dir')
@@ -788,7 +788,7 @@ created_csv_files=list()
 basefile=common_name
 temp_listdir=os.listdir()
 
-if create_excel == True:
+if create_csv == True:
 	try:
 		print(basefile+'_all.csv'.upper())
 		if basefile+'_all.csv' not in temp_listdir:
@@ -917,7 +917,7 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 
 	# now create transformed excel sheets
 	temp_listdir=os.listdir()
-	if create_excel == True:
+	if create_csv == True:
 		try:
 			print(basefile+'_all_transformed.csv'.upper())
 			if basefile+'_all_transformed.csv' not in temp_listdir:

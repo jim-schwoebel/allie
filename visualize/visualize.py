@@ -9,7 +9,7 @@ if visualize==True in settings.
 ML models: https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f
 '''
 import os, sys, json, time, shutil
-os.system('pip3 install yellowbrick==1.1 scikit-plot==0.3.7 umap==0.1.1')
+os.system('pip3 install yellowbrick==1.1 scikit-plot==0.3.7 umap==0.1.1 umap-learn==0.4.4')
 from tqdm import tqdm
 from yellowbrick.features import Rank1D, Rank2D, Manifold, FeatureImportances
 from yellowbrick.features.pca import PCADecomposition

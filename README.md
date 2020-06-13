@@ -18,6 +18,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
+- solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
 - add Figlet for cool text renderings / messages (http://www.figlet.org/)
 - create time_split type of setting (for audio and video files) in annotation

@@ -95,19 +95,21 @@ def convert_csv(X_train, y_train, labels, mtype, classes):
 	This is important to make sure all machine learning training sessions
 	use the same dataset (so they can be benchmarked appropriately).
 	'''
+	# from pandas merging guide https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html
 	feature_list=labels
-	data=dict()
-
+	data=list()
 	for i in tqdm(range(len(X_train)), desc='converting csv...'):
-		for j in range(len(feature_list)-1):
-			if i > 0:
-				try:
-					data[feature_list[j]]=data[feature_list[j]]+[X_train[i][j]]
-				except:
-					pass
-			else:
-				data[feature_list[j]]=[X_train[i][j]]
-				# print(data)
+		
+		newlist=list()
+		for j in range(len(X_train[i])):
+			newlist.append([X_train[i][j]])
+
+		temp=pd.DataFrame(dict(zip(feature_list,newlist)), index=[i])
+		# print(temp)
+		data.append(temp)
+		
+
+	data = pd.concat(data)
 
 	if mtype == 'c':
 		data['class_']=y_train

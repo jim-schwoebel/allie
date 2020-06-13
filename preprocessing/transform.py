@@ -159,13 +159,13 @@ if train_type == 'c':
 
 elif train_type == 'r':
 	# only 1 class here 
-	target=[sys.argv[4]]
-	spreadsheet=sys.argv[5]
-	spreadsheet_dir=sys.argv[6]
+	target=[sys.argv[3]]
+	spreadsheet=sys.argv[4]
+	spreadsheet_dir=sys.argv[5]
 	print(target)
 	print(spreadsheet)
 	print(spreadsheet_dir)
-	common_name=sys.argv[7] #common_name = 'gender'
+	common_name=sys.argv[6] #common_name = 'gender'
 	os.chdir(spreadsheet_dir)
 	data=pd.read_csv(spreadsheet)
 	features=np.array(data.drop(columns=target, axis=1))

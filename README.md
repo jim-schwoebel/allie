@@ -18,7 +18,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
-- add in notion of 'saving' datasets in the ./datasets directory (and upload these into the cloud on S3 or an FTP server)
+- add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
 - add Figlet for cool text renderings / messages (http://www.figlet.org/)
 - create time_split type of setting (for audio and video files) in annotation
 - create live version of annotation script for audio, text, image, and video files (and add-in default_audio_annotators, default_text_annotators, default_image_annotators, and/or default_video_annotators into settings.json)

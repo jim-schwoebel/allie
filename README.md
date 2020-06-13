@@ -271,6 +271,8 @@ Here are some settings that you can modify in this settings.json file and the va
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
 | default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 
+| create_CSV | if True creates .CSV files during model training and puts them in the ./data folder in the machine learning model directory; note if set to False this can speed up model training. | True | True, False | 
+
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now (boolean).| False | True, False | 
 
 ## License

@@ -43,7 +43,7 @@ def prev_dir(directory):
 	return dir_
 
 def get_classes():
-	count=3
+	count=4
 	classes=list()
 	while True:
 		try:
@@ -87,22 +87,25 @@ def get_features(classes, problem_type, settings):
 		feature_list=list(g['features'][problem_type])
 
 		for j in tqdm(range(len(jsonfiles))):
-			g=json.load(open(jsonfiles[j]))
-			feature_=list()
-			label_=list()
 			try:
-				for k in range(len(feature_list)):
-					if feature_list[k] in defaults:
-						feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
-						label_=label_+g['features'][problem_type][feature_list[k]]['labels']
+				g=json.load(open(jsonfiles[j]))
+				feature_=list()
+				label_=list()
+				try:
+					for k in range(len(feature_list)):
+						if feature_list[k] in defaults:
+							feature_=feature_+g['features'][problem_type][feature_list[k]]['features']
+							label_=label_+g['features'][problem_type][feature_list[k]]['labels']
 
-				# quick quality check to only add to list if the feature_labels match in length the features_
-				if len(feature_) == len(label_):
-					features.append(feature_)
-					feature_labels.append(label_)
-					class_labels.append(classes[i])
+					# quick quality check to only add to list if the feature_labels match in length the features_
+					if len(feature_) == len(label_):
+						features.append(feature_)
+						feature_labels.append(label_)
+						class_labels.append(classes[i])
+				except:
+					print('error loading feature embedding: %s'%(feature_list[k].upper()))
 			except:
-				print('error loading feature embedding: %s'%(feature_list[k].upper()))
+				print('error loading %s -> %s'%(classes[i].upper(), jsonfiles[j]))
 
 
 	return features, feature_labels, class_labels 
@@ -146,6 +149,7 @@ problem_type=sys.argv[1] #audio, text, image, video, csv
 train_type=sys.argv[2] #c = classification, r=regression
 
 if train_type == 'c':
+	common_name=sys.argv[3] #common_name = 'gender'
 	classes=get_classes()
 	features, feature_labels, class_labels = get_features(classes, problem_type, settings)
 	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
@@ -155,9 +159,10 @@ if train_type == 'c':
 
 elif train_type == 'r':
 	# only 1 class here 
-	target=[sys.argv[3]]
-	spreadsheet=sys.argv[4]
-	spreadsheet_dir=sys.argv[5]
+	target=[sys.argv[4]]
+	spreadsheet=sys.argv[5]
+	spreadsheet_dir=sys.argv[6]
+	common_name=sys.argv[7] #common_name = 'gender'
 	os.chdir(spreadsheet_dir)
 	data=pd.read_csv(spreadsheet)
 	features=np.array(data.drop(columns=target, axis=1))
@@ -249,13 +254,8 @@ except:
 	os.chdir('%s_transformer'%(problem_type))
 
 # get filename / create a unique file name
-filename=problem_type
-
 if train_type == 'c':
-	for i in range(len(classes)):
-		filename=filename+'_'+classes[i]
-else:
-	filename=target[0]
+	filename=train_type+'_'+common_name
 
 # only add names in if True 
 if scale_features == True:

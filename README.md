@@ -45,6 +45,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - use combinatoric policies to select optimal model from configurations (clean, augmentation, preprocessing techniques, etc.); train_combinatorics.py (new script idea)
 
 ### recently completed (version 1.0.0 release)
+- added option in modeling script to create excel files (if create_excel == True, then creates .CSV files during training)
 - added annotate.py script to annotate files (beta version) - need to add to .JSON schema (in labels (regression)
 - come up with the ability to train regression models by a class and value
 - add in single model prediction mode in ./load.py script (-audio (sampletype) -c_autokeras (folder) -directory)

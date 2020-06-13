@@ -335,7 +335,8 @@ Note that you can customize the default_training_script in the settings.json. If
   "balance_data": true,
   "clean_data": false,
   "create_YAML": true,
-  "default_audio_features": [ "librosa_features" ],
+  "create_csv": false,
+  "default_audio_features": [ "pspeech_features" ],
   "default_audio_transcriber": ["pocketsphinx"],
   "default_csv_features": [ "csv_features" ],
   "default_csv_transcriber": ["raw text"],
@@ -353,13 +354,13 @@ Note that you can customize the default_training_script in the settings.json. If
   "reduce_dimensions": false,
   "scale_features": true,
   "select_features": false,
-  "test_size": 0.25,
-  "transcribe_audio": true,
+  "test_size": 0.10,
+  "transcribe_audio": false,
   "transcribe_csv": true,
   "transcribe_image": true,
   "transcribe_text": true,
-  "transcribe_videos": true,
-  "visualize_data": false
+  "transcribe_video": true,
+  "visualize_data": true
 }
 ```
 

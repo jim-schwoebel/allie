@@ -20,7 +20,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
-- add Figlet for cool text renderings / messages (http://www.figlet.org/)
 - create time_split type of setting (for audio and video files) in annotation
 - create live version of annotation script for audio, text, image, and video files (and add-in default_audio_annotators, default_text_annotators, default_image_annotators, and/or default_video_annotators into settings.json)
 - clean up datasets folder --> cleaning dir / augmentation dir (these can change to main directory tree), change labeling directory to annotation in main directory
@@ -47,6 +46,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - use combinatoric policies to select optimal model from configurations (clean, augmentation, preprocessing techniques, etc.); train_combinatorics.py (new script idea)
 
 ### recently completed (version 1.0.0 release)
+- add Figlet for cool text renderings / messages when loading modeling scripts (http://www.figlet.org/)
 - bug fix - minor bug fix in visualize.py script; fixed loading broken .JSON files during featurization (broke the visualization script during model training)
 - bug fix - edited transforms such that they are named by the common name and not by all the classes trained, as if you have >30 classes this will cause the transform to fail at saving / loading
 - added option in modeling script to create csv files (if create_csv == True, then creates .CSV files during training) - note the reason for this is for very large files it can take a long time to create them, so model training sessions can be sped up by setting create_csv == False.

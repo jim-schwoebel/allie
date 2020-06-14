@@ -587,9 +587,10 @@ clean_data=settings['clean_data']
 clean_dir=prevdir+'/datasets/cleaning'
 
 if clean_data == True and mtype == 'c':
+	
 	# only pursue augmentation strategies on directories of files and classification problems
 	print('-----------------------------------')
-	print('            CLEANING DATA          ')
+	print(f.renderText('CLEANING DATA'))
 	print('-----------------------------------')
 	for i in range(len(classes)):
 		os.chdir(clean_dir)
@@ -602,9 +603,10 @@ augment_data=settings['augment_data']
 augment_dir=prevdir+'/datasets/augmentation'
 
 if augment_data == True and mtype == 'c':
+
 	# only pursue augmentation strategies on directories of files and classification problems
 	print('-----------------------------------')
-	print('            AUGMENTING DATA          ')
+	print(f.renderText('AUGMENTING DATA'))
 	print('-----------------------------------')
 	for i in range(len(classes)):
 		os.chdir(augment_dir)
@@ -617,6 +619,9 @@ if augment_data == True and mtype == 'c':
 # now featurize each class (in proper folder)
 if mtype == 'c':
 	data={}
+	print('-----------------------------------')
+	print(f.renderText('FEATURIZING DATA'))
+	print('-----------------------------------')
 	for i in range(len(classes)):
 		class_type=classes[i]
 		if problemtype == 'audio':
@@ -865,7 +870,7 @@ transform_file=t_filename+'.pickle'
 
 if scale_features == True or reduce_dimensions == True or select_features == True:
 	print('----------------------------------')
-	print('        TRANSFORMING DATA         ')
+	print(f.renderText('TRANSFORMING DATA'))
 	print('----------------------------------')
 	# go to proper transformer directory
 	try:
@@ -961,7 +966,7 @@ os.chdir(visual_dir)
 
 if visualize_data == True and mtype == 'c':
 	print('----------------------------------')
-	print('       VISUALIZING DATA           ')
+	print(f.renderText('VISUALIZING DATA'))
 	print('----------------------------------')
 
 	command='python3 visualize.py %s'%(problemtype)
@@ -1048,7 +1053,7 @@ files appropriately.
 	# also can use pandas dataframe if applicable (loading in the model dir)
 '''
 print('----------------------------------')
-print('          MODELING DATA           ')
+print(f.renderText('MODELING DATA'))
 print('----------------------------------')
 
 # get defaults 
@@ -1269,6 +1274,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	############################################################
 
 	if model_compress == True:
+		print(f.renderText('COMPRESSING MODEL'))
 		# now compress the model according to model type 
 		if default_training_script in ['hypsklearn', 'scsr', 'tpot']:
 			# all .pickle files and can compress via scikit-small-ensemble
@@ -1320,7 +1326,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 	# note this will only work for pickle files for now. Will upgrade to deep learning
 	# models in the future.
 	if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn'] and problemtype=='audio':
-
+		print(f.renderText('PRODUCTIONIZING MODEL'))
 		# clear the load directory 
 		os.chdir(prevdir+'/load_dir/')
 		listdir=os.listdir()

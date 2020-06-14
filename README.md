@@ -46,7 +46,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - use combinatoric policies to select optimal model from configurations (clean, augmentation, preprocessing techniques, etc.); train_combinatorics.py (new script idea)
 
 ### recently completed (version 1.0.0 release)
-- add Figlet for cool text renderings / messages when loading modeling scripts (http://www.figlet.org/)
+- added Figlet for cool text renderings / messages when loading modeling scripts (http://www.figlet.org/)
 - bug fix - minor bug fix in visualize.py script; fixed loading broken .JSON files during featurization (broke the visualization script during model training)
 - bug fix - edited transforms such that they are named by the common name and not by all the classes trained, as if you have >30 classes this will cause the transform to fail at saving / loading
 - added option in modeling script to create csv files (if create_csv == True, then creates .CSV files during training) - note the reason for this is for very large files it can take a long time to create them, so model training sessions can be sped up by setting create_csv == False.

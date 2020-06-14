@@ -29,7 +29,7 @@ female = second class [via N number of classes]
 import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime, uuid
 from pyfiglet import Figlet
 f=Figlet(font='doh')
-print(f.renderText('isometric1'))
+print(f.renderText('Allie'))
 f=Figlet(font='doom')
 import pandas as pd
 import matplotlib.pyplot as plt

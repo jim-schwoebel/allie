@@ -27,6 +27,9 @@ female = second class [via N number of classes]
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
 import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime, uuid
+from pyfiglet import Figlet
+f=Figlet(font='banner3-D')
+print(f.renderText('Allie'))
 import pandas as pd
 import matplotlib.pyplot as plt
 

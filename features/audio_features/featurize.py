@@ -248,6 +248,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = prosf.prosody_featurize(audiofile, 20)
 	elif feature_set == 'pspeech_features':
 		features, labels = psf.pspeech_featurize(audiofile)
+	elif feature_set == 'pspeechtime_features':
+                features, labels = pstf.pspeech_featurize(audiofile)
 	elif feature_set == 'pyaudiolex_features':
 		features, labels = pyaudiolex.pyaudiolex_featurize(audiofile)
 	elif feature_set == 'pyworld_features':
@@ -373,6 +375,8 @@ if 'prosody_features' in feature_sets:
 	import prosody_features as prosf
 if 'pspeech_features' in feature_sets:
 	import pspeech_features as psf
+if 'pspeechtime_features' in feature_sets:
+        import pspeechtime_features as pstf
 if 'pyworld_features' in feature_sets:
 	import pyworld_features as pywf
 if 'sa_features' in feature_sets:

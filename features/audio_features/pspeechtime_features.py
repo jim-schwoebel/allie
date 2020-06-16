@@ -88,11 +88,14 @@ def pspeech_featurize(file):
         file = file[0:-4] +'.wav'
 
     (rate,sig) = wav.read(file)
-    mfcc_feat = mfcc(sig,rate).flatten()
+    mfcc_feat = mfcc(sig,rate).flatten().tolist()
     # fbank_feat = logfbank(sig,rate).flatten()
     # ssc_feat= ssc(sig, rate).flatten()
 
-    features=mfcc_feat.tolist()
+    while len(mfcc_feat) < 25948:
+        mfcc_feat.append(0)
+        
+    features=mfcc_feat
     one=get_labels(mfcc_feat, 'mfcc_', 'time_25ms')
     # two=get_labels(fbank_feat, 'fbank_', 'time_25ms')
     # three=get_labels(ssc_feat, 'ssc_', 'time_25ms')
@@ -106,6 +109,6 @@ def pspeech_featurize(file):
     
     return features, labels 
 
-features, labels= pspeech_featurize('test.wav')
+# features, labels= pspeech_featurize('2495.wav')
 # print(features.shape)
 # print(len(labels))

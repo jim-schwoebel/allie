@@ -2,6 +2,7 @@ import parselmouth, sys, os
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+from PIL import Image
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -49,7 +50,7 @@ def specimage2_featurize(wavfile, cur_dir, haar_dir):
 	    plt.grid(False)
 	    plt.ylim(0)
 	    plt.ylabel("intensity [dB]")
-	    
+
 	pitch = snd.to_pitch()
 	# If desired, pre-emphasize the sound fragment before calculating the spectrogram
 	pre_emphasized_snd = snd.copy()
@@ -63,9 +64,12 @@ def specimage2_featurize(wavfile, cur_dir, haar_dir):
 	# plt.show() # or plt.savefig("spectrogram_0.03.pdf")
 	imgfile=wavfile[0:-4]+'.png'
 	plt.savefig(imgfile)
+	plt.close()
+	img = Image.open(wavfile[0:-4]+'.png').convert('LA')
+	img.save(wavfile[0:-4]+'.png')
 
 	features, labels=imf.image_featurize(cur_dir, haar_dir, imgfile)
 	# remove temporary image file 
-	os.remove(wavfile[0:-4]+'.png')
+	# os.remove(wavfile[0:-4]+'.png')
 
 	return features, labels 

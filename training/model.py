@@ -1077,361 +1077,365 @@ for i in range(len(created_csv_files)):
 # initialize i (for tqdm) and go through all model training scripts 
 i=0
 for i in tqdm(range(len(default_training_scripts)), desc=default_training_scripts[i]):
-	# go to model directory 
-	os.chdir(model_dir)
-
-	# get common name and default training script to select proper model trainer
-	default_training_script=default_training_scripts[i]
-	common_name_model=common_name+'_'+default_training_script
-
-	print('----------------------------------')
-	print('       .... training %s           '%(default_training_script.upper()))
-	print('----------------------------------')
-
-	if default_training_script=='adanet':
-		print('Adanet training is coming soon! Please use a different model setting for now.') 
-		# import train_adanet as ta 
-		# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_featurenames)
-	elif default_training_script=='alphapy':
-		import train_alphapy as talpy
-		modelname, modeldir, files=talpy.train_alphapy(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='atm':
-		import train_atm as tatm
-		modelname, modeldir, files=tatm.train_atm(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='autobazaar':
-		import train_autobazaar as autobzr
-		modelname, modeldir, files=autobzr.train_autobazaar(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='autogbt':
-		import train_autogbt as tautogbt
-		modelname, modeldir, files=tautogbt.train_autogbt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='autogluon':
-		import train_autogluon as tautg
-		modelname, modeldir, files, test_data=tautg.train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='autokaggle':
-		import train_autokaggle as autokag
-		modelname, modeldir, files=autokag.train_autokaggle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='autokeras':
-		import train_autokeras as autokeras_
-		modelname, modeldir, files=autokeras_.train_autokeras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='automl':
-		import train_automl as auto_ml
-		modelname, modeldir, files=auto_ml.train_automl(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='autosklearn':
-		print('Autosklearn training is unstable! Please use a different model setting for now.') 
-		# import train_autosklearn as taskl
-		# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
-	elif default_training_script=='autopytorch':
-		import train_autopytorch as autotorch_
-		modelname, modeldir, files=autotorch_.train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='btb':
-		import train_btb as tbtb
-		modelname, modeldir, files=tbtb.train_btb(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='cvopt':
-		import train_cvopt as tcvopt
-		modelname, modeldir, files = tcvopt.train_cvopt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='devol':
-		import train_devol as td 
-		modelname, modeldir, files=td.train_devol(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='gama':
-		import train_gama as tgama
-		modelname, modeldir, files=tgama.train_gama(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='gentun':
-		import train_gentun as tgentun 
-		modelname, modeldir, files=tgentun.train_gentun(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='hyperband':
-		import train_hyperband as thband
-		modelname, modeldir, files = thband.train_hyperband(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='hypsklearn':
-		import train_hypsklearn as th 
-		modelname, modeldir, files=th.train_hypsklearn(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='hungabunga':
-		import train_hungabunga as thung
-		modelname, modeldir, files=thung.train_hungabunga(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='imbalance':
-		import train_imbalance as timb
-		modelname, modeldir, files=timb.train_imbalance(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='keras':
-		import train_keras as tk
-		modelname, modeldir, files=tk.train_keras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='ludwig':
-		import train_ludwig as tl
-		modelname, modeldir, files=tl.train_ludwig(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='mlblocks':
-		import train_mlblocks as mlb
-		modelname, modeldir, files=mlb.train_mlblocks(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='mlbox':
-		import train_mlbox as mlbox_
-		modelname, modeldir, files=mlbox_.train_mlbox(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='neuraxle':
-		if mtype=='c':
-			print('Neuraxle does not support classification at this time. Please use a different model training script')
-			break
-		else:
-			import train_neuraxle as tneuraxle
-			modelname, modeldir, files=tneuraxle.train_neuraxle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='plda':
-		print('PLDA training is unstable! Please use a different model setting for now.') 
-		# import train_pLDA as tp
-		# tp.train_pLDA(alldata,labels)
-	elif default_training_script=='pytorch':
-		import train_pytorch as t_pytorch
-		modelname, modeldir, files = t_pytorch.train_pytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='safe':
-		import train_safe as tsafe
-		modelname, modeldir, files=tsafe.train_safe(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-	elif default_training_script=='scsr':
-		import train_scsr as scsr
-		if mtype == 'c':
-			modelname, modeldir, files=scsr.train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,minlength)
-		elif mtype == 'r':
-			modelname, modeldir, files=scsr.train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_featurenames,transform_model,model_dir,settings)
-	elif default_training_script=='tpot':
-		import train_TPOT as tt
-		modelname, modeldir, files=tt.train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
-
-	############################################################
-	## 		  CALCULATE METRICS / PLOT ROC CURVE        	  ##
-	############################################################
-
-	if modelname.endswith('.pickle'):
-		foldername=modelname[0:-7]
-	elif modelname.endswith('.h5'):
-		foldername=modelname[0:-3]
-	else:
-		foldername=common_name_model
-
-	# copy the folder in case there are multiple models being trained 
-	try:
-		shutil.copytree(model_session, foldername)
-	except:
-		shutil.rmtree(foldername)
-		shutil.copytree(model_session, foldername)
-		
-	cur_dir2=os.getcwd()
-	os.chdir(foldername)
-	os.mkdir('model')
-	os.chdir('model')
-	model_dir_temp=os.getcwd()
-
-	# dump transform model to the models directory if necessary
-	if transform_model == '':
-		transformer_name=''
-	else:
-		# dump the tranform model into the current working directory
-		transformer_name=modelname.split('.')[0]+'_transform.pickle'
-		tmodel=open(transformer_name,'wb')
-		pickle.dump(transform_model, tmodel)
-		tmodel.close()
-
-	# move all supplementary files into model folder
-	for j in range(len(files)):
-		shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
-	
-	# load model for getting metrics
-	if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig', 'keras', 'devol']:
-		loadmodel=open(modelname, 'rb')
-		clf=pickle.load(loadmodel)
-		loadmodel.close()
-	elif default_training_script == 'atm':
-		from atm import Model
-		clf=Model.load(modelname)
-	elif default_training_script == 'autokeras':
-		import tensorflow as tf
-		import autokeras as ak
-		clf = pickle.load(open(modelname, 'rb'))
-	elif default_training_script=='autopytorch':
-		import torch
-		clf=torch.load(modelname)
-	elif default_training_script == 'ludwig':
-		from ludwig.api import LudwigModel
-		clf=LudwigModel.load('ludwig_files/experiment_run/model/')
-	elif default_training_script in ['devol', 'keras']: 
-		from keras.models import load_model
-		clf = load_model(modelname)
-	else: 
-		clf=''
-
-	# create test_data variable for anything other than autogluon
-	if default_training_script != 'autogluon':
-		test_data=''
-
-	# now make main .JSON file for the session summary with metrics
-	get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data)
-	
-	# now move to the proper models directory
-	os.chdir(model_dir)
 
 	try:
-		os.chdir(problemtype+'_models')
-	except:
-		os.mkdir(problemtype+'_models')
-		os.chdir(problemtype+'_models')
+		# go to model directory 
+		os.chdir(model_dir)
 
-	shutil.move(model_dir+'/'+foldername, os.getcwd()+'/'+foldername)
-	
-	############################################################
-	## 					COMPRESS MODELS 					  ##
-	############################################################
+		# get common name and default training script to select proper model trainer
+		default_training_script=default_training_scripts[i]
+		common_name_model=common_name+'_'+default_training_script
 
-	if model_compress == True:
-		print(f.renderText('COMPRESSING MODEL'))
-		# now compress the model according to model type 
-		if default_training_script in ['hypsklearn', 'scsr', 'tpot']:
-			# all .pickle files and can compress via scikit-small-ensemble
-			from sklearn.externals import joblib
+		print('----------------------------------')
+		print('       .... training %s           '%(default_training_script.upper()))
+		print('----------------------------------')
 
-			# open up model 
-			loadmodel=open(modelname, 'rb')
-			model = pickle.load(loadmodel)
-			loadmodel.close()
-
-			# compress - from 0 to 9. Higher value means more compression, but also slower read and write times. 
-			# Using a value of 3 is often a good compromise.
-			joblib.dump(model, modelname[0:-7]+'_compressed.joblib',compress=3)
-
-			# can now load compressed models as such
-			# thenewmodel=joblib.load(modelname[0:-7]+'_compressed.joblib')
-			# leads to up to 10x reduction in model size and .72 sec - 0.23 secoon (3-4x faster loading model)
-			# note may note work in sklearn and python versions are different from saving and loading environments. 
-
-		elif default_training_script in ['devol', 'keras']: 
-			# can compress with keras_compressor 
-			import logging
-			from keras.models import load_model
-			from keras_compressor.compressor import compress
-
-			logging.basicConfig(
-				level=logging.INFO,
-			)
-
-			try:
-				print('compressing model!!')
-				model = load_model(modelname)
-				model = compress(model, 7e-1)
-				model.save(modelname[0:-3]+'_compressed.h5')
-			except:
-				print('error compressing model!!')
-
-		else:
-			# for everything else, we can compress pocketflow models in the future.
-			print('We cannot currently compress %s models. We are working on this!! \n\n The model will remain uncompressed for now'%(default_training_script))
-
-
-	############################################################
-	## 					CREATE YAML FILES 					  ##
-	############################################################
-
-	create_YAML=settings['create_YAML']
-
-	# note this will only work for pickle files for now. Will upgrade to deep learning
-	# models in the future.
-	if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn'] and problemtype=='audio':
-		print(f.renderText('PRODUCTIONIZING MODEL'))
-		# clear the load directory 
-		os.chdir(prevdir+'/load_dir/')
-		listdir=os.listdir()
-		for i in range(len(listdir)):
-			try:
-				# for any files in the ./load_dir 
-				os.remove(listdir[i])
-			except:
-				# for folders in the ./load_dir
-				try:
-					shutil.rmtree(listdir[i])
-				except:
-					print('error, %s not a folder'%(listdir[i]))
-
-		# First need to create some test files for each use case
-		# copy 10 files from each class into the load_dir 
-		copylist=list()
-		print(classes)
-
-		# clear the load_directory 
-		os.chdir(prevdir+'/load_dir/')
-		listdir2=os.listdir()
-		for j in range(len(listdir2)):
-			# remove all files in the load_dir 
-			os.remove(listdir2[j])	
-
-		for i in range(len(classes)):
-			os.chdir(prevdir+'/train_dir/'+classes[i])
-			tempdirectory=os.getcwd()
-			listdir=os.listdir()
-			os.chdir(tempdirectory)
-			count=0
-			
-			# rename files if necessary 
-			# the only other file in the directory should be .json, so this should work
-			for j in range(len(listdir)):
-				# print(listdir[j])
-				if listdir[j].replace(' ','_').replace('-','') not in copylist and listdir[j].endswith('.json') == False:
-					if count >= 10:
-						break
-					else:
-						newname=listdir[j].replace(' ','_').replace('-','')
-						os.rename(listdir[j], newname)
-						shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-						# print(tempdirectory+'/'+listdir[j])
-						copylist.append(newname)
-						count=count+1 
-
-				elif listdir[j].replace(' ','_').replace('-','') in copylist and listdir[j].endswith('.json') == False: 
-					# rename the file appropriately such that there are no conflicts.
-					if count >= 10:
-						break
-					else:
-						newname=str(j)+'_'+listdir[j].replace(' ','_').replace('-','')
-						os.rename(listdir[j], newname)
-						# print(tempdirectory+'/'+newname)
-						shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-						copylist.append(newname)
-						count=count+1 
-
-		# now apply machine learning model to these files 
-		os.chdir(prevdir+'/models')
-		os.system('python3 load.py')
-
-		# now load up each of these and break loop when tests for each class exist 
-		os.chdir(prevdir+'/load_dir')
-		jsonfiles=list()
-		# iterate through until you find a class that fits in models 
-		listdir=os.listdir()
-
-		for i in range(len(classes)):
-			for j in range(len(listdir)):
-				if listdir[j][-5:]=='.json':
-					try:
-						g=json.load(open(listdir[j]))
-						models=g['models'][problemtype][classes[i]]
-						print(models)
-						features=list()
-						for k in range(len(default_features)):
-							features=features+g['features'][problemtype][default_features[k]]['features']
-						
-						print(features)
-						testfile=classes[i]+'_features.json'
-						print(testfile)
-						jsonfile2=open(testfile,'w')
-						json.dump(features,jsonfile2)
-						jsonfile2.close()
-						shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
-						break
-					except:
-						pass 
-
-		# now create the YAML file 
-		os.chdir(prevdir+'/production')
-		cmdclasses=''
-		for i in range(len(classes)):
-			if i != len(classes)-1:
-				cmdclasses=cmdclasses+classes[i]+' '
+		if default_training_script=='adanet':
+			print('Adanet training is coming soon! Please use a different model setting for now.') 
+			# import train_adanet as ta 
+			# ta.train_adanet(mtype, classes, jsonfile, alldata, labels, feature_labels, problemtype, default_featurenames)
+		elif default_training_script=='alphapy':
+			import train_alphapy as talpy
+			modelname, modeldir, files=talpy.train_alphapy(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='atm':
+			import train_atm as tatm
+			modelname, modeldir, files=tatm.train_atm(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='autobazaar':
+			import train_autobazaar as autobzr
+			modelname, modeldir, files=autobzr.train_autobazaar(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='autogbt':
+			import train_autogbt as tautogbt
+			modelname, modeldir, files=tautogbt.train_autogbt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='autogluon':
+			import train_autogluon as tautg
+			modelname, modeldir, files, test_data=tautg.train_autogluon(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='autokaggle':
+			import train_autokaggle as autokag
+			modelname, modeldir, files=autokag.train_autokaggle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='autokeras':
+			import train_autokeras as autokeras_
+			modelname, modeldir, files=autokeras_.train_autokeras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='automl':
+			import train_automl as auto_ml
+			modelname, modeldir, files=auto_ml.train_automl(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='autosklearn':
+			print('Autosklearn training is unstable! Please use a different model setting for now.') 
+			# import train_autosklearn as taskl
+			# taskl.train_autosklearn(alldata, labels, mtype, jsonfile, problemtype, default_featurenames)
+		elif default_training_script=='autopytorch':
+			import train_autopytorch as autotorch_
+			modelname, modeldir, files=autotorch_.train_autopytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='btb':
+			import train_btb as tbtb
+			modelname, modeldir, files=tbtb.train_btb(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='cvopt':
+			import train_cvopt as tcvopt
+			modelname, modeldir, files = tcvopt.train_cvopt(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='devol':
+			import train_devol as td 
+			modelname, modeldir, files=td.train_devol(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='gama':
+			import train_gama as tgama
+			modelname, modeldir, files=tgama.train_gama(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='gentun':
+			import train_gentun as tgentun 
+			modelname, modeldir, files=tgentun.train_gentun(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='hyperband':
+			import train_hyperband as thband
+			modelname, modeldir, files = thband.train_hyperband(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='hypsklearn':
+			import train_hypsklearn as th 
+			modelname, modeldir, files=th.train_hypsklearn(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='hungabunga':
+			import train_hungabunga as thung
+			modelname, modeldir, files=thung.train_hungabunga(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='imbalance':
+			import train_imbalance as timb
+			modelname, modeldir, files=timb.train_imbalance(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='keras':
+			import train_keras as tk
+			modelname, modeldir, files=tk.train_keras(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='ludwig':
+			import train_ludwig as tl
+			modelname, modeldir, files=tl.train_ludwig(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='mlblocks':
+			import train_mlblocks as mlb
+			modelname, modeldir, files=mlb.train_mlblocks(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='mlbox':
+			import train_mlbox as mlbox_
+			modelname, modeldir, files=mlbox_.train_mlbox(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='neuraxle':
+			if mtype=='c':
+				print('Neuraxle does not support classification at this time. Please use a different model training script')
+				break
 			else:
-				cmdclasses=cmdclasses+classes[i]
+				import train_neuraxle as tneuraxle
+				modelname, modeldir, files=tneuraxle.train_neuraxle(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='plda':
+			print('PLDA training is unstable! Please use a different model setting for now.') 
+			# import train_pLDA as tp
+			# tp.train_pLDA(alldata,labels)
+		elif default_training_script=='pytorch':
+			import train_pytorch as t_pytorch
+			modelname, modeldir, files = t_pytorch.train_pytorch(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='safe':
+			import train_safe as tsafe
+			modelname, modeldir, files=tsafe.train_safe(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
+		elif default_training_script=='scsr':
+			import train_scsr as scsr
+			if mtype == 'c':
+				modelname, modeldir, files=scsr.train_sc(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,minlength)
+			elif mtype == 'r':
+				modelname, modeldir, files=scsr.train_sr(X_train,X_test,y_train,y_test,common_name_model,problemtype,classes,default_featurenames,transform_model,model_dir,settings)
+		elif default_training_script=='tpot':
+			import train_TPOT as tt
+			modelname, modeldir, files=tt.train_TPOT(X_train,X_test,y_train,y_test,mtype,common_name_model,problemtype,classes,default_featurenames,transform_model,settings,model_session)
 
-		if 'common_name' in locals():
-			pass 
+		############################################################
+		## 		  CALCULATE METRICS / PLOT ROC CURVE        	  ##
+		############################################################
+
+		if modelname.endswith('.pickle'):
+			foldername=modelname[0:-7]
+		elif modelname.endswith('.h5'):
+			foldername=modelname[0:-3]
 		else:
-			common_name=modelname[0:-7]
+			foldername=common_name_model
 
-		jsonfilename=modelname[0:-7]+'.json'
-		os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
+		# copy the folder in case there are multiple models being trained 
+		try:
+			shutil.copytree(model_session, foldername)
+		except:
+			shutil.rmtree(foldername)
+			shutil.copytree(model_session, foldername)
+			
+		cur_dir2=os.getcwd()
+		os.chdir(foldername)
+		os.mkdir('model')
+		os.chdir('model')
+		model_dir_temp=os.getcwd()
+
+		# dump transform model to the models directory if necessary
+		if transform_model == '':
+			transformer_name=''
+		else:
+			# dump the tranform model into the current working directory
+			transformer_name=modelname.split('.')[0]+'_transform.pickle'
+			tmodel=open(transformer_name,'wb')
+			pickle.dump(transform_model, tmodel)
+			tmodel.close()
+
+		# move all supplementary files into model folder
+		for j in range(len(files)):
+			shutil.move(modeldir+'/'+files[j], model_dir_temp+'/'+files[j])
+		
+		# load model for getting metrics
+		if default_training_script not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig', 'keras', 'devol']:
+			loadmodel=open(modelname, 'rb')
+			clf=pickle.load(loadmodel)
+			loadmodel.close()
+		elif default_training_script == 'atm':
+			from atm import Model
+			clf=Model.load(modelname)
+		elif default_training_script == 'autokeras':
+			import tensorflow as tf
+			import autokeras as ak
+			clf = pickle.load(open(modelname, 'rb'))
+		elif default_training_script=='autopytorch':
+			import torch
+			clf=torch.load(modelname)
+		elif default_training_script == 'ludwig':
+			from ludwig.api import LudwigModel
+			clf=LudwigModel.load('ludwig_files/experiment_run/model/')
+		elif default_training_script in ['devol', 'keras']: 
+			from keras.models import load_model
+			clf = load_model(modelname)
+		else: 
+			clf=''
+
+		# create test_data variable for anything other than autogluon
+		if default_training_script != 'autogluon':
+			test_data=''
+
+		# now make main .JSON file for the session summary with metrics
+		get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data)
+		
+		# now move to the proper models directory
+		os.chdir(model_dir)
+
+		try:
+			os.chdir(problemtype+'_models')
+		except:
+			os.mkdir(problemtype+'_models')
+			os.chdir(problemtype+'_models')
+
+		shutil.move(model_dir+'/'+foldername, os.getcwd()+'/'+foldername)
+		
+		############################################################
+		## 					COMPRESS MODELS 					  ##
+		############################################################
+
+		if model_compress == True:
+			print(f.renderText('COMPRESSING MODEL'))
+			# now compress the model according to model type 
+			if default_training_script in ['hypsklearn', 'scsr', 'tpot']:
+				# all .pickle files and can compress via scikit-small-ensemble
+				from sklearn.externals import joblib
+
+				# open up model 
+				loadmodel=open(modelname, 'rb')
+				model = pickle.load(loadmodel)
+				loadmodel.close()
+
+				# compress - from 0 to 9. Higher value means more compression, but also slower read and write times. 
+				# Using a value of 3 is often a good compromise.
+				joblib.dump(model, modelname[0:-7]+'_compressed.joblib',compress=3)
+
+				# can now load compressed models as such
+				# thenewmodel=joblib.load(modelname[0:-7]+'_compressed.joblib')
+				# leads to up to 10x reduction in model size and .72 sec - 0.23 secoon (3-4x faster loading model)
+				# note may note work in sklearn and python versions are different from saving and loading environments. 
+
+			elif default_training_script in ['devol', 'keras']: 
+				# can compress with keras_compressor 
+				import logging
+				from keras.models import load_model
+				from keras_compressor.compressor import compress
+
+				logging.basicConfig(
+					level=logging.INFO,
+				)
+
+				try:
+					print('compressing model!!')
+					model = load_model(modelname)
+					model = compress(model, 7e-1)
+					model.save(modelname[0:-3]+'_compressed.h5')
+				except:
+					print('error compressing model!!')
+
+			else:
+				# for everything else, we can compress pocketflow models in the future.
+				print('We cannot currently compress %s models. We are working on this!! \n\n The model will remain uncompressed for now'%(default_training_script))
+
+
+		############################################################
+		## 					CREATE YAML FILES 					  ##
+		############################################################
+
+		create_YAML=settings['create_YAML']
+
+		# note this will only work for pickle files for now. Will upgrade to deep learning
+		# models in the future.
+		if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn'] and problemtype=='audio':
+			print(f.renderText('PRODUCTIONIZING MODEL'))
+			# clear the load directory 
+			os.chdir(prevdir+'/load_dir/')
+			listdir=os.listdir()
+			for i in range(len(listdir)):
+				try:
+					# for any files in the ./load_dir 
+					os.remove(listdir[i])
+				except:
+					# for folders in the ./load_dir
+					try:
+						shutil.rmtree(listdir[i])
+					except:
+						print('error, %s not a folder'%(listdir[i]))
+
+			# First need to create some test files for each use case
+			# copy 10 files from each class into the load_dir 
+			copylist=list()
+			print(classes)
+
+			# clear the load_directory 
+			os.chdir(prevdir+'/load_dir/')
+			listdir2=os.listdir()
+			for j in range(len(listdir2)):
+				# remove all files in the load_dir 
+				os.remove(listdir2[j])	
+
+			for i in range(len(classes)):
+				os.chdir(prevdir+'/train_dir/'+classes[i])
+				tempdirectory=os.getcwd()
+				listdir=os.listdir()
+				os.chdir(tempdirectory)
+				count=0
+				
+				# rename files if necessary 
+				# the only other file in the directory should be .json, so this should work
+				for j in range(len(listdir)):
+					# print(listdir[j])
+					if listdir[j].replace(' ','_').replace('-','') not in copylist and listdir[j].endswith('.json') == False:
+						if count >= 10:
+							break
+						else:
+							newname=listdir[j].replace(' ','_').replace('-','')
+							os.rename(listdir[j], newname)
+							shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
+							# print(tempdirectory+'/'+listdir[j])
+							copylist.append(newname)
+							count=count+1 
+
+					elif listdir[j].replace(' ','_').replace('-','') in copylist and listdir[j].endswith('.json') == False: 
+						# rename the file appropriately such that there are no conflicts.
+						if count >= 10:
+							break
+						else:
+							newname=str(j)+'_'+listdir[j].replace(' ','_').replace('-','')
+							os.rename(listdir[j], newname)
+							# print(tempdirectory+'/'+newname)
+							shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
+							copylist.append(newname)
+							count=count+1 
+
+			# now apply machine learning model to these files 
+			os.chdir(prevdir+'/models')
+			os.system('python3 load.py')
+
+			# now load up each of these and break loop when tests for each class exist 
+			os.chdir(prevdir+'/load_dir')
+			jsonfiles=list()
+			# iterate through until you find a class that fits in models 
+			listdir=os.listdir()
+
+			for i in range(len(classes)):
+				for j in range(len(listdir)):
+					if listdir[j][-5:]=='.json':
+						try:
+							g=json.load(open(listdir[j]))
+							models=g['models'][problemtype][classes[i]]
+							print(models)
+							features=list()
+							for k in range(len(default_features)):
+								features=features+g['features'][problemtype][default_features[k]]['features']
+							
+							print(features)
+							testfile=classes[i]+'_features.json'
+							print(testfile)
+							jsonfile2=open(testfile,'w')
+							json.dump(features,jsonfile2)
+							jsonfile2.close()
+							shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
+							break
+						except:
+							pass 
+
+			# now create the YAML file 
+			os.chdir(prevdir+'/production')
+			cmdclasses=''
+			for i in range(len(classes)):
+				if i != len(classes)-1:
+					cmdclasses=cmdclasses+classes[i]+' '
+				else:
+					cmdclasses=cmdclasses+classes[i]
+
+			if 'common_name' in locals():
+				pass 
+			else:
+				common_name=modelname[0:-7]
+
+			jsonfilename=modelname[0:-7]+'.json'
+			os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
+	except:
+		print('ERROR - error in modeling session')

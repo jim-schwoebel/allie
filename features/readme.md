@@ -95,6 +95,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [pyworld_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyworld_features.py) - f0 and and spectrogram features
 * [sa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sa_features.py)
 * [sox_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sox_features.py)
+* [speechmetrics_features](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
 * [specimage_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/specimage_features.py)
 * [specimage2_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/specimage2_features.py)
 * [spectrogram_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/spectrogram_features.py) 
@@ -135,7 +136,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 
 ### Audio
 looking into actively
-* [SpeechMetrics](https://github.com/aliutkus/speechmetrics) - estimating speech quality.
+* [pystoi](https://github.com/mpariente/pystoi) - speech intelligibility measure
 * [Kaldi](https://pykaldi.github.io/api/kaldi.feat.html#)
 * [PyLoudNorm](https://github.com/csteinmetz1/pyloudnorm) - estimating loudness
 * [Pysptk](https://github.com/r9y9/pysptk) - Tokoyo based lab

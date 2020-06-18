@@ -1,4 +1,9 @@
 # the case of absolute metrics
+''' 
+taken from https://github.com/aliutkus/speechmetrics
+
+Note there are no references with these metrics.
+'''
 import speechmetrics
 
 def speechmetrics_featurize(wavfile):

@@ -199,14 +199,39 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		mtype='classification'
 		metrics_['accuracy']=metrics.accuracy_score(y_true, y_pred)
 		metrics_['balanced_accuracy']=metrics.balanced_accuracy_score(y_true, y_pred)
-		metrics_['precision']=metrics.precision_score(y_true, y_pred)
-		metrics_['recall']=metrics.recall_score(y_true, y_pred)
-		metrics_['f1_score']=metrics.f1_score (y_true, y_pred, pos_label=1)
-		metrics_['f1_micro']=metrics.f1_score(y_true, y_pred, average='micro')
-		metrics_['f1_macro']=metrics.f1_score(y_true, y_pred, average='macro')
-		metrics_['roc_auc']=metrics.roc_auc_score(y_true, y_pred)
-		metrics_['roc_auc_micro']=metrics.roc_auc_score(y_true, y_pred, average='micro')
-		metrics_['roc_auc_macro']=metrics.roc_auc_score(y_true, y_pred, average='macro')
+		try:
+			metrics_['precision']=metrics.precision_score(y_true, y_pred)
+		except:
+			metrics_['precision']='n/a'
+		try:
+			metrics_['recall']=metrics.recall_score(y_true, y_pred)
+		except:
+			metrics_['recall']='n/a'
+		try:
+			metrics_['f1_score']=metrics.f1_score (y_true, y_pred, pos_label=1)
+		except:
+			metrics_['f1_score']='n/a'
+		try:
+			metrics_['f1_micro']=metrics.f1_score(y_true, y_pred, average='micro')
+		except:
+			metrics_['f1_micro']='n/a'
+		try:
+			metrics_['f1_macro']=metrics.f1_score(y_true, y_pred, average='macro')
+		except:
+			metrics_['f1_macro']='n/a'
+		try:
+			metrics_['roc_auc']=metrics.roc_auc_score(y_true, y_pred)
+		except:
+			metrics_['roc_auc']='n/a'
+		try:
+			metrics_['roc_auc_micro']=metrics.roc_auc_score(y_true, y_pred, average='micro')
+		except:
+			metrics_['roc_auc_micro']='n/a'
+		try:
+			metrics_['roc_auc_macro']=metrics.roc_auc_score(y_true, y_pred, average='macro')
+		except:
+			metrics_['roc_auc_micro']='n/a'
+	
 		metrics_['confusion_matrix']=metrics.confusion_matrix(y_true, y_pred).tolist()
 		metrics_['classification_report']=metrics.classification_report(y_true, y_pred, target_names=classes)
 
@@ -1435,7 +1460,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 			else:
 				common_name=modelname[0:-7]
 
-			jsonfilename=modelname[0:-7]+'.json'
-			os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
+				jsonfilename=modelname[0:-7]+'.json'
+				os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
 	except:
 		print('ERROR - error in modeling session')

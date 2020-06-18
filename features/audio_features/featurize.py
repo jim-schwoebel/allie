@@ -260,6 +260,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = sif2.specimage2_featurize(audiofile, cur_dir, haar_dir)
 	elif feature_set == 'spectrogram_features':
 		features, labels= specf.spectrogram_featurize(audiofile)
+	elif feature_set == 'speechmetrics_features':
+		features, labels=smf.speechmetrics_featurize(audiofile)
 	elif feature_set == 'standard_features':
 		features, labels = sf.standard_featurize(audiofile)
 
@@ -387,6 +389,8 @@ if 'specimage2_features' in feature_sets:
 	import specimage2_features as sif2
 if 'spectrogram_features' in feature_sets:
 	import spectrogram_features as specf
+if 'speechmetrics_features' in feature_sets:
+	import speechmetrics_features as smf
 if 'standard_features' in feature_sets:
 	import standard_features as sf 
 

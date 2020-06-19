@@ -1017,7 +1017,7 @@ else:
 
 visualize_data=settings['visualize_data']
 visual_dir=prevdir+'/visualize'
-model_session=str(uuid.uuid4())
+model_session=str(uuid.uuid1())
 os.chdir(visual_dir)
 
 if visualize_data == True and mtype == 'c':

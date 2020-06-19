@@ -807,6 +807,36 @@ try:
 except:
 	test_size=0.25
 
+# error checking around lengths of arrays and deleting as necessary
+lengths=list()
+for i in range(len(alldata)):
+	lengths.append(len(alldata[i]))
+
+# CLEAN IF DIMENSIONS DO NOT MATCH!!
+maxval=max(lengths)
+minval=min(lengths)
+delete_ind=list()
+alldata=np.array(alldata)
+labels=np.array(labels)
+if maxval != minval:
+	if lengths.count(maxval) > lengths.count(minval):
+		for i in range(len(lengths)):
+			# this means that additional column has been removed
+			if lengths[i] == minval:
+				delete_ind.append(i)
+
+	elif lengths.count(maxval) < lengths.count(minval):
+		for i in range(len(lengths)):
+			# this means that additional column has been added
+			if lengths[i] == maxval:
+				delete_ind.append(i)
+
+	alldata=np.delete(alldata, tuple(delete_ind))
+	labels=np.delete(labels, tuple(delete_ind))
+
+alldata=list(alldata)
+labels=list(labels)
+
 # split the data 
 X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=test_size)
 
@@ -904,35 +934,36 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 		os.mkdir(problemtype+'_transformer')
 		os.chdir(problemtype+'_transformer')
 	# train transformer if it doesn't already exist
+	os.system('pip3 install scikit-learn==0.22.2.post1')
 	if transform_file in os.listdir():
-		os.system('pip3 install scikit-learn==0.22.2.post1')
+		# remove file if in listdir to avoid conflicts with naming
+		os.remove(transform_file)
+
+	print('making transformer...')
+	alldata=np.asarray(alldata)
+	labels=np.asarray(labels)
+	os.chdir(preprocess_dir)
+	if mtype == 'c':
+		print('python3 transform.py %s %s %s %s'%(problemtype, 'c', common_name, transform_command))
+		os.system('python3 transform.py %s %s %s %s'%(problemtype, 'c', common_name, transform_command))
+		os.chdir(problemtype+'_transformer')
+		print(transform_file)
+		transform_model=pickle.load(open(transform_file,'rb'))
+		alldata=transform_model.transform(np.array(alldata))
+
+	elif mtype == 'r':
+		command='python3 transform.py %s %s %s %s %s %s'%('csv', 'r', classes[0], csvfile, prevdir+'/train_dir/', common_name)
+		print(command)
+		os.system(command)
+		os.chdir(problemtype+'_transformer')
 		transform_model=pickle.load(open(transform_file,'rb'))
 		alldata=transform_model.transform(alldata)
-	else:
-		print('making transformer...')
-		os.chdir(preprocess_dir)
-		if mtype == 'c':
-			print('python3 transform.py %s %s %s %s'%(problemtype, 'c', common_name, transform_command))
-			os.system('python3 transform.py %s %s %s %s'%(problemtype, 'c', common_name, transform_command))
-			os.chdir(problemtype+'_transformer')
-			transform_model=pickle.load(open(transform_file,'rb'))
-			alldata=transform_model.transform(alldata)
-		elif mtype == 'r':
-			command='python3 transform.py %s %s %s %s %s %s'%('csv', 'r', classes[0], csvfile, prevdir+'/train_dir/', common_name)
-			print(command)
-			os.system(command)
-			os.chdir(problemtype+'_transformer')
-			transform_model=pickle.load(open(transform_file,'rb'))
-			alldata=transform_model.transform(alldata)
-
 
 	os.chdir(preprocess_dir)
 	os.system('python3 load_transformer.py %s %s'%(problemtype, transform_file))
 
 	# now make new files as .CSV
 	os.chdir(model_dir)
-	alldata=np.asarray(alldata)
-	labels=np.asarray(labels)
 
 	# split the data 
 	X_train, X_test, y_train, y_test = train_test_split(alldata, labels, test_size=test_size)

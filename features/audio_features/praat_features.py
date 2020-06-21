@@ -76,19 +76,19 @@ def praat_featurize(voiceID):
     if len(f1_list) > 0:
         f1_mean = sum(f1_list) / len(f1_list)
     else:
-        f1_mean = "N/A"
+        f1_mean = 0
     if len(f2_list) > 0:
         f2_mean = sum(f2_list) / len(f2_list)
     else:
-        f2_mean = "N/A"
+        f2_mean = 0
     if len(f3_list) > 0:
         f3_mean = sum(f3_list) / len(f3_list)
     else:
-        f3_mean = "N/A"
+        f3_mean = 0
     if len(f4_list) > 0:
         f4_mean = sum(f4_list) / len(f4_list)
     else:
-        f4_mean = "N/A"
+        f4_mean = 0
     measurements = [duration, meanF0, stdevF0, hnr, localJitter, localabsoluteJitter, rapJitter, ppq5Jitter, ddpJitter,
                     localShimmer, localdbShimmer, apq3Shimmer, aqpq5Shimmer, apq11Shimmer, ddaShimmer,
                     f1_mean, f2_mean, f3_mean, f4_mean]

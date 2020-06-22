@@ -709,6 +709,10 @@ elif mtype == 'r':
 ##                  GENERATE TRAINING DATA                   ##
 ###############################################################
 
+print('-----------------------------------')
+print(f.renderText('CREATING TRAINING DATA'))
+print('-----------------------------------')
+
 # perform class balance such that both classes have the same number
 # of members (true by default, but can also be false)
 os.chdir(prevdir+'/training/')
@@ -817,8 +821,10 @@ for i in range(len(alldata)):
 maxval=max(lengths)
 minval=min(lengths)
 delete_ind=list()
+inds=list()
 alldata=np.array(alldata)
 labels=np.array(labels)
+
 if maxval != minval:
 	if lengths.count(maxval) > lengths.count(minval):
 		for i in range(len(lengths)):
@@ -832,15 +838,32 @@ if maxval != minval:
 			if lengths[i] == maxval:
 				delete_ind.append(i)
 
+	print('DELETING THESE INDICES: %s'%(str(delete_ind)))
 	alldata=np.delete(alldata, tuple(delete_ind))
 	labels=np.delete(labels, tuple(delete_ind))
+
+# # now see if any element in the array is a NaN and do not include if so in alldata or labels
+# for i in range(len(alldata)):
+# 	try:
+# 		array_has_nan = list(np.isnan(np.array(alldata[i]))).count(True)
+# 		array_has_string=list(np.char.isnumeric(np.array(alldata[i]))).count(False)
+# 	except:
+# 		array_has_string=1
+# 	if array_has_nan > 0 or array_has_string > 0:
+# 		inds.append(i)
+# 		print(alldata[i])
+
+# if len(inds) > 0:
+# 	print('DELETING THESE INDICES: %s'%(str(inds)))
+# 	alldata=np.delete(alldata, tuple(inds))
+# 	labels=np.delete(labels, tuple(inds))
 
 # REMOVE OUTLIERS IF SETTING IS TRUE
 alldata=np.array(alldata)
 labels=np.array(labels)
 if remove_outliers==True:
 	print(f.renderText('Removing Outliers'))
-	os.system('pip3 install statsmodels== 0.11.1')
+	os.system('pip3 install statsmodels==0.11.1')
 	from scipy import stats
 	from statsmodels.formula.api import ols
 	# https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
@@ -857,7 +880,7 @@ if remove_outliers==True:
 	labels = np.delete(labels, tuple(inds))
 	print(len(alldata))
 	print(len(labels))
-
+	
 alldata=list(alldata)
 labels=list(labels)
 

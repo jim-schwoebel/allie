@@ -719,6 +719,7 @@ os.chdir(prevdir+'/training/')
 model_dir=prevdir+'/models'
 balance=settings['balance_data']
 remove_outliers=settings['remove_outliers']
+outlier_types=settings['default_outlier_detector']
 
 if mtype == 'c':
 	jsonfile=''
@@ -839,9 +840,13 @@ if maxval != minval:
 				delete_ind.append(i)
 
 	print('DELETING THESE INDICES: %s'%(str(delete_ind)))
-	alldata=np.delete(alldata, tuple(delete_ind))
+	print(alldata.shape)
+	print(labels.shape)
+	alldata=np.delete(alldata, tuple(delete_ind), axis=0)
 	labels=np.delete(labels, tuple(delete_ind))
-
+	print(alldata.shape)
+	print(labels.shape)
+	
 # # now see if any element in the array is a NaN and do not include if so in alldata or labels
 # for i in range(len(alldata)):
 # 	try:
@@ -861,26 +866,57 @@ if maxval != minval:
 # REMOVE OUTLIERS IF SETTING IS TRUE
 alldata=np.array(alldata)
 labels=np.array(labels)
+
 if remove_outliers==True:
-	print(f.renderText('Removing Outliers'))
-	os.system('pip3 install statsmodels==0.11.1')
-	from scipy import stats
-	from statsmodels.formula.api import ols
-	# https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
-	z = np.abs(stats.zscore(alldata))
-	# print(z)
-	threshold = 3
-	inds=list(set(np.where(z>threshold)[0]))
-	print(len(inds))
-	print(tuple(inds))
-	print(alldata.shape)
-	print('-->')
-	alldata = np.delete(alldata, tuple(inds), axis=0)
-	print(alldata.shape)
-	labels = np.delete(labels, tuple(inds))
-	print(len(alldata))
-	print(len(labels))
-	
+	print('-----------------------------------')
+	print('			REMOVING OUTLIERS')
+	print('-----------------------------------')
+	for i in range(len(outlier_types)):
+		outlier_type=outlier_types[i]
+		if outlier_type =='isolationforest':
+		    from sklearn.ensemble import IsolationForest
+		    clf = IsolationForest(random_state=0).fit(alldata)
+		    y_pred = clf.predict(alldata)
+
+		    inlier_ind=list(np.where(y_pred==1))
+		    outlier_ind=list(np.where(y_pred==-1))
+		    y_pred = y_pred.tolist()
+
+		    print(type(y_pred))
+		    print(type(y_pred[0]))
+		    n_inliers = y_pred.count(1)
+		    n_outliers = y_pred.count(-1)
+		    print(n_inliers)
+		    print(n_outliers)
+
+		    # shape before 
+		    print(alldata.shape)
+		    print(labels.shape)
+		    # delete outliers
+		    alldata=np.delete(alldata, tuple(outlier_ind), axis=0)
+		    labels=np.delete(labels, tuple(outlier_ind))
+		    print(alldata.shape)
+		    print(labels.shape)
+
+		elif outlier_type=='zscore':
+			os.system('pip3 install statsmodels==0.11.1')
+			from scipy import stats
+			from statsmodels.formula.api import ols
+			# https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
+			z = np.abs(stats.zscore(alldata))
+			# print(z)
+			threshold = 3
+			inds=list(set(np.where(z>threshold)[0]))
+			print(len(inds))
+			print(tuple(inds))
+			print(alldata.shape)
+			print('-->')
+			alldata = np.delete(alldata, tuple(inds), axis=0)
+			print(alldata.shape)
+			labels = np.delete(labels, tuple(inds))
+			print(len(alldata))
+			print(len(labels))
+			
 alldata=list(alldata)
 labels=list(labels)
 

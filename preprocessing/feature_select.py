@@ -73,7 +73,7 @@ def feature_select(feature_selector, X_train, y_train, feature_number):
 		the scikit-learn documentation.
 		'''
 		estimator = SVR(kernel="linear")
-		model = RFECV(estimator, step=1, cv=5)
+		model = RFE(estimator, n_features_to_select=feature_number, step=1)
 
 	elif feature_selector == 'lasso':
 		# lasso technique 

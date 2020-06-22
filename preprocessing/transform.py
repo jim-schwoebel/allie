@@ -154,8 +154,7 @@ if train_type == 'c':
 	features, feature_labels, class_labels = get_features(classes, problem_type, settings)
 	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 	print(features[0])
-	print(feature_labels[1])
-	print(class_labels[0])
+	print(feature_labels[0])
 
 elif train_type == 'r':
 	# only 1 class here 
@@ -179,9 +178,13 @@ elif train_type == 'r':
 	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 
 # create a scikit-learn pipeline
-component_num=int(len(features[0])/3)
+component_num=settings['feature_number']
 estimators = []
 os.chdir(basedir+'/train_dir')
+
+# for i in range(len(X_train)):
+	# if len(X_train[i]) != len(X_train[0]):
+		# print(X_train[i])
 
 ################################################
 ##	    	    Scale features               ##
@@ -245,6 +248,9 @@ model=model.fit(X_train, y_train)
 print(len(X_test))
 X_test=model.transform(X_test)
 print(len(X_test))
+
+print('transformed training size')
+print(X_test[0])
 
 # pickle me timbers
 os.chdir(curdir)

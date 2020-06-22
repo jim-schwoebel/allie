@@ -48,6 +48,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- added a sample validation script in the ./models directory to quickly assess how well machine learning models generalize to new datasets
 - added Figlet for cool text renderings / messages when loading modeling scripts (http://www.figlet.org/)
 - bug fix - minor bug fix in visualize.py script; fixed loading broken .JSON files during featurization (broke the visualization script during model training)
 - bug fix - edited transforms such that they are named by the common name and not by all the classes trained, as if you have >30 classes this will cause the transform to fail at saving / loading

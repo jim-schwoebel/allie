@@ -279,6 +279,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 
 | create_csv | if True creates .CSV files during model training and puts them in the ./data folder in the machine learning model directory; note if set to False this can speed up model training. | True | True, False | 
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now (boolean).| False | True, False | 
+| default_outlier_detectors | the specified outlier detector employ when augmenting csv data | ['isolationforest'] | ['isolationforest','zscore'] |
 
 ## License
 This repository is licensed under a trade secret. Please do not share this code outside the core team.

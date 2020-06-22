@@ -836,7 +836,10 @@ if maxval != minval:
 	labels=np.delete(labels, tuple(delete_ind))
 
 # REMOVE OUTLIERS IF SETTING IS TRUE
+alldata=np.array(alldata)
+labels=np.array(labels)
 if remove_outliers==True:
+	print(f.renderText('Removing Outliers'))
 	os.system('pip3 install statsmodels== 0.11.1')
 	from scipy import stats
 	from statsmodels.formula.api import ols
@@ -844,14 +847,14 @@ if remove_outliers==True:
 	z = np.abs(stats.zscore(alldata))
 	# print(z)
 	threshold = 3
-	print(np.where(z > 3))
-	inds=set(np.where(z>3)[0])
-	df_o = alldata[(z < 3).all(axis=1)]
+	inds=list(set(np.where(z>threshold)[0]))
+	print(len(inds))
+	print(tuple(inds))
 	print(alldata.shape)
 	print('-->')
-	print(df_o.shape)
-	alldata = df_o
-	labels=np.delete(labels, tuple(inds))
+	alldata = np.delete(alldata, tuple(inds), axis=0)
+	print(alldata.shape)
+	labels = np.delete(labels, tuple(inds))
 	print(len(alldata))
 	print(len(labels))
 

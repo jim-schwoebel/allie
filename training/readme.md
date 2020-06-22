@@ -406,6 +406,7 @@ The output .JSON will look something like this:
 ## Actively working on (in future)
 
 ### 😉 Exploring now
+* [cottonwood](https://gitlab.com/brohrer/cottonwood)
 * [metric_learn](https://github.com/scikit-learn-contrib/metric-learn)
 * [hyperparameter tuning w/ Ray](https://github.com/ray-project/ray) - tuning hyperparameters 
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).

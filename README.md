@@ -17,7 +17,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
-- add in Cook's distance metric to remove outliers (https://stackoverflow.com/questions/51390196/how-to-calculate-cooks-distance-dffits-using-python-statsmodel) - remove_outliers == True / False.
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
@@ -48,6 +47,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- add in Cook's distance metric to remove outliers (https://stackoverflow.com/questions/51390196/how-to-calculate-cooks-distance-dffits-using-python-statsmodel) - remove_outliers == True / False.
 - added a sample validation script in the ./models directory to quickly assess how well machine learning models generalize to new datasets
 - added Figlet for cool text renderings / messages when loading modeling scripts (http://www.figlet.org/)
 - bug fix - minor bug fix in visualize.py script; fixed loading broken .JSON files during featurization (broke the visualization script during model training)

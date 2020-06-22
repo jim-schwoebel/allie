@@ -714,6 +714,7 @@ elif mtype == 'r':
 os.chdir(prevdir+'/training/')
 model_dir=prevdir+'/models'
 balance=settings['balance_data']
+remove_outliers=settings['remove_outliers']
 
 if mtype == 'c':
 	jsonfile=''
@@ -833,6 +834,26 @@ if maxval != minval:
 
 	alldata=np.delete(alldata, tuple(delete_ind))
 	labels=np.delete(labels, tuple(delete_ind))
+
+# REMOVE OUTLIERS IF SETTING IS TRUE
+if remove_outliers==True:
+	os.system('pip3 install statsmodels== 0.11.1')
+	from scipy import stats
+	from statsmodels.formula.api import ols
+	# https://towardsdatascience.com/ways-to-detect-and-remove-the-outliers-404d16608dba
+	z = np.abs(stats.zscore(alldata))
+	# print(z)
+	threshold = 3
+	print(np.where(z > 3))
+	inds=set(np.where(z>3)[0])
+	df_o = alldata[(z < 3).all(axis=1)]
+	print(alldata.shape)
+	print('-->')
+	print(df_o.shape)
+	alldata = df_o
+	labels=np.delete(labels, tuple(inds))
+	print(len(alldata))
+	print(len(labels))
 
 alldata=list(alldata)
 labels=list(labels)

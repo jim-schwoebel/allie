@@ -89,8 +89,15 @@ def sox_featurize(filename):
     # soxi and stats files 
     soxifile=filename[0:-4].replace(' ','_')+'_soxi.txt'
     statfile=filename[0:-4].replace(' ','_')+'_stats.txt'
-    os.system('soxi %s > %s'%(filename, soxifile))
-    os.system('sox %s -n stat > %s 2>&1'%(filename, statfile))
+    if filename.endswith('.mp3'):
+    	wavfile= filename[0:-4]+'.wav'
+    	os.system('ffmpeg -i %s %s'%(filename,wavfile))
+    	os.system('soxi %s > %s'%(wavfile, soxifile))
+    	os.system('sox %s -n stat > %s 2>&1'%(wavfile, statfile))
+    	os.remove(wavfile)
+    else:
+    	os.system('soxi %s > %s'%(filename, soxifile))
+    	os.system('sox %s -n stat > %s 2>&1'%(filename, statfile))	
     # get basic info 
     s1=open(soxifile).read()
     s1_labels=['channels','samplerate','precision',

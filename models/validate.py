@@ -1,6 +1,6 @@
 import os,json
 from tqdm import tqdm
-
+import time
 def prev_dir(directory):
 	g=directory.split('/')
 	dir_=''
@@ -31,6 +31,6 @@ for i in tqdm(range(len(jsonfiles))):
 		print('error')
 
 print('females')
-print(predictions.count('females'))
+print(predictions.count('female'))
 print('males')
-print(predictions.count('males'))
+print(predictions.count('male'))

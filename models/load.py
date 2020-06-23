@@ -10,6 +10,7 @@ Note that the general flow here is
 '''
 
 import os, json, pickle, time
+import pandas as pd
 import numpy as np
 
 def prev_dir(directory):
@@ -31,33 +32,33 @@ def most_common(lst):
 	return max(set(lst), key=lst.count)
 
 def model_schema():
-    models={'audio': dict(),
-            'text': dict(),
-            'image': dict(),
-            'video': dict(),
-            'csv': dict()
-            }
-    return models 
+	models={'audio': dict(),
+			'text': dict(),
+			'image': dict(),
+			'video': dict(),
+			'csv': dict()
+			}
+	return models 
 
 def classifyfolder(listdir):
 
-    filetypes=list()
+	filetypes=list()
 
-    for i in range(len(listdir)):
-        if listdir[i].endswith(('.mp3', '.wav')):
-            filetypes.append('audio')
-        elif listdir[i].endswith(('.png', '.jpg')):
-            filetypes.append('image')
-        elif listdir[i].endswith(('.txt')):
-            filetypes.append('text')
-        elif listdir[i].endswith(('.mp4', '.avi')):
-            filetypes.append('video')
-        elif listdir[i].endswith(('.csv')):
-            filetypes.append('csv')
+	for i in range(len(listdir)):
+		if listdir[i].endswith(('.mp3', '.wav')):
+			filetypes.append('audio')
+		elif listdir[i].endswith(('.png', '.jpg')):
+			filetypes.append('image')
+		elif listdir[i].endswith(('.txt')):
+			filetypes.append('text')
+		elif listdir[i].endswith(('.mp4', '.avi')):
+			filetypes.append('video')
+		elif listdir[i].endswith(('.csv')):
+			filetypes.append('csv')
 
-    filetypes=list(set(filetypes))
+	filetypes=list(set(filetypes))
 
-    return filetypes
+	return filetypes
 
 def featurize(features_dir, load_dir, model_dir, filetypes):
 	# featurize by directories
@@ -124,7 +125,7 @@ def find_files(model_dir):
 	print(jsonfiles)
 	return jsonfiles
 
-def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata):
+def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata, model_dir):
 	'''
 	get the metrics associated iwth a classification and regression problem
 	and output a .JSON file with the training session.
@@ -132,23 +133,29 @@ def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default
 	sampletype=sampletype.split('_')[0]
 
 	for k in range(len(jsonfiles)):
-		try:
-			g=json.load(open(jsonfiles[k]))
-			print(sampletype)
-			print(g)
-			features=g['features'][sampletype][default_features[0]]['features']
-			print(transformer)
-			if transformer != '':
-				features=np.array(transformer.transform(features)).reshape(1, -1)
-			else:
-				features=np.array(features).reshape(1,-1)
-			print(features)
-			metrics_=dict()
+		# try:
+		g=json.load(open(jsonfiles[k]))
+		print(sampletype)
+		print(g)
+		features=list()
+		for j in range(len(default_features)):
+			features=features+g['features'][sampletype][default_features[j]]['features']
+		
+		labels=g['features'][sampletype][default_features[0]]['labels']
+		print(transformer)
 
-			if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
+		print(features)
+		if transformer != '':
+				features=np.array(transformer.transform(np.array(features).reshape(1, -1))).reshape(1, -1)
+		else:
+				features=np.array(features).reshape(1,-1)
+		print(features)
+		metrics_=dict()
+
+		if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
 				y_pred=clf.predict(features)
 
-			elif modeltype=='alphapy':
+		elif modeltype=='alphapy':
 				# go to the right folder 
 				curdir=os.getcwd()
 				print(os.listdir())
@@ -161,114 +168,144 @@ def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default
 				os.chdir('output')
 				listdir=os.listdir()
 				for k in range(len(listdir)):
-					if listdir[k].startswith('predictions'):
-						csvfile=listdir[k]
+						if listdir[k].startswith('predictions'):
+								csvfile=listdir[k]
 				y_pred=pd.read_csv(csvfile)['prediction']
 				os.chdir(curdir)
 
-			elif modeltype == 'autogluon':
+		elif modeltype == 'autogluon':
+				curdir=os.getcwd()
+				os.chdir(model_dir+'/model/')
 				from autogluon import TabularPrediction as task
-				test_data=test_data.drop(labels=['class'],axis=1)
-				y_pred=clf.predict(test_data)
+				print(os.getcwd())
+				
+				if transformer != '':
+					new_features=dict()
+					for i in range(len(features[0])):
+						new_features['feature_%s'%(str(i))]=[features[0][i]]
+					print(new_features)
+					df=pd.DataFrame(new_features)
+					df.to_csv('temp.csv', index=False)
+				else:
+					df=pd.DataFrame(features, columns=labels)
+					df.to_csv('temp.csv', index=False)
+				test_data=pd.read_csv('temp.csv')
+				print(test_data)
+				print(os.getcwd())
+				y_pred=clf.predict(df)
+				os.remove('temp.csv')
+				os.chdir(curdir)
 
-			elif modeltype == 'autokeras':
+		elif modeltype == 'autokeras':
 				y_pred=clf.predict(features).flatten()
 
-			elif modeltype == 'autopytorch':
+		elif modeltype == 'autopytorch':
 				y_pred=clf.predict(features).flatten()
 
-			elif modeltype == 'atm':
+		elif modeltype == 'atm':
 				curdir=os.getcwd()
 				os.chdir('atm_temp')
 				data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
 				y_pred = clf.predict(data)
 				os.chdir(curdir)
 
-			elif modeltype == 'ludwig':
+		elif modeltype == 'ludwig':
 				data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
 				pred=clf.predict(data)['class__predictions']
 				y_pred=np.array(list(pred), dtype=np.int64)
 
-			elif modeltype== 'devol':
+		elif modeltype== 'devol':
 				features=features.reshape(features.shape+ (1,)+ (1,))
 				y_pred=clf.predict_classes(features).flatten()
 
-			elif modeltype=='keras':
+		elif modeltype=='keras':
 				if mtype == 'c':
-				    y_pred=clf.predict_classes(features).flatten()
+					y_pred=clf.predict_classes(features).flatten()
 				elif mtype == 'r':
-					y_pred=clf.predict(feaures).flatten()
+						y_pred=clf.predict(feaures).flatten()
 
-			elif modeltype =='neuraxle':
+		elif modeltype =='neuraxle':
 				y_pred=clf.transform(features)
 
-			elif modeltype=='safe':
+		elif modeltype=='safe':
 				# have to make into a pandas dataframe
 				test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
 				y_pred=clf.predict(test_data)
 				# update model in schema
-			print(y_pred)
-		except:
-			print('error %s'%(modeltype.upper()))
+	
+		# except:
+			# print('error %s'%(modeltype.upper()))
+
+		# try:
+		# get class from classes (assuming classification)
+		'''
+		X={'male': [1],
+			'female': [2],
+			'other': [3]}
+
+		then do a search of the values
+		names=list(X) --> ['male', 'female', 'other']		
+		i1=X.values().index([1]) --> 0 
+		names[i1] --> male 
+		'''
+		
+		# print(modeldata)
+		outputs=dict()
+		for i in range(len(classes)):
+			outputs[classes[i]]=[i]
+
+		names=list(outputs)
+		i1=list(outputs.values()).index(y_pred)
+		class_=classes[i1]
+
+		print(y_pred)
+		print(outputs)
+		print(i1)
+		print(class_)
 
 		try:
-			# get class from classes (assuming classification)
-			'''
-			X={'male': [1],
-			    'female': [2],
-			    'other': [3]}
-
-			then do a search of the values
-			names=list(X) --> ['male', 'female', 'other']		
-			i1=X.values().index([1]) --> 0 
-			names[i1] --> male 
-			'''
-
-			print(modeldata)
-			outputs=dict()
-			for i in range(len(classes)):
-				outputs[classes[i]]=[i]
-
-			names=list(outputs)
-			i1=list(outputs.values()).index(y_pred)
-			class_=classes[i1]
-
-			try:
-				models=g['models']
-			except:
-				models=models=model_schema()
-
-			temp=models[sampletype]
-
-			if class_ not in list(temp):
-				temp[class_]= modeldata
-			else:
-				tclass=temp[class_]
-				tclass.append(modeldata)
-				temp[class_]=tclass
-			    
-			models[sampletype]=temp
-			g['models']=models
-			print(class_)
-
-			# update database
-			jsonfilename=open(jsonfiles[k],'w')
-			json.dump(g,jsonfilename)
-			jsonfilename.close()
+			models=g['models']
 		except:
-			print('error making jsonfile %s'%(jsonfiles[k].upper()))
+			models=models=model_schema()
+
+		temp=models[sampletype]
+
+		if class_ not in list(temp):
+			temp[class_]= [modeldata]
+		else:
+			tclass=temp[class_]
+			try:
+				# make a list if it is not already to be compatible with deprecated versions
+				tclass.append(modeldata)
+			except:
+				tclass=[tclass]
+				tclass.append(modeldata)
+			temp[class_]=tclass
+			
+		models[sampletype]=temp
+		g['models']=models
+		print(class_)
+
+		# update database
+		jsonfilename=open(jsonfiles[k],'w')
+		json.dump(g,jsonfilename)
+		jsonfilename.close()
+		# except:
+		# print('error making jsonfile %s'%(jsonfiles[k].upper()))
 
 def load_model(folder_name):
 
 	listdir=os.listdir()
-
 	# load in a transform if necessary
-	if listdir[i].endswith('transform.pickle') in listdir:
-		transform_=open(listdir[i],'rb')
-		transformer=pickle.load(transform_name)
-		transform_.close()
-	else:
-		transformer=''
+	for i in range(len(listdir)):
+		if listdir[i].endswith('transform.pickle'):
+			print(listdir[i])
+			transform_=open(listdir[i],'rb')
+			transformer=pickle.load(transform_)
+			transform_.close()
+			break
+		else:
+			transformer=''
 
 	jsonfile=open(folder_name+'.json')
 	g=json.load(jsonfile)
@@ -326,6 +363,7 @@ def find_models():
 				if listdir[j].find('.') < 0:
 					folders.append(listdir[j])
 
+			print(folders)
 			curdir2=os.getcwd()
 
 			for j in range(len(folders)):
@@ -338,8 +376,9 @@ def find_models():
 					if listdir2[k] == jsonfile:
 						g=json.load(open(jsonfile))
 						model_names.append(jsonfile[0:-5])
+			print(model_names)
 		except:
-			pass
+			print('error')
 
 		models_[directories[i]]=model_names
 
@@ -425,4 +464,4 @@ for i in range(len(model_dirs)):
 			transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
 			os.chdir(load_dir)
 			jsonfiles=find_files(model_dirs[i])
-			make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata)
+			make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])

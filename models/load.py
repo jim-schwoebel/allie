@@ -361,15 +361,18 @@ def find_models():
 			curdir2=os.getcwd()
 
 			for j in range(len(folders)):
-				os.chdir(curdir2)
-				os.chdir(folders[j])
-				os.chdir('model')
-				listdir2=os.listdir()
-				jsonfile=folders[j]+'.json'
-				for k in range(len(listdir2)):
-					if listdir2[k] == jsonfile:
-						g=json.load(open(jsonfile))
-						model_names.append(jsonfile[0:-5])
+				try:
+					os.chdir(curdir2)
+					os.chdir(folders[j])
+					os.chdir('model')
+					listdir2=os.listdir()
+					jsonfile=folders[j]+'.json'
+					for k in range(len(listdir2)):
+						if listdir2[k] == jsonfile:
+							g=json.load(open(jsonfile))
+							model_names.append(jsonfile[0:-5])
+				except:
+					pass
 			print(model_names)
 		except:
 			print('error')

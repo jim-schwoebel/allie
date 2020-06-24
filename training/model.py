@@ -916,7 +916,28 @@ if remove_outliers==True:
 			labels = np.delete(labels, tuple(inds))
 			print(len(alldata))
 			print(len(labels))
-			
+
+	# rebalance data to all be the same length
+	newlabels=list(labels)
+	outlier_class=list()
+	for i in range(len(classes)):
+		outlier_class.append(newlabels.count(i))
+
+	lengths=np.array(outlier_class)
+	minlength=np.amin(outlier_class)
+	# now load all the classes
+	for i in range(len(classes)):
+		# only balance if specified in settings
+		if balance==True:
+			count2=newlabels.count(i)
+			while count2 > minlength:
+				count2=newlabels.count(i)
+				print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(count2-minlength)))
+				ind=list(labels).index(i)
+				alldata=np.delete(alldata, tuple([ind]), axis=0)
+				labels=np.delete(labels, tuple([ind]))
+				newlabels=list(labels)
+
 alldata=list(alldata)
 labels=list(labels)
 

@@ -809,7 +809,7 @@ os.chdir(model_dir)
 
 # get the split from the settings.json
 try:
-	test_size=settings['test_size'][0]
+	test_size=settings['test_size']
 except:
 	test_size=0.25
 

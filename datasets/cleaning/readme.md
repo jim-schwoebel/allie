@@ -78,6 +78,7 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 ### Audio 
 * [RNN Noise XIPH](https://github.com/xiph/rnnoise) - eliminates all noise events from environment (e.g. typing)
 * Diarization?? - can implement this here if necessary 
+* [Norbert](https://github.com/sigsep/norbert) - Weiner filter for source separation of audio signals (multichannel). Use a source truth and separate into Channel A and Channel B.
 * [Deep Audio Prior](https://github.com/adobe/Deep-Audio-Prior) - can separate 2 noises without any training data
 * [Microsoft noise dataset](https://github.com/microsoft/MS-SNSD) - MS-SNSD
 * extract loudest section - https://github.com/petewarden/extract_loudest_section

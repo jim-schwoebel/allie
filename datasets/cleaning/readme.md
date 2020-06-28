@@ -83,8 +83,8 @@ Note that the audio file type ('audio','text','image','video','csv') is automati
 * extract loudest section - https://github.com/petewarden/extract_loudest_section
 
 ### Text
-* [Text rank/summarization](https://github.com/davidadamojr/TextRank) or [textrank](https://github.com/summanlp/textrank)- 100 word summary, Number of keywords extracted is relative to the size of the text (a third of the number of nodes in the graph)
-* [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html) - preprocessing like removing punctuation and repeats, etc.
+* [Text rank/summarization](https://github.com/davidadamojr/TextRank) or [textrank](https://github.com/summanlp/textrank)- 100 word summary, Number of keywords extracted is relative to the size of the text (a third of the number of nodes in the graph) - implented alpha 
+* [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html) - preprocessing like removing punctuation and repeats, etc. - implemented this with multiple settings
 
 ### Video
 * [Video stabilization](https://github.com/abhiTronix/vidgear#camgear) - video stabilization for the camera / cleaning it

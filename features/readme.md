@@ -139,6 +139,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 looking into actively
 * [pysepm](https://github.com/schmiph2/pysepm) - speech quality measures
 * [pystoi](https://github.com/mpariente/pystoi) - speech intelligibility measure
+* [pb_bss](https://github.com/fgnt/pb_bss/blob/master/examples/mixture_model_example.ipynb) - blind source separation (training models)
 * [Kaldi](https://pykaldi.github.io/api/kaldi.feat.html#)
 * [PyLoudNorm](https://github.com/csteinmetz1/pyloudnorm) - estimating loudness
 * [Pysptk](https://github.com/r9y9/pysptk) - Tokoyo based lab

@@ -423,6 +423,7 @@ The output .JSON will look something like this:
 * [PocketFlow](https://github.com/Tencent/PocketFlow) - allow for ludwig model compression.
 * '[keras-inference-time-optimizer](https://github.com/ZFTurbo/Keras-inference-time-optimizer) - restructure keras neural network to reduce inference time without reducing accuracy.
 * '[tensorflow-model-optimization](https://github.com/tensorflow/model-optimization) - keras-compatible model compression platform using quantization techniques
+* [QKeras](https://github.com/google/qkeras) - quantization of models
 
 ### 👎 Discarded (in archived folder)
 

@@ -407,6 +407,7 @@ The output .JSON will look something like this:
 
 ### 😉 Exploring now
 * [cottonwood](https://gitlab.com/brohrer/cottonwood)
+* [autoML Alex](https://github.com/Alex-Lekov/AutoML_Alex)
 * [metric_learn](https://github.com/scikit-learn-contrib/metric-learn)
 * [hyperparameter tuning w/ Ray](https://github.com/ray-project/ray) - tuning hyperparameters 
 * '[adanet](https://github.com/tensorflow/adanet)' - Google's AutoML framework in tensorflow (https://github.com/tensorflow/adanet).

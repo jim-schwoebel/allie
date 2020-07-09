@@ -406,6 +406,7 @@ The output .JSON will look something like this:
 ## Actively working on (in future)
 
 ### 😉 Exploring now
+* [tune-sklearn](https://github.com/ray-project/tune-sklearn) - add this to scsr script
 * [cottonwood](https://gitlab.com/brohrer/cottonwood)
 * [autoML Alex](https://github.com/Alex-Lekov/AutoML_Alex)
 * [metric_learn](https://github.com/scikit-learn-contrib/metric-learn)

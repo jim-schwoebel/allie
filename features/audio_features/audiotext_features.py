@@ -24,7 +24,7 @@ prevdir=prev_dir(directory)
 sys.path.append(prevdir+'/text_features')
 import nltk_features as nf 
 import textacy_features as tfe
-import spacy_featurize as spf
+import spacy_features as spf
 import text_features as tfea
 
 def audiotext_featurize(wavfile, transcript):

@@ -1,5 +1,5 @@
 import numpy as np
-import json, os, time
+import json, os, time, shutil
 
 def parseArff(arff_file):
     '''
@@ -38,17 +38,20 @@ def opensmile_featurize(audiofile, basedir, feature_extractor):
                              'emo_large.conf', 'IS11_speaker_state.conf', 'IS12_speaker_trait_compat.conf', 'IS09_emotion.conf', 'IS12_speaker_trait.conf', 
                              'prosodyShsViterbiLoudness.conf', 'ComParE_2016.conf', 'GeMAPSv01a.conf']
 
+        os.rename(audiofile,audiofile.replace(' ','_'))
+        audiofile=audiofile.replace(' ','_')
         arff_file=audiofile[0:-4]+'.arff'
-
+        curdir=os.getcwd()
         opensmile_folder=basedir+'/helpers/opensmile/opensmile-2.3.0'
-
         print(opensmile_folder)
         print(feature_extractor)
         print(audiofile)
         print(arff_file)
 
         if feature_extractor== 'GeMAPSv01a.conf':
-            os.system('SMILExtract -C %s/config/gemaps/%s -I %s -O %s'%(opensmile_folder, feature_extractor, audiofile, arff_file))
+            command='SMILExtract -C %s/config/gemaps/%s -I %s -O %s'%(opensmile_folder, feature_extractor, audiofile, arff_file)
+            print(command)
+            os.system(command)
         else:
             os.system('SMILExtract -C %s/config/%s -I %s -O %s'%(opensmile_folder, feature_extractor, audiofile, arff_file))
 
@@ -56,5 +59,7 @@ def opensmile_featurize(audiofile, basedir, feature_extractor):
 
         # remove temporary arff_file
         os.remove(arff_file)
+        os.remove(audiofile)
+        os.chdir(curdir)
 
         return features, labels

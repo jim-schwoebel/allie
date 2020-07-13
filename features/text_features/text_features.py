@@ -284,9 +284,9 @@ def text_featurize(transcript):
 
   return features, labels
 
-transcript='this is a test. One two three. I love Jess this is the greatest day ever.'
-features, labels = text_featurize(transcript)
-print(features)
-print(labels)
-print(len(features))
-print(len(labels))
+# transcript='this is a test. One two three.'
+# features, labels = text_featurize(transcript)
+# print(features)
+# print(labels)
+# print(len(features))
+# print(len(labels))

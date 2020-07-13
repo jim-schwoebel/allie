@@ -39,7 +39,7 @@ def audiotext_featurize(wavfile, transcript):
     # features=np.append(np.array(librosa_features), np.array(nltk_features))
     features=np.append(np.array(nltk_features),np.array(textacy_features))
     features=np.append(features,np.array(spacy_features))
-    labels=nltk_labels+textacy_labels+spacy_features
+    labels=nltk_labels+textacy_labels+spacy_labels
     # labels=librosa_labels+nltk_labels+textacy_labels+spacy_features
 
     return features, labels 

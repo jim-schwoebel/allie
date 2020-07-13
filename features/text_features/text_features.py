@@ -247,8 +247,6 @@ def word_repeats(importtext):
         else:
             pass
 
-    print
-
     #calculate the number of sentences and repeat word avg per sentence 
     sentencenum=len(tenwords)
     repeatavg=repeatnum/sentencenum

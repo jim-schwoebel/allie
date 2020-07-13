@@ -3,7 +3,7 @@ delete_features.py
 
 Clear all json files from folders
 '''
-import os
+import os, json
 
 folders=list()
 listdir=os.listdir()

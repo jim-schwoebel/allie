@@ -256,6 +256,7 @@ Heatmap with removed correlated variables
 * [Plotly learning curves](https://github.com/mitmedialab/vizml/blob/master/notebooks/Plotly%20Performance.ipynb)
 * [Snowflake](https://github.com/doubledherin/Audio_Snowflake) - audio song visualization
 * [Streamit](https://github.com/streamlit/streamlit)
+* [Viola](https://github.com/voila-dashboards/voila)
 * [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)
 

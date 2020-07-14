@@ -1,0 +1,33 @@
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in SMILExtract : openSMILE starting!
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in SMILExtract : config file is: /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/config/gemaps/GeMAPSv01a.conf
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in cComponentManager : successfully registered 95 component types.
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'gemapsv01a_logSpectral' : logSpecFloor = -140.00  (specFloor = 1.000000e-14)
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'lldsink' : No filename given, disabling this sink component.
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'lldhtksink' : No filename given, disabling this sink component.
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'lldarffsink' : No filename given, disabling this sink component.
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'csvsink' : No filename given, disabling this sink component.
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'htksink' : No filename given, disabling this sink component.
+[ 14.07.2020 - 12:31:33 ]
+    (WARN) [1] in instance 'gemapsv01a_formantVoiced.reader' : Mismatch in input level buffer sizes (levelconf.nT). Level #0 has size 5 which is smaller than the max. input size of all input levels (150). This might cause the processing to hang unpredictably or cause incomplete processing.
+[ 14.07.2020 - 12:31:33 ]
+    (WARN) [1] in instance 'gemapsv01a_logSpectralVoiced.reader' : Mismatch in input level buffer sizes (levelconf.nT). Level #0 has size 5 which is smaller than the max. input size of all input levels (150). This might cause the processing to hang unpredictably or cause incomplete processing.
+[ 14.07.2020 - 12:31:33 ]
+    (WARN) [1] in instance 'gemapsv01a_logSpectralUnvoiced.reader' : Mismatch in input level buffer sizes (levelconf.nT). Level #0 has size 5 which is smaller than the max. input size of all input levels (150). This might cause the processing to hang unpredictably or cause incomplete processing.
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in instance 'arffsink' : writing ARFF header (62 features)...
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in cComponentManager : successfully finished createInstances
+                                 (56 component instances were finalised, 1 data memories were finalised)
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in cComponentManager : starting single thread processing loop
+[ 14.07.2020 - 12:31:33 ]
+    (MSG) [2] in cComponentManager : Processing finished! System ran for 1014 ticks.

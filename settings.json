@@ -5,7 +5,7 @@
   "clean_data": false,
   "create_YAML": true,
   "create_csv": true,
-  "default_audio_features": [ "pspeech_features", "sox_features","praat_features","prosody_features"],
+  "default_audio_features": [ "opensmile_features"],
   "default_audio_transcriber": ["deepspeech_dict"],
   "default_csv_features": [ "csv_features" ],
   "default_csv_transcriber": ["raw text"],

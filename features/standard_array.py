@@ -31,7 +31,7 @@ def make_features(sampletype):
 	      'features': features,
 	      'models': models,
 	      'labels': [],
-	      'errors': [],
-	      'version': []}
+	      'errors': []
+	     }
 	
 	return data

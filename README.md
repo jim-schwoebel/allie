@@ -17,6 +17,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
+- add 'pip3 freeze > requirements.txt' --> to machine learning model training systems to reproduct environments on different CPUs 
 - add error handling into all of Allie's featurizations + error array into feature array itself ("error" form of column on features)
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)

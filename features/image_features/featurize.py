@@ -44,36 +44,6 @@ def image_featurize(feature_set, imgfile, cur_dir, haar_dir):
 
 	return features, labels 
 
-def make_features(sampletype):
-
-	# only add labels when we have actual labels.
-	features={'audio':dict(),
-			  'text': dict(),
-			  'image':dict(),
-			  'video':dict(),
-			  'csv': dict(),
-			  }
-
-	transcripts={'audio': dict(),
-				 'text': dict(),
-				 'image': dict(),
-				 'video': dict(),
-				 'csv': dict()}
-
-	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-	
-	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-	      	  'models': models,
-		  'labels': []}
-
-	return data
-
 ##################################################
 ##				   Main script  		    	##
 ##################################################
@@ -88,6 +58,8 @@ listdir=os.listdir()
 
 # settings directory 
 settingsdir=prev_dir(basedir)
+sys.path.append(settingsdir)
+from standard_array import make_features, device_info
 settings=json.load(open(prev_dir(settingsdir)+'/settings.json'))
 os.chdir(basedir)
 
@@ -97,16 +69,6 @@ try:
 	feature_sets=[sys.argv[2]]
 except:
 	feature_sets=settings['default_image_features']
-
-#### ^^ 
-#### Can specify a few feature sets here (customizable in settings.json)
-# feature_sets=['image_features']
-# feature_sets=['VGG16_features']
-# feature_sets=['Inception_features']
-# feature_sets=['Xception_features']
-# feature_sets=['Resnet50_features']
-# feature_sets=['VGG19_features']
-# feature_sets=['tesseract_features']
 
 ##################################################
 ##	         Only load relevant features     	##

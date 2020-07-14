@@ -87,7 +87,7 @@ basedir=os.getcwd()
 # directory=sys.argv[1]
 settingsdir=prev_dir(basedir)
 sys.path.append(settingsdir)
-from standard_array import make_features, device_info
+from standard_array import make_features
 settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)

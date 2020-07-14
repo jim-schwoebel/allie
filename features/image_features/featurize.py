@@ -59,7 +59,7 @@ listdir=os.listdir()
 # settings directory 
 settingsdir=prev_dir(basedir)
 sys.path.append(settingsdir)
-from standard_array import make_features, device_info
+from standard_array import make_features
 settings=json.load(open(prev_dir(settingsdir)+'/settings.json'))
 os.chdir(basedir)
 

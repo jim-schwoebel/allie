@@ -53,7 +53,7 @@ basedir=os.getcwd()
 help_dir=basedir+'/helpers'
 prevdir=prev_dir(basedir)
 sys.path.append(prevdir)
-from standard_array import make_features, device_info
+from standard_array import make_features
 
 foldername=sys.argv[1]
 os.chdir(foldername)

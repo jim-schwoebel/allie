@@ -52,7 +52,7 @@ basedir=os.getcwd()
 help_dir=basedir+'/helpers'
 prevdir=prev_dir(basedir)
 sys.path.append(prevdir)
-from standard_array import make_features, device_info
+from standard_array import make_features
 
 # audioset_dir=prevdir+'/audio_features'
 # os.chdir(audioset_dir)

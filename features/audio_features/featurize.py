@@ -33,7 +33,7 @@ def prev_dir(directory):
 directory=os.getcwd()
 prevdir=prev_dir(directory)
 sys.path.append(prevdir)
-from standard_array import make_features, device_info
+from standard_array import make_features
 sys.path.append(prevdir+'/image_features')
 haar_dir=prevdir+'/image_features/helpers/haarcascades'
 import image_features as imf

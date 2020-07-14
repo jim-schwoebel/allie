@@ -25,15 +25,9 @@ timesplit
 
 ## Learn more
 
-[submodule "datasets/labeling/sound_event_detection"]
-	path = datasets/labeling/sound_event_detection
-	url = https://github.com/jim-schwoebel/sound_event_detection
-[submodule "datasets/labeling/labelImg"]
-	path = datasets/labeling/labelImg
-	url = https://github.com/tzutalin/labelImg
-[submodule "datasets/labeling/labelme"]
-	path = datasets/labeling/labelme
-	url = https://github.com/wkentaro/labelme
+- [submodule "datasets/labeling/sound_event_detection"] path = datasets/labeling/sound_event_detection url = https://github.com/jim-schwoebel/sound_event_detection 
+- [submodule "datasets/labeling/labelImg"] path = datasets/labeling/labelImg url = https://github.com/tzutalin/labelImg
+- [submodule "datasets/labeling/labelme"] path = datasets/labeling/labelme url = https://github.com/wkentaro/labelme
 
 ## Can now use for classification and/or regression
 

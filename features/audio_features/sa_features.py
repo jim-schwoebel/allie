@@ -1,6 +1,6 @@
 import os, librosa
 from Signal_Analysis.features.signal import get_F_0, get_HNR, get_Jitter, get_Pulses
-# pip3 install Signal_Analysis
+# os.system('pip3 install Signal_Analysis==0.1.26')
 import numpy as np
 
 def signalanalysis_featurize(audiofile):

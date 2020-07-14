@@ -232,6 +232,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = pf.pyaudio_featurize(audiofile, basedir)
 	elif feature_set == 'librosa_features':
 		features, labels = lf.librosa_featurize(audiofile, False)
+	elif feature_set == 'loudness_features':
+		features, labels = loudf.loudness.featurize(audiofile)
 	elif feature_set == 'meta_features':
 		features, labels = mf.meta_featurize(audiofile, cur_dir, help_dir)
 	elif feature_set == 'mixed_features':
@@ -307,6 +309,8 @@ if 'pyaudio_features' in feature_sets:
 	import pyaudio_features as pf 
 if 'librosa_features' in feature_sets:
 	import librosa_features as lf 
+if 'loudness_features' in feature_sets:
+	import loudness_features as loudf
 if 'meta_features' in feature_sets:
 	import meta_features as mf 
 	os.system('pip3 install scikit-learn==0.19.1')

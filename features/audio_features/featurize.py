@@ -221,52 +221,52 @@ def audio_featurize(feature_set, audiofile, transcript):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
 	if feature_set == 'audioset_features':
-		features, labels = af.audioset_featurize(audiofile, basedir, foldername)
+		features, labels = audioset_features.audioset_featurize(audiofile, basedir, foldername)
 	elif feature_set == 'audiotext_features':
-		features, labels = atf.audiotext_featurize(audiofile, transcript)
+		features, labels = audiotext_features.audiotext_featurize(audiofile, transcript)
 	elif feature_set == 'sox_features':
-		features, labels = soxf.sox_featurize(audiofile)
+		features, labels = sox_features.sox_featurize(audiofile)
 	elif feature_set == 'sa_features':
-		features, labels = saf.sa_featurize(audiofile)
+		features, labels = sa_features.sa_featurize(audiofile)
 	elif feature_set == 'pyaudio_features':
-		features, labels = pf.pyaudio_featurize(audiofile, basedir)
+		features, labels = pyaudio_features.pyaudio_featurize(audiofile, basedir)
 	elif feature_set == 'librosa_features':
-		features, labels = lf.librosa_featurize(audiofile, False)
+		features, labels = librosa_features.librosa_featurize(audiofile, False)
 	elif feature_set == 'loudness_features':
-		features, labels = loudf.loudness.featurize(audiofile)
+		features, labels = loudness_features.loudness.featurize(audiofile)
 	elif feature_set == 'meta_features':
-		features, labels = mf.meta_featurize(audiofile, cur_dir, help_dir)
+		features, labels = meta_features.meta_featurize(audiofile, cur_dir, help_dir)
 	elif feature_set == 'mixed_features':
-		features, labels = mixf.mixed_featurize(audiofile, transcript, help_dir)
+		features, labels = mixed_features.mixed_featurize(audiofile, transcript, help_dir)
 	elif feature_set == 'myprosody_features':
 		print('Myprosody features are coming soon!! Currently debugging this feature set.')
-		# features, labels = mpf.myprosody_featurize(audiofile, cur_dir, help_dir)
+		# features, labels = myprosody_features.myprosody_featurize(audiofile, cur_dir, help_dir)
 	elif feature_set == 'nltk_features':
-		features, labels = nf.nltk_featurize(transcript)
+		features, labels = nltk_features.nltk_featurize(transcript)
 	elif feature_set == 'opensmile_features':
-		features, labels = osm.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
+		features, labels = opensmile_features.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
 	elif feature_set == 'praat_features':
-		features, labels = prf.praat_featurize(audiofile)
+		features, labels = praat_features.praat_featurize(audiofile)
 	elif feature_set == 'prosody_features':
-		features, labels = prosf.prosody_featurize(audiofile, 20)
+		features, labels = prosody_features.prosody_featurize(audiofile, 20)
 	elif feature_set == 'pspeech_features':
-		features, labels = psf.pspeech_featurize(audiofile)
+		features, labels = pspeech_features.pspeech_featurize(audiofile)
 	elif feature_set == 'pspeechtime_features':
-                features, labels = pstf.pspeech_featurize(audiofile)
+                features, labels = pspeechtime_features.pspeech_featurize(audiofile)
 	elif feature_set == 'pyaudiolex_features':
-		features, labels = pyaudiolex.pyaudiolex_featurize(audiofile)
+		features, labels = pyaudiolex_features.pyaudiolex_featurize(audiofile)
 	elif feature_set == 'pyworld_features':
-		features, labels = pywf.pyworld_featurize(audiofile)
+		features, labels = pyworld_features.pyworld_featurize(audiofile)
 	elif feature_set == 'specimage_features':
-		features, labels = sif.specimage_featurize(audiofile,cur_dir, haar_dir)
+		features, labels = specimage_features.specimage_featurize(audiofile,cur_dir, haar_dir)
 	elif feature_set == 'specimage2_features':
-		features, labels = sif2.specimage2_featurize(audiofile, cur_dir, haar_dir)
+		features, labels = specimage2_features.specimage2_featurize(audiofile, cur_dir, haar_dir)
 	elif feature_set == 'spectrogram_features':
-		features, labels= specf.spectrogram_featurize(audiofile)
+		features, labels= spectrogram_features.spectrogram_featurize(audiofile)
 	elif feature_set == 'speechmetrics_features':
-		features, labels=smf.speechmetrics_featurize(audiofile)
+		features, labels=speechmetrics_features.speechmetrics_featurize(audiofile)
 	elif feature_set == 'standard_features':
-		features, labels = sf.standard_featurize(audiofile)
+		features, labels = standard_features.standard_featurize(audiofile)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))
@@ -300,51 +300,51 @@ except:
 
 # only load the relevant featuresets for featurization to save memory
 if 'audioset_features' in feature_sets:
-	import audioset_features as af 
+	import audioset_features
 if 'audiotext_features' in feature_sets:
-	import audiotext_features as atf
+	import audiotext_features
 if 'sox_features' in feature_sets:
-	import sox_features as soxf 
+	import sox_features
 if 'pyaudio_features' in feature_sets:
-	import pyaudio_features as pf 
+	import pyaudio_features
 if 'librosa_features' in feature_sets:
-	import librosa_features as lf 
+	import librosa_features
 if 'loudness_features' in feature_sets:
-	import loudness_features as loudf
+	import loudness_features
 if 'meta_features' in feature_sets:
-	import meta_features as mf 
+	import meta_features
 	os.system('pip3 install scikit-learn==0.19.1')
 if 'mixed_features' in feature_sets:
-	import mixed_features as mixf
+	import mixed_features
 if 'myprosody_features' in feature_sets:
 	pass
 	# import myprosody_features as mpf
 if 'opensmile_features' in feature_sets:
-	import opensmile_features as osm
+	import opensmile_features
 if 'pyaudiolex_features' in feature_sets:
-	import pyaudiolex_features as pyaudiolex
+	import pyaudiolex_features
 if 'praat_features' in feature_sets:
-	import praat_features as prf
+	import praat_features
 if 'prosody_features' in feature_sets:
-	import prosody_features as prosf
+	import prosody_features
 if 'pspeech_features' in feature_sets:
-	import pspeech_features as psf
+	import pspeech_features
 if 'pspeechtime_features' in feature_sets:
-        import pspeechtime_features as pstf
+        import pspeechtime_features
 if 'pyworld_features' in feature_sets:
-	import pyworld_features as pywf
+	import pyworld_features
 if 'sa_features' in feature_sets:
-	import sa_features as saf
+	import sa_features
 if 'specimage_features' in feature_sets:
-	import specimage_features as sif
+	import specimage_features
 if 'specimage2_features' in feature_sets:
-	import specimage2_features as sif2
+	import specimage2_features
 if 'spectrogram_features' in feature_sets:
-	import spectrogram_features as specf
+	import spectrogram_features
 if 'speechmetrics_features' in feature_sets:
-	import speechmetrics_features as smf
+	import speechmetrics_features
 if 'standard_features' in feature_sets:
-	import standard_features as sf 
+	import standard_features
 
 ################################################
 ##	   		Get featurization folder     	  ##

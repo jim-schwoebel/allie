@@ -290,7 +290,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		  'device info': device_info(),
 		  'session id': model_session,
 		  'classes': classes,
-	      'model type': mtype,
+	      'problem type': mtype,
 	      'model name': modelname, 
 	      'model type': default_training_script,
 	      'metrics': metrics_,

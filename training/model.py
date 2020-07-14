@@ -137,7 +137,6 @@ def device_info():
 			   'cpu times':psutil.cpu_times(),
 			   'cpu count':psutil.cpu_count(),
 			   'cpu stats':psutil.cpu_stats(),
-			   'cpu freq':psutil.cpu_freq(),
 			   'cpu swap':psutil.swap_memory(),
 			   'partitions':psutil.disk_partitions(),
 			   'disk usage':psutil.disk_usage('/'),
@@ -451,7 +450,6 @@ for i in range(len(folders)):
 
 # get all information from sys.argv, and if not, 
 # go through asking user for the proper parameters 
-
 try:
 	problemtype=sys.argv[1]
 	classnum=sys.argv[2]

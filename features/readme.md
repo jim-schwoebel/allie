@@ -141,7 +141,6 @@ looking into actively
 * [pystoi](https://github.com/mpariente/pystoi) - speech intelligibility measure 
 * [pb_bss](https://github.com/fgnt/pb_bss/blob/master/examples/mixture_model_example.ipynb) - blind source separation (training models)
 * [Kaldi](https://pykaldi.github.io/api/kaldi.feat.html#)
-* [PyLoudNorm](https://github.com/csteinmetz1/pyloudnorm) - estimating loudness
 * [Pysptk](https://github.com/r9y9/pysptk) - Tokoyo based lab
 * [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [speechpy](https://github.com/astorfi/speechpy)

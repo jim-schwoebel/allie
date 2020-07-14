@@ -20,36 +20,6 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def make_features(sampletype):
-
-	# only add labels when we have actual labels.
-	features={'audio':dict(),
-			  'text': dict(),
-			  'image':dict(),
-			  'video':dict(),
-			  'csv': dict(),
-			  }
-
-	transcripts={'audio': dict(),
-				 'text': dict(),
-				 'image': dict(),
-				 'video': dict(),
-				 'csv': dict()}
-
-	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-	
-	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-	      	  'models': models,
-		  'labels': []}
-
-	return data
-
 def transcribe_csv(csv_file, csv_transcriber):
 	if csv_transcriber=='raw text':
 		transcript=open(csv_file).read()
@@ -82,6 +52,8 @@ def csv_featurize(feature_set, csvfile, cur_dir):
 basedir=os.getcwd()
 help_dir=basedir+'/helpers'
 prevdir=prev_dir(basedir)
+sys.path.append(prevdir)
+from standard_array import make_features, device_info
 
 foldername=sys.argv[1]
 os.chdir(foldername)

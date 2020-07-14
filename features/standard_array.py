@@ -4,8 +4,19 @@ This is the standard feature array for Allie (version 1.0).
 Note this will be imported to get back data in all featurization methods
 to ensure maximal code reusability
 '''
-import os 
+import os, time, psutil
+from datetime import datetime
 
+def device_info():
+	data={'time':datetime.now().strftime("%Y-%m-%d %H:%M"),
+	      'timezone':time.tzname,
+	      'operating system': platform.system(),
+	      'os release':platform.release(),
+	      'os version':platform.version(),
+	      'cpu data':cpu_data,
+	      'space left': list(psutil.disk_usage('/'))[2]/1000000000}
+	return data
+		
 def prev_dir(directory):
 	g=directory.split('/')
 	dir_=''
@@ -45,6 +56,7 @@ def make_features(sampletype):
 	settings=json.load(open('settings.json'))
 	
 	data={'sampletype': sampletype,
+	      'device info': device_info(), 
 	      'transcripts': transcripts,
 	      'features': features,
 	      'models': models,

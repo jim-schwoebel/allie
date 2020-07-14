@@ -21,36 +21,6 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def make_features(sampletype):
-
-	# only add labels when we have actual labels.
-	features={'audio':dict(),
-			  'text': dict(),
-			  'image':dict(),
-			  'video':dict(),
-			  'csv': dict(),
-			  }
-
-	transcripts={'audio': dict(),
-				 'text': dict(),
-				 'image': dict(),
-				 'video': dict(),
-				 'csv': dict()}
-
-	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-	
-	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-	      	  'models': models,
-		  'labels': []}
-
-	return data
-
 def video_featurize(feature_set, videofile, cur_dir, haar_dir, help_dir, fast_model):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
@@ -81,6 +51,8 @@ def audio_transcribe(default_audio_transcriber, audiofile):
 basedir=os.getcwd()
 help_dir=basedir+'/helpers'
 prevdir=prev_dir(basedir)
+sys.path.append(prevdir)
+from standard_array import make_features, device_info
 
 # audioset_dir=prevdir+'/audio_features'
 # os.chdir(audioset_dir)

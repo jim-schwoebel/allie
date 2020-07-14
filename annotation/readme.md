@@ -23,6 +23,18 @@ timesplit
 - Image - https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5
 - Video - https://github.com/ElbitSystems/AnnotationTool (audio, image(s), and text transcription frames) and https://github.com/xinshuoweng/AB3DMOT (3D object tracking)
 
+## Learn more
+
+[submodule "datasets/labeling/sound_event_detection"]
+	path = datasets/labeling/sound_event_detection
+	url = https://github.com/jim-schwoebel/sound_event_detection
+[submodule "datasets/labeling/labelImg"]
+	path = datasets/labeling/labelImg
+	url = https://github.com/tzutalin/labelImg
+[submodule "datasets/labeling/labelme"]
+	path = datasets/labeling/labelme
+	url = https://github.com/wkentaro/labelme
+
 ## Can now use for classification and/or regression
 
 ### classification

@@ -53,7 +53,7 @@ def make_features(sampletype):
 	# getting settings can be useful to see if settings are the same in every
 	# featurization, as some featurizations can rely on certain settings to be consistent
 	prevdir=prev_dir(os.getcwd())
-	settings=json.load(open('settings.json'))
+	settings=json.load(open(prevdir+'/settings.json'))
 	
 	data={'sampletype': sampletype,
 	      'device info': device_info(), 

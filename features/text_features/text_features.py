@@ -145,20 +145,23 @@ def emotion_freqs(importtext):
         if tokens[i].lower() in anticipationwords:
             anticipation=anticipation+1
 
-    fearfreq=float(fear/len(tokens))
-    angerfreq=float(anger/len(tokens))
-    sadfreq=float(sad/len(tokens))
-    joyfreq=float(joy/len(tokens))
-    disgustfreq=float(disgust/len(tokens))
-    surprisefreq=float(surprise/len(tokens))
-    trustfreq=float(trust/len(tokens))
-    anticipationfreq=float(anticipation/len(tokens))
-    
-    return [fearfreq,angerfreq,sadfreq,joyfreq,disgustfreq,surprisefreq,trustfreq,anticipationfreq]
+    try:
+        fearfreq=float(fear/len(tokens))
+        angerfreq=float(anger/len(tokens))
+        sadfreq=float(sad/len(tokens))
+        joyfreq=float(joy/len(tokens))
+        disgustfreq=float(disgust/len(tokens))
+        surprisefreq=float(surprise/len(tokens))
+        trustfreq=float(trust/len(tokens))
+        anticipationfreq=float(anticipation/len(tokens))
+        array_=[fearfreq,angerfreq,sadfreq,joyfreq,disgustfreq,surprisefreq,trustfreq,anticipationfreq]
+    except:
+        array_=[0,0,0,0,0,0,0,0,0]
+    return 
 
 def datewords_freq(importtext):
 
-    text=word_tokenize(importtext)
+    text=word_tokenize(importtext.lower())
     datewords=['time','monday','tuesday','wednesday','thursday','friday','saturday','sunday','january','february','march','april','may','june','july','august','september','november','december','year','day','hour','today','month',"o'clock","pm","am"]
     datewords2=list()
     for i in range(len(datewords)):
@@ -173,7 +176,10 @@ def datewords_freq(importtext):
             
     datewords=datecount
 
-    datewordfreq=datecount/len(text)
+    try:
+        datewordfreq=datecount/len(text)
+    except:
+        datewordfreq=0
 
     return datewordfreq
 
@@ -259,13 +265,13 @@ def text_featurize(transcript):
   features=list()
   # extract features
   features1=[filler_ratio(transcript),
-  		  type_token_ratio(transcript),
-  		  standardized_word_entropy(transcript),
-  		  question_ratio(transcript),
-  		  number_ratio(transcript),
-  		  brunets_index(transcript),
-  		  honores_statistic(transcript),
-  		  datewords_freq(transcript)]
+          type_token_ratio(transcript),
+          standardized_word_entropy(transcript),
+          question_ratio(transcript),
+          number_ratio(transcript),
+          brunets_index(transcript),
+          honores_statistic(transcript),
+          datewords_freq(transcript)]
   features2=emotion_freqs(transcript)
   features3=word_stats(transcript)
   features4=num_sentences(transcript)
@@ -273,7 +279,7 @@ def text_featurize(transcript):
 
   # extract labels 
   labels1=['filler ratio', 'type token ratio', 'standardized word entropy', 'question ratio', 'number ratio', 'Brunets Index',
-  		'Honores statistic', 'datewords freq']
+        'Honores statistic', 'datewords freq']
   labels2=['fearfreq', 'angerfreq', 'sadfreq', 'joyfreq', 'disgustfreq', 'surprisefreq', 'trustfreq', 'anticipationfreq']
   labels3=['word number', 'five word count', 'max word length', 'min word length', 'variance of vocabulary', 'std of vocabulary']
   labels4=['sentencenum', 'periods', 'questions', 'interjections']

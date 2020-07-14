@@ -35,36 +35,6 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def make_features(sampletype):
-
-	# only add labels when we have actual labels.
-	features={'audio':dict(),
-			  'text': dict(),
-			  'image':dict(),
-			  'video':dict(),
-			  'csv': dict(),
-			  }
-
-	transcripts={'audio': dict(),
-				 'text': dict(),
-				 'image': dict(),
-				 'video': dict(),
-				 'csv': dict()}
-
-	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-	
-	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-	      	  'models': models,
-		  'labels': []}
-	
-	return data
-
 def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel, bert_model):
 
 	if feature_set == 'nltk_features':
@@ -116,6 +86,8 @@ basedir=os.getcwd()
 
 # directory=sys.argv[1]
 settingsdir=prev_dir(basedir)
+sys.path.append(settingsdir)
+from standard_array import make_features, device_info
 settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
@@ -330,8 +302,3 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 
 		except:
 			print('error')
-
-
-
-
-

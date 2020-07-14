@@ -29,7 +29,7 @@ def prev_dir(directory):
 # import to get image feature script 
 directory=os.getcwd()
 prevdir=prev_dir(directory)
-from standard_array import make_features
+from standard_array import make_features, device_info
 sys.path.append(prevdir+'/image_features')
 haar_dir=prevdir+'/image_features/helpers/haarcascades'
 import image_features as imf

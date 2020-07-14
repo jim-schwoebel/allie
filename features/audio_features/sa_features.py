@@ -3,7 +3,7 @@ from Signal_Analysis.features.signal import get_F_0, get_HNR, get_Jitter, get_Pu
 # os.system('pip3 install Signal_Analysis==0.1.26')
 import numpy as np
 
-def signalanalysis_featurize(audiofile):
+def sa_featurize(audiofile):
 	'''
 	from the docs 
 	https://brookemosby.github.io/Signal_Analysis/Signal_Analysis.features.html#module-Signal_Analysis.features.signal

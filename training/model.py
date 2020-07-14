@@ -26,7 +26,7 @@ female = second class [via N number of classes]
 ###############################################################
 ##                  IMPORT STATEMENTS                        ##
 ###############################################################
-import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime, uuid
+import os, sys, pickle, json, random, shutil, time, itertools, uuid, datetime, uuid, psutil, json, platform
 from pyfiglet import Figlet
 f=Figlet(font='doh')
 print(f.renderText('Allie'))
@@ -128,6 +128,30 @@ def convert_csv(X_train, y_train, labels, mtype, classes):
 	data=pd.DataFrame(data, columns = list(data))
 	# print this because in pretty much every case you will write the .CSV file afterwards
 	print('writing csv file...')
+
+	return data
+
+def device_info():
+	cpu_data={'memory':psutil.virtual_memory(),
+			   'cpu percent':psutil.cpu_percent(),
+			   'cpu times':psutil.cpu_times(),
+			   'cpu count':psutil.cpu_count(),
+			   'cpu stats':psutil.cpu_stats(),
+			   'cpu freq':psutil.cpu_freq(),
+			   'cpu swap':psutil.swap_memory(),
+			   'partitions':psutil.disk_partitions(),
+			   'disk usage':psutil.disk_usage('/'),
+			   'disk io counters':psutil.disk_io_counters(),
+			   'battery':psutil.sensors_battery(),
+			   'boot time':psutil.boot_time(),
+			   }
+	data={'time':datetime.datetime.now().strftime("%Y-%m-%d %H:%M"),
+		  'timezone':time.tzname,
+		  'operating system': platform.system(),
+		  'os release':platform.release(),
+		  'os version':platform.version(),
+		  'cpu data':cpu_data,
+		  'space left': list(psutil.disk_usage('/'))[2]/1000000000}
 
 	return data
 
@@ -264,6 +288,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 
 	data={'sample type': problemtype,
 		  'created date': str(datetime.datetime.now()),
+		  'device info': device_info(),
 		  'session id': model_session,
 		  'classes': classes,
 	      'model type': mtype,
@@ -286,6 +311,9 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	jsonfile=open(jsonfilename,'w')
 	json.dump(data,jsonfile)
 	jsonfile.close()
+
+	# also output requirements.txt for reproducibilty purposes
+	os.system('pip3 freeze -> requirements.txt')
 
 def plot_roc_curve(y_test, probs, clf_names):  
 	'''

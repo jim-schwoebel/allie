@@ -6,31 +6,6 @@ to ensure maximal code reusability
 '''
 import os, time, psutil, json, platform
 from datetime import datetime
-
-def device_info():
-	cpu_data={'memory':psutil.virtual_memory(),
-			   'cpu percent':psutil.cpu_percent(),
-			   'cpu times':psutil.cpu_times(),
-			   'cpu count':psutil.cpu_count(),
-			   'cpu stats':psutil.cpu_stats(),
-			   'cpu freq':psutil.cpu_freq(),
-			   'cpu swap':psutil.swap_memory(),
-			   'partitions':psutil.disk_partitions(),
-			   'disk usage':psutil.disk_usage('/'),
-			   'disk io counters':psutil.disk_io_counters(),
-			   'battery':psutil.sensors_battery(),
-			   'boot time':psutil.boot_time(),
-			   }
-		   
-	data={'time':datetime.now().strftime("%Y-%m-%d %H:%M"),
-		  'timezone':time.tzname,
-		  'operating system': platform.system(),
-		  'os release':platform.release(),
-		  'os version':platform.version(),
-		  'cpu data':cpu_data,
-		  'space left': list(psutil.disk_usage('/'))[2]/1000000000}
-
-	return data
 		
 def prev_dir(directory):
 	g=directory.split('/')
@@ -48,22 +23,22 @@ def make_features(sampletype):
 
 	# only add labels when we have actual labels.
 	features={'audio':dict(),
-		  'text': dict(),
-		  'image':dict(),
-		  'video':dict(),
-		  'csv': dict()}
+		      'text': dict(),
+		      'image':dict(),
+		      'video':dict(),
+		      'csv': dict()}
 
 	transcripts={'audio': dict(),
-			 'text': dict(),
-			 'image': dict(),
-			 'video': dict(),
-			 'csv': dict()}
+				 'text': dict(),
+				 'image': dict(),
+				 'video': dict(),
+				 'csv': dict()}
 			   
 	models={'audio': dict(),
-		'text': dict(),
-		'image': dict(),
-		'video': dict(),
-		'csv': dict()}
+			'text': dict(),
+			'image': dict(),
+			'video': dict(),
+			'csv': dict()}
 	
 	# getting settings can be useful to see if settings are the same in every
 	# featurization, as some featurizations can rely on certain settings to be consistent
@@ -71,7 +46,6 @@ def make_features(sampletype):
 	settings=json.load(open(prevdir+'/settings.json'))
 	
 	data={'sampletype': sampletype,
-		  'device info': device_info(), 
 		  'transcripts': transcripts,
 		  'features': features,
 		  'models': models,

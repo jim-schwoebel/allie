@@ -143,7 +143,6 @@ looking into actively
 * [pb_bss](https://github.com/fgnt/pb_bss/blob/master/examples/mixture_model_example.ipynb) - blind source separation (training models)
 * [Kaldi](https://pykaldi.github.io/api/kaldi.feat.html#)
 * [Pysptk](https://github.com/r9y9/pysptk) - Tokoyo based lab
-* [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [speechpy](https://github.com/astorfi/speechpy)
 * [sigfeat](https://github.com/SiggiGue/sigfeat)
 * [kapre-kears](https://github.com/keunwoochoi/kapre)
@@ -172,6 +171,7 @@ tried but not user friendly
 * [resin](https://github.com/kylerbrown/resin) - copyleft license
 
 ### Text
+* [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [keras-bert](https://github.com/CyberZHG/keras-bert)
 * [Flair](https://github.com/flairNLP/flair)
 * [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) - from references

@@ -312,7 +312,12 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	jsonfile.close()
 
 	# also output requirements.txt for reproducibilty purposes
+	curdir=os.getcwd()
+	basedir=prev_dir(curdir)
+	os.chdir(basedir)
 	os.system('pip3 freeze -> requirements.txt')
+	shutil.copytree(prev_dir(prev_dir(basedir))+'/features', basedir+'/features')
+	os.chdir(curdir)
 
 def plot_roc_curve(y_test, probs, clf_names):  
 	'''

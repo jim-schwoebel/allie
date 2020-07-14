@@ -43,7 +43,11 @@ def make_features(sampletype):
 	# getting settings can be useful to see if settings are the same in every
 	# featurization, as some featurizations can rely on certain settings to be consistent
 	prevdir=prev_dir(os.getcwd())
-	settings=json.load(open(prevdir+'/settings.json'))
+	try:
+		settings=json.load(open(prevdir+'/settings.json'))
+	except:
+		# this is for folders that may be 2 layers deep in train_dir
+		settings=json.load(open(prev_dir(prevdir)+'/settings.json'))
 	
 	data={'sampletype': sampletype,
 		  'transcripts': transcripts,

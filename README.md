@@ -48,6 +48,8 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- added audio_features/loudness_features.py using pyloudnorm (in dB)
+- cleaned up audio_features/sa_feature array to be a simpler # of lines (and made a fixed length-array)
 - fixed bug in loading AutoGluon models for making predictions with the load.py script in the ./models/ directory (and loading model_type variable generally)
 - add in ['zscore','isolationforest'] to remove outliers (https://stackoverflow.com/questions/51390196/how-to-calculate-cooks-distance-dffits-using-python-statsmodel) - remove_outliers == True / False.
 - added a sample validation script in the ./models directory to quickly assess how well machine learning models generalize to new datasets

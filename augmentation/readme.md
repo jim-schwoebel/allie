@@ -8,6 +8,43 @@ Typical augmentation scheme is to take 50% of the data and augment it and leave 
 
 You can read more about data augmentation [here](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c).
 
+OLD SUBMODULES
+```
+[submodule "datasets/augmentation/eda_nlp"]
+	path = datasets/augmentation/eda_nlp
+	url = https://github.com/jasonwei20/eda_nlp
+[submodule "datasets/augmentation/imgaug"]
+	path = datasets/augmentation/imgaug
+	url = https://github.com/aleju/imgaug
+[submodule "datasets/augmentation/vidaug"]
+	path = datasets/augmentation/vidaug
+	url = https://github.com/okankop/vidaug
+[submodule "datasets/PyDataset"]
+	path = datasets/PyDataset
+	url = https://github.com/iamaziz/PyDataset
+[submodule "datasets/youtube_scrape"]
+	path = datasets/youtube_scrape
+	url = https://github.com/jim-schwoebel/youtube_scrape
+[submodule "training/keras_compressor"]
+	path = training/keras_compressor
+	url = https://github.com/DwangoMediaVillage/keras_compressor
+[submodule "training/scikit-small-ensemble"]
+	path = training/scikit-small-ensemble
+	url = https://github.com/stewartpark/scikit-small-ensemble
+[submodule "datasets/labeling/sound_event_detection"]
+	path = datasets/labeling/sound_event_detection
+	url = https://github.com/jim-schwoebel/sound_event_detection
+[submodule "datasets/labeling/labelImg"]
+	path = datasets/labeling/labelImg
+	url = https://github.com/tzutalin/labelImg
+[submodule "datasets/labeling/labelme"]
+	path = datasets/labeling/labelme
+	url = https://github.com/wkentaro/labelme
+[submodule "datasets/augmentation/audio_augmentation"]
+	path = datasets/augmentation/audio_augmentation
+	url = https://github.com/jim-schwoebel/audio_augmentation
+```
+
 ## Types of augmentation
 
 There are two main types of data augmentation:

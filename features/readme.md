@@ -138,7 +138,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### Audio
 looking into actively
 * [pysepm](https://github.com/schmiph2/pysepm) - speech quality measures
-* [Singal analysis](https://pypi.org/project/Signal_Analysis/) - speech analysis script - harmonic analysis
 * [pystoi](https://github.com/mpariente/pystoi) - speech intelligibility measure 
 * [pb_bss](https://github.com/fgnt/pb_bss/blob/master/examples/mixture_model_example.ipynb) - blind source separation (training models)
 * [Kaldi](https://pykaldi.github.io/api/kaldi.feat.html#)

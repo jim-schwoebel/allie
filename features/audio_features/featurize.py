@@ -29,6 +29,7 @@ def prev_dir(directory):
 # import to get image feature script 
 directory=os.getcwd()
 prevdir=prev_dir(directory)
+from standard_array import make_features
 sys.path.append(prevdir+'/image_features')
 haar_dir=prevdir+'/image_features/helpers/haarcascades'
 import image_features as imf
@@ -270,36 +271,6 @@ def audio_featurize(feature_set, audiofile, transcript):
 	features=features.tolist()
 
 	return features, labels 
-
-def make_features(sampletype):
-
-	# only add labels when we have actual labels.
-	features={'audio':dict(),
-			  'text': dict(),
-			  'image':dict(),
-			  'video':dict(),
-			  'csv': dict(),
-			  }
-
-	transcripts={'audio': dict(),
-				 'text': dict(),
-				 'image': dict(),
-				 'video': dict(),
-				 'csv': dict()}
-	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-	
-	data={'sampletype': sampletype,
-		  'transcripts': transcripts,
-		  'features': features,
-	      	  'models': models,
-		  'labels': []}
-
-	return data
-
 
 ################################################
 ##	    		Load main settings    		  ##

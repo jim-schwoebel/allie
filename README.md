@@ -17,7 +17,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
-- add 'pip3 freeze > requirements.txt' --> to machine learning model training systems to reproduct environments on different CPUs 
 - add error handling into all of Allie's featurizations + error array into feature array itself ("error" form of column on features)
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
@@ -49,6 +48,8 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- fix small bug .JSON files for model files.
+- add 'pip3 freeze > requirements.txt' --> to machine learning model training systems to reproduct environments on different CPUs 
 - added audio_features/loudness_features.py using pyloudnorm (in dB)
 - cleaned up audio_features/sa_feature array to be a simpler # of lines (and made a fixed length-array)
 - fixed bug in loading AutoGluon models for making predictions with the load.py script in the ./models/ directory (and loading model_type variable generally)

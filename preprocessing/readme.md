@@ -108,7 +108,7 @@ array([2, 2, 1]...)
 
 ### dimensionality reduction
 - Principal Components Analysis (PCA): Rscript, RPubs
-- Factor Analysis (FA): Rscript, RPubs
+- Factor Analysis (FA): Rscript, RPubs (https://github.com/EducationalTestingService/factor_analyzer.git)
 - Multidimensional Scaling (MDS)
 - Linear Discriminate Analysis (LDA): Rscript, RPubs
 - Quadratic Discriminate Analysis (QDA): Rscript, RPubs

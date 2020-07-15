@@ -223,6 +223,8 @@ def audio_clean(cleaning_set, audiofile, basedir):
 		clean_multispeaker.clean_multispeaker(audiofile,modeldir)
 	elif cleaning_set == 'clean_normalizevolume':
 		clean_normalizevolume.clean_normalizevolume(audiofile)
+	elif cleaning_set == 'clean_random20secsplice':
+		clean_random20secsplice.clean_random20secsplice(audiofile)
 	elif cleaning_set == 'clean_removenoise':
 		clean_removenoise.clean_removenoise(audiofile)
 	elif cleaning_set == 'clean_removesilence':
@@ -266,6 +268,8 @@ elif 'clean_multispeaker' in cleaning_sets:
 	import clean_multispeaker
 elif 'clean_normalizevolume' in cleaning_sets:
 	import clean_normalizevolume
+elif 'clean_random20secsplice' in cleaning_sets:
+	import clean_random20secsplice
 elif 'clean_removenoise' in cleaning_sets:
 	import clean_removenoise
 elif 'clean_removesilence' in cleaning_sets:
@@ -297,6 +301,10 @@ else:
 
 deleted_files=list()
 
+# rename files appropriately
+for i in range(len(listdir)):
+	os.rename(listdir[i],listdir[i].replace(' ',''))
+
 # remove duplicates / json files
 for i in tqdm(range(len(listdir)), desc=labelname):
 	file=listdir[i]
@@ -317,8 +325,9 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 					pass
 		except:
 			pass 
-	print('deleted the files below')
-	print(deleted_files)
+			
+print('deleted the files below')
+print(deleted_files)
 
 listdir=os.listdir() 
 for i in tqdm(range(len(listdir))):

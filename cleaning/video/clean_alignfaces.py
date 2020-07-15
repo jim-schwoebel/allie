@@ -173,7 +173,7 @@ def cut_faces(modeldir,filename):
 	# import data later 
 	hostdir=os.getcwd()
 	# capture_video(filename, 5)
-	face_cascade = cv2.CascadeClassifier(os.getcwd()+'/haarcascade_frontalface_default.xml')
+	face_cascade = cv2.CascadeClassifier(os.getcwd()+'/helpers/haarcascade_frontalface_default.xml')
 	foldername=filename[0:-4]+'_faces'
 
 	try:
@@ -249,9 +249,9 @@ for folder in folders[1:]:
 	path = path + "/" + folder
 
 # other stuff
-face_detector_path = path+"/data/haarcascade_frontalface_default.xml"
-eye_detector_path = path+"/data/haarcascade_eye.xml"
-nose_detector_path = path+"/data/haarcascade_mcs_nose.xml"
+face_detector_path = path+"/helpers/haarcascade_frontalface_default.xml"
+eye_detector_path = path+"/helpers/haarcascade_eye.xml"
+nose_detector_path = path+"/helpers/haarcascade_mcs_nose.xml"
 
 if os.path.isfile(face_detector_path) != True:
 	raise ValueError("Confirm that opencv is installed on your environment! Expected path ",detector_path," violated.")

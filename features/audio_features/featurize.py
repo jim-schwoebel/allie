@@ -245,6 +245,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 	elif feature_set == 'myprosody_features':
 		print('Myprosody features are coming soon!! Currently debugging this feature set.')
 		# features, labels = myprosody_features.myprosody_featurize(audiofile, cur_dir, help_dir)
+	elif feature_set == 'multispeaker_features':
+		features, labels = multispeaker_features.multispeaker_featurize(audiofile)
 	elif feature_set == 'nltk_features':
 		features, labels = nltk_features.nltk_featurize(transcript)
 	elif feature_set == 'opensmile_features':
@@ -320,6 +322,8 @@ if 'meta_features' in feature_sets:
 	os.system('pip3 install scikit-learn==0.19.1')
 if 'mixed_features' in feature_sets:
 	import mixed_features
+if 'multispeaker_features' in feature_sets:
+	import multispeaker_features
 if 'myprosody_features' in feature_sets:
 	pass
 	# import myprosody_features as mpf

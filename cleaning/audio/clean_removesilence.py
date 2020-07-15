@@ -1,11 +1,11 @@
-import collections, contextlib, sys, wave, webrtcvad, os, sys
+import collections, contextlib, sys, wave, webrtcvad, os, sys, uuid
 
-def convert_mono(wavfile):
-    # force conversion to mono to remove silence.
-    print(wavfile)
-    os.system('sox %s -c 1 -r 48k outfile.wav'%(wavfile))
-    os.remove(wavfile)
-    os.rename('outfile.wav', wavfile)
+def convert_mono(audiofile):
+    # force conversion to mono to remove silence (16000 Hz, mono, 16 bit depth)
+    tempfile=str(uuid.uuid1())+'.wav'
+    os.system('sox %s -r 16000 -c 1 -b 16 %s'%(audiofile,tempfile))
+    os.remove(audiofile)
+    os.rename(tempfile, audiofile)
 
 def read_wave(path):
     """Reads a .wav file.
@@ -139,10 +139,10 @@ def vad_collector(sample_rate, frame_duration_ms,
         yield b''.join([f.bytes for f in voiced_frames])
 
 
-def remove_silence(wavfile):
+def clean_removesilence(audiofile):
     # convert to mono for the voice activity detector to work.
-    convert_mono(wavfile)
-    audio, sample_rate = read_wave(wavfile)
+    convert_mono(audiofile)
+    audio, sample_rate = read_wave(audiofile)
     # set aggressiveness here. [1,3]
     vad = webrtcvad.Vad(int(1))
     frames = frame_generator(30, audio, sample_rate)
@@ -158,35 +158,11 @@ def remove_silence(wavfile):
     soxcmd='sox'
     for i in range(len(framelist)):
         soxcmd=soxcmd+' %s'%(framelist[i])
-    soxcmd=soxcmd+' %s'%(wavfile)
+    soxcmd=soxcmd+' %s'%(audiofile)
     print(soxcmd)
-    os.rename(wavfile,wavfile[0:-4]+'_temp.wav')
+    os.rename(audiofile,audiofile[0:-4]+'_temp.wav')
     os.system(soxcmd)
     # remove temporary files and leave only cleaned files 
-    os.remove(wavfile[0:-4]+'_temp.wav')
+    os.remove(audiofile[0:-4]+'_temp.wav')
     for i in range(len(framelist)):
         os.remove(framelist[i])
-
-print('-----------------------------')
-print('       REMOVING SILENCE      ')
-print('-----------------------------')
-
-try:
-    folderpath=sys.argv[1]
-except:
-    folderpath=input('what is the folder path you would like to clean? \n (e.g. /Users/jimschwoebel/allie/train_dir/one) \n')
-
-print(folderpath)
-os.chdir(folderpath)
-altered_files=list()
-
-listdir=os.listdir()
-for i in range(len(listdir)):
-    print(listdir[i])
-    if listdir[i][-4:]=='.wav':
-        remove_silence(listdir[i])
-        altered_files.append(listdir[i])
-
-print('%s files removed silence: \n'%(str(len(altered_files))))
-print(str(altered_files))
-print('-----------------------------')

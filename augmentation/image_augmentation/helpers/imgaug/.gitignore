@@ -1,0 +1,78 @@
+*.py~
+*.rst~
+*.md~
+*.bak
+*.lprof
+reinstall.sh
+reinstall_conda.sh
+todo.txt
+pypi-install-guide.txt
+checks/bb_aug.jpg
+checks/elastic_transformations.jpg
+imgaug/parameters-testcode.py
+imgaug/bak/*
+imgaug/quokka_depth_map.xcf
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# PyCHarm
+.idea/
+
+# virtualenv
+venv/
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/

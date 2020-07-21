@@ -118,6 +118,7 @@ array([2, 2, 1]...)
 ### Feature selection techniques
 
 - All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
+- LOFO -  https://github.com/aerdem4/lofo-importance
 - FCBF - https://github.com/shiralkarprashant/FCBF
 - wkNN-FS - https://github.com/bugatap/WkNN-FS
 - https://github.com/chasedehan/BoostARoota - random forest methods (faster than Boruta) or [here](https://github.com/dawidkopczyk/feature_selection/blob/master/algorithms.py)

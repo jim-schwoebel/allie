@@ -407,6 +407,7 @@ The output .JSON will look something like this:
 
 ### 😉 Exploring now
 * [tune-sklearn](https://github.com/ray-project/tune-sklearn) - add this to scsr script
+* [auto_ts](https://github.com/AutoViML/Auto_TS/blob/master/Auto_Timeseries_Test.ipynb) - auto_timeseries
 * [cottonwood](https://gitlab.com/brohrer/cottonwood)
 * [autoML Alex](https://github.com/Alex-Lekov/AutoML_Alex)
 * [metric_learn](https://github.com/scikit-learn-contrib/metric-learn)

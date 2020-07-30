@@ -218,7 +218,7 @@ if select_features == True:
 	for i in range(len(default_selectors)):
 		feature_selector=default_selectors[i]
 		print(feature_selector.upper())
-		selection_model=fse_.feature_select(feature_selector, X_train, y_train, int(component_num/2))
+		selection_model=fse_.feature_select(feature_selector, X_train, y_train, component_num)
 		estimators.append((feature_selector, selection_model))
 
 print(estimators)

@@ -178,7 +178,9 @@ elif train_type == 'r':
 	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 
 # create a scikit-learn pipeline
-component_num=settings['feature_number']
+feature_num=settings['feature_number']
+component_num=settings['dimension_number']
+
 estimators = []
 os.chdir(basedir+'/train_dir')
 
@@ -217,8 +219,8 @@ if select_features == True:
 	import feature_select as fse_
 	for i in range(len(default_selectors)):
 		feature_selector=default_selectors[i]
-		print(feature_selector.upper())
-		selection_model=fse_.feature_select(feature_selector, X_train, y_train, component_num)
+		print(feature_selector.upper()+' - %s features'%(str(feature_num)))
+		selection_model=fse_.feature_select(feature_selector, X_train, y_train, feature_num)
 		estimators.append((feature_selector, selection_model))
 
 print(estimators)

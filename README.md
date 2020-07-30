@@ -48,6 +48,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- added component numbers for both dimensionality reducers and feature selectors in settings.json
 - fix small bug .JSON files for model files.
 - add 'pip3 freeze > requirements.txt' --> to machine learning model training systems to reproduct environments on different CPUs 
 - added audio_features/loudness_features.py using pyloudnorm (in dB)

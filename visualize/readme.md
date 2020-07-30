@@ -236,6 +236,7 @@ Heatmap with removed correlated variables
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds.png)
 
 ## Working on now 
+* [RFE number of features ideal](https://machinelearningmastery.com/rfe-feature-selection-in-python/)
 * [Probability calibration curves](https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py)
 * Making heatmaps work with top 20 features (to make axes readable)
 * add in RFE in feature section (https://www.scikit-yb.org/en/latest/api/model_selection/rfecv.html) 

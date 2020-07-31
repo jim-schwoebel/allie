@@ -8,6 +8,7 @@ Here are some things that Allie can do:
 - [visualize](https://github.com/jim-schwoebel/allie/tree/master/visualize) featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
 - [train](https://github.com/jim-schwoebel/allie/tree/master/training) machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
 - [make predictions](https://github.com/jim-schwoebel/allie/tree/master/load_dir) from machine learning models (with all models trained in ./models directory)
+- [export data] in .CSV file formats for repeatable machine learning experiments.
 - [compress](https://github.com/jim-schwoebel/allie/tree/master/training) machine learning models for deployment (including repositories with readmes)
 
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)

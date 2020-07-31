@@ -225,6 +225,8 @@ def audio_clean(cleaning_set, audiofile, basedir):
 		clean_multispeaker.clean_multispeaker(audiofile,modeldir)
 	elif cleaning_set == 'clean_normalizevolume':
 		clean_normalizevolume.clean_normalizevolume(audiofile)
+	elif cleaning_set == 'clean_opus':
+		clean_opus.clean_opus(audiofile,basedir+'/helpers/opustools/')
 	elif cleaning_set == 'clean_random20secsplice':
 		clean_random20secsplice.clean_random20secsplice(audiofile)
 	elif cleaning_set == 'clean_removenoise':
@@ -270,6 +272,8 @@ elif 'clean_keyword' in cleaning_sets:
 	import clean_keyword
 elif 'clean_multispeaker' in cleaning_sets:
 	import clean_multispeaker
+elif 'clean_opus' in cleaning_sets:
+	import clean_opus
 elif 'clean_normalizevolume' in cleaning_sets:
 	import clean_normalizevolume
 elif 'clean_random20secsplice' in cleaning_sets:

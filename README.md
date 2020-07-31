@@ -3,6 +3,7 @@ Allie is a framework for building machine learning models from audio, text, imag
 
 Here are some things that Allie can do:
 - [annotate](https://github.com/jim-schwoebel/allie/tree/master/annotation) audio, text, image, or video files (via default annotation scripts)
+- [clean](https://github.com/jim-schwoebel/allie/tree/master/clean) and [augment](https://github.com/jim-schwoebel/allie/tree/master/augment) audio, text, image, or video datasets
 - [featurize](https://github.com/jim-schwoebel/allie/tree/master/features) files using a standard format (via audio, text, image, video, or csv featurizers)
 - [transform](https://github.com/jim-schwoebel/allie/tree/master/preprocessing) features (via scikit-learn preprocessing techniques)
 - [visualize](https://github.com/jim-schwoebel/allie/tree/master/visualize) featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)

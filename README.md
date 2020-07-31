@@ -17,7 +17,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing 
-- add error handling into all of Allie's featurizations + error array into feature array itself ("error" form of column on features)
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
@@ -48,6 +47,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- add error handling into all of Allie's featurizations + error array into feature array itself ("error" form of column on features)
 - kept create_readme setting for making readmes in the repositories themselves (deleted create_YAML setting)
 - deleted the production folder schema within Allie
 - added component numbers for both dimensionality reducers and feature selectors in settings.json

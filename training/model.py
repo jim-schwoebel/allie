@@ -316,7 +316,10 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	basedir=prev_dir(curdir)
 	os.chdir(basedir)
 	os.system('pip3 freeze -> requirements.txt')
-	shutil.copytree(prev_dir(prev_dir(basedir))+'/features', basedir+'/features')
+	try:
+		shutil.copytree(prev_dir(prev_dir(basedir))+'/features', basedir+'/features')
+	except:
+		print('error copying features')
 	os.chdir(curdir)
 
 def plot_roc_curve(y_test, probs, clf_names):  
@@ -1270,6 +1273,7 @@ i=0
 for i in tqdm(range(len(default_training_scripts)), desc=default_training_scripts[i]):
 
 	try:
+	
 		# go to model directory 
 		os.chdir(model_dir)
 
@@ -1453,6 +1457,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 		
 		# now move to the proper models directory
 		os.chdir(model_dir)
+		os.system('python3 create_readme.py %s'%(os.getcwd()+'/'+foldername))
 
 		try:
 			os.chdir(problemtype+'_models')

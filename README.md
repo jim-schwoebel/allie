@@ -2,7 +2,7 @@
 Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files.
 
 Here are some things that Allie can do:
-- annotate audio, text, image, or video files (via default annotation scripts)
+- [annotate](https://github.com/jim-schwoebel/allie/tree/master/annotation) audio, text, image, or video files (via default annotation scripts)
 - featurize files and export data in .CSV format (via audio, text, image, video, or csv featurizers)
 - transform features (via scikit-learn preprocessing techniques)
 - create visualizations from featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)

@@ -2,14 +2,13 @@
 Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files.
 
 Here are some things that Allie can do:
-- [find](https://github.com/jim-schwoebel/allie/tree/master/datasets) and download datasets (for quick experiments)
 - [annotate](https://github.com/jim-schwoebel/allie/tree/master/annotation), [clean](https://github.com/jim-schwoebel/allie/tree/master/cleaning), and/or [augment](https://github.com/jim-schwoebel/allie/tree/master/augmentation) audio, text, image, or video datasets (to prepare data for modeling)
 - [featurize](https://github.com/jim-schwoebel/allie/tree/master/features) files using a standard format (via audio, text, image, video, or csv featurizers)
 - [transform](https://github.com/jim-schwoebel/allie/tree/master/preprocessing) features (via scikit-learn preprocessing techniques)
 - [visualize](https://github.com/jim-schwoebel/allie/tree/master/visualize) featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
 - [train](https://github.com/jim-schwoebel/allie/tree/master/training) classification or regression machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
 - [make predictions](https://github.com/jim-schwoebel/allie/tree/master/load_dir) from machine learning models (with all models trained in ./models directory)
-- [export data](https://github.com/jim-schwoebel/allie/tree/master/training) in .CSV file formats (for repeatable machine learning experiments)
+- [export data](https://github.com/jim-schwoebel/allie/tree/master/training) in .CSV file formats (for repeatable machine learning experiments across frameworks)
 - [compress](https://github.com/jim-schwoebel/allie/tree/master/training) machine learning models for deployment (including repositories with readmes)
 
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)

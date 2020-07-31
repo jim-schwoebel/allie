@@ -218,6 +218,8 @@ def audio_clean(cleaning_set, audiofile, basedir):
 		clean_mono16hz.clean_mono16hz(audiofile)
 	elif cleaning_set == 'clean_mp3towav':
 		clean_mp3towav.clean_mp3towav(audiofile)
+	elif cleaning_set == 'clean_keyword':
+		clean_keyword.clean_keyword(audiofile,'coconut')
 	elif cleaning_set == 'clean_multispeaker':
 		modeldir=basedir+'/helpers'
 		clean_multispeaker.clean_multispeaker(audiofile,modeldir)
@@ -264,6 +266,8 @@ elif 'clean_mono16hz' in cleaning_sets:
 	import clean_mono16hz
 elif 'clean_mp3towav' in cleaning_sets:
 	import clean_mp3towav
+elif 'clean_keyword' in cleaning_sets:
+	import clean_keyword
 elif 'clean_multispeaker' in cleaning_sets:
 	import clean_multispeaker
 elif 'clean_normalizevolume' in cleaning_sets:

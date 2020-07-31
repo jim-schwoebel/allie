@@ -48,6 +48,8 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- kept create_readme setting for making readmes in the repositories themselves (deleted create_YAML setting)
+- deleted the production folder schema within Allie
 - added component numbers for both dimensionality reducers and feature selectors in settings.json
 - fix small bug .JSON files for model files.
 - add 'pip3 freeze > requirements.txt' --> to machine learning model training systems to reproduct environments on different CPUs 

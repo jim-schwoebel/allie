@@ -5,10 +5,10 @@ Here are some things that Allie can do:
 - [annotate](https://github.com/jim-schwoebel/allie/tree/master/annotation) audio, text, image, or video files (via default annotation scripts)
 - [featurize](https://github.com/jim-schwoebel/allie/tree/master/features) files and export data in .CSV format (via audio, text, image, video, or csv featurizers)
 - [transform](https://github.com/jim-schwoebel/allie/tree/master/preprocessing) features (via scikit-learn preprocessing techniques)
-- [visualize]() featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
-- [train]() machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
-- [make predictions]() from machine learning models (with all models trained in ./models directory)
-- [compress]() machine learning models for deployment (including repositories with readmes)
+- [visualize](https://github.com/jim-schwoebel/allie/tree/master/visualize) featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
+- [train](https://github.com/jim-schwoebel/allie/tree/master/training) machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
+- [make predictions](https://github.com/jim-schwoebel/allie/tree/master/load_dir) from machine learning models (with all models trained in ./models directory)
+- [compress](https://github.com/jim-schwoebel/allie/tree/master/training) machine learning models for deployment (including repositories with readmes)
 
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 

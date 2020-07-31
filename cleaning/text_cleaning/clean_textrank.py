@@ -17,5 +17,5 @@ def extract_phrases(textfile):
 	phrases=open(phrases).read()
 	return phrases
 
-phrases = extract_phrases('test.txt')
-summary = extract_summary('test.txt')
+# phrases = extract_phrases('test.txt')
+# summary = extract_summary('test.txt')

@@ -3,7 +3,6 @@
   "augment_data": false,
   "balance_data": true,
   "clean_data": false,
-  "create_YAML": true,
   "create_csv": true,
   "default_audio_augmenters": [],
   "default_audio_cleaners": [ "clean_mono16hz" ],

@@ -1,4 +1,4 @@
-import os
+import os, random
 
 def augment_pitch(filename):
 	'''
@@ -15,16 +15,14 @@ def augment_pitch(filename):
 	# os.system('sox %s %s pitch -2400'%(filename, basefile+'_freq_0.wav'))
 	# filenames.append(basefile+'_freq_0.wav')
 
+	randint=random.randint(300,600)
 	# down two octave 
-	os.system('sox %s %s pitch -600'%(filename, basefile+'_freq_1.wav'))
-	filenames.append(basefile+'_freq_1.wav')
+	os.system('sox %s %s pitch %s'%(filename, basefile+'_freq_1.wav', str(randint)))
 
+	randint=random.randint(300,600)
 	# up one octave 
-	os.system('sox %s %s pitch 600'%(filename, basefile+'_freq_2.wav'))
-	filenames.append(basefile+'_freq_2.wav')
+	os.system('sox %s %s pitch -%s'%(filename, basefile+'_freq_2.wav', str(randint)))
 
 	# up two octaves 
 	# os.system('sox %s %s pitch 2400'%(filename, basefile+'_freq_3.wav'))
 	# filenames.append(basefile+'_freq_3.wav')
-
-	return filenames 

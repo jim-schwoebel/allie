@@ -209,14 +209,25 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 
 	return transcript 
 
-def audio_augment(cleaning_set, audiofile, basedir):
+def audio_augment(augmentation_set, audiofile, basedir):
 
-	# long conditional on all the types of features that can happen and featurizes accordingly.
-	if cleaning_set == 'augment_':
-		clean_getfirst3secs.clean_getfirst3secs(audiofile)
-	elif cleaning_set == 'clean_mono16hz':
-		clean_mono16hz.clean_mono16hz(audiofile)
-	# transcripts = can look for hotwords and remove
+	# only load the relevant featuresets for featurization to save memory
+	if augmentation_set=='augment_addnoise':
+		augment_addnoise.augment_addnoise(audiofile,os.getcwd(),basedir+'/helpers/audio_augmentation/noise/')
+	elif augmentation_set=='augment_noise':
+		augment_noise.augment_noise(audiofile)
+	elif augmentation_set=='augment_pitch':
+		augment_pitch.augment_pitch(audiofile)
+	elif augmentation_set=='augment_randomsplice':
+		augment_randomsplice.augment_randomsplice(audiofile)
+	elif augmentation_set=='augment_silence':
+		augment_silence.augment_silence(audiofile)
+	elif augmentation_set=='augment_time':
+		augment_time.augment_time(audiofile)
+	elif augmentation_set=='augment_tsaug':
+		augment_tsaug.augment_tsaug(audiofile)
+	elif augmentation_set=='augment_volume':
+		augment_volume.augment_volume(audiofile)
 
 ################################################
 ##              Load main settings            ##
@@ -243,10 +254,22 @@ except:
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-if 'clean_getfirst3secs' in augmentation_sets:
-	import clean_getfirst3secs
-elif 'clean_mono16hz' in augmentation_sets:
-	import clean_mono16hz
+if 'augment_addnoise' in augmentation_sets:
+	import augment_addnoise
+elif 'augment_noise' in augmentation_sets:
+	import augment_noise
+elif 'augment_pitch' in augmentation_sets:
+	import augment_pitch
+elif 'augment_randomsplice' in augmentation_sets:
+	import augment_randomsplice
+elif 'augment_silence' in augmentation_sets:
+	import augment_silence
+elif 'augment_time' in augmentation_sets:
+	import augment_time
+elif 'augment_tsaug' in augmentation_sets:
+	import augment_tsaug
+elif 'augment_volume' in augmentation_sets:
+	import augment_volume
 
 ################################################
 ##          Get featurization folder          ##
@@ -278,4 +301,4 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 	if listdir[i][-4:] in ['.wav', '.mp3', '.m4a']:
 		for j in range(len(augmentation_sets)):
 			augmentation_set=augmentation_sets[j]
-			audio_augment(augmentation_set, filename, basedir)
+			audio_augment(augmentation_set, listdir[i], basedir)

@@ -1,13 +1,14 @@
-import os
+import os, uuid, random, math
+from pydub import AudioSegment
 
-def augment_addnoise(filename,curdir, newfilename):
+def augment_addnoise(filename,curdir, noisedir):
 	if filename[-4:]=='.wav':
 		audioseg=AudioSegment.from_wav(filename)
 	elif filename[-4:]=='.mp3':
 		audioseg=AudioSegment.from_mp3(filename)
 	hostdir=os.getcwd()
 	os.chdir(curdir)
-	os.chdir('noise')
+	os.chdir(noisedir)
 	listdir=os.listdir()
 	if 'noise.wav' in listdir:
 		os.remove('noise.wav')
@@ -30,4 +31,3 @@ def augment_addnoise(filename,curdir, newfilename):
 	# now combine audio file and noise file 
 	os.system('ffmpeg -i %s -i %s -filter_complex "[0:a][1:a]join=inputs=2:channel_layout=stereo[a]" -map "[a]" %s'%(filename, 'noise.wav',filename[0:-4]+'_noise.wav'))
 	os.remove('noise.wav')
-	os.rename(filename[0:-4]+'_noise.wav', newfilename)

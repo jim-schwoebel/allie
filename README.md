@@ -298,7 +298,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | default_outlier_detectors | the specified outlier detector employ when augmenting csv data | ['isolationforest'] | ['isolationforest', 'zscore'] |
 
 ## License
-This repository is licensed under a trade secret. Please do not share this code outside the core team.
+This repository is licensed under an Apache 2.0 License. 
 
 ## Feedback
 Any feedback on the book or this repository is greatly appreciated. 

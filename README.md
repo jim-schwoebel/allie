@@ -16,9 +16,20 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 
 ## active things to finish before a live launch [ongoing list]
 
-### ongoing 
+### ongoing (for version 1.0.0 release)
+- get cleaning and augmentation fully functional 
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
+- tie new datasets with SurveyLex product / CLI interface with downloads
+-  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
+- add in default_augmenters / get live into Allie
+- add in default_cleaners / get live into Allie 
+- add new test cases into Allie / make tests work with new framework
+- documentation of the repository / jupyter notebooks with examples in research paper 
+
+### future releases (1.0.1 release)
+
+- enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
 - create time_split type of setting (for audio and video files) in annotation
 - create live version of annotation script for audio, text, image, and video files (and add-in default_audio_annotators, default_text_annotators, default_image_annotators, and/or default_video_annotators into settings.json)
@@ -28,17 +39,9 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - create single-file featurization mode (instead of folders)
 - add single-file cleaning mode (instead of folders)
 - add single-file augmentation mode (instead of folders)
-- tie new datasets with SurveyLex product / CLI interface with downloads
--  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
-- add in default_augmenters / get live into Allie
-- add in default_cleaners / get live into Allie 
 - create docker containers for production for any arbitrary data type / specify to AWS, GCP, or Azure deployment (in marketplaces) / Flask with Auth0 integration for custom APIs (submit file --> get back model results)
 - make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
-- add new test cases into Allie / make tests work with new framework
-- enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
-- documentation of the repository / jupyter notebooks with examples in research paper 
 - Create nice CLI interface for all of Allie's functionality using OptionParser()
-- fix bugs associated with model loading with different model types (may require different configurations)
 - add in [statsmodels](https://www.statsmodels.org/stable/index.html) and [MLpy](http://mlpy.sourceforge.net/) dimensionality reduction techniques and modeling techniques
 - add in augmentation policies into visualizer to show which augmentation methods work to increase AUC / MSE
 - add in cleaning policies into visualizer to show which cleaning methods work to increase AUC / MSE

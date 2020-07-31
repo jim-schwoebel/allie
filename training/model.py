@@ -1461,7 +1461,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 			os.chdir(problemtype+'_models')
 
 		shutil.move(model_dir+'/'+foldername, os.getcwd()+'/'+foldername)
-		
+
 		############################################################
 		## 					COMPRESS MODELS 					  ##
 		############################################################
@@ -1511,122 +1511,10 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 
 
 		############################################################
-		## 					CREATE YAML FILES 					  ##
+		## 					PRODUCTIONIZING MODELS				  ##
 		############################################################
 
-		create_YAML=settings['create_YAML']
+		# TO BE COMPLETED IN THE FUTURE!
 
-		# note this will only work for pickle files for now. Will upgrade to deep learning
-		# models in the future.
-		if create_YAML == True and default_training_script in ['scsr', 'tpot', 'hypsklearn'] and problemtype=='audio':
-			print(f.renderText('PRODUCTIONIZING MODEL'))
-			# clear the load directory 
-			os.chdir(prevdir+'/load_dir/')
-			listdir=os.listdir()
-			for i in range(len(listdir)):
-				try:
-					# for any files in the ./load_dir 
-					os.remove(listdir[i])
-				except:
-					# for folders in the ./load_dir
-					try:
-						shutil.rmtree(listdir[i])
-					except:
-						print('error, %s not a folder'%(listdir[i]))
-
-			# First need to create some test files for each use case
-			# copy 10 files from each class into the load_dir 
-			copylist=list()
-			print(classes)
-
-			# clear the load_directory 
-			os.chdir(prevdir+'/load_dir/')
-			listdir2=os.listdir()
-			for j in range(len(listdir2)):
-				# remove all files in the load_dir 
-				os.remove(listdir2[j])	
-
-			for i in range(len(classes)):
-				os.chdir(prevdir+'/train_dir/'+classes[i])
-				tempdirectory=os.getcwd()
-				listdir=os.listdir()
-				os.chdir(tempdirectory)
-				count=0
-				
-				# rename files if necessary 
-				# the only other file in the directory should be .json, so this should work
-				for j in range(len(listdir)):
-					# print(listdir[j])
-					if listdir[j].replace(' ','_').replace('-','') not in copylist and listdir[j].endswith('.json') == False:
-						if count >= 10:
-							break
-						else:
-							newname=listdir[j].replace(' ','_').replace('-','')
-							os.rename(listdir[j], newname)
-							shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-							# print(tempdirectory+'/'+listdir[j])
-							copylist.append(newname)
-							count=count+1 
-
-					elif listdir[j].replace(' ','_').replace('-','') in copylist and listdir[j].endswith('.json') == False: 
-						# rename the file appropriately such that there are no conflicts.
-						if count >= 10:
-							break
-						else:
-							newname=str(j)+'_'+listdir[j].replace(' ','_').replace('-','')
-							os.rename(listdir[j], newname)
-							# print(tempdirectory+'/'+newname)
-							shutil.copy(tempdirectory+'/'+newname, prevdir+'/load_dir/'+newname)
-							copylist.append(newname)
-							count=count+1 
-
-			# now apply machine learning model to these files 
-			os.chdir(prevdir+'/models')
-			os.system('python3 load.py')
-
-			# now load up each of these and break loop when tests for each class exist 
-			os.chdir(prevdir+'/load_dir')
-			jsonfiles=list()
-			# iterate through until you find a class that fits in models 
-			listdir=os.listdir()
-
-			for i in range(len(classes)):
-				for j in range(len(listdir)):
-					if listdir[j][-5:]=='.json':
-						try:
-							g=json.load(open(listdir[j]))
-							models=g['models'][problemtype][classes[i]]
-							print(models)
-							features=list()
-							for k in range(len(default_features)):
-								features=features+g['features'][problemtype][default_features[k]]['features']
-							
-							print(features)
-							testfile=classes[i]+'_features.json'
-							print(testfile)
-							jsonfile2=open(testfile,'w')
-							json.dump(features,jsonfile2)
-							jsonfile2.close()
-							shutil.move(os.getcwd()+'/'+testfile, prevdir+'/models/'+problemtype+'_models/'+testfile)
-							break
-						except:
-							pass 
-
-			# now create the YAML file 
-			os.chdir(prevdir+'/production')
-			cmdclasses=''
-			for i in range(len(classes)):
-				if i != len(classes)-1:
-					cmdclasses=cmdclasses+classes[i]+' '
-				else:
-					cmdclasses=cmdclasses+classes[i]
-
-			if 'common_name' in locals():
-				pass 
-			else:
-				common_name=modelname[0:-7]
-
-				jsonfilename=modelname[0:-7]+'.json'
-				os.system('python3 create_yaml.py %s %s %s %s %s'%(problemtype, common_name, modelname, jsonfilename, cmdclasses))
 	except:
 		print('ERROR - error in modeling session')

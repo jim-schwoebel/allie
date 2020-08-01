@@ -51,20 +51,20 @@ Note you can extend this to any of the augmentation types. The table below overv
 * [clean_removesilence]()
 * [clean_utterances]()
 
-### Text
+### [Text](https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning)
 * [clean_summary]() - extracts a summary of a long piece of text and deletes the original work
 * [clean_textacy]() - removes punctuation and a variety of other operations to clean a text
 
-### Image 
+### [Image](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning)
 * [clean_extractfaces]() - extract faces from an image
 * [clean_greyscale]() - make all images greyscale 
 * [clean_jpg2png]() - make images from jpg to png to standardize image formats
 
-### Video
+### [Video](https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning)
 * [clean_alignfaces]() - takes out faces from a video frame and keeps the video for an added label
 * [clean_videostabilize]() - stabilizes a video frame (note this is a WIP)
 
-### CSV
+### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
 * [clean_csv]() - uses datacleaner, a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
 
 ## Future

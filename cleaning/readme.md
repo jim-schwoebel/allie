@@ -26,15 +26,15 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 | Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | 
-| audio files | .MP3 / .WAV | ```python3 clean.py [folderpath]``` | ./allie/augmentation/audio_features | 
-| text files | .TXT | ```python3 clean.py [folderpath]``` | ./allie/augmentation/text_augmentation| 
-| image files | .PNG | ```python3 clean.py [folderpath]``` | ./allie/cleaning/image_augmentation | 
-| video files | .MP4 | ```python3 clean.py [folderpath]``` |./allie/clean/video_augmentation| 
-| csv files | .CSV | ```python3 clean.py [folderpath]``` | ./allie/clean/csv_augmentation | 
+| audio files | .MP3 / .WAV | ```python3 clean.py [folderpath]``` | ./allie/cleaning/audio_cleaning | 
+| text files | .TXT | ```python3 clean.py [folderpath]``` | ./allie/cleaning/text_cleaning| 
+| image files | .PNG | ```python3 clean.py [folderpath]``` | ./allie/cleaning/image_cleaning | 
+| video files | .MP4 | ```python3 clean.py [folderpath]``` |./allie/cleaning/video_cleaning| 
+| csv files | .CSV | ```python3 clean.py [folderpath]``` | ./allie/cleaning/csv_cleaning | 
 
-## Supported data cleaning scripts 
+## Implemented
 
-### All file types 
+### Implemented for all file types 
 * [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
 * [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
@@ -55,6 +55,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 ### CSV
 * Coming soon.
+
 
 ## Future
 

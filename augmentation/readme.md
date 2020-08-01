@@ -73,7 +73,8 @@ Note that it augment_data=True in settings.json, this script will automatically 
 * [augment_vidaug]()
 
 ### CSV
-* [augment_tgan](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on continuous audio data as well
+* [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.
+* [augment_ctgan_regression]() - generative adverserial example on regression problems / targets.
 
 ## Work-in-progress (WIP)
 

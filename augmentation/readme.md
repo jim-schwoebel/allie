@@ -91,7 +91,7 @@ Audio
 * [extract loudest section](https://github.com/petewarden/extract_loudest_section)
 
 Text
-* [EDA_NLP]()
+* [eda_nlp](https://github.com/jasonwei20/eda_nlp)
 
 Image 
 * [Augmentor](https://github.com/mdbloice/Augmentor)

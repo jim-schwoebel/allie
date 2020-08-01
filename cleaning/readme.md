@@ -20,7 +20,7 @@ cd allie/cleaning/audio_cleaning
 python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
-The code above will featurize all the audio files in the folderpath via the default_cleaner specified in the settings.json file (e.g. ''). 
+The code above will featurize all the audio files in the folderpath via the default_cleaner specified in the settings.json file (e.g. 'clean_mono16hz'). 
 
 Note you can extend this to any of the augmentation types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
 

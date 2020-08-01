@@ -51,6 +51,7 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- improved documentation for cleaning and augmentation techniques
 - added in text, image, video, and audio cleaning techniques (in new format)
 - added in text, image, video, and audio augmentation techniques (in new format)
 - add error handling into all of Allie's featurizations + error array into feature array itself ("error" form of column on features)

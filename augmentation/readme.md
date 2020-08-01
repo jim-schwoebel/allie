@@ -41,17 +41,6 @@ The vast majority of approaches focus on generating new data because it's often 
 
 To read more about data augmentation stratgies, please review [this page](https://github.com/AgaMiko/data-augmentation-review).
 
-## Augmentation scripts 
-
-To get started, all you need to do is:
-```
-augment.py [foldername]
-```
-
-The augmentation then will auto-detect the file type of the folder and augment the data appropriately for machine learning purposes.
-
-Note that it augment_data=True in settings.json, this script will automatically run in the model.py script.
-
 ## Implemented 
 ### Audio
 * [augment_tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.

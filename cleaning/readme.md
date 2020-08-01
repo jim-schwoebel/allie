@@ -52,7 +52,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 * [clean_utterances]()
 
 ### Text
-* Coming soon.
+* [clean_textrank]()
 
 ### Image 
 * [clean_extractfaces]()

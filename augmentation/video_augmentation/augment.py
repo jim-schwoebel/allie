@@ -36,8 +36,8 @@ def prev_dir(directory):
 def video_augment(augmentation_set, videofile, basedir):
 
 	# only load the relevant featuresets for featurization to save memory
-	if augmentation_set=='augment_video':
-		augment_video.augment_video(videofile, basedir)
+	if augmentation_set=='augment_vidaug':
+		augment_vidaug.augment_vidaug(videofile, basedir)
 
 ################################################
 ##              Load main settings            ##
@@ -64,8 +64,8 @@ except:
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-if 'augment_video' in augmentation_sets:
-	import augment_video
+if 'augment_vidaug' in augmentation_sets:
+	import augment_vidaug
 
 ################################################
 ##          Get featurization folder          ##

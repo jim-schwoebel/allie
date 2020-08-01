@@ -36,9 +36,7 @@ def prev_dir(directory):
 def csv_augment(augmentation_set, csvfile, basedir):
 
 	# only load the relevant featuresets for featurization to save memory
-	if augmentation_set=='augment_tgan':
-		augment_tgan.augment_tgan(csvfile, basedir)
-	elif augmentation_set=='augment_ctgan_classification':
+	if augmentation_set=='augment_ctgan_classification':
 		augment_ctgan_classification.augment_ctgan_classification(csvfile)
 	elif augmentation_set=='augment_ctgan_regression':
 		augment_ctgan_regression.augment_ctgan_regression(csvfile)
@@ -68,8 +66,6 @@ except:
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-if 'augment_tgan' in augmentation_sets:
-	import augment_tgan
 elif 'augment_ctgan_classification' in augmentation_sets:
 	import augment_ctgan_classification
 elif 'augment_ctgan_regression' in augmentation_sets:

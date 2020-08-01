@@ -38,6 +38,8 @@ def text_augment(augmentation_set, textfile, basedir):
 	# only load the relevant featuresets for featurization to save memory
 	if augmentation_set=='augment_eda':
 		augment_eda.augment_eda(textfile, basedir)
+	elif augmentation_set=='augment_textacy':
+		augment_textacy.augment_textacy(textfile,basedir)
 
 ################################################
 ##              Load main settings            ##
@@ -66,6 +68,8 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'augment_eda' in augmentation_sets:
 	import augment_eda
+elif 'augment_textacy' in augmentation_sets:
+	import augment_textacy
 
 ################################################
 ##          Get featurization folder          ##

@@ -212,8 +212,8 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 def image_augment(augmentation_set, imagefile, basedir):
 
 	# only load the relevant featuresets for featurization to save memory
-	if augmentation_set=='augment_image':
-		augment_image.augment_image(imagefile)
+	if augmentation_set=='augment_imaug':
+		augment_imaug.augment_imaug(imagefile)
 
 ################################################
 ##              Load main settings            ##
@@ -240,8 +240,8 @@ except:
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-if 'augment_image' in augmentation_sets:
-	import augment_image
+if 'augment_imaug' in augmentation_sets:
+	import augment_imaug
 
 ################################################
 ##          Get featurization folder          ##

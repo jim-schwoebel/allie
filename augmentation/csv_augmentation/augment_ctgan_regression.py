@@ -23,4 +23,4 @@ def augment_ctgan_regression(csvfile):
 	result = pd.concat(frames)
 	result.to_csv('augmented_combined_'+csvfile, index=0)
 
-augment_ctgan_regression('gender_all.csv')
+# augment_ctgan_regression('gender_all.csv')

@@ -55,7 +55,9 @@ Note you can extend this to any of the augmentation types. The table below overv
 * Coming soon.
 
 ### Image 
-* Coming soon.
+* [clean_extractfaces]()
+* [clean_greyscale]()
+* [clean_jpg2png]()
 
 ### Video
 * Coming soon.

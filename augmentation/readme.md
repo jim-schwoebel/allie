@@ -6,7 +6,7 @@ Data augmentation is used to expand the training dataset in order to improve the
 
 Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
 
-You can read more about data augmentation [here](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c).
+You can read more about data augmentation [here](https://github.com/AgaMiko/data-augmentation-review).
 
 
 To featurize an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
@@ -105,6 +105,6 @@ CSV
 
 
 ## References
-* [Review of data augmentation strategies](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)
+* [Review of data augmentation strategies](https://github.com/AgaMiko/data-augmentation-reviewc)
 * [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)
 

@@ -82,13 +82,13 @@ Note that it augment_data=True in settings.json, this script will automatically 
 * [EDA_NLP]()
 
 ### Image
-* [IMGAUG]()
+* [augment_imaug]()
 
 ### Video
-* [VIDAUG]()
+* [augment_vidaug]()
 
 ### CSV
-* [TGAN](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on continuous audio data as well
+* [augment_tgan](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on continuous audio data as well
 
 ## Work-in-progress (WIP)
 

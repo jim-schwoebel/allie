@@ -54,6 +54,8 @@ There are two main types of data augmentation:
 
 The vast majority of approaches focus on generating new data because it's often more convenient and useful for modeling purposes. It's much harder to make two datasets look like each other, as there exists variation in the datasets themselves which may confuse machine learning models (or lead to overfitting to one dataset over another). 
 
+To read more about data augmentation stratgies, please review [this page](https://github.com/AgaMiko/data-augmentation-review).
+
 ## Augmentation scripts 
 
 To get started, all you need to do is:
@@ -65,22 +67,25 @@ The augmentation then will auto-detect the file type of the folder and augment t
 
 Note that it augment_data=True in settings.json, this script will automatically run in the model.py script.
 
-## Folder structures 
+## Implemented 
+### Audio
+* [tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.
 
-Here is a brief description of what the folders in this section of the repository are for:
+### Text
+* [EDA_NLP]()
 
-- [audio_augmentation](https://github.com/jim-schwoebel/audio_augmentation/tree/a1b7838063684f451fbbacfc23311bbf8ca38897) - for augmenting audio files
-- [eda_nlp]() - for augmenting text files (not implemented yet)
-- [imgaug]() - for augmenting images (not implemented yet)
-- [vidaug]() - for augmenting video files (not implemented yet)
+### Image
+* [IMGAUG]()
+
+### Video
+* [VIDAUG]()
+
+### CSV
+* [TGAN](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on continuous audio data as well
 
 ## Work-in-progress (WIP)
-General 
-* [AutoAugment (Google)](https://github.com/tensorflow/models/tree/master/research/autoaugment) - paper [here](https://arxiv.org/abs/1805.09501) and implementation [here](https://github.com/DeepVoltaire/AutoAugment)
-* [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
 
 Audio 
-* [tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.
 * [ESC-10 augmentation](https://github.com/JasonZhang156/Sound-Recognition-Tutorial/blob/master/data_augmentation.py) - script
 * [adding noise with ffmpeg[(https://stackoverflow.com/questions/15792105/simulating-tv-noise)
 * [Audio data augmentation](https://github.com/sid0710/audio_data_augmentation)
@@ -94,19 +99,20 @@ Audio
 * [extract loudest section](https://github.com/petewarden/extract_loudest_section)
 
 Text
-* [EDA_NLP]()
 * [Augmentation with Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/augmentation.html)
 
 Image 
-* [IMGAUG]()
 * [Augmentor](https://github.com/mdbloice/Augmentor)
 
 Video
-* [VIDAUG]()
+* TBA
 
 CSV 
-* [TGAN](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on continuous audio data as well
+* [AutoAugment (Google)](https://github.com/tensorflow/models/tree/master/research/autoaugment) - paper [here](https://arxiv.org/abs/1805.09501) and implementation [here](https://github.com/DeepVoltaire/AutoAugment)
+* [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
+
 
 ## References
+* [Review of data augmentation strategies](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)
 * [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)
 

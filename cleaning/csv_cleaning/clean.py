@@ -33,10 +33,10 @@ def prev_dir(directory):
 ##              Helper functions              ##
 ################################################
 
-def csv_clean(cleaning_set, videofile, basedir):
+def csv_clean(cleaning_set, csvfile, basedir):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	elif cleaning_set == 'clean_csv':
+	if cleaning_set == 'clean_csv':
 		clean_csv.clean_csv(csvfile, basedir)
 
 ################################################

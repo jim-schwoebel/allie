@@ -8,42 +8,27 @@ Typical augmentation scheme is to take 50% of the data and augment it and leave 
 
 You can read more about data augmentation [here](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c).
 
-OLD SUBMODULES
+
+To featurize an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
+
 ```
-[submodule "datasets/augmentation/eda_nlp"]
-	path = datasets/augmentation/eda_nlp
-	url = https://github.com/jasonwei20/eda_nlp
-[submodule "datasets/augmentation/imgaug"]
-	path = datasets/augmentation/imgaug
-	url = https://github.com/aleju/imgaug
-[submodule "datasets/augmentation/vidaug"]
-	path = datasets/augmentation/vidaug
-	url = https://github.com/okankop/vidaug
-[submodule "datasets/PyDataset"]
-	path = datasets/PyDataset
-	url = https://github.com/iamaziz/PyDataset
-[submodule "datasets/youtube_scrape"]
-	path = datasets/youtube_scrape
-	url = https://github.com/jim-schwoebel/youtube_scrape
-[submodule "training/keras_compressor"]
-	path = training/keras_compressor
-	url = https://github.com/DwangoMediaVillage/keras_compressor
-[submodule "training/scikit-small-ensemble"]
-	path = training/scikit-small-ensemble
-	url = https://github.com/stewartpark/scikit-small-ensemble
-[submodule "datasets/labeling/sound_event_detection"]
-	path = datasets/labeling/sound_event_detection
-	url = https://github.com/jim-schwoebel/sound_event_detection
-[submodule "datasets/labeling/labelImg"]
-	path = datasets/labeling/labelImg
-	url = https://github.com/tzutalin/labelImg
-[submodule "datasets/labeling/labelme"]
-	path = datasets/labeling/labelme
-	url = https://github.com/wkentaro/labelme
-[submodule "datasets/augmentation/audio_augmentation"]
-	path = datasets/augmentation/audio_augmentation
-	url = https://github.com/jim-schwoebel/audio_augmentation
+cd ~ 
+cd allie/features/audio_augmentation
+python3 augment.py /Users/jimschwoebel/allie/load_dir
 ```
+
+The code above will featurize all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). 
+
+Note you can extend this to any of the augmentation types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
+
+| Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
+| --------- |  --------- |  --------- | --------- | 
+| audio files | .MP3 / .WAV | ```python3 augment.py [folderpath]``` | ./allie/augmentation/audio_features | 
+| text files | .TXT | ```python3 augment.py [folderpath]``` | ./allie/augmentation/text_augmentation| 
+| image files | .PNG | ```python3 augment.py [folderpath]``` | ./allie/augmentation/image_augmentation | 
+| video files | .MP4 | ```python3 augment.py [folderpath]``` |./allie/augmentation/video_augmentation| 
+| csv files | .CSV | ```python3 augment.py [folderpath]``` | ./allie/augmentation/csv_augmentation | 
+
 
 ## Types of augmentation
 

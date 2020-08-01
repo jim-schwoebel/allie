@@ -52,7 +52,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 * [clean_utterances]()
 
 ### [Text](https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning)
-* [clean_summary]() - extracts a summary of a long piece of text and deletes the original work
+* [clean_summary]() - extracts a 100 word summary of a long piece of text and deletes the original work (using [Text rank summarization](https://github.com/davidadamojr/TextRank))
 * [clean_textacy]() - removes punctuation and a variety of other operations to clean a text
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning)
@@ -79,8 +79,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 * extract loudest section - https://github.com/petewarden/extract_loudest_section
 
 ### Text
-* [Text rank/summarization](https://github.com/davidadamojr/TextRank) or [textrank](https://github.com/summanlp/textrank)- 100 word summary, Number of keywords extracted is relative to the size of the text (a third of the number of nodes in the graph) - implented alpha 
-* [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html) - preprocessing like removing punctuation and repeats, etc. - implemented this with multiple settings
+* TBA
 
 ### Video
 * [Video stabilization](https://github.com/abhiTronix/vidgear#camgear) - video stabilization for the camera / cleaning it

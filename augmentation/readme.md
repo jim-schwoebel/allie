@@ -64,7 +64,7 @@ Note that it augment_data=True in settings.json, this script will automatically 
 * [augment_volume]()
 
 ### Text
-* [EDA_NLP]()
+* [augment_textacy]()
 
 ### Image
 * [augment_imaug]()
@@ -91,7 +91,7 @@ Audio
 * [extract loudest section](https://github.com/petewarden/extract_loudest_section)
 
 Text
-* [Augmentation with Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/augmentation.html)
+* [EDA_NLP]()
 
 Image 
 * [Augmentor](https://github.com/mdbloice/Augmentor)

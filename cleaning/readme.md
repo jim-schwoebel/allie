@@ -82,7 +82,6 @@ Note you can extend this to any of the augmentation types. The table below overv
 * TBA
 
 ### Video
-* [Video stabilization](https://github.com/abhiTronix/vidgear#camgear) - video stabilization for the camera / cleaning it
 * [Near-duplicate video detection](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
 
 ### CSV

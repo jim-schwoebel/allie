@@ -65,7 +65,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 * [clean_videostabilize]() - stabilizes a video frame using [vidgear](https://github.com/abhiTronix/vidgear) (note this is a WIP)
 
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
-* [clean_csv]() - uses datacleaner, a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
+* [clean_csv]() - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
 
 ## Future
 

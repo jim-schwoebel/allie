@@ -81,6 +81,9 @@ Note you can extend this to any of the augmentation types. The table below overv
 ### Text
 * TBA
 
+### Image
+* TBA
+
 ### Video
 * [Near-duplicate video detection](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
 

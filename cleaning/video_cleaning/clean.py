@@ -33,13 +33,11 @@ def prev_dir(directory):
 ##              Helper functions              ##
 ################################################
 
-def text_clean(cleaning_set, textfile, basedir):
+def video_clean(cleaning_set, videofile, basedir):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	elif cleaning_set == 'clean_summary':
-		clean_summary.clean_summary(textfile)
-	elif cleaning_set == 'clean_textacy':
-		clean_textacy.clean_textacy(textfile)
+	elif cleaning_set == 'clean_alignfaces':
+		clean_alignfaces.clean_alignfaces(videofile, basedir)
 
 ################################################
 ##              Load main settings            ##
@@ -52,24 +50,22 @@ settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
 
-text_transcribe=settings['transcribe_text']
-default_text_transcribers=settings['default_text_transcriber']
+video_transcribe=settings['transcribe_video']
+default_video_transcribers=settings['default_video_transcriber']
 try:
 	# assume 1 type of feature_set 
 	cleaning_sets=[sys.argv[2]]
 except:
 	# if none provided in command line, then load deafult features 
-	cleaning_sets=settings['default_text_cleaners']
+	cleaning_sets=settings['default_video_cleaners']
 
 ################################################
 ##          Import According to settings      ##
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-if 'clean_summary' in cleaning_sets:
-	import clean_summary
-elif 'clean_textacy' in cleaning_sets:
-	import clean_textacy
+if 'clean_alignfaces' in cleaning_sets:
+	import clean_alignfaces
 
 ################################################
 ##          Get featurization folder          ##
@@ -138,8 +134,8 @@ random.shuffle(listdir)
 
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
-	if listdir[i][-4:] in ['.txt']:
+	if listdir[i][-4:] in ['.mp4']:
 		filename=listdir[i]
 		for j in range(len(cleaning_sets)):
 			cleaning_set=cleaning_sets[j]
-			text_clean(cleaning_set, filename, basedir)
+			video_clean(cleaning_set, filename, basedir)

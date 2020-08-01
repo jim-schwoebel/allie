@@ -12,42 +12,25 @@ Common data cleaning things include
 
 ## How to use cleaning scripts
 
-You can call from the command line fairly easily by doing something like the format:
+To clean an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
 
 ```
-python3 clean.py --clean_directory --file_directory
+cd ~ 
+cd allie/cleaning/audio_cleaning
+python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
-Where clean_directory is this directory path and file_directory is the path of the folder that you'd like to clean the data.
+The code above will featurize all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). 
 
-Here is a quick example:
+Note you can extend this to any of the augmentation types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
 
-```
-python3 clean.py /Users/jimschwoebel/allie/datasets/cleaning /Users/jimschwoebel/allie/train_dir/one
-```
-
-Once you run a script like this, you will receive a terminal output like:
-```
------------------------------
-       REMOVING SILENCE      
------------------------------
-Jims-MBP:cleaning jimschwoebel$ python3 clean.py /Users/jimschwoebel/allie/datasets/cleaning /Users/jimschwoebel/allie/train_dir/two
-audiofolder detected!
------------------
------------------------------
-   DELETING DUPLICATE FILES  
------------------------------
-deleted the files below
-[]
-/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
-  from ._conv import register_converters as _register_converters
-Using TensorFlow backend.
------------------------------
-       REMOVING SILENCE      
------------------------------
-```
-
-Note that the audio file type ('audio','text','image','video','csv') is automatically detected in the folder and there are some universal data cleaning scripts (e.g. removing file duplicates) that can be used for pre-processing.
+| Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
+| --------- |  --------- |  --------- | --------- | 
+| audio files | .MP3 / .WAV | ```python3 clean.py [folderpath]``` | ./allie/augmentation/audio_features | 
+| text files | .TXT | ```python3 clean.py [folderpath]``` | ./allie/augmentation/text_augmentation| 
+| image files | .PNG | ```python3 clean.py [folderpath]``` | ./allie/cleaning/image_augmentation | 
+| video files | .MP4 | ```python3 clean.py [folderpath]``` |./allie/clean/video_augmentation| 
+| csv files | .CSV | ```python3 clean.py [folderpath]``` | ./allie/clean/csv_augmentation | 
 
 ## Supported data cleaning scripts 
 

@@ -19,13 +19,11 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing (for version 1.0.0 release)
+- add new test cases into Allie / make tests work with new framework
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - tie new datasets with SurveyLex product / CLI interface with downloads
 -  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
-- add in default_augmenters / get live into Allie
-- add in default_cleaners / get live into Allie 
-- add new test cases into Allie / make tests work with new framework
 - documentation of the repository / jupyter notebooks with examples in research paper 
 
 ### future releases (1.0.1 release)

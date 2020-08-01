@@ -38,7 +38,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 * [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
 * [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
-### [Audio](https://github.com/jim-schwoebel/allie/tree/master/datasets/cleaning/audio)
+### [Audio](https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning)
 * [clean_getfirst3secs]()
 * [clean_keyword]()
 * [clean_mono16hz]()

@@ -53,7 +53,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 ### [Text](https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning)
 * [clean_summary]() - extracts a 100 word summary of a long piece of text and deletes the original work (using [Text rank summarization](https://github.com/davidadamojr/TextRank))
-* [clean_textacy]() - removes punctuation and a variety of other operations to clean a text
+* [clean_textacy]() - removes punctuation and a variety of other operations to clean a text (uses [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html))
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning)
 * [clean_extractfaces]() - extract faces from an image

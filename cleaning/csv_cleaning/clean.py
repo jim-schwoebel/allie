@@ -33,13 +33,11 @@ def prev_dir(directory):
 ##              Helper functions              ##
 ################################################
 
-def video_clean(cleaning_set, videofile, basedir):
+def csv_clean(cleaning_set, videofile, basedir):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	elif cleaning_set == 'clean_alignfaces':
-		clean_alignfaces.clean_alignfaces(videofile, basedir)
-	elif cleaning_set == 'clean_videostabilize':
-		clean_videostabilize.clean_videostabilize(videofile)
+	elif cleaning_set == 'clean_csv':
+		clean_csv.clean_csv(csvfile, basedir)
 
 ################################################
 ##              Load main settings            ##
@@ -52,24 +50,22 @@ settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
 
-video_transcribe=settings['transcribe_video']
-default_video_transcribers=settings['default_video_transcriber']
+csv_transcribe=settings['transcribe_csv']
+default_csv_transcribers=settings['default_csv_transcriber']
 try:
 	# assume 1 type of feature_set 
 	cleaning_sets=[sys.argv[2]]
 except:
 	# if none provided in command line, then load deafult features 
-	cleaning_sets=settings['default_video_cleaners']
+	cleaning_sets=settings['default_csv_cleaners']
 
 ################################################
 ##          Import According to settings      ##
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-if 'clean_alignfaces' in cleaning_sets:
-	import clean_alignfaces
-elif 'clean_videostabilize' in cleaning_sets:
-	import clean_videostabilize
+if 'clean_csv' in cleaning_sets:
+	import clean_csv
 
 ################################################
 ##          Get featurization folder          ##
@@ -138,8 +134,8 @@ random.shuffle(listdir)
 
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
-	if listdir[i][-4:] in ['.mp4']:
+	if listdir[i][-4:] in ['.csv']:
 		filename=listdir[i]
 		for j in range(len(cleaning_sets)):
 			cleaning_set=cleaning_sets[j]
-			video_clean(cleaning_set, filename, basedir)
+			csv_clean(cleaning_set, filename, basedir)

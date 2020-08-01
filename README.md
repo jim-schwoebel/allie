@@ -19,7 +19,6 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing (for version 1.0.0 release)
-- get cleaning and augmentation fully functional 
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 - tie new datasets with SurveyLex product / CLI interface with downloads
@@ -52,6 +51,8 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- added in text, image, video, and audio cleaning techniques (in new format)
+- added in text, image, video, and audio augmentation techniques (in new format)
 - add error handling into all of Allie's featurizations + error array into feature array itself ("error" form of column on features)
 - kept create_readme setting for making readmes in the repositories themselves (deleted create_YAML setting)
 - deleted the production folder schema within Allie

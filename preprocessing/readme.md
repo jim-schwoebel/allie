@@ -101,7 +101,7 @@ array([2, 2, 1]...)
 ```
 
 ### Feature transformations 
-
+* https://github.com/firmai/deltapy - deltapy (getting a bunch of transformations done for preprocessing / entropy techniques, etc.)
 * https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)
 * https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model
 * https://pypi.org/project/umap-learn/ - add in UMAP embedding

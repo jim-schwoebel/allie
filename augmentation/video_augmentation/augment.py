@@ -1,38 +1,100 @@
+'''
+Import all the featurization scripts and allow the user to customize what embedding that
+they would like to use for modeling purposes.
 
-from PIL import Image, ImageSequence
-import os 
-import vidaug.vidaug.augmentors as va
+AudioSet is the only embedding that is a little bit wierd, as it is normalized to the length
+of each audio file. There are many ways around this issue (such as normalizing to the length 
+of each second), however, I included all the original embeddings here in case the time series
+information is useful to you.
+'''
 
-def gif_loader(path, modality="RGB"):
-    frames = []
-    with open(path, 'rb') as f:
-        with Image.open(f) as video:
-            index = 1
-            for frame in ImageSequence.Iterator(video):
-                frames.append(frame.convert(modality))
-                index += 1
-        return frames
+################################################
+##              IMPORT STATEMENTS             ##
+################################################
+import json, os, sys, time, random
+import numpy as np 
+# import helpers.transcribe as ts
+# import speech_recognition as sr
+from tqdm import tqdm
 
-file = 'sample.mp4'
-# convert file to gif 
-if file[-4:] != '.gif':
-	# only take first 10 seconds.
-	os.system('ffmpeg -i ./videos/%s ./videos/%s'%(file, file[0:-4]+'.gif'))
-	file=file[0:-4]+'.gif'
+def prev_dir(directory):
+	g=directory.split('/')
+	dir_=''
+	for i in range(len(g)):
+		if i != len(g)-1:
+			if i==0:
+				dir_=dir_+g[i]
+			else:
+				dir_=dir_+'/'+g[i]
+	# print(dir_)
+	return dir_
 
-frames = gif_loader(os.getcwd()+"/videos/%s"%(file))
+################################################
+##              Helper functions              ##
+################################################
 
+def video_augment(augmentation_set, videofile, basedir):
 
-sometimes = lambda aug: va.Sometimes(1, aug) # Used to apply augmentor with 100% probability
+	# only load the relevant featuresets for featurization to save memory
+	if augmentation_set=='augment_video':
+		augment_video.augment_video(videofile, basedir)
 
-seq = va.Sequential([ # randomly rotates the video with a degree randomly choosen from [-10, 10]  
-    sometimes(va.HorizontalFlip()) # horizontally flip the video with 100% probability
-])
+################################################
+##              Load main settings            ##
+################################################
 
-#augment the frames
-video_aug = seq(frames)
+# directory=sys.argv[1]
+basedir=os.getcwd()
+settingsdir=prev_dir(basedir)
+settingsdir=prev_dir(settingsdir)
+settings=json.load(open(settingsdir+'/settings.json'))
+os.chdir(basedir)
 
-# save augmentad frames as gif 
-video_aug[0].save(file[0:-4]+'.gif', save_all=True, append_images=video_aug[1:], duration=100, loop=0)
-os.system('ffmpeg -i '+file[0:-4]+'.gif '+file[0:-4]+'_enhanced.mp4')
-print(len(video_aug))
+video_transcribe=settings['transcribe_video']
+default_video_transcribers=settings['default_video_transcriber']
+try:
+	# assume 1 type of feature_set 
+	augmentation_sets=[sys.argv[2]]
+except:
+	# if none provided in command line, then load deafult features 
+	augmentation_sets=settings['default_video_augmenters']
+
+################################################
+##          Import According to settings      ##
+################################################
+
+# only load the relevant featuresets for featurization to save memory
+if 'augment_video' in augmentation_sets:
+	import augment_video
+
+################################################
+##          Get featurization folder          ##
+################################################
+
+foldername=sys.argv[1]
+os.chdir(foldername)
+listdir=os.listdir() 
+random.shuffle(listdir)
+cur_dir=os.getcwd()
+help_dir=basedir+'/helpers/'
+
+# get class label from folder name 
+labelname=foldername.split('/')
+if labelname[-1]=='':
+	labelname=labelname[-2]
+else:
+	labelname=labelname[-1]
+
+################################################
+##                NOW AUGMENT!!               ##
+################################################
+
+listdir=os.listdir()
+random.shuffle(listdir)
+
+# featurize all files accoridng to librosa featurize
+for i in tqdm(range(len(listdir)), desc=labelname):
+	if listdir[i][-4:] in ['.mp4']:
+		for j in range(len(augmentation_sets)):
+			augmentation_set=augmentation_sets[j]
+			video_augment(augmentation_set, listdir[i], basedir)

@@ -1,9 +1,0 @@
-exclude_paths:
-  - test/*
-  - test/augmenters/*
-  - test/augmentables/*
-  - checks/*
-  - imgaug/external/*
-  - old_version/*
-  - generate_documentation_images.py
-  - generate_example_images.py

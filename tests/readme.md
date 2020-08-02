@@ -37,9 +37,9 @@ class test_transcription(unittest.TestCase):
 ```python3
 class test_training(unittest.TestCase):
 ```
-- ability to properly execute model training scripts (via test files and model.py script)
+- ability to create transformations with the transform.py script (for model training)
 ```python3
-class test_production(unittest.TestCase):
+class test_preprocessing(unittest.TestCase):
 ```
 - ability to compress machine learning models and make production-ready repositories (in ./production directory)
 ```python3

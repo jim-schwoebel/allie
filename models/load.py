@@ -65,16 +65,16 @@ def featurize(features_dir, load_dir, model_dir, filetypes):
 	if model_dir=='audio_models' and 'audio' in filetypes:
 		os.chdir(features_dir+'/audio_features')
 		os.system('python3 featurize.py %s'%(load_dir))
-	elif model_dir=='text_features' and 'text' in filetypes:	
+	elif model_dir=='text_models' and 'text' in filetypes:	
 		os.chdir(features_dir+'/text_features')
 		os.system('python3 featurize.py %s'%(load_dir))
-	elif model_dir=='image_features' and 'image' in filetypes:
+	elif model_dir=='image_models' and 'image' in filetypes:
 		os.chdir(features_dir+'/image_features')
 		os.system('python3 featurize.py %s'%(load_dir))
-	elif model_dir=='video_features' and 'video' in filetypes:	
+	elif model_dir=='video_models' and 'video' in filetypes:	
 		os.chdir(features_dir+'/video_features')
 		os.system('python3 featurize.py %s'%(load_dir))
-	elif model_dir=='csv_features' and 'csv' in filetypes:
+	elif model_dir=='csv_models' and 'csv' in filetypes:
 		os.chdir(features_dir+'/csv_features')
 		os.system('python3 featurize.py %s'%(load_dir))
 

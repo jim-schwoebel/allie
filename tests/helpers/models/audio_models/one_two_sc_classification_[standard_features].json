@@ -1,1 +1,0 @@
-{"sample type": "audio", "feature_set": ["standard_features"], "model name": "one_two_sc_classification_[standard_features].pickle", "accuracy": 1.0, "deviation": 0.0, "model type": "sc_decision-tree"}

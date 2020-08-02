@@ -109,14 +109,6 @@ python3 test.py
 ```
 Note the unit tests above takes roughly ~10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
-## easy data exports
-
-Easily featurize and export data in .CSV format for porting data across ML platforms. This is useful for benchmarking and curating datasets that are repeatable.
-
-```
-Show example of this here
-```
-
 ## settings 
 
 Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.

@@ -54,8 +54,8 @@ settingsdir=prev_dir(settingsdir)
 settings=json.load(open(settingsdir+'/settings.json'))
 os.chdir(basedir)
 
-audio_transcribe=settings['transcribe_audio']
-default_audio_transcribers=settings['default_image_transcriber']
+image_transcribe=settings['transcribe_image']
+default_image_transcribers=settings['default_image_transcriber']
 try:
 	# assume 1 type of feature_set 
 	cleaning_sets=[sys.argv[2]]

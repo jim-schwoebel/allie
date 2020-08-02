@@ -11,6 +11,8 @@ Converting to csv
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
+![https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing]()
+
 ## Future work
 
 ## with timesplit

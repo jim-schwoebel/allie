@@ -155,3 +155,23 @@ try:
     shutil.rmtree('csv_transcription')
 except:
     pass
+try:
+    shutil.rmtree('audio_augmentation')
+except:
+    pass
+try:
+    shutil.rmtree('image_augmentation')
+except:
+    pass
+try:
+    shutil.rmtree('text_augmentation')
+except:
+    pass
+try:
+    shutil.rmtree('video_augmentation')
+except:
+    pass
+try:
+    shutil.rmtree('csv_augmentation')
+except:
+    pass

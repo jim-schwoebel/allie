@@ -680,51 +680,6 @@ class test_features(unittest.TestCase):
 		os.chdir(train_dir)
 		shutil.rmtree(directory)
 
-	# csv features 
-	def test_csv_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_csv_features=default_csv_features):
-		directory='csv_features'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
-
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_csv.csv', folder+'/test_csv.csv')
-
-		os.chdir(features_dir+'/csv_features/')
-		features_list=default_csv_features
-
-		for i in range(len(features_list)):
-			print('------------------------------')
-			print('FEATURIZING - %s'%(features_list[i].upper()))
-			print('------------------------------')
-			os.system('python3 featurize.py %s %s'%(folder, features_list[i]))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		gopen=open('test_csv.json','r')
-		g=json.load(gopen)
-		features=g['features']['csv']
-		gopen.close()
-		test_features=list(features)
-		if test_features == features_list:
-			b=True
-		else:
-			b=False 
-
-		notcount=list()
-		for i in range(len(features_list)):
-			if features_list[i] not in test_features:
-				notcount.append(features_list[i])
-
-		notcount=str(notcount) + ' failed during featurization'
-		self.assertEqual(True, b, notcount) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
-
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_transcription(unittest.TestCase):
 	'''

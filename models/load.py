@@ -138,7 +138,9 @@ def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default
 		print(sampletype)
 		print(g)
 		features=list()
+		print(default_features)
 		for j in range(len(default_features)):
+			print(sampletype)
 			features=features+g['features'][sampletype][default_features[j]]['features']
 		
 		labels=g['features'][sampletype][default_features[0]]['labels']
@@ -435,35 +437,39 @@ for i in range(len(model_dirs)):
 
 # now model everything
 for i in range(len(model_dirs)):
-	if model_dirs[i].split('_')[0] in filetypes:
+	try:
+		if model_dirs[i].split('_')[0] in filetypes:
 
-		print('-----------------------')
-		print('MODELING %s'%(model_dirs[i].upper()))
-		print('-----------------------')
-		os.chdir(model_dir)
-		os.chdir(model_dirs[i])
-		models_=models[model_dirs[i]]
-
-		# get default features
-		if model_dirs[i] == 'audio_models':
-			default_features=default_audio_features
-		elif model_dirs[i] == 'text_models':
-			default_features=default_text_features
-		elif model_dirs[i] == 'image_models':
-			default_features == default_image_features
-		elif model_dirs[i] == 'video_models':
-			default_features == default_video_features
-		elif model_dirs[i] == 'csv_models':
-			default_features == default_csv_features
-
-		# loop through models
-		for j in range(len(models_)):
+			print('-----------------------')
+			print('MODELING %s'%(model_dirs[i].upper()))
+			print('-----------------------')
 			os.chdir(model_dir)
 			os.chdir(model_dirs[i])
-			print('--> predicting %s'%(models_[j]))
-			os.chdir(models_[j])
-			os.chdir('model')
-			transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
-			os.chdir(load_dir)
-			jsonfiles=find_files(model_dirs[i])
-			make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
+			models_=models[model_dirs[i]]
+
+			# get default features
+			print(model_dirs[i])
+			if model_dirs[i] == 'audio_models':
+				default_features =default_audio_features
+			elif model_dirs[i] == 'text_models':
+				default_features = default_text_features
+			elif model_dirs[i] == 'image_models':
+				default_features = default_image_features
+			elif model_dirs[i] == 'video_models':
+				default_features = default_video_features
+			elif model_dirs[i] == 'csv_models':
+				default_features = default_csv_features
+
+			# loop through models
+			for j in range(len(models_)):
+				os.chdir(model_dir)
+				os.chdir(model_dirs[i])
+				print('--> predicting %s'%(models_[j]))
+				os.chdir(models_[j])
+				os.chdir('model')
+				transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
+				os.chdir(load_dir)
+				jsonfiles=find_files(model_dirs[i])
+				make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
+	except:
+		print('error')

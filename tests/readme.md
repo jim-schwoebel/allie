@@ -46,6 +46,10 @@ class test_preprocessing(unittest.TestCase):
 class test_loading(unittest.TestCase):
 ```
 - ability to load model files and make predictions via model directory (via test files / load_dir / models trained) 
+```python3
+class test_visualization(unittest.TestCase):
+```
+- ability to visualize classification problems through the visualize.py script
 
 No testing suite is 100% perfect, but all tests were designed to be independent from each other. If you think additional things need to be added in, please write us some suggestions in the [GitHub issues forum](https://github.com/jim-schwoebel/allie/issues). 
 

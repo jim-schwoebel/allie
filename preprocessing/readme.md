@@ -28,8 +28,11 @@ Note you can extend this to any of the feature types. The table below overviews 
 | feature selection | select_features: True | default_feature_selectors: ["rfe", "lasso", "chi", "kbest", "variance"] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
 | dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ["pca", "lda", "tsne", "plda","autoencoder"] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
 
+## Definitions
 
-## Scaling data
+![](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png)
+
+### Scaling data
 https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing techniques 
 --> default scaling to quantile transformer could work here 
 --> visualization could use which feature selection strategy works best in terms of model accuracy
@@ -42,13 +45,13 @@ https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing t
 * binarizer = preprocessing.Binarizer().fit(X)  # fit does nothing - Feature binarization is the process of thresholding numerical features to get boolean values.
 * poly = PolynomialFeatures(2) // poly.fit_transform(X)
 
-## Feature selection 
+### Feature selection 
 
 * [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
 * RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) 
 * LASSO - 
 
-## Dimensionality reduction techniques
+### Dimensionality reduction techniques
 
 [https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png]()
 
@@ -58,7 +61,7 @@ https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing t
 * pLDA - probabilistic LDA 
 * Neural autoencoder 
 
-## Preproprocessing parameters adaptable in settings.json
+### Preproprocessing parameters adaptable in settings.json
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |

@@ -84,12 +84,11 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - added in transcribers as lists (can be adapted into future)
 - created a version 2 trainer for machine learning models (as part of Allie release 1.0.0)
 
-## getting started 
+## getting started (Mac or Linux) 
 
-### MacOS
 First, clone the repository:
 ```
-git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
+git clone git@github.com:jim-schwoebel/allie.git
 cd allie 
 ```
 Set up virtual environment (to ensure consistent operating mode across operating systems).
@@ -108,74 +107,7 @@ Now you can run some unit tests:
 cd tests
 python3 test.py
 ```
-Note the unit tests above takes roughly 30-40 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
-
-### Windows 10
-
-#### recommended installation (Docker)
-
-You can run Allie in a Docker container fairly easily (10-11GB container run on top of Linux/Ubuntu):
-
-```
-git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
-cd allie 
-docker build -t allie_image .
-docker run -it --entrypoint=/bin/bash allie_image
-cd ..
-```
-
-You will then have access to the docker container to use Allie's folder structure. You can then run tests @
-
-```
-cd tests
-python3 test.py
-```
-
-Note you can quickly download datasets from AWS buckets and train machine learning models from there. 
-
-#### alternative
-
-Note that there are many incomptible Python libraries with Windows, so I encourage you to instead run Allie in a Docker container with Ubuntu or on [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10).
-
-If you still want to try to use Allie with Windows, you can do so below. 
-
-First, install various dependencies:
-
-- Download Microsoft Visual C++ (https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15).
-- Download SWIG and compile locally as an environment variable (http://www.swig.org/download.html).
-- Follow instructions to setup [Tensorflow](https://medium.com/@amsokol.com/how-to-build-and-install-tensorflow-gpu-cpu-for-windows-from-source-code-using-bazel-d047d9342b44) on Windows.
-
-Now clone Allie and run the setup.py script:
-```
-git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
-git checkout windows
-cd allie 
-python3 -m pip install --user virtualenv
-python3 -m venv env
-python3 setup.py
-```
-
-Note that there are some functions that are limited (e.g. featurization / modeling scripts) due to lack of Windows compatibility.
-
-### Linux
-
-Here are the instructions for setting up Allie on Linux:
-
-```
-git clone --recurse-submodules -j8 git@github.com:jim-schwoebel/allie.git
-git checkout linux
-cd allie 
-python3 -m pip install --user virtualenv
-python3 -m venv env
-source env/bin/activate
-python3 setup.py
-```
-
-Now you can run some unit tests:
-```
-cd tests
-python3 test.py
-```
+Note the unit tests above takes roughly ~10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
 ## folder structures
 

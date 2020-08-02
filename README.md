@@ -124,45 +124,44 @@ Here are some settings that you can modify in this settings.json file and the va
 | balance_data | whether or not to balance datasets during the model training process. | True | True, False | 
 | clean_data | whether or not to clean datasets during the model training process via default cleaning scripts. | False | True, False | 
 | create_csv | whether or not to output datasets in a nicely formatted .CSV as part of the model training process (outputs to ./data folder in model repositories) | True | True, False | 
-| default_audio_augmenters | the default augmentation strategies used during audio modeling if augment_data == True | ["augment_tsaug"] | INSERT HERE OPTIONS | 
+| default_audio_augmenters | the default augmentation strategies used during audio modeling if augment_data == True | ["augment_tsaug"] | ['normalize_volume', 'normalize_pitch', 'time_stretch', 'opus_enhance', 'trim_silence', 'remove_noise', 'add_noise', "augment_tsaug"] | 
 | default_audio_cleaners | the default cleaning strategies used during audio modeling if clean_data == True | ["clean_mono16hz"] | INSERT OPTIONS HERE |
 | [default_audio_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/audio_features) | default set of audio features used for featurization (list). | ["standard_features"] | ["audioset_features", "audiotext_features", "librosa_features", "meta_features", "mixed_features", "opensmile_features", "praat_features", "prosody_features", "pspeech_features", "pyaudio_features", "pyaudiolex_features", "sa_features", "sox_features", "specimage_features", "specimage2_features", "spectrogram_features", "speechmetrics_features", "standard_features"] | 
-| [default_text_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of text features used for featurization (list). | ["nltk_features"] | ["bert_features", "fast_features", "glove_features", "grammar_features", "nltk_features", "spacy_features", "text_features", "w2v_features"] | 
+| default_audio_transcriber | the default transcription model used during audio featurization if trainscribe_audio == True | ["deepspeech_dict"] | ['pocketsphinx', 'deepspeech_nodict', 'deepspeech_dict', 'google', 'wit', 'azure', 'bing', 'houndify', 'ibm'] | 
+| default_csv_augmenters | the default augmentation strategies used to augment .CSV file types as part of model training if augment_data==True | ["augment_ctgan_regression"] | ["augment_ctgan_classification"]  | 
+| default_csv_cleaners| | the default cleaning strategies used to clean .CSV file types as part of model training if clean_data==True | ["clean_csv"] | ["clean_csv" |
+| default_csv_featuers | the default featurization technique(s) used as a part of model training for .CSV files. | ["csv_features_regression"] | ["csv_features_regression"]  | 
+| default_csv_transcriber | the default transcription technique for .CSV file spreadsheets. | ["raw text"] | ["raw text"] | 
+| default_dimensionality_reducer | the default dimensionality reduction technique used if reduce_dimensions==True | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
+| default_feature_selector | the default feature selector used if select_features == True | ["rfe"] | ["lasso", "rfe"]  | 
+| default_image_augmenters| the default augmentation techniques used for images if augment_data == True as a part of model training. | ["augment_imaug"] | ["augment_imaug"]  | 
+| default_image_cleaners | the default cleaning techniques used for image data as a part of model training is clean_data == True| ["clean_greyscale"] | [INSERT HERE]  | 
 | [default_image_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/image_features) | default set of image features used for featurization (list). | ["image_features"] | ["image_features", "inception_features", "resnet_features", "squeezenet_features", "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"] | 
-| [default_video_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/video_features) | default set of video features used for featurization (list). | ["video_features"] | ["video_features", "y8m_features"] | 
-| [default_csv_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of csv features used for featurization (list). | ["csv_features"] | ["csv_features"] | 
-| transcribe_audio | determines whether or not to transcribe an audio file via default_audio_transcriber (boolean). | True | True, False | 
-| default_audio_transcriber | the default audio transcriber if transcribe_audio == True (list). | ['pocketsphinx'] | ['pocketsphinx', 'deepspeech_nodict', 'deepspeech_dict', 'google', 'wit', 'azure', 'bing', 'houndify', 'ibm'] | 
-| transcribe_text | determines whether or not to transcribe a text file via default_text_transcriber (boolean). | True | True, False | 
-| default_text_transcriber | the default text transcriber if transcribe_text == True (list). | ['raw text'] | ['raw text'] | 
-| transcribe_image | determines whether or not to transcribe an image file via default_image_transcriber (boolean). | True | True, False | 
-| default_image_transcriber | the default image transcriber if transcribe_image == True (list). | ['tesseract'] | ['tesseract'] | 
-| transcribe_video | determines whether or not to transcribe a video file via default_video_transcriber (boolean). | True | True, False | 
-| default_video_transcriber | the default video transcriber if transcribe_video == True (boolean). | ['tesseract_connected_over_frames'] | ['tesseract_connected_over_frames'] | 
-| transcribe_csv | determines whether or not to transcribe a csv file via default_csv_transcriber (boolean). | True | True, False | 
-| default_csv_transcriber | the default video transcriber if transcribe_csv == True (list). | ['raw text'] | ['raw text'] | 
+| default_image_transcriber | the default transcription technique used for images (e.g. image --> text transcript) | ["tesseract"] | ["tesseract"] |
+| default_outlier_detector | the default outlier technique(s) used to clean data as a part of model training if remove_outliers == True | ["isolationforest"] | ["isolationforest","zscore"]  | 
+| default_scaler | the default scaling technique used to preprocess data during model training if scale_features == True | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"] | 
+| default_text_augmenters | the default augmentation strategies used during model training for text data if augment_data == True | ["augment_textacy"] | ["augment_textacy", "augment_summary"]  | 
+| default_text_cleaners | the default cleaning techniques used during model training on text data if clean_data == True| ["clean_textacy"] | ["clean_textacy"]  | 
+| [default_text_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of text features used for featurization (list). | ["nltk_features"] | ["bert_features", "fast_features", "glove_features", "grammar_features", "nltk_features", "spacy_features", "text_features", "w2v_features"] | 
+| default_text_transcriber | the default transcription techniques used to parse raw .TXT files during model training| ["raw_text"] | ["raw_text"]  | 
 | default_training_script | the specified traning script(s) to train machine learning models. Note that if you specify multiple training scripts here that the training scripts will be executed serially (list). | ['tpot'] |['alphapy', 'atm', 'autogbt', 'autokaggle', 'autokeras', 'auto-pytorch', 'btb', 'cvopt', 'devol', 'gama', 'hyperband', 'hypsklearn', 'hungabunga', 'imbalance-learn', 'keras', 'ludwig', 'mlblocks', 'neuraxle', 'safe', 'scsr', 'tpot']| 
-| clean_data | specifies whether or not you'd like to clean / pre-process data in folders before model training (boolean). |  True | True, False | 
-| default_audio_cleaners | the specified cleaning scripts to employ when cleaning audio data | ['remove_duplicates'] | ['remove_duplicates'] |
-| default_text_cleaners | the specified cleaning scripts to employ when cleaning text data | ['remove_duplicates'] | ['remove_duplicates'] |
-| default_image_cleaners | the specified cleaning scripts to employ when cleaning image data | ['remove_duplicates'] | ['remove_duplicates'] |
-| default_video_cleaners | the specified cleaning scripts to employ when cleaning video data | ['remove_duplicates'] | ['remove_duplicates'] |
-| default_csv_cleaners | the specified cleaning scripts to employ when cleaning csv data | ['remove_duplicates'] | ['remove_duplicates'] |
-| augment_data | specifies whether or not you'd like to augment data during training (boolean). |  False | True, False | 
-| default_audio_augmenters | the specified cleaning scripts to employ when augmenting audio data | ['normalize_volume', 'add_noise', 'time_stretch'] | ['normalize_volume', 'normalize_pitch', 'time_stretch', 'opus_enhance', 'trim_silence', 'remove_noise', 'add_noise'] |
-| default_text_augmenters | the specified cleaning scripts to employ when augmenting text data | [] | [] |
-| default_image_augmenters | the specified cleaning scripts to employ when augmenting image data | [] | [] |
-| default_video_augmenters | the specified cleaning scripts to employ when augmenting video data | [] | [] |
-| default_csv_augmenters | the specified cleaning scripts to employ when augmenting csv data | [] | [] |
-| reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
-| default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
-| select_features | if True, select features via the default_feature_selector (or set of feature selectors) | False | True, False | 
-| default_feature_selector | the default feature selector or set of feature selectors | ["lasso"] | ["lasso", "rfe"] | 
-| scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
-| default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
-| create_csv | if True creates .CSV files during model training and puts them in the ./data folder in the machine learning model directory; note if set to False this can speed up model training. | True | True, False | 
-| model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now (boolean).| False | True, False | 
-| default_outlier_detectors | the specified outlier detector employ when augmenting csv data | ['isolationforest'] | ['isolationforest', 'zscore'] |
+| default_video_augmenters | the default augmentation strategies used for videos during model training if augment_data == True | ["augment_vidaug"] | ["augment_vidaug"] | 
+| default_video_cleaners | the default cleaning strategies used for videos if clean_data == True | ["clean_alignfaces"] | ["clean_alignfaces", "clean_videostabilize"] | 
+| [default_video_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/video_features) | default set of video features used for featurization (list). | ["video_features"] | ["video_features", "y8m_features"] | 
+| default_video_transcriber | the default transcription technique used for videos (.mp4 --> text from the video) | ["tesseract (averaged over frames)"] | ["tesseract (averaged over frames)"] |
+| dimension_number | the number of dimensions to reduce a dataset into if reduce_dimensions == True| 100 | any integer from 1 to the number of features-1 | 
+| feature_number | the number of features to select for via the feature selection strategy (default_feature_selector) if select_features == True| 20 | any integer from 1 to the number of features-1 | 
+| model_compress | a setting that specifies whether or not to compress machine learning models during model training | False | True, False | 
+| reduce_dimensions | a setting that specifies whether or not to reduce dimensions via the default_dimensionality_reducer | False | True, False | 
+| remove_outliers | a setting that specifies whether or not to remove outliers during model training via the default_outlier_detector | True | True, False | 
+| scale_features | a setting that specifies whether or not to scale features during featurization and model training via the default_scaler | True | True, False | 
+| select_features | a setting that specifies whether or not to employ specified feature selection strategies (via the default_feature_selector) | True | True, False | 
+| test_size | a setting that specifies the size of the testing dataset for defining model performance after model training. | 0.10 | Any number 0.10-0.50 | 
+| transcribe_audio | a setting to define whether or not to transcribe audio files during featurization and model training via the default_audio_transcriber | True | True, False | 
+| transcribe_csv | a setting to define whether or not to transcribe csv files during featurization and model training via the default_csv_transcriber | True | True, False | 
+| transcribe_image | a setting to define whether or not to transcribe image files during featurization and model training via the default_image_transcriber | True | True, False | 
+| transcribe_text | a setting to define whether or not to transcribe text files during featurization and model training via the default_image_transcriber | True | True, False | 
+| transcribe_video | a setting to define whether or not to transcribe video files during featurization and model training via the default_video_transcriber | True | True, False | 
 
 ## License
 This repository is licensed under an [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). 

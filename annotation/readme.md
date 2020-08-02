@@ -1,5 +1,7 @@
 ## How to annotate
 
+You can simply annotate using the command-line interface here:
+
 ```python3
 python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
@@ -9,7 +11,7 @@ Converting to csv
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
-## Futuere work
+## Future work
 
 ## with timesplit
 

@@ -42,7 +42,7 @@ The vast majority of approaches focus on generating new data because it's often 
 To read more about data augmentation stratgies, please review [this page](https://github.com/AgaMiko/data-augmentation-review).
 
 ## Implemented 
-### Audio
+### [Audio](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation)
 * [augment_tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.
 * [augment_addnoise]()
 * [augment_noise]()
@@ -52,16 +52,16 @@ To read more about data augmentation stratgies, please review [this page](https:
 * [augment_time]()
 * [augment_volume]()
 
-### Text
+### [Text](https://github.com/jim-schwoebel/allie/tree/master/augmentation/text_augmentation)
 * [augment_textacy]()
 
-### Image
+### [Image](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation)
 * [augment_imaug]()
 
-### Video
+### [Video](https://github.com/jim-schwoebel/allie/tree/master/augmentation/video_augmentation)
 * [augment_vidaug]()
 
-### CSV
+### [CSV](https://github.com/jim-schwoebel/allie/tree/master/augmentation/csv_augmentation)
 * [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.
 * [augment_ctgan_regression]() - generative adverserial example on regression problems / targets.
 

@@ -89,9 +89,8 @@ train_dir = prevdir + '/train_dir'
 model_dir = prevdir+ '/training'
 features_dir=prevdir+'/features'
 loadmodel_dir = prevdir+'/models'
-production_dir=prevdir+'/production'
-clean_dir=prevdir+'/datasets/cleaning/'
-augment_dir=prevdir+'/datasets/augmentation'
+clean_dir=prevdir+'/cleaning/'
+augment_dir=prevdir+'/augmentation'
 
 # settings
 settings=json.load(open(prevdir+'/settings.json'))
@@ -107,7 +106,7 @@ default_csv_transcript=settings['default_csv_transcriber']
 transcribe_audio=settings['transcribe_audio']
 transcribe_text=settings['transcribe_text']
 transcribe_image=settings['transcribe_image']
-transcribe_video=settings['transcribe_videos'] 
+transcribe_video=settings['transcribe_video'] 
 transcribe_csv=settings['transcribe_csv']
 
 # feature settings 
@@ -117,9 +116,22 @@ default_image_features=settings['default_image_features']
 default_video_features=settings['default_video_features']
 default_csv_features=settings['default_csv_features']
 
+# cleaning settings
+default_audio_cleaners=settings['default_audio_cleaners']
+default_text_cleaners=settings['default_text_cleaners']
+default_image_cleaners=settings['default_image_cleaners']
+default_video_cleaners=settings['default_video_cleaners']
+default_csv_cleaners=settings['default_csv_cleaners']
+
+# augmentation settings 
+default_audio_augmenters=settings['default_audio_augmenters']
+default_text_augmenters=settings['default_text_augmenters']
+default_image_augmenters=settings['default_image_augmenters']
+default_video_augmenters=settings['default_video_augmenters']
+default_csv_augmenters=settings['default_csv_augmenters']
+
 # other settings for raining scripts 
 training_scripts=settings['default_training_script']
-production=settings['create_YAML']
 model_compress=settings['model_compress']
 
 # directories 
@@ -177,7 +189,10 @@ class test_dependencies(unittest.TestCase):
 
 		# test FFmpeg installation with test_audio file conversion 
 		os.chdir(cur_dir)
-		os.system('ffmpeg -i test_audio.wav test_audio.mp3')
+		if 'test_audio.mp3' in os.listdir():
+			# remove temp file if it already exists
+			os.remove('test_audio.mp3')
+		os.system('ffmpeg -i test_audio.wav test_audio.mp3 -y')
 		if 'test_audio.mp3' in os.listdir():
 			b=True 
 		else:
@@ -194,7 +209,7 @@ class test_cleaning(unittest.TestCase):
 
 	# audio file cleaning
 	def test_audio_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='audio_clean'
+		directory='audio_cleaning'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -207,8 +222,10 @@ class test_cleaning(unittest.TestCase):
 			shutil.copy(cur_dir+'/test_audio.wav', train_dir+'/'+directory+'/test_audio.wav')
 			os.rename('test_audio.wav', str(i)+'_test_audio.wav')
 
-		clean_file(directory, clean_dir, train_dir)
+		os.chdir(clean_dir+'/'+directory)
+		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
 		if len(listdir) == 1:
@@ -220,7 +237,7 @@ class test_cleaning(unittest.TestCase):
 
 	# text file cleaning 
 	def test_text_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='text_clean'
+		directory='text_cleaning'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -232,9 +249,11 @@ class test_cleaning(unittest.TestCase):
 		for i in range(20):
 			shutil.copy(cur_dir+'/test_text.txt', train_dir+'/'+directory+'/test_text.txt')
 			os.rename('test_text.txt', str(i)+'_test_text.txt')
-
-		clean_file(directory, clean_dir, train_dir)
+		
+		os.chdir(clean_dir+'/'+directory)
+		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
 		if len(listdir) == 1:
@@ -246,7 +265,7 @@ class test_cleaning(unittest.TestCase):
 
 	# image file cleaning 
 	def test_image_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='image_clean'
+		directory='image_cleaning'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -257,10 +276,12 @@ class test_cleaning(unittest.TestCase):
 		os.chdir(directory)
 		for i in range(20):
 			shutil.copy(cur_dir+'/test_image.png', train_dir+'/'+directory+'/test_image.png')
-			os.rename('test_image.png', str(i)+'_test_iamge.png')
-
-		clean_file(directory, clean_dir, train_dir)
+			os.rename('test_image.png', str(i)+'_test_image.png')
+		
+		os.chdir(clean_dir+'/'+directory)
+		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
 		if len(listdir) == 1:
@@ -272,7 +293,7 @@ class test_cleaning(unittest.TestCase):
 
 	# video file cleaning
 	def test_video_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='video_clean'
+		directory='video_cleaning'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -285,8 +306,10 @@ class test_cleaning(unittest.TestCase):
 			shutil.copy(cur_dir+'/test_video.mp4', train_dir+'/'+directory+'/test_video.mp4')
 			os.rename('test_video.mp4', str(i)+'_test_video.mp4')
 
-		clean_file(directory, clean_dir, train_dir)
+		os.chdir(clean_dir+'/'+directory)
+		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
 		if len(listdir) == 1:
@@ -298,7 +321,7 @@ class test_cleaning(unittest.TestCase):
 
 	# csv file cleaning
 	def test_csv_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='csv_clean'
+		directory='csv_cleaning'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -311,7 +334,10 @@ class test_cleaning(unittest.TestCase):
 			shutil.copy(cur_dir+'/test_csv.csv', train_dir+'/'+directory+'/test_csv.csv')
 			os.rename('test_csv.csv', str(i)+'_test_csv.csv')
 
-		clean_file(directory, clean_dir, train_dir)
+		os.chdir(clean_dir+'/'+directory)
+		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
+		os.chdir(train_dir+'/'+directory)
+
 		os.chdir(train_dir+'/'+directory)
 		listdir=os.listdir()
 		b=False 
@@ -330,8 +356,8 @@ class test_augmentation(unittest.TestCase):
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
 	# audio features
-	def test_audio_augment(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='audio_augment'
+	def test_audio_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+		directory='audio_augmentation'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -340,23 +366,25 @@ class test_augmentation(unittest.TestCase):
 			os.mkdir(directory)
 
 		shutil.copy(cur_dir+'/test_audio.wav', train_dir+'/'+directory+'/test_audio.wav')
-		augment_file(directory, augment_dir, train_dir)
+
+		os.chdir(augment_dir+'/'+directory)
+		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
-		if len(listdir) == 13:
+		if len(listdir) > 1:
 			b=True
 		print('---------STOP------------')
 		print(len(listdir))
-		time.sleep(50)
 		self.assertEqual(True, b) 
 		# remove temp directory 
 		os.chdir(train_dir)
 		shutil.rmtree(train_dir+'/'+directory)
 		
 	# text features
-	def test_text_augment(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='text_augment'
+	def test_text_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+		directory='text_augmention'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -364,11 +392,14 @@ class test_augmentation(unittest.TestCase):
 			shutil.rmtree(directory)
 			os.mkdir(directory)
 		shutil.copy(cur_dir+'/test_text.txt', train_dir+'/'+directory+'/test_text.txt')
-		augment_file(directory, augment_dir, train_dir)
+
+		os.chdir(augment_dir+'/'+directory)
+		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
-		if len(listdir) == 1:
+		if len(listdir) > 1:
 			b=True
 		self.assertEqual(True, b) 
 		# remove temp directory 
@@ -376,8 +407,8 @@ class test_augmentation(unittest.TestCase):
 		shutil.rmtree(train_dir+'/'+directory)
 
 	# image features
-	def test_image_augment(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='image_augment'
+	def test_image_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+		directory='image_augmention'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -385,11 +416,14 @@ class test_augmentation(unittest.TestCase):
 			shutil.rmtree(directory)
 			os.mkdir(directory)
 		shutil.copy(cur_dir+'/test_image.png', train_dir+'/'+directory+'/test_image.png')
-		augment_file(directory, augment_dir, train_dir)
+
+		os.chdir(augment_dir+'/'+directory)
+		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
-		if len(listdir) == 1:
+		if len(listdir) > 1:
 			b=True
 		self.assertEqual(True, b) 
 		# remove temp directory 
@@ -397,8 +431,8 @@ class test_augmentation(unittest.TestCase):
 		shutil.rmtree(train_dir+'/'+directory)
 
 	# video features
-	def test_video_augment(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='video_augment'
+	def test_video_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+		directory='video_augmention'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -406,11 +440,14 @@ class test_augmentation(unittest.TestCase):
 			shutil.rmtree(directory)
 			os.mkdir(directory)
 		shutil.copy(cur_dir+'/test_video.mp4', train_dir+'/'+directory+'/test_video.mp4')
-		augment_file(directory, augment_dir, train_dir)
+
+		os.chdir(augment_dir+'/'+directory)
+		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+
 		listdir=os.listdir()
 		b=False 
-		if len(listdir) == 1:
+		if len(listdir) > 1:
 			b=True
 		self.assertEqual(True, b) 
 		# remove temp directory 
@@ -418,8 +455,8 @@ class test_augmentation(unittest.TestCase):
 		shutil.rmtree(train_dir+'/'+directory)
 
 	# csv features 
-	def test_csv_augment(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
-		directory='csv_augment'
+	def test_csv_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+		directory='csv_augmention'
 		os.chdir(train_dir)
 		try:
 			os.mkdir(directory)
@@ -427,11 +464,14 @@ class test_augmentation(unittest.TestCase):
 			shutil.rmtree(directory)
 			os.mkdir(directory)
 		shutil.copy(cur_dir+'/test_csv.csv', train_dir+'/'+directory+'/test_csv.csv')
-		augment_file(directory, augment_dir, train_dir)
+
+		os.chdir(augment_dir+'/'+directory)
+		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
+		
 		listdir=os.listdir()
 		b=False 
-		if len(listdir) == 1:
+		if len(listdir) > 1:
 			b=True
 		self.assertEqual(True, b) 
 		# remove temp directory 
@@ -449,7 +489,7 @@ class test_features(unittest.TestCase):
 #### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
 	# audio features
-	def test_audio_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
+	def test_audio_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_audio_features=default_audio_features):
 		directory='audio_features'
 		folder=train_dir+'/'+directory
 		os.chdir(train_dir)
@@ -463,10 +503,7 @@ class test_features(unittest.TestCase):
 		shutil.copy(cur_dir+'/test_audio.wav', folder+'/test_audio.wav')
 
 		os.chdir(features_dir+'/audio_features/')
-		features_list=["audioset_features", "audiotext_features", "librosa_features", 
-						"meta_features", "mixed_features", "praat_features", "pspeech_features", 
-						"pyaudio_features", "sa_features", "sox_features", "specimage_features", 
-						"specimage2_features", "spectrogram_features", "standard_features"]
+		features_list=default_audio_features
 
 		# features that don't work
 		# ['audioset_features', 'mixed_features', 'myprosody_features']
@@ -501,7 +538,7 @@ class test_features(unittest.TestCase):
 		shutil.rmtree(directory)
 		
 	# text features
-	def test_text_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
+	def test_text_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_text_features=default_text_features):
 		directory='text_features'
 		folder=train_dir+'/'+directory
 		os.chdir(train_dir)
@@ -515,8 +552,7 @@ class test_features(unittest.TestCase):
 		shutil.copy(cur_dir+'/test_text.txt', folder+'/test_text.txt')
 
 		os.chdir(features_dir+'/text_features/')
-		features_list=["fast_features", "glove_features", "nltk_features", 
-					   "spacy_features", "w2v_features"]
+		features_list=default_text_features
 
 		# features that don't work
 		# features = ['w2vec_features']
@@ -551,7 +587,7 @@ class test_features(unittest.TestCase):
 		shutil.rmtree(directory)
 
 	# image features
-	def test_image_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
+	def test_image_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_image_features=default_image_features):
 		directory='image_features'
 		folder=train_dir+'/'+directory
 		os.chdir(train_dir)
@@ -565,8 +601,7 @@ class test_features(unittest.TestCase):
 		shutil.copy(cur_dir+'/test_image.png', folder+'/test_image.png')
 
 		os.chdir(features_dir+'/image_features/')
-		features_list=["image_features", "inception_features", "resnet_features", 
-					   "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"]
+		features_list=default_image_features
 
 		# features that dont work 
 		# features=['VGG19 features']
@@ -602,7 +637,7 @@ class test_features(unittest.TestCase):
 		shutil.rmtree(directory)
 
 	# video features
-	def test_video_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
+	def test_video_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_video_features=default_video_features):
 		directory='video_features'
 		folder=train_dir+'/'+directory
 		os.chdir(train_dir)
@@ -616,7 +651,7 @@ class test_features(unittest.TestCase):
 		shutil.copy(cur_dir+'/test_video.mp4', folder+'/test_video.mp4')
 
 		os.chdir(features_dir+'/video_features/')
-		features_list=["video_features", "y8m_features"]
+		features_list=default_video_features
 
 		# features that don't work 
 		# features = ['y8m_features']
@@ -655,7 +690,7 @@ class test_features(unittest.TestCase):
 		shutil.rmtree(directory)
 
 	# csv features 
-	def test_csv_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
+	def test_csv_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_csv_features=default_csv_features):
 		directory='csv_features'
 		folder=train_dir+'/'+directory
 		os.chdir(train_dir)
@@ -669,7 +704,7 @@ class test_features(unittest.TestCase):
 		shutil.copy(cur_dir+'/test_csv.csv', folder+'/test_csv.csv')
 
 		os.chdir(features_dir+'/csv_features/')
-		features_list=  ["csv_features"]
+		features_list=default_csv_features
 
 		for i in range(len(features_list)):
 			print('------------------------------')
@@ -927,12 +962,11 @@ class test_training(unittest.TestCase):
 		settings['clean_data']=False 
 		settings['augment_data']=False 
 		settings['model_compress']=False 
-		settings['create_YAML']=False 
 		jsonfile=open('settings.json', 'w')
 		json.dump(settings, jsonfile)
 		jsonfile.close()
 
-	def tearDown(self, textdir=textdir, prevdir=prevdir, training_scripts=training_scripts, clean_data=clean_data, augment_data=augment_data, model_compress=model_compress, production=production):
+	def tearDown(self, textdir=textdir, prevdir=prevdir, training_scripts=training_scripts, clean_data=clean_data, augment_data=augment_data, model_compress=model_compress):
 		# change settings.json back to normal to defaults  
 		os.chdir(prevdir)
 		gopen=open('settings.json','r')
@@ -942,7 +976,6 @@ class test_training(unittest.TestCase):
 		settings['clean_data']=clean_data
 		settings['augment_data']=augment_data 
 		settings['model_compress']=model_compress
-		settings['create_YAML']=production 
 		jsonfile=open('settings.json','w')
 		json.dump(settings, jsonfile)
 		jsonfile.close() 
@@ -1001,104 +1034,6 @@ class test_training(unittest.TestCase):
 					os.remove(listdir[i])
 
 		self.assertEqual(True, b)
-
-##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-class test_production(unittest.TestCase):
-	'''
-	ability to create a production-ready model repository 
-	create_YAML.py
-	'''
-	##### ##### ##### ##### ##### ##### ##### ##### ##### #####
-	def setUp(self, prevdir=prevdir):
-		# change settings.json to test all model scripts 
-		os.chdir(prevdir)
-		gopen=open('settings.json','r')
-		settings=json.load(gopen)
-		gopen.close()
-		settings['default_training_script']=['tpot', 'keras']
-		settings['default_audio_features']=['standard_features']
-		settings['clean_data']=False 
-		settings['augment_data']=False 
-		settings['model_compress']=True 
-		settings['create_YAML']=True 
-		jsonfile=open('settings.json', 'w')
-		json.dump(settings, jsonfile)
-		jsonfile.close()
-
-	def tearDown(self, textdir=textdir, prevdir=prevdir, default_audio_features=default_audio_features, training_scripts=training_scripts, clean_data=clean_data, augment_data=augment_data, model_compress=model_compress, production=production):
-		# change settings.json back to normal to defaults  
-		os.chdir(prevdir)
-		gopen=open('settings.json','r')
-		settings=json.load(gopen)
-		gopen.close()
-		settings['default_audio_features']=default_audio_features
-		settings['default_training_script']=training_scripts
-		settings['clean_data']=clean_data
-		settings['augment_data']=augment_data 
-		settings['model_compress']=model_compress
-		settings['create_YAML']=production 
-		jsonfile=open('settings.json','w')
-		json.dump(settings, jsonfile)
-		jsonfile.close() 
-		
-	def test_production(self, production_dir=production_dir, cur_dir=cur_dir, audiodir=audiodir, train_dir=train_dir, model_dir=model_dir, clean_data=clean_data, augment_data=augment_data):
-		
-		os.chdir(train_dir)
-		# remove folders if the exist 
-		try:
-			shutil.rmtree('one')
-		except:
-			pass 
-		try:
-			shutil.rmtree('two')
-		except:
-			pass 
-
-		# seed files from test folder 
-		shutil.copytree(cur_dir+'/helpers/audio_data/one', train_dir+'/one/')
-		shutil.copytree(cur_dir+'/helpers/audio_data/two', train_dir+'/two/')
-
-		os.chdir(model_dir)
-		# iterate through all machine learning model training methods
-		os.system('python3 model.py audio 2 c one two')
-		os.chdir(train_dir)
-		# shutil.rmtree('one')
-		# shutil.rmtree('two')
-		
-		# test if the model has been packaged for production 
-		os.chdir(production_dir)
-		production_files=['nlx-model-audio-one_two_standard_features_tpotclassifier']
-		listdir=os.listdir()
-		b=set(production_files).issubset(set(listdir))
-		self.assertEqual(True, b)
-		shutil.rmtree('nlx-model-audio-one_two_standard_features_tpotclassifier')
-
-		# test if the model has been compressed and remove temporary model files 
-		model_files=['one_features.json', 'one_two_keras.h5', 'one_two_keras.json', 'one_two_keras.txt', 
-					'one_two_keras_compressed.h5', 'one_two_keras_compressed.json', 'one_two_standard_features_tpotclassifier.json', 
-					'one_two_standard_features_tpotclassifier.pickle', 'one_two_standard_features_tpotclassifier.py', 
-					'one_two_standard_features_tpotclassifier_compressed.joblib', 'two_features.json']
-
-
-		os.chdir(audiodir)
-		listdir=os.listdir()
-		print(model_files)
-		print(listdir)
-
-		# make an informative error message
-		for i in range(len(model_files)):
-			if model_files[i] not in listdir:
-				print('ERROR - %s not in production directory.'%(modelfiles[i].upper()))
-
-		c=set(model_files).issubset(set(listdir))
-
-		# remove temporary files in the textdir
-		for i in range(len(listdir)):
-			if listdir[i] in model_files:
-				os.remove(listdir[i])
-
-		# test whether the models have been successfully compressed 
-		self.assertEqual(True, c)
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_loading(unittest.TestCase):

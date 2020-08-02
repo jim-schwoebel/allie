@@ -19,14 +19,13 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing (for version 1.0.0 release)
-- add new test cases into Allie / make tests work with new framework
-- make sure Allie passes all tests on linux, etc. / contextualize tests around default settings
+- documentation of the repository / jupyter notebooks with examples in research paper 
+- re-test allie tests on linux, etc. / contextualize tests around default settings
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
-- tie new datasets with SurveyLex product / CLI interface with downloads
 -  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
+- tie new datasets with SurveyLex product / CLI interface with downloads
 - Create nice CLI interface for all of Allie's functionality using OptionParser()
-- documentation of the repository / jupyter notebooks with examples in research paper 
 
 ### future releases (1.0.1 release)
 
@@ -49,6 +48,8 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 - add in new ASR: https://github.com/rolczynski/Automatic-Speech-Recognition
 
 ### recently completed (version 1.0.0 release)
+- add new test cases into Allie / make tests work with new framework
+- fixed loading ML models for video and image types of models
 - improved documentation for cleaning and augmentation techniques
 - added in text, image, video, and audio cleaning techniques (in new format)
 - added in text, image, video, and audio augmentation techniques (in new format)

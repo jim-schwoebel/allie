@@ -6,6 +6,29 @@ This is done via a convention for transformers, which are in the proper folders 
 
 These are added during the modeling process.
 
+## How to transform folders of featurized files
+
+To transform an entire folder of a featurized files, you can run:
+
+```
+cd ~ 
+cd allie/preprocessing/audio_transformers
+python3 transform.py text c onetwo one two
+```
+
+The code above will transform all the featurized text files (in .JSON files, folder ONE and folder TWO) via a classification script with a common name ONETWO. 
+
+## Settings
+
+Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.
+
+| Data type | Settings.json | Options | Call to featurizer a folder | Current directory must be | 
+| --------- |  --------- |  --------- | --------- | --------- | 
+| scaling data | scale_data: True | default_scalers: ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler" ] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
+| feature selection | select_features: True | default_feature_selectors: ["rfe", "lasso", "chi", "kbest", "variance"] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
+| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ["pca", "lda", "tsne", "plda","autoencoder"] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
+
+
 ## Scaling data
 https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing techniques 
 --> default scaling to quantile transformer could work here 
@@ -44,35 +67,6 @@ https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing t
 | default_feature_selector | the default feature selector or set of reature selectors | ["lasso"] | ["lasso", "rfe", "chi", "kbest", "variance"] | 
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
 | default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
-
-
-## How to transform folders of featurized files
-
-To transform an entire folder of a featurized files, you can run:
-
-```
-cd ~ 
-cd allie/preprocessing/audio_transformers
-python3 transform.py /Users/jimschwoebel/allie/train_dir/classA
-```
-
-The code above will transform all the featurized audio files (.JSON) in the folderpath via the default_transformer specified in the settings.json file (e.g. 'standard_transformer'). 
-
-If you'd like to use a different transformer you can specify it optionally:
-
-```
-cd ~ 
-cd allie/features/audio_transformer
-python3 featurize.py /Users/jimschwoebel/allie/load_dir standard_scalar
-```
-
-Note you can extend this to any of the feature types. The table below overviews how you could call each as a featurizer. In the code below, you must be in the proper folder (e.g. ./allie/features/audio_features for audio files, ./allie/features/image_features for image files, etc.) for the scripts to work properly.
-
-| Data type | Settings.json | Options | Call to featurizer a folder | Current directory must be | 
-| --------- |  --------- |  --------- | --------- | --------- | 
-| scaling data | scale_data: True | default_scalers: ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler" ] |  ```python3 feature_scale.py [folderpath] [options]``` | ./allie/preprocessing | 
-| feature selection | select_features: True | default_feature_selectors: ["rfe", "lasso", "chi", "kbest", "variance"] | ```python3 feature_select.py [folderpath] [options]``` | ./allie/preprocessing | 
-| dimensionality reduction | reduce_dimensions: True | default_dimensionality_reduction: ["pca", "lda", "tsne", "plda","autoencoder"] | ```python3 feature_reduce.py [folderpath] [options]``` | ./allie/preprocessing  | 
 
 ## Future
 

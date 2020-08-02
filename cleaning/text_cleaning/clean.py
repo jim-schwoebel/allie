@@ -36,7 +36,7 @@ def prev_dir(directory):
 def text_clean(cleaning_set, textfile, basedir):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	elif cleaning_set == 'clean_summary':
+	if cleaning_set == 'clean_summary':
 		clean_summary.clean_summary(textfile)
 	elif cleaning_set == 'clean_textacy':
 		clean_textacy.clean_textacy(textfile)

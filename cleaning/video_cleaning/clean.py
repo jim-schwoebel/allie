@@ -36,7 +36,7 @@ def prev_dir(directory):
 def video_clean(cleaning_set, videofile, basedir):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	elif cleaning_set == 'clean_alignfaces':
+	if cleaning_set == 'clean_alignfaces':
 		clean_alignfaces.clean_alignfaces(videofile, basedir)
 	elif cleaning_set == 'clean_videostabilize':
 		clean_videostabilize.clean_videostabilize(videofile)

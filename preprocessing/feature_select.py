@@ -12,10 +12,9 @@ from sklearn.svm import SVR
 from sklearn.svm import LinearSVC
 from sklearn.feature_selection import SelectFromModel
 from sklearn import preprocessing
-from sklearn.feature_selection import SelectKBest, chi2
+from sklearn.feature_selection import SelectKBest, chi2, GenericUnivariateSelect, SelectFwe, SelectFpr, SelectFdr, SelectPercentile
 from sklearn.model_selection import train_test_split
 from sklearn.feature_selection import VarianceThreshold
-
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -59,21 +58,26 @@ def feature_select(feature_selector, X_train, y_train, feature_number):
 	# elif feature_selector == 'gbdt':
 		# model = GBDTSelector(n_features=feature_number)
 	####################################################################################
-
-	elif feature_selector == 'kbest':
-		model = SelectKBest(f_classif, k=feature_number)
-
-	elif feature_selector == 'rfe':
+	elif feature_selector == 'fdr':
 		'''
-		Recursive feature elmination works by recursively removing 
-		attributes and building a model on attributes that remain. 
-		It uses model accuracy to identify which attributes
-		(and combinations of attributes) contribute the most to predicting the
-		target attribute. You can learn more about the RFE class in
-		the scikit-learn documentation.
+		Filter: Select the p-values for an estimated false discovery rate
+
+		This uses the Benjamini-Hochberg procedure. alpha is an upper bound on the expected false discovery rate.
 		'''
-		estimator = SVR(kernel="linear")
-		model = RFE(estimator, n_features_to_select=feature_number, step=1)
+		model = SelectFdr(chi2, alpha=0.01)
+
+	elif feature_selector == 'fpr':
+		'''
+		Filter: Select the pvalues below alpha based on a FPR test.
+		FPR test stands for False Positive Rate test. It controls the total amount of false detections.
+		'''
+		model = SelectFpr(chi2, alpha=0.01)
+
+	elif feature_selector == 'fwe':
+		'''
+		https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectFwe.html#sklearn.feature_selection.SelectFwe
+		'''
+		model = SelectFwe(chi2, alpha=0.01)
 
 	elif feature_selector == 'lasso':
 		# lasso technique 
@@ -87,6 +91,28 @@ def feature_select(feature_selector, X_train, y_train, feature_number):
 		'''
 		lsvc = LinearSVC(C=0.01, penalty="l1", dual=False)
 		model = SelectFromModel(lsvc)
+
+	elif feature_selector == 'percentile':
+		'''
+		Select features according to a percentile of the highest scores.
+		https://scikit-learn.org/stable/modules/generated/sklearn.feature_selection.SelectPercentile.html#sklearn.feature_selection.SelectPercentile
+		'''
+		model = SelectPercentile(chi2, percentile=10)
+
+	elif feature_selector == 'rfe':
+		'''
+		Recursive feature elmination works by recursively removing 
+		attributes and building a model on attributes that remain. 
+		It uses model accuracy to identify which attributes
+		(and combinations of attributes) contribute the most to predicting the
+		target attribute. You can learn more about the RFE class in
+		the scikit-learn documentation.
+		'''
+		estimator = SVR(kernel="linear")
+		model = RFE(estimator, n_features_to_select=feature_number, step=1)
+
+	elif feature_selector == 'univariate':
+		model = GenericUnivariateSelect(chi2, mode='k_best', param=feature_number)
 
 	elif feature_selector == 'variance':
 		model = VarianceThreshold(threshold=(.8 * (1 - .8)))

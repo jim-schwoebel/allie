@@ -30,8 +30,6 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 ## Definitions
 
-![](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png)
-
 ### Scaling data
 https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing techniques 
 --> default scaling to quantile transformer could work here 
@@ -53,7 +51,7 @@ https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing t
 
 ### Dimensionality reduction techniques
 
-[https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png]()
+![](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png)
 
 * PCA - PCA - dimensionality reduction
 * LDA - Linear discriminant analysis (LDA)

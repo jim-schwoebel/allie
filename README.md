@@ -135,7 +135,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | default_dimensionality_reducer | the default dimensionality reduction technique used if reduce_dimensions==True | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
 | default_feature_selector | the default feature selector used if select_features == True | ["rfe"] | ["lasso", "rfe"]  | 
 | default_image_augmenters| the default augmentation techniques used for images if augment_data == True as a part of model training. | ["augment_imaug"] | ["augment_imaug"]  | 
-| default_image_cleaners | the default cleaning techniques used for image data as a part of model training is clean_data == True| ["clean_greyscale"] | [INSERT HERE]  | 
+| default_image_cleaners | the default cleaning techniques used for image data as a part of model training is clean_data == True| ["clean_greyscale"] |["clean_extractfaces", "clean_greyscale", "clean_jpg2png"] | 
 | [default_image_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/image_features) | default set of image features used for featurization (list). | ["image_features"] | ["image_features", "inception_features", "resnet_features", "squeezenet_features", "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"] | 
 | default_image_transcriber | the default transcription technique used for images (e.g. image --> text transcript) | ["tesseract"] | ["tesseract"] |
 | default_outlier_detector | the default outlier technique(s) used to clean data as a part of model training if remove_outliers == True | ["isolationforest"] | ["isolationforest","zscore"]  | 

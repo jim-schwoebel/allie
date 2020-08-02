@@ -19,16 +19,17 @@ You can read more about Allie in the [wiki documentation](https://github.com/jim
 ## active things to finish before a live launch [ongoing list]
 
 ### ongoing (for version 1.0.0 release)
-- documentation of the repository / jupyter notebooks with examples in research paper 
+- clean up documentation of the repository 
+- create jupyter notebooks with examples in research paper 
 - re-test allie tests on linux, etc. / contextualize tests around default settings
 - solve bug relating to regression problems in the visualize.py script (this does not work for regression)
 - solve regression problem loading machine learning models and making predictions (from spreadsheets)
 -  {class: {value: value}} prediction / only allow for csv files for training (get regression model prediction working)
 - tie new datasets with SurveyLex product / CLI interface with downloads
-- Create nice CLI interface for all of Allie's functionality using OptionParser()
 
 ### future releases (1.0.1 release)
 
+- create nice CLI interface for all of Allie's functionality using OptionParser()
 - enhance visualizers with audio (RMS power/25 samples), text (freqdist plot), image, video, and csv-specific analyses
 - add in notion of 'saving' datasets in the ./datasets directory in d3m format, .JSON format, and .CSV file format (and upload these into the cloud on S3 or an FTP server)
 - create time_split type of setting (for audio and video files) in annotation

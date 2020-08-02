@@ -462,9 +462,11 @@ try:
 	problemtype=sys.argv[1]
 	classnum=sys.argv[2]
 	mtype=sys.argv[3]
+	common_name=sys.argv[4]
 	classes=list()
 	for i in range(int(classnum)):
-		classes.append(sys.argv[i+4])
+		classes.append(sys.argv[i+5])
+
 except:
 	# now ask user what type of problem they are trying to solve 
 	mtype=input('is this a classification (c) or regression (r) problem? \n')

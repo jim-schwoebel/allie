@@ -119,6 +119,13 @@ Here are some settings that you can modify in this settings.json file and the va
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 
+| version | version of Allie release | 1.0 | 1.0 |
+| augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |
+| balance_data | whether or not to balance datasets during the model training process. | True | True, False | 
+| clean_data | whether or not to clean datasets during the model training process via default cleaning scripts. | False | True, False | 
+| create_csv | whether or not to output datasets in a nicely formatted .CSV as part of the model training process (outputs to ./data folder in model repositories) | True | True, False | 
+| default_audio_augmenters | the default augmentation strategies used during audio modeling if augment_data == True | ["augment_tsaug"] | INSERT HERE OPTIONS | 
+| default_audio_cleaners | the default cleaning strategies used during audio modeling if clean_data == True | ["clean_mono16hz"] | INSERT OPTIONS HERE |
 | [default_audio_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/audio_features) | default set of audio features used for featurization (list). | ["standard_features"] | ["audioset_features", "audiotext_features", "librosa_features", "meta_features", "mixed_features", "opensmile_features", "praat_features", "prosody_features", "pspeech_features", "pyaudio_features", "pyaudiolex_features", "sa_features", "sox_features", "specimage_features", "specimage2_features", "spectrogram_features", "speechmetrics_features", "standard_features"] | 
 | [default_text_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/csv_features) | default set of text features used for featurization (list). | ["nltk_features"] | ["bert_features", "fast_features", "glove_features", "grammar_features", "nltk_features", "spacy_features", "text_features", "w2v_features"] | 
 | [default_image_features](https://github.com/jim-schwoebel/voice_modeling/tree/master/features/image_features) | default set of image features used for featurization (list). | ["image_features"] | ["image_features", "inception_features", "resnet_features", "squeezenet_features", "tesseract_features", "vgg16_features", "vgg19_features", "xception_features"] | 
@@ -153,7 +160,6 @@ Here are some settings that you can modify in this settings.json file and the va
 | default_feature_selector | the default feature selector or set of feature selectors | ["lasso"] | ["lasso", "rfe"] | 
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
 | default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
-| create_YAML | specifies whether or not you'd like to output a production-ready repository for model deployment (boolean). |  False | True, False | 
 | create_csv | if True creates .CSV files during model training and puts them in the ./data folder in the machine learning model directory; note if set to False this can speed up model training. | True | True, False | 
 | model_compress | if True compresses the model for production purposes to reduce memory consumption. Note this only can happen on Keras or scikit-learn / TPOT models for now (boolean).| False | True, False | 
 | default_outlier_detectors | the specified outlier detector employ when augmenting csv data | ['isolationforest'] | ['isolationforest', 'zscore'] |

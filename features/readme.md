@@ -108,7 +108,6 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [glove_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/glove_features.py)
 * [grammar_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/grammar_features.py) - 85k+ grammar features (memory intensive)
 * [nltk_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/nltk_features.py) - standard text feature array (default)
-* [blabla](https://github.com/novoic/blabla) - NLP library for clinical assessment
 * [spacy_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/spacy_features.py)
 * [textacy_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/textacy_features.py) - a variety of document classification and topic modeling features
 * [text_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/text_features.py) - many different types of features like emotional word counts, total word counts, Honore's statistic and others.
@@ -171,6 +170,7 @@ tried but not user friendly
 * [resin](https://github.com/kylerbrown/resin) - copyleft license
 
 ### Text
+* [blabla](https://github.com/novoic/blabla) - NLP library for clinical assessment
 * [bigrams-trigrams](https://www.sttmedia.com/syllablefrequency-english#trigrams) - add in bigrams/trigrams
 * [keras-bert](https://github.com/CyberZHG/keras-bert)
 * [Flair](https://github.com/flairNLP/flair)

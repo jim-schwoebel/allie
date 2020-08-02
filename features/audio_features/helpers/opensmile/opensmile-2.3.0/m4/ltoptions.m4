@@ -1,1 +1,1 @@
-/usr/share/aclocal/ltoptions.m4
+/usr/local/Cellar/libtool/2.4.6_2/share/aclocal/ltoptions.m4

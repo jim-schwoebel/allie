@@ -223,11 +223,11 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 						basearray['features']['video']=video_features
 
 				# make transcript additions, as necessary 
-				transcript_list=basearray['transcripts']
+				transcript_list=basearray['transcripts']['video']
 
 				if video_transcribe_setting == True:
 					for j in range(len(default_video_transcriber)):
-						default_video_transcriber=default_video_transcriber[j]
+						video_transcriber=default_video_transcriber[j]
 						if video_transcriber not in list(transcript_list):
 							if video_transcriber == 'tesseract (averaged over frames)':
 								transcript_list['video'][video_transcriber] = video_transcript
@@ -257,4 +257,4 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				jsonfile.close()
 
 		except:
-			print('error - already featurized %s'%(videofile.upper()))
+			print('error -  %s'%(videofile.upper()))

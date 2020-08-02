@@ -437,11 +437,11 @@ Copyright (C) 2012 Free Software Foundation, Inc.
 This config.status script is free software; the Free Software Foundation
 gives unlimited permission to copy, distribute and modify it."
 
-ac_pwd='/mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0'
+ac_pwd='/Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0'
 srcdir='.'
 INSTALL='/usr/bin/install -c'
-MKDIR_P='/bin/mkdir -p'
-AWK='gawk'
+MKDIR_P='./install-sh -c -d'
+AWK='awk'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
 ac_need_defaults=:
@@ -539,7 +539,7 @@ _ASBOX
 #
 # INIT-COMMANDS
 #
-AMDEP_TRUE="" ac_aux_dir="."
+AMDEP_TRUE="" MAKE="make"
 
 
 # The HP-UX ksh and POSIX shell print the target directory to stdout
@@ -560,20 +560,20 @@ SHELL='/bin/bash'
 ECHO='printf %s\n'
 PATH_SEPARATOR=':'
 host_alias=''
-host='x86_64-pc-linux-gnu'
-host_os='linux-gnu'
+host='x86_64-apple-darwin19.5.0'
+host_os='darwin19.5.0'
 build_alias=''
-build='x86_64-pc-linux-gnu'
-build_os='linux-gnu'
-SED='/bin/sed'
-Xsed='/bin/sed -e 1s/^X//'
-GREP='/bin/grep'
-EGREP='/bin/grep -E'
-FGREP='/bin/grep -F'
-LD='/usr/bin/ld -m elf_x86_64'
+build='x86_64-apple-darwin19.5.0'
+build_os='darwin19.5.0'
+SED='/usr/bin/sed'
+Xsed='/usr/bin/sed -e 1s/^X//'
+GREP='/usr/bin/grep'
+EGREP='/usr/bin/grep -E'
+FGREP='/usr/bin/grep -F'
+LD='/Library/Developer/CommandLineTools/usr/bin/ld'
 NM='/usr/bin/nm -B'
 LN_S='ln -s'
-max_cmd_len='1572864'
+max_cmd_len='196608'
 ac_objext='o'
 exeext=''
 lt_unset='unset'
@@ -582,7 +582,7 @@ lt_NL2SP='tr \015\012 \040\040'
 lt_cv_to_host_file_cmd='func_convert_file_noop'
 lt_cv_to_tool_file_cmd='func_convert_file_noop'
 reload_flag=' -r'
-reload_cmds='$LD$reload_flag -o $output$reload_objs'
+reload_cmds='$LTCC $LTCFLAGS -nostdlib $wl-r -o $output$reload_objs'
 OBJDUMP='objdump'
 deplibs_check_method='pass_all'
 file_magic_cmd='$MAGIC_CMD'
@@ -592,69 +592,66 @@ DLLTOOL='false'
 sharedlib_from_linklib_cmd='printf %s\n'
 AR='ar'
 AR_FLAGS='cru'
-archiver_list_spec='@'
+archiver_list_spec=''
 STRIP='strip'
 RANLIB='ranlib'
 old_postinstall_cmds='chmod 644 $oldlib~$RANLIB $tool_oldlib'
 old_postuninstall_cmds=''
 old_archive_cmds='$AR $AR_FLAGS $oldlib$oldobjs~$RANLIB $tool_oldlib'
-lock_old_archive_extraction='no'
+lock_old_archive_extraction='yes'
 CC='gcc'
 CFLAGS='-g -O2'
 compiler='g++'
 GCC='yes'
-lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([ABCDGIRSTW][ABCDGIRSTW]*\)[	 ][	 ]*\([_A-Za-z][_A-Za-z0-9]*\)$/\1 \2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
-lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/extern char \1;/p'\'''
+lt_cv_sys_global_symbol_pipe='sed -n -e '\''s/^.*[	 ]\([BCDEGRST][BCDEGRST]*\)[	 ][	 ]*_\([_A-Za-z][_A-Za-z0-9]*\)$/\1 _\2 \2/p'\'' | sed '\''/ __gnu_lto/d'\'''
+lt_cv_sys_global_symbol_to_cdecl='sed -n -e '\''s/^T .* \(.*\)$/extern int \1();/p'\'' -e '\''s/^[BCDEGRST][BCDEGRST]* .* \(.*\)$/extern char \1;/p'\'''
 lt_cv_sys_global_symbol_to_import=''
-lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
-lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[ABCDGIRSTW][ABCDGIRSTW]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[BCDEGRST][BCDEGRST]* .* \(.*\)$/  {"\1", (void *) \&\1},/p'\'''
+lt_cv_sys_global_symbol_to_c_name_address_lib_prefix='sed -n -e '\''s/^: \(.*\) .*$/  {"\1", (void *) 0},/p'\'' -e '\''s/^[BCDEGRST][BCDEGRST]* .* \(lib.*\)$/  {"\1", (void *) \&\1},/p'\'' -e '\''s/^[BCDEGRST][BCDEGRST]* .* \(.*\)$/  {"lib\1", (void *) \&\1},/p'\'''
 lt_cv_nm_interface='BSD nm'
 nm_file_list_spec='@'
 lt_sysroot=''
 lt_cv_truncate_bin='/bin/dd bs=4096 count=1'
 objdir='.libs'
 MAGIC_CMD='file'
-lt_prog_compiler_no_builtin_flag=' -fno-builtin'
-lt_prog_compiler_pic=' -fPIC -DPIC'
+lt_prog_compiler_no_builtin_flag=' -fno-builtin -fno-rtti -fno-exceptions'
+lt_prog_compiler_pic=' -fno-common -DPIC'
 lt_prog_compiler_wl='-Wl,'
-lt_prog_compiler_static='-static'
+lt_prog_compiler_static=''
 lt_cv_prog_compiler_c_o='yes'
 need_locks='no'
 MANIFEST_TOOL=':'
-DSYMUTIL=''
-NMEDIT=''
-LIPO=''
-OTOOL=''
-OTOOL64=''
+DSYMUTIL='dsymutil'
+NMEDIT='nmedit'
+LIPO='lipo'
+OTOOL='otool'
+OTOOL64=':'
 libext='a'
-shrext_cmds='.so'
+shrext_cmds='`test .$module = .yes && echo .so || echo .dylib`'
 extract_expsyms_cmds=''
 archive_cmds_need_lc='no'
 enable_shared_with_static_runtimes='no'
-export_dynamic_flag_spec='$wl--export-dynamic'
-whole_archive_flag_spec='$wl--whole-archive$convenience $wl--no-whole-archive'
+export_dynamic_flag_spec=''
+whole_archive_flag_spec='`for conv in $convenience\"\"; do test  -n \"$conv\" && new_convenience=\"$new_convenience $wl-force_load,$conv\"; done; func_echo_all \"$new_convenience\"`'
 compiler_needs_object='no'
 old_archive_from_new_cmds=''
 old_archive_from_expsyms_cmds=''
-archive_cmds='$CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname -o $lib'
-archive_expsym_cmds='echo "{ global:" > $output_objdir/$libname.ver~
-            cat $export_symbols | sed -e "s/\(.*\)/\1;/" >> $output_objdir/$libname.ver~
-            echo "local: *; };" >> $output_objdir/$libname.ver~
-            $CC -shared $pic_flag $libobjs $deplibs $compiler_flags $wl-soname $wl$soname $wl-version-script $wl$output_objdir/$libname.ver -o $lib'
-module_cmds=''
-module_expsym_cmds=''
-with_gnu_ld='yes'
-allow_undefined_flag=''
+archive_cmds='$CC -dynamiclib $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring $single_module'
+archive_expsym_cmds='sed '\''s|^|_|'\'' < $export_symbols > $output_objdir/$libname-symbols.expsym~$CC -dynamiclib $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring $single_module $wl-exported_symbols_list,$output_objdir/$libname-symbols.expsym'
+module_cmds='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs $compiler_flags'
+module_expsym_cmds='sed -e '\''s|^|_|'\'' < $export_symbols > $output_objdir/$libname-symbols.expsym~$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs $compiler_flags $wl-exported_symbols_list,$output_objdir/$libname-symbols.expsym'
+with_gnu_ld='no'
+allow_undefined_flag='$wl-undefined ${wl}dynamic_lookup'
 no_undefined_flag=''
-hardcode_libdir_flag_spec='$wl-rpath $wl$libdir'
+hardcode_libdir_flag_spec=''
 hardcode_libdir_separator=''
 hardcode_direct='no'
 hardcode_direct_absolute='no'
 hardcode_minus_L='no'
 hardcode_shlibpath_var='unsupported'
-hardcode_automatic='no'
+hardcode_automatic='yes'
 inherit_rpath='no'
-link_all_deplibs='no'
+link_all_deplibs='yes'
 always_export_symbols='no'
 export_symbols_cmds='$NM $libobjs $convenience | $global_symbol_pipe | $SED '\''s/.* //'\'' | sort | uniq > $export_symbols'
 exclude_expsyms='_GLOBAL_OFFSET_TABLE_|_GLOBAL__F[ID]_.*'
@@ -662,71 +659,71 @@ include_expsyms=''
 prelink_cmds=''
 postlink_cmds=''
 file_list_spec=''
-variables_saved_for_relink='PATH LD_LIBRARY_PATH LD_RUN_PATH GCC_EXEC_PREFIX COMPILER_PATH LIBRARY_PATH'
+variables_saved_for_relink='PATH DYLD_LIBRARY_PATH  GCC_EXEC_PREFIX COMPILER_PATH LIBRARY_PATH'
 need_lib_prefix='no'
 need_version='no'
-version_type='linux'
-runpath_var='LD_RUN_PATH'
-shlibpath_var='LD_LIBRARY_PATH'
+version_type='darwin'
+runpath_var=''
+shlibpath_var='DYLD_LIBRARY_PATH'
 shlibpath_overrides_runpath='yes'
 libname_spec='lib$name'
-library_names_spec='$libname$release$shared_ext$versuffix $libname$release$shared_ext$major $libname$shared_ext'
-soname_spec='$libname$release$shared_ext$major'
+library_names_spec='$libname$release$major$shared_ext $libname$shared_ext'
+soname_spec='$libname$release$major$shared_ext'
 install_override_mode=''
 postinstall_cmds=''
 postuninstall_cmds=''
-finish_cmds='PATH="\$PATH:/sbin" ldconfig -n $libdir'
+finish_cmds=''
 finish_eval=''
-hardcode_into_libs='yes'
-sys_lib_search_path_spec='/usr/lib/gcc/x86_64-linux-gnu/7 /usr/lib/x86_64-linux-gnu /usr/lib /lib/x86_64-linux-gnu /lib '
-configure_time_dlsearch_path='/lib /usr/lib /usr/lib/x86_64-linux-gnu/libfakeroot /usr/local/lib /usr/local/lib/x86_64-linux-gnu /lib/x86_64-linux-gnu /usr/lib/x86_64-linux-gnu '
+hardcode_into_libs='no'
+sys_lib_search_path_spec='/Library/Developer/CommandLineTools/usr/lib/clang/11.0.3  /usr/local/lib'
+configure_time_dlsearch_path='/usr/local/lib /lib /usr/lib'
 configure_time_lt_sys_library_path=''
 hardcode_action='immediate'
 enable_dlopen='unknown'
 enable_dlopen_self='unknown'
 enable_dlopen_self_static='unknown'
-old_striplib='strip --strip-debug'
-striplib='strip --strip-unneeded'
+old_striplib='strip -S'
+striplib='strip -x'
 compiler_lib_search_dirs=''
 predep_objects=''
 postdep_objects=''
 predeps=''
 postdeps=''
 compiler_lib_search_path=''
-LD_CXX='/usr/bin/ld -m elf_x86_64'
+LD_CXX='/Library/Developer/CommandLineTools/usr/bin/ld'
 reload_flag_CXX=' -r'
-reload_cmds_CXX='$LD$reload_flag -o $output$reload_objs'
+reload_cmds_CXX='$LTCC $LTCFLAGS -nostdlib $wl-r -o $output$reload_objs'
 old_archive_cmds_CXX='$AR $AR_FLAGS $oldlib$oldobjs~$RANLIB $tool_oldlib'
 compiler_CXX='g++'
 GCC_CXX='yes'
 lt_prog_compiler_no_builtin_flag_CXX=' -fno-builtin'
-lt_prog_compiler_pic_CXX=' -fPIC -DPIC'
+lt_prog_compiler_pic_CXX=' -fno-common -DPIC'
 lt_prog_compiler_wl_CXX='-Wl,'
-lt_prog_compiler_static_CXX='-static'
+lt_prog_compiler_static_CXX=''
 lt_cv_prog_compiler_c_o_CXX='yes'
 archive_cmds_need_lc_CXX='no'
 enable_shared_with_static_runtimes_CXX='no'
-export_dynamic_flag_spec_CXX='$wl--export-dynamic'
-whole_archive_flag_spec_CXX='$wl--whole-archive$convenience $wl--no-whole-archive'
+export_dynamic_flag_spec_CXX=''
+whole_archive_flag_spec_CXX='`for conv in $convenience\"\"; do test  -n \"$conv\" && new_convenience=\"$new_convenience $wl-force_load,$conv\"; done; func_echo_all \"$new_convenience\"`'
 compiler_needs_object_CXX='no'
 old_archive_from_new_cmds_CXX=''
 old_archive_from_expsyms_cmds_CXX=''
-archive_cmds_CXX='$CC $pic_flag -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname -o $lib'
-archive_expsym_cmds_CXX='$CC $pic_flag -shared -nostdlib $predep_objects $libobjs $deplibs $postdep_objects $compiler_flags $wl-soname $wl$soname $wl-retain-symbols-file $wl$export_symbols -o $lib'
-module_cmds_CXX=''
-module_expsym_cmds_CXX=''
-with_gnu_ld_CXX='yes'
-allow_undefined_flag_CXX=''
+archive_cmds_CXX='$CC -dynamiclib $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring $single_module'
+archive_expsym_cmds_CXX='sed '\''s|^|_|'\'' < $export_symbols > $output_objdir/$libname-symbols.expsym~$CC -dynamiclib $allow_undefined_flag -o $lib $libobjs $deplibs $compiler_flags -install_name $rpath/$soname $verstring $single_module $wl-exported_symbols_list,$output_objdir/$libname-symbols.expsym'
+module_cmds_CXX='$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs $compiler_flags'
+module_expsym_cmds_CXX='sed -e '\''s|^|_|'\'' < $export_symbols > $output_objdir/$libname-symbols.expsym~$CC $allow_undefined_flag -o $lib -bundle $libobjs $deplibs $compiler_flags $wl-exported_symbols_list,$output_objdir/$libname-symbols.expsym'
+with_gnu_ld_CXX='no'
+allow_undefined_flag_CXX='$wl-undefined ${wl}dynamic_lookup'
 no_undefined_flag_CXX=''
-hardcode_libdir_flag_spec_CXX='$wl-rpath $wl$libdir'
+hardcode_libdir_flag_spec_CXX=''
 hardcode_libdir_separator_CXX=''
 hardcode_direct_CXX='no'
 hardcode_direct_absolute_CXX='no'
 hardcode_minus_L_CXX='no'
 hardcode_shlibpath_var_CXX='unsupported'
-hardcode_automatic_CXX='no'
+hardcode_automatic_CXX='yes'
 inherit_rpath_CXX='no'
-link_all_deplibs_CXX='no'
+link_all_deplibs_CXX='yes'
 always_export_symbols_CXX='no'
 export_symbols_cmds_CXX='$NM $libobjs $convenience | $global_symbol_pipe | $SED '\''s/.* //'\'' | sort | uniq > $export_symbols'
 exclude_expsyms_CXX='_GLOBAL_OFFSET_TABLE_|_GLOBAL__F[ID]_.*'
@@ -735,12 +732,12 @@ prelink_cmds_CXX=''
 postlink_cmds_CXX=''
 file_list_spec_CXX=''
 hardcode_action_CXX='immediate'
-compiler_lib_search_dirs_CXX='/usr/lib/gcc/x86_64-linux-gnu/7 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu /usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib /lib/x86_64-linux-gnu /lib/../lib /usr/lib/x86_64-linux-gnu /usr/lib/../lib /usr/lib/gcc/x86_64-linux-gnu/7/../../..'
-predep_objects_CXX='/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o'
-postdep_objects_CXX='/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o'
+compiler_lib_search_dirs_CXX=''
+predep_objects_CXX=''
+postdep_objects_CXX=''
 predeps_CXX=''
-postdeps_CXX='-lstdc++ -lm -lgcc_s -lc -lgcc_s'
-compiler_lib_search_path_CXX='-L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../..'
+postdeps_CXX=''
+compiler_lib_search_path_CXX=''
 
 LTCC='gcc'
 LTCFLAGS='-g -O2'
@@ -878,25 +875,25 @@ S["LIBOBJS"]=""
 S["DLIB"]="-ldl"
 S["BUILD_SMILExtract_FALSE"]="#"
 S["BUILD_SMILExtract_TRUE"]=""
-S["PTHREAD_CFLAGS"]=""
-S["PTHREAD_LIBS"]="-lpthread"
+S["PTHREAD_CFLAGS"]="-D_THREAD_SAFE "
+S["PTHREAD_LIBS"]=""
 S["PTHREAD_CC"]="gcc"
 S["acx_pthread_config"]=""
 S["OPENCV_LDFLAGS"]=""
 S["OPENCV_CPPFLAGS"]=""
 S["OPENCV_ROOT"]="no"
 S["ANDROID_LDFLAGS"]=""
-S["PORTAUDIO_LDFLAGS"]="-lportaudio -lasound -lm -lpthread"
-S["PORTAUDIO_CPPFLAGS"]="-I/usr/include"
+S["PORTAUDIO_LDFLAGS"]=""
+S["PORTAUDIO_CPPFLAGS"]=""
 S["PORTAUDIO_ROOT"]="/usr"
 S["CXXCPP"]="g++ -E"
 S["CPP"]="gcc -E"
 S["LT_SYS_LIBRARY_PATH"]=""
-S["OTOOL64"]=""
-S["OTOOL"]=""
-S["LIPO"]=""
-S["NMEDIT"]=""
-S["DSYMUTIL"]=""
+S["OTOOL64"]=":"
+S["OTOOL"]="otool"
+S["LIPO"]="lipo"
+S["NMEDIT"]="nmedit"
+S["DSYMUTIL"]="dsymutil"
 S["MANIFEST_TOOL"]=":"
 S["RANLIB"]="ranlib"
 S["ac_ct_AR"]="ar"
@@ -907,19 +904,19 @@ S["LN_S"]="ln -s"
 S["NM"]="/usr/bin/nm -B"
 S["ac_ct_DUMPBIN"]=""
 S["DUMPBIN"]=""
-S["LD"]="/usr/bin/ld -m elf_x86_64"
-S["FGREP"]="/bin/grep -F"
-S["EGREP"]="/bin/grep -E"
-S["GREP"]="/bin/grep"
-S["SED"]="/bin/sed"
-S["host_os"]="linux-gnu"
-S["host_vendor"]="pc"
+S["LD"]="/Library/Developer/CommandLineTools/usr/bin/ld"
+S["FGREP"]="/usr/bin/grep -F"
+S["EGREP"]="/usr/bin/grep -E"
+S["GREP"]="/usr/bin/grep"
+S["SED"]="/usr/bin/sed"
+S["host_os"]="darwin19.5.0"
+S["host_vendor"]="apple"
 S["host_cpu"]="x86_64"
-S["host"]="x86_64-pc-linux-gnu"
-S["build_os"]="linux-gnu"
-S["build_vendor"]="pc"
+S["host"]="x86_64-apple-darwin19.5.0"
+S["build_os"]="darwin19.5.0"
+S["build_vendor"]="apple"
 S["build_cpu"]="x86_64"
-S["build"]="x86_64-pc-linux-gnu"
+S["build"]="x86_64-apple-darwin19.5.0"
 S["LIBTOOL"]="$(SHELL) $(top_builddir)/libtool"
 S["am__fastdepCXX_FALSE"]="#"
 S["am__fastdepCXX_TRUE"]=""
@@ -934,7 +931,6 @@ S["am__nodep"]="_no"
 S["AMDEPBACKSLASH"]="\\"
 S["AMDEP_FALSE"]="#"
 S["AMDEP_TRUE"]=""
-S["am__quote"]=""
 S["am__include"]="include"
 S["DEPDIR"]=".deps"
 S["OBJEXT"]="o"
@@ -953,17 +949,17 @@ S["am__tar"]="$${TAR-tar} chof - \"$$tardir\""
 S["AMTAR"]="$${TAR-tar}"
 S["am__leading_dot"]="."
 S["SET_MAKE"]=""
-S["AWK"]="gawk"
+S["AWK"]="awk"
 S["mkdir_p"]="$(MKDIR_P)"
-S["MKDIR_P"]="/bin/mkdir -p"
+S["MKDIR_P"]="./install-sh -c -d"
 S["INSTALL_STRIP_PROGRAM"]="$(install_sh) -c -s"
 S["STRIP"]="strip"
-S["install_sh"]="${SHELL} /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/install-sh"
-S["MAKEINFO"]="${SHELL} /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing makeinfo"
-S["AUTOHEADER"]="${SHELL} /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing autoheader"
-S["AUTOMAKE"]="${SHELL} /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing automake-1.15"
-S["AUTOCONF"]="${SHELL} /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing autoconf"
-S["ACLOCAL"]="${SHELL} /mnt/c/users/jimsc/desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing aclocal-1.15"
+S["install_sh"]="${SHELL} /Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/install-sh"
+S["MAKEINFO"]="${SHELL} /Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing makeinfo"
+S["AUTOHEADER"]="${SHELL} /Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing autoheader"
+S["AUTOMAKE"]="${SHELL} /Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing automake-1.16"
+S["AUTOCONF"]="${SHELL} /Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing autoconf"
+S["ACLOCAL"]="${SHELL} /Users/jim/Desktop/allie/features/audio_features/helpers/opensmile/opensmile-2.3.0/missing aclocal-1.16"
 S["VERSION"]="2.3.0"
 S["PACKAGE"]="opensmile"
 S["CYGPATH_W"]="echo"
@@ -976,8 +972,8 @@ S["host_alias"]=""
 S["build_alias"]=""
 S["LIBS"]=""
 S["ECHO_T"]=""
-S["ECHO_N"]="-n"
-S["ECHO_C"]=""
+S["ECHO_N"]=""
+S["ECHO_C"]="\\c"
 S["DEFS"]="-DHAVE_CONFIG_H"
 S["mandir"]="${datarootdir}/man"
 S["localedir"]="${datarootdir}/locale"
@@ -990,7 +986,6 @@ S["infodir"]="${datarootdir}/info"
 S["docdir"]="${datarootdir}/doc/${PACKAGE_TARNAME}"
 S["oldincludedir"]="/usr/include"
 S["includedir"]="${prefix}/include"
-S["runstatedir"]="${localstatedir}/run"
 S["localstatedir"]="${prefix}/var"
 S["sharedstatedir"]="${prefix}/com"
 S["sysconfdir"]="${prefix}/etc"
@@ -1010,6 +1005,7 @@ S["PACKAGE_TARNAME"]="opensmile"
 S["PACKAGE_NAME"]="openSMILE"
 S["PATH_SEPARATOR"]=":"
 S["SHELL"]="/bin/bash"
+S["am__quote"]=""
 _ACAWK
 cat >>"$ac_tmp/subs1.awk" <<_ACAWK &&
   for (key in S) S_is_set[key] = 1
@@ -1071,10 +1067,10 @@ D["HAVE_STDINT_H"]=" 1"
 D["HAVE_UNISTD_H"]=" 1"
 D["HAVE_DLFCN_H"]=" 1"
 D["LT_OBJDIR"]=" \".libs/\""
-D["HAVE_PORTAUDIO"]=" 1"
-D["HAVE_PORTAUDIO_V19"]=" 1"
 D["HAVE_PTHREAD"]=" 1"
 D["WITH_LIVEREC"]=" 1"
+D["__MACOS"]=" 1"
+D["__HAVENT_GNULIBS"]=" 1"
 D["HAVE_AUTOCONF"]=" 1"
   for (key in D) D_is_set[key] = 1
   FS = ""
@@ -1403,29 +1399,35 @@ $as_echo "$as_me: executing $ac_file commands" >&6;}
   # Older Autoconf quotes --file arguments for eval, but not when files
   # are listed without --file.  Let's play safe and only enable the eval
   # if we detect the quoting.
-  case $CONFIG_FILES in
-  *\'*) eval set x "$CONFIG_FILES" ;;
-  *)   set x $CONFIG_FILES ;;
-  esac
+  # TODO: see whether this extra hack can be removed once we start
+  # requiring Autoconf 2.70 or later.
+  case $CONFIG_FILES in #(
+  *\'*) :
+    eval set x "$CONFIG_FILES" ;; #(
+  *) :
+    set x $CONFIG_FILES ;; #(
+  *) :
+     ;;
+esac
   shift
-  for mf
+  # Used to flag and report bootstrapping failures.
+  am_rc=0
+  for am_mf
   do
     # Strip MF so we end up with the name of the file.
-    mf=`echo "$mf" | sed -e 's/:.*$//'`
-    # Check whether this is an Automake generated Makefile or not.
-    # We used to match only the files named 'Makefile.in', but
-    # some people rename them; so instead we look at the file content.
-    # Grep'ing the first line is not enough: some people post-process
-    # each Makefile.in and add a new line on top of each file to say so.
-    # Grep'ing the whole file is not good either: AIX grep has a line
+    am_mf=`$as_echo "$am_mf" | sed -e 's/:.*$//'`
+    # Check whether this is an Automake generated Makefile which includes
+    # dependency-tracking related rules and includes.
+    # Grep'ing the whole file directly is not great: AIX grep has a line
     # limit of 2048, but all sed's we know have understand at least 4000.
-    if sed -n 's,^#.*generated by automake.*,X,p' "$mf" | grep X >/dev/null 2>&1; then
-      dirpart=`$as_dirname -- "$mf" ||
-$as_expr X"$mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$mf" : 'X\(//\)[^/]' \| \
-	 X"$mf" : 'X\(//\)$' \| \
-	 X"$mf" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$mf" |
+    sed -n 's,^am--depfiles:.*,X,p' "$am_mf" | grep X >/dev/null 2>&1 \
+      || continue
+    am_dirpart=`$as_dirname -- "$am_mf" ||
+$as_expr X"$am_mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+	 X"$am_mf" : 'X\(//\)[^/]' \| \
+	 X"$am_mf" : 'X\(//\)$' \| \
+	 X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
+$as_echo X"$am_mf" |
     sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
 	    s//\1/
 	    q
@@ -1443,53 +1445,50 @@ $as_echo X"$mf" |
 	    q
 	  }
 	  s/.*/./; q'`
-    else
-      continue
-    fi
-    # Extract the definition of DEPDIR, am__include, and am__quote
-    # from the Makefile without running 'make'.
-    DEPDIR=`sed -n 's/^DEPDIR = //p' < "$mf"`
-    test -z "$DEPDIR" && continue
-    am__include=`sed -n 's/^am__include = //p' < "$mf"`
-    test -z "$am__include" && continue
-    am__quote=`sed -n 's/^am__quote = //p' < "$mf"`
-    # Find all dependency output files, they are included files with
-    # $(DEPDIR) in their names.  We invoke sed twice because it is the
-    # simplest approach to changing $(DEPDIR) to its actual value in the
-    # expansion.
-    for file in `sed -n "
-      s/^$am__include $am__quote\(.*(DEPDIR).*\)$am__quote"'$/\1/p' <"$mf" | \
-	 sed -e 's/\$(DEPDIR)/'"$DEPDIR"'/g'`; do
-      # Make sure the directory exists.
-      test -f "$dirpart/$file" && continue
-      fdir=`$as_dirname -- "$file" ||
-$as_expr X"$file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$file" : 'X\(//\)[^/]' \| \
-	 X"$file" : 'X\(//\)$' \| \
-	 X"$file" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$file" |
-    sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
+    am_filepart=`$as_basename -- "$am_mf" ||
+$as_expr X/"$am_mf" : '.*/\([^/][^/]*\)/*$' \| \
+	 X"$am_mf" : 'X\(//\)$' \| \
+	 X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
+$as_echo X/"$am_mf" |
+    sed '/^.*\/\([^/][^/]*\)\/*$/{
 	    s//\1/
 	    q
 	  }
-	  /^X\(\/\/\)[^/].*/{
+	  /^X\/\(\/\/\)$/{
 	    s//\1/
 	    q
 	  }
-	  /^X\(\/\/\)$/{
-	    s//\1/
-	    q
-	  }
-	  /^X\(\/\).*/{
+	  /^X\/\(\/\).*/{
 	    s//\1/
 	    q
 	  }
 	  s/.*/./; q'`
-      as_dir=$dirpart/$fdir; as_fn_mkdir_p
-      # echo "creating $dirpart/$file"
-      echo '# dummy' > "$dirpart/$file"
-    done
+    { echo "$as_me:$LINENO: cd "$am_dirpart" \
+      && sed -e '/# am--include-marker/d' "$am_filepart" \
+        | $MAKE -f - am--depfiles" >&5
+   (cd "$am_dirpart" \
+      && sed -e '/# am--include-marker/d' "$am_filepart" \
+        | $MAKE -f - am--depfiles) >&5 2>&5
+   ac_status=$?
+   echo "$as_me:$LINENO: \$? = $ac_status" >&5
+   (exit $ac_status); } || am_rc=$?
   done
+  if test $am_rc -ne 0; then
+    { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
+as_fn_error $? "Something went wrong bootstrapping makefile fragments
+    for automatic dependency tracking.  If GNU make was not used, consider
+    re-running the configure script with MAKE=\"gmake\" (or whatever is
+    necessary).  You can also try re-running configure with the
+    '--disable-dependency-tracking' option to at least be able to build
+    the package (albeit without support for automatic dependency tracking).
+See \`config.log' for more details" "$LINENO" 5; }
+  fi
+  { am_dirpart=; unset am_dirpart;}
+  { am_filepart=; unset am_filepart;}
+  { am_mf=; unset am_mf;}
+  { am_rc=; unset am_rc;}
+  rm -f conftest-deps.mk
 }
  ;;
     "libtool":C)
@@ -1507,6 +1506,7 @@ $as_echo X"$file" |
     cat <<_LT_EOF >> "$cfgfile"
 #! $SHELL
 # Generated automatically by $as_me ($PACKAGE) $VERSION
+# Libtool was configured on host `(hostname || uname -n) 2>/dev/null | sed 1q`:
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
 
 # Provide generalized library-building support services.

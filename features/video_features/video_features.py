@@ -724,8 +724,14 @@ def video_featurize(videofile, cur_dir,haar_dir):
     features = np.append(features, other_features)
 
     # remove all temp files
-    os.remove(wavfile)
-    shutil.rmtree('output')
+    try:
+        os.remove(wavfile)
+    except:
+        pass
+    try:
+        shutil.rmtree('output')
+    except:
+        pass
     os.chdir(cur_dir)
 
     return features, labels, transcript, image_transcript 

@@ -1,0 +1,16 @@
+--2020-08-02 11:01:45--  https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.scorer
+Resolving github.com (github.com)... 140.82.114.3
+Connecting to github.com (github.com)|140.82.114.3|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://github-production-release-asset-2e65be.s3.amazonaws.com/60273704/49dcc500-84df-11ea-9cb6-ec1d98c50dd4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T150146Z&X-Amz-Expires=300&X-Amz-Signature=8a75287b6f8805813c78829cf65a56d4ca76bb5e36fa3f6cddb3420b0841c671&X-Amz-SignedHeaders=host&actor_id=0&repo_id=60273704&response-content-disposition=attachment%3B%20filename%3Ddeepspeech-0.7.0-models.scorer&response-content-type=application%2Foctet-stream [following]
+--2020-08-02 11:01:46--  https://github-production-release-asset-2e65be.s3.amazonaws.com/60273704/49dcc500-84df-11ea-9cb6-ec1d98c50dd4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20200802%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200802T150146Z&X-Amz-Expires=300&X-Amz-Signature=8a75287b6f8805813c78829cf65a56d4ca76bb5e36fa3f6cddb3420b0841c671&X-Amz-SignedHeaders=host&actor_id=0&repo_id=60273704&response-content-disposition=attachment%3B%20filename%3Ddeepspeech-0.7.0-models.scorer&response-content-type=application%2Foctet-stream
+Resolving github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)... 52.216.113.131
+Connecting to github-production-release-asset-2e65be.s3.amazonaws.com (github-production-release-asset-2e65be.s3.amazonaws.com)|52.216.113.131|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 953363776 (909M) [application/octet-stream]
+Saving to: ‘deepspeech-0.7.0-models.scorer’
+
+deepspeech-0.7.0-mo   4%[                    ]  42.52M  12.3MB/s    in 3.5s    
+
+2020-08-02 12:27:31 (12.2 MB/s) - Read error at byte 44586053/953363776 (Success). Retrying.
+

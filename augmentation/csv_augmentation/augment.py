@@ -66,7 +66,7 @@ except:
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
-elif 'augment_ctgan_classification' in augmentation_sets:
+if 'augment_ctgan_classification' in augmentation_sets:
 	import augment_ctgan_classification
 elif 'augment_ctgan_regression' in augmentation_sets:
 	import augment_ctgan_regression

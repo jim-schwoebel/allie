@@ -26,7 +26,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 | Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | 
-| audio files | .MP3 / .WAV | ```python3 augment.py [folderpath]``` | ./allie/augmentation/audio_features | 
+| audio files | .MP3 / .WAV | ```python3 augment.py [folderpath]``` | ./allie/augmentation/audio_augmentation| 
 | text files | .TXT | ```python3 augment.py [folderpath]``` | ./allie/augmentation/text_augmentation| 
 | image files | .PNG | ```python3 augment.py [folderpath]``` | ./allie/augmentation/image_augmentation | 
 | video files | .MP4 | ```python3 augment.py [folderpath]``` |./allie/augmentation/video_augmentation| 

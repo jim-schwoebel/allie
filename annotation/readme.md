@@ -4,12 +4,13 @@
 
 You can simply annotate using the command-line interface here:
 
-```
+```python3
 python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
 After you annotate, you can create a nicely formatted .CSV for machine learning:
-```
+
+```python3
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 

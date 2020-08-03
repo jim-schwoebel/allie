@@ -12,20 +12,24 @@ In this way, we can appropriately create transformers for various sample data ty
 
 To transform an entire folder of a featurized files, you can run:
 
-```
-cd ~ 
-cd allie/preprocessing
-python3 transform.py text c onetwo one two
+```python3
+cd /Users/jim/desktop/allie
+cd preprocessing
+python3 transform.py audio c gender males females
 ```
 
-The code above will transform all the featurized text files (in .JSON files, folder ONE and folder TWO) via a classification script with a common name ONETWO. For clarity, the command line arguments are further elaborated upon below along with all possible options to help you use the transformers API. Note that folder ONE and folder TWO are assumed to be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir).
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/transform.gif)](https://drive.google.com/file/d/1wV-yeM9FTRKrGAebhREXpY4gfWPmcL0U/view?usp=sharing)
+
+The code above will transform all the featurized text files (in .JSON files, folder MALES and folder FEMALES) via a classification script (c) with a common name GENDER. For clarity, the command line arguments are further elaborated upon below along with all possible options to help you use the transformers API. Note that folder ONE and folder TWO are assumed to be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir).
 
 | CLI argument | sample | description | all options | 
 |------|------|------|------| 
-| sys.argv[1] | 'text' | the sample type of file preprocessed by the transformer | ['audio', 'text', 'image', 'video', 'csv'] | 
+| sys.argv[1] | 'audio' | the sample type of file preprocessed by the transformer | ['audio', 'text', 'image', 'video', 'csv'] | 
 | sys.argv[2] | 'c' | classification or regression problems | ['c', 'r'] | 
-| sys.argv[3] | 'onetwo' | the common name for the transformer | can be any string | 
-| sys.argv[4], sys.argv[5], sys.argv[n] | 'one' | classes that you seek to model in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) | any string folder name |
+| sys.argv[3] | 'gender' | the common name for the transformer | can be any string | 
+| sys.argv[4], sys.argv[5], sys.argv[n] | 'males' | classes that you seek to model in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) | any string folder name |
 
 ## Building transformers (for regression problems)
 

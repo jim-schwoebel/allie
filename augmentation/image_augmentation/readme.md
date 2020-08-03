@@ -1,2 +1,11 @@
-### [Image](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation)
+## Getting started
+
+Here is a way to quickly augment a file of audio files:
+```
+cd ~ 
+cd allie/features/image_augmentation
+python3 augment.py /Users/jimschwoebel/allie/load_dir
+```
+
+### Image
 * [augment_imaug]()

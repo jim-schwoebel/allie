@@ -51,16 +51,16 @@ def make_features(sampletype):
 		      'csv': dict()}
 
 	transcripts={'audio': dict(),
-				 'text': dict(),
-				 'image': dict(),
-				 'video': dict(),
-				 'csv': dict()}
+		     'text': dict(),
+		     'image': dict(),
+		     'video': dict(),
+		     'csv': dict()}
 			   
 	models={'audio': dict(),
-			'text': dict(),
-			'image': dict(),
-			'video': dict(),
-			'csv': dict()}
+		'text': dict(),
+		'image': dict(),
+		'video': dict(),
+		'csv': dict()}
 	
 	# getting settings can be useful to see if settings are the same in every
 	# featurization, as some featurizations can rely on certain settings to be consistent

@@ -70,35 +70,6 @@ To read more about data augmentation stratgies, please review [this page](https:
 * [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.
 * [augment_ctgan_regression]() - generative adverserial example on regression problems / targets.
 
-## Work-in-progress (WIP)
-
-Audio 
-* [ESC-10 augmentation](https://github.com/JasonZhang156/Sound-Recognition-Tutorial/blob/master/data_augmentation.py) - script
-* [adding noise with ffmpeg[(https://stackoverflow.com/questions/15792105/simulating-tv-noise)
-* [Audio data augmentation](https://github.com/sid0710/audio_data_augmentation)
-* [Keras-AudioDataGenerator](https://github.com/AhmedImtiazPrio/Keras-AudioDataGenerator)'
-* [Audio degrader](https://github.com/emilio-molina/audio_degrader)
-* [Spectral cluster](https://github.com/wq2012/SpectralCluster) - spectral cluster 
-* [spec_augment](https://github.com/zcaceres/spec_augment) - from Google research / uses images 
-* [audiomentations](https://github.com/iver56/audiomentations) - various transformations (can randomize noise)
-* [audio dataset augmenter](https://github.com/kleydon/Audio-Dataset-Augmenter)
-* [audio preprocessing](https://github.com/dedkoster/audio_preproccesing)
-* [extract loudest section](https://github.com/petewarden/extract_loudest_section)
-
-Text
-* [eda_nlp](https://github.com/jasonwei20/eda_nlp)
-
-Image 
-* [Augmentor](https://github.com/mdbloice/Augmentor)
-
-Video
-* TBA
-
-CSV 
-* [AutoAugment (Google)](https://github.com/tensorflow/models/tree/master/research/autoaugment) - paper [here](https://arxiv.org/abs/1805.09501) and implementation [here](https://github.com/DeepVoltaire/AutoAugment)
-* [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
-
-
 ## References
 * [Review of data augmentation strategies](https://github.com/AgaMiko/data-augmentation-reviewc)
 * [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)

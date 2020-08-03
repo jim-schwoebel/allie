@@ -48,12 +48,13 @@ After this, the model will be trained and placed in the models/[sampletype_model
 For automated training, you can alternatively pass through sys.argv[] inputs as follows:
 
 ```
-python3 model.py audio 2 c male female
+python3 model.py audio 2 c gender male female
 ```
 Where:
 - audio = audio file type 
 - 2 = 2 classes 
 - c = classification (r for regression)
+- gender = common name of model
 - male = first class
 - female = second class [via N number of classes]
 

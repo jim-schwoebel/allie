@@ -605,13 +605,13 @@ Any feedback on this repository is greatly appreciated. We have built this machi
 
 You may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.
 
-* [1. Getting started](https://github.com/jim-schwoebel/allie/wiki/1.-Getting started)
-* [2. Preparing datasets](https://github.com/jim-schwoebel/allie/wiki/2.-Preparing datasets)
-* [2.1 Annotating datasets](https://github.com/jim-schwoebel/allie/wiki/2.1.-Annotating datasets)
-* [2.2 Cleaning datasets](https://github.com/jim-schwoebel/allie/wiki/2.2-Cleaning-datasets)
-* [2.3. Augmenting datasets](https://github.com/jim-schwoebel/allie/wiki/2.3-Augmenting-datasets)
+* [1. Getting started](https://github.com/jim-schwoebel/allie/wiki/1.-Getting-started)
+* [2. Preparing datasets](https://github.com/jim-schwoebel/allie/wiki/2.-Preparing-datasets)
+* [2.1 Annotating datasets](https://github.com/jim-schwoebel/allie/wiki/2.1.-Annotating-datasets)
+* [2.2 Cleaning datasets](https://github.com/jim-schwoebel/allie/wiki/2.2.-Cleaning-datasets)
+* [2.3. Augmenting datasets](https://github.com/jim-schwoebel/allie/wiki/2.3.-Augmenting-datasets)
 * [3. Training models](https://github.com/jim-schwoebel/allie/wiki/3.-Training-models)
-* [3.1. Data featurization](https://github.com/jim-schwoebel/allie/wiki/3.1-Data-featurization)
-* [3.2. Data preprocessing](https://github.com/jim-schwoebel/allie/wiki/3.2-Data-preprocessing)
-* [3.3. Data visualization](https://github.com/jim-schwoebel/allie/wiki/3.3-Data-visualization)
+* [3.1. Data featurization](https://github.com/jim-schwoebel/allie/wiki/3.1.-Data-featurization)
+* [3.2. Data preprocessing](https://github.com/jim-schwoebel/allie/wiki/3.2.-Data-preprocessing)
+* [3.3. Data visualization](https://github.com/jim-schwoebel/allie/wiki/3.3.-Data-visualization)
 * [4. Model predictions](https://github.com/jim-schwoebel/allie/wiki/4.-Model-predictions)

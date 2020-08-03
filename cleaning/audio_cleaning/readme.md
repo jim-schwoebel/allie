@@ -1,3 +1,30 @@
+
+## Getting started
+To clean an entire folder of .WAV files, you can run:
+
+```
+cd ~ 
+cd allie/cleaning/audio_cleaning
+python3 cleaning.py /Users/jimschwoebel/allie/load_dir
+```
+
+### Implemented for all file types 
+* [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
+* [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
+
+### [Audio](https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning)
+* [clean_getfirst3secs]() - gets the first 3 seconds of the audio file
+* [clean_keyword]() - keeps only keywords that are spoken based on a transcript (from the default_audio_transcriber)
+* [clean_mono16hz]() - converts all audio to mono 16000 Hz for analysis (helps prepare for many preprocessing techniques)
+* [clean_mp3towav]() - converts all mp3 files to wav files
+* [clean_multispeaker]() - deletes audio files from a dataset that have been identified as having multiple speakers from a deep learning model
+* [clean_normalizevolume]() - normalizes the volume of all audio files using peak normalization methods from ffmpeg-normalize
+* [clean_opus]() - converts an audio file to .OPUS audio file format then back to wav (a lossy conversion) - narrowing in more on voice signals over noise signals.
+* [clean_random20secsplice]() - take a random splice (time specified in the script) from the audio file.
+* [clean_removenoise]() - removes noise from the audio file using SoX program and noise floors.
+* [clean_removesilence]() - removes silence from an audio file using voice activity detectors.
+* [clean_utterances]() - converts all audio files into unique utterances (1 .WAV file --> many .WAV file utterances) for futher analysis.
+
 ### Settings
 
 Here are some default settings relevant to this section of Allie's API:

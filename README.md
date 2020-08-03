@@ -492,6 +492,14 @@ cd training
 python3 model.py
 ```
 
+
+### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
+```python3
+cd /Users/jim/desktop/allie
+cd models
+python3 load.py
+```
+
 ### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
 ```python3
 cd /Users/jim/desktop/allie

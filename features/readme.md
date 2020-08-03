@@ -93,6 +93,18 @@ There are many advantages for having this schema including:
 
 This schema is inspired by [D3M-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md) by the MIT media lab.
 
+## Example
+
+```python3
+cd /Users/jim/desktop/allie
+cd features/audio_features
+python3 featurize.py /Users/jim/desktop/allie/train_dir/males/
+```
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.gif)](https://drive.google.com/file/d/1YQXgnAvKHVjSgYteIFz-9H0znr1UKCLl/view?usp=sharing)
+
 ## Implemented Features
 
 Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).

@@ -1,5 +1,7 @@
 ## How to annotate
 
+![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/label.png)
+
 You can simply annotate using the command-line interface here:
 
 ```python3

@@ -58,6 +58,11 @@ Docs here
 ```python3
 ```
 
+### [Transforming data](https://github.com/jim-schwoebel/allie/tree/master/preprocessing)
+Docs here
+```python3
+```
+
 ### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)
 #### classification problem
 Docs here 

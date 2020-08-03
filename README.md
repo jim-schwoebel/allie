@@ -43,11 +43,11 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 ## Quick examples
 
-To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males from females. Each of these is a quick video below.
-
 ### [Collecting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
 
-This script creates two datasets in the train_dir folder, one full of audio files of males and the other full of audio files of females. This data will be used for the rest of the demo sections listed here.
+To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males (x50) from females (x50). 
+
+This seed_test.py script creates two datasets in the train_dir folder, one full of audio files of males and the other full of audio files of females. This data will be used for the rest of the demo sections listed here.
 
 ```python3
 cd datasets

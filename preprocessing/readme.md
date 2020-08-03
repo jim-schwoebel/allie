@@ -24,7 +24,7 @@ The code above will transform all the featurized text files (in .JSON files, fol
 |------|------|------|------| 
 | sys.argv[2] | 'text' | the sample type of file preprocessed by the transformer | ['audio', 'text', 'image', 'video', 'csv'] | 
 | sys.argv[3] | 'c' | classification or regression problems | ['c','r'] | 
-| sys.argv[4] | 'onetwo' | the common name for the modeling file | can be any string | 
+| sys.argv[4] | 'onetwo' | the common name for the transformer | can be any string | 
 | sys.argv[5], sys.argv[6], sys.argv[n] | 'one' | classes that you seek to model in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) | any string folder name |
 
 ## Settings

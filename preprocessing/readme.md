@@ -22,7 +22,7 @@ The code above will transform all the featurized text files (in .JSON files, fol
 
 ## Settings
 
-Here are the relevant settings in Allie related to preprocessing that you can change in the settings.json file (along with the default settings).
+Here are the relevant settings in Allie related to preprocessing that you can change in the [settings.json file](https://github.com/jim-schwoebel/allie/blob/master/settings.json) (along with the default settings).
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 

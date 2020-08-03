@@ -97,7 +97,7 @@ This schema is inspired by [D3M-schema](https://github.com/mitll/d3m-schema/blob
 
 Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).
 
-### Audio
+### [Audio](https://github.com/jim-schwoebel/allie/tree/master/features/audio_features)
 * [audioset_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audioset_features.py)
 * [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py)
 * [librosa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/librosa_features.py)
@@ -119,7 +119,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [spectrogram_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/spectrogram_features.py) 
 * [standard_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/standard_features.py) - standard audio feature array (default)
 
-### Text
+### [Text](https://github.com/jim-schwoebel/allie/tree/master/features/text_features)
 * [bert features](https://github.com/UKPLab/sentence-transformers) - extract BERT-related features from sentences (note shorter sentences run faster here, and long text can lead to long featurization times).
 * [fast_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/fast_features.py)
 * [glove_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/glove_features.py)
@@ -130,7 +130,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [text_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/text_features.py) - many different types of features like emotional word counts, total word counts, Honore's statistic and others.
 * [w2v_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/w2vec_features.py) - note this is the largest model from Google and may crash your computer if you don't have enough memory. I'd recommend fast_features if you're looking for a pre-trained embedding.
 
-### Images 
+### [Image](https://github.com/jim-schwoebel/allie/tree/master/features/image_features)
 * [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default)
 * [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py)
 * [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py)
@@ -140,7 +140,7 @@ Note that all scripts implemented have features and their corresponding labels. 
 * [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) 
 * [xception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/xception_features.py) 
 
-### Videos 
+### [Video](https://github.com/jim-schwoebel/allie/tree/master/features/vide_features)
 * [video_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/video_features.py) - standard video feature array (default)
 * [y8m_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/y8m_features.py) 
 

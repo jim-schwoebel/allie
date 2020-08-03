@@ -36,7 +36,7 @@ Note you can extend this to any of the feature types. The table below overviews 
 | video files | .MP4 | ```python3 featurize.py [folderpath]``` |./allie/features/video_features | 
 | csv files | .CSV | ```python3 featurize.py [folderpath]``` | ./allie/features/csv_features | 
 
-## Standard feature dictionary (.JSON)
+## [Standard feature dictionary (.JSON)](https://github.com/jim-schwoebel/allie/blob/master/features/standard_array.py)
 
 This is the standard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
 

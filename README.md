@@ -482,12 +482,20 @@ cd models
 python3 load.py
 ```
 
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/load.gif)](https://drive.google.com/file/d/1-iN3wOjWGCiqlTKjQgtVoxfpJSmiDsCQ/view?usp=sharing]()
+
 ### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
 ```python3
 cd /Users/jim/desktop/allie
 cd visualize
 python3 visualize.py audio males females
 ```
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/visualize.gif)](https://drive.google.com/file/d/11GSJpE9ASp1AEl89CjVHRnEd2Yutg3Ki/view?usp=sharing)
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 

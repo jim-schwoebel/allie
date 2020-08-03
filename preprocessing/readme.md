@@ -14,7 +14,7 @@ To transform an entire folder of a featurized files, you can run:
 
 ```
 cd ~ 
-cd allie/preprocessing/audio_transformers
+cd allie/preprocessing
 python3 transform.py text c onetwo one two
 ```
 

@@ -59,6 +59,22 @@ Note you can extend this to any of the augmentation types. The table below overv
 * [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.
 * [augment_ctgan_regression]() - generative adverserial example on regression problems / targets.
 
+## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
+
+Here are some settings that can be customized for Allie's augmentation API. Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. 
+
+Here are some settings that you can modify in this settings.json file and the various options for these settings:
+
+| setting | description | default setting | all options | 
+|------|------|------|------| 
+| version | version of Allie release | 1.0 | 1.0 |
+| augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |
+| [default_audio_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation) | the default augmentation strategies used during audio modeling if augment_data == True | ["augment_tsaug"] | ['normalize_volume', 'normalize_pitch', 'time_stretch', 'opus_enhance', 'trim_silence', 'remove_noise', 'add_noise', "augment_tsaug"] | 
+| [default_csv_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/csv_augmentation) | the default augmentation strategies used to augment .CSV file types as part of model training if augment_data==True | ["augment_ctgan_regression"] | ["augment_ctgan_classification", "augment_ctgan_regression"]  | 
+| [default_image_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation) | the default augmentation techniques used for images if augment_data == True as a part of model training. | ["augment_imaug"] | ["augment_imaug"]  | 
+| [default_text_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/text_augmentation) | the default augmentation strategies used during model training for text data if augment_data == True | ["augment_textacy"] | ["augment_textacy", "augment_summary"]  | 
+| [default_video_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/video_augmentation) | the default augmentation strategies used for videos during model training if augment_data == True | ["augment_vidaug"] | ["augment_vidaug"] | 
+
 ## References
 * [Review of data augmentation strategies](https://github.com/AgaMiko/data-augmentation-reviewc)
 * [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)

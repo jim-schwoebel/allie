@@ -14,6 +14,53 @@ You can also search for more datasets using Google DataSet search @ https://tool
 
 You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180), [YouTube Scrape](https://github.com/jim-schwoebel/youtube_scrape/tree/b030d65277626ee01bea0fd98cee2d1ffafee8bb), and/or [SurveyLex](https://surveylex.com) as well.
 
+## Standard feature dictionary 
+
+After much trial and error, this standard feature dictionary schema seemed the most appropriate for defining data samples (audio, text, image, video, or CSV samples):
+
+```python3
+def make_features(sampletype):
+
+	# only add labels when we have actual labels.
+	features={'audio':dict(),
+		  'text': dict(),
+		  'image':dict(),
+		  'video':dict(),
+		  'csv': dict()}
+
+	transcripts={'audio': dict(),
+		     'text': dict(),
+		     'image': dict(),
+		     'video': dict(),
+		     'csv': dict()}
+
+	models={'audio': dict(),
+		 'text': dict(),
+		 'image': dict(),
+		 'video': dict(),
+		 'csv': dict()}
+
+	data={'sampletype': sampletype,
+	      'transcripts': transcripts,
+	      'features': features,
+	      'models': models,
+	      'labels': [],
+	      'errors': []}
+
+	return data
+```
+
+There are many advantages for having this schema including:
+- **sampletype definition flexibility** - flexible to 'audio' (.WAV / .MP3), 'text' (.TXT / .PPT / .DOCX), 'image' (.PNG / .JPG), 'video' (.MP4), and 'csv' (.CSV). This format can also can adapt into the future to new sample types, which can also tie to new featurization scripts. By defining a sample type, it can help guide how data flows through model training and prediction scripts. 
+- **transcript definition flexibility** - transcripts can be audio, text, image, video, and csv transcripts. The image and video transcripts use OCR to characterize text in the image, whereas audio transcripts are transcipts done by traditional speech-to-text systems (e.g. Pocketsphinx). You can also add multiple transcripts (e.g. Google and PocketSphinx) for the same sample type.
+- **featurization flexibility** - many types of features can be put into this array of the same data type. For example, an audio file can be featurized with 'standard_features' and 'praat_features' without really affecting anything. This eliminates the need to re-featurize and reduces time to sort through multiple types of featurizations during the data cleaning process.
+- **label annotation flexibility** - can take the form of ['classname_1', 'classname_2', 'classname_N...'] - classification problems and [{classname1: 'value'}, {classname2: 'value'}, ... {classnameN: 'valueN'}] where values are between [0,1] for regression problems. 
+- **model predictions** - one survey schema can be used for making model predictions and updating the schema with these predictions. Note that any model that is used for training can be used to make predictions in the load_dir. 
+- **visualization flexibility** - can easily visualize features of any sample type through Allie's [visualization script](https://github.com/jim-schwoebel/allie/tree/master/visualize) (e.g. tSNE plots, correlation matrices, and more).
+- **error tracing** - easily trace errors associated with featurization and/or modeling to review what is happening during a session.
+
+This schema is inspired by [D3M-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md) by the MIT media lab.
+
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 
 

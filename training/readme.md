@@ -12,7 +12,6 @@ All you need to do to get started is go to this repository and run upgrade.py fo
 
 ```
 cd allie/training
-python3 upgrade.py
 python3 model.py 
 ```
 

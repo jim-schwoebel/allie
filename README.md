@@ -117,6 +117,7 @@ Docs here
 cd /Users/jim/desktop/allie
 cd cleaning/audio_cleaning
 python3 clean.py /Users/jim/desktop/allie/train_dir/males/
+python3 clean.py /Users/jim/desktop/allie/train_dir/females/
 ```
 
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)

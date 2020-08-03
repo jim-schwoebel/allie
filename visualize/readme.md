@@ -1,6 +1,8 @@
 ## Visualization
 
-This is a univeral visualizer for all types of data. 
+![](https://github.com/jim-schwoebel/allie/raw/master/annotation/helpers/assets/model.png)
+
+This is a univeral visualizer for all types of data as a part of model training. 
 
 Note that [this is a setting](https://github.com/jim-schwoebel/allie/blob/master/settings.json) in the Allie Framework (e.g. "visualize_data": true). 
 

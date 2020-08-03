@@ -65,8 +65,10 @@ Click the .GIF below for a quick tutorial and example.
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
 
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
-Docs here
+
 ```python3
+cd augmentation/audio_augmentation
+python3 augment.py /Users/jim/desktop/allie/train_dir/males/
 ```
 
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)

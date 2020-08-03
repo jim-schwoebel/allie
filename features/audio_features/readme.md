@@ -2,7 +2,7 @@
 
 ```
 cd allie/features/audio_features
-python3 featurize.py [folder]
+python3 featurize.py [folder] [featuretype]
 ```
 
 ### Audio

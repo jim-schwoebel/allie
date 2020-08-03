@@ -43,6 +43,8 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 ## Quick examples
 
+To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males from females.
+
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
 Docs here
 ```python3

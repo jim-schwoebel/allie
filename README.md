@@ -150,6 +150,14 @@ Regression problems require a .CSV spreadsheet with annotations. This can be don
 
 ```python3
 cd /Users/jim/desktop/allie
+cd annotate
+python3 annotate.py regression
+```
+
+Now we have some regression labels for both audio classes.
+
+```python3
+cd /Users/jim/desktop/allie
 cd training
 python3 model.py
 ```

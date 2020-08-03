@@ -43,7 +43,23 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 ## Quick examples
 
-### classification problem
+### Augmenting data
+Docs here
+```python3
+```
+
+### Cleaning data 
+Docs here
+```python3
+```
+
+### Featurizing data 
+Docs here
+```python3
+```
+
+### Modeling data
+#### classification problem
 Docs here 
 
 ```python3
@@ -54,7 +70,7 @@ Docs here
 # making a model prediction
 ```
 
-### regression problem 
+#### regression problem 
 Docs here
 ```python3
 # get some sample data 
@@ -62,6 +78,11 @@ Docs here
 # training /saving a regression model
 
 # making a model prediction
+```
+
+### Visualizing data
+```python3
+example
 ```
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)

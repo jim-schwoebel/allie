@@ -127,8 +127,11 @@ def convert_csv(X_train, y_train, labels, mtype, classes):
 		if len(classes) == 1:
 			data[classes[0]]=y_train
 		else:
-			for i in range(len(classes)):
-				data[classes[i]]=pull_element(y_train, i)
+			for j in range(len(classes)):
+				print(classes[j])
+				newy=pull_element(y_train, j)
+				print(newy)
+				data[classes[j]]=newy
 	print(data)
 
 	data=pd.DataFrame(data, columns = list(data))

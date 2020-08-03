@@ -85,7 +85,7 @@ cd annotation
 python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
-After you annotate, you can create a nicely formatted .CSV for machine learning:
+After you annotate, you can create [a nicely formatted .CSV](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/male_data.csv) for machine learning:
 
 ```python3
 cd /Users/jim/desktop/allie

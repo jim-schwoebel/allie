@@ -1,5 +1,3 @@
-## Work-in-progress (WIP)
-
-CSV 
-* [AutoAugment (Google)](https://github.com/tensorflow/models/tree/master/research/autoaugment) - paper [here](https://arxiv.org/abs/1805.09501) and implementation [here](https://github.com/DeepVoltaire/AutoAugment)
-* [Population Based Augmentation (PBA)](https://github.com/arcelien/pba) - paper [here](https://arxiv.org/abs/1711.09846)
+### [CSV](https://github.com/jim-schwoebel/allie/tree/master/augmentation/csv_augmentation)
+* [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.
+* [augment_ctgan_regression]() - generative adverserial example on regression problems / targets.

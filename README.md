@@ -59,7 +59,7 @@ Docs here
 ```python3
 # get some sample data 
 
-# training /saving a first model 
+# training /saving a regression model
 
 # making a model prediction
 ```

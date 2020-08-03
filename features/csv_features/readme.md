@@ -2,7 +2,7 @@
 
 ```
 cd allie/features/csv_features
-python3 featurize.py [folder]
+python3 featurize.py [folder] [featuretype]
 ```
 
 ### CSV 

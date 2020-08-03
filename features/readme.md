@@ -93,7 +93,7 @@ There are many advantages for having this schema including:
 
 This schema is inspired by [D3M-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md) by the MIT media lab.
 
-## Implemented 
+## Implemented Features
 
 Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).
 

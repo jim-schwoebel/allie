@@ -94,7 +94,7 @@ Here are some settings that you can modify in this settings.json file and the va
 | transcribe_image | a setting to define whether or not to transcribe image files during featurization and model training via the default_image_transcriber | True | True, False | 
 | transcribe_text | a setting to define whether or not to transcribe text files during featurization and model training via the default_image_transcriber | True | True, False | 
 | transcribe_video | a setting to define whether or not to transcribe video files during featurization and model training via the default_video_transcriber | True | True, False | 
-| visualize_data | a setting to define whether or not to visualize features during the model training process via [Allie's visualization API[() | False | True, False | 
+| visualize_data | a setting to define whether or not to visualize features during the model training process via [Allie's visualization API[(https://github.com/jim-schwoebel/allie/tree/master/visualize) | False | True, False | 
 
 ## License
 This repository is licensed under an [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). 

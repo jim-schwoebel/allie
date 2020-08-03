@@ -106,8 +106,8 @@ python3 augment.py /Users/jim/desktop/allie/train_dir/females/
 ```
 
 You should now have 2x the data in each folder. Here is a sample audio file and augmented audio file (in females) folder, for reference:
-* [Non-augmented file](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/0.wav)
-* [Augmented file](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/tsaug_0.wav)
+* [Non-augmented file](https://drive.google.com/file/d/1kvdoKn0IjBXhBEtjDq9AK8CjD14nIC35/view?usp=sharing)
+* [Augmented file](https://drive.google.com/file/d/1EsSHx1m_zxrdTjnRMhYKOLLjiKi5gRgY/view?usp=sharing)
 
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 Docs here

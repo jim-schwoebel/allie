@@ -1,3 +1,17 @@
+
+## Getting started
+To clean an entire folder of video files in .MP4 format, you can run:
+
+```
+cd ~ 
+cd allie/cleaning/audio_cleaning
+python3 cleaning.py /Users/jimschwoebel/allie/load_dir
+```
+
+### [Video](https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning)
+* [clean_alignfaces]() - takes out faces from a video frame and keeps the video for an added label
+* [clean_videostabilize]() - stabilizes a video frame using [vidgear](https://github.com/abhiTronix/vidgear) (note this is a WIP)
+
 ### Settings
 
 Here are some default settings relevant to this section of Allie's API:

@@ -645,7 +645,7 @@ from sklearn.metrics import roc_curve
 ##                    CLEAN THE DATA                        ##
 ###############################################################
 clean_data=settings['clean_data']
-clean_dir=prevdir+'/datasets/cleaning'
+clean_dir=prevdir+'/cleaning'
 
 if clean_data == True and mtype == 'c':
 	
@@ -654,14 +654,28 @@ if clean_data == True and mtype == 'c':
 	print(f.renderText('CLEANING DATA'))
 	print('-----------------------------------')
 	for i in range(len(classes)):
-		os.chdir(clean_dir)
-		os.system('python3 clean.py %s %s'%(clean_dir, data_dir+'/'+classes[i]))
+		if problemtype == 'audio':
+			# featurize audio 
+			os.chdir(clean_dir+'/audio_cleaning')
+		elif problemtype == 'text':
+			# featurize text
+			os.chdir(clean_dir+'/text_cleaning')
+		elif problemtype == 'image':
+			# featurize images
+			os.chdir(clean_dir+'/image_cleaning')
+		elif problemtype == 'video':
+			# featurize video 
+			os.chdir(clean_dir+'/video_cleaning')
+		elif problemtype == 'csv':
+			# featurize .CSV 
+			os.chdir(augment_dir+'/csv_cleaning')
+		os.system('python3 clean.py %s'%(data_dir+'/'+classes[i]))
 
 ###############################################################
 ##                    AUGMENT THE DATA                       ##
 ###############################################################
 augment_data=settings['augment_data']
-augment_dir=prevdir+'/datasets/augmentation'
+augment_dir=prevdir+'/augmentation'
 
 if augment_data == True and mtype == 'c':
 
@@ -670,7 +684,21 @@ if augment_data == True and mtype == 'c':
 	print(f.renderText('AUGMENTING DATA'))
 	print('-----------------------------------')
 	for i in range(len(classes)):
-		os.chdir(augment_dir)
+		if problemtype == 'audio':
+			# featurize audio 
+			os.chdir(augment_dir+'/audio_augmentation')
+		elif problemtype == 'text':
+			# featurize text
+			os.chdir(augment_dir+'/text_augmentation')
+		elif problemtype == 'image':
+			# featurize images
+			os.chdir(augment_dir+'/image_augmentation')
+		elif problemtype == 'video':
+			# featurize video 
+			os.chdir(augment_dir+'/video_augmentation')
+		elif problemtype == 'csv':
+			# featurize .CSV 
+			os.chdir(augment_dir+'/csv_augmentation')
 		os.system('python3 augment.py %s'%(data_dir+'/'+classes[i]))
 
 ###############################################################

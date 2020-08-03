@@ -2,7 +2,9 @@
 
 ![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.png)
 
-This is a folder for extracting features from audio, text, image, video, or .CSV files. This is done via a convention for featurizers, which are in the proper folders (e.g. audio files --> audio_features). In this way, we can appropriately create featurizers for various sample data types. 
+This is a folder for extracting features from audio, text, image, video, or .CSV files. This is done via a convention for featurizers, which are in the proper folders (e.g. audio files --> audio_features). In this way, we can appropriately create featurizers for various sample data types according to the default featurizers as specified in the settings.json.
+
+Note that as part of the featurization process, files can also be transcribed by default transcription types as specified in settings.json.
 
 ## How to featurize folders of files 
 

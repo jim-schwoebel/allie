@@ -47,7 +47,7 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 Docs here 
 
 ```python3
-# get some sample data
+# get some sample data (datasets)
 
 # training / saving classification model
 

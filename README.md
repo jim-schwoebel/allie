@@ -495,7 +495,11 @@ predict_proba only works for or log loss and modified Huber loss.
 tpot: 100%|██████████████████████████████████████| 1/1 [04:08<00:00, 248.61s/it]
 ```
 
-The result will be a [GitHub repo like this](https://github.com/jim-schwoebel/allie/tree/master/training/helpers/gender_tpot_classifier), defining the model session and summary.
+The result will be a [GitHub repo like this](https://github.com/jim-schwoebel/allie/tree/master/training/helpers/gender_tpot_classifier), defining the model session and summary. Accuracy metrics will be defined as part of the model training process:
+
+```
+{'accuracy': 0.8947368421052632, 'balanced_accuracy': 0.8944444444444444, 'precision': 0.9, 'recall': 0.9, 'f1_score': 0.9, 'f1_micro': 0.8947368421052632, 'f1_macro': 0.8944444444444444, 'roc_auc': 0.8944444444444444, 'roc_auc_micro': 0.8944444444444444, 'roc_auc_macro': 0.8944444444444444, 'confusion_matrix': [[8, 1], [1, 9]], 'classification_report': '              precision    recall  f1-score   support\n\n       males       0.89      0.89      0.89         9\n     females       0.90      0.90      0.90        10\n\n    accuracy                           0.89        19\n   macro avg       0.89      0.89      0.89        19\nweighted avg       0.89      0.89      0.89        19\n'}
+```
 
 Click the .GIF below to follow along this example in a video format:
 

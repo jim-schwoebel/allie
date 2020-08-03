@@ -8,10 +8,6 @@ cd allie/cleaning/audio_cleaning
 python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
-### Implemented for all file types 
-* [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
-* [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
-
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning)
 * [clean_getfirst3secs]() - gets the first 3 seconds of the audio file
 * [clean_keyword]() - keeps only keywords that are spoken based on a transcript (from the default_audio_transcriber)

@@ -50,6 +50,7 @@ To illustrate a quick example, we can pull some sample audio data from this GitH
 This [seed_test.py script](https://github.com/jim-schwoebel/allie/blob/master/datasets/seed_test.py) creates two datasets in the train_dir folder, one full of audio files of males and the other full of audio files of females. This data will be used for the rest of the demo sections listed here.
 
 ```python3
+cd /Users/jim/desktop/allie
 cd datasets
 python3 seed_test.py
 ---------------
@@ -79,6 +80,7 @@ delete_features.py	featurize_csv.py	males
 You can simply annotate using the command-line interface here:
 
 ```python3
+cd /Users/jim/desktop/allie
 cd annotation
 python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
@@ -86,6 +88,7 @@ python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c mal
 After you annotate, you can create a nicely formatted .CSV for machine learning:
 
 ```python3
+cd /Users/jim/desktop/allie
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
@@ -96,6 +99,7 @@ Click the .GIF below for a quick tutorial and example.
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
 
 ```python3
+cd /Users/jim/desktop/allie
 cd augmentation/audio_augmentation
 python3 augment.py /Users/jim/desktop/allie/train_dir/males/
 ```
@@ -103,6 +107,7 @@ python3 augment.py /Users/jim/desktop/allie/train_dir/males/
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 Docs here
 ```python3
+cd /Users/jim/desktop/allie
 cd cleaning/audio_cleaning
 python3 clean.py /Users/jim/desktop/allie/train_dir/males/
 ```
@@ -110,6 +115,7 @@ python3 clean.py /Users/jim/desktop/allie/train_dir/males/
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
 
 ```python3
+cd /Users/jim/desktop/allie
 cd features/audio_features
 python3 featurize.py /Users/jim/desktop/allie/train_dir/males/
 ```
@@ -117,6 +123,7 @@ python3 featurize.py /Users/jim/desktop/allie/train_dir/males/
 ### [Transforming data](https://github.com/jim-schwoebel/allie/tree/master/preprocessing)
 
 ```python3
+cd /Users/jim/desktop/allie
 cd preprocessing
 python3 transform.py /Users/jim/desktop/allie/train_dir/males/
 ```
@@ -125,6 +132,7 @@ python3 transform.py /Users/jim/desktop/allie/train_dir/males/
 #### classification problem
 
 ```python3
+cd /Users/jim/desktop/allie
 cd training
 python3 model.py
 ```
@@ -133,12 +141,14 @@ python3 model.py
 Regression problems require a .CSV spreadsheet with annotations. This can be done with the [Allie's annotate API](https://github.com/jim-schwoebel/allie/blob/master/annotation/annotate.py).
 
 ```python3
+cd /Users/jim/desktop/allie
 cd training
 python3 model.py
 ```
 
 ### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
 ```python3
+cd /Users/jim/desktop/allie
 cd visualize
 python3 visualize.py audio males females
 ```

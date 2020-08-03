@@ -19,7 +19,7 @@ Click the .GIF below for a quick tutorial and example.
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
 
 ## What each CLI argument represents
-| CLI argument | description | options | example |
+| CLI argument | description | possible options | example |
 |------|------|------|------|
 | -d | the specified directory full of files that you want to annotate. | any directory path | "/Users/jim/desktop/allie/train_dir/males/" |
 | -s | the file type / type of problem that you are annotating | ["audio", "text", "image", "video"] | "audio" | 

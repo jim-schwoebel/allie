@@ -1,4 +1,2 @@
-## Work-in-progress (WIP)
-
-Text
-* [eda_nlp](https://github.com/jasonwei20/eda_nlp)
+### [Text](https://github.com/jim-schwoebel/allie/tree/master/augmentation/text_augmentation)
+* [augment_textacy]()

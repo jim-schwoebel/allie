@@ -1,4 +1,2 @@
-## Work-in-progress (WIP)
-
-Video
-* TBA
+### [Video](https://github.com/jim-schwoebel/allie/tree/master/augmentation/video_augmentation)
+* [augment_vidaug]()

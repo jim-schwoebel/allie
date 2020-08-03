@@ -62,3 +62,20 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
 * [clean_csv]() - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
+
+## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
+
+![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/settings.png)
+
+Allie has multiple default settings for model training to help you start out with the framework. Allie has been built so that the settings you specify in lists are done serially, which can be useful to construct machine learning models from multiple back-end model trainers in a single session. Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. 
+
+Here are some settings that you can modify in this settings.json file and the various options for these settings:
+
+| setting | description | default setting | all options | 
+|------|------|------|------| 
+| clean_data | whether or not to clean datasets during the model training process via default cleaning scripts. | False | True, False | 
+| [default_audio_cleaners](https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning) | the default cleaning strategies used during audio modeling if clean_data == True | ["clean_mono16hz"] | ["clean_getfirst3secs", "clean_keyword", "clean_mono16hz", "clean_mp3towav", "clean_multispeaker", "clean_normalizevolume", "clean_opus", "clean_random20secsplice", "clean_removenoise", "clean_removesilence", "clean_utterances"] |
+| [default_csv_cleaners](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning) | the default cleaning strategies used to clean .CSV file types as part of model training if clean_data==True | ["clean_csv"] | ["clean_csv"] | 
+| [default_image_cleaners](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning) | the default cleaning techniques used for image data as a part of model training is clean_data == True| ["clean_greyscale"] |["clean_extractfaces", "clean_greyscale", "clean_jpg2png"] | 
+| [default_text_cleaners](https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning) | the default cleaning techniques used during model training on text data if clean_data == True| ["clean_textacy"] | ["clean_summary", "clean_textacy"]  | 
+| [default_video_cleaners](https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning) | the default cleaning strategies used for videos if clean_data == True | ["clean_alignfaces"] | ["clean_alignfaces", "clean_videostabilize"] | 

@@ -91,6 +91,12 @@ cd annotation
 python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
+What results is annotated folders in .JSON format following the [standard dictionary](https://github.com/jim-schwoebel/allie/blob/master/features/standard_array.py).
+
+```python3
+[insert here]
+```
+
 After you annotate, you can create [a nicely formatted .CSV](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/male_data.csv) for machine learning:
 
 ```python3
@@ -103,6 +109,8 @@ Click the .GIF below for a quick tutorial and example.
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
 
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
+
+To augment folders of files, type this into the terminal: 
 
 ```python3
 cd /Users/jim/desktop/allie
@@ -121,6 +129,8 @@ Click the .GIF below to follow along this example in a video format:
 
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 
+To clean folders of files, type this into the terminal:
+
 ```python3
 cd /Users/jim/desktop/allie
 cd cleaning/audio_cleaning
@@ -133,6 +143,8 @@ Click the .GIF below to follow along this example in a video format:
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
 
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
+
+To featurize folders of files, type this into the terminal:
 
 ```python3
 cd /Users/jim/desktop/allie

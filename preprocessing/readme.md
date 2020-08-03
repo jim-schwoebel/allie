@@ -22,6 +22,8 @@ The code above will transform all the featurized text files (in .JSON files, fol
 
 ## Settings
 
+Here are the relevant settings in Allie related to preprocessing that you can change in the settings.json file (along with the default settings).
+
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |

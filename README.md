@@ -46,8 +46,17 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males from females. Each of these is a quick video below.
 
 ### [Annotating data](https://github.com/jim-schwoebel/allie/tree/master/annotation)
-Docs here
-```python3
+
+```
+cd annotation
+python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
+```
+
+After you annotate, you can create a nicely formatted .CSV for machine learning:
+
+```
+cd annotation
+python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)

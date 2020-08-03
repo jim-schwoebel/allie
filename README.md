@@ -149,7 +149,7 @@ Click the .GIF below to follow along this example in a video format:
 ```python3
 cd /Users/jim/desktop/allie
 cd preprocessing
-python3 transform.py audio c males females
+python3 transform.py audio c gender males females
 ```
 
 Click the .GIF below to follow along this example in a video format:

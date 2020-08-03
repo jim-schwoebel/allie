@@ -52,6 +52,14 @@ This seed_test.py script creates two datasets in the train_dir folder, one full 
 ```python3
 cd datasets
 python3 seed_test.py
+---------------
+Cloning into 'sample_voice_data'...
+remote: Enumerating objects: 119, done.
+remote: Counting objects: 100% (119/119), done.
+remote: Compressing objects: 100% (115/115), done.
+remote: Total 119 (delta 5), reused 108 (delta 2), pack-reused 0
+Receiving objects: 100% (119/119), 18.83 MiB | 7.43 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
 ```
 You can easily test if the files are in there with:
 ```
@@ -61,7 +69,9 @@ ls
 ```
 Which should output:
 ```
-
+jim@Jims-MBP train_dir % ls
+README.md		delete_json.py		females
+delete_features.py	featurize_csv.py	males
 ```
 
 ### [Annotating data](https://github.com/jim-schwoebel/allie/tree/master/annotation)

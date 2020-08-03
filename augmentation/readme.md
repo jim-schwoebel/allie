@@ -1,5 +1,7 @@
 ## Augmentation 
 
+![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.png)
+
 This part of Allie's skills relates to data augmentation.
 
 Data augmentation is used to expand the training dataset in order to improve the performance and ability of a machine learning model to generalize. For example, you may want to shift, flip, brightness, and zoom on images to augment datasets to make models perform better in noisy environments indicative of real-world use. Data augmentation is especially useful when you don't have that much data, as it can greatly expand the amount of training data that you have for machine learning. 

@@ -1,6 +1,8 @@
 ## Training scripts 
 
-Quickly train according to the default_training_script using model.py.
+![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/model.png)
+
+Use this folder to train machine learning models according to the default_training_script using the [model.py]() script.
 
 ![](https://github.com/jim-schwoebel/Allie/blob/master/training/helpers/train.gif)
 

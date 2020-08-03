@@ -10,6 +10,7 @@ Typical augmentation scheme is to take 50% of the data and augment it and leave 
 
 You can read more about data augmentation [here](https://github.com/AgaMiko/data-augmentation-review).
 
+## Getting started
 
 To featurize an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
 
@@ -30,18 +31,6 @@ Note you can extend this to any of the augmentation types. The table below overv
 | image files | .PNG | ```python3 augment.py [folderpath]``` | ./allie/augmentation/image_augmentation | 
 | video files | .MP4 | ```python3 augment.py [folderpath]``` |./allie/augmentation/video_augmentation| 
 | csv files | .CSV | ```python3 augment.py [folderpath]``` | ./allie/augmentation/csv_augmentation | 
-
-
-## Types of augmentation
-
-There are two main types of data augmentation:
-
-* adding data to data (e.g. YouTube videos to iPhone videos) 
-* generating new data (through manipulations) 
-
-The vast majority of approaches focus on generating new data because it's often more convenient and useful for modeling purposes. It's much harder to make two datasets look like each other, as there exists variation in the datasets themselves which may confuse machine learning models (or lead to overfitting to one dataset over another). 
-
-To read more about data augmentation stratgies, please review [this page](https://github.com/AgaMiko/data-augmentation-review).
 
 ## Implemented 
 

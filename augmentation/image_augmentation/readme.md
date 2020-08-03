@@ -1,6 +1,6 @@
 ## Getting started
 
-Here is a way to quickly augment a file of audio files:
+Here is a way to quickly augment a file of image files:
 ```
 cd ~ 
 cd allie/features/image_augmentation

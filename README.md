@@ -102,7 +102,12 @@ Click the .GIF below for a quick tutorial and example.
 cd /Users/jim/desktop/allie
 cd augmentation/audio_augmentation
 python3 augment.py /Users/jim/desktop/allie/train_dir/males/
+python3 augment.py /Users/jim/desktop/allie/train_dir/females/
 ```
+
+You should now have 2x the data in each folder. Here is a sample audio file and augmented audio file (in females) folder, for reference:
+* Non-augmented file
+* Augmented file
 
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 Docs here

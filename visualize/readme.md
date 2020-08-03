@@ -235,15 +235,7 @@ Heatmap with removed correlated variables
 ### Threshold graph 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds.png)
 
-## Working on now 
-* [RFE number of features ideal](https://machinelearningmastery.com/rfe-feature-selection-in-python/)
-* [Probability calibration curves](https://scikit-learn.org/stable/auto_examples/calibration/plot_calibration_curve.html#sphx-glr-auto-examples-calibration-plot-calibration-curve-py)
-* Making heatmaps work with top 20 features (to make axes readable)
-* add in RFE in feature section (https://www.scikit-yb.org/en/latest/api/model_selection/rfecv.html) 
-* stacked bar chart of feature importances - https://www.scikit-yb.org/en/latest/api/model_selection/importances.html
-* cross validation scores bar graph - https://www.scikit-yb.org/en/latest/api/model_selection/cross_validation.html
-
-## Featurization tutorials (Readmes)
+## References
 * [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)
 * [How to visualize anything in Yellowbrick](https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f)
 * [Intro to data visualization in Python](https://gilberttanner.com/blog/introduction-to-data-visualization-inpython)
@@ -251,8 +243,6 @@ Heatmap with removed correlated variables
 * [Visualize machine learning Pandas](https://machinelearningmastery.com/visualize-machine-learning-data-python-pandas/)
 * [Top 50 Matplotlib visualizations](https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/)
 * [Dimensionality reduction techniques](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
-
-## Additional documentation
 * [MLXtend](https://github.com/rasbt/mlxtend) - for visualizing models
 * [Plotly learning curves](https://github.com/mitmedialab/vizml/blob/master/notebooks/Plotly%20Performance.ipynb)
 * [Snowflake](https://github.com/doubledherin/Audio_Snowflake) - audio song visualization
@@ -260,10 +250,3 @@ Heatmap with removed correlated variables
 * [Viola](https://github.com/voila-dashboards/voila)
 * [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)
 * [Yellowbrick](https://www.scikit-yb.org/en/latest/)
-
-## Working on now
-
-- LDA - http://rasbt.github.io/mlxtend/user_guide/feature_extraction/LinearDiscriminantAnalysis/
-- https://umap-learn.readthedocs.io/en/latest/basic_usage.html
-- https://github.com/sepandhaghighi/pycm - confusion matrix / ROC curve
-- https://github.com/wcipriano/pretty-print-confusion-matrix

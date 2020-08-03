@@ -94,7 +94,6 @@ python3 transform.py /Users/jim/desktop/allie/train_dir/males/
 
 ### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)
 #### classification problem
-Docs here 
 
 ```python3
 cd training
@@ -102,7 +101,8 @@ python3 model.py
 ```
 
 #### regression problem 
-Docs here
+Regression problems require a .CSV spreadsheet with annotations. This can be done with the [annotate.py script]().
+
 ```python3
 cd training
 python3 model.py

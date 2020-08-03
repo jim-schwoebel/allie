@@ -471,6 +471,8 @@ predict_proba only works for or log loss and modified Huber loss.
 tpot: 100%|██████████████████████████████████████| 1/1 [04:08<00:00, 248.61s/it]
 ```
 
+The result will be a [GitHub repo like this](https://github.com/jim-schwoebel/allie/tree/master/training/helpers/gender_tpot_classifier), defining the model session and summary.
+
 Click the .GIF below to follow along this example in a video format:
 
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)

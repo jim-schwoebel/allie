@@ -76,11 +76,18 @@ The resulting model will have the following data:
 ```
 └── gender_tpot_regression
     ├── data
+    │   ├── gender_all.csv
+    │   ├── gender_all_transformed.csv
+    │   ├── gender_test.csv
+    │   ├── gender_test_transformed.csv
+    │   ├── gender_train.csv
+    │   └── gender_train_transformed.csv
     ├── model
     │   ├── bar_graph_predictions.png
     │   ├── gender_tpot_regression.json
     │   ├── gender_tpot_regression.pickle
-    │   └── gender_tpot_regression.py
+    │   ├── gender_tpot_regression.py
+    │   └── gender_tpot_regression_transform.pickle
     ├── readme.md
     ├── requirements.txt
     └── settings.json

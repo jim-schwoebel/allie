@@ -1,7 +1,5 @@
 # Models
 
-![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/predict.png)
-
 ![](https://github.com/jim-schwoebel/allie/raw/master/annotation/helpers/assets/predict.png)
 
 Use this directory to make predictions on audio, text, image, video, and/or CSV files. 

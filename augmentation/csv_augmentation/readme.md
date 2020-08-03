@@ -1,6 +1,6 @@
 ## Getting started
 
-Here is a way to quickly augment a file of csv files:
+Here is a way to quickly augment a folder of csv files:
 ```
 cd ~ 
 cd allie/features/csv_augmentation

@@ -46,7 +46,7 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 ### classification problem
 Docs here 
 
-```
+```python3
 # get some sample data
 
 # training / saving classification model
@@ -56,7 +56,7 @@ Docs here
 
 ### regression problem 
 Docs here
-```
+```python3
 # get some sample data 
 
 # training /saving a first model 

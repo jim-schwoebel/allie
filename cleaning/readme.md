@@ -10,15 +10,22 @@ Data cleansing is the process of making clean datasets - like removing noise in 
 
 To clean an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
 
+```python3
+cd /Users/jim/desktop/allie
+cd cleaning/audio_cleaning
+python3 clean.py /Users/jim/desktop/allie/train_dir/males/
+python3 clean.py /Users/jim/desktop/allie/train_dir/females/
 ```
-cd ~ 
-cd allie/cleaning/audio_cleaning
-python3 cleaning.py /Users/jimschwoebel/allie/load_dir
-```
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
 
 The code above will featurize all the audio files in the folderpath via the default_cleaner specified in the settings.json file (e.g. 'clean_mono16hz'). 
 
-Note you can extend this to any of the augmentation types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
+## Extending to other file types
+
+Note you can extend this to any of the file types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
 
 | Data type | Supported formats | Call to featurizer a folder | Current directory must be | 
 | --------- |  --------- |  --------- | --------- | 

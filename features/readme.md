@@ -45,29 +45,41 @@ def make_features(sampletype):
 
 	# only add labels when we have actual labels.
 	features={'audio':dict(),
-		  'text': dict(),
-		  'image':dict(),
-		  'video':dict(),
-		  'csv': dict()}
-
-	transcripts={'audio': dict(),
-		     'text': dict(),
-		     'image': dict(),
-		     'video': dict(),
+		      'text': dict(),
+		      'image':dict(),
+		      'video':dict(),
 		      'csv': dict()}
 
+	transcripts={'audio': dict(),
+				 'text': dict(),
+				 'image': dict(),
+				 'video': dict(),
+				 'csv': dict()}
+			   
 	models={'audio': dict(),
-		 'text': dict(),
-		 'image': dict(),
-		 'video': dict(),
-		 'csv': dict()}
-
+			'text': dict(),
+			'image': dict(),
+			'video': dict(),
+			'csv': dict()}
+	
+	# getting settings can be useful to see if settings are the same in every
+	# featurization, as some featurizations can rely on certain settings to be consistent
+	prevdir=prev_dir(os.getcwd())
+	try:
+		settings=json.load(open(prevdir+'/settings.json'))
+	except:
+		# this is for folders that may be 2 layers deep in train_dir
+		settings=json.load(open(prev_dir(prevdir)+'/settings.json'))
+	
 	data={'sampletype': sampletype,
 		  'transcripts': transcripts,
 		  'features': features,
 		  'models': models,
-		  'labels': []}
-
+		  'labels': [],
+		  'errors': [],
+		  'settings': settings,
+		 }
+	
 	return data
 ```
 

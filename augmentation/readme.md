@@ -44,6 +44,9 @@ The vast majority of approaches focus on generating new data because it's often 
 To read more about data augmentation stratgies, please review [this page](https://github.com/AgaMiko/data-augmentation-review).
 
 ## Implemented 
+
+![](https://github.com/AgaMiko/data-augmentation-review/raw/master/images/da_diagram_v2.png)
+
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation)
 * [augment_tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.
 * [augment_addnoise]()

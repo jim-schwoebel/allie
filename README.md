@@ -43,22 +43,22 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 ## Quick examples
 
-### Augmenting data
+### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
 Docs here
 ```python3
 ```
 
-### Cleaning data 
+### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 Docs here
 ```python3
 ```
 
-### Featurizing data 
+### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
 Docs here
 ```python3
 ```
 
-### Modeling data
+### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)
 #### classification problem
 Docs here 
 
@@ -80,7 +80,7 @@ Docs here
 # making a model prediction
 ```
 
-### Visualizing data
+### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
 ```python3
 example
 ```

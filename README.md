@@ -557,6 +557,10 @@ gender
 ```
 It will then output the regression model in the proper folder, using TPOT as a model trainer.
 
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/regression.gif)](https://drive.google.com/file/d/1PQwBABSRKrzS67IrlgvFSjuRBKFFx-XX/view?usp=sharing)
+
 ### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
 To make predictions using the machine learning model that you just trained, type this into the terminal:
 

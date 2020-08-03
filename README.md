@@ -47,17 +47,22 @@ To illustrate a quick example, we can pull some sample audio data from this GitH
 
 ### [Annotating data](https://github.com/jim-schwoebel/allie/tree/master/annotation)
 
-```
+You can simply annotate using the command-line interface here:
+
+```python3
 cd annotation
 python3 annotate.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
 After you annotate, you can create a nicely formatted .CSV for machine learning:
 
-```
-cd annotation
+```python3
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
+
+Click the .GIF below for a quick tutorial and example.
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
 
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
 Docs here

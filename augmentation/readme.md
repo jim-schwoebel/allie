@@ -14,13 +14,14 @@ You can read more about data augmentation [here](https://github.com/AgaMiko/data
 
 To augment an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
 
-```
-cd ~ 
-cd allie/features/audio_augmentation
-python3 augment.py /Users/jimschwoebel/allie/load_dir
+```python3
+cd /Users/jim/desktop/allie
+cd augmentation/audio_augmentation
+python3 augment.py /Users/jim/desktop/allie/train_dir/males/
+python3 augment.py /Users/jim/desktop/allie/train_dir/females/
 ```
 
-The code above will augment all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). 
+The code above will augment all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). In this case, it will augment both the males and females folders full of ,WAV files
 
 Note you can extend this to any of the augmentation types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
 
@@ -31,6 +32,10 @@ Note you can extend this to any of the augmentation types. The table below overv
 | image files | .PNG | ```python3 augment.py [folderpath]``` | ./allie/augmentation/image_augmentation | 
 | video files | .MP4 | ```python3 augment.py [folderpath]``` |./allie/augmentation/video_augmentation| 
 | csv files | .CSV | ```python3 augment.py [folderpath]``` | ./allie/augmentation/csv_augmentation | 
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.gif)](https://drive.google.com/file/d/1j-rGRCgVDifIzoPx3YNuux_k9H-Gb-TD/view?usp=sharing)
 
 ## Implemented 
 

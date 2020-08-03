@@ -101,7 +101,7 @@ python3 model.py
 ```
 
 #### regression problem 
-Regression problems require a .CSV spreadsheet with annotations. This can be done with the [annotate.py script]().
+Regression problems require a .CSV spreadsheet with annotations. This can be done with the [Allie's annotate API](https://github.com/jim-schwoebel/allie/blob/master/annotation/annotate.py).
 
 ```python3
 cd training

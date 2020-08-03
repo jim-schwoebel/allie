@@ -32,35 +32,6 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 ## Definitions
 
-### Scaling data
-https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing techniques 
---> default scaling to quantile transformer could work here 
---> visualization could use which feature selection strategy works best in terms of model accuracy
-
-* scaler = preprocessing.StandardScaler().fit(X_train)
-* quantile_transformer = preprocessing.QuantileTransformer(random_state=0)
-* pt = preprocessing.PowerTransformer(method='box-cox', standardize=False)
-* [X_normalized = preprocessing.normalize(X, norm='l2')]() - Normalization is the process of scaling individual samples to have unit norm.
-* enc = preprocessing.OneHotEncoder(categories=[genders, locations, browsers]) - for turning into numbers
-* binarizer = preprocessing.Binarizer().fit(X)  # fit does nothing - Feature binarization is the process of thresholding numerical features to get boolean values.
-* poly = PolynomialFeatures(2) // poly.fit_transform(X)
-
-### Feature selection 
-
-* [scikit-learn](https://scikit-learn.org/stable/modules/preprocessing.html)
-* RFE (https://www.scikit-yb.org/en/latest/_modules/yellowbrick/features/rfecv.html) 
-* LASSO - 
-
-### Dimensionality reduction techniques
-
-![](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/helpers/dimensionality_reduction.png)
-
-* PCA - PCA - dimensionality reduction
-* LDA - Linear discriminant analysis (LDA)
-* tSNE - t-distributed stochastic neighbor embedding 
-* pLDA - probabilistic LDA 
-* Neural autoencoder 
-
 ### Preproprocessing parameters adaptable in settings.json
 | setting | description | default setting | all options | 
 |------|------|------|------| 

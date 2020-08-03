@@ -3,6 +3,7 @@
 To test, all you need to do is run:
 
 ```
+git clone git@github.com:jim-schwoebel/allie.git
 cd allie/tests
 python3 test.py
 ```

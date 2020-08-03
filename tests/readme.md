@@ -61,6 +61,4 @@ You can seed files with the seed_files.py script. The an example is below:
 python3 seed_files.py audio /Users/jimschwoebel/allie/train_dir/one
 ```
 
-Where the 'audio' is the type of file you want to automatically generate and the /Users/jimschwoebel/allie/train_dir/one is the directory you'd like to put the files.
-
-By default, this script generates 20 files at a time and does things like record ambient sound for audio. You can automatically generate csv, audio, text, image, and video files this way :-) 
+Where the 'audio' is the type of file you want to automatically generate and the /Users/jimschwoebel/allie/train_dir/one is the directory you'd like to put the files. By default, this script generates 20 files at a time and does things like record ambient sound for audio. You can automatically generate csv, audio, text, image, and video files this way. :-) 

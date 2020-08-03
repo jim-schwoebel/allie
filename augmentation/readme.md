@@ -65,7 +65,6 @@ Here are some settings that can be customized for Allie's augmentation API. Sett
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 
-| version | version of Allie release | 1.0 | 1.0 |
 | augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |
 | [default_audio_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation) | the default augmentation strategies used during audio modeling if augment_data == True | ["augment_tsaug"] | ['normalize_volume', 'normalize_pitch', 'time_stretch', 'opus_enhance', 'trim_silence', 'remove_noise', 'add_noise', "augment_tsaug"] | 
 | [default_csv_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/csv_augmentation) | the default augmentation strategies used to augment .CSV file types as part of model training if augment_data==True | ["augment_ctgan_regression"] | ["augment_ctgan_classification", "augment_ctgan_regression"]  | 

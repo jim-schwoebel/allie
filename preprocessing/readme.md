@@ -20,7 +20,7 @@ python3 transform.py text c onetwo one two
 
 The code above will transform all the featurized text files (in .JSON files, folder ONE and folder TWO) via a classification script with a common name ONETWO. 
 
-| setting | sample argument | description | all options | 
+| setting | sample | description | all options | 
 |------|------|------|------| 
 | sys.argv[2] | 'text' | the type of file that you are building a preprocessor for | ['audio','text','image','video','csv'] | 
 | sys.argv[3] | 'c' | classification or regression problems | ['c','r'] | 

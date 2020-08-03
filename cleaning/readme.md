@@ -1,5 +1,7 @@
 # Cleaning
 
+![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.png)
+
 This part of Allie's skills relates to data cleaning.
 
 Data cleansing is the process of making clean datasets - like removing noise in audio files. It allows for data with a higher signal-to-noise ratio for modeling, increasing robustness of models.

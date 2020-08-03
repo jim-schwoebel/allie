@@ -74,16 +74,22 @@ python3 augment.py /Users/jim/desktop/allie/train_dir/males/
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 Docs here
 ```python3
+cd cleaning/audio_cleaning
+python3 clean.py /Users/jim/desktop/allie/train_dir/males/
 ```
 
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
-Docs here
+
 ```python3
+cd features/audio_features
+python3 featurize.py /Users/jim/desktop/allie/train_dir/males/
 ```
 
 ### [Transforming data](https://github.com/jim-schwoebel/allie/tree/master/preprocessing)
-Docs here
+
 ```python3
+cd preprocessing
+python3 transform.py /Users/jim/desktop/allie/train_dir/males/
 ```
 
 ### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)

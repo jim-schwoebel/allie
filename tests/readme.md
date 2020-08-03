@@ -63,11 +63,3 @@ python3 seed_files.py audio /Users/jimschwoebel/allie/train_dir/one
 Where the 'audio' is the type of file you want to automatically generate and the /Users/jimschwoebel/allie/train_dir/one is the directory you'd like to put the files.
 
 By default, this script generates 20 files at a time and does things like record ambient sound for audio. You can automatically generate csv, audio, text, image, and video files this way :-) 
-
-## Work-in-progress (to add later)
-
-Here are some tests we are working to add in:
-- tests that the data schema is proper (as defined in various sections of the document) for all featurizers. Perhaps refactor code to inherit this from one location so that it does not have typos into the future. 
-- test ability to spin up YAML files for trained models (if create_YAML==True in settings.json) 
-- multi-class (3+) modeling outside of 2 things.
-

@@ -32,5 +32,5 @@ Click the .GIF below for a quick tutorial and example.
 ### Image 
 * [labelImg](https://github.com/tzutalin/labelImg/tree/c1c1dbef315df52daad9b22a418c2e832b60dae5) 
 ### Video
-* [AnnotationTool](https://github.com/ElbitSystems/AnnotationTool) (audio, image(s), and text transcription frames) 
-* [AB3DMOT](https://github.com/xinshuoweng/AB3DMOT) (3D object tracking)
+* [AnnotationTool](https://github.com/ElbitSystems/AnnotationTool)
+* [AB3DMOT](https://github.com/xinshuoweng/AB3DMOT)

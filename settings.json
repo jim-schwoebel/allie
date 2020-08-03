@@ -41,5 +41,5 @@
  "transcribe_image": true, 
  "transcribe_text": true, 
  "transcribe_video": true, 
- "visualize_data": false, 
- "transcribe_videos": true}
+ "transcribe_videos": true,
+ "visualize_data": false}

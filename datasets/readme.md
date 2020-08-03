@@ -61,6 +61,42 @@ There are many advantages for having this schema including:
 
 This schema is inspired by [D3M-schema](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md) by the MIT media lab.
 
+## Seeding sample data 
+
+To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males (x50) from females (x50). 
+
+This [seed_test.py script](https://github.com/jim-schwoebel/allie/blob/master/datasets/seed_test.py) creates two datasets in the train_dir folder, one full of audio files of males and the other full of audio files of females. This data will be used for the rest of the demo sections listed here.
+
+```python3
+cd /Users/jim/desktop/allie
+cd datasets
+python3 seed_test.py
+---------------
+Cloning into 'sample_voice_data'...
+remote: Enumerating objects: 119, done.
+remote: Counting objects: 100% (119/119), done.
+remote: Compressing objects: 100% (115/115), done.
+remote: Total 119 (delta 5), reused 108 (delta 2), pack-reused 0
+Receiving objects: 100% (119/119), 18.83 MiB | 7.43 MiB/s, done.
+Resolving deltas: 100% (5/5), done.
+```
+You can easily test if the files are in there with:
+```
+cd ..
+cd train_dir
+ls
+```
+Which should output:
+```
+jim@Jims-MBP train_dir % ls
+README.md		delete_json.py		females
+delete_features.py	featurize_csv.py	males
+```
+
+Click the .GIF below for a quick tutorial and example.
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://drive.google.com/file/d/1YYniwEJWZFpxTFNwJSGYGP0eeCAgxcvU/view?usp=sharing)
+
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 
 

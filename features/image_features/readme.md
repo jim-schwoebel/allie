@@ -2,7 +2,7 @@
 
 ```
 cd allie/features/image_features
-python3 featurize.py
+python3 featurize.py [folder] [featuretype]
 ```
 
 ### Images 

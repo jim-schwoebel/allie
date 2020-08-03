@@ -2,7 +2,7 @@
 
 ![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/model.png)
 
-This is a folder for manipulating and pre-processing [features extracted](https://github.com/jim-schwoebel/allie/tree/master/features) from audio, text, image, video, or .CSV files as part of the machine learning modeling process. This includes three main techniques: [feature scaling](), [feature selection](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_select.py), and [dimensionality reduction](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_reduce.py).
+This is a folder for manipulating and pre-processing [features extracted](https://github.com/jim-schwoebel/allie/tree/master/features) from audio, text, image, video, or .CSV files as part of the machine learning modeling process. This includes three main techniques: [feature scaling](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_scale.py), [feature selection](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_select.py), and [dimensionality reduction](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_reduce.py).
 
 This is done via a convention for transformers, which are in the proper folders (e.g. audio files --> audio_transformers). In this way, we can appropriately create transformers for various sample data types. 
 

@@ -62,26 +62,3 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
 * [clean_csv]() - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
-
-## Future
-
-### Audio 
-* [RNN Noise XIPH](https://github.com/xiph/rnnoise) - eliminates all noise events from environment (e.g. typing)
-* Diarization?? - can implement this here if necessary 
-* [PB_BSS](https://github.com/fgnt/pb_bss) - Blind Source Separation (BSS) algorithms
-* [Norbert](https://github.com/sigsep/norbert) - Weiner filter for source separation of audio signals (multichannel). Use a source truth and separate into Channel A and Channel B.
-* [Deep Audio Prior](https://github.com/adobe/Deep-Audio-Prior) - can separate 2 noises without any training data
-* [Microsoft noise dataset](https://github.com/microsoft/MS-SNSD) - MS-SNSD
-* extract loudest section - https://github.com/petewarden/extract_loudest_section
-
-### Text
-* TBA
-
-### Image
-* TBA
-
-### Video
-* [Near-duplicate video detection](https://github.com/Chinmay26/Near-Duplicate-Video-Detection)
-
-### CSV
-* [Autonormalize](https://github.com/FeatureLabs/autonormalize)

@@ -44,7 +44,7 @@ The code above will transform all the features in the test.csv spreadsheet in th
 | sys.argv[1] | 'text' | the sample type of file preprocessed by the transformer | ['audio', 'text', 'image', 'video', 'csv'] | 
 | sys.argv[2] | 'c' | classification or regression problems | ['c', 'r'] | 
 | sys.argv[3] | 'age' | target variable in a spreadsheet | any string variable as a pandas dataframe | 
-| sys.argv[4] | 'test.csv' | csv spreadsheet for the regression problem | 
+| sys.argv[4] | 'test.csv' | csv spreadsheet for the regression problem | any string that represents a spreadsheet name | 
 | sys.argv[5] | '/Users/jim/desktop/allie/train_dir' | directory of the spreadsheet | any string directory file (can get with os.getcwd()) | 
 | sys.argv[6] | 'age' | common_name for the modeling problem | any string common name that makes sense for the problem | 
 

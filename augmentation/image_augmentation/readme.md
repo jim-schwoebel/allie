@@ -1,4 +1,2 @@
-## Work-in-progress (WIP)
-
-Image 
-* [Augmentor](https://github.com/mdbloice/Augmentor)
+### [Image](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation)
+* [augment_imaug]()

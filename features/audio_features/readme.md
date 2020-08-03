@@ -1,6 +1,7 @@
 ## How to use audio feature API
 
 ```
+cd allie/features/audio_features
 python3 featurize.py [folder]
 ```
 

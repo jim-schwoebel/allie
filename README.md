@@ -97,26 +97,21 @@ python3 transform.py /Users/jim/desktop/allie/train_dir/males/
 Docs here 
 
 ```python3
-# get some sample data (datasets)
-
-# training / saving classification model
-
-# making a model prediction
+cd training
+python3 model.py
 ```
 
 #### regression problem 
 Docs here
 ```python3
-# get some sample data 
-
-# training /saving a regression model
-
-# making a model prediction
+cd training
+python3 model.py
 ```
 
 ### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
 ```python3
-example
+cd visualize
+python3 visualize.py audio males females
 ```
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)

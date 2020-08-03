@@ -41,11 +41,13 @@ python3 test.py
 ```
 Note the unit tests above takes roughly ~10 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
-## Training your first model
+## Quick example
 
 Docs here
 ```
+# training /saving a first model 
 
+# making a model prediction from model
 ```
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)

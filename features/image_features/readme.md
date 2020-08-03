@@ -1,7 +1,16 @@
-### Images WIP
-* [kornia](https://github.com/kornia/kornia)
-* SURF, ORB, BRIEF, AKAZE - corner detectors - SIFT is most accurate but also the slowest (patented), BRIEF is the fastest but least accurate
-* allow Ludwig model type to dictate featurization (.JSON files --> .CSV). - 'image_ludwig_features'
-* Yolo-9000 classes - https://github.com/philipperemy/yolo-9000
-* Add in transcription to standard image array if settings.JSON image transcript == True.
-* [Kornia](https://kornia.readthedocs.io/en/latest/color.html) - Harris feature detection - https://kornia.readthedocs.io/en/latest/color.html
+## How to use
+
+```
+cd allie/features/image_features
+python3 featurize.py
+```
+
+### Images 
+* [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default)
+* [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py)
+* [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py)
+* [squeezenet_features](https://github.com/rcmalli/keras-squeezenet) - efficient memory footprint
+* [tesseract_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/tesseract_features.py)
+* [vgg16_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg16_features.py) 
+* [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) 
+* [xception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/xception_features.py) 

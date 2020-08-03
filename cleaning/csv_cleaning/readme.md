@@ -8,10 +8,6 @@ cd allie/cleaning/csv_cleaning
 python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
-### Implemented for all file types 
-* [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
-* [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
-
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
 * [clean_csv]() - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
 

@@ -21,7 +21,11 @@ python3 augment.py /Users/jim/desktop/allie/train_dir/males/
 python3 augment.py /Users/jim/desktop/allie/train_dir/females/
 ```
 
-The code above will augment all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). In this case, it will augment both the males and females folders full of ,WAV files
+The code above will augment all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). In this case, it will augment both the males and females folders full of .WAV files
+
+You should now have 2x the data in each folder. Here is a sample audio file and augmented audio file (in females) folder, for reference:
+* [Non-augmented file sample](https://drive.google.com/file/d/1kvdoKn0IjBXhBEtjDq9AK8CjD14nIC35/view?usp=sharing) (female speaker)
+* [Augmented file sample](https://drive.google.com/file/d/1EsSHx1m_zxrdTjnRMhYKOLLjiKi5gRgY/view?usp=sharing) (female speaker)
 
 Click the .GIF below to follow along this example in a video format:
 

@@ -111,14 +111,22 @@ You should now have 2x the data in each folder. Here is a sample audio file and 
 * [Non-augmented file sample](https://drive.google.com/file/d/1kvdoKn0IjBXhBEtjDq9AK8CjD14nIC35/view?usp=sharing) (female speaker)
 * [Augmented file sample](https://drive.google.com/file/d/1EsSHx1m_zxrdTjnRMhYKOLLjiKi5gRgY/view?usp=sharing) (female speaker)
 
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/augment.gif)](https://drive.google.com/file/d/1j-rGRCgVDifIzoPx3YNuux_k9H-Gb-TD/view?usp=sharing)
+
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
-Docs here
+
 ```python3
 cd /Users/jim/desktop/allie
 cd cleaning/audio_cleaning
 python3 clean.py /Users/jim/desktop/allie/train_dir/males/
 python3 clean.py /Users/jim/desktop/allie/train_dir/females/
 ```
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
 
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
 
@@ -127,6 +135,10 @@ cd /Users/jim/desktop/allie
 cd features/audio_features
 python3 featurize.py /Users/jim/desktop/allie/train_dir/males/
 ```
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/featurize.gif)](https://drive.google.com/file/d/1YQXgnAvKHVjSgYteIFz-9H0znr1UKCLl/view?usp=sharing)
 
 ### [Transforming data](https://github.com/jim-schwoebel/allie/tree/master/preprocessing)
 

@@ -1,4 +1,13 @@
-### [Audio](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation)
+## Getting started
+
+Here is a way to quickly augment a file of audio files:
+```
+cd ~ 
+cd allie/features/audio_augmentation
+python3 augment.py /Users/jimschwoebel/allie/load_dir
+```
+
+## Implemented
 * [augment_tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.
 * [augment_addnoise]()
 * [augment_noise]()

@@ -505,6 +505,15 @@ Click the .GIF below to follow along this example in a video format:
 
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)
 
+#### regression problem
+
+To model a regression problem, you need a .CSV file with annotations and files. It is best to produce these files with the annotate.py script, but you can also use datasets created within Allie for regression modeling.
+
+All you need to do is follow the similar steps for modeling, specifying a regression problem and the .CSV file of interest:
+```python3
+
+```
+
 ### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
 To make predictions using the machine learning model that you just trained, type this into the terminal:
 

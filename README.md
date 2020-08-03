@@ -152,6 +152,10 @@ cd preprocessing
 python3 transform.py /Users/jim/desktop/allie/train_dir/males/
 ```
 
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/transform.gif)](https://drive.google.com/file/d/1wV-yeM9FTRKrGAebhREXpY4gfWPmcL0U/view?usp=sharing)
+
 ### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)
 #### classification problem
 
@@ -160,6 +164,10 @@ cd /Users/jim/desktop/allie
 cd training
 python3 model.py
 ```
+
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)
 
 #### regression problem 
 Regression problems require a .CSV spreadsheet with annotations. This can be done with the [Allie's annotate API](https://github.com/jim-schwoebel/allie/blob/master/annotation/annotate.py).

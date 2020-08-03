@@ -63,8 +63,6 @@ Note you can extend this to any of the augmentation types. The table below overv
 
 Here are some settings that can be customized for Allie's augmentation API. Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. 
 
-Here are some settings that you can modify in this settings.json file and the various options for these settings:
-
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | version | version of Allie release | 1.0 | 1.0 |

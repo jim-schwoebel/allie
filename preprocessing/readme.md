@@ -54,7 +54,7 @@ Here are the relevant settings in Allie related to preprocessing that you can ch
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 
-| reduce_dimensions | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
+| [reduce_dimensions](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_reduce.py) | if True, reduce dimensions via the default_dimensionality_reducer (or set of dimensionality reducers) | False | True, False |
 | default_dimensionality_reducer | the default dimensionality reducer or set of dimensionality reducers | ["pca"] | ["pca", "lda", "tsne", "plda","autoencoder"] | 
 | [select_features](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_select.py) | if True, select features via the default_feature_selector (or set of feature selectors) | False | True, False | 
 | default_feature_selector | the default feature selector or set of reature selectors | ["lasso"] | ["lasso", "rfe", "chi", "kbest", "variance"] | 

@@ -3,7 +3,7 @@
  "balance_data": true, 
  "clean_data": false, 
  "create_csv": true, 
- "default_audio_augmenters": ["augment_volume"], 
+ "default_audio_augmenters": ["augment_tsaug"], 
  "default_audio_cleaners": ["clean_mono16hz"], 
  "default_audio_features": ["librosa_features"], 
  "default_audio_transcriber": ["deepspeech_dict"], 

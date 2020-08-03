@@ -47,7 +47,7 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males (x50) from females (x50). 
 
-This seed_test.py script creates two datasets in the train_dir folder, one full of audio files of males and the other full of audio files of females. This data will be used for the rest of the demo sections listed here.
+This [seed_test.py script](https://github.com/jim-schwoebel/allie/blob/master/datasets/seed_test.py) creates two datasets in the train_dir folder, one full of audio files of males and the other full of audio files of females. This data will be used for the rest of the demo sections listed here.
 
 ```python3
 cd datasets

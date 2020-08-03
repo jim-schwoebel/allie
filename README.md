@@ -512,7 +512,7 @@ Click the .GIF below to follow along this example in a video format:
 To model a regression problem, you need a .CSV file with annotations and files. It is best to produce these files with the annotate.py script, but you can also use datasets created within Allie for regression modeling.
 
 All you need to do is follow the similar steps for modeling, specifying a regression problem and the .CSV file of interest:
-```python3
+```
 python3 model.py
                                                                              
                                                                              
@@ -555,6 +555,7 @@ class_
 what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) 
 gender
 ```
+It will then output the regression model in the proper folder, using TPOT as a model trainer.
 
 ### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
 To make predictions using the machine learning model that you just trained, type this into the terminal:

@@ -69,58 +69,5 @@ https://scikit-learn.org/stable/modules/preprocessing.html - all preprocessing t
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
 | default_scaler | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
 
-## Future
-
-* RFE - correlation matrix to reduce - https://towardsdatascience.com/feature-selection-in-python-recursive-feature-elimination-19f1c39b8d15
-* support vector machine based on recursive feature elimination and particle swarm optimization (SVM-RFE-PSO)
-
-make all train and test data into binary labels - https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html
-
-```python3
-le=preprocessing.LabelEncoder()
-le.fit(y_train)
-y_train=le.transform(y_train)
-y_test=le.transform(y_test)
-
-'''
->>> le = preprocessing.LabelEncoder()
->>> le.fit(["paris", "paris", "tokyo", "amsterdam"])
-LabelEncoder()
->>> list(le.classes_)
-['amsterdam', 'paris', 'tokyo']
->>> le.transform(["tokyo", "tokyo", "paris"])
-array([2, 2, 1]...)
->>> list(le.inverse_transform([2, 2, 1]))
-['tokyo', 'tokyo', 'paris']
-'''
-```
-
-### Feature transformations 
-* https://github.com/firmai/deltapy - deltapy (getting a bunch of transformations done for preprocessing / entropy techniques, etc.)
-* https://github.com/HDI-Project/MLPrimitives - ML Primities - add in (for .CSV datasets - numerical representations)
-* https://scikit-learn.org/stable/modules/outlier_detection.html - outlier detection (Scikit-learn) - remove outliers with a model
-* https://pypi.org/project/umap-learn/ - add in UMAP embedding
-
-### dimensionality reduction
-- Principal Components Analysis (PCA): Rscript, RPubs
-- Factor Analysis (FA): Rscript, RPubs (https://github.com/EducationalTestingService/factor_analyzer.git)
-- Multidimensional Scaling (MDS)
-- Linear Discriminate Analysis (LDA): Rscript, RPubs
-- Quadratic Discriminate Analysis (QDA): Rscript, RPubs
-- Singular Value Decomposition (SVD): notebook
-- t-SNE
-
-### Feature selection techniques
-
-- All from here: https://github.com/anujdutt9/Feature-Selection-for-Machine-Learning
-- LOFO -  https://github.com/aerdem4/lofo-importance
-- FCBF - https://github.com/shiralkarprashant/FCBF
-- wkNN-FS - https://github.com/bugatap/WkNN-FS
-- https://github.com/chasedehan/BoostARoota - random forest methods (faster than Boruta) or [here](https://github.com/dawidkopczyk/feature_selection/blob/master/algorithms.py)
-- https://github.com/danielhomola/mifs - MRMR / mutual information
-- https://github.com/manuel-calzolari/sklearn-genetic - genetic algo feature selection
-- https://github.com/cod3licious/autofeat - automated feature engineering using combinatorics
-- https://github.com/LastShekel/ITMO_FS - Feature selection library in python (many methods)
-
 ## References
 * [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

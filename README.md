@@ -77,6 +77,10 @@ README.md		delete_json.py		females
 delete_features.py	featurize_csv.py	males
 ```
 
+Click the .GIF below for a quick tutorial and example.
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://drive.google.com/file/d/1YYniwEJWZFpxTFNwJSGYGP0eeCAgxcvU/view?usp=sharing)
+
 ### [Annotating data](https://github.com/jim-schwoebel/allie/tree/master/annotation)
 
 You can simply annotate using the command-line interface here:
@@ -113,7 +117,7 @@ You should now have 2x the data in each folder. Here is a sample audio file and 
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/augment.gif)](https://drive.google.com/file/d/1j-rGRCgVDifIzoPx3YNuux_k9H-Gb-TD/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.gif)](https://drive.google.com/file/d/1j-rGRCgVDifIzoPx3YNuux_k9H-Gb-TD/view?usp=sharing)
 
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 
@@ -126,7 +130,7 @@ python3 clean.py /Users/jim/desktop/allie/train_dir/females/
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
 
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
 
@@ -138,7 +142,7 @@ python3 featurize.py /Users/jim/desktop/allie/train_dir/males/
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/featurize.gif)](https://drive.google.com/file/d/1YQXgnAvKHVjSgYteIFz-9H0znr1UKCLl/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.gif)](https://drive.google.com/file/d/1YQXgnAvKHVjSgYteIFz-9H0znr1UKCLl/view?usp=sharing)
 
 ### [Transforming data](https://github.com/jim-schwoebel/allie/tree/master/preprocessing)
 

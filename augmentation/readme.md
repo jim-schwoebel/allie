@@ -12,7 +12,7 @@ You can read more about data augmentation [here](https://github.com/AgaMiko/data
 
 ## Getting started
 
-To featurize an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
+To augment an entire folder of a certain file type (e.g. audio files of .WAV format), you can run:
 
 ```
 cd ~ 
@@ -20,7 +20,7 @@ cd allie/features/audio_augmentation
 python3 augment.py /Users/jimschwoebel/allie/load_dir
 ```
 
-The code above will featurize all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). 
+The code above will augment all the audio files in the folderpath via the default_augmenter specified in the settings.json file (e.g. 'augment_tasug'). 
 
 Note you can extend this to any of the augmentation types. The table below overviews how you could call each as a augmenter. In the code below, you must be in the proper folder (e.g. ./allie/augmentation/audio_augmentations for audio files, ./allie/augmentation/image_augmentation for image files, etc.) for the scripts to work properly.
 

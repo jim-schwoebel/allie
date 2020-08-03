@@ -27,6 +27,11 @@ base_dir=prev_dir(cur_dir)
 train_dir=base_dir+'/train_dir'
 
 try:
+	shutil.copy(cur_dir+'/sample_voice_data/gender_all.csv',train_dir+'/gender_all.csv')
+except:
+	os.remove(train_dir+'/gender_all.csv')
+	shutil.copy(cur_dir+'/sample_voice_data/gender_all.csv',train_dir+'/gender_all.csv')
+try:
 	shutil.copytree(cur_dir+'/sample_voice_data/males',train_dir+'/males')
 except:
 	shutil.rmtree(train_dir+'/males')

@@ -1,6 +1,6 @@
 ## Getting started
 
-Here is a way to quickly augment a file of video files:
+Here is a way to quickly augment a folder of video files:
 ```
 cd ~ 
 cd allie/features/video_augmentation

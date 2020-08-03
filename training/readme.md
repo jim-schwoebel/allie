@@ -331,8 +331,7 @@ Here is a quick review of all the potential default_training_script settings:
 Note that you can customize the default_training_script in the settings.json. If you include multiple default training scripts in series e.g. ['keras','tpot'] it will go through and model each of these sessions serially. A sample settings.json with the ['tpot'] setting is shown below, for reference (this is the default setting):
 
 ```python3
-{
-"version": "1.0.0", 
+{"version": "1.0.0", 
  "augment_data": false, 
  "balance_data": true, 
  "clean_data": false, 
@@ -376,8 +375,7 @@ Note that you can customize the default_training_script in the settings.json. If
  "transcribe_text": true, 
  "transcribe_video": true, 
  "visualize_data": false, 
- "transcribe_videos": true
-}
+ "transcribe_videos": true}
 ```
 
 ## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)

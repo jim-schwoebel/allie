@@ -1,5 +1,7 @@
 # Models
 
+![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/predict.png)
+
 Use this section of the repository to make model predictions in the [./load_dir](https://github.com/jim-schwoebel/allie/tree/master/load_dir).
 
 Note you can put audio, text, image, video, or .CSV files in the [./load_dir](https://github.com/jim-schwoebel/allie/tree/master/load_dir). These files will then be featurized by the default featurizers. Model predictions will only be made if there are model files in the proper directory (e.g. audio_models, text_models, image_models, video_models, or csv_models). 

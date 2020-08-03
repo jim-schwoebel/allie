@@ -68,7 +68,7 @@ Docs here
 
 ![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/settings.png)
 
-Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. 
+Allie has multiple default settings for model training to help you start out with the framework. Allie has been built so that the settings you specify in lists are done serially, which can be useful to construct machine learning models from multiple back-end model trainers in a single session. Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. 
 
 Here are some settings that you can modify in this settings.json file and the various options for these settings:
 

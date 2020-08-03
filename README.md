@@ -502,6 +502,8 @@ Click the .GIF below to follow along this example in a video format:
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)
 
 ### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
+To make predictions using the machine learning model that you just trained, type this into the terminal:
+
 ```python3
 cd /Users/jim/desktop/allie
 cd models
@@ -519,6 +521,8 @@ Click the .GIF below to follow along this example in a video format:
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/load.gif)](https://drive.google.com/file/d/1-iN3wOjWGCiqlTKjQgtVoxfpJSmiDsCQ/view?usp=sharing)
 
 ### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
+To visualize multiple folders of featurized files (in this case males and females folders of audio files in the ./train_dir), type this into the terminal:
+
 ```python3
 cd /Users/jim/desktop/allie
 cd visualize

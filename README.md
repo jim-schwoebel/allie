@@ -475,24 +475,6 @@ Click the .GIF below to follow along this example in a video format:
 
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)
 
-#### regression problem 
-Regression problems require a .CSV spreadsheet with annotations. This can be done with the [Allie's annotate API](https://github.com/jim-schwoebel/allie/blob/master/annotation/annotate.py).
-
-```python3
-cd /Users/jim/desktop/allie
-cd annotate
-python3 annotate.py regression
-```
-
-Now we have some regression labels for both audio classes.
-
-```python3
-cd /Users/jim/desktop/allie
-cd training
-python3 model.py
-```
-
-
 ### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
 ```python3
 cd /Users/jim/desktop/allie

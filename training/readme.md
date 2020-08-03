@@ -20,6 +20,20 @@ You then will be asked a few questions regarding the training process (in terms 
 ### regression model example 
 For regression model training, you need to insert a .CSV file for training. You can then specify the target classes here from the spreadsheet and the models will then be trained with the specified model trainers.
 
+The resulting model will have the following data:
+```
+└── gender_tpot_regression
+    ├── data
+    ├── model
+    │   ├── bar_graph_predictions.png
+    │   ├── gender_tpot_regression.json
+    │   ├── gender_tpot_regression.pickle
+    │   └── gender_tpot_regression.py
+    ├── readme.md
+    ├── requirements.txt
+    └── settings.json
+```
+
 ### classification model example 
 To now model both males and females as a binary gender classification problem, type this into the terminal:
 

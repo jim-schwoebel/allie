@@ -1,6 +1,6 @@
 ## Getting started
 
-Here is a way to quickly augment a file of text files:
+Here is a way to quickly augment a folder of text files:
 ```
 cd ~ 
 cd allie/features/text_augmentation

@@ -91,6 +91,12 @@ def classifyfolder(listdir):
 	maxind=countvalues.index(maxvalue)
 	return countlist[maxind]
 
+def pull_element(mylist, element):
+	pull_=list()
+	for i in range(len(mylist)):
+		pull_.append(mylist[i][element])
+	return pull_
+
 def convert_csv(X_train, y_train, labels, mtype, classes):
 	'''
 	Take in a array of features and labels and output a 
@@ -118,11 +124,11 @@ def convert_csv(X_train, y_train, labels, mtype, classes):
 	if mtype == 'c':
 		data['class_']=y_train
 	elif mtype == 'r':
-		y_train=np.array(y_train)
-		print(y_train.shape)
-		for i in range(len(classes)):
-			data[classes[i]]=list(y_train[:,i])
-
+		if len(classes) == 1:
+			data[classes[0]]=y_train
+		else:
+			for i in range(len(classes)):
+				data[classes[i]]=pull_element(y_train, i)
 	print(data)
 
 	data=pd.DataFrame(data, columns = list(data))

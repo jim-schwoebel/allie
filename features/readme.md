@@ -38,7 +38,7 @@ Note you can extend this to any of the feature types. The table below overviews 
 
 ## Standard feature dictionary (.JSON)
 
-This is the stanard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
+This is the standard feature array to accomodate all types of samples (audio, text, image, video, or CSV samples):
 
 ```python3 
 def make_features(sampletype):

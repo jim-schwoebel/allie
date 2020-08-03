@@ -20,7 +20,7 @@ python3 transform.py text c onetwo one two
 
 The code above will transform all the featurized text files (in .JSON files, folder ONE and folder TWO) via a classification script with a common name ONETWO. For clarity, the command line arguments are further elaborated upon below along with all possible options to help you use the transformers API. Note that folder ONE and folder TWO are assumed to be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir).
 
-| setting | sample | description | all options | 
+| CLI argument | sample | description | all options | 
 |------|------|------|------| 
 | sys.argv[2] | 'text' | the sample type of file preprocessed by the transformer | ['audio', 'text', 'image', 'video', 'csv'] | 
 | sys.argv[3] | 'c' | classification or regression problems | ['c', 'r'] | 
@@ -39,7 +39,7 @@ python3 transform.py text c age test.csv /Users/jim/desktop/allie/train_dir age
 
 The code above will transform all the features in the test.csv spreadsheet in the /Users/jim/desktop/allie/train_dir around the target variable age according to the specified preprocessing settings. In other words, all other variables from the target variable are represented as numberical features that will be transformed.
 
-| setting | sample | description | all options | 
+| CLI argument | sample | description | all options | 
 |------|------|------|------| 
 | sys.argv[1] | 'text' | the sample type of file preprocessed by the transformer | ['audio', 'text', 'image', 'video', 'csv'] | 
 | sys.argv[2] | 'c' | classification or regression problems | ['c', 'r'] | 

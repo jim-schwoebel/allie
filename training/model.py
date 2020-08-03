@@ -1,27 +1,52 @@
 '''
-Take in various sys.argv[] inputs and/or user-defined inputs and
-output a trained machine learning model. 
+This is Allie's modeling API to help build classification or regression models.
 
-Can featurize and model audio, image, text, video, or CSV files.
+All you need to do is run the model.py script and you will be guided through the 
+modeling process.
 
-This assumes the files are separated in folders in the train_dir. 
+For addditional documentation, check out https://github.com/jim-schwoebel/allie/tree/master/training
+                                                                             
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
+                                                                             
 
-For example, if you want to separate males and females in audio
-files, you would need to have one folder named 'males' and another
-folder named 'females' and specify audio file training with the
-proper folder names ('male' and 'female') for the training script 
-to function properly.
+is this a classification (c) or regression (r) problem? 
+c
+what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)
+1
 
-For automated training, you can alternatively pass through sys.argv[]
-inputs as follows:
+ OK cool, we got you modeling audio files 
 
-python3 model.py audio 2 c male female 
-
-audio = audio file type 
-2 = 2 classes 
-c = classification (r for regression)
-male = first class
-female = second class [via N number of classes]
+how many classes would you like to model? (2 available) 
+2
+these are the available classes: 
+['females', 'males']
+what is class #1 
+males
+what is class #2 
+females
+what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) 
+gender
 '''
 ###############################################################
 ##                  IMPORT STATEMENTS                        ##

@@ -2,13 +2,13 @@
 
 ![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/model.png)
 
-Use this folder to train machine learning models according to the default_training_script using the [model.py]() script.
+Use this folder to train machine learning models according to the default_training_script using the [model.py](https://github.com/jim-schwoebel/allie/blob/master/training/model.py) script.
 
 ![](https://github.com/jim-schwoebel/Allie/blob/master/training/helpers/train.gif)
 
 ## Getting started
 
-All you need to do to get started is go to this repository and run upgrade.py followed by model.py:
+All you need to do to get started is go to this repository and run upgrade.py followed by [model.py](https://github.com/jim-schwoebel/allie/blob/master/training/model.py):
 
 ```
 cd allie/training

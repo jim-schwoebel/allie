@@ -16,6 +16,12 @@ Click the .GIF below for a quick tutorial and example.
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
 
 ## What each CLI argument represents
+| CLI argument | description | options | example |
+|------|------|------|------|
+| -d | the specified directory full of files that you want to annotate. | any directory path | "/Users/jim/desktop/allie/train_dir/males/" |
+| -s | the file type / type of problem that you are annotating | ["audio", "text", "image", "video"] | "audio" | 
+| -c | the class name that you are annotating | any string / class name | "male" | 
+| -p | the type of problem you are annotating - classification or regression label | ["classification", "regression"] | "classification" | 
 
 ## Future work
 

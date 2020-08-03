@@ -1,7 +1,7 @@
 ## How to use
 ```
 cd allie/features/text_features
-python3 featurize.py 
+python3 featurize.py [folder] [featuretype]
 ```
 
 ### Text

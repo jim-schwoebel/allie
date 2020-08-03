@@ -3,7 +3,7 @@
 To test, all you need to do is run:
 
 ```
-cd Allie/tests
+cd allie/tests
 python3 test.py
 ```
 

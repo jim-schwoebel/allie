@@ -183,6 +183,8 @@ Click the .GIF below to follow along this example in a video format:
 ### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)
 #### classification problem
 
+To now model both males and females as a binary gender classification problem, type this into the terminal:
+
 ```python3
 cd /Users/jim/desktop/allie
 cd training

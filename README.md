@@ -43,7 +43,7 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 ## Settings
 
-Settings can be modified in the settings.json file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.
+Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. If no settings.json file is identified, it will automatically be created with some default settings from the setup.py script.
 
 ![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/settings.png)
 

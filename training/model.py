@@ -655,20 +655,27 @@ if clean_data == True and mtype == 'c':
 	print('-----------------------------------')
 	for i in range(len(classes)):
 		if problemtype == 'audio':
-			# featurize audio 
+			# clean audio via default_audio_cleaners 
 			os.chdir(clean_dir+'/audio_cleaning')
 		elif problemtype == 'text':
-			# featurize text
+			# clean text via default_text_cleaners 
 			os.chdir(clean_dir+'/text_cleaning')
 		elif problemtype == 'image':
-			# featurize images
+			# clean images via default_image_cleaners 
 			os.chdir(clean_dir+'/image_cleaning')
 		elif problemtype == 'video':
-			# featurize video 
+			# clean video via default_video_cleaners 
 			os.chdir(clean_dir+'/video_cleaning')
 		elif problemtype == 'csv':
-			# featurize .CSV 
-			os.chdir(augment_dir+'/csv_cleaning')
+			# clean .CSV via default_csv_cleaners 
+			os.chdir(clean_dir+'/csv_cleaning')
+		os.system('python3 clean.py %s'%(data_dir+'/'+classes[i]))
+
+elif clean_data == True and mtype == 'r':
+	for i in range(len(classes)):
+		if problemtype == 'csv':
+			# clean .CSV via default_csv_cleaners 
+			os.chdir(clean_dir+'/csv_cleaning')
 		os.system('python3 clean.py %s'%(data_dir+'/'+classes[i]))
 
 ###############################################################
@@ -685,19 +692,26 @@ if augment_data == True and mtype == 'c':
 	print('-----------------------------------')
 	for i in range(len(classes)):
 		if problemtype == 'audio':
-			# featurize audio 
+			# augment audio via default_audio_augmenters
 			os.chdir(augment_dir+'/audio_augmentation')
 		elif problemtype == 'text':
-			# featurize text
+			# augment text via default_text_augmenters
 			os.chdir(augment_dir+'/text_augmentation')
 		elif problemtype == 'image':
-			# featurize images
+			# augment images via default_image_augmenters
 			os.chdir(augment_dir+'/image_augmentation')
 		elif problemtype == 'video':
-			# featurize video 
+			# augment video via default_video_augmenters
 			os.chdir(augment_dir+'/video_augmentation')
 		elif problemtype == 'csv':
-			# featurize .CSV 
+			# augment .CSV via default_csv_augmenters
+			os.chdir(augment_dir+'/csv_augmentation')
+		os.system('python3 augment.py %s'%(data_dir+'/'+classes[i]))
+
+elif augment_data == True and mtype == 'r':
+	for i in range(len(classes)):
+		if problemtype == 'csv':
+			# featurize .CSV via default_csv_augmenters
 			os.chdir(augment_dir+'/csv_augmentation')
 		os.system('python3 augment.py %s'%(data_dir+'/'+classes[i]))
 

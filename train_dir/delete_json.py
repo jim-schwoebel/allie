@@ -23,8 +23,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
   \_/_|  \__,_|_|_| |_|_|_| |_|\__, | \_| |_/\_|    \___/ 
                                 __/ |                     
                                |___/       
-			       
-			       
+			     	       
 Deletes all .JSON files from all folders in the train_dir 
 (useful to re-featurize sets of files).
 

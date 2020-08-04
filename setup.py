@@ -26,7 +26,7 @@ curdir=os.getcwd()
 
 # assumes Mac OSX for SoX and FFmpeg installations
 if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
-  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4', 'libtool', 'gcc', 'portaudio']
+  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4', 'libtool', 'gcc', 'portaudio', 'lasound']
   brew_install(brew_modules)
   os.system('pip3 install -r mac.txt')
   # to install opensmile package
@@ -77,7 +77,16 @@ elif sys.platform.lower() in ['win32', 'cygwin', 'msys']:
 os.system('pip3 install git+https://github.com/detly/gammatone.git')
 os.system('pip3 install https://github.com/vBaiCai/python-pesq/archive/master.zip')
 os.system('pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]')
-os.system('pip3 install markovify-0.8.3')
+os.system('pip3 install markovify==0.8.3')
+os.system('pip3 install tsaug==0.2.1')
+os.system('pip3 install seaborn==0.10.1')
+os.system('pip3 install psutil==5.7.2')
+os.system('pip3 install pyfiglet==0.8.post1')
+os.system('pip3 install gensim==3.8.3')
+os.system('pip3 install wget==3.2')
+os.system('pip3 install textblob==0.15.3')
+os.system('pip3 install moviepy==1.0.3')
+os.system('pip3 install textacy==0.10.0')
 
 # install add-ons to NLTK 
 os.system('pip3 install nltk==3.4.5')

@@ -1,11 +1,4 @@
 '''
-This is Allie's modeling API to help build classification or regression models.
-
-All you need to do is run the model.py script and you will be guided through the 
-modeling process.
-
-For addditional documentation, check out https://github.com/jim-schwoebel/allie/tree/master/training
-                                                                             
                AAA               lllllll lllllll   iiii                      
               A:::A              l:::::l l:::::l  i::::i                     
              A:::::A             l:::::l l:::::l   iiii                      
@@ -23,30 +16,29 @@ For addditional documentation, check out https://github.com/jim-schwoebel/allie/
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
                                                                              
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
-                                                                             
+|  \/  |         | |    | |  / _ \ | ___ \_   _|
+| .  . | ___   __| | ___| | / /_\ \| |_/ / | |  
+| |\/| |/ _ \ / _` |/ _ \ | |  _  ||  __/  | |  
+| |  | | (_) | (_| |  __/ | | | | || |    _| |_ 
+\_|  |_/\___/ \__,_|\___|_| \_| |_/\_|    \___/ 
 
-is this a classification (c) or regression (r) problem? 
-c
-what problem are you solving? (1-audio, 2-text, 3-image, 4-video, 5-csv)
-1
+This is Allie's modeling API to help build classification or regression models.
 
- OK cool, we got you modeling audio files 
+All you need to do is run the model.py script and you will be guided through the 
+modeling process.
 
-how many classes would you like to model? (2 available) 
-2
-these are the available classes: 
-['females', 'males']
-what is class #1 
-males
-what is class #2 
-females
-what is the 1-word common name for the problem you are working on? (e.g. gender for male/female classification) 
-gender
+Usage: python3 model.py
+
+Alternative CLI Usage: python3 model.py audio 2 c gender males females
+- audio = audio file type
+- 2 = 2 classes
+- c = classification (r for regression)
+- gender = common name of model
+- male = first class
+- female = second class [via N number of classes]
+
+For addditional documentation, check out 
+https://github.com/jim-schwoebel/allie/tree/master/training                                                                          
 '''
 ###############################################################
 ##                  IMPORT STATEMENTS                        ##

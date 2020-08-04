@@ -78,7 +78,9 @@ def clean_file(directory, clean_dir, cur_dir, train_dir, file):
 	os.chdir(train_dir+'/'+directory)
 	listdir=os.listdir()
 	b=False 
-	if len(listdir) == 1:
+	if len(listdir) == 1 and file.endswith('.csv') == False:
+		b=True
+	elif len(listdir) == 2 and file.endswith('.csv') == True:
 		b=True
 	# remove temp directory 
 	os.chdir(train_dir)
@@ -410,7 +412,7 @@ class test_cleaning(unittest.TestCase):
 
 	def test_image_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='image_cleaning'
-		file-'test_image.png'
+		file='test_image.png'
 
 		b, msg = clean_file(directory, clean_dir, cur_dir, train_dir, file)
 
@@ -451,7 +453,7 @@ class test_augmentation(unittest.TestCase):
 		
 	def test_text_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='text_augmentation'
-		file='test_text.wav'
+		file='test_text.txt'
 
 		b, msg = augment_file(directory, augment_dir, cur_dir, train_dir, file)
 

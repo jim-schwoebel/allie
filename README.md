@@ -49,7 +49,7 @@ Note the unit tests above takes roughly ~10 minutes to complete and makes sure t
 
 The below examples assume the default [settings.json configuration](https://github.com/jim-schwoebel/allie/blob/master/settings.json) in Allie. Results may vary if you change this file.
 
-### [Collecting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
+### [Collecting data](https://github.com/jim-schwoebel/allie/tree/master/datasets)
 
 To illustrate a quick example, we can pull some sample audio data from this GitHub repository, separating males (x50) from females (x50). 
 

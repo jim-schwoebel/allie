@@ -1,7 +1,9 @@
 # Allie 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie,%20an%20awesome%20new%20AutoML%20framework%20@%20https://github.com/jim-schwoebel/allie.&hashtags=machinelearning,automl,deeplearning)
 
-Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files. Intended for both beginners and experts, Allie allows for quick prototyping of models - the framework is designed to be easy-to-use and easy-to-extend to your desired modeling strategy.
+Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files. 
+
+Intended for both beginners and experts, Allie allows for quick prototyping of models - the framework is designed to be easy-to-use and easy-to-extend to your desired modeling strategy.
 
 Here are some things that Allie can do:
 - [find](https://github.com/jim-schwoebel/allie/tree/master/datasets) and download datasets (for quick experiments)

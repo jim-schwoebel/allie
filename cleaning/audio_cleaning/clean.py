@@ -11,7 +11,7 @@ information is useful to you.
 ################################################
 ##              IMPORT STATEMENTS             ##
 ################################################
-import json, os, sys, time, random
+import json, os, sys, time, random, uuid
 import numpy as np 
 # import helpers.transcribe as ts
 # import speech_recognition as sr
@@ -347,6 +347,12 @@ for i in tqdm(range(len(listdir))):
 	if listdir[i].endswith('.json'):
 		os.remove(listdir[i])
 
+# now rename files with UUIDs
+listdir=os.listdir()
+for i in range(len(listdir)):
+	file=listdir[i]
+	os.rename(file, str(uuid.uuid4())+file[-4:])
+	
 ################################################
 ##                NOW CLEAN!!                 ##
 ################################################

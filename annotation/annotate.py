@@ -17,6 +17,14 @@
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
+  ___                    _        _   _                ___  ______ _____ 
+ / _ \                  | |      | | (_)              / _ \ | ___ \_   _|
+/ /_\ \_ __  _ __   ___ | |_ __ _| |_ _  ___  _ __   / /_\ \| |_/ / | |  
+|  _  | '_ \| '_ \ / _ \| __/ _` | __| |/ _ \| '_ \  |  _  ||  __/  | |  
+| | | | | | | | | | (_) | || (_| | |_| | (_) | | | | | | | || |    _| |_ 
+\_| |_/_| |_|_| |_|\___/ \__\__,_|\__|_|\___/|_| |_| \_| |_/\_|    \___/ 
+                                                                         
+
 Annotate audio, text, image, or video files for use with regression modeling in Allie.
 
 All you need is a folder, which identifies the type of file within it, and then it goes

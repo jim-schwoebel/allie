@@ -1,4 +1,6 @@
 # Allie 
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie%20,%20an%20awesome%20new%20AutoML%20framework%20@%20http://voicebook.neurolex.co.&hashtags=machinelearning,automl,deeplearning)
+
 Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files.
 
 Here are some things that Allie can do:

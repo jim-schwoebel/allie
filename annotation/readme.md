@@ -20,6 +20,7 @@ After you annotate, you can create [a nicely formatted .CSV](https://github.com/
 
 ```python3
 cd /Users/jim/desktop/allie
+cd annotation
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 

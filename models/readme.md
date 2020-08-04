@@ -41,6 +41,7 @@ There are a few other scripts in this folder. The table below describes what eac
 
 | Script name | What it does | How to call  | 
 | ------------- |-------------| -------------| 
+| [clean.py](https://github.com/jim-schwoebel/allie/blob/master/models/clean.py) | Cleans the current directory to have only the necessary .py files for core function; useful because the folder can get messy during modeling sometimes | python3 clean.py | 
 | [create_csv.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_csv.py) | Creates a nicely formatted .CSV file with the file paths and class labels for regression modeling | ```python3 create_csv.py [folderpathA] [folderpathB] [folderpath...N]``` | 
 | [create_readme.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_readme.py) | Creates a readme for a machine learning repository; currently used by the modeling API. | ```python3 create_readme [modelpath]``` | 
 | image file | .PNG, .JPG | .PNG | 

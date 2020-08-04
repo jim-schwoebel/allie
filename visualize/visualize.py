@@ -1,12 +1,41 @@
 '''
-visualize.py
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+                                                                             
+| | | (_)               | (_)          / _ \ | ___ \_   _|
+| | | |_ ___ _   _  __ _| |_ _______  / /_\ \| |_/ / | |  
+| | | | / __| | | |/ _` | | |_  / _ \ |  _  ||  __/  | |  
+\ \_/ / \__ \ |_| | (_| | | |/ /  __/ | | | || |    _| |_ 
+ \___/|_|___/\__,_|\__,_|_|_/___\___| \_| |_/\_|    \___/ 
+                                                          
 Takes in a folder or set of folders of featurized files and outputs
 visualizations to look deeper at the data.
+
 This is often useful as a precursor before building machine learning 
 models to uncover relationships in the data.
+
 Note that this automatically happens as part of the modeling process
 if visualize==True in settings.
-ML models: https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f
+
+This is also restricted to classification problems for version 1.0 of Allie.
+
+Usage: python3 visualize.py [problemtype] [folder A] [folder B] ... [folder N]
+
+Example: python3 visualize.py audio males females 
 '''
 import os, sys, json, time, shutil
 os.system('pip3 install yellowbrick==1.1 scikit-plot==0.3.7 umap==0.1.1 umap-learn==0.4.4')

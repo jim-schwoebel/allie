@@ -76,7 +76,7 @@ README.md		delete_json.py		females
 delete_features.py	featurize_csv.py	males
 ```
 
-Click the .GIF below for a quick tutorial and example.
+Click the .GIF below to follow along this example in a video format:
 
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://drive.google.com/file/d/1YYniwEJWZFpxTFNwJSGYGP0eeCAgxcvU/view?usp=sharing)
 
@@ -104,7 +104,7 @@ cd annotation
 python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c male -p classification
 ```
 
-Click the .GIF below for a quick tutorial and example.
+Click the .GIF below to follow along this example in a video format:
 
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
 

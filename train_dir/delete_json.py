@@ -22,7 +22,15 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
   | | | | (_| | | | | | | | | | (_| | | | | || |    _| |_ 
   \_/_|  \__,_|_|_| |_|_|_| |_|\__, | \_| |_/\_|    \___/ 
                                 __/ |                     
-                               |___/                      
+                               |___/       
+			       
+			       
+Deletes all .JSON files from all folders in the train_dir 
+(useful to re-featurize sets of files).
+
+Usage: python3 delete_json.py
+
+Example: python3 delete_json.py
 '''
 import os
 

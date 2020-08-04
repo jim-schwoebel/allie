@@ -27,7 +27,7 @@ curdir=os.getcwd()
 
 # assumes Mac OSX for SoX and FFmpeg installations
 if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
-  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4', 'libtool','gcc']
+  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4', 'libtool', 'gcc', 'portaudio19-dev']
   brew_install(brew_modules)
   os.system('pip3 install -r mac.txt')
   # to install opensmile package
@@ -64,15 +64,20 @@ elif sys.platform.lower() in ['linux', 'linux2']:
   os.system('sudo make install')
   os.system('sudo ldconfig')
   os.chdir(curdir)
+  os.system('pip3 install -r requirements.txt')
 
 elif sys.platform.lower() in ['win32', 'cygwin', 'msys']: 
   # https://www.thewindowsclub.com/how-to-install-ffmpeg-on-windows-10
   print('you have to install FFmpeg from source') 
   # https://github.com/JoFrhwld/FAVE/wiki/Sox-on-Windows
   print('you have to install SoX from source') 
-  
-# now install all modules with pip3 - install individually to reduce errors
-os.system('pip3 install -r requirements.txt')
+  # now install all modules with pip3 - install individually to reduce errors
+  os.system('pip3 install -r requirements.txt')
+
+# custom installations across all operating systems
+os.system('pip3 install git+https://github.com/detly/gammatone.git')
+os.system('pip3 install https://github.com/vBaiCai/python-pesq/archive/master.zip')
+os.system('pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]')
 
 # install add-ons to NLTK 
 import nltk
@@ -96,3 +101,7 @@ os.system('pip3 install .')
 
 # go back to host directory
 os.chdir(curdir)
+
+# now go setup tests
+os.chdir('tests')
+os.system('python3 test.py')

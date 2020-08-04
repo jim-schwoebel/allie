@@ -92,7 +92,6 @@ jupyter-console==6.1.0
 jupyter-core==4.6.3
 Keras==2.4.2
 Keras-Applications==1.0.8
-keras-compressor @ file:///Users/jim/Desktop/allie/training/helpers/keras_compressor
 Keras-Preprocessing==1.1.2
 keras-tuner==1.0.1
 kiwisolver==1.2.0

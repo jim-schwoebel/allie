@@ -8,6 +8,7 @@ through each file to annotate (as .JSON)
 '''
 import os, sys, datetime, json, time
 from optparse import OptionParser
+from tqdm import tqdm
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -66,9 +67,9 @@ def annotate_file(class_, filetype, file, problemtype):
 		annotation='0'
 
 	if problemtype in ['r', 'regression']:
-		annotation = input('%s value (between 0-1, 0-none, 1-max)?'%(class_.upper()))
+		annotation = input('%s value?\n'%(class_.upper()))
 	else:
-		annotation = input('%s label 1 (yes) or 0 (no)?'%(class_.upper()))
+		annotation = input('%s label 1 (yes) or 0 (no)?\n'%(class_.upper()))
 
 	# only get a float back
 	try:
@@ -125,7 +126,7 @@ if sampletype == None:
 
 listdir=os.listdir()
 
-for i in range(len(listdir)):
+for i in tqdm(range(len(listdir))):
 	try:
 		if listdir[i].endswith('.json'):
 			pass
@@ -144,10 +145,13 @@ for i in range(len(listdir)):
 				labels=g['labels']
 				classin=False
 				for j in range(len(labels)):
-					print(list(labels[j]))
-					print(labels[j][class_]['problemtype'])
-					if list(labels[j]) == [class_] and labels[j][class_]['problemtype'] == problemtype:
-						classin=True
+					try:
+						print(list(labels[j]))
+						print(labels[j][class_]['problemtype'])
+						if list(labels[j]) == [class_] and labels[j][class_]['problemtype'] == problemtype:
+							classin=True
+					except:
+						pass
 
 				if classin == True:
 					print('skipping %s, already annotated'%(listdir[i]))

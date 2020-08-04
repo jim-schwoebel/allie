@@ -23,7 +23,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_|  |_/\___/ \__,_|\___|_|___/
 
 Make model predictions using this load.py script. This loads in all models in this 
-directory and makes predictions on a target folder.
+directory and makes predictions on a target folder. Note that files in this target
+directory will be featurized with the default features as specified by the settings.json.
 
 Usage: python3 load.py [target directory]
 '''

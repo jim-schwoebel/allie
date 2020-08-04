@@ -19,6 +19,7 @@ python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 * [clean_random20secsplice]() - take a random splice (time specified in the script) from the audio file.
 * [clean_removenoise]() - removes noise from the audio file using SoX program and noise floors.
 * [clean_removesilence]() - removes silence from an audio file using voice activity detectors.
+* [clean_rename]() - renames all the audio files in the current directory with a new UUID
 * [clean_utterances]() - converts all audio files into unique utterances (1 .WAV file --> many .WAV file utterances) for futher analysis.
 
 ### Settings

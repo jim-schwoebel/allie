@@ -1,5 +1,24 @@
 '''
-Simple unit test the default parameters 
+
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+
+This is a simple unit test suite of the the default parameters 
 of the repository. 
 
 Note this unit_testing requires the settings.json
@@ -10,10 +29,22 @@ import numpy as np
 import pandas as pd 
 
 ###############################################################
-##                  HELPER FUNCTIONS                         ##
+##                  HELPER FUNCTIONS      
+
+##	Below are some helper functions to reduce code redundancy
+## 	During the unit testing process.
 ###############################################################
 
 def prev_dir(directory):
+	'''
+	take in a directory and get the next innermost directory 
+	in the tree structure.
+	
+	For example, 
+
+	directory = /Users/jim/desktop
+	prev_dir(directory) --> /Users/jim
+	'''
 	g=directory.split('/')
 	dir_=''
 	for i in range(len(g)):
@@ -25,58 +56,217 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def seed_files(filename, cur_dir, train_dir, clean_data, augment_data, filetype):
+def clean_file(directory, clean_dir, cur_dir, train_dir, file):
+	'''
+	take in a few directories and output a clean file for audio,
+	text, image, and video files.
+
+	test_audio.wav --> test_audio.wav (clean)
+	'''
 	os.chdir(train_dir)
+	try:
+		os.mkdir(directory)
+	except:
+		shutil.rmtree(directory)
+		os.mkdir(directory)
 
-	def text_record(filename, text_model):
-		textfile=open(filename, 'w')
-		# Print five randomly-generated sentences
-		for i in range(5):
-			textfile.write(text_model.make_sentence())
-		textfile.close()
+	os.chdir(directory)
+	shutil.copy(cur_dir+'/'+file, train_dir+'/'+directory+'/'+file)
 
-	# Get raw text as string (the Brother's Karamazov, one of my fav novels)
-	with open(cur_dir+'/helpers/text.txt') as f:
-		text = f.read()
-	# Build the model.
-	text_model = markovify.Text(text)
-	for i in range(20):
-		filename=str(uuid.uuid4())+'.txt'
-		text_record(filename, text_model)
-
-def find_model(b):
+	os.chdir(clean_dir+'/'+directory)
+	os.system('python3 clean.py %s'%(train_dir+'/'+directory))
+	os.chdir(train_dir+'/'+directory)
 	listdir=os.listdir()
-	b=0
-	for i in range(len(listdir)):
-		if listdir[i].find('one_two') == 0 and listdir[i].endswith('.h5'):
-			# this is for .h5 models 
-			b=b+1 
-		elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.pickle'):
-			# this is for pickle models 
-			b=b+1
-		elif listdir[i].find('one_two') == 0 and listdir[i].endswith('.joblib'):
-			# this is for compressed joblib models 
-			b=b+1
-		elif listdir[i].find('one_two_ludwig_nltk_features.hdf5') == 0:
-			b=b+1
+	b=False 
+	if len(listdir) == 1:
+		b=True
+	# remove temp directory 
+	os.chdir(train_dir)
+	shutil.rmtree(train_dir+'/'+directory)
+	msg='failed cleaning process, file does not exist in directory'
 
-	# 6=non-compressed, 12=compressed models 
-	if b == 6*2:
+	return b, msg
+
+def augment_file(directory, augment_dir, cur_dir, train_dir, file):
+	'''
+	take in a few directories and output augmented files for audio,
+	text, image, and video files.
+
+	test_audio.wav --> test_audio.wav + tsaug_test_audio.wav
+
+	Typically augmentation strategies add 2x more data to the original
+	dataset.
+	'''
+	os.chdir(train_dir)
+	try:
+		os.mkdir(directory)
+	except:
+		shutil.rmtree(directory)
+		os.mkdir(directory)
+	shutil.copy(cur_dir+'/'+file, train_dir+'/'+directory+'/'+file)
+
+	os.chdir(augment_dir+'/'+directory)
+	os.system('python3 augment.py %s'%(train_dir+'/'+directory))
+	os.chdir(train_dir+'/'+directory)
+
+	# remove temp directory 
+	listdir=os.listdir()
+	b=False 
+	if len(listdir) > 1:
+		b=True
+	os.chdir(train_dir)
+	shutil.rmtree(train_dir+'/'+directory)
+	msg='failed augmentation, only one file exists in the directory'
+	return b, msg
+
+
+def featurize_file(features_dir, cur_dir, train_dir, file, sampletype, default_features):
+	'''
+	take in a file and output a featurized .JSON file using
+	Allie internal Feature API. 
+
+	test.wav --> test.json, test.wav with features in test.json
+	'''
+	directory='%s_features'%(sampletype)
+	folder=train_dir+'/'+directory
+	os.chdir(train_dir)
+	try:
+		os.mkdir(directory)
+	except:
+		shutil.rmtree(directory)
+		os.mkdir(directory)
+	# put test audio file in directory 
+	shutil.copy(cur_dir+'/'+file, folder+'/'+file)
+	os.chdir(features_dir+'/%s_features/'%(sampletype))
+	features_list=default_features
+
+	for i in range(len(features_list)):
+		print('------------------------------')
+		print('FEATURIZING - %s'%(features_list[i].upper()))
+		print('------------------------------')
+		os.system('python3 featurize.py %s %s'%(folder, features_list[i]))
+
+	# now that we have the folder let's check if the array has all the features
+	os.chdir(folder)
+	gopen=open('test_%s.json'%(sampletype),'r')
+	g=json.load(gopen)
+	features=g['features'][sampletype]
+	gopen.close()
+	test_features=list(features)
+	if test_features == features_list:
 		b=True
 	else:
 		b=False 
+	notcount=list()
+	for i in range(len(features_list)):
+		if features_list[i] not in test_features:
+			notcount.append(features_list[i])
+	msg=str(notcount) + ' failed during featurization'
+	return b, msg
 
-	print(b)
+def transcribe_file(train_dir, file, sampletype, default_transcript):
 
-	return b
+	os.chdir(train_dir)
+	directory='%s_transcription'%(sampletype)
+	folder=train_dir+'/'+directory
+	os.chdir(train_dir)
+	try:
+		os.mkdir(directory)
+	except:
+		shutil.rmtree(directory)
+		os.mkdir(directory)
 
-def clean_file(directory, clean_dir, train_dir):
-	os.chdir(clean_dir)
-	os.system('python3 clean.py %s %s'%(clean_dir, train_dir+'/'+directory))
+	# put test audio file in directory 
+	shutil.copy(cur_dir+'/'+file, folder+'/'+file)
 
-def augment_file(directory, augment_dir, train_dir):
-	os.chdir(augment_dir)
-	os.system('python3 augment.py %s'%(train_dir+'/'+directory))
+	os.chdir(features_dir+'/%s_features/'%(sampletype))
+	os.system('python3 featurize.py %s'%(folder))
+
+	# now that we have the folder let's check if the array has all the features
+	os.chdir(folder)
+	g=json.load(open('test_%s.json'%(sampletype)))
+	transcripts=list(g['transcripts'][sampletype])
+
+	if default_transcript[0] in transcripts:
+		msg='success'
+		b=True
+	else:
+		msg='failure'
+		b=False 
+	os.chdir(train_dir)
+	shutil.rmtree(directory)
+	return b, msg
+
+def model_predict(filetype, testfile, loadmodel_dir, load_dir):
+
+	# copy machine learning model into image_model dir 
+	os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+	listdir=os.listdir()
+	temp=os.getcwd()
+	tempfiles=list()
+
+	os.chdir(loadmodel_dir)
+	if '%s_models'%(filetype) not in os.listdir():
+		os.mkdir('%s_models'%(filetype))
+
+	os.chdir(temp)
+
+	# copy audio machine learning model into directory (one_two)
+	tempfiles=list()
+	for i in range(len(listdir)):
+		try:
+			shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+		except:
+			pass
+		tempfiles.append(listdir[i])
+
+	# copy file in load_dir 
+	shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
+	# copy machine learning models into proper models directory 
+	os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
+	listdir=os.listdir()
+
+	# copy audio machine learning model into directory (one_two)
+	tempfiles=list()
+	for i in range(len(listdir)):
+		try:
+			shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
+		except:
+			pass
+		tempfiles.append(listdir[i])
+
+	os.chdir(loadmodel_dir)
+	os.system('python3 load.py')
+	os.chdir(load_dir)
+
+	os.chdir(load_dir)
+	listdir=os.listdir() 
+	b=False
+	for i in range(len(listdir)):
+		if filetype == 'audio':
+			if listdir[i].endswith('.wav') and listdir[i][0:-4]+'.json' in listdir: 
+				b=True
+				break
+		elif filetype == 'text':
+			if listdir[i].endswith('.txt') and listdir[i][0:-4]+'.json' in listdir: 
+				b=True
+				break
+		elif filetype == 'image':
+			if listdir[i].endswith('.png') and listdir[i][0:-4]+'.json' in listdir: 
+				b=True
+				break
+		elif filetype == 'video':
+			if listdir[i].endswith('.mp4') and listdir[i][0:-4]+'.json' in listdir: 
+				b=True
+				break
+
+	# now remove all the temp files 
+	os.chdir(loadmodel_dir+'/%s_models'%(filetype))
+	for i in range(len(tempfiles)):
+		shutil.rmtree(tempfiles[i])
+
+	msg = filetype + ' model prediction failed.'
+	return b, msg
 
 ###############################################################
 ##                     INITIALIZATION                        ##
@@ -162,14 +352,14 @@ csvdir=loadmodel_dir+'/csv_models'
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_dependencies(unittest.TestCase):
 	'''
-	confirm that all the modules are installed correctly, along with
+	DEPENDENCY TESTS
+
+	Confirms that all the modules are installed correctly, along with
 	all brew install commands. 
 	'''
 #### ##### ##### ##### ##### ##### ##### ##### ##### #####
 	
-	# brew installations (SoX)
 	def test_sox(self):
-
 		# test brew installation by merging two test files 
 		os.chdir(cur_dir)
 		os.system('sox test_audio.wav test_audio.wav test2.wav')
@@ -179,13 +369,11 @@ class test_dependencies(unittest.TestCase):
 			b=False    
 		self.assertEqual(True, b)      
 
-	# brew installation (FFmpeg)
+	
 	def test_c_ffmpeg(self):
-
 		# test FFmpeg installation with test_audio file conversion 
 		os.chdir(cur_dir)
 		if 'test_audio.mp3' in os.listdir():
-			# remove temp file if it already exists
 			os.remove('test_audio.mp3')
 		os.system('ffmpeg -i test_audio.wav test_audio.mp3 -y')
 		if 'test_audio.mp3' in os.listdir():
@@ -197,492 +385,152 @@ class test_dependencies(unittest.TestCase):
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_cleaning(unittest.TestCase):
 	'''
-	tests file cleaning capabilities by removing duplicates, etc.
+	CLEANING API TESTS
+
+	Tests file cleaning capabilities by removing duplicates, etc.
 	across all file types.
 	'''
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-	# audio file cleaning
-	def test_audio_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_audio_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='audio_cleaning'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_audio.wav'
 
-		os.chdir(directory)
-		shutil.copy(cur_dir+'/test_audio.wav', train_dir+'/'+directory+'/test_audio.wav')
+		b, msg = clean_file(directory, clean_dir, cur_dir, train_dir, file)
 
-		os.chdir(clean_dir+'/'+directory)
-		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
-
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) == 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# text file cleaning 
-	def test_text_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_text_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='text_cleaning'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_text.txt'
 
-		os.chdir(directory)
-		shutil.copy(cur_dir+'/test_text.txt', train_dir+'/'+directory+'/test_text.txt')
-		
-		os.chdir(clean_dir+'/'+directory)
-		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
+		b, msg = clean_file(directory, clean_dir, cur_dir, train_dir, file)
 
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) == 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# image file cleaning 
-	def test_image_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_image_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='image_cleaning'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file-'test_image.png'
 
-		os.chdir(directory)
-		shutil.copy(cur_dir+'/test_image.png', train_dir+'/'+directory+'/test_image.png')
-		
-		os.chdir(clean_dir+'/'+directory)
-		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
+		b, msg = clean_file(directory, clean_dir, cur_dir, train_dir, file)
 
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) == 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# video file cleaning
-	def test_video_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_video_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='video_cleaning'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_video.mp4'
 
-		os.chdir(directory)
-		shutil.copy(cur_dir+'/test_video.mp4', train_dir+'/'+directory+'/test_video.mp4')
+		b, msg = clean_file(directory, clean_dir, cur_dir, train_dir, file)
 
-		os.chdir(clean_dir+'/'+directory)
-		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
-
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) == 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# csv file cleaning
-	def test_csv_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_csv_clean(self, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='csv_cleaning'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_csv.csv'
 
-		os.chdir(directory)
-		shutil.copy(cur_dir+'/test_csv.csv', train_dir+'/'+directory+'/test_csv.csv')
+		b, msg = clean_file(directory, clean_dir, cur_dir, train_dir, file)
 
-		os.chdir(clean_dir+'/'+directory)
-		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
-
-		os.chdir(train_dir+'/'+directory)
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) > 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_augmentation(unittest.TestCase):
 	'''
-	tests augmentation capabilities for all data types.
+	AUGMENTATION API TESTS
+
+	Tests augmentation capabilities for all data types.
 	'''
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-	# audio features
-	def test_audio_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_audio_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='audio_augmentation'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_audio.wav'
 
-		shutil.copy(cur_dir+'/test_audio.wav', train_dir+'/'+directory+'/test_audio.wav')
+		b, msg = augment_file(directory, augment_dir, cur_dir, train_dir, file)
 
-		os.chdir(augment_dir+'/'+directory)
-		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
-
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) > 1:
-			b=True
-		print('---------STOP------------')
-		print(len(listdir))
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 		
-	# text features
-	def test_text_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_text_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='text_augmentation'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
-		shutil.copy(cur_dir+'/test_text.txt', train_dir+'/'+directory+'/test_text.txt')
+		file='test_text.wav'
 
-		os.chdir(augment_dir+'/'+directory)
-		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
+		b, msg = augment_file(directory, augment_dir, cur_dir, train_dir, file)
 
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) > 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# image features
-	def test_image_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_image_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='image_augmentation'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
-		shutil.copy(cur_dir+'/test_image.png', train_dir+'/'+directory+'/test_image.png')
+		file='test_image.png'
 
-		os.chdir(augment_dir+'/'+directory)
-		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
+		b, msg = augment_file(directory, augment_dir, cur_dir, train_dir, file)
 
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) > 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# video features
-	def test_video_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_video_augment(self, augment_dir=augment_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='video_augmentation'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
-		shutil.copy(cur_dir+'/test_video.mp4', train_dir+'/'+directory+'/test_video.mp4')
+		file='test_video.mp4'
 
-		os.chdir(augment_dir+'/'+directory)
-		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
+		b, msg=augment_file(directory, augment_dir, cur_dir, train_dir, file)
 
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) > 1:
-			b=True
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
-	# csv features 
-	def test_csv_augment(self, augment_dir=augment_dir, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir, clean_data=clean_data, augment_data=augment_data):
+	def test_csv_augment(self, augment_dir=augment_dir, clean_dir=clean_dir, train_dir=train_dir, cur_dir=cur_dir):
 		directory='csv_augmentation'
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_csv.csv'
 
-		shutil.copy(cur_dir+'/test_csv.csv', train_dir+'/'+directory+'/test_csv.csv')
-		
-		os.chdir(clean_dir+'/csv_augmentation')
-		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
-		os.remove('test_csv.csv')
-		os.rename('augmented_combined_test_csv.csv','test_csv.csv')
-		os.chdir(augment_dir+'/'+directory)
-		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
-		os.chdir(train_dir+'/'+directory)
-		
-		listdir=os.listdir()
-		b=False 
-		if len(listdir) > 1:
-			b=True
+		b, msg = augment_file(directory, augment_dir, cur_dir, train_dir, file)
+
 		self.assertEqual(True, b) 
-		# remove temp directory 
-		os.chdir(train_dir)
-		shutil.rmtree(train_dir+'/'+directory)
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_features(unittest.TestCase):
 	'''
-	tests featurization capabilities across all training scripts.
+	FEATURIZATION API TESTS
 
-	- change settings.json to include every type of featurization
-	- change back to default settings.
+	Tests featurization capabilities across all training scripts.
 	'''
 #### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
-	# audio features
 	def test_audio_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_audio_features=default_audio_features):
-		directory='audio_features'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_audio.wav'
+		sampletype='audio'
+		default_features=default_audio_features
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_audio.wav', folder+'/test_audio.wav')
-
-		os.chdir(features_dir+'/audio_features/')
-		features_list=default_audio_features
-
-		# features that don't work
-		# ['audioset_features', 'mixed_features', 'myprosody_features']
-
-		for i in range(len(features_list)):
-			print('------------------------------')
-			print('FEATURIZING - %s'%(features_list[i].upper()))
-			print('------------------------------')
-			os.system('python3 featurize.py %s %s'%(folder, features_list[i]))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		gopen=open('test_audio.json','r')
-		g=json.load(gopen)
-		features=g['features']['audio']
-		gopen.close()
-		test_features=list(features)
-		if test_features == features_list:
-			b=True
-		else:
-			b=False 
-
-		notcount=list()
-		for i in range(len(features_list)):
-			if features_list[i] not in test_features:
-				notcount.append(features_list[i])
-
-		notcount=str(notcount) + ' failed during featurization'
-
-		self.assertEqual(True, b, notcount) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
+		b, msg = featurize_file(features_dir, cur_dir, train_dir, file, sampletype, default_features)
 		
-	# text features
+		self.assertEqual(True, b, msg) 
+		
 	def test_text_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_text_features=default_text_features):
-		directory='text_features'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_text.txt'
+		sampletype='text'
+		default_features=default_text_features
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_text.txt', folder+'/test_text.txt')
+		b, msg = featurize_file(features_dir, cur_dir, train_dir, file, sampletype, default_features)
+		
+		self.assertEqual(True, b, msg) 
 
-		os.chdir(features_dir+'/text_features/')
-		features_list=default_text_features
-
-		# features that don't work
-		# features = ['w2vec_features']
-
-		for i in range(len(features_list)):
-			print('------------------------------')
-			print('FEATURIZING - %s'%(features_list[i].upper()))
-			print('------------------------------')
-			os.system('python3 featurize.py %s %s'%(folder, features_list[i]))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		gopen=open('test_text.json')
-		g=json.load(gopen)
-		features=g['features']['text']
-		gopen.close()
-		test_features=list(features)
-		if test_features == features_list:
-			b=True
-		else:
-			b=False 
-
-		notcount=list()
-		for i in range(len(features_list)):
-			if features_list[i] not in test_features:
-				notcount.append(features_list[i])
-
-		notcount=str(notcount) + ' failed during featurization'
-
-		self.assertEqual(True, b, notcount) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
-
-	# image features
 	def test_image_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_image_features=default_image_features):
-		directory='image_features'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_image.png'
+		sampletype='image'
+		default_features=default_image_features
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_image.png', folder+'/test_image.png')
+		b, msg = featurize_file(features_dir, cur_dir, train_dir, file, sampletype, default_features)
+		
+		self.assertEqual(True, b, msg) 
 
-		os.chdir(features_dir+'/image_features/')
-		features_list=default_image_features
-
-		# features that dont work 
-		# features=['VGG19 features']
-
-		for i in range(len(features_list)):
-			print('------------------------------')
-			print('FEATURIZING - %s'%(features_list[i].upper()))
-			print('------------------------------')
-			os.system('python3 featurize.py %s %s'%(folder, features_list[i]))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		gopen=open('test_image.json','r')
-		g=json.load(gopen)
-		features=g['features']['image']
-		gopen.close()
-
-		test_features=list(features)
-		if test_features == features_list:
-			b=True
-		else:
-			b=False 
-
-		notcount=list()
-		for i in range(len(features_list)):
-			if features_list[i] not in test_features:
-				notcount.append(features_list[i])
-
-		notcount=str(notcount) + ' failed during featurization'
-
-		self.assertEqual(True, b, notcount) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
-
-	# video features
 	def test_video_features(self, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir, default_video_features=default_video_features):
-		directory='video_features'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_video.mp4'
+		sampletype='video'
+		default_features=default_video_features
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_video.mp4', folder+'/test_video.mp4')
-
-		os.chdir(features_dir+'/video_features/')
-		features_list=default_video_features
-
-		# features that don't work 
-		# features = ['y8m_features']
-
-		for i in range(len(features_list)):
-			print('------------------------------')
-			print('FEATURIZING - %s'%(features_list[i].upper()))
-			print('------------------------------')
-			os.system('python3 featurize.py %s %s'%(folder, features_list[i]))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		listdir=os.listdir()
-		for i in range(len(listdir)):
-                        if listdir[i].endswith('.mp4'):
-                                videofile=listdir[i]
-		gopen=open(listdir[i][0:-4]+'.json','r')
-		g=json.load(gopen)
-		features=g['features']['video']
-		gopen.close()
-		test_features=list(features)
-		if test_features == features_list:
-			b=True
-		else:
-			b=False 
-
-		notcount=list()
-		for i in range(len(features_list)):
-			if features_list[i] not in test_features:
-				notcount.append(features_list[i])
-
-		notcount=str(notcount) + ' failed during featurization'
-
-		self.assertEqual(True, b, notcount) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
+		b, msg = featurize_file(features_dir, cur_dir, train_dir, file, sampletype, default_features)
+		
+		self.assertEqual(True, b, msg) 
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_transcription(unittest.TestCase):
 	'''
+	TRANSCRIPTION API TESTS
+
 	tests the ability to transcribe across many
 	data types
 	'''
@@ -717,142 +565,49 @@ class test_transcription(unittest.TestCase):
 
 	# audio transcription
 	def test_audio_transcription(self, default_audio_transcript=default_audio_transcript, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
-		os.chdir(train_dir)
-		directory='audio_transcription'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_audio.wav'
+		sampletype='audio'
+		default_transcript=default_audio_transcript
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_audio.wav', folder+'/test_audio.wav')
-
-		os.chdir(features_dir+'/audio_features/')
-		os.system('python3 featurize.py %s'%(folder))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		g=json.load(open('test_audio.json'))
-		transcripts=list(g['transcripts']['audio'])
-
-		if default_audio_transcript[0] in transcripts:
-			msg='success'
-			b=True
-		else:
-			msg='failure'
-			b=False 
+		b, msg = transcribe_file(train_dir, file, sampletype, default_transcript)
 
 		self.assertEqual(True, b, msg) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
 
 	# text transcription
 	def test_text_transcription(self, default_text_transcript=default_text_transcript, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
-		os.chdir(train_dir)
-		directory='text_transcription'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_text.txt'
+		sampletype='text'
+		default_transcript=default_text_transcript
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_text.txt', folder+'/test_text.txt')
-		os.chdir(features_dir+'/text_features/')
-		os.system('python3 featurize.py %s'%(folder))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		g=json.load(open('test_text.json'))
-		transcripts=list(g['transcripts']['text'])
-
-		if default_text_transcript[0] in transcripts:
-			msg='success'
-			b=True
-		else:
-			msg='fail'
-			b=False 
+		b, msg = transcribe_file(train_dir, file, sampletype, default_transcript)
 
 		self.assertEqual(True, b, msg) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
 
 	# image transcription
 	def test_image_transcription(self, default_image_transcript=default_image_transcript, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
-		os.chdir(train_dir)
-		directory='image_transcription'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_image.png'
+		sampletype='image'
+		default_transcript=default_image_transcript
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_image.png', folder+'/test_image.png')
-		os.chdir(features_dir+'/image_features/')
-		os.system('python3 featurize.py %s'%(folder))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		g=json.load(open('test_image.json'))
-		transcripts=list(g['transcripts']['image'])
-
-		if default_image_transcript[0] in transcripts:
-			msg='success'
-			b=True
-		else:
-			msg='failure'
-			b=False 
+		b, msg = transcribe_file(train_dir, file, sampletype, default_transcript)
 
 		self.assertEqual(True, b, msg) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
 
 	# video transcription
 	def test_video_transcription(self, default_video_transcript=default_video_transcript, features_dir=features_dir, train_dir=train_dir, cur_dir=cur_dir):
-		os.chdir(train_dir)
-		directory='video_transcription'
-		folder=train_dir+'/'+directory
-		os.chdir(train_dir)
-		try:
-			os.mkdir(directory)
-		except:
-			shutil.rmtree(directory)
-			os.mkdir(directory)
+		file='test_video.mp4'
+		sampletype='video'
+		default_transcript=default_video_transcript
 
-		# put test audio file in directory 
-		shutil.copy(cur_dir+'/test_video.mp4', folder+'/test_video.mp4')
-
-		os.chdir(features_dir+'/video_features/')
-		os.system('python3 featurize.py %s'%(folder))
-
-		# now that we have the folder let's check if the array has all the features
-		os.chdir(folder)
-		listdir=os.listdir()
-		g=json.load(open('test_video.json'))
-		transcripts=list(g['transcripts']['video'])
-
-		if default_video_transcript[0] in transcripts:
-			msg='success'
-			b=True
-		else:
-			msg='failure'
-			b=False 
+		b, msg = transcribe_file(train_dir, file, sampletype, default_transcript)
 
 		self.assertEqual(True, b, msg) 
-		os.chdir(train_dir)
-		shutil.rmtree(directory)
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_training(unittest.TestCase):
 	'''
+	MODEL TRAINING API TESTS
+
 	Tests all available training scripts and compression abilities.
 	'''
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
@@ -925,13 +680,14 @@ class test_training(unittest.TestCase):
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_loading(unittest.TestCase):
 	'''
-	FEATURIZATION AND LOADING TESTS
+	LOADING API TESTS
 
-	# note we have to do a loop here to end where the end is 
-	# 'audio.json' | 'text.json' | 'image.json' | 'video.json' | 'csv.json'
-	# this is because the files are renamed to not have conflicts.
-	# for example, if 'audio.wav' --> 'audio.json' and 'audio.mp4' --> 'audio.json',
-	# both would have a conflicting name and would overwrite each other. 
+	Note we have to do a loop here to end where the end is 
+	'audio.json' | 'text.json' | 'image.json' | 'video.json' | 'csv.json'
+	this is because the files are renamed to not have conflicts.
+	
+	For example, if 'audio.wav' --> 'audio.json' and 'audio.mp4' --> 'audio.json',
+	both would have a conflicting name and would overwrite each other. 
 	'''
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
@@ -968,238 +724,44 @@ class test_loading(unittest.TestCase):
 	def test_loadaudio(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
 		filetype='audio'
 		testfile='test_audio.wav'
-		# copy machine learning model into image_model dir 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-		temp=os.getcwd()
-		tempfiles=list()
 
-		os.chdir(loadmodel_dir)
-		if '%s_models'%(filetype) not in os.listdir():
-			os.mkdir('%s_models'%(filetype))
-
-		os.chdir(temp)
-		
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		# copy file in load_dir 
-		shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-		# copy machine learning models into proper models directory 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		os.chdir(loadmodel_dir)
-		os.system('python3 load.py')
-		os.chdir(load_dir)
-
-		os.chdir(load_dir)
-		listdir=os.listdir() 
-		b=False
-		for i in range(len(listdir)):
-			if listdir[i].endswith('.wav') and listdir[i][0:-4]+'.json' in listdir: 
-				b=True
-				break
-
-		# now remove all the temp files 
-		os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-		for i in range(len(tempfiles)):
-			shutil.rmtree(tempfiles[i])
+		b, msg = model_predict(filetype, testfile, loadmodel_dir, load_dir)
 
 		self.assertEqual(True, b)
 
 	def test_loadtext(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
 		filetype='text'
 		testfile='test_text.txt'
-		# copy machine learning model into image_model dir 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-		temp=os.getcwd()
-		tempfiles=list()
 
-		os.chdir(loadmodel_dir)
-		if '%s_models'%(filetype) not in os.listdir():
-			os.mkdir('%s_models'%(filetype))
-
-		os.chdir(temp)
-		
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		# copy file in load_dir 
-		shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-		# copy machine learning models into proper models directory 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		os.chdir(loadmodel_dir)
-		os.system('python3 load.py')
-		os.chdir(load_dir)
-
-		os.chdir(load_dir)
-		listdir=os.listdir() 
-		b=False
-		for i in range(len(listdir)):
-			if listdir[i].endswith('.txt') and listdir[i][0:-4]+'.json' in listdir: 
-				b=True
-				break
-
-		# now remove all the temp files 
-		os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-		for i in range(len(tempfiles)):
-			shutil.rmtree(tempfiles[i])
+		b, msg = model_predict(filetype, testfile, loadmodel_dir, load_dir)
 
 		self.assertEqual(True, b)
 
 	def test_loadimage(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
 		filetype='image'
 		testfile='test_image.png'
-		# copy machine learning model into image_model dir 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-		temp=os.getcwd()
-		tempfiles=list()
 
-		os.chdir(loadmodel_dir)
-		if '%s_models'%(filetype) not in os.listdir():
-			os.mkdir('%s_models'%(filetype))
-
-		os.chdir(temp)
-		
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		# copy file in load_dir 
-		shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-		# copy machine learning models into proper models directory 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		os.chdir(loadmodel_dir)
-		os.system('python3 load.py')
-		os.chdir(load_dir)
-
-		os.chdir(load_dir)
-		listdir=os.listdir() 
-		b=False
-		for i in range(len(listdir)):
-			if listdir[i].endswith('.png') and listdir[i][0:-4]+'.json' in listdir:
-				b=True
-				break
-
-		# now remove all the temp files 
-		os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-		for i in range(len(tempfiles)):
-			shutil.rmtree(tempfiles[i])
+		b, msg = model_predict(filetype, testfile, loadmodel_dir, load_dir)
 
 		self.assertEqual(True, b)
 
 	def test_loadvideo(self, load_dir=load_dir, cur_dir=cur_dir, loadmodel_dir=loadmodel_dir):
 		filetype='video'
 		testfile='test_video.mp4'
-		# copy machine learning model into image_model dir 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-		temp=os.getcwd()
-		tempfiles=list()
 
-		os.chdir(loadmodel_dir)
-		if '%s_models'%(filetype) not in os.listdir():
-			os.mkdir('%s_models'%(filetype))
-
-		os.chdir(temp)
-		
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-			
-		# copy file in load_dir 
-		shutil.copy(cur_dir+'/'+testfile, load_dir+'/'+testfile)
-		# copy machine learning models into proper models directory 
-		os.chdir(cur_dir+'/helpers/models/%s_models/'%(filetype))
-		listdir=os.listdir()
-
-		# copy audio machine learning model into directory (one_two)
-		tempfiles=list()
-		for i in range(len(listdir)):
-			try:
-				shutil.copytree(temp+'/'+listdir[i], loadmodel_dir+'/%s_models/'%(filetype)+listdir[i])
-			except:
-				pass
-			tempfiles.append(listdir[i])
-
-		os.chdir(loadmodel_dir)
-		os.system('python3 load.py')
-		os.chdir(load_dir)
-
-		os.chdir(load_dir)
-		listdir=os.listdir() 
-		b=False
-		print(listdir)
-		for i in range(len(listdir)):
-			if listdir[i].endswith('.mp4') and listdir[i][0:-4]+'.json' in listdir: 
-				b=True
-				break
-
-		# now remove all the temp files 
-		os.chdir(loadmodel_dir+'/%s_models'%(filetype))
-		for i in range(len(tempfiles)):
-			shutil.rmtree(tempfiles[i])
+		b, msg = model_predict(filetype, testfile, loadmodel_dir, load_dir)
 
 		self.assertEqual(True, b)
 
 ##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_preprocessing(unittest.TestCase):
+	'''
+	PREPROCESSING API TESTS
+
+	Tests Allie's preprocessing functionality to reduce dimensionality, 
+	select features, and scale features.
+	'''
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
 	def setUp(self, prevdir=prevdir):
 		# change settings.json to test all model scripts 
@@ -1289,6 +851,8 @@ class test_preprocessing(unittest.TestCase):
 		transformed_sample=jsonfile['sample transformed X']
 
 		newsize=model.transform(np.array(sample).reshape(1,-1))
+
+		# ---> FOR TESTING ONLY <----
 		# print(model)
 		# print(newsize)
 		# print(type(newsize))
@@ -1302,10 +866,14 @@ class test_preprocessing(unittest.TestCase):
 
 		self.assertEqual(True, b)
 
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 class test_visualization(unittest.TestCase):
 	'''
-	test the visualization module with text sample data in the test directory
+	VISUALIZATION API TESTS
+
+	Tests Allie's visualization API capabilities for classification problems.
 	'''
+##### ##### ##### ##### ##### ##### ##### ##### ##### #####
 
 	def test_visualization(self, test_dir=test_dir, train_dir=train_dir, visualization_dir=visualization_dir):
 		# copy files into the train_dir
@@ -1337,4 +905,3 @@ class test_visualization(unittest.TestCase):
 
 if __name__ == '__main__':
 	unittest.main()
-

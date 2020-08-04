@@ -44,13 +44,13 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 
 	# make a temporary folder and copy all featurized files to it
 	folder='%s-features-'%(sampletype)+str(uuid.uuid1())
-	os.mkdir(folder)
+	os.mkdir(basedir+'/train_dir/'+folder)
 	for i in range(len(filepaths)):
-		shutil.copy(filepaths[i], directory+'/'+folder)
+		shutil.copy(filepaths[i], basedir+'/train_dir/'+folder)
 
 	# featurize the files in the folder 
 	os.chdir(basedir+'/features/%s_features/'%(sampletype))
-	os.system('python3 featurize.py %s'%(directory+'/'+folder))
+	os.system('python3 featurize.py %s'%(basedir+'/train_dir/'+folder))
 
 	# get lists for outputting later
 	features=list()
@@ -70,8 +70,9 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 			labels.append(label)
 	
 	# remove the temporary directory
-	os.chdir(directory)
+	os.chdir(train_dir)
 	shutil.rmtree(folder)
+	os.chdir(directory)
 
 	return features, labels
 

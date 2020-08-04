@@ -41,7 +41,7 @@ There are a few other scripts in this folder. The table below describes what eac
 
 | Script name | What it does | How to call  | 
 | ------------- |-------------| -------------| 
-| audio file | .WAV, .MP3, .M4A | .WAV | 
+| [create_csv.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_csv.py) | Creates a nicely formatted .CSV file with the file paths and class labels for regression modeling | ```python3 create_csv.py [folderpathA] [folderpathB] [folderpath...N]``` | 
 | text file | .TXT | .TXT | 
 | image file | .PNG, .JPG | .PNG | 
 | video file | .MP4 | .MP4 | 

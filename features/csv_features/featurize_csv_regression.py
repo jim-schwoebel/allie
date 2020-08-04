@@ -300,10 +300,6 @@ def csv_featurize(csvfile, outfile, settings):
 			new_column_values.append(features)
 			new_column_labels.append(labels)
 
-		print(coltypes)
-		print(lengths)
-		 #print(new_column_labels)
-		# print(new_column_values)
 		old_column_labels=columns 
 		old_column_values=data
 
@@ -318,7 +314,8 @@ def csv_featurize(csvfile, outfile, settings):
 
 				for k in range(len(new_column_labels[i][j])):
 					print(new_column_labels[i][j][k])
-					if column not in columns:
+					newcolumn=new_column_labels[i][j][k]
+					if newcolumn not in columns:
 						print(str(column)+'_'+str(new_column_labels[i][j][k]))
 						labels.append(str(column)+'_'+str(new_column_labels[i][j][k]))
 					else:

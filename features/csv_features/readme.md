@@ -2,7 +2,19 @@
 
 ```
 cd allie/features/csv_features
-python3 featurize.py [folder] [featuretype]
+python3 featurize_csv_regression.py -i /Users/jim/desktop/allie/train_dir/age_data.csv -o test.csv -t age
+```
+where
+```
+Options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input=INPUT
+                        the .CSV filename input to process
+  -o OUTPUT, --output=OUTPUT
+                        the .CSV filename output to process
+  -t TARGET, --target=TARGET
+                        the target class (e.g. age) - will not rename this
+                        column.
 ```
 
 ### CSV 

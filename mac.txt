@@ -281,7 +281,6 @@ pyobjc-framework-Vision==6.1
 pyobjc-framework-WebKit==6.1
 pyparsing==2.4.7
 pyperclip==1.8.0
-pypesq==1.2.4
 Pyphen==0.9.5
 pyrsistent==0.16.0
 pystoi==0.3.3

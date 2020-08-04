@@ -1,11 +1,61 @@
 '''
-Make transformations in this order:
+
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+______                                           _             
+| ___ \                                         (_)            
+| |_/ / __ ___ _ __  _ __ ___   ___ ___  ___ ___ _ _ __   __ _ 
+|  __/ '__/ _ \ '_ \| '__/ _ \ / __/ _ \/ __/ __| | '_ \ / _` |
+| |  | | |  __/ |_) | | | (_) | (_|  __/\__ \__ \ | | | | (_| |
+\_|  |_|  \___| .__/|_|  \___/ \___\___||___/___/_|_| |_|\__, |
+              | |                                         __/ |
+              |_|                                        |___/ 
+  ___  ______ _____ 
+ / _ \ | ___ \_   _|
+/ /_\ \| |_/ / | |  
+|  _  ||  __/  | |  
+| | | || |    _| |_ 
+\_| |_/\_|    \___/ 
+
+Make feature transformations as a part of Allie's preprocessing API. 
+
+Transformation are done in this order:
 
 Feature scalers --> reduce dimensions --> select features.
 
 A --> A`--> A`` --> A```
 
-Can do this through scikit-leran pipelines.
+------
+Usage: python3 transform.py audio c gender males females
+------
+
+sys.argv[1] - 'audio' - the sample type of file preprocessed by the transformer	
+['audio', 'text', 'image', 'video', 'csv']
+
+sys.argv[2] - 'c' - classification or regression problems 
+['c', 'r']
+
+sys.argv[3] - 'gender' - the common name for the transformer 
+can be any string (e.g. 'gender')
+
+sys.argv[4], sys.argv[5], sys.argv[n]	
+'males'	classes that you seek to model in the train_dir folder	any string folder name
+
 '''
 
 import json, os, sys

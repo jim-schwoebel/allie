@@ -44,9 +44,13 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 
 	# make a temporary folder and copy all featurized files to it
 	folder='%s-features-'%(sampletype)+str(uuid.uuid1())
+	old_dir=directory
+	train_dir=basedir+'/train_dir'
+	directory=basedir+'/train_dir/'+folder
+	
 	os.mkdir(basedir+'/train_dir/'+folder)
 	for i in range(len(filepaths)):
-		shutil.copy(filepaths[i], basedir+'/train_dir/'+folder)
+		shutil.copy(filepaths[i], directory)
 
 	# featurize the files in the folder 
 	os.chdir(basedir+'/features/%s_features/'%(sampletype))
@@ -59,7 +63,7 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 	# go through all featurized .JSON files and read them and establish a feature array
 	for i in range(len(filepaths)):
 		jsonfile=filepaths[i].split('/')[-1][0:-4]+'.json'
-		g=json.load(open(directory+'/'+folder+'/'+jsonfile))
+		g=json.load(open(directory+'/'+jsonfile))
 		feature=[]
 		label=[]
 		for j in range(len(default_features)):
@@ -72,6 +76,7 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 	# remove the temporary directory
 	os.chdir(train_dir)
 	shutil.rmtree(folder)
+	directory=old_dir
 	os.chdir(directory)
 
 	return features, labels

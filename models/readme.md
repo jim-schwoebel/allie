@@ -34,3 +34,15 @@ Click the .GIF below to follow along this example in a video format:
 | image file | .PNG, .JPG | .PNG | 
 | video file | .MP4 | .MP4 | 
 | CSV file | .CSV | .CSV |
+
+## Other scripts
+
+There are a few other scripts in this folder. The table below describes what each of these scripts does and how to call them.
+
+| Script name | What it does | How to call  | 
+| ------------- |-------------| -------------| 
+| audio file | .WAV, .MP3, .M4A | .WAV | 
+| text file | .TXT | .TXT | 
+| image file | .PNG, .JPG | .PNG | 
+| video file | .MP4 | .MP4 | 
+| CSV file | .CSV | .CSV |

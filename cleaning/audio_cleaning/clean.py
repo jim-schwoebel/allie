@@ -233,6 +233,8 @@ def audio_clean(cleaning_set, audiofile, basedir):
 		clean_removenoise.clean_removenoise(audiofile)
 	elif cleaning_set == 'clean_removesilence':
 		clean_removesilence.clean_removesilence(audiofile)
+	elif cleaning_set == 'clean_rename':
+		clean_rename.clean_rename(audiofile)
 	elif cleaning_set == 'clean_utterances':
 		clean_utterances.clean_utterances(audiofile)
 	# transcripts = can look for hotwords and remove
@@ -278,6 +280,8 @@ elif 'clean_normalizevolume' in cleaning_sets:
 	import clean_normalizevolume
 elif 'clean_random20secsplice' in cleaning_sets:
 	import clean_random20secsplice
+elif 'clean_rename' in cleaning_sets:
+	import clean_rename
 elif 'clean_removenoise' in cleaning_sets:
 	import clean_removenoise
 elif 'clean_removesilence' in cleaning_sets:

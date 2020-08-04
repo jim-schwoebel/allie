@@ -45,5 +45,4 @@ There are a few other scripts in this folder. The table below describes what eac
 | [create_csv.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_csv.py) | Creates a nicely formatted .CSV file with the file paths and class labels for regression modeling | ```python3 create_csv.py [folderpathA] [folderpathB] [folderpath...N]``` | 
 | [create_readme.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_readme.py) | Creates a readme for a machine learning repository; currently used by the modeling API. | ```python3 create_readme [modelpath]``` | 
 | [model2csv.py](https://github.com/jim-schwoebel/allie/blob/master/models/model2csv.py) | Creates an excel sheet of all currently trained models with their model performances; useful to summarize all modeling sessions quickly; outputs to current directory. | ```python3 model2csv``` | 
-| video file | .MP4 | .MP4 | 
-| CSV file | .CSV | .CSV |
+| [validate.py](https://github.com/jim-schwoebel/allie/blob/master/models/validate.py) | Can be useful to count the number of model predictions in a certain class after prediction is complete to get an intuition of accuracy of model on new datasets. Note you currently have to manually edit this file for it to be useful. | ```python3 validate.py``` | 

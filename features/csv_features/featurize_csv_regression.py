@@ -230,7 +230,7 @@ class ColumnSample:
 		self.features = features_
 		self.labels = labels
 
-def csv_featurize(csvfile, outfile, settings):
+def csv_featurize(csvfile, outfile, settings, target):
 	# look for each column header and classify it accordingly
 	if csvfile.endswith('.csv'):
 		data=pd.read_csv(csvfile)
@@ -316,8 +316,12 @@ def csv_featurize(csvfile, outfile, settings):
 					print(new_column_labels[i][j][k])
 					newcolumn=new_column_labels[i][j][k]
 					if newcolumn not in columns:
-						print(str(column)+'_'+str(new_column_labels[i][j][k]))
-						labels.append(str(column)+'_'+str(new_column_labels[i][j][k]))
+						if column != target:
+							print(str(column)+'_'+str(new_column_labels[i][j][k]))
+							labels.append(str(column)+'_'+str(new_column_labels[i][j][k]))
+						else:
+							print(str(column)+'_'+str(new_column_labels[i][j][k]))
+							labels.append(str(column))							
 					else:
 						print(str(column))
 						labels.append(str(column))
@@ -349,6 +353,9 @@ parser.add_option("-i", "--input", dest="input",
                   help="the .CSV filename input to process", metavar="INPUT")
 parser.add_option("-o", "--output", dest="output",
                   help="the .CSV filename output to process", metavar="OUTPUT")
+parser.add_option("-t", "--target", dest="target",
+				  help="the target class (e.g. age) - will not rename this column.", metavar="TARGET")
+
 (options, args) = parser.parse_args()
 
 curdir=os.getcwd()
@@ -359,6 +366,6 @@ os.chdir(curdir)
 
 if options.output == None:
 	filename=str(uuid.uuid1())+'.csv'
-	df, filename=csv_featurize(options.input, filename, settings)
+	df, filename=csv_featurize(options.input, filename, settings, options.target)
 else:
-	df, filename=csv_featurize(options.input, options.output, settings)
+	df, filename=csv_featurize(options.input, options.output, settings, options.target)

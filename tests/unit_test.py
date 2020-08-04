@@ -1,5 +1,4 @@
 '''
-
                AAA               lllllll lllllll   iiii                      
               A:::A              l:::::l l:::::l  i::::i                     
              A:::::A             l:::::l l:::::l   iiii                      
@@ -18,11 +17,38 @@
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
 
-This is a simple unit test suite of the the default parameters 
-of the repository. 
+|_   _|       | |    / _ \ | ___ \_   _|
+  | | ___  ___| |_  / /_\ \| |_/ / | |  
+  | |/ _ \/ __| __| |  _  ||  __/  | |  
+  | |  __/\__ \ |_  | | | || |    _| |_ 
+  \_/\___||___/\__| \_| |_/\_|    \___/ 
+  
+Use this script for unit testing of Allie's functionality. 
 
-Note this unit_testing requires the settings.json
-to defined in the base directory.
+In particular:
+- class test_dependencies(unittest.TestCase) 
+tests for modules and brew installations (FFmpeg and SoX).
+- class test_cleaning(unittest.TestCase)
+tests ability to clean files via cleaning scripts (mostly de-duplication, will expand in future).
+- class test_augmentation(unittest.TestCase)
+tests ability to augment files via augmentation scripts (in ./datasets/) directory.
+- class test_features(unittest.TestCase)
+tests ability to featurize files via default_featurizers.
+- class test_transcription(unittest.TestCase) 
+tests ability to transcribe files.
+- class test_training(unittest.TestCase)
+tests ability to train machine learning models (classification and regression) with all settings.
+- class test_preprocessing(unittest.TestCase)
+tests ability to create transformations with the transform.py script (for model training).
+- class test_loading(unittest.TestCase)
+tests ability to load model files and make predictions via model directory (via test files / load_dir / models trained).
+- class test_visualization(unittest.TestCase)
+tests ability to visualize classification problems through the visualize.py script.
+
+Note that these unit tests are contextual, meaning that only the settings specified 
+in settings.json are tested. This makes it easy to quickly test whether or not your 
+current computer and operating system can handle new settings that you specify within 
+Allie's core API.
 '''
 import unittest, os, shutil, time, uuid, random, json, markovify, pickle
 import numpy as np

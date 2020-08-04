@@ -24,6 +24,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 Cleans the current directory to have only the necessary .py files for core function; 
 useful because the folder can get messy during modeling sometimes.
+
+Usage: python3 clean.py
 '''
 import os, shutil
 

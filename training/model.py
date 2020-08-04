@@ -813,7 +813,7 @@ elif mtype == 'r':
 	# featurize .CSV 
 	os.chdir(prevdir+'/features/csv_features')
 	output_file=str(uuid.uuid1())+'.csv'
-	os.system('python3 featurize_csv_regression.py --input %s --output %s'%(prevdir+'/train_dir/'+csvfile, prevdir+'/train_dir/'+output_file))
+	os.system('python3 featurize_csv_regression.py -i %s -o %s -t %s'%(prevdir+'/train_dir/'+csvfile, prevdir+'/train_dir/'+output_file, classes[0]))
 	csvfile=output_file
 	default_features=['csv_regression']
 

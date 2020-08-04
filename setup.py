@@ -87,6 +87,7 @@ os.system('pip3 install wget==3.2')
 os.system('pip3 install textblob==0.15.3')
 os.system('pip3 install moviepy==1.0.3')
 os.system('pip3 install textacy==0.10.0')
+os.system('pip3 install SpeechRecognition==3.8.1')
 
 # install add-ons to NLTK 
 os.system('pip3 install nltk==3.4.5')

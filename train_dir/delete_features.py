@@ -6,6 +6,9 @@ Clear all json files from folders
 import os, json
 from tqdm import tqdm
 
+sampletype=sys.argv[1]
+feature_set=sys.argv[2]
+
 folders=list()
 listdir=os.listdir()
 for i in range(len(listdir)):
@@ -26,7 +29,7 @@ for i in tqdm(range(len(folders))):
                         # print(listdir[i])
                         # os.remove(listdir[i])
                         data=json.load(open(listdir[i]))
-                        del data['features']['audio']['audiotext_features']
+                        del data['features'][sampletype][feature_set]
                         jsonfile=open(listdir[i],'w')
                         json.dump(data,jsonfile)
                         jsonfile.close()

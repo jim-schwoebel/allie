@@ -594,6 +594,8 @@ cd visualize
 python3 visualize.py audio males females
 ```
 
+Note that visualization capabilities are restricted to classification problems for Allie version 1.0.
+
 Click the .GIF below to follow along this example in a video format:
 
 [![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/visualize.gif)](https://drive.google.com/file/d/11GSJpE9ASp1AEl89CjVHRnEd2Yutg3Ki/view?usp=sharing)

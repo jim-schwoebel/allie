@@ -88,6 +88,12 @@ os.system('pip3 install textblob==0.15.3')
 os.system('pip3 install moviepy==1.0.3')
 os.system('pip3 install textacy==0.10.0')
 os.system('pip3 install SpeechRecognition==3.8.1')
+os.system('pip3 install pytesseract==0.3.4')
+os.system('pip3 install pydub==0.24.1')
+os.system('pip3 install ctgan==0.2.1')
+os.system('pip3 install opencv-contrib-python==3.4.2.16')
+os.system('pip3 install opencv-python==3.4.2.16')
+os.system('pip3 install opencv-python-headless==4.3.0.36')
 
 # install add-ons to NLTK 
 os.system('pip3 install nltk==3.4.5')

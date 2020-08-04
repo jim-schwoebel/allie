@@ -13,7 +13,6 @@ def brew_install(modules):
 os.system('pip3 install --upgrade pip -y')
 os.system('pip3 uninstall opencv-python -y')
 os.system('pip3 uninstall opencv-contrib-python -y')
-os.system('pip3 install numpy')
 curdir=os.getcwd()
 
 # possible operating systems
@@ -27,7 +26,7 @@ curdir=os.getcwd()
 
 # assumes Mac OSX for SoX and FFmpeg installations
 if sys.platform.lower() in ['darwin', 'os2', 'os2emx']:
-  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4', 'libtool', 'gcc', 'portaudio19-dev']
+  brew_modules=['sox', 'ffmpeg', 'opus-tools', 'opus', 'autoconf', 'automake', 'm4', 'libtool', 'gcc', 'portaudio']
   brew_install(brew_modules)
   os.system('pip3 install -r mac.txt')
   # to install opensmile package
@@ -78,8 +77,10 @@ elif sys.platform.lower() in ['win32', 'cygwin', 'msys']:
 os.system('pip3 install git+https://github.com/detly/gammatone.git')
 os.system('pip3 install https://github.com/vBaiCai/python-pesq/archive/master.zip')
 os.system('pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]')
+os.system('pip3 install markovify-0.8.3')
 
 # install add-ons to NLTK 
+os.system('pip3 install nltk==3.4.5')
 import nltk
 nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')

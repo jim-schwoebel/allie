@@ -1,8 +1,54 @@
 '''
-Unit testing of Allie's functionality.
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
-I built a custom unit test script here because there are a lot of things that could go 
-wrong, and I want to be sure to delete these temp files before/after testing in case of failures.
+
+|_   _|       | |    / _ \ | ___ \_   _|
+  | | ___  ___| |_  / /_\ \| |_/ / | |  
+  | |/ _ \/ __| __| |  _  ||  __/  | |  
+  | |  __/\__ \ |_  | | | || |    _| |_ 
+  \_/\___||___/\__| \_| |_/\_|    \___/ 
+  
+Use this script for unit testing of Allie's functionality. 
+
+In particular:
+- class test_dependencies(unittest.TestCase) 
+tests for modules and brew installations (FFmpeg and SoX).
+- class test_cleaning(unittest.TestCase)
+tests ability to clean files via cleaning scripts (mostly de-duplication, will expand in future).
+- class test_augmentation(unittest.TestCase)
+tests ability to augment files via augmentation scripts (in ./datasets/) directory.
+- class test_features(unittest.TestCase)
+tests ability to featurize files via default_featurizers.
+- class test_transcription(unittest.TestCase) 
+tests ability to transcribe files.
+- class test_training(unittest.TestCase)
+tests ability to train machine learning models (classification and regression) with all settings.
+- class test_preprocessing(unittest.TestCase)
+tests ability to create transformations with the transform.py script (for model training).
+- class test_loading(unittest.TestCase)
+tests ability to load model files and make predictions via model directory (via test files / load_dir / models trained).
+- class test_visualization(unittest.TestCase)
+tests ability to visualize classification problems through the visualize.py script.
+
+Note that these unit tests are contextual, meaning that only the settings specified 
+in settings.json are tested. This makes it easy to quickly test whether or not your 
+current computer and operating system can handle new settings that you specify within 
+Allie's core API.
 '''
 import os, time, shutil
 

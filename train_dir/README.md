@@ -391,7 +391,7 @@ Here are the supported file formats for the load directory. Note that if you use
 
 There are a few other scripts in this folder. The table below describes what each of these scripts does and how to call them.
 
-| Script name | What it does | How to call  | 
-| ------------- |-------------| -------------| 
-| [delete_features.py](https://github.com/jim-schwoebel/allie/blob/master/train_dir/delete_features.py) | Deletes a specified set of features from a .JSON file, as specified by the user. | python3 delete_features.py | 
+| Script name | What it does | How to call  | Example  | 
+| ------------- |-------------| -------------| -------------| 
+| [delete_features.py](https://github.com/jim-schwoebel/allie/blob/master/train_dir/delete_features.py) | Deletes a specified set of features from a .JSON file (in all folders in train_dir), as specified by the user. | ```python3 delete_features.py [sampletype] [feature_set]``` | ```python3 delete_features.py audio librosa_features``` |  
 | [create_csv.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_csv.py) | Creates a nicely formatted .CSV file with the file paths and class labels for regression modeling | ```python3 create_csv.py [folderpathA] [folderpathB] [folderpath...N]``` | 

@@ -1,7 +1,30 @@
 '''
-download.py
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
-command line interface for downloading datasets through Allie.
+______      _                 _       
+|  _  \    | |               | |      
+| | | |__ _| |_ __ _ ___  ___| |_ ___ 
+| | | / _` | __/ _` / __|/ _ \ __/ __|
+| |/ / (_| | || (_| \__ \  __/ |_\__ \
+|___/ \__,_|\__\__,_|___/\___|\__|___/
+                                      
+
+A command line interface for downloading datasets through Allie.
 
 Specify the dataset type and get links and download information.
 

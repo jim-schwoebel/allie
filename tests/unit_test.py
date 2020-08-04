@@ -451,11 +451,11 @@ class test_augmentation(unittest.TestCase):
 
 		shutil.copy(cur_dir+'/test_csv.csv', train_dir+'/'+directory+'/test_csv.csv')
 		
-		os.chdir(clean_dir+'/csv_cleaning')
-		os.system('python3 clean.py %s'%(train_dir+'/'+directory))
+		os.chdir(clean_dir+'/csv_augmentation')
+		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)
 		os.remove('test_csv.csv')
-		os.rename('clean_test_csv.csv','test_csv.csv')
+		os.rename('augmented_combined_test_csv.csv','test_csv.csv')
 		os.chdir(augment_dir+'/'+directory)
 		os.system('python3 augment.py %s'%(train_dir+'/'+directory))
 		os.chdir(train_dir+'/'+directory)

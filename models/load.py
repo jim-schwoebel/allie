@@ -1,12 +1,31 @@
 '''
-Load all models and make model predictions intelligently based on files 
-in the load_dir folder.
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
-Note that the general flow here is 
+|  \/  |         | |    | |    
+| .  . | ___   __| | ___| |___ 
+| |\/| |/ _ \ / _` |/ _ \ / __|
+| |  | | (_) | (_| |  __/ \__ \
+\_|  |_/\___/ \__,_|\___|_|___/
 
-1. load settings.json
-2. featurize all the files [audio, text, image, video files]
-3. apply all machine learning models available
+Make model predictions using this load.py script. This loads in all models in this 
+directory and makes predictions on a target folder.
+
+Usage: python3 load.py [target directory]
 '''
 
 import os, json, pickle, time

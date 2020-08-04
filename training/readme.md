@@ -497,7 +497,7 @@ Note that you can customize the default_training_script in the settings.json. If
  "balance_data": true, 
  "clean_data": false, 
  "create_csv": true, 
- "default_audio_augmenters": ["augment_volume"], 
+ "default_audio_augmenters": ["augment_tsaug"], 
  "default_audio_cleaners": ["clean_mono16hz"], 
  "default_audio_features": ["librosa_features"], 
  "default_audio_transcriber": ["deepspeech_dict"], 
@@ -525,7 +525,7 @@ Note that you can customize the default_training_script in the settings.json. If
  "dimension_number": 2, 
  "feature_number": 20, 
  "model_compress": false, 
- "reduce_dimensions": true, 
+ "reduce_dimensions": false, 
  "remove_outliers": true, 
  "scale_features": true, 
  "select_features": true, 
@@ -535,8 +535,8 @@ Note that you can customize the default_training_script in the settings.json. If
  "transcribe_image": true, 
  "transcribe_text": true, 
  "transcribe_video": true, 
- "visualize_data": false, 
- "transcribe_videos": true}
+ "transcribe_videos": true,
+ "visualize_data": false}
 ```
 
 ## [Metrics](https://scikit-learn.org/stable/modules/classes.html#sklearn-metrics-metrics)

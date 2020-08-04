@@ -3,7 +3,7 @@
 
 Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files. 
 
-Intended for both beginners and experts, Allie allows for quick prototyping of models - the framework is designed to be easy-to-use and easy-to-extend to your desired modeling strategy.
+Intended for both beginners and experts, Allie is designed to be easy-to-use for rapid prototyping and easy-to-extend to your desired modeling strategy.
 
 Here are some things that Allie can do:
 - [find](https://github.com/jim-schwoebel/allie/tree/master/datasets) and download datasets (for quick experiments)

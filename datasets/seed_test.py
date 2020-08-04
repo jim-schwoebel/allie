@@ -1,4 +1,28 @@
 '''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+______      _                 _              ___            _ _       
+|  _  \    | |               | |        _   / _ \          | (_)      
+| | | |__ _| |_ __ _ ___  ___| |_ ___  (_) / /_\ \_   _  __| |_  ___  
+| | | / _` | __/ _` / __|/ _ \ __/ __|     |  _  | | | |/ _` | |/ _ \ 
+| |/ / (_| | || (_| \__ \  __/ |_\__ \  _  | | | | |_| | (_| | | (_) |
+|___/ \__,_|\__\__,_|___/\___|\__|___/ (_) \_| |_/\__,_|\__,_|_|\___/ 
+                                                                    
 Quickly generate some sample audio data from a GitHub repository.
 '''
 

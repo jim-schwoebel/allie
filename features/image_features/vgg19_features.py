@@ -60,5 +60,3 @@ def vgg19_featurize(file):
     for i in range(len(features)):
     	labels.append('vgg19_feature_%s'%(str(i+1)))
     return features, labels 
-
-

@@ -1,3 +1,49 @@
+'''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+|  ___|       | |                        / _ \ | ___ \_   _|  _ 
+| |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
+|  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
+| ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
+\_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
+                                                                
+                                                                
+  ___            _ _       
+ / _ \          | (_)      
+/ /_\ \_   _  __| |_  ___  
+|  _  | | | |/ _` | |/ _ \ 
+| | | | |_| | (_| | | (_) |
+\_| |_/\__,_|\__,_|_|\___/ 
+                           
+
+This will featurize folders of audio files if the default_audio_features = ['opensmile_features']
+
+Featurizes data with the OpenSMILE Toolkit: https://www.audeering.com/opensmile/
+
+Note that this is a proprietary feature set and can be only used for research purposes.
+Also note that you can specify a range of feature extractors within the script itself:
+
+feature_extractors=['avec2013.conf', 'emobase2010.conf', 'IS10_paraling.conf', 'IS13_ComParE.conf', 'IS10_paraling_compat.conf', 'emobase.conf', 
+                             'emo_large.conf', 'IS11_speaker_state.conf', 'IS12_speaker_trait_compat.conf', 'IS09_emotion.conf', 'IS12_speaker_trait.conf', 
+                             'prosodyShsViterbiLoudness.conf', 'ComParE_2016.conf', 'GeMAPSv01a.conf']
+
+The default setting is "GeMAPSv01a.conf" as this is the standard array used for vocal biomarker research studies.
+'''
 import numpy as np
 import json, os, time, shutil
 

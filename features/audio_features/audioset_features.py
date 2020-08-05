@@ -40,7 +40,7 @@ the length is constant.
 follows instructions from
 https://github.com/tensorflow/models/tree/master/research/audioset
 
-This will featurize folders of audio files if the default_audio_features = ["audioset_features"]
+This will featurize folders of audio files if the default_audio_features = ['audioset_features']
 
 '''
 ################################################################################

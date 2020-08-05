@@ -30,8 +30,12 @@ Specify the dataset type and get links and download information.
 
 Note this is a work-in-progress and will expand into the future. 
 '''
-from fuzzywuzzy import fuzz
 import os, json 
+try:
+	from fuzzywuzzy import fuzz
+except:
+	os.system('pip3 install fuzzywuzzy==0.18.0')
+	from fuzzywuzzy import fuzz
 
 current_dir=os.getcwd()
 

@@ -106,7 +106,3 @@ def textacy_featurize(transcript):
     labels=labels+list(readability)
     
     return features, labels
-
-# text='the quick brown fox jumps over the lazy dog'
-# features, labels = textacy_featurize(text)
-# print(dict(zip(labels,features)))

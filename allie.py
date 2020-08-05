@@ -262,104 +262,113 @@ except:
 	pass
 
 # now pursue relevant command passed
-if str(command) != 'None' and command in commands:
+try:
+	if str(command) != 'None' and command in commands:
 
-	if command == 'annotate':
-		# - Annotate API - https://github.com/jim-schwoebel/allie/tree/master/annotation
-		if str(adir) != 'None' and sampletype in sampletypes and str(class_) != 'None' and problemtype in problemtypes:
-			os.chdir(annotation_dir)
-			os.system('python3 annotate.py -d %s -s %s -c %s -p %s'%(adir, sampletype, class_, problemtype))
-		else:
-			if str(adir) == 'None':
-				print('ERROR - annotation directory (-adir) not specified in the CLI')
-			elif sampletype not in sampletypes:
-				print('ERROR - sample type (%s) not in possible sample types (%s)'%(str(sampletype), str(sampletypes)))
-			elif str(class_) == 'None':
-				print('ERROR - annotation class not specified (-class)')
-			elif problemtype not in problemtypes:
-				print('ERROR - probelm type (%s) not in possible problem types (%s)'%(str(problemtype),str(problemtypes)))
-	elif command == 'augment':
-		# - Augmentation API - https://github.com/jim-schwoebel/allie/tree/master/augmentation
-		if sampletype in sampletypes:
-			os.chdir(augment_dir+'/%s_augmentation'%(sampletype))
-			if str(directory) != 'None':
-				for i in range(len(directory)):
-					os.system('python3 augment.py %s'%(directory[i]))
-		else:	
-			print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
-
-	elif command == 'clean':
-		# - Cleaning API - https://github.com/jim-schwoebel/allie/tree/master/cleaning
-		if sampletype in sampletypes:
-			os.chdir(clean_dir+'/%s_cleaning'%(sampletype))
-			if str(directory) != 'None':
-				for i in range(len(directory)):
-					os.system('python3 clean.py %s'%(directory[i]))
-		else:
-			print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
-
-	elif command == 'data':
-		# - Datasets API - https://github.com/jim-schwoebel/allie/tree/master/datasets
-		os.chdir(data_dir+'/downloads')
-		os.system('python3 download.py')
-		
-	elif command == 'features':
-		# - Features API - https://github.com/jim-schwoebel/allie/tree/master/features
-		if sampletype in sampletypes:
-			os.chdir(features_dir+'/%s_features'%(sampletype))
-			if str(directory) != 'None':
-				for i in range(len(directory)):
-					os.system('python3 featurize.py %s'%(directory[i]))
-		else:
-			print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
-
-	elif command == 'predict':
-		# - Model Prediction API - https://github.com/jim-schwoebel/allie/tree/master/models
-		if str(directory) == 'None':
-			print('Making model predictions in ./load_dir because ldir was not specified...')
-			os.chdir(loadmodel_dir)
-			os.system('python3 load.py')
-		else:
-			print('Making model predictions in the directory specified: %s'%(str(ldir)))
-			if str(directory) == 'None' and len(directory) == 1:
-				os.chdir(loadmodel_dir)
-				os.system('python3 load.py %s'%(directory[0]))
+		if command == 'annotate':
+			# - Annotate API - https://github.com/jim-schwoebel/allie/tree/master/annotation
+			if str(adir) != 'None' and sampletype in sampletypes and str(class_) != 'None' and problemtype in problemtypes:
+				os.chdir(annotation_dir)
+				os.system('python3 annotate.py -d %s -s %s -c %s -p %s'%(adir, sampletype, class_, problemtype))
 			else:
-				print('too many directories (%s) specified for model prediction. \n\nPlease only specify one directory.'%(str(len(directory))))
+				if str(adir) == 'None':
+					print('ERROR - annotation directory (-adir) not specified in the CLI')
+				elif sampletype not in sampletypes:
+					print('ERROR - sample type (%s) not in possible sample types (%s)'%(str(sampletype), str(sampletypes)))
+				elif str(class_) == 'None':
+					print('ERROR - annotation class not specified (-class)')
+				elif problemtype not in problemtypes:
+					print('ERROR - probelm type (%s) not in possible problem types (%s)'%(str(problemtype),str(problemtypes)))
+		elif command == 'augment':
+			# - Augmentation API - https://github.com/jim-schwoebel/allie/tree/master/augmentation
+			if sampletype in sampletypes:
+				os.chdir(augment_dir+'/%s_augmentation'%(sampletype))
+				if str(directory) != 'None':
+					for i in range(len(directory)):
+						os.system('python3 augment.py %s'%(directory[i]))
+			else:	
+				print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
 
-	elif cmmand == 'transform':
-		# - Preprocessing API - https://github.com/jim-schwoebel/allie/tree/master/preprocessing
-		os.chdir(preprocessing_dir)
-		# get first folder 
-		if sampletype in sampletypes and problemtype in problemtypes and str(common_name) != 'None' and str(tdir1) != 'None' and str(tdir2) != 'None': 
-			# get second folder 
-			os.system('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, tdir1, tdir2))
-			print('your transform can now be found in the ./preprocessing/%s_transforms directory'%(sampletype))
-		else:
-			if str(tdir1) == 'None' or str(tdir2) == 'None':
-				print('ERROR - transform API cannot be called. Please be sure that you defined your sample, problem type, common_name, and 2 directoreis properly (-tdir1 and -tdir2).')
-			elif sampletype not in sampletypes:
-				print('ERROR - '+sampletype +' not in possible sample types (%s)'%(str(sampletypes)))
-			elif problem not in problemtypes:
-				print('ERROR - '+problemtype + ' not in possible problem types (%s)'%(str(problemtypes)))
-			elif str(common_name) == 'None':
-				print('ERROR - common name not specified during creation of the transform in the preprocessing API.')
+		elif command == 'clean':
+			# - Cleaning API - https://github.com/jim-schwoebel/allie/tree/master/cleaning
+			if sampletype in sampletypes:
+				os.chdir(clean_dir+'/%s_cleaning'%(sampletype))
+				if str(directory) != 'None':
+					for i in range(len(directory)):
+						os.system('python3 clean.py %s'%(directory[i]))
+			else:
+				print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
 
-	elif command == 'train':
-		# - https://github.com/jim-schwoebel/allie/tree/master/training
-		os.chdir(model_dir)
-		os.system('python3 model.py')
-	elif command == 'test':
-		# - Test API - https://github.com/jim-schwoebel/allie/tree/master/tests
-		os.chdir(test_dir)
-		os.system('python3 test.py')
-	elif command == 'visualize':
-		# - Visualize API - https://github.com/jim-schwoebel/allie/tree/master/visualize
-		os.chdir(visualization_dir)
-		os.system('python3 visualize.py')
-else:
-	print('ERROR - %s is not a valid command in the Allie CLI. Please use one of these commands'%(str(command)))
-	print('\n')
-	for i in range(len(commands)):
-		print(' - '+commands[i])
-	print('\n\n')
+		elif command == 'data':
+			# - Datasets API - https://github.com/jim-schwoebel/allie/tree/master/datasets
+			os.chdir(data_dir+'/downloads')
+			os.system('python3 download.py')
+			
+		elif command == 'features':
+			# - Features API - https://github.com/jim-schwoebel/allie/tree/master/features
+			if sampletype in sampletypes:
+				os.chdir(features_dir+'/%s_features'%(sampletype))
+				if str(directory) != 'None':
+					for i in range(len(directory)):
+						os.system('python3 featurize.py %s'%(directory[i]))
+			else:
+				print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
+
+		elif command == 'predict':
+			# - Model Prediction API - https://github.com/jim-schwoebel/allie/tree/master/models
+			if str(directory) == 'None':
+				print('Making model predictions in ./load_dir because ldir was not specified...')
+				os.chdir(loadmodel_dir)
+				os.system('python3 load.py')
+			else:
+				print('Making model predictions in the directory specified: %s'%(str(ldir)))
+				if str(directory) == 'None' and len(directory) == 1:
+					os.chdir(loadmodel_dir)
+					os.system('python3 load.py %s'%(directory[0]))
+				else:
+					print('too many directories (%s) specified for model prediction. \n\nPlease only specify one directory.'%(str(len(directory))))
+
+		elif cmmand == 'transform':
+			# - Preprocessing API - https://github.com/jim-schwoebel/allie/tree/master/preprocessing
+			os.chdir(preprocessing_dir)
+			# get first folder 
+			if sampletype in sampletypes and problemtype in problemtypes and str(common_name) != 'None' and str(tdir1) != 'None' and str(tdir2) != 'None': 
+				# get second folder 
+				os.system('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, tdir1, tdir2))
+				print('your transform can now be found in the ./preprocessing/%s_transforms directory'%(sampletype))
+			else:
+				if str(tdir1) == 'None' or str(tdir2) == 'None':
+					print('ERROR - transform API cannot be called. Please be sure that you defined your sample, problem type, common_name, and 2 directoreis properly (-tdir1 and -tdir2).')
+				elif sampletype not in sampletypes:
+					print('ERROR - '+sampletype +' not in possible sample types (%s)'%(str(sampletypes)))
+				elif problem not in problemtypes:
+					print('ERROR - '+problemtype + ' not in possible problem types (%s)'%(str(problemtypes)))
+				elif str(common_name) == 'None':
+					print('ERROR - common name not specified during creation of the transform in the preprocessing API.')
+
+		elif command == 'train':
+			# - https://github.com/jim-schwoebel/allie/tree/master/training
+			os.chdir(model_dir)
+			os.system('python3 model.py')
+		elif command == 'test':
+			# - Test API - https://github.com/jim-schwoebel/allie/tree/master/tests
+			os.chdir(test_dir)
+			os.system('python3 test.py')
+		elif command == 'visualize':
+			# - Visualize API - https://github.com/jim-schwoebel/allie/tree/master/visualize
+			os.chdir(visualization_dir)
+			os.system('python3 visualize.py')
+	else:
+		print('ERROR - %s is not a valid command in the Allie CLI. Please use one of these commands'%(str(command)))
+		print('\n')
+		for i in range(len(commands)):
+			print(' - '+commands[i])
+		print('\n\n')
+except:
+		print('ERROR - no command provided in the Allie CLI. \n\nPlease use one of these commands. \n')
+		for i in range(len(commands)):
+			print(' - '+commands[i])
+		print('\n')
+		print('Sample usage: \npython3 allie.py --command features --dir /Users/jimschwoebel/desktop/allie/train_dir/females --sampletype audio')
+		print('\nFor additional help, type in:')
+		print('python3 allie.py -h\n')

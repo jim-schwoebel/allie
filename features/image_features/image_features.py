@@ -1,13 +1,49 @@
-from sklearn import preprocessing
-from sklearn import svm
-from sklearn import metrics
+'''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+______         _                          ___  ______ _____     
+|  ___|       | |                        / _ \ | ___ \_   _|  _ 
+| |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
+|  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
+| ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
+\_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
+                                                                
+                                                                
+ _____                           
+|_   _|                          
+  | | _ __ ___   __ _  __ _  ___ 
+  | || '_ ` _ \ / _` |/ _` |/ _ \
+ _| || | | | | | (_| | (_| |  __/
+ \___/_| |_| |_|\__,_|\__, |\___|
+                       __/ |     
+                      |___/      
+
+Featurizes folders of image files if default_text_features = ['image_features']
+
+Note this uses OpenCV and the SIFT feature detector. SIFT was used here 
+as as scale-invariant feature selector, but note that this algorithm is patented,
+which limits commercical use.
+'''
+from sklearn import preprocessing, svm, metrics
 from textblob import TextBlob
 from operator import itemgetter
-import getpass
+import getpass, pickle, datetime, time
 import numpy as np
-import pickle
-import datetime 
-import time 
 from matplotlib import pyplot as plt
 from PIL import Image
 import cv2, os 

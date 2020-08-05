@@ -33,6 +33,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 This section of Allie's API augments folders of video files using
 the default_video_augmenters.
+
+Usage: python3 augment.py [folder] [augment_type]
+
+All augment_type options include:
+["augment_vidaug"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/augmentation/video_augmentation
 '''
 
 ################################################

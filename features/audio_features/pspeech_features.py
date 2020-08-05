@@ -123,7 +123,3 @@ def pspeech_featurize(file):
     print(len(labels))
     
     return features, labels 
-
-# features, labels= pspeech_featurize('test2.wav')
-# print(features.shape)
-# print(len(labels))

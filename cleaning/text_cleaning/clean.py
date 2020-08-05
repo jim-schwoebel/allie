@@ -33,6 +33,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
                    
 This section of Allie's API cleans folders of text files
 using the default_text_cleaners.
+
+Usage: python3 clean.py [folder] [cleantype]
+
+All cleantype options include:
+["clean_summary", "clean_textacy"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning
 '''
 
 ################################################

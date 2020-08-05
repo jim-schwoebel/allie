@@ -32,6 +32,14 @@ ______         _                          ___  ______ _____
   \_/\___/_/\_\\__|
                    
 Featurize folders of text files with the default_text_features.
+
+Usage: python3 featurize.py [folder] [featuretype]
+
+All featuretype options include:
+["bert_features", "fast_features", "glove_features", "grammar_features", 
+"nltk_features", "spacy_features", "text_features", "w2v_features"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/text_features
 '''
 ##################################################
 ##				Import statements   			##

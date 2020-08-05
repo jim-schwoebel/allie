@@ -239,6 +239,3 @@ def meta_featurize(filename, file_dir, help_dir):
     os.chdir(file_dir)
 
     return features, labels 
-
-# testing 
-# features, labels =meta_featurize('test.wav', '/Users/jimschwoebel/desktop/voice_modeling/features/audio_features/test/', '/Users/jimschwoebel/desktop/voice_modeling/features/audio_features/helpers/')

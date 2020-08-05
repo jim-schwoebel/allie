@@ -36,13 +36,12 @@ This cleaning script converts all audio files in a given folder to 20 seconds in
 
 Note you can change this to any arbitary length by changing the desiredlength function below.
 
-This cleaning script is enabled if default_audio_cleaners=['clean_random20secsplice'] 
+This cleaning script is enabled if default_audio_cleaners=['clean_randomsplice'] 
 '''
 import soundfile as sf 
 import os, ffmpy, random, getpass
 
-def clean_random20secsplice(audiofile):
-    desiredlength=20
+def clean_random20secsplice(audiofile, desiredlength):
     try:
         data, samplerate = sf.read(audiofile)
         totalframes=len(data)

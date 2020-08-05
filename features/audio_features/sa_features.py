@@ -67,5 +67,3 @@ def sa_featurize(audiofile):
 	print(dict(zip(labels,features)))
 
 	return features, labels 
-
-# signalanalysis_featurize('test.wav')

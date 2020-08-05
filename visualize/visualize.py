@@ -115,6 +115,13 @@ def get_classes():
 		except:
 			break
 
+	# added this in for the CLI
+	if classes == []:
+		classnum=input('how many classes do you want to model? (e.g. 2)\n')
+		classnum = int(classnum)
+		for i in range(classnum):
+			classes.append(input('what is class #%s\n'%(str(i+1))))
+
 	return classes
 
 def get_features(classes, problem_type, default_features, balance_data):
@@ -683,8 +690,14 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 curdir=os.getcwd()
 basedir=prev_dir(curdir)
 os.chdir(basedir+'/train_dir')
-problem_type=sys.argv[1]
-print(problem_type)
+problem_type=''
+try:
+	problem_type=sys.argv[1]
+except:
+	# added this in for the CLI
+	while problem_type not in ['audio', 'text', 'image', 'video', 'csv']:
+		problem_type = input('what is the problem that you are going after (e.g. "audio", "text", "image","video","csv")\n')
+	print(problem_type)
 classes=get_classes()
 
 # get default features to use in visualization

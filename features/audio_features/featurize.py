@@ -35,7 +35,7 @@ Featurize folders of audio files with the default_audio_features.
 
 Usage: python3 featurize.py [folder] [featuretype]
 
-All options include:
+All featuretype options include:
 ["audioset_features", "audiotext_features", "librosa_features", "meta_features", 
 "mixed_features", "opensmile_features", "praat_features", "prosody_features", 
 "pspeech_features", "pyaudio_features", "pyaudiolex_features", "sa_features", 

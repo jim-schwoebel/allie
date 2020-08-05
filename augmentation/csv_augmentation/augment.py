@@ -32,6 +32,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
                                               
 					      
 This section of Allie's API augments CSV files with default_csv_augmenters.
+
+Usage: python3 augment.py [folder] [augment_type]
+
+All augment_type options include:
+["augment_ctgan_classification", "augment_ctgan_regression"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/augmentation/csv_augmentation
 '''
 
 ################################################

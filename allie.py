@@ -139,7 +139,7 @@ parser.add_option("--c", "--command", dest="command",
 	                  "testing API = 'test'\n"+
 	                  "visualize API = visualize)", metavar="command")
 parser.add_option("--p", "--problemtype", dest="problemtype",
-				  help="specify the problem type (-c classification or -r regression", metavar="problemtype")
+				  help="specify the problem type (-c classification or -r regression)", metavar="problemtype")
 parser.add_option("--s", "--sampletype", dest="sampletype",
 				  help="specify the type files that you'd like to operate on (e.g. audio, text, image, video, csv)", metavar="sampletype")
 parser.add_option("--n", "--name", dest="common_name",
@@ -149,7 +149,7 @@ parser.add_option("--i", "--class", dest="class_",
 
 # load directory
 parser.add_option("--l", "--ldir", dest="ldir",
-                  help="the directory full of files to make model predictions; if not here will default to ./load_dir", metavar="ldir")
+                  help="the directory full of files to make model predictions; if not specified here will default to ./load_dir", metavar="ldir")
 
 # up to 2 directories listed here
 parser.add_option("--t1", "--tdir1", dest="tdir1",
@@ -159,13 +159,13 @@ parser.add_option("--t2", "--tdir2", dest="tdir2",
 
 # featurization, cleaning, and augmentation directories
 parser.add_option("--d1", "--dir1", dest="dir1",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir1")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (required).", metavar="dir1")
 parser.add_option("--d2", "--dir2", dest="dir2",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir2")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (not required).", metavar="dir2")
 parser.add_option("--d3", "--dir3", dest="dir3",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir3")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (not required).", metavar="dir3")
 parser.add_option("--d4", "--dir4", dest="dir4",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir4")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (not required).", metavar="dir4")
 
 # parse arguments
 (options, args) = parser.parse_args()

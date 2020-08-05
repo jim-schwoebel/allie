@@ -31,6 +31,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
                            
+This will featurize folders of audio files if the default_audio_features = ['librosa_features']
 
 Extracts acoustic features using the LibROSA library;
 saves them as mean, standard devaition, amx, min, and median
@@ -40,8 +41,6 @@ Note this is quite a powerful audio feature set that can be used
 for a variety of purposes. 
 
 For more information, check out libROSA's documentation: https://librosa.org/
-
-This will featurize folders of audio files if the default_audio_features = ['librosa_features']
 '''
 import librosa
 import numpy as np 

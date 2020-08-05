@@ -29,6 +29,8 @@ Annotate audio, text, image, or video files for use with regression modeling in 
 
 All you need is a folder, which identifies the type of file within it, and then it goes
 through each file to annotate (as .JSON)
+
+Read more about file annotation @ https://github.com/jim-schwoebel/allie/tree/master/annotation
 '''
 import os, sys, datetime, json, time
 from optparse import OptionParser

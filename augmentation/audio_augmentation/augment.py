@@ -31,13 +31,15 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | || |    _| |_   _  | | | | |_| | (_| | | (_) |
 \_| |_/\_|    \___/  (_) \_| |_/\__,_|\__,_|_|\___/                  
 
-Import all the featurization scripts and allow the user to customize what embedding that
-they would like to use for modeling purposes.
+This is Allie's Augmentation API for audio files.
 
-AudioSet is the only embedding that is a little bit wierd, as it is normalized to the length
-of each audio file. There are many ways around this issue (such as normalizing to the length 
-of each second), however, I included all the original embeddings here in case the time series
-information is useful to you.
+Usage: python3 augment.py [folder] [augment_type]
+
+All augment_type options include:
+['normalize_volume', 'normalize_pitch', 'time_stretch', 'opus_enhance', 
+'trim_silence', 'remove_noise', 'add_noise', "augment_tsaug"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation
 '''
 
 ################################################

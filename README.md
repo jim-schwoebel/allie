@@ -47,7 +47,52 @@ python3 allie.py -h
 
 Which should output some ways you can use Allie with commands in the API:
 ```
+Usage: allie.py [options]
 
+Options:
+  -h, --help            show this help message and exit
+  --c=command, --command=command
+                        the target command (annotate API = 'annotate',
+                        augmentation API = 'augment', cleaning API = 'clean',
+                        datasets API = 'data' features API = 'features' model
+                        prediction API = 'predict' preprocessing API =
+                        'transform' model training API = 'train' testing API =
+                        'test' visualize API = visualize)
+  --p=problemtype, --problemtype=problemtype
+                        specify the problem type (-c classification or -r
+                        regression
+  --s=sampletype, --sampletype=sampletype
+                        specify the type files that you'd like to operate on
+                        (e.g. audio, text, image, video, csv)
+  --n=common_name, --name=common_name
+                        specify the common name for the model (e.g. 'gender'
+                        for a male/female problem)
+  --i=class_, --class=class_
+                        specify the class that you wish to annotate for (e.g.
+                        male)
+  --l=ldir, --ldir=ldir
+                        the directory full of files to make model predictions;
+                        if not here will default to ./load_dir
+  --t1=tdir1, --tdir1=tdir1
+                        the directory in the ./train_dir that represent the
+                        folders of files that the transform API will operate
+                        upon (e.g. 'males')
+  --t2=tdir2, --tdir2=tdir2
+                        the directory in the ./train_dir that represent the
+                        folders of files that the transform API will operate
+                        upon (e.g. 'females')
+  --d1=dir1, --dir1=dir1
+                        the target directory that contains sample files for
+                        the features API, augmentation API, and cleaning API.
+  --d2=dir2, --dir2=dir2
+                        the target directory that contains sample files for
+                        the features API, augmentation API, and cleaning API.
+  --d3=dir3, --dir3=dir3
+                        the target directory that contains sample files for
+                        the features API, augmentation API, and cleaning API.
+  --d4=dir4, --dir4=dir4
+                        the target directory that contains sample files for
+                        the features API, augmentation API, and cleaning API
 ```
 
 ## Quick examples

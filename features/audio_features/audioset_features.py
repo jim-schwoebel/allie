@@ -54,14 +54,6 @@ import tensorflow as tf
 ##                         HELPER FUNCTIONS                                  ##
 ################################################################################
 
-# define some initial helper functions 
-def sync_record(filename, duration, fs, channels):
-    print('recording')
-    myrecording = sd.rec(int(duration * fs), samplerate=fs, channels=channels)
-    sd.wait()
-    sf.write(filename, myrecording, fs)
-    print('done recording')
-
 def setup_audioset(curdir):
     # Clone TensorFlow models repo into a 'models' directory.
     if 'models' in os.listdir():
@@ -126,22 +118,3 @@ def audioset_featurize(filename, audioset_dir, process_dir):
     os.chdir(process_dir)
 
     return features, labels 
-
-################################################################################
-##                               MAIN SCRIPT                                  ##
-################################################################################
-
-# record a 10 second, mono 16k Hz audio file in the current directory
-# filename='test.wav'
-# sync_record(filename,10,16000,1)
-
-# now let's featurize an audio sample in the current directory, test.wav 
-# features, new_features =audioset_featurize(filename)
-# print('new features')   
-# print(new_features)
-# print(len(new_features))
-
-
-
-
-    

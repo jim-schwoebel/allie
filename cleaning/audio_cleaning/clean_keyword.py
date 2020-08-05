@@ -39,7 +39,7 @@ keywords were used.
 
 Note that any utterance under 20000 bytes (20KB) is deleted.
 
-This cleaning script is enabled if default_audio_cleaners=['keyword']
+This cleaning script is enabled if default_audio_cleaners=['clean_keyword']
 '''
 import sys, os, shutil, librosa, uuid
 from pyvad import vad, trim, split

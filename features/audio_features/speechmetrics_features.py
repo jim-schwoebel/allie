@@ -1,8 +1,43 @@
 # the case of absolute metrics
 ''' 
-taken from https://github.com/aliutkus/speechmetrics
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
-Note there are no references with these metrics.
+|  ___|       | |                        / _ \ | ___ \_   _|  _ 
+| |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
+|  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
+| ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
+\_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
+                                                                
+                                                                
+  ___            _ _       
+ / _ \          | (_)      
+/ /_\ \_   _  __| |_  ___  
+|  _  | | | |/ _` | |/ _ \ 
+| | | | |_| | (_| | | (_) |
+\_| |_/\__,_|\__,_|_|\___/ 
+                           
+
+This will featurize folders of audio files if the default_audio_features = ['speechmetrics_features']
+
+A wide array of open source audio quality measures to assess the quality of audio files. Note there 
+are no audio file references necessary to extract these metrics.
+
+taken from https://github.com/aliutkus/speechmetrics
 '''
 import speechmetrics
 

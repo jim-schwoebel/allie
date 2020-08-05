@@ -34,6 +34,15 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 This section of Allie's API cleans folders of audio files
 using the default_audio_cleaners.
+
+Usage: python3 clean.py [folder] [cleantype]
+
+All cleantype options include:
+["clean_getfirst3secs", "clean_keyword", "clean_mono16hz", "clean_mp3towav", 
+"clean_multispeaker", "clean_normalizevolume", "clean_opus", "clean_randomsplice",
+"clean_removenoise", "clean_removesilence", "clean_rename", "clean_utterances"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning
 '''
 
 ################################################

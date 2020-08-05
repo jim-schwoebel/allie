@@ -30,7 +30,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
 
-This will featurize folders of audio files if the default_audio_features = ['mixed_features']
+This will featurize folders of audio files if the default_audio_features = ["mixed_features"]
 
 Creates a mixed feature array according to the schema provided @ mixed_feature_0.json
 '''

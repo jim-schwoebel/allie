@@ -31,7 +31,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 
-This will featurize folders of audio files if the default_audio_features = ['opensmile_features']
+This will featurize folders of audio files if the default_audio_features = ["opensmile_features"]
 
 Featurizes data with the OpenSMILE Toolkit: https://www.audeering.com/opensmile/
 

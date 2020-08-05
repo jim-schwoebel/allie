@@ -1,6 +1,40 @@
 '''
-140416 features in frequency domain for spectrograms. 
-Resampled down to 32000 Hz and mono signal. 
+
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+|  ___|       | |                        / _ \ | ___ \_   _|  _ 
+| |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
+|  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
+| ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
+\_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
+                                                                
+                                                                
+  ___            _ _       
+ / _ \          | (_)      
+/ /_\ \_   _  __| |_  ___  
+|  _  | | | |/ _` | |/ _ \ 
+| | | | |_| | (_| | | (_) |
+\_| |_/\__,_|\__,_|_|\___/ 
+                           
+
+This will featurize folders of audio files if the default_audio_features = ['spectrogram_features']
+
+140416 features in frequency domain for spectrograms.  Resampled down to 32000 Hz and mono signal. 
 On Log mel spectrogram scale. 
 '''
 import os
@@ -53,13 +87,3 @@ def spectrogram_featurize(file_path):
 	features=np.append(mean_features, std_features)
 
 	return features, labels 
-
-# featurelist=list()
-# os.chdir('test2')
-# listdir=os.listdir()
-# for i in range(len(listdir)):
-# 	if listdir[i][-4:] in ['.wav', '.mp3']:
-# 		features, labels = spectrogram_featurize(listdir[i])
-# 		featurelist.append(features)
-# 		print(len(features))
-

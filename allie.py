@@ -16,9 +16,6 @@
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
                                                                              
-
-
-
  _____                                           _   _     _            
 /  __ \                                         | | | |   (_)           
 | /  \/ ___  _ __ ___  _ __ ___   __ _ _ __   __| | | |    _ _ __   ___ 
@@ -67,20 +64,24 @@ Options:
                         'transform' model training API = 'train' testing API =
                         'test' visualize API = visualize)
   --p=problemtype, --problemtype=problemtype
-                        specify the problem type (-c classification or -r
-                        regression)
+                        specify the problem type ('c' = classification or 'r'
+                        = regression)
   --s=sampletype, --sampletype=sampletype
                         specify the type files that you'd like to operate on
-                        (e.g. audio, text, image, video, csv)
+                        (e.g. 'audio', 'text', 'image', 'video', 'csv')
   --n=common_name, --name=common_name
                         specify the common name for the model (e.g. 'gender'
                         for a male/female problem)
   --i=class_, --class=class_
                         specify the class that you wish to annotate for (e.g.
-                        male)
+                        'male')
+  --a=ldir, --adir=ldir
+                        the directory full of files to annotate (e.g.
+                        '/Users/jim/desktop/allie/train_dir/males/')
   --l=ldir, --ldir=ldir
                         the directory full of files to make model predictions;
-                        if not here will default to ./load_dir
+                        if not here will default to ./load_dir (e.g.
+                        '/Users/jim/desktop/allie/load_dir/newfiles/')
   --t1=tdir1, --tdir1=tdir1
                         the directory in the ./train_dir that represent the
                         folders of files that the transform API will operate
@@ -91,16 +92,20 @@ Options:
                         upon (e.g. 'females')
   --d1=dir1, --dir1=dir1
                         the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API.
+                        the features API, augmentation API, and cleaning API
+                        (e.g. '/Users/jim/desktop/allie/train_dir/teens/').
   --d2=dir2, --dir2=dir2
                         the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API.
+                        the features API, augmentation API, and cleaning API
+                        (e.g. '/Users/jim/desktop/allie/train_dir/twenties/').
   --d3=dir3, --dir3=dir3
                         the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API.
+                        the features API, augmentation API, and cleaning API
+                        (e.g. '/Users/jim/desktop/allie/train_dir/thirties/').
   --d4=dir4, --dir4=dir4
                         the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API.
+                        the features API, augmentation API, and cleaning API
+                        (e.g. '/Users/jim/desktop/allie/train_dir/fourties/')
 
 If you have any questions or would like to contribute to our community,
 please reach out to Jim Schwoebel @ js@neurolex.co
@@ -117,6 +122,7 @@ def render(text, f):
 f=Figlet(font='doh')
 render('Allie',f)
 f=Figlet(font='doom')
+render('Command Line Interface',f)
 
 ###############################################################
 ##                     INITIALIZATION                        ##
@@ -217,17 +223,21 @@ parser.add_option("--c", "--command", dest="command",
 	                  "testing API = 'test'\n"+
 	                  "visualize API = visualize)", metavar="command")
 parser.add_option("--p", "--problemtype", dest="problemtype",
-				  help="specify the problem type (-c classification or -r regression)", metavar="problemtype")
+				  help="specify the problem type ('c' = classification or 'r' = regression)", metavar="problemtype")
 parser.add_option("--s", "--sampletype", dest="sampletype",
-				  help="specify the type files that you'd like to operate on (e.g. audio, text, image, video, csv)", metavar="sampletype")
+				  help="specify the type files that you'd like to operate on (e.g. 'audio', 'text', 'image', 'video', 'csv')", metavar="sampletype")
 parser.add_option("--n", "--name", dest="common_name",
 				  help="specify the common name for the model (e.g. 'gender' for a male/female problem)", metavar="common_name")
 parser.add_option("--i", "--class", dest="class_", 
-				  help="specify the class that you wish to annotate for (e.g. male)", metavar="class_")
+				  help="specify the class that you wish to annotate for (e.g. 'male')", metavar="class_")
+
+# annotation directory
+parser.add_option("--a", "--adir", dest="adir",
+                  help="the directory full of files to annotate (e.g. '/Users/jim/desktop/allie/train_dir/males/')", metavar="ldir")
 
 # load directory
 parser.add_option("--l", "--ldir", dest="ldir",
-                  help="the directory full of files to make model predictions; if not here will default to ./load_dir", metavar="ldir")
+                  help="the directory full of files to make model predictions; if not here will default to ./load_dir (e.g. '/Users/jim/desktop/allie/load_dir/newfiles/')", metavar="ldir")
 
 # up to 2 directories listed here
 parser.add_option("--t1", "--tdir1", dest="tdir1",
@@ -237,13 +247,13 @@ parser.add_option("--t2", "--tdir2", dest="tdir2",
 
 # featurization, cleaning, and augmentation directories
 parser.add_option("--d1", "--dir1", dest="dir1",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir1")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/').", metavar="dir1")
 parser.add_option("--d2", "--dir2", dest="dir2",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir2")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/twenties/').", metavar="dir2")
 parser.add_option("--d3", "--dir3", dest="dir3",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir3")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/thirties/').", metavar="dir3")
 parser.add_option("--d4", "--dir4", dest="dir4",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir4")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/fourties/').", metavar="dir4")
 
 # parse arguments
 (options, args) = parser.parse_args()

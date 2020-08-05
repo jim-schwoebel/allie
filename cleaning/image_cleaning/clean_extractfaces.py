@@ -1,3 +1,42 @@
+'''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+/  __ \ |                (_)              / _ \ | ___ \_   _|  _ 
+| /  \/ | ___  __ _ _ __  _ _ __   __ _  / /_\ \| |_/ / | |   (_)
+| |   | |/ _ \/ _` | '_ \| | '_ \ / _` | |  _  ||  __/  | |      
+| \__/\ |  __/ (_| | | | | | | | | (_| | | | | || |    _| |_   _ 
+ \____/_|\___|\__,_|_| |_|_|_| |_|\__, | \_| |_/\_|    \___/  (_)
+                                   __/ |                         
+                                  |___/                          
+ _____                           
+|_   _|                          
+  | | _ __ ___   __ _  __ _  ___ 
+  | || '_ ` _ \ / _` |/ _` |/ _ \
+ _| || | | | | | (_| | (_| |  __/
+ \___/_| |_| |_|\__,_|\__, |\___|
+                       __/ |     
+                      |___/      
+
+This script takes in a folder of images and extracts out the faces for these images 
+if they are in there and deletes the original image. This is useful if you are looking 
+to do a lot of facial machine learning work.
+
+This is enabled if default_image_cleaners=['clean_extractfaces']
+'''
 # you only use these modules if you register, so put them here
 import cv2, os, time, shutil, math
 import skvideo.io, skvideo.motion, skvideo.measure

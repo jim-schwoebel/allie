@@ -33,6 +33,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 This section of Allie's Augmentation API augments folders of images via
 the default_image_augmenters.
+
+Usage: python3 augment.py [folder] [augment_type]
+
+All augment_type options include:
+["augment_imaug"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation
 '''
 
 ################################################

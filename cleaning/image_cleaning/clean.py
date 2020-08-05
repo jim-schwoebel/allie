@@ -35,6 +35,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 This section of Allie's API cleans folders of image files
 using the default_image_cleaners.
+
+Usage: python3 clean.py [folder] [cleantype]
+
+All cleantype options include:
+["clean_extractfaces", "clean_greyscale", "clean_jpg2png"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning
 '''
 
 ################################################

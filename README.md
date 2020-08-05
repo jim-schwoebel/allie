@@ -40,6 +40,16 @@ python3 setup.py
 
 Note the installatin process and unit tests above takes roughly ~10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
+After everything is done, you can use the [Allie CLI]() by typing in:
+```
+python3 allie.py -h
+```
+
+Which should output some ways you can use Allie with commands in the API:
+```
+
+```
+
 ## Quick examples
 
 The below examples assume the default [settings.json configuration](https://github.com/jim-schwoebel/allie/blob/master/settings.json) in Allie. Results may vary if you change this file.

@@ -32,6 +32,13 @@ ______         _                          ___  ______ _____
  \___/|_|\__,_|\___|\___/ 
 
 Featurize folders of videos with the default_video_features.
+
+Usage: python3 featurize.py [folder] [featuretype]
+
+All featuretype options include:
+["video_features","y8m_features"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/video_features
 '''
 import os, json, wget, uuid
 import numpy as np

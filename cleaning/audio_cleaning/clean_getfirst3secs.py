@@ -35,7 +35,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 This cleaning script gets the first three seconds of an audio file 
 and deletes the source audio.
 
-It is enabled if default_audio_cleaners=['getfirst3secs']
+It is enabled if default_audio_cleaners=['clean_getfirst3secs']
 '''
 import os
 import soundfile as sf

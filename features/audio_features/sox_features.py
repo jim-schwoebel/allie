@@ -92,5 +92,3 @@ def sox_featurize(filename):
     os.remove(statfile)
  
     return features,labels
-
-# features, labels = sox_featurize('test.wav')

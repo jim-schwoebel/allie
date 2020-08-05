@@ -31,7 +31,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 
-This will featurize folders of audio files if the default_audio_features = ["meta_features"]
+This will featurize folders of audio files if the default_audio_features = ['meta_features']
 
 Extracts meta features from models trained on the audioset dataset. This is useful for 
 detecting a wide array of acoustic events.

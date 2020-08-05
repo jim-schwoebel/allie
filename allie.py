@@ -75,13 +75,6 @@ Options:
   --i=class_, --class=class_
                         specify the class that you wish to annotate (e.g.
                         'male')
-  --a=ldir, --adir=ldir
-                        the directory full of files to annotate (e.g.
-                        '/Users/jim/desktop/allie/train_dir/males/')
-  --l=ldir, --ldir=ldir
-                        the directory full of files to make model predictions;
-                        if not here will default to ./load_dir (e.g.
-                        '/Users/jim/desktop/allie/load_dir/newfiles/')
   --t1=tdir1, --tdir1=tdir1
                         the directory in the ./train_dir that represent the
                         folders of files that the transform API will operate
@@ -90,22 +83,11 @@ Options:
                         the directory in the ./train_dir that represent the
                         folders of files that the transform API will operate
                         upon (e.g. 'females')
-  --d1=dir1, --dir1=dir1
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/teens/').
-  --d2=dir2, --dir2=dir2
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/twenties/').
-  --d3=dir3, --dir3=dir3
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/thirties/').
-  --d4=dir4, --dir4=dir4
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/fourties/').
+  --d=dir, --dir=dir    an array of the target directory (or directories) that
+                        contains sample files for the annotation API,
+                        prediction API, features API, augmentation API, and
+                        cleaning API (e.g.
+                        '/Users/jim/desktop/allie/train_dir/teens/').
 			
 If you have any questions or would like to contribute to our community,
 please reach out to Jim Schwoebel @ js@neurolex.co
@@ -231,14 +213,6 @@ parser.add_option("--n", "--name", dest="common_name",
 parser.add_option("--i", "--class", dest="class_", 
 				  help="specify the class that you wish to annotate (e.g. 'male')", metavar="class_")
 
-# annotation directory
-parser.add_option("--a", "--adir", dest="adir",
-                  help="the directory full of files to annotate (e.g. '/Users/jim/desktop/allie/train_dir/males/')", metavar="ldir")
-
-# load directory
-parser.add_option("--l", "--ldir", dest="ldir",
-                  help="the directory full of files to make model predictions; if not here will default to ./load_dir (e.g. '/Users/jim/desktop/allie/load_dir/newfiles/')", metavar="ldir")
-
 # up to 2 directories listed here
 parser.add_option("--t1", "--tdir1", dest="tdir1",
                   help="the directory in the ./train_dir that represent the folders of files that the transform API will operate upon (e.g. 'males')", metavar="tdir1")
@@ -246,14 +220,9 @@ parser.add_option("--t2", "--tdir2", dest="tdir2",
                   help="the directory in the ./train_dir that represent the folders of files that the transform API will operate upon (e.g. 'females')", metavar="tdir2")
 
 # featurization, cleaning, and augmentation directories
-parser.add_option("--d1", "--dir1", dest="dir1",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/').", metavar="dir1")
-parser.add_option("--d2", "--dir2", dest="dir2",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/twenties/').", metavar="dir2")
-parser.add_option("--d3", "--dir3", dest="dir3",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/thirties/').", metavar="dir3")
-parser.add_option("--d4", "--dir4", dest="dir4",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/fourties/').", metavar="dir4")
+parser.add_option("--d", "--dir", dest="dir",
+                  help="an array of the target directory (or directories) that contains sample files for the annotation API, prediction API, features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/').", metavar="dir",
+                  action='append')
 
 # parse arguments
 (options, args) = parser.parse_args()
@@ -280,14 +249,6 @@ try:
 except:
 	pass
 try:
-	ldir=options.ldir
-except:
-	pass
-try:
-	adir=options.adir
-except:
-	pass
-try:
 	tdir1=options.tdir1
 except:
 	pass
@@ -296,19 +257,7 @@ try:
 except:
 	pass
 try:
-	dir1=options.dir1
-except:
-	pass
-try:
-	dir2=options.dir2
-except:
-	pass
-try:
-	dir3=options.dir3
-except:
-	pass
-try:
-	dir4=options.dir4
+	directory=options.dir
 except:
 	pass
 
@@ -333,14 +282,9 @@ if str(command) != 'None' and command in commands:
 		# - Augmentation API - https://github.com/jim-schwoebel/allie/tree/master/augmentation
 		if sampletype in sampletypes:
 			os.chdir(augment_dir+'/%s_augmentation'%(sampletype))
-			if str(dir1) != 'None':
-				os.system('python3 augment.py %s'%(dir1))
-			elif str(dir2) != 'None':
-				os.system('python3 augment.py %s'%(dir2))
-			elif str(dir3) != 'None':
-				os.system('python3 augment.py %s'%(dir3))
-			elif str(dir4) != 'None':
-				os.system('python3 augment.py %s'%(dir4))
+			if str(directory) != 'None':
+				for i in range(len(directory)):
+					os.system('python3 augment.py %s'%(directory[i]))
 		else:	
 			print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
 
@@ -348,14 +292,9 @@ if str(command) != 'None' and command in commands:
 		# - Cleaning API - https://github.com/jim-schwoebel/allie/tree/master/cleaning
 		if sampletype in sampletypes:
 			os.chdir(clean_dir+'/%s_cleaning'%(sampletype))
-			if str(dir1) != 'None':
-				os.system('python3 clean.py %s'%(dir1))
-			elif str(dir2) != 'None':
-				os.system('python3 clean.py %s'%(dir2))
-			elif str(dir3) != 'None':
-				os.system('python3 clean.py %s'%(dir3))
-			elif str(dir4) != 'None':
-				os.system('python3 clean.py %s'%(dir4))
+			if str(directory) != 'None':
+				for i in range(len(directory)):
+					os.system('python3 clean.py %s'%(directory[i]))
 		else:
 			print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
 
@@ -368,27 +307,25 @@ if str(command) != 'None' and command in commands:
 		# - Features API - https://github.com/jim-schwoebel/allie/tree/master/features
 		if sampletype in sampletypes:
 			os.chdir(features_dir+'/%s_features'%(sampletype))
-			if str(dir1) != 'None':
-				os.system('python3 featurize.py %s'%(dir1))
-			elif str(dir2) != 'None':
-				os.system('python3 featurize.py %s'%(dir2))
-			elif str(dir3) != 'None':
-				os.system('python3 featurize.py %s'%(dir3))
-			elif str(dir4) != 'None':
-				os.system('python3 featurize.py %s'%(dir4))
+			if str(directory) != 'None':
+				for i in range(len(directory)):
+					os.system('python3 featurize.py %s'%(directory[i]))
 		else:
 			print('ERROR - '+sample +' - not in list of possible sample types: %s'%(str(sampletypes)))
 
 	elif command == 'predict':
 		# - Model Prediction API - https://github.com/jim-schwoebel/allie/tree/master/models
-		if str(ldir) == 'None':
+		if str(directory) == 'None':
 			print('Making model predictions in ./load_dir because ldir was not specified...')
 			os.chdir(loadmodel_dir)
 			os.system('python3 load.py')
 		else:
-			print('Making model predictions in the directory speciied: %s'%(str(ldir)))
-			os.chdir(loadmodel_dir)
-			os.system('python3 load.py %s'%(ldir))
+			print('Making model predictions in the directory specified: %s'%(str(ldir)))
+			if str(directory) == 'None' and len(directory) == 1:
+				os.chdir(loadmodel_dir)
+				os.system('python3 load.py %s'%(directory[0]))
+			else:
+				print('too many directories (%s) specified for model prediction. \n\nPlease only specify one directory.'%(str(len(directory))))
 
 	elif cmmand == 'transform':
 		# - Preprocessing API - https://github.com/jim-schwoebel/allie/tree/master/preprocessing

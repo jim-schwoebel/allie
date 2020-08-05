@@ -34,6 +34,14 @@ ______         _                          ___  ______ _____
                       |___/      
 
 Featurize folders of images with the default_image_features.
+
+Usage: python3 featurize.py [folder] [featuretype]
+
+All featuretype options include:
+["image_features", "inception_features", "resnet_features", "squeezenet_features", 
+"tesseract_features", "vgg16_features", "vgg19_features", "xception_features"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/image_features
 '''
 import helpers.audio_plot as ap 
 import numpy as np 

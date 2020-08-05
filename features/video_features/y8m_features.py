@@ -346,8 +346,3 @@ def y8m_featurize(videofile, process_dir, help_dir, fast_model):
   shutil.rmtree('output')
 
   return features, labels, transcript, image_transcript
-
-
-
-
- 

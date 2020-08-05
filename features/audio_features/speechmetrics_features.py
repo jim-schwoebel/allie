@@ -50,7 +50,3 @@ def speechmetrics_featurize(wavfile):
     features = list(scores.values())
     labels = list(scores)
     return features, labels
-
-# features, labels = speechmetrics_featurize('test.wav')
-# print(features)
-# print(labels)

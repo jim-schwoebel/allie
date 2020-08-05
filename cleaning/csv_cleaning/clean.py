@@ -31,9 +31,14 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | \__/\/\__/ /\ \_/ /
  \____/\____/  \___/ 
 
-This is a deprecated clean_csv.py script for Allie version 1.0.
+This is Allie's Cleaning API for CSV Files.
 
-This will be modified in later verisons.
+Usage: python3 clean.py [folder] [cleantype]
+
+All cleantype options include:
+["clean_csv"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning
 '''
 
 ################################################

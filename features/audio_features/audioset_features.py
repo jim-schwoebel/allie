@@ -31,17 +31,12 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
                            
-
-Simple script to extract features using the VGGish model released by Google.
-
-Note that these are time-independent and the embedding has been adjusted so that
-the length is constant.
-
-follows instructions from
-https://github.com/tensorflow/models/tree/master/research/audioset
-
 This will featurize folders of audio files if the default_audio_features = ['audioset_features']
 
+Simple script to extract features using the VGGish model released by Google.
+Note that these are time-independent and the embedding has been adjusted so that
+the length is constant. Follows instructions from
+https://github.com/tensorflow/models/tree/master/research/audioset
 '''
 ################################################################################
 ##                         IMPORT STATEMENTS                                 ##

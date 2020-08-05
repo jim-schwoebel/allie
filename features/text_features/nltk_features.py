@@ -248,7 +248,3 @@ def nltk_featurize(transcript):
 			'polarity', 'subjectivity','repeat']
 
 	return features, labels
-
-
-# transcribe with pocketsphinx
-#features, labels = nltk_featurize('test.wav')

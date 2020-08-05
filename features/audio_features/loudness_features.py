@@ -32,11 +32,11 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 
+This will featurize folders of audio files if the default_audio_features = ['loudness_features']
+
 Extracts loudness features.
 
 For more information, check out PyLoudNorm documentation: https://github.com/csteinmetz1/pyloudnorm
-
-This will featurize folders of audio files if the default_audio_features = ['loudness_features']
 '''
 import soundfile as sf
 import os

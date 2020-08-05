@@ -127,16 +127,3 @@ def praat_featurize(voiceID):
             'localShimmer', 'localdbShimmer', 'apq3Shimmer', 'aqpq5Shimmer', 'apq11Shimmer', 'ddaShimmer', 'f1_mean', 'f2_mean', 'f3_mean', 'f4_mean']
 
     return measurements, labels 
-
-
-# # convert all to .JSON
-# for voiceID in glob.glob(os.getcwd()+'/*.wav'):
-#     features, labels = measure_voices(voiceID)
-#     for measure in features:
-#         print(measure)
-
-#     jsonfile=open(voiceID[0:-4]+'.json','w')
-#     data={'features': features,
-#           'labels': labels}
-#     json.dump(data,jsonfile)
-#     jsonfile.close()

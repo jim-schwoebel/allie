@@ -33,6 +33,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
  
  Note that this script is not used for Allie version 1.0 and will be 
  updated in future releases.
+ 
+ Usage: python3 featurize.py [folder] [featuretype]
+
+All options include:
+["csv_features_regression"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/csv_features
 '''
 import os, json, wget, sys
 import csv_features as cf

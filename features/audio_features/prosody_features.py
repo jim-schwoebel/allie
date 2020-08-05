@@ -55,4 +55,3 @@ def prosody_featurize(audiofile,fsize):
     print(labels)
 
     return features, labels
-

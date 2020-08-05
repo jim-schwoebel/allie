@@ -87,7 +87,7 @@ Options:
                         contains sample files for the annotation API,
                         prediction API, features API, augmentation API, and
                         cleaning API (e.g.
-                        '/Users/jim/desktop/allie/train_dir/teens/').
+                        '/Users/jim/desktop/allie/train_dir/teens/')
 			
 If you have any questions or would like to contribute to our community,
 please reach out to Jim Schwoebel @ js@neurolex.co
@@ -221,7 +221,7 @@ parser.add_option("--t2", "--tdir2", dest="tdir2",
 
 # featurization, cleaning, and augmentation directories
 parser.add_option("--d", "--dir", dest="dir",
-                  help="an array of the target directory (or directories) that contains sample files for the annotation API, prediction API, features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/').", metavar="dir",
+                  help="an array of the target directory (or directories) that contains sample files for the annotation API, prediction API, features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/')", metavar="dir",
                   action='append')
 
 # parse arguments

@@ -31,12 +31,12 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | \__/\/\__/ /\ \_/ /
  \____/\____/  \___/ 
  
- Note that this script is not used for Allie version 1.0 and will be 
- updated in future releases.
+Note that this script is not used for Allie version 1.0 and will be 
+updated in future releases.
  
- Usage: python3 featurize.py [folder] [featuretype]
+Usage: python3 featurize.py [folder] [featuretype]
 
-All options include:
+All featuretype options include:
 ["csv_features_regression"]
 
 Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/csv_features

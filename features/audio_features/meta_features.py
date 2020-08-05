@@ -30,12 +30,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
                            
+
+This will featurize folders of audio files if the default_audio_features = ["meta_features"]
+
 Extracts meta features from models trained on the audioset dataset. This is useful for 
 detecting a wide array of acoustic events.
 
 For more information, check out https://github.com/jim-schwoebel/audioset_models
-
-This will featurize folders of audio files if the default_audio_features = ['meta_features']
 '''
 import numpy as np 
 import librosa, pickle, time 

@@ -34,7 +34,7 @@ ______         _                          ___  ______ _____
 		   
 Featurize folders of text files if default_text_features = ['glove_features']
 
-This uses a GloVE embedding:
+This uses a GloVE embedding with 100 dimensions:
 https://machinelearningmastery.com/develop-word-embeddings-python-gensim/
 '''
 
@@ -64,5 +64,3 @@ def glove_featurize(transcript,model):
         labels.append('glove_feature_%s'%(str(i+1)))
 
     return features, labels 
-
-

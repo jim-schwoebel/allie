@@ -126,13 +126,13 @@ def annotate_file(class_, filetype, file, problemtype):
 # get all the options from the terminal
 parser = OptionParser()
 parser.add_option("-d", "--directory", dest="annotate_dir",
-                  help="the directory to annotate", metavar="annotate_DIR")
+                  help="the directory to annotate", metavar="annotate_dir")
 parser.add_option("-s", "--sampletype", dest="sampletype",
-				  help="specify the type of model to make predictions (e.g. audio, text, image, video, csv)", metavar="SAMPLETYPE")
+				  help="specify the type of model to make predictions (e.g. audio, text, image, video, csv)", metavar="sampletype")
 parser.add_option("-c", "--classtype", dest="classtype", 
-				  help="specify the class type (e.g. stress level", metavar="CLASSTYPE")
+				  help="specify the class type (e.g. stress level", metavar="classtype")
 parser.add_option("-p", "--problemtype", dest="problemtype",
-				  help="specify the problem type (-c classification or -r regression", metavar="PROBLEMTYPE")
+				  help="specify the problem type (-c classification or -r regression", metavar="problemtype")
 
 (options, args) = parser.parse_args()
 

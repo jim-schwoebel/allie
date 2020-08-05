@@ -70,13 +70,6 @@ Options:
   --i=class_, --class=class_
                         specify the class that you wish to annotate (e.g.
                         'male')
-  --a=ldir, --adir=ldir
-                        the directory full of files to annotate (e.g.
-                        '/Users/jim/desktop/allie/train_dir/males/')
-  --l=ldir, --ldir=ldir
-                        the directory full of files to make model predictions;
-                        if not here will default to ./load_dir (e.g.
-                        '/Users/jim/desktop/allie/load_dir/newfiles/')
   --t1=tdir1, --tdir1=tdir1
                         the directory in the ./train_dir that represent the
                         folders of files that the transform API will operate
@@ -85,22 +78,11 @@ Options:
                         the directory in the ./train_dir that represent the
                         folders of files that the transform API will operate
                         upon (e.g. 'females')
-  --d1=dir1, --dir1=dir1
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/teens/').
-  --d2=dir2, --dir2=dir2
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/twenties/').
-  --d3=dir3, --dir3=dir3
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/thirties/').
-  --d4=dir4, --dir4=dir4
-                        the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/fourties/').
+  --d=dir, --dir=dir    an array of the target directory (or directories) that
+                        contains sample files for the annotation API,
+                        prediction API, features API, augmentation API, and
+                        cleaning API (e.g.
+                        '/Users/jim/desktop/allie/train_dir/teens/').
 ```
 
 ## Quick examples

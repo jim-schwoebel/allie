@@ -82,7 +82,7 @@ Options:
                         contains sample files for the annotation API,
                         prediction API, features API, augmentation API, and
                         cleaning API (e.g.
-                        '/Users/jim/desktop/allie/train_dir/teens/').
+                        '/Users/jim/desktop/allie/train_dir/teens/')
 ```
 
 ## Quick examples

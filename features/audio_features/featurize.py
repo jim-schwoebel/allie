@@ -32,6 +32,17 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 Featurize folders of audio files with the default_audio_features.
+
+Usage: python3 featurize.py [folder] [featuretype]
+
+All options include:
+["audioset_features", "audiotext_features", "librosa_features", "meta_features", 
+"mixed_features", "opensmile_features", "praat_features", "prosody_features", 
+"pspeech_features", "pyaudio_features", "pyaudiolex_features", "sa_features", 
+"sox_features", "specimage_features", "specimage2_features", "spectrogram_features", 
+"speechmetrics_features", "standard_features"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/audio_features
 '''
 
 ################################################

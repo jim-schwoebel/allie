@@ -73,7 +73,7 @@ Options:
                         specify the common name for the model (e.g. 'gender'
                         for a male/female problem)
   --i=class_, --class=class_
-                        specify the class that you wish to annotate for (e.g.
+                        specify the class that you wish to annotate (e.g.
                         'male')
   --a=ldir, --adir=ldir
                         the directory full of files to annotate (e.g.
@@ -229,7 +229,7 @@ parser.add_option("--s", "--sampletype", dest="sampletype",
 parser.add_option("--n", "--name", dest="common_name",
 				  help="specify the common name for the model (e.g. 'gender' for a male/female problem)", metavar="common_name")
 parser.add_option("--i", "--class", dest="class_", 
-				  help="specify the class that you wish to annotate for (e.g. 'male')", metavar="class_")
+				  help="specify the class that you wish to annotate (e.g. 'male')", metavar="class_")
 
 # annotation directory
 parser.add_option("--a", "--adir", dest="adir",

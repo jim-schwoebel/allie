@@ -30,6 +30,9 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |     `--. \| | | |
 | \__/\/\__/ /\ \_/ /
  \____/\____/  \___/ 
+ 
+ Note that this script is not used for Allie version 1.0 and will be 
+ updated in future releases.
 '''
 import os, json, wget, sys
 import csv_features as cf

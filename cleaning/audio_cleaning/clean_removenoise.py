@@ -55,5 +55,3 @@ def clean_removenoise(audiofile):
 	os.rename(temp,audiofile)
 	os.remove(noiseaudio)
 	os.remove(noiseprofile)
-
-# remove_noise('test_audio.wav')

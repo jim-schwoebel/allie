@@ -1,3 +1,46 @@
+'''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+
+/  __ \ |                (_)              / _ \ | ___ \_   _|  _ 
+| /  \/ | ___  __ _ _ __  _ _ __   __ _  / /_\ \| |_/ / | |   (_)
+| |   | |/ _ \/ _` | '_ \| | '_ \ / _` | |  _  ||  __/  | |      
+| \__/\ |  __/ (_| | | | | | | | | (_| | | | | || |    _| |_   _ 
+ \____/_|\___|\__,_|_| |_|_|_| |_|\__, | \_| |_/\_|    \___/  (_)
+                                   __/ |                         
+                                  |___/                          
+  ___            _ _       
+ / _ \          | (_)      
+/ /_\ \_   _  __| |_  ___  
+|  _  | | | |/ _` | |/ _ \ 
+| | | | |_| | (_| | | (_) |
+\_| |_/\__,_|\__,_|_|\___/ 
+                           
+
+This cleaning script breaks up the source audio file into utterances and keeps 
+utterances with a certain keyword. Therefore, there can be multiple or no 
+audio files resulting after the cleaning process dependent on whether multiple
+keywords were used.
+
+Note that any utterance under 20000 bytes (20KB) is deleted.
+
+This cleaning script is enabled if default_audio_cleaners=['keyword']
+'''
 import sys, os, shutil, librosa, uuid
 from pyvad import vad, trim, split
 import matplotlib.pyplot as plt
@@ -97,19 +140,14 @@ def clean_keyword(audiofile,keyword):
         for i in range(len(tempfiles)):
             if os.path.getsize(tempfiles[i]) > 20000:
                 pass
-                # transcript=transcribe_audiofile(tempfiles[i])
-                # print('TRANSCRIPT --> %s'%(transcript))
-                # if transcript == 'coconut':
-                   #  pass
-               #  else:
-                  #  os.remove(tempfiles[i])
+                transcript=transcribe_audiofile(tempfiles[i])
+                print('TRANSCRIPT --> %s'%(transcript))
+                if transcript == keyword:
+                   pass
+                else:
+                    os.remove(tempfiles[i])
             else:
                 os.remove(tempfiles[i])
-            # if transcript==keyword:
-            #     
-            #     pass
-            # else:
-            #     os.remove(tempfiles[i])
     except:
         print('ERROR - ValueError: When data.type is float, data must be -1.0 <= data <= 1.0.')
 

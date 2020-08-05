@@ -328,7 +328,7 @@ try:
 				else:
 					print('too many directories (%s) specified for model prediction. \n\nPlease only specify one directory.'%(str(len(directory))))
 
-		elif cmmand == 'transform':
+		elif command == 'transform':
 			# - Preprocessing API - https://github.com/jim-schwoebel/allie/tree/master/preprocessing
 			os.chdir(preprocessing_dir)
 			# get first folder 

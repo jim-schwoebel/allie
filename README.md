@@ -53,11 +53,11 @@ Options:
   -h, --help            show this help message and exit
   --c=command, --command=command
                         the target command (annotate API = 'annotate',
-                        augmentation API = 'augment', cleaning API = 'clean',
-                        datasets API = 'data' features API = 'features' model
-                        prediction API = 'predict' preprocessing API =
-                        'transform' model training API = 'train' testing API =
-                        'test' visualize API = visualize)
+                        augmentation API = 'augment',  cleaning API = 'clean',
+                        datasets API = 'data',  features API = 'features',
+                        model prediction API = 'predict',  preprocessing API =
+                        'transform',  model training API = 'train',  testing
+                        API = 'test',  visualize API = 'visualize')
   --p=problemtype, --problemtype=problemtype
                         specify the problem type ('c' = classification or 'r'
                         = regression)
@@ -100,7 +100,7 @@ Options:
   --d4=dir4, --dir4=dir4
                         the target directory that contains sample files for
                         the features API, augmentation API, and cleaning API
-                        (e.g. '/Users/jim/desktop/allie/train_dir/fourties/')
+                        (e.g. '/Users/jim/desktop/allie/train_dir/fourties/').
 ```
 
 ## Quick examples

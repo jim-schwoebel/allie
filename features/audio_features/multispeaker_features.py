@@ -31,7 +31,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 
-This will featurize folders of audio files if the default_audio_features = ["multispeaker_features"]
+This will featurize folders of audio files if the default_audio_features = ['multispeaker_features']
 
 Creates an output array of the number of speakers of an audio file with a deep learning model.
 Note that this works well on short audio clips (<10 seconds) but can be inaccurate on longer audio clips (>10 seconds).

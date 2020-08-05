@@ -116,7 +116,6 @@ textdir=loadmodel_dir+'/text_models'
 imagedir=loadmodel_dir+'/image_models'
 videodir=loadmodel_dir+'/video_models'
 csvdir=loadmodel_dir+'/csv_models'
-testdir=loadmodel_dir+'/tests'
 
 # for if/then statements later
 commands=['annotate', 'augment', 'clean', 'data', 
@@ -149,7 +148,7 @@ parser.add_option("--i", "--class", dest="class_",
 
 # load directory
 parser.add_option("--l", "--ldir", dest="ldir",
-                  help="the directory full of files to make model predictions; if not specified here will default to ./load_dir", metavar="ldir")
+                  help="the directory full of files to make model predictions; if not here will default to ./load_dir", metavar="ldir")
 
 # up to 2 directories listed here
 parser.add_option("--t1", "--tdir1", dest="tdir1",
@@ -159,13 +158,13 @@ parser.add_option("--t2", "--tdir2", dest="tdir2",
 
 # featurization, cleaning, and augmentation directories
 parser.add_option("--d1", "--dir1", dest="dir1",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (required).", metavar="dir1")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir1")
 parser.add_option("--d2", "--dir2", dest="dir2",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (not required).", metavar="dir2")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir2")
 parser.add_option("--d3", "--dir3", dest="dir3",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (not required).", metavar="dir3")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir3")
 parser.add_option("--d4", "--dir4", dest="dir4",
-                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API (not required).", metavar="dir4")
+                  help="the target directory that contains sample files for the features API, augmentation API, and cleaning API.", metavar="dir4")
 
 # parse arguments
 (options, args) = parser.parse_args()
@@ -296,11 +295,11 @@ if str(command) != 'None' and command in commands:
 		if str(ldir) == 'None':
 			print('Making model predictions in ./load_dir because ldir was not specified...')
 			os.chdir(loadmodel_dir)
-			os.chdir('python3 load.py')
+			os.system('python3 load.py')
 		else:
 			print('Making model predictions in the directory speciied: %s'%(str(ldir)))
 			os.chdir(loadmodel_dir)
-			os.chdir('python3 load.py %s'%(ldir))
+			os.system('python3 load.py %s'%(ldir))
 
 	elif cmmand == 'transform':
 		# - Preprocessing API - https://github.com/jim-schwoebel/allie/tree/master/preprocessing
@@ -308,7 +307,7 @@ if str(command) != 'None' and command in commands:
 		# get first folder 
 		if sampletype in sampletypes and problemtype in problemtypes and str(common_name) != 'None' and str(tdir1) != 'None' and str(tdir2) != 'None': 
 			# get second folder 
-			os.chdir('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, tdir1, tdir2))
+			os.system('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, tdir1, tdir2))
 			print('your transform can now be found in the ./preprocessing/%s_transforms directory'%(sampletype))
 		else:
 			if str(tdir1) == 'None' or str(tdir2) == 'None':

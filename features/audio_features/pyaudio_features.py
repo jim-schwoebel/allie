@@ -63,5 +63,3 @@ def pyaudio_featurize(file, basedir):
     os.chdir(curdir)
     
     return features, labels
-    
-# features, labels =pyaudio_featurize('test.wav')

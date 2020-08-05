@@ -68,7 +68,7 @@ Options:
                         specify the common name for the model (e.g. 'gender'
                         for a male/female problem)
   --i=class_, --class=class_
-                        specify the class that you wish to annotate for (e.g.
+                        specify the class that you wish to annotate (e.g.
                         'male')
   --a=ldir, --adir=ldir
                         the directory full of files to annotate (e.g.

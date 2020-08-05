@@ -255,8 +255,8 @@ def audio_clean(cleaning_set, audiofile, basedir):
 		clean_normalizevolume.clean_normalizevolume(audiofile)
 	elif cleaning_set == 'clean_opus':
 		clean_opus.clean_opus(audiofile,basedir+'/helpers/opustools/')
-	elif cleaning_set == 'clean_random20secsplice':
-		clean_random20secsplice.clean_random20secsplice(audiofile)
+	elif cleaning_set == 'clean_randomsplice':
+		clean_randomsplice.clean_randomsplice(audiofile,20)
 	elif cleaning_set == 'clean_removenoise':
 		clean_removenoise.clean_removenoise(audiofile)
 	elif cleaning_set == 'clean_removesilence':
@@ -306,8 +306,8 @@ elif 'clean_opus' in cleaning_sets:
 	import clean_opus
 elif 'clean_normalizevolume' in cleaning_sets:
 	import clean_normalizevolume
-elif 'clean_random20secsplice' in cleaning_sets:
-	import clean_random20secsplice
+elif 'clean_randomsplice' in cleaning_sets:
+	import clean_randomsplice
 elif 'clean_rename' in cleaning_sets:
 	import clean_rename
 elif 'clean_removenoise' in cleaning_sets:

@@ -96,5 +96,3 @@ def clean_videostabilize(videofile):
     # safely close both video streams
     stream_org.stop()
     stream_stab.stop()
-
-clean_videostabilize('stabilizer.mp4')

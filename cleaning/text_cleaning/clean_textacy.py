@@ -63,5 +63,3 @@ def clean_textacy(textfile):
 	textfile2.close()
 
 	os.remove(textfile)
-	
-# clean_textacy('test.txt')

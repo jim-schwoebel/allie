@@ -32,6 +32,9 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
                            
 
 This will featurize folders of audio files if the default_audio_features = ['pyaudio_features']
+
+These are the time series features of the PyAudioAnalysis library. 
+For more information, see the documentation: https://github.com/tyiannak/pyAudioAnalysis
 '''
 
 import argparse, json, os, sys

@@ -36,7 +36,7 @@ Featurizes data with text feautures extracted from the transcript.
 
 These text features include nltk_features, textacy_features, spacy_features, and text_features.
 
-This will featurize folders of audio files if the default_audio_features = ['audiotext_features']
+This will featurize folders of audio files if the default_audio_features = ["audiotext_features"]
 '''
 
 import librosa_features as lf 

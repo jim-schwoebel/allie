@@ -212,16 +212,16 @@ problemtypes = ['c','r']
 # get all the options from the terminal
 parser = OptionParser()
 parser.add_option("--c", "--command", dest="command",
-                  help="the target command (annotate API = 'annotate',\n"+
-	                  "augmentation API = 'augment',\n"+
-	                  "cleaning API = 'clean',\n"+
-	                  "datasets API = 'data'\n"+
-	                  "features API = 'features'\n"+
-	                  "model prediction API = 'predict'\n"+
-	                  "preprocessing API = 'transform'\n"+
-	                  "model training API = 'train'\n"+
-	                  "testing API = 'test'\n"+
-	                  "visualize API = visualize)", metavar="command")
+                  help="the target command (annotate API = 'annotate', \n"+
+	                  "augmentation API = 'augment', \n"+
+	                  "cleaning API = 'clean', \n"+
+	                  "datasets API = 'data', \n"+
+	                  "features API = 'features', \n"+
+	                  "model prediction API = 'predict', \n"+
+	                  "preprocessing API = 'transform', \n"+
+	                  "model training API = 'train', \n"+
+	                  "testing API = 'test', \n"+
+	                  "visualize API = 'visualize')", metavar="command")
 parser.add_option("--p", "--problemtype", dest="problemtype",
 				  help="specify the problem type ('c' = classification or 'r' = regression)", metavar="problemtype")
 parser.add_option("--s", "--sampletype", dest="sampletype",

@@ -60,7 +60,7 @@ Options:
                         'test' visualize API = visualize)
   --p=problemtype, --problemtype=problemtype
                         specify the problem type (-c classification or -r
-                        regression
+                        regression)
   --s=sampletype, --sampletype=sampletype
                         specify the type files that you'd like to operate on
                         (e.g. audio, text, image, video, csv)
@@ -92,7 +92,7 @@ Options:
                         the features API, augmentation API, and cleaning API.
   --d4=dir4, --dir4=dir4
                         the target directory that contains sample files for
-                        the features API, augmentation API, and cleaning API
+                        the features API, augmentation API, and cleaning API.
 ```
 
 ## Quick examples

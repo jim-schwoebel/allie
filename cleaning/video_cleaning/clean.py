@@ -34,6 +34,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 This section of Allie's API cleans folders of video files
 using the default_video_cleaners.
+
+Usage: python3 clean.py [folder] [cleantype]
+
+All cleantype options include:
+["clean_alignfaces", "clean_videostabilize"]
+
+Read more @ https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning
 '''
 
 ################################################

@@ -1,61 +1,36 @@
 '''
-================================================ 
-##            VOICEBOOK REPOSITORY            ##      
-================================================ 
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
-repository name: voicebook 
-repository version: 1.0 
-repository link: https://github.com/jim-schwoebel/voicebook 
-author: Jim Schwoebel 
-author contact: js@neurolex.co 
-description: a book and repo to get you started programming voice applications in Python - 10 chapters and 200+ scripts. 
-license category: opensource 
-license: Apache 2.0 license 
-organization name: NeuroLex Laboratories, Inc. 
-location: Seattle, WA 
-website: https://neurolex.ai 
-release date: 2018-09-28 
 
-This code (voicebook) is hereby released under a Apache 2.0 license license. 
-
-For more information, check out the license terms below. 
-
-================================================ 
-##               LICENSE TERMS                ##      
-================================================ 
-
-Copyright 2018 NeuroLex Laboratories, Inc. 
-
-Licensed under the Apache License, Version 2.0 (the "License"); 
-you may not use this file except in compliance with the License. 
-You may obtain a copy of the License at 
-
-     http://www.apache.org/licenses/LICENSE-2.0 
-
-Unless required by applicable law or agreed to in writing, software 
-distributed under the License is distributed on an "AS IS" BASIS, 
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
-See the License for the specific language governing permissions and 
-limitations under the License. 
-
-================================================ 
-##               SERVICE STATEMENT            ##        
-================================================ 
-
-If you are using the code written for a larger project, we are 
-happy to consult with you and help you with deployment. Our team 
-has >10 world experts in Kafka distributed architectures, microservices 
-built on top of Node.js / Python / Docker, and applying machine learning to 
-model speech and text data. 
-
-We have helped a wide variety of enterprises - small businesses, 
-researchers, enterprises, and/or independent developers. 
-
-If you would like to work with us let us know @ js@neurolex.co. 
-
-================================================ 
-##            LIBROSA_FEATURES.PY             ##    
-================================================ 
+|  ___|       | |                        / _ \ | ___ \_   _|  _ 
+| |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
+|  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
+| ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
+\_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
+                                                                
+                                                                
+  ___            _ _       
+ / _ \          | (_)      
+/ /_\ \_   _  __| |_  ___  
+|  _  | | | |/ _` | |/ _ \ 
+| | | | |_| | (_| | | (_) |
+\_| |_/\__,_|\__,_|_|\___/ 
+                           
 
 Extracts acoustic features using the LibROSA library;
 saves them as mean, standard devaition, amx, min, and median
@@ -63,6 +38,10 @@ in different classes: onset, rhythm, spectral, and power categories.
 
 Note this is quite a powerful audio feature set that can be used
 for a variety of purposes. 
+
+For more information, check out libROSA's documentation: https://librosa.org/
+
+This will featurize folders of audio files if the default_audio_features = ['librosa_features']
 '''
 import librosa
 import numpy as np 
@@ -223,7 +202,3 @@ def librosa_featurize(filename, categorize):
         labels=onset_labels+rhythm_labels+spectral_labels+power_labels
 
     return features, labels
-
-# features, labels =librosa_featurize('test.wav', True)
-# print(len(features['power']))
-# print(len(labels['power']))

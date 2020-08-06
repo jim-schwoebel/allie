@@ -19,8 +19,8 @@ def augment_tsaug(filename):
 		print(y.shape)
 		# y=np.expand_dims(y.swapaxes(0,1), 0)
 
-		# 1 second splice
-		splice=random.randint(0,duration-1)
+		# N second splice between 1 second to N-1 secondsd
+		splice=random.randint(1,duration-1)
 
 		my_augmenter = (Crop(size=sr * splice) * 5  # random crop subsequences of splice seconds
 		+ AddNoise(scale=(0.01, 0.05)) @ 0.5  # with 50% probability, add random noise up to 1% - 5%

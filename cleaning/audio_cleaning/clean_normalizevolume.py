@@ -38,10 +38,11 @@ as noise will be amplified if the noise has high volume.
 
 This cleaning script is enabled if default_audio_cleaners=['clean_normalizevolume'] 
 '''
-import sys, os, ffmpeg_normalize 
+import sys, os, ffmpeg_normalize, uuid
 
 def clean_normalizevolume(audiofile):
     # using peak normalization method 
-    os.system('ffmpeg-normalize %s -nt peak -t 0 -o peak_normalized.wav'%(audiofile))
+    file=str(uuid.uuid4())+'.wav'
+    os.system('ffmpeg-normalize %s -nt peak -t 0 -o %s'%(audiofile,file))
     os.remove(audiofile)
-    os.rename('peak_normalized.wav', audiofile)
+    os.rename(file, audiofile)

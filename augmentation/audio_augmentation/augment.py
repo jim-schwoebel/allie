@@ -290,19 +290,19 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'augment_addnoise' in augmentation_sets:
 	import augment_addnoise
-elif 'augment_noise' in augmentation_sets:
+if 'augment_noise' in augmentation_sets:
 	import augment_noise
-elif 'augment_pitch' in augmentation_sets:
+if 'augment_pitch' in augmentation_sets:
 	import augment_pitch
-elif 'augment_randomsplice' in augmentation_sets:
+if 'augment_randomsplice' in augmentation_sets:
 	import augment_randomsplice
-elif 'augment_silence' in augmentation_sets:
+if 'augment_silence' in augmentation_sets:
 	import augment_silence
-elif 'augment_time' in augmentation_sets:
+if 'augment_time' in augmentation_sets:
 	import augment_time
-elif 'augment_tsaug' in augmentation_sets:
+if 'augment_tsaug' in augmentation_sets:
 	import augment_tsaug
-elif 'augment_volume' in augmentation_sets:
+if 'augment_volume' in augmentation_sets:
 	import augment_volume
 
 ################################################

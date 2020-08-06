@@ -102,7 +102,7 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'augment_eda' in augmentation_sets:
 	import augment_eda
-elif 'augment_textacy' in augmentation_sets:
+if 'augment_textacy' in augmentation_sets:
 	import augment_textacy
 
 ################################################

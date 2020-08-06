@@ -106,9 +106,9 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'clean_greyscale' in cleaning_sets:
 	import clean_greyscale
-elif 'clean_extractfaces' in cleaning_sets:
+if 'clean_extractfaces' in cleaning_sets:
 	import clean_extractfaces
-elif 'clean_jpg2png' in cleaning_sets:
+if 'clean_jpg2png' in cleaning_sets:
 	import clean_jpg2png
 
 ################################################

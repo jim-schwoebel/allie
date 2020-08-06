@@ -12,7 +12,7 @@ python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 * [clean_getfirst3secs]() - gets the first 3 seconds of the audio file
 * [clean_keyword]() - keeps only keywords that are spoken based on a transcript (from the default_audio_transcriber)
 * [clean_mono16hz]() - converts all audio to mono 16000 Hz for analysis (helps prepare for many preprocessing techniques)
-* [clean_towav]() - converts all mp3 files to wav files
+* [clean_towav]() - converts all audio files to wav files
 * [clean_multispeaker]() - deletes audio files from a dataset that have been identified as having multiple speakers from a deep learning model
 * [clean_normalizevolume]() - normalizes the volume of all audio files using peak normalization methods from ffmpeg-normalize
 * [clean_opus]() - converts an audio file to .OPUS audio file format then back to wav (a lossy conversion) - narrowing in more on voice signals over noise signals.

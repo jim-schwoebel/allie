@@ -9,7 +9,7 @@
  "default_audio_transcriber": ["deepspeech_dict"], 
  "default_csv_augmenters": ["augment_ctgan_regression"], 
  "default_csv_cleaners": ["clean_csv"], 
- "default_csv_features": ["csv_features"], 
+ "default_csv_features": ["csv_features_regression"], 
  "default_csv_transcriber": ["raw text"], 
  "default_dimensionality_reducer": ["pca"], 
  "default_feature_selector": ["rfe"], 

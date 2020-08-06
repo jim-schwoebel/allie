@@ -124,6 +124,7 @@ def featurize(features_dir, load_dir, model_dir, filetypes, models):
 
 	# call featurization API via default features
 	for i in range(len(default_features)):
+		print(os.getcwd())
 		os.system('python3 featurize.py %s %s'%(load_dir, default_features[i]))
 
 
@@ -161,187 +162,291 @@ def find_files(model_dir):
 				jsonfiles.append(jsonfile)
 
 	elif model_dir =='csv_models':
-
+		# csv files are a little different here 
 		listdir=os.listdir()
+		csvfiles=list()
 		for i in range(len(listdir)):
-			jsonfile=listdir[i][0:-4]+'.json'
-			if listdir[i].endswith('.csv') and jsonfile in listdir:
-				jsonfiles.append(jsonfile)
+			csvfile='featurized_'+listdir[i]
+			if listdir[i].endswith('.csv') and csvfile in listdir:
+				csvfiles.append(csvfile)
 
 	else:
 		jsonfiles=[]
 
 	print(jsonfiles)
-	return jsonfiles
+	return jsonfiles, csvfiles
 
-def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata, model_dir):
+def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, csvfiles, default_features, classes, modeldata, model_dir):
 	'''
 	get the metrics associated iwth a classification and regression problem
 	and output a .JSON file with the training session.
 	'''
+
 	sampletype=sampletype.split('_')[0]
 
-	for k in range(len(jsonfiles)):
-		# try:
-		g=json.load(open(jsonfiles[k]))
-		print(sampletype)
-		print(g)
-		features=list()
-		print(default_features)
-		for j in range(len(default_features)):
-			print(sampletype)
-			features=features+g['features'][sampletype][default_features[j]]['features']
-		
-		labels=g['features'][sampletype][default_features[0]]['labels']
-		print(transformer)
-
-		print(features)
-		if transformer != '':
-				features=np.array(transformer.transform(np.array(features).reshape(1, -1))).reshape(1, -1)
-		else:
-				features=np.array(features).reshape(1,-1)
-		print(features)
-		metrics_=dict()
-
-		print(modeltype)
-
-		if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
-				y_pred=clf.predict(features)
-
-		elif modeltype=='alphapy':
-				# go to the right folder 
-				curdir=os.getcwd()
-				print(os.listdir())
-				os.chdir(common_name+'_alphapy_session')
-				alphapy_dir=os.getcwd()
-				os.chdir('input')
-				os.rename('test.csv', 'predict.csv')
-				os.chdir(alphapy_dir)
-				os.system('alphapy --predict')
-				os.chdir('output')
-				listdir=os.listdir()
-				for k in range(len(listdir)):
-						if listdir[k].startswith('predictions'):
-								csvfile=listdir[k]
-				y_pred=pd.read_csv(csvfile)['prediction']
-				os.chdir(curdir)
-
-		elif modeltype == 'autogluon':
-				curdir=os.getcwd()
-				os.chdir(model_dir+'/model/')
-				from autogluon import TabularPrediction as task
-				print(os.getcwd())
-				
-				if transformer != '':
-					new_features=dict()
-					for i in range(len(features[0])):
-						new_features['feature_%s'%(str(i))]=[features[0][i]]
-					print(new_features)
-					df=pd.DataFrame(new_features)
-				else:
-					df=pd.DataFrame(features, columns=labels)
-				y_pred=clf.predict(df)
-				os.chdir(curdir)
-
-		elif modeltype == 'autokeras':
-				curdir=os.getcwd()
-				os.chdir(model_dir+'/model')
-				print(os.getcwd())
-				y_pred=clf.predict(features).flatten()
-				os.chdir(curdir)
-		elif modeltype == 'autopytorch':
-				y_pred=clf.predict(features).flatten()
-
-		elif modeltype == 'atm':
-				curdir=os.getcwd()
-				os.chdir('atm_temp')
-				data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
-				y_pred = clf.predict(data)
-				os.chdir(curdir)
-
-		elif modeltype == 'ludwig':
-				data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
-				pred=clf.predict(data)['class__predictions']
-				y_pred=np.array(list(pred), dtype=np.int64)
-
-		elif modeltype== 'devol':
-				features=features.reshape(features.shape+ (1,)+ (1,))
-				y_pred=clf.predict_classes(features).flatten()
-
-		elif modeltype=='keras':
-				if mtype == 'c':
-					y_pred=clf.predict_classes(features).flatten()
-				elif mtype == 'r':
-						y_pred=clf.predict(feaures).flatten()
-
-		elif modeltype =='neuraxle':
-				y_pred=clf.transform(features)
-
-		elif modeltype=='safe':
-				# have to make into a pandas dataframe
-				test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
-				y_pred=clf.predict(test_data)
-				# update model in schema
-
-		# except:
-			# print('error %s'%(modeltype.upper()))
-
-		# try:
-		# get class from classes (assuming classification)
-		'''
-		X={'male': [1],
-			'female': [2],
-			'other': [3]}
-
-		then do a search of the values
-		names=list(X) --> ['male', 'female', 'other']		
-		i1=X.values().index([1]) --> 0 
-		names[i1] --> male 
-		'''
-		
-		# print(modeldata)
-		outputs=dict()
-		for i in range(len(classes)):
-			outputs[classes[i]]=[i]
-
-		names=list(outputs)
-		i1=list(outputs.values()).index(y_pred)
-		class_=classes[i1]
-
-		print(y_pred)
-		print(outputs)
-		print(i1)
-		print(class_)
-
-		try:
-			models=g['models']
-		except:
-			models=models=model_schema()
-
-		temp=models[sampletype]
-
-		if class_ not in list(temp):
-			temp[class_]= [modeldata]
-		else:
-			tclass=temp[class_]
+	if sampletype != 'csv':
+		for k in range(len(jsonfiles)):
 			try:
-				# make a list if it is not already to be compatible with deprecated versions
-				tclass.append(modeldata)
-			except:
-				tclass=[tclass]
-				tclass.append(modeldata)
-			temp[class_]=tclass
-			
-		models[sampletype]=temp
-		g['models']=models
-		print(class_)
+				g=json.load(open(jsonfiles[k]))
+				print(sampletype)
+				print(g)
+				features=list()
+				print(default_features)
+				for j in range(len(default_features)):
+					print(sampletype)
+					features=features+g['features'][sampletype][default_features[j]]['features']
+				
+				labels=g['features'][sampletype][default_features[0]]['labels']
+				print(transformer)
 
-		# update database
-		jsonfilename=open(jsonfiles[k],'w')
-		json.dump(g,jsonfilename)
-		jsonfilename.close()
-		# except:
-			# print('error making jsonfile %s'%(jsonfiles[k].upper()))
+				print(features)
+				if transformer != '':
+						features=np.array(transformer.transform(np.array(features).reshape(1, -1))).reshape(1, -1)
+				else:
+						features=np.array(features).reshape(1,-1)
+				print(features)
+				metrics_=dict()
+
+				print(modeltype)
+
+				if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
+						y_pred=clf.predict(features)
+
+				elif modeltype=='alphapy':
+						# go to the right folder 
+						curdir=os.getcwd()
+						print(os.listdir())
+						os.chdir(common_name+'_alphapy_session')
+						alphapy_dir=os.getcwd()
+						os.chdir('input')
+						os.rename('test.csv', 'predict.csv')
+						os.chdir(alphapy_dir)
+						os.system('alphapy --predict')
+						os.chdir('output')
+						listdir=os.listdir()
+						for k in range(len(listdir)):
+								if listdir[k].startswith('predictions'):
+										csvfile=listdir[k]
+						y_pred=pd.read_csv(csvfile)['prediction']
+						os.chdir(curdir)
+
+				elif modeltype == 'autogluon':
+						curdir=os.getcwd()
+						os.chdir(model_dir+'/model/')
+						from autogluon import TabularPrediction as task
+						print(os.getcwd())
+						
+						if transformer != '':
+							new_features=dict()
+							for i in range(len(features[0])):
+								new_features['feature_%s'%(str(i))]=[features[0][i]]
+							print(new_features)
+							df=pd.DataFrame(new_features)
+						else:
+							df=pd.DataFrame(features, columns=labels)
+						y_pred=clf.predict(df)
+						os.chdir(curdir)
+
+				elif modeltype == 'autokeras':
+						curdir=os.getcwd()
+						os.chdir(model_dir+'/model')
+						print(os.getcwd())
+						y_pred=clf.predict(features).flatten()
+						os.chdir(curdir)
+				elif modeltype == 'autopytorch':
+						y_pred=clf.predict(features).flatten()
+
+				elif modeltype == 'atm':
+						curdir=os.getcwd()
+						os.chdir('atm_temp')
+						data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+						y_pred = clf.predict(data)
+						os.chdir(curdir)
+
+				elif modeltype == 'ludwig':
+						data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+						pred=clf.predict(data)['class__predictions']
+						y_pred=np.array(list(pred), dtype=np.int64)
+
+				elif modeltype== 'devol':
+						features=features.reshape(features.shape+ (1,)+ (1,))
+						y_pred=clf.predict_classes(features).flatten()
+
+				elif modeltype=='keras':
+						if mtype == 'c':
+							y_pred=clf.predict_classes(features).flatten()
+						elif mtype == 'r':
+								y_pred=clf.predict(feaures).flatten()
+
+				elif modeltype =='neuraxle':
+						y_pred=clf.transform(features)
+
+				elif modeltype=='safe':
+						# have to make into a pandas dataframe
+						test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
+						y_pred=clf.predict(test_data)
+						# update model in schema
+
+				# except:
+					# print('error %s'%(modeltype.upper()))
+
+				# try:
+				# get class from classes (assuming classification)
+				'''
+				X={'male': [1],
+					'female': [2],
+					'other': [3]}
+
+				then do a search of the values
+				names=list(X) --> ['male', 'female', 'other']		
+				i1=X.values().index([1]) --> 0 
+				names[i1] --> male 
+				'''
+				
+				# print(modeldata)
+				outputs=dict()
+				for i in range(len(classes)):
+					outputs[classes[i]]=[i]
+
+				names=list(outputs)
+				i1=list(outputs.values()).index(y_pred)
+				class_=classes[i1]
+
+				print(y_pred)
+				print(outputs)
+				print(i1)
+				print(class_)
+
+				try:
+					models=g['models']
+				except:
+					models=models=model_schema()
+
+				temp=models[sampletype]
+
+				if class_ not in list(temp):
+					temp[class_]= [modeldata]
+				else:
+					tclass=temp[class_]
+					try:
+						# make a list if it is not already to be compatible with deprecated versions
+						tclass.append(modeldata)
+					except:
+						tclass=[tclass]
+						tclass.append(modeldata)
+					temp[class_]=tclass
+					
+				models[sampletype]=temp
+				g['models']=models
+				print(class_)
+
+				# update database
+				jsonfilename=open(jsonfiles[k],'w')
+				json.dump(g,jsonfilename)
+				jsonfilename.close()
+			except:
+				print('error making jsonfile %s'%(jsonfiles[k].upper()))
+	else:
+		try:
+			for k in range(len(csvfiles)):
+				
+				if len(csvfiles[k].split('featurized')) == 2:
+					features=pd.read_csv(csvfiles[k])
+					oldfeatures=features
+					print(features)
+					if transformer != '':
+							features=np.array(transformer.transform(np.array(features)))
+					else:
+							features=np.array(features)
+					print(features)
+					metrics_=dict()
+
+					print(modeltype)
+
+					if modeltype not in ['autogluon', 'autokeras', 'autopytorch', 'alphapy', 'atm', 'keras', 'devol', 'ludwig', 'safe', 'neuraxle']:
+							y_pred=clf.predict(features)
+
+					elif modeltype=='alphapy':
+							# go to the right folder 
+							curdir=os.getcwd()
+							print(os.listdir())
+							os.chdir(common_name+'_alphapy_session')
+							alphapy_dir=os.getcwd()
+							os.chdir('input')
+							os.rename('test.csv', 'predict.csv')
+							os.chdir(alphapy_dir)
+							os.system('alphapy --predict')
+							os.chdir('output')
+							listdir=os.listdir()
+							for k in range(len(listdir)):
+									if listdir[k].startswith('predictions'):
+											csvfile=listdir[k]
+							y_pred=pd.read_csv(csvfile)['prediction']
+							os.chdir(curdir)
+
+					elif modeltype == 'autogluon':
+							curdir=os.getcwd()
+							os.chdir(model_dir+'/model/')
+							from autogluon import TabularPrediction as task
+							print(os.getcwd())
+							
+							if transformer != '':
+								new_features=dict()
+								for i in range(len(features[0])):
+									new_features['feature_%s'%(str(i))]=[features[0][i]]
+								print(new_features)
+								df=pd.DataFrame(new_features)
+							else:
+								df=pd.DataFrame(features, columns=labels)
+							y_pred=clf.predict(df)
+							os.chdir(curdir)
+
+					elif modeltype == 'autokeras':
+							curdir=os.getcwd()
+							os.chdir(model_dir+'/model')
+							print(os.getcwd())
+							y_pred=clf.predict(features).flatten()
+							os.chdir(curdir)
+					elif modeltype == 'autopytorch':
+							y_pred=clf.predict(features).flatten()
+
+					elif modeltype == 'atm':
+							curdir=os.getcwd()
+							os.chdir('atm_temp')
+							data = pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+							y_pred = clf.predict(data)
+							os.chdir(curdir)
+
+					elif modeltype == 'ludwig':
+							data=pd.read_csv('test.csv').drop(labels=['class_'], axis=1)
+							pred=clf.predict(data)['class__predictions']
+							y_pred=np.array(list(pred), dtype=np.int64)
+
+					elif modeltype== 'devol':
+							features=features.reshape(features.shape+ (1,)+ (1,))
+							y_pred=clf.predict_classes(features).flatten()
+
+					elif modeltype=='keras':
+							if mtype == 'c':
+								y_pred=clf.predict_classes(features).flatten()
+							elif mtype == 'r':
+									y_pred=clf.predict(feaures).flatten()
+
+					elif modeltype =='neuraxle':
+							y_pred=clf.transform(features)
+
+					elif modeltype=='safe':
+							# have to make into a pandas dataframe
+							test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
+							y_pred=clf.predict(test_data)
+							# update model in schema
+
+					y_pred=pd.DataFrame(y_pred)
+					oldfeatures['class_']=y_pred
+					print(type(y_pred))	
+					oldfeatures.to_csv(csvfiles[k].replace('featurized','predictions'), index=False)
+		except:
+			pass
 
 def load_model(folder_name):
 
@@ -526,39 +631,39 @@ for i in range(len(model_dirs)):
 
 # now model everything
 for i in range(len(model_dirs)):
-	try:
-		if model_dirs[i].split('_')[0] in filetypes:
+	# try:
+	if model_dirs[i].split('_')[0] in filetypes:
 
-			print('-----------------------')
-			print('MODELING %s'%(model_dirs[i].upper()))
-			print('-----------------------')
+		print('-----------------------')
+		print('MODELING %s'%(model_dirs[i].upper()))
+		print('-----------------------')
+		os.chdir(model_dir)
+		os.chdir(model_dirs[i])
+		models_=models[model_dirs[i]]
+
+		# get default features
+		print(model_dirs[i])
+		if model_dirs[i] == 'audio_models':
+			default_features =default_audio_features
+		elif model_dirs[i] == 'text_models':
+			default_features = default_text_features
+		elif model_dirs[i] == 'image_models':
+			default_features = default_image_features
+		elif model_dirs[i] == 'video_models':
+			default_features = default_video_features
+		elif model_dirs[i] == 'csv_models':
+			default_features = default_csv_features
+
+		# loop through models
+		for j in range(len(models_)):
 			os.chdir(model_dir)
 			os.chdir(model_dirs[i])
-			models_=models[model_dirs[i]]
-
-			# get default features
-			print(model_dirs[i])
-			if model_dirs[i] == 'audio_models':
-				default_features =default_audio_features
-			elif model_dirs[i] == 'text_models':
-				default_features = default_text_features
-			elif model_dirs[i] == 'image_models':
-				default_features = default_image_features
-			elif model_dirs[i] == 'video_models':
-				default_features = default_video_features
-			elif model_dirs[i] == 'csv_models':
-				default_features = default_csv_features
-
-			# loop through models
-			for j in range(len(models_)):
-				os.chdir(model_dir)
-				os.chdir(model_dirs[i])
-				print('--> predicting %s'%(models_[j]))
-				os.chdir(models_[j])
-				os.chdir('model')
-				transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
-				os.chdir(load_dir)
-				jsonfiles=find_files(model_dirs[i])
-				make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, default_features, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
-	except:
-		print('error')
+			print('--> predicting %s'%(models_[j]))
+			os.chdir(models_[j])
+			os.chdir('model')
+			transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
+			os.chdir(load_dir)
+			jsonfiles, csvfiles=find_files(model_dirs[i])
+			make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, csvfiles, default_features, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
+	# except:
+		# print('error')

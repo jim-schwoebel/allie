@@ -31,6 +31,9 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | \__/\/\__/ /\ \_/ /
  \____/\____/  \___/ 
  
+Note that this script is not used for Allie version 1.0 and will be 
+updated in future releases.
+ 
 Usage: python3 featurize.py [folder] [featuretype]
 
 All featuretype options include:
@@ -70,7 +73,10 @@ def csv_featurize(features_dir, feature_set, csvfile, cur_dir):
 
 	if feature_set == 'csv_features_regression':
 		os.chdir(features_dir)
-		os.system('python3 featurize_csv_regression.py --input %s --output %s --target %s'%(cur_dir+'/'+csvfile, cur_dir+'/'+'featurized_'+csvfile, 'target'))
+		if len(csvfile.split('featurized')) == 2 or len(csvfile.split('predictions'))==2:
+			pass
+		else:
+			os.system('python3 featurize_csv_regression.py --input %s --output %s --target %s'%(cur_dir+'/'+csvfile, cur_dir+'/'+'featurized_'+csvfile, 'target'))
 	else:
 		print('-----------------------')
 		print('!!		error		!!')
@@ -125,16 +131,16 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 
 	# make audio file into spectrogram and analyze those images if audio file
 	if listdir[i][-4:] in ['.csv']:
-		# try:
-		csv_file=listdir[i]
-		sampletype='csv'
-		# I think it's okay to assume audio less than a minute here...
-		if 'featurized_'+listdir[i] not in listdir:
-			# featurize the csv file 
-			for j in range(len(feature_sets)):
-				feature_set=feature_sets[j]
-				csv_featurize(features_dir, feature_set, csv_file, cur_dir)
-		elif 'featurized_'+listdir[i] in listdir:
-			pass			
-		# except:
-			# print('error')
+		try:
+			csv_file=listdir[i]
+			sampletype='csv'
+			# I think it's okay to assume audio less than a minute here...
+			if 'featurized_'+listdir[i] not in listdir:
+				# featurize the csv file 
+				for j in range(len(feature_sets)):
+					feature_set=feature_sets[j]
+					csv_featurize(features_dir, feature_set, csv_file, cur_dir)
+			elif 'featurized_'+listdir[i] in listdir:
+				pass			
+		except:
+			print('error')

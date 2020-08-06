@@ -342,10 +342,17 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	basedir=prev_dir(curdir)
 	os.chdir(basedir)
 	os.system('pip3 freeze -> requirements.txt')
-	try:
-		shutil.copytree(prev_dir(prev_dir(basedir))+'/features', basedir+'/features')
-	except:
-		print('error copying features')
+	# try:
+	# 	shutil.copytree(prev_dir(prev_dir(basedir))+'/features', basedir+'/features')
+	# except:
+	# 	print('error copying features')
+	# try:
+	# 	shutil.copytree(prev_dir(prev_dir(basedir))+'/cleaning', basedir+'/cleaning')
+	# except:
+	# 	print('error copying cleaning techniques')
+	# 	shutil.copytree(prev_dir(prev_dir(basedir))+'/augmentation', basedir+'/augmentation')
+	# except:
+	# 	print('error copying augmentation techniques')
 	os.chdir(curdir)
 
 def plot_roc_curve(y_test, probs, clf_names):  

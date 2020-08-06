@@ -1,10 +1,11 @@
 import os, librosa
 import numpy as np
+import random
 from tsaug import Crop, AddNoise, Dropout
 import soundfile as sf
 
 '''
-random crop subsequences of 10 seconds,
+random crop subsequences of randomly spliced audio file.
 with 50% probability, add random noise up to 1% - 5%,
 drop out 10% of the time points (dropped out units are 1 ms, 10 ms, or 100 ms) and fill the dropped out points with zeros.
 '''
@@ -14,11 +15,12 @@ def augment_tsaug(filename):
 		https://tsaug.readthedocs.io/en/stable/
 		'''
 		y, sr = librosa.load(filename, mono=False)
+		duration=int(librosa.core.get_duration(y,sr))
 		print(y.shape)
 		# y=np.expand_dims(y.swapaxes(0,1), 0)
 
 		# 1 second splice
-		splice=1
+		splice=random.randint(0,duration-1)
 
 		my_augmenter = (Crop(size=sr * splice) * 5  # random crop subsequences of splice seconds
 		+ AddNoise(scale=(0.01, 0.05)) @ 0.5  # with 50% probability, add random noise up to 1% - 5%

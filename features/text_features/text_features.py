@@ -147,59 +147,6 @@ def honores_statistic(s, tokens = None):
   else:
     return (100 * math.log(N)) / (1 - (V1 / V))
 
-def emotion_freqs(importtext):
-    
-    tokens=word_tokenize(importtext)
-
-    #emotions - fear, anger, sadness, joy, disgust, suprise, trust, anticipation
-    fearwords=['scared','afraid','avoid','not','no','anxiety','road','spider','snake','heights','die','falling','death','fast','despair','agonize','bother','worry','endure','sustain','tolerate','creeps','jitters','nervous','nervousness','concerned','worry']
-    angerwords=['angry','mad','injustice','annoyed','school','work','predictable','upset','frustrated','sick','tired','fuck','shoot','shit','darn','sucks','bad','ugly']
-    sadwords=['sad','depressed','cry','bad','disappointed','distress','uneasy','upset','regret','dismal','black','hopeless']
-    joywords=['happy','glad','swell','pleasant','well','good','joy','sweet','grateful','ecstatic','euphoric','encouraged','smile','laugh','content','satisfied','delighted']
-    disgustwords=['wrong','disgusting','bad','taste', 'aversion','horror','repulsed','hate','allergy','dislike','displeasure']
-    surprisewords=['surprised','appetite','fondness','like','relish','shine','surprise','unexpected','random','new','plastic','cool']
-    trustwords=['useful','trust','listen','insight','believe','seek','see','feel','touch','mom','brother','friend','girlfriend','father','dad','uncle','family']
-    anticipationwords=['excited','looking','forward','to','birthday','anniversary','christmas','new years','halloween','party','expectation']
-    fear=0
-    anger=0
-    sad=0
-    joy=0
-    disgust=0
-    surprise=0
-    trust=0
-    anticipation=0
-    for i in range(len(tokens)):
-        if tokens[i].lower() in fearwords:
-            fear=fear+1
-        if tokens[i].lower() in angerwords:
-            anger=anger+1
-        if tokens[i].lower() in sadwords:
-            sad=sad+1
-        if tokens[i].lower() in joywords:
-            joy=joy+1
-        if tokens[i].lower() in disgustwords:
-            disgust=disgust+1
-        if tokens[i].lower() in surprisewords:
-            surprise=surprise+1
-        if tokens[i].lower() in trustwords:
-            trust=trust+1
-        if tokens[i].lower() in anticipationwords:
-            anticipation=anticipation+1
-
-    try:
-        fearfreq=float(fear/len(tokens))
-        angerfreq=float(anger/len(tokens))
-        sadfreq=float(sad/len(tokens))
-        joyfreq=float(joy/len(tokens))
-        disgustfreq=float(disgust/len(tokens))
-        surprisefreq=float(surprise/len(tokens))
-        trustfreq=float(trust/len(tokens))
-        anticipationfreq=float(anticipation/len(tokens))
-        array_=[fearfreq,angerfreq,sadfreq,joyfreq,disgustfreq,surprisefreq,trustfreq,anticipationfreq]
-    except:
-        array_=[0,0,0,0,0,0,0,0,0]
-    return 
-
 def datewords_freq(importtext):
 
     text=word_tokenize(importtext.lower())
@@ -299,7 +246,7 @@ def word_repeats(importtext):
     repeatavg=repeatnum/sentencenum
 
     #repeated word freqdist 
-    return [repeatedwords, sentencenum, repeatavg]
+    return [repeatavg]
 
 def text_featurize(transcript):
   labels=list()
@@ -313,19 +260,16 @@ def text_featurize(transcript):
           brunets_index(transcript),
           honores_statistic(transcript),
           datewords_freq(transcript)]
-  features2=emotion_freqs(transcript)
-  features3=word_stats(transcript)
-  features4=num_sentences(transcript)
-  features5=word_repeats(transcript)
+  features2=word_stats(transcript)
+  features3=num_sentences(transcript)
+  features4=word_repeats(transcript)
 
   # extract labels 
   labels1=['filler ratio', 'type token ratio', 'standardized word entropy', 'question ratio', 'number ratio', 'Brunets Index',
-        'Honores statistic', 'datewords freq']
-  labels2=['fearfreq', 'angerfreq', 'sadfreq', 'joyfreq', 'disgustfreq', 'surprisefreq', 'trustfreq', 'anticipationfreq']
-  labels3=['word number', 'five word count', 'max word length', 'min word length', 'variance of vocabulary', 'std of vocabulary']
-  labels4=['sentencenum', 'periods', 'questions', 'interjections']
-  labels5=['repeatedwords','sentencenum','repeatavg']
-  # combine everything
+          'Honores statistic', 'datewords freq']
+  labels2=['word number', 'five word count', 'max word length', 'min word length', 'variance of vocabulary', 'std of vocabulary']
+  labels3=['sentencenum', 'periods', 'questions', 'interjections']
+  labels4=['repeatavg']
   features=features1+features2+features3+features4
   labels=labels1+labels2+labels3+labels4
 

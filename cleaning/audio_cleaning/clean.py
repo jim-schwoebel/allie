@@ -38,7 +38,7 @@ using the default_audio_cleaners.
 Usage: python3 clean.py [folder] [cleantype]
 
 All cleantype options include:
-["clean_getfirst3secs", "clean_keyword", "clean_mono16hz", "clean_mp3towav", 
+["clean_getfirst3secs", "clean_keyword", "clean_mono16hz", "clean_towav", 
 "clean_multispeaker", "clean_normalizevolume", "clean_opus", "clean_randomsplice",
 "clean_removenoise", "clean_removesilence", "clean_rename", "clean_utterances"]
 
@@ -253,8 +253,8 @@ def audio_clean(cleaning_set, audiofile, basedir):
 		clean_getfirst3secs.clean_getfirst3secs(audiofile)
 	elif cleaning_set == 'clean_mono16hz':
 		clean_mono16hz.clean_mono16hz(audiofile)
-	elif cleaning_set == 'clean_mp3towav':
-		clean_mp3towav.clean_mp3towav(audiofile)
+	elif cleaning_set == 'clean_towav':
+		clean_towav.clean_towav(audiofile)
 	elif cleaning_set == 'clean_keyword':
 		clean_keyword.clean_keyword(audiofile,'coconut')
 	elif cleaning_set == 'clean_multispeaker':
@@ -305,8 +305,8 @@ if 'clean_getfirst3secs' in cleaning_sets:
 	import clean_getfirst3secs
 elif 'clean_mono16hz' in cleaning_sets:
 	import clean_mono16hz
-elif 'clean_mp3towav' in cleaning_sets:
-	import clean_mp3towav
+elif 'clean_towav' in cleaning_sets:
+	import clean_towav
 elif 'clean_keyword' in cleaning_sets:
 	import clean_keyword
 elif 'clean_multispeaker' in cleaning_sets:

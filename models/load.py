@@ -26,10 +26,15 @@ Make model predictions using this load.py script. This loads in all models in th
 directory and makes predictions on a target folder. Note that files in this target
 directory will be featurized with the default features as specified by the settings.json.
 
-Usage: python3 load.py [target directory]
+Usage: python3 load.py [target directory] [sampletype] [target model directory]
+
+Example: python3 load.py /Users/jim/desktop/allie/load_dir audio /Users/jim/desktop/gender_tpot_classifier
+
+Alt Usage: python3 load.py
+--> this just loads all the models and makes predictions in the ./load_dir
 '''
 
-import os, json, pickle, time
+import os, json, pickle, time, sys, shutil
 import pandas as pd
 import numpy as np
 
@@ -80,23 +85,47 @@ def classifyfolder(listdir):
 
 	return filetypes
 
-def featurize(features_dir, load_dir, model_dir, filetypes):
-	# featurize by directories
+def get_features(models, actual_model_dir, sampletype):
+	models=models['%s_models'%(sampletype)]
+	features=list()
+	for i in range(len(models)):
+		os.chdir(actual_model_dir+'/'+models[i])
+		temp_settings=json.load(open('settings.json'))
+		features=features+temp_settings['default_%s_features'%(sampletype)]
+	# get only the necessary features for all models
+	default_features=list(set(features))
+
+	return default_features
+
+def featurize(features_dir, load_dir, model_dir, filetypes, models):
+
+	# contextually load the proper features based on the model information
+	actual_model_dir=prev_dir(features_dir)+'/models/'+model_dir
+	
+	# get default features
+	sampletype=model_dir.split('_')[0]
+	default_features=get_features(models, actual_model_dir, sampletype)
+
+	# now change to proper directory for featurization
 	if model_dir=='audio_models' and 'audio' in filetypes:
 		os.chdir(features_dir+'/audio_features')
-		os.system('python3 featurize.py %s'%(load_dir))
 	elif model_dir=='text_models' and 'text' in filetypes:	
+		models=models['text_models']
 		os.chdir(features_dir+'/text_features')
-		os.system('python3 featurize.py %s'%(load_dir))
 	elif model_dir=='image_models' and 'image' in filetypes:
+		models=models['image_models']
 		os.chdir(features_dir+'/image_features')
-		os.system('python3 featurize.py %s'%(load_dir))
-	elif model_dir=='video_models' and 'video' in filetypes:	
+	elif model_dir=='video_models' and 'video' in filetypes:
+		models=models['video_models']	
 		os.chdir(features_dir+'/video_features')
-		os.system('python3 featurize.py %s'%(load_dir))
 	elif model_dir=='csv_models' and 'csv' in filetypes:
+		models=models['csv_models']
 		os.chdir(features_dir+'/csv_features')
-		os.system('python3 featurize.py %s'%(load_dir))
+
+	# call featurization API via default features
+	for i in range(len(default_features)):
+		os.system('python3 featurize.py %s %s'%(load_dir, default_features[i]))
+
 
 def find_files(model_dir):
 
@@ -365,53 +394,71 @@ def load_model(folder_name):
 
 	return transformer, clf, model_type, classes, g
 
-def find_models():
+def find_models(target_model_dir, sampletype):
 
 	curdir=os.getcwd()
-	listdir=os.listdir()
-	directories=['audio_models', 'text_models', 'image_models', 'video_models', 'csv_models']
-	models_=dict()
 
-	for i in range(len(directories)):
-		model_names=list()
+	if sampletype == False:
+		listdir=os.listdir()
+		directories=['audio_models', 'text_models', 'image_models', 'video_models', 'csv_models']
+		models_=dict()
+
+		for i in range(len(directories)):
+			model_names=list()
+			try:
+				os.chdir(curdir)
+				os.chdir(directories[i])
+				listdir=os.listdir()
+
+				folders=list()
+				for j in range(len(listdir)):
+					if listdir[j].find('.') < 0:
+						folders.append(listdir[j])
+
+				print(folders)
+				curdir2=os.getcwd()
+
+				for j in range(len(folders)):
+					try:
+						os.chdir(curdir2)
+						os.chdir(folders[j])
+						os.chdir('model')
+						listdir2=os.listdir()
+						jsonfile=folders[j]+'.json'
+						for k in range(len(listdir2)):
+							if listdir2[k] == jsonfile:
+								g=json.load(open(jsonfile))
+								model_names.append(jsonfile[0:-5])
+					except:
+						pass
+				print(model_names)
+			except:
+				print('error')
+
+			models_[directories[i]]=model_names
+	else:
+		# copy the target_model_dir to the right folder
+		models_=dict()
+		models_['audio_models']=list()
+		models_['text_models']=list()
+		models_['text_models']=list()
+		models_['image_models']=list()
+		models_['csv_models']=list()
+
 		try:
-			os.chdir(curdir)
-			os.chdir(directories[i])
-			listdir=os.listdir()
-
-			folders=list()
-			for j in range(len(listdir)):
-				if listdir[j].find('.') < 0:
-					folders.append(listdir[j])
-
-			print(folders)
-			curdir2=os.getcwd()
-
-			for j in range(len(folders)):
-				try:
-					os.chdir(curdir2)
-					os.chdir(folders[j])
-					os.chdir('model')
-					listdir2=os.listdir()
-					jsonfile=folders[j]+'.json'
-					for k in range(len(listdir2)):
-						if listdir2[k] == jsonfile:
-							g=json.load(open(jsonfile))
-							model_names.append(jsonfile[0:-5])
-				except:
-					pass
-			print(model_names)
+			shutil.copytree(target_model_dir, curdir+'/'+sampletype+'_models/'+target_model_dir.split('/')[-1])
 		except:
-			print('error')
+			pass
 
-		models_[directories[i]]=model_names
+		models_[sampletype+'_models']=[target_model_dir.split('/')[-1]]
 
 	print('------------------------------')
 	print('	      IDENTIFIED MODELS      ')
 	print('------------------------------')
 
 	print(models_)
-	
+
+	# time.sleep(50)
 	return models_
 
 # get folders
@@ -433,18 +480,38 @@ features_dir=basedir+'/features'
 model_dir=basedir+'/models'
 
 try:
+	# specify a specific model to make a prediction around 
+	# e.g. /Users/jim/desktop/audiofiles
 	load_dir=sys.argv[1]
 except:
+	# if not specified, defaults to the ./load_dir folder
 	load_dir=basedir+'/load_dir'
+try:
+	# get the sampletype, for example 'audio'
+	sampletype = sys.argv[2]
+except:	
+	# if no sampletype specified, it will discover all file types
+	sampletype=False
+try:
 
-# get file tyes ['audio','image','text','image','video','csv']
+	target_model_dir=sys.argv[3]
+except:
+	target_model_dir=False
+
+# now get all the filetypes if not specified 
 os.chdir(load_dir)
 listdir=os.listdir()
-filetypes=classifyfolder(listdir)
+
+if sampletype != False and sampletype in ['audio','image','text','image','video','csv']:
+	# e.g. sampletype =='audio'
+	filetypes=[sampletype]
+else:
+	# get file tyes ['audio','image','text','image','video','csv']
+	filetypes=classifyfolder(listdir)
 
 # find all machine learning models
 os.chdir(model_dir)
-models=find_models()
+models=find_models(target_model_dir, sampletype)
 model_dirs=list(models)
 
 # now that we have all the models we can begin to load all of them 
@@ -453,7 +520,9 @@ for i in range(len(model_dirs)):
 		print('-----------------------')
 		print('FEATURIZING %s'%(model_dirs[i].upper()))
 		print('-----------------------')
-		featurize(features_dir, load_dir, model_dirs[i], filetypes)
+		# Note this contextually featurizes based on all the models and the 
+		# minimum number of featurizations necessary to accomodate all model predictions
+		featurize(features_dir, load_dir, model_dirs[i], filetypes, models)
 
 # now model everything
 for i in range(len(model_dirs)):

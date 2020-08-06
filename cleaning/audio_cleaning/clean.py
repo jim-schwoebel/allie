@@ -299,7 +299,6 @@ except:
 ################################################
 ##          Import According to settings      ##
 ################################################
-
 # only load the relevant featuresets for featurization to save memory
 if 'clean_getfirst3secs' in cleaning_sets:
 	import clean_getfirst3secs
@@ -401,10 +400,6 @@ random.shuffle(listdir)
 for i in tqdm(range(len(listdir)), desc=labelname):
 	if listdir[i][-4:] in ['.wav', '.mp3', '.m4a']:
 		filename=listdir[i]
-		if listdir[i][-4:]=='.m4a':
-			os.system('ffmpeg -i %s %s'%(listdir[i], listdir[i][0:-4]+'.wav'))
-			filename=listdir[i][0:-4]+'.wav'
-			os.remove(listdir[i])
 		for j in range(len(cleaning_sets)):
 			cleaning_set=cleaning_sets[j]
 			audio_clean(cleaning_set, filename, basedir)

@@ -42,7 +42,6 @@ All featuretype options include:
 Read more @ https://github.com/jim-schwoebel/allie/tree/master/features/csv_features
 '''
 import os, json, wget, sys
-import csv_features as cf
 import os, wget, zipfile 
 import shutil
 import numpy as np
@@ -70,14 +69,11 @@ def transcribe_csv(csv_file, csv_transcriber):
 		transcript=''
 	return transcript 
 
-def csv_featurize(feature_set, csvfile, cur_dir):
+def csv_featurize(features_dir, feature_set, csvfile, cur_dir):
 
-	if feature_set == 'csv_features':
-		features, labels = cf.csv_featurize(csv_file, cur_dir)
-		# make sure all the features do not have any infinity or NaN
-		features=np.nan_to_num(np.array(features))
-		features=features.tolist()
-
+	if feature_set == 'csv_features_regression':
+		os.chdir(features_dir)
+		os.system('python3 featurize_csv_regression.py --input %s --output %s --target %s'%(cur_dir+'/'+csvfile, cur_dir+'/'+'featurized_'+csvfile, 'target'))
 	else:
 		print('-----------------------')
 		print('!!		error		!!')
@@ -86,8 +82,6 @@ def csv_featurize(feature_set, csvfile, cur_dir):
 		print('Note that the featurizers are named accordingly with the Python scripts. csv_features.py --> csv_features in settings.json)')
 		print('-----------------------')
 
-	return features, labels 
-
 ##################################################
 ##				   Main script  		    	##
 ##################################################
@@ -95,6 +89,7 @@ def csv_featurize(feature_set, csvfile, cur_dir):
 basedir=os.getcwd()
 help_dir=basedir+'/helpers'
 prevdir=prev_dir(basedir)
+features_dir=basedir
 sys.path.append(prevdir)
 from standard_array import make_features
 
@@ -123,6 +118,9 @@ except:
 	# if none provided in command line, then load deafult features 
 	feature_sets=g['default_csv_features']
 
+if 'csv_features_regression' in feature_sets:
+	pass
+
 ###################################################
 
 # featurize all files accoridng to librosa featurize
@@ -130,89 +128,16 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 
 	# make audio file into spectrogram and analyze those images if audio file
 	if listdir[i][-4:] in ['.csv']:
-		try:
-			csv_file=listdir[i]
-			sampletype='csv'
-			# I think it's okay to assume audio less than a minute here...
-			if listdir[i][0:-4]+'.json' not in listdir:
-				# make new .JSON if it is not there with base array schema.
-				basearray=make_features(sampletype)
-
-				# get the csv transcript  
-				if csv_transcribe==True:
-					for j in range(len(default_csv_transcriber)):
-						csv_transcriber=default_csv_transcriber[j]
-						transcript = transcribe_csv(csv_file, csv_transcriber)
-						transcript_list=basearray['transcripts']
-						transcript_list['csv'][csv_transcriber]=transcript 
-						basearray['transcripts']=transcript_list
-
-				# featurize the csv file 
-				for j in range(len(feature_sets)):
-					feature_set=feature_sets[j]
-					features, labels = csv_featurize(feature_set, csv_file, cur_dir)
-					try:
-						data={'features':features.tolist(),
-							  'labels': labels}
-					except:
-						data={'features':features,
-							  'labels': labels}
-
-					print(features)
-					csv_features=basearray['features']['csv']
-					csv_features[feature_set]=data
-					basearray['features']['csv']=csv_features
-
-				basearray['labels']=[labelname]
-
-				# write to .JSON 
-				jsonfile=open(listdir[i][0:-4]+'.json','w')
-				json.dump(basearray, jsonfile)
-				jsonfile.close()
-
-			elif listdir[i][0:-4]+'.json' in listdir:
-				# load the .JSON file if it is there 
-				basearray=json.load(open(listdir[i][0:-4]+'.json'))
-				transcript_list=basearray['transcripts']
-
-				# only transcribe if you need to (checks within schema)
-				if csv_transcribe==True: 
-					for j in range(len(default_csv_transcriber)):
-						csv_transcriber=default_csv_transcriber[j]
-						if csv_transcriber not in list(transcript_list['csv']):
-							transcript = transcribe_csv(csv_file, csv_transcriber)
-							transcript_list['csv'][csv_transcriber]=transcript 
-							basearray['transcripts']=transcript_list
-						else:
-							transcript = transcript_list['csv'][csv_transcriber]
-
-				# only re-featurize if necessary (checks if relevant feature embedding exists)
-				for j in range(len(feature_sets)):
-					feature_set=feature_sets[j]
-					if feature_set not in list(basearray['features']['csv']):
-						features, labels = cf.csv_featurize(csv_file, cur_dir)
-						print(features)
-
-						try:
-							data={'features':features.tolist(),
-								  'labels': labels}
-						except:
-							data={'features':features,
-								  'labels': labels}
-						
-						basearray['features']['csv'][feature_set]=data
-
-				# only add the label if necessary 
-				label_list=basearray['labels']
-				if labelname not in label_list:
-					label_list.append(labelname)
-				basearray['labels']=label_list
-				transcript_list=basearray['transcripts']
-
-				# overwrite .JSON 
-				jsonfile=open(listdir[i][0:-4]+'.json','w')
-				json.dump(basearray, jsonfile)
-				jsonfile.close()
-
-		except:
-			print('error')
+		# try:
+		csv_file=listdir[i]
+		sampletype='csv'
+		# I think it's okay to assume audio less than a minute here...
+		if 'featurized_'+listdir[i] not in listdir:
+			# featurize the csv file 
+			for j in range(len(feature_sets)):
+				feature_set=feature_sets[j]
+				csv_featurize(features_dir, feature_set, csv_file, cur_dir)
+		elif 'featurized_'+listdir[i] in listdir:
+			pass			
+		# except:
+			# print('error')

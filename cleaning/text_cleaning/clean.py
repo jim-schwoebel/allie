@@ -102,7 +102,7 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'clean_summary' in cleaning_sets:
 	import clean_summary
-elif 'clean_textacy' in cleaning_sets:
+if 'clean_textacy' in cleaning_sets:
 	import clean_textacy
 
 ################################################

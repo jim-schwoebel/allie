@@ -103,7 +103,7 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'clean_alignfaces' in cleaning_sets:
 	import clean_alignfaces
-elif 'clean_videostabilize' in cleaning_sets:
+if 'clean_videostabilize' in cleaning_sets:
 	import clean_videostabilize
 
 ################################################

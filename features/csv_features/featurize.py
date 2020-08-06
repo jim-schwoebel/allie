@@ -31,9 +31,6 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | \__/\/\__/ /\ \_/ /
  \____/\____/  \___/ 
  
-Note that this script is not used for Allie version 1.0 and will be 
-updated in future releases.
- 
 Usage: python3 featurize.py [folder] [featuretype]
 
 All featuretype options include:

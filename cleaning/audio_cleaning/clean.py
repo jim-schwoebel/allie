@@ -302,27 +302,27 @@ except:
 # only load the relevant featuresets for featurization to save memory
 if 'clean_getfirst3secs' in cleaning_sets:
 	import clean_getfirst3secs
-elif 'clean_mono16hz' in cleaning_sets:
+if 'clean_mono16hz' in cleaning_sets:
 	import clean_mono16hz
-elif 'clean_towav' in cleaning_sets:
+if 'clean_towav' in cleaning_sets:
 	import clean_towav
-elif 'clean_keyword' in cleaning_sets:
+if 'clean_keyword' in cleaning_sets:
 	import clean_keyword
-elif 'clean_multispeaker' in cleaning_sets:
+if 'clean_multispeaker' in cleaning_sets:
 	import clean_multispeaker
-elif 'clean_opus' in cleaning_sets:
+if 'clean_opus' in cleaning_sets:
 	import clean_opus
-elif 'clean_normalizevolume' in cleaning_sets:
+if 'clean_normalizevolume' in cleaning_sets:
 	import clean_normalizevolume
-elif 'clean_randomsplice' in cleaning_sets:
+if 'clean_randomsplice' in cleaning_sets:
 	import clean_randomsplice
-elif 'clean_rename' in cleaning_sets:
+if 'clean_rename' in cleaning_sets:
 	import clean_rename
-elif 'clean_removenoise' in cleaning_sets:
+if 'clean_removenoise' in cleaning_sets:
 	import clean_removenoise
-elif 'clean_removesilence' in cleaning_sets:
+if 'clean_removesilence' in cleaning_sets:
 	import clean_removesilence
-elif 'clean_utterances' in cleaning_sets:
+if 'clean_utterances' in cleaning_sets:
 	import clean_utterances
 
 ################################################

@@ -1,16 +1,16 @@
 '''
-               AAA               lllllll lllllll   iiii                      
-              A:::A              l:::::l l:::::l  i::::i                     
-             A:::::A             l:::::l l:::::l   iiii                      
-            A:::::::A            l:::::l l:::::l                             
-           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
    A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
   A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
@@ -22,15 +22,15 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |   | |/ _ \/ _` | '_ \| | '_ \ / _` | |  _  ||  __/  | |      
 | \__/\ |  __/ (_| | | | | | | | | (_| | | | | || |    _| |_   _ 
  \____/_|\___|\__,_|_| |_|_|_| |_|\__, | \_| |_/\_|    \___/  (_)
-                                   __/ |                         
-                                  |___/                          
+								   __/ |                         
+								  |___/                          
   ___            _ _       
  / _ \          | (_)      
 / /_\ \_   _  __| |_  ___  
 |  _  | | | |/ _` | |/ _ \ 
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
-                           
+						   
 
 This section of Allie's API cleans folders of audio files
 using the default_audio_cleaners.
@@ -250,31 +250,34 @@ def audio_clean(cleaning_set, audiofile, basedir):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
 	if cleaning_set == 'clean_getfirst3secs':
-		clean_getfirst3secs.clean_getfirst3secs(audiofile)
+		audiofile=clean_getfirst3secs.clean_getfirst3secs(audiofile)
 	elif cleaning_set == 'clean_mono16hz':
-		clean_mono16hz.clean_mono16hz(audiofile)
+		audiofile=clean_mono16hz.clean_mono16hz(audiofile)
 	elif cleaning_set == 'clean_towav':
-		clean_towav.clean_towav(audiofile)
+		audiofile=clean_towav.clean_towav(audiofile)
 	elif cleaning_set == 'clean_keyword':
-		clean_keyword.clean_keyword(audiofile,'coconut')
+		audiofile=clean_keyword.clean_keyword(audiofile,'coconut')
 	elif cleaning_set == 'clean_multispeaker':
 		modeldir=basedir+'/helpers'
-		clean_multispeaker.clean_multispeaker(audiofile,modeldir)
+		audiofile=clean_multispeaker.clean_multispeaker(audiofile,modeldir)
 	elif cleaning_set == 'clean_normalizevolume':
-		clean_normalizevolume.clean_normalizevolume(audiofile)
+		audiofile=clean_normalizevolume.clean_normalizevolume(audiofile)
 	elif cleaning_set == 'clean_opus':
-		clean_opus.clean_opus(audiofile,basedir+'/helpers/opustools/')
+		audiofile=clean_opus.clean_opus(audiofile,basedir+'/helpers/opustools/')
 	elif cleaning_set == 'clean_randomsplice':
-		clean_randomsplice.clean_randomsplice(audiofile,20)
+		audiofile=clean_randomsplice.clean_randomsplice(audiofile,20)
 	elif cleaning_set == 'clean_removenoise':
-		clean_removenoise.clean_removenoise(audiofile)
+		audiofile=clean_removenoise.clean_removenoise(audiofile)
 	elif cleaning_set == 'clean_removesilence':
-		clean_removesilence.clean_removesilence(audiofile)
+		audiofile=clean_removesilence.clean_removesilence(audiofile)
 	elif cleaning_set == 'clean_rename':
-		clean_rename.clean_rename(audiofile)
+		audiofile=clean_rename.clean_rename(audiofile)
 	elif cleaning_set == 'clean_utterances':
-		clean_utterances.clean_utterances(audiofile)
+		audiofile=clean_utterances.clean_utterances(audiofile)
+	print(os.getcwd())
+	time.sleep(5)
 	# transcripts = can look for hotwords and remove
+	return audiofile
 
 ################################################
 ##              Load main settings            ##
@@ -402,4 +405,4 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 		filename=listdir[i]
 		for j in range(len(cleaning_sets)):
 			cleaning_set=cleaning_sets[j]
-			audio_clean(cleaning_set, filename, basedir)
+			filename=audio_clean(cleaning_set, filename, basedir)

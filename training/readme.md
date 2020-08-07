@@ -437,7 +437,7 @@ Where:
 - male = first class
 - female = second class [via N number of classes]
 
-Goal is to make an output folder like this:
+The goal is to make an output folder like this:
 ```
 └── gender_tpot_classifier
     ├── data

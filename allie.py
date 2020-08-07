@@ -270,11 +270,12 @@ try:
 		if command == 'annotate':
 			# - Annotate API - https://github.com/jim-schwoebel/allie/tree/master/annotation
 			if str(directory) != 'None' and sampletype in sampletypes and str(class_) != 'None' and problemtype in problemtypes:
-				os.chdir(annotation_dir)
-				os.system('python3 annotate.py -d %s -s %s -c %s -p %s'%(directory, sampletype, class_, problemtype))
+				for i in range(len(directory)):
+					os.chdir(directory[i])
+					os.system('python3 annotate.py -d %s -s %s -c %s -p %s'%(directory[i], sampletype, class_, problemtype))
 			else:
 				if str(directory) == 'None':
-					print('ERROR - annotation directory (-adir) not specified in the CLI')
+					print('ERROR - annotation directory (-dir) not specified in the CLI')
 				elif sampletype not in sampletypes:
 					print('ERROR - sample type (%s) not in possible sample types (%s)'%(str(sampletype), str(sampletypes)))
 				elif str(class_) == 'None':

@@ -132,7 +132,7 @@ random.shuffle(listdir)
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
     if listdir[i][-4:] in ['.csv']:
-        filename=listdir[i]
+        filename=[listdir[i]]
         for j in range(len(augmentation_sets)):
             augmentation_set=augmentation_sets[j]
             for k in range(len(filename)):

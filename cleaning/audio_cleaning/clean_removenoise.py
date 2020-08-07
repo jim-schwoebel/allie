@@ -48,7 +48,7 @@ def clean_removenoise(audiofile):
     noiseaudio=str(uuid.uuid1())+'_noiseaudio.wav'
     noiseprofile=str(uuid.uuid1())+'_noise.prof'
     temp=audiofile[0:-4]+'_.wav'
-    os.system('sox %s %s trim 0 0.500'%(audiofile, noiseaudio))
+    os.system('sox %s %s trim 0 0.050'%(audiofile, noiseaudio))
     os.system('sox %s -n noiseprof %s'%(noiseaudio, noiseprofile))
     os.system('sox %s %s noisered %s 0.21'%(audiofile, temp, noiseprofile))
     os.remove(audiofile)

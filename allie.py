@@ -187,7 +187,7 @@ csvdir=loadmodel_dir+'/csv_models'
 # for if/then statements later
 commands=['annotate', 'augment', 'clean', 'data', 
 		 'features', 'predict', 'transform', 'train',
-		 'test', 'visualize']
+		 'test', 'visualize', 'settings']
 sampletypes=['audio', 'text', 'image', 'video', 'csv']
 problemtypes = ['c','r']
 
@@ -203,7 +203,8 @@ parser.add_option("--c", "--command", dest="command",
 	                  "preprocessing API = 'transform', \n"+
 	                  "model training API = 'train', \n"+
 	                  "testing API = 'test', \n"+
-	                  "visualize API = 'visualize')", metavar="command")
+	                  "visualize API = 'visualize', \n" +
+	                  "list default settings = 'settings')", metavar="command")
 parser.add_option("--p", "--problemtype", dest="problemtype",
 				  help="specify the problem type ('c' = classification or 'r' = regression)", metavar="problemtype")
 parser.add_option("--s", "--sampletype", dest="sampletype",
@@ -358,7 +359,49 @@ try:
 			# - Visualize API - https://github.com/jim-schwoebel/allie/tree/master/visualize
 			os.chdir(visualization_dir)
 			os.system('python3 visualize.py')
-	else:
+		elif command == 'settings':
+			print(settings)
+			print('\n')
+			settingslist=list(settings)
+			textinput=input('Would you like to change any of these settings? Yes (-y) or No (-n)\n')
+			if textinput.lower().replace(' ','') in ['yes','y']:
+				textinput=input('What setting would you like to change?\n')
+				while textinput not in settingslist and textinput.lower() != 'version':
+					print('Setting not recognized, options are:')
+					time.sleep(0.5)
+					for i in range(len(settingslist)):
+						if settingslist[i] != 'version':
+							print('- '+settingslist[i])
+							time.sleep(0.05)
+					textinput=input('What setting would you like to change?\n')
+
+				newsetting=input('What setting would you like to set here?\n')
+
+				if str(newsetting).title() in ['True']:
+					newsetting=True 
+				elif str(newsetting).title() in ['False']:
+					newsetting=False
+				elif textinput in ['dimension_number', 'feature_number']:
+					newsetting=int(newsetting)
+				elif textinput in ['test_size']:
+					newsetting=float(newsetting)
+				else:
+					settingnum=input('how many more settings would you like to set here?\n')
+					newsetting=[newsetting]
+					try:
+						for i in range(int(settingnum)):
+							newsetting2=input('What additional setting would you like to set here?\n')
+							newsetting.append(newsetting2)
+					except:
+						pass
+
+				print(type(newsetting))
+				jsonfile=open('settings.json','w')
+				settings[textinput]=newsetting
+				json.dump(settings,jsonfile)
+				jsonfile.close()
+
+	else:	
 		print('ERROR - %s is not a valid command in the Allie CLI. Please use one of these commands'%(str(command)))
 		print('\n')
 		for i in range(len(commands)):

@@ -2,7 +2,7 @@
 
 ![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/label.png)
 
-You can simply annotate using the command-line interface here:
+You can simply annotate by typing this into the terminal:
 
 ```python3
 cd /Users/jim/desktop/allie

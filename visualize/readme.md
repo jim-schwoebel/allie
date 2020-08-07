@@ -159,20 +159,20 @@ Easily plots all the features via violin plots (to spot distributions).
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/326_meanF0.png)
 
 ### Lasso plot 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso2.png)
 
 ### Heatmaps
 Heatmap with correlated variables
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap2.png)
 
 Heatmap with removed correlated variables 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean2.png)
 
 ### Pearson ranking plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/pearson.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/pearson2.png)
 
 ### Shapiro plot 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro2.png)
 
 ## Modeling graphs
 

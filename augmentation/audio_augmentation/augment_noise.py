@@ -1,19 +1,49 @@
+'''
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+
+ / _ \                                 | |      | | (_)            
+/ /_\ \_   _  __ _ _ __ ___   ___ _ __ | |_ __ _| |_ _  ___  _ __  
+|  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
+| | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
+\_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
+			  __/ |                                                
+			 |___/                                                 
+  ___  ______ _____        ___            _ _       
+ / _ \ | ___ \_   _|  _   / _ \          | (_)      
+/ /_\ \| |_/ / | |   (_) / /_\ \_   _  __| |_  ___  
+|  _  ||  __/  | |       |  _  | | | |/ _` | |/ _ \ 
+| | | || |    _| |_   _  | | | | |_| | (_| | | (_) |
+\_| |_/\_|    \___/  (_) \_| |_/\__,_|\__,_|_|\___/   
+
+Following remove_noise.py from voicebook.
+'''
 import os
 import soundfile as sf
 
 def augment_noise(filename):
-
-	'''
-	following remove_noise.py from voicebook.
-	'''
-
 	#now use sox to denoise using the noise profile
 	data, samplerate =sf.read(filename)
 	duration=data/samplerate
 	first_data=samplerate/10
 	filter_data=list()
 	for i in range(int(first_data)):
-	    filter_data.append(data[i])
+		filter_data.append(data[i])
 	noisefile='noiseprof.wav'
 	sf.write(noisefile, filter_data, samplerate)
 	os.system('sox %s -n noiseprof noise.prof'%(noisefile))
@@ -24,11 +54,10 @@ def augment_noise(filename):
 	#run command 
 	os.system(command)
 	print(command)
-	#reduce silence again
-	#os.system(silenceremove)
-	#print(silenceremove)
 	#rename and remove files 
-	os.rename(filename2,filename[0:-4]+'_noise_remove.wav')
+	newfile=filename[0:-4]+'_noise_remove.wav'
+	os.rename(filename2,newfile)
 	#os.remove(filename2)
 	os.remove(noisefile)
 	os.remove('noise.prof')
+	return [newfile]

@@ -271,7 +271,7 @@ try:
 			# - Annotate API - https://github.com/jim-schwoebel/allie/tree/master/annotation
 			if str(directory) != 'None' and sampletype in sampletypes and str(class_) != 'None' and problemtype in problemtypes:
 				for i in range(len(directory)):
-					os.chdir(directory[i])
+					os.chdir(annotation_dir)
 					os.system('python3 annotate.py -d %s -s %s -c %s -p %s'%(directory[i], sampletype, class_, problemtype))
 			else:
 				if str(directory) == 'None':

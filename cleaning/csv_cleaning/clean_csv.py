@@ -49,4 +49,4 @@ def clean_csv(csvfile, basedir):
 	newframe=datacleaner.autoclean(input_dataframe, drop_nans=False, copy=False, ignore_update_check=False)
 	newfile='clean_'+csvfile
 	newframe.to_csv(newfile, index=False)
-	return newfile
+	return [newfile]

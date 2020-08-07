@@ -35,7 +35,7 @@
  "remove_outliers": true, 
  "scale_features": true, 
  "select_features": true, 
- "test_size": 0.1, 
+ "test_size": 0.20, 
  "transcribe_audio": true, 
  "transcribe_csv": true, 
  "transcribe_image": true, 

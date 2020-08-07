@@ -205,4 +205,4 @@ def clean_removesilence(audiofile):
 	os.remove(audiofile[0:-4]+'_temp.wav')
 	for i in range(len(framelist)):
 		os.remove(framelist[i])
-	return audiofile
+	return [audiofile]

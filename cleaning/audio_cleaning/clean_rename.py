@@ -45,4 +45,4 @@ def clean_rename(audiofile):
 	# replace wavfile with a version that is 16000 Hz mono audio
 	newfile=str(uuid.uuid4())+audiofile[-4:]
 	os.rename(audiofile, newfile)
-	return newfile
+	return [newfile]

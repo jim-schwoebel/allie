@@ -48,8 +48,8 @@ def clean_mono16hz(audiofile):
 	if audiofile.endswith('.wav'):
 		os.system('ffmpeg -i "%s" -ar 16000 -ac 1 "%s" -y'%(audiofile,audiofile[0:-4]+'_cleaned.wav'))
 		os.remove(audiofile)
-		return audiofile[0:-4]+'_cleaned.wav'
+		return [audiofile[0:-4]+'_cleaned.wav']
 	elif audiofile.endswith('.mp3'):
 		os.system('ffmpeg -i "%s" -ar 16000 -ac 1 "%s" -y'%(audiofile,audiofile[0:-4]+'.wav'))
 		os.remove(audiofile)
-		return audiofile[0:-4]+'.wav'
+		return [audiofile[0:-4]+'.wav']

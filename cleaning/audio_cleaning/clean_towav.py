@@ -44,4 +44,4 @@ def clean_towav(audiofile):
 		newfile=audiofile[0:-4]+'.wav'
 		os.system('ffmpeg -i %s %s'%(audiofile, newfile))
 		os.remove(audiofile)
-		return newfile
+		return [newfile]

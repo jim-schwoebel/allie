@@ -46,4 +46,4 @@ def clean_normalizevolume(audiofile):
 		os.system('ffmpeg-normalize %s -nt peak -t 0 -o %s'%(audiofile,file))
 		os.remove(audiofile)
 		os.rename(file, audiofile)
-		return audiofile
+		return [audiofile]

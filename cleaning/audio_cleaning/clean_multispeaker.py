@@ -102,10 +102,10 @@ def clean_multispeaker(audiofile,modeldir):
 		if speaker_number > 1: 
 			# remove files with more than 1 concurrent speaker 
 			os.remove(audiofile)
-			return ''
+			return []
 		else:
-			return audiofile
+			return [audiofile]
 	except:
 		print('error')
 		os.remove(audiofile)
-		return ''
+		return []

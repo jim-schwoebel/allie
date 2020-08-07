@@ -67,4 +67,4 @@ def clean_opus(filename, opusdir):
 	os.remove(filename)
 	os.chdir(curdir)
 	os.remove(newfile[0:-5]+'.wav')
-	return filename
+	return [filename]

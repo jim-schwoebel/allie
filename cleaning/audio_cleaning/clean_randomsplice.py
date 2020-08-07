@@ -55,7 +55,7 @@ def clean_random20secsplice(audiofile, desiredlength):
 				newfile='snipped_'+audiofile
 				sf.write(newfile, data[int(startframe):int(endframe)], samplerate)
 				os.remove(audiofile)
-				return newfile
+				return [newfile]
 		except:
 				print('error, skipping...')
-				return audiofile
+				return [audiofile]

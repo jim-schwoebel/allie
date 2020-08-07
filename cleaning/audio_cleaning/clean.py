@@ -402,7 +402,8 @@ random.shuffle(listdir)
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
 	if listdir[i][-4:] in ['.wav', '.mp3', '.m4a']:
-		filename=listdir[i]
+		filename=[listdir[i]]
 		for j in range(len(cleaning_sets)):
-			cleaning_set=cleaning_sets[j]
-			filename=audio_clean(cleaning_set, filename, basedir)
+			for k in range(len(filename)):
+				cleaning_set=cleaning_sets[j]
+				filename=audio_clean(cleaning_set, filename, basedir)

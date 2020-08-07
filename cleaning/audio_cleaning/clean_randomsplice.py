@@ -41,7 +41,7 @@ This cleaning script is enabled if default_audio_cleaners=['clean_randomsplice']
 import soundfile as sf 
 import os, ffmpy, random, getpass
 
-def clean_random20secsplice(audiofile, desiredlength):
+def clean_randomsplice(audiofile, desiredlength):
         try:
                 data, samplerate = sf.read(audiofile)
                 totalframes=len(data)

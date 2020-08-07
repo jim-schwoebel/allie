@@ -204,7 +204,7 @@ parser.add_option("--c", "--command", dest="command",
 	                  "model training API = 'train', \n"+
 	                  "testing API = 'test', \n"+
 	                  "visualize API = 'visualize', \n" +
-	                  "list default settings = 'settings')", metavar="command")
+	                  "list/change default settings = 'settings')", metavar="command")
 parser.add_option("--p", "--problemtype", dest="problemtype",
 				  help="specify the problem type ('c' = classification or 'r' = regression)", metavar="problemtype")
 parser.add_option("--s", "--sampletype", dest="sampletype",

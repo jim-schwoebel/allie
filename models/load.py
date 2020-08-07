@@ -132,6 +132,8 @@ def find_files(model_dir):
 
 	print(model_dir)
 	jsonfiles=list()
+	csvfiles=list()
+	
 	if model_dir == 'audio_models':
 		listdir=os.listdir()
 		print(listdir)
@@ -164,7 +166,6 @@ def find_files(model_dir):
 	elif model_dir =='csv_models':
 		# csv files are a little different here 
 		listdir=os.listdir()
-		csvfiles=list()
 		for i in range(len(listdir)):
 			csvfile='featurized_'+listdir[i]
 			if listdir[i].endswith('.csv') and csvfile in listdir:

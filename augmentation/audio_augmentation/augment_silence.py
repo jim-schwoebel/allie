@@ -22,8 +22,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
 | | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
 \_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-			  __/ |                                                
-			 |___/                                                 
+        __/ |                                                
+       |___/                                                 
   ___  ______ _____        ___            _ _       
  / _ \ | ___ \_   _|  _   / _ \          | (_)      
 / /_\ \| |_/ / | |   (_) / /_\ \_   _  __| |_  ___  
@@ -36,7 +36,7 @@ Adds silence to an audio file.
 import os
 
 def augment_silence(filename):
-	new_filename=filename[0:-4]+'_trimmed.wav'
-	command='sox %s %s silence -l 1 0.1 1'%(filename, new_filename)+"% -1 2.0 1%"
-	os.system(command)
-	return [new_filename]
+  new_filename=filename[0:-4]+'_trimmed.wav'
+  command='sox %s %s silence -l 1 0.1 1'%(filename, new_filename)+"% -1 2.0 1%"
+  os.system(command)
+  return [new_filename]

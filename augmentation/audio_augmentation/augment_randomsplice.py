@@ -22,8 +22,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
 | | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
 \_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-			  __/ |                                                
-			 |___/                                                 
+        __/ |                                                
+       |___/                                                 
   ___  ______ _____        ___            _ _       
  / _ \ | ___ \_   _|  _   / _ \          | (_)      
 / /_\ \| |_/ / | |   (_) / /_\ \_   _  __| |_  ___  
@@ -37,15 +37,15 @@ import os, random
 import soundfile as sf 
 
 def augment_randomsplice(filename):
-	slicenum=random.randint(1,5)
-	file=filename
-	data, samplerate = sf.read(file)
-	totalframes=len(data)
-	totalseconds=int(totalframes/samplerate)
-	startsec=random.randint(0,totalseconds-(slicenum+1))
-	endsec=startsec+slicenum
-	startframe=samplerate*startsec
-	endframe=samplerate*endsec
-	newfile='snipped%s_'%(str(slicenum))+file
-	sf.write(newfile, data[int(startframe):int(endframe)], samplerate)
-	return [newfile]
+  slicenum=random.randint(1,5)
+  file=filename
+  data, samplerate = sf.read(file)
+  totalframes=len(data)
+  totalseconds=int(totalframes/samplerate)
+  startsec=random.randint(0,totalseconds-(slicenum+1))
+  endsec=startsec+slicenum
+  startframe=samplerate*startsec
+  endframe=samplerate*endsec
+  newfile='snipped%s_'%(str(slicenum))+file
+  sf.write(newfile, data[int(startframe):int(endframe)], samplerate)
+  return [newfile]

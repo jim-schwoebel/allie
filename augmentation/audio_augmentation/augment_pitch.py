@@ -21,8 +21,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
 | | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
 \_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-			  __/ |                                                
-			 |___/                                                 
+        __/ |                                                
+       |___/                                                 
   ___  ______ _____        ___            _ _       
  / _ \ | ___ \_   _|  _   / _ \          | (_)      
 / /_\ \| |_/ / | |   (_) / /_\ \_   _  __| |_  ___  
@@ -41,9 +41,9 @@ so that would mean ±1200 as a parameter.
 import os, random
 
 def augment_pitch(filename):
-	basefile=filename[0:-4]
-	randint=random.randint(300,600)
-	os.system('sox %s %s pitch %s'%(filename, basefile+'_freq_1.wav', str(randint)))
-	randint=random.randint(300,600)
-	os.system('sox %s %s pitch -%s'%(filename, , str(randint)))
-	return [basefile+'_freq_1.wav',basefile+'_freq_2.wav']
+  basefile=filename[0:-4]
+  randint=random.randint(300,600)
+  os.system('sox %s %s pitch %s'%(filename, basefile+'_freq_1.wav', str(randint)))
+  randint=random.randint(300,600)
+  os.system('sox %s %s pitch -%s'%(filename, , str(randint)))
+  return [basefile+'_freq_1.wav',basefile+'_freq_2.wav']

@@ -23,8 +23,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
 | | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
 \_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-			  __/ |                                                
-			 |___/                                                 
+              __/ |                                                
+             |___/                                                 
   ___  ______ _____       _____         _   
  / _ \ | ___ \_   _|  _  |_   _|       | |  
 / /_\ \| |_/ / | |   (_)   | | _____  _| |_ 
@@ -53,16 +53,16 @@ import numpy as np
 from tqdm import tqdm
 
 def prev_dir(directory):
-	g=directory.split('/')
-	dir_=''
-	for i in range(len(g)):
-		if i != len(g)-1:
-			if i==0:
-				dir_=dir_+g[i]
-			else:
-				dir_=dir_+'/'+g[i]
-	# print(dir_)
-	return dir_
+    g=directory.split('/')
+    dir_=''
+    for i in range(len(g)):
+        if i != len(g)-1:
+            if i==0:
+                dir_=dir_+g[i]
+            else:
+                dir_=dir_+'/'+g[i]
+    # print(dir_)
+    return dir_
 
 ################################################
 ##              Helper functions              ##
@@ -70,11 +70,11 @@ def prev_dir(directory):
 
 def text_augment(augmentation_set, textfile, basedir):
 
-	# only load the relevant featuresets for featurization to save memory
-	if augmentation_set=='augment_eda':
-		augment_eda.augment_eda(textfile, basedir)
-	elif augmentation_set=='augment_textacy':
-		augment_textacy.augment_textacy(textfile,basedir)
+    # only load the relevant featuresets for featurization to save memory
+    if augmentation_set=='augment_eda':
+        augment_eda.augment_eda(textfile, basedir)
+    elif augmentation_set=='augment_textacy':
+        augment_textacy.augment_textacy(textfile,basedir)
 
 ################################################
 ##              Load main settings            ##
@@ -90,11 +90,11 @@ os.chdir(basedir)
 text_transcribe=settings['transcribe_text']
 default_image_transcribers=settings['default_text_transcriber']
 try:
-	# assume 1 type of feature_set 
-	augmentation_sets=[sys.argv[2]]
+    # assume 1 type of feature_set 
+    augmentation_sets=[sys.argv[2]]
 except:
-	# if none provided in command line, then load deafult features 
-	augmentation_sets=settings['default_text_augmenters']
+    # if none provided in command line, then load deafult features 
+    augmentation_sets=settings['default_text_augmenters']
 
 ################################################
 ##          Import According to settings      ##
@@ -102,9 +102,9 @@ except:
 
 # only load the relevant featuresets for featurization to save memory
 if 'augment_eda' in augmentation_sets:
-	import augment_eda
+    import augment_eda
 if 'augment_textacy' in augmentation_sets:
-	import augment_textacy
+    import augment_textacy
 
 ################################################
 ##          Get featurization folder          ##
@@ -120,9 +120,9 @@ help_dir=basedir+'/helpers/'
 # get class label from folder name 
 labelname=foldername.split('/')
 if labelname[-1]=='':
-	labelname=labelname[-2]
+    labelname=labelname[-2]
 else:
-	labelname=labelname[-1]
+    labelname=labelname[-1]
 
 ################################################
 ##                NOW AUGMENT!!               ##
@@ -133,9 +133,9 @@ random.shuffle(listdir)
 
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
-	if listdir[i][-4:] in ['.txt']:
-		filename=[listdir[i]]
-		for j in range(len(augmentation_sets)):
-			augmentation_set=augmentation_sets[j]
-			for k in range(len(filename)):
-				filename=text_augment(augmentation_set, filename[k], basedir)
+    if listdir[i][-4:] in ['.txt']:
+        filename=[listdir[i]]
+        for j in range(len(augmentation_sets)):
+            augmentation_set=augmentation_sets[j]
+            for k in range(len(filename)):
+                filename=text_augment(augmentation_set, filename[k], basedir)

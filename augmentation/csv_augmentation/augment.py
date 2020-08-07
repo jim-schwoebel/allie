@@ -21,16 +21,16 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
 | | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
 \_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-			  __/ |                                                
-			 |___/                                                 
+              __/ |                                                
+             |___/                                                 
   ___  ______ _____       _____  _____  _   _ 
  / _ \ | ___ \_   _|  _  /  __ \/  ___|| | | |
 / /_\ \| |_/ / | |   (_) | /  \/\ `--. | | | |
 |  _  ||  __/  | |       | |     `--. \| | | |
 | | | || |    _| |_   _  | \__/\/\__/ /\ \_/ /
 \_| |_/\_|    \___/  (_)  \____/\____/  \___/ 
-											  
-						  
+                                              
+                          
 This section of Allie's API augments CSV files with default_csv_augmenters.
 
 Usage: python3 augment.py [folder] [augment_type]
@@ -51,16 +51,16 @@ import numpy as np
 from tqdm import tqdm
 
 def prev_dir(directory):
-	g=directory.split('/')
-	dir_=''
-	for i in range(len(g)):
-		if i != len(g)-1:
-			if i==0:
-				dir_=dir_+g[i]
-			else:
-				dir_=dir_+'/'+g[i]
-	# print(dir_)
-	return dir_
+    g=directory.split('/')
+    dir_=''
+    for i in range(len(g)):
+        if i != len(g)-1:
+            if i==0:
+                dir_=dir_+g[i]
+            else:
+                dir_=dir_+'/'+g[i]
+    # print(dir_)
+    return dir_
 
 ################################################
 ##              Helper functions              ##
@@ -68,12 +68,12 @@ def prev_dir(directory):
 
 def csv_augment(augmentation_set, csvfile, basedir):
 
-	# only load the relevant featuresets for featurization to save memory
-	if augmentation_set=='augment_ctgan_classification':
-		augment_ctgan_classification.augment_ctgan_classification(csvfile)
-	elif augmentation_set=='augment_ctgan_regression':
-		augment_ctgan_regression.augment_ctgan_regression(csvfile)
-		
+    # only load the relevant featuresets for featurization to save memory
+    if augmentation_set=='augment_ctgan_classification':
+        augment_ctgan_classification.augment_ctgan_classification(csvfile)
+    elif augmentation_set=='augment_ctgan_regression':
+        augment_ctgan_regression.augment_ctgan_regression(csvfile)
+        
 ################################################
 ##              Load main settings            ##
 ################################################
@@ -88,11 +88,11 @@ os.chdir(basedir)
 csv_transcribe=settings['transcribe_csv']
 default_csv_transcribers=settings['default_csv_transcriber']
 try:
-	# assume 1 type of feature_set 
-	augmentation_sets=[sys.argv[2]]
+    # assume 1 type of feature_set 
+    augmentation_sets=[sys.argv[2]]
 except:
-	# if none provided in command line, then load deafult features 
-	augmentation_sets=settings['default_csv_augmenters']
+    # if none provided in command line, then load deafult features 
+    augmentation_sets=settings['default_csv_augmenters']
 
 ################################################
 ##          Import According to settings      ##
@@ -100,9 +100,9 @@ except:
 
 # only load the relevant featuresets for featurization to save memory
 if 'augment_ctgan_classification' in augmentation_sets:
-	import augment_ctgan_classification
+    import augment_ctgan_classification
 if 'augment_ctgan_regression' in augmentation_sets:
-	import augment_ctgan_regression
+    import augment_ctgan_regression
 
 ################################################
 ##          Get featurization folder          ##
@@ -118,9 +118,9 @@ help_dir=basedir+'/helpers/'
 # get class label from folder name 
 labelname=foldername.split('/')
 if labelname[-1]=='':
-	labelname=labelname[-2]
+    labelname=labelname[-2]
 else:
-	labelname=labelname[-1]
+    labelname=labelname[-1]
 
 ################################################
 ##                NOW AUGMENT!!               ##
@@ -131,9 +131,9 @@ random.shuffle(listdir)
 
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
-	if listdir[i][-4:] in ['.csv']:
-		filename=listdir[i]
-		for j in range(len(augmentation_sets)):
-			augmentation_set=augmentation_sets[j]
-			for k in range(len(filename)):
-				filename=csv_augment(augmentation_set, filename, basedir)
+    if listdir[i][-4:] in ['.csv']:
+        filename=listdir[i]
+        for j in range(len(augmentation_sets)):
+            augmentation_set=augmentation_sets[j]
+            for k in range(len(filename)):
+                filename=csv_augment(augmentation_set, filename[k], basedir)

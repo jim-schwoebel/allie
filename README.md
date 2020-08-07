@@ -11,7 +11,7 @@ Here are some things that Allie can do:
 - [featurize](https://github.com/jim-schwoebel/allie/tree/master/features) files using a [standard format](https://github.com/jim-schwoebel/allie/blob/master/features/standard_array.py) (via audio, text, image, video, or csv featurizers)
 - [transform](https://github.com/jim-schwoebel/allie/tree/master/preprocessing) features (via scikit-learn preprocessing techniques)
 - [visualize](https://github.com/jim-schwoebel/allie/tree/master/visualize) featurized datasets (via yellowbrick, scikit-learn, and matplotlib libraries)
-- [train](https://github.com/jim-schwoebel/allie/tree/master/training) classification or regression machine learning models (via tpot, hyperopt, scsr, devol, keras, ludwig, and 15 other training scripts)
+- [train](https://github.com/jim-schwoebel/allie/tree/master/training) classification or regression machine learning models (via tpot, hyperopt, autokeras, autopytorch, ludwig, and 15 other training scripts)
 - [make predictions](https://github.com/jim-schwoebel/allie/tree/master/load_dir) from machine learning models (with all models trained in ./models directory)
 - [export data](https://github.com/jim-schwoebel/allie/tree/master/training) in .CSV file formats (for repeatable machine learning experiments across frameworks)
 - [compress](https://github.com/jim-schwoebel/allie/tree/master/training) machine learning models for deployment (including repositories with readmes)

@@ -1,16 +1,16 @@
 '''
-               AAA               lllllll lllllll   iiii                      
-              A:::A              l:::::l l:::::l  i::::i                     
-             A:::::A             l:::::l l:::::l   iiii                      
-            A:::::::A            l:::::l l:::::l                             
-           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
    A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
   A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
@@ -22,8 +22,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
 | | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
 \_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
-              __/ |                                                
-             |___/                                                 
+			  __/ |                                                
+			 |___/                                                 
   ___  ______ _____       _   _ _     _            
  / _ \ | ___ \_   _|  _  | | | (_)   | |           
 / /_\ \| |_/ / | |   (_) | | | |_  __| | ___  ___  
@@ -129,6 +129,8 @@ random.shuffle(listdir)
 # featurize all files accoridng to librosa featurize
 for i in tqdm(range(len(listdir)), desc=labelname):
 	if listdir[i][-4:] in ['.mp4']:
+		filename=[listdir[i]]
 		for j in range(len(augmentation_sets)):
 			augmentation_set=augmentation_sets[j]
-			video_augment(augmentation_set, listdir[i], basedir)
+			for k in range(len(filename)):
+				filename=video_augment(augmentation_set, filename[k], basedir)

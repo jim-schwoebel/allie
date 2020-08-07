@@ -130,7 +130,7 @@ Click the .GIF below to follow along this example in a video format:
 
 ### [Annotating data](https://github.com/jim-schwoebel/allie/tree/master/annotation)
 
-You can simply annotate using the command-line interface here:
+You can simply annotate by typing this into the terminal:
 
 ```python3
 cd /Users/jim/desktop/allie

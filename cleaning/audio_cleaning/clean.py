@@ -274,8 +274,6 @@ def audio_clean(cleaning_set, audiofile, basedir):
         audiofile=clean_rename.clean_rename(audiofile)
     elif cleaning_set == 'clean_utterances':
         audiofile=clean_utterances.clean_utterances(audiofile)
-    print(os.getcwd())
-    time.sleep(5)
     # transcripts = can look for hotwords and remove
     return audiofile
 

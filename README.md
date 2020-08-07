@@ -86,7 +86,7 @@ Options:
                         '/Users/jim/desktop/allie/train_dir/teens/')
 ```
 
-For more information on how to use the Allie CLI, check out the [Allie CLI tutorial]().
+For more information on how to use the Allie CLI, check out the [Allie CLI tutorial](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface).
 
 ## Quick examples
 

@@ -1,16 +1,16 @@
 '''
-               AAA               lllllll lllllll   iiii                      
-              A:::A              l:::::l l:::::l  i::::i                     
-             A:::::A             l:::::l l:::::l   iiii                      
-            A:::::::A            l:::::l l:::::l                             
-           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
    A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
   A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
@@ -23,8 +23,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |   | |/ _ \/ _` | '_ \| | '_ \ / _` | |  _  ||  __/  | |      
 | \__/\ |  __/ (_| | | | | | | | | (_| | | | | || |    _| |_   _ 
  \____/_|\___|\__,_|_| |_|_|_| |_|\__, | \_| |_/\_|    \___/  (_)
-                                   __/ |                         
-                                  |___/                          
+								   __/ |                         
+								  |___/                          
  _   _ _     _            
 | | | (_)   | |           
 | | | |_  __| | ___  ___  
@@ -224,7 +224,7 @@ def clean_alignfaces(videofile, basedir):
 			shutil.rmtree(foldername)
 			os.mkdir(foldername)
 
-		shutil.move(hostdir+'/'+filename, hostdir+'/'+foldername+'/'+filename)
+		shutil.copy(hostdir+'/'+filename, hostdir+'/'+foldername+'/'+filename)
 		os.chdir(foldername)
 
 		videodata=skvideo.io.vread(filename)
@@ -251,6 +251,7 @@ def clean_alignfaces(videofile, basedir):
 					faces = face_cascade.detectMultiScale(gray, 1.3, 5)
 					increment=0
 					print(len(faces))
+					files=list()
 
 					if len(faces) == 0:
 						pass
@@ -265,6 +266,7 @@ def clean_alignfaces(videofile, basedir):
 							norm_img = np.zeros((100, 100))
 							norm_img = cv2.normalize(newimg, norm_img, 0, 255, cv2.NORM_MINMAX)
 							cv2.imwrite(new_image_file, newimg)
+							files.append(new_image_file)
 							facenums=facenums+1
 
 				except:
@@ -280,7 +282,7 @@ def clean_alignfaces(videofile, basedir):
 				if listdir[i].find('face') < 0:
 					os.remove(listdir[i])
 
-		return facenums
+		return facenums, files
 
 	# paths
 	opencv_home = cv2.__file__
@@ -302,6 +304,6 @@ def clean_alignfaces(videofile, basedir):
 	eye_detector = cv2.CascadeClassifier(eye_detector_path) 
 	nose_detector = cv2.CascadeClassifier(nose_detector_path) 
 
-	facenums=cut_faces(os.getcwd(), videofile)
+	facenums, files=cut_faces(os.getcwd(), videofile)
 
-clean_alignfaces('test_video.mp4', os.getcwd())
+	return [filename]

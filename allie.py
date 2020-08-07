@@ -77,11 +77,11 @@ Options:
                         specify the class that you wish to annotate (e.g.
                         'male')
   --t1=tdir1, --tdir1=tdir1
-                        the directory in the ./train_dir that represent a
+                        the directory in the ./train_dir that represents a
                         folder of files that the transform API will operate
                         upon (e.g. 'males')
   --t2=tdir2, --tdir2=tdir2
-                        the directory in the ./train_dir that represent a
+                        the directory in the ./train_dir that represents a
                         folder of files that the transform API will operate
                         upon (e.g. 'females')
   --d=dir, --dir=dir    an array of the target directory (or directories) that
@@ -217,9 +217,9 @@ parser.add_option("--i", "--class", dest="class_",
 
 # up to 2 directories listed here
 parser.add_option("--t1", "--tdir1", dest="tdir1",
-                  help="the directory in the ./train_dir that represent a folder of files that the transform API will operate upon (e.g. 'males')", metavar="tdir1")
+                  help="the directory in the ./train_dir that represents a folder of files that the transform API will operate upon (e.g. 'males')", metavar="tdir1")
 parser.add_option("--t2", "--tdir2", dest="tdir2",
-                  help="the directory in the ./train_dir that represent a folder of files that the transform API will operate upon (e.g. 'females')", metavar="tdir2")
+                  help="the directory in the ./train_dir that represents a folder of files that the transform API will operate upon (e.g. 'females')", metavar="tdir2")
 
 # featurization, cleaning, and augmentation directories
 parser.add_option("--d", "--dir", dest="dir",

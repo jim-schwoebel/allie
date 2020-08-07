@@ -153,7 +153,7 @@ Quickly iterate and see which cluster method works best with your dataset.
 ### Feature_plots
 Easily plots all the features via violin plots (to spot distributions).
 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/128_mfcc_10_std.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/326_meanF0.png)
 
 ### Lasso plot 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso.png)

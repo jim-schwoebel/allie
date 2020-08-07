@@ -58,8 +58,10 @@ def clean_textacy(textfile):
 
 	print(text)
 	# now replace the original doc with cleaned version
-	textfile2=open('cleaned_'+textfile,'w')
+	newfile='cleaned_'+textfile
+	textfile2=open(newfile,'w')
 	textfile2.write(text)
 	textfile2.close()
-
 	os.remove(textfile)
+
+	return [newfile]

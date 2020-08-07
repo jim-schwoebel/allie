@@ -28,7 +28,7 @@
  "default_video_cleaners": ["remove_duplicates"], 
  "default_video_features": ["video_features"], 
  "default_video_transcriber": ["tesseract (averaged over frames)"], 
- "dimension_number": 2, 
+ "dimension_number": 100, 
  "feature_number": 20, 
  "model_compress": false, 
  "reduce_dimensions": false, 

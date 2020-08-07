@@ -57,7 +57,8 @@ Options:
                         datasets API = 'data',  features API = 'features',
                         model prediction API = 'predict',  preprocessing API =
                         'transform',  model training API = 'train',  testing
-                        API = 'test',  visualize API = 'visualize')
+                        API = 'test',  visualize API = 'visualize',
+                        list/change default settings = 'settings')
   --p=problemtype, --problemtype=problemtype
                         specify the problem type ('c' = classification or 'r'
                         = regression)
@@ -71,12 +72,12 @@ Options:
                         specify the class that you wish to annotate (e.g.
                         'male')
   --t1=tdir1, --tdir1=tdir1
-                        the directory in the ./train_dir that represent the
-                        folders of files that the transform API will operate
+                        the directory in the ./train_dir that represent a
+                        folder of files that the transform API will operate
                         upon (e.g. 'males')
   --t2=tdir2, --tdir2=tdir2
-                        the directory in the ./train_dir that represent the
-                        folders of files that the transform API will operate
+                        the directory in the ./train_dir that represent a
+                        folder of files that the transform API will operate
                         upon (e.g. 'females')
   --d=dir, --dir=dir    an array of the target directory (or directories) that
                         contains sample files for the annotation API,
@@ -84,6 +85,8 @@ Options:
                         cleaning API (e.g.
                         '/Users/jim/desktop/allie/train_dir/teens/')
 ```
+
+For more information on how to use the Allie CLI, check out the [Allie CLI tutorial]().
 
 ## Quick examples
 

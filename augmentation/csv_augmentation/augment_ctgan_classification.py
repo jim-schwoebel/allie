@@ -1,8 +1,40 @@
+'''
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+ / _ \                                 | |      | | (_)            
+/ /_\ \_   _  __ _ _ __ ___   ___ _ __ | |_ __ _| |_ _  ___  _ __  
+|  _  | | | |/ _` | '_ ` _ \ / _ \ '_ \| __/ _` | __| |/ _ \| '_ \ 
+| | | | |_| | (_| | | | | | |  __/ | | | || (_| | |_| | (_) | | | |
+\_| |_/\__,_|\__, |_| |_| |_|\___|_| |_|\__\__,_|\__|_|\___/|_| |_|
+			  __/ |                                                
+			 |___/                                                 
+  ___  ______ _____       _____  _____  _   _ 
+ / _ \ | ___ \_   _|  _  /  __ \/  ___|| | | |
+/ /_\ \| |_/ / | |   (_) | /  \/\ `--. | | | |
+|  _  ||  __/  | |       | |     `--. \| | | |
+| | | || |    _| |_   _  | \__/\/\__/ /\ \_/ /
+\_| |_/\_|    \___/  (_)  \____/\____/  \___/ 
+											  
+'''
 from ctgan import CTGANSynthesizer
 import time, random
 import pandas as pd
 import numpy as np
-#discrete_columns = [""]
 
 def find_nearestval(value,values):
 	distances=list()
@@ -19,20 +51,20 @@ def find_nearestval(value,values):
 	return newvalue
 
 def get_index_positions(list_of_elems, element):
-    ''' Returns the indexes of all occurrences of give element in
-    the list- listOfElements '''
-    index_pos_list = []
-    index_pos = 0
-    while True:
-        try:
-            # Search for item in list from indexPos to the end of list
-            index_pos = list_of_elems.index(element, index_pos)
-            # Add the index position in list
-            index_pos_list.append(index_pos)
-            index_pos += 1
-        except ValueError as e:
-            break
-    return index_pos_list
+	''' Returns the indexes of all occurrences of give element in
+	the list- listOfElements '''
+	index_pos_list = []
+	index_pos = 0
+	while True:
+		try:
+			# Search for item in list from indexPos to the end of list
+			index_pos = list_of_elems.index(element, index_pos)
+			# Add the index position in list
+			index_pos_list.append(index_pos)
+			index_pos += 1
+		except ValueError as e:
+			break
+	return index_pos_list
 
 
 def augment_ctgan_classification(csvfile):
@@ -80,12 +112,13 @@ def augment_ctgan_classification(csvfile):
 	print('augmented with %s samples'%(str(len(unique_classes)*minval)))
 	print(df_gen)
 	# now add both togrther to make new .CSV file
-	df_gen.to_csv('augmented_'+csvfile, index=0)
+	newfile1='augmented_'+csvfile
+	df_gen.to_csv(newfile1, index=0)
 
 	# now combine augmented and regular dataset
 	data2=pd.read_csv('augmented_'+csvfile)
 	frames = [data, data2]
 	result = pd.concat(frames)
-	result.to_csv('augmented_combined_'+csvfile, index=0)
-
-# augment_ctgan_classification('gender_all.csv')
+	newfile='augmented_combined_'+csvfile
+	result.to_csv(newfile, index=0)
+	return [csvfile, newfile1, newfile2]

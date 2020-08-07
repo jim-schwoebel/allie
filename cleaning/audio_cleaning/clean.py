@@ -404,4 +404,4 @@ for i in tqdm(range(len(listdir)), desc=labelname):
         for j in range(len(cleaning_sets)):
             for k in range(len(filename)):
                 cleaning_set=cleaning_sets[j]
-                filename=audio_clean(cleaning_set, filename[i], basedir)
+                filename=audio_clean(cleaning_set, filename[k], basedir)

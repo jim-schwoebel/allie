@@ -151,7 +151,7 @@ Quickly iterate and see which cluster method works best with your dataset.
 ```
 
 ### Feature importances (top 20 features)
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance2.png)
 
 ### Feature_plots
 Easily plots all the features via violin plots (to spot distributions).

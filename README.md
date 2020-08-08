@@ -1,16 +1,15 @@
 
+# Allie 
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie,%20an%20awesome%20new%20AutoML%20framework%20@%20https://github.com/jim-schwoebel/allie.&hashtags=machinelearning,automl,deeplearning) 
+
 ![](https://media.giphy.com/media/20NLMBm0BkUOwNljwv/giphy.gif)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ![Python](https://img.shields.io/badge/python-v3.6+-blue.svg)
-[![Build Status](https://travis-ci.org/anfederico/Clairvoyant.svg?branch=master)](https://travis-ci.org/anfederico/Clairvoyant)
 ![Dependencies](https://img.shields.io/badge/dependencies-up%20to%20date-brightgreen.svg)
 [![GitHub Issues](https://img.shields.io/github/issues/anfederico/Clairvoyant.svg)](https://github.com/jim-schwoebel/allie/issues)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/jim-schwoebel/allie/projects)
 [![License](https://img.shields.io/badge/license-Apache%202-blue)](https://www.apache.org/licenses/LICENSE-2.0.html)
-
-# Allie 
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie,%20an%20awesome%20new%20AutoML%20framework%20@%20https://github.com/jim-schwoebel/allie.&hashtags=machinelearning,automl,deeplearning) 
 
 Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files. 
 

@@ -76,14 +76,6 @@ Options:
   --i=class_, --class=class_
                         specify the class that you wish to annotate (e.g.
                         'male')
-  --t1=tdir1, --tdir1=tdir1
-                        the directory in the ./train_dir that represents a
-                        folder of files that the transform API will operate
-                        upon (e.g. 'males')
-  --t2=tdir2, --tdir2=tdir2
-                        the directory in the ./train_dir that represents a
-                        folder of files that the transform API will operate
-                        upon (e.g. 'females')
   --d=dir, --dir=dir    an array of the target directory (or directories) that
                         contains sample files for the annotation API,
                         prediction API, features API, augmentation API, and
@@ -215,13 +207,7 @@ parser.add_option("--n", "--name", dest="common_name",
 parser.add_option("--i", "--class", dest="class_", 
 				  help="specify the class that you wish to annotate (e.g. 'male')", metavar="class_")
 
-# up to 2 directories listed here
-parser.add_option("--t1", "--tdir1", dest="tdir1",
-                  help="the directory in the ./train_dir that represents a folder of files that the transform API will operate upon (e.g. 'males')", metavar="tdir1")
-parser.add_option("--t2", "--tdir2", dest="tdir2",
-                  help="the directory in the ./train_dir that represents a folder of files that the transform API will operate upon (e.g. 'females')", metavar="tdir2")
-
-# featurization, cleaning, and augmentation directories
+# preprocessing, featurization, cleaning, and augmentation API directories (as an appended list)
 parser.add_option("--d", "--dir", dest="dir",
                   help="an array of the target directory (or directories) that contains sample files for the annotation API, prediction API, features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/')", metavar="dir",
                   action='append')
@@ -248,14 +234,6 @@ except:
 	pass
 try:
 	class_ = options.class_.lower()
-except:
-	pass
-try:
-	tdir1=options.tdir1
-except:
-	pass
-try:
-	tdir2=options.tdir2
 except:
 	pass
 try:
@@ -335,9 +313,9 @@ try:
 			# - Preprocessing API - https://github.com/jim-schwoebel/allie/tree/master/preprocessing
 			os.chdir(preprocessing_dir)
 			# get first folder 
-			if sampletype in sampletypes and problemtype in problemtypes and str(common_name) != 'None' and str(tdir1) != 'None' and str(tdir2) != 'None': 
+			if sampletype in sampletypes and problemtype in problemtypes and str(common_name) != 'None' and str(directory) != 'None' and len(directory) > 1: 
 				# get second folder 
-				os.system('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, tdir1, tdir2))
+				os.system('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, directory[0], directory[1]))
 				print('your transform can now be found in the ./preprocessing/%s_transforms directory'%(sampletype))
 			else:
 				if str(tdir1) == 'None' or str(tdir2) == 'None':

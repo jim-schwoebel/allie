@@ -71,18 +71,10 @@ Options:
   --i=class_, --class=class_
                         specify the class that you wish to annotate (e.g.
                         'male')
-  --t1=tdir1, --tdir1=tdir1
-                        the directory in the ./train_dir that represent a
-                        folder of files that the transform API will operate
-                        upon (e.g. 'males')
-  --t2=tdir2, --tdir2=tdir2
-                        the directory in the ./train_dir that represent a
-                        folder of files that the transform API will operate
-                        upon (e.g. 'females')
   --d=dir, --dir=dir    an array of the target directory (or directories) that
                         contains sample files for the annotation API,
-                        prediction API, features API, augmentation API, and
-                        cleaning API (e.g.
+                        prediction API, features API, augmentation API,
+                        cleaning API, and preprocessing API (e.g.
                         '/Users/jim/desktop/allie/train_dir/teens/')
 ```
 

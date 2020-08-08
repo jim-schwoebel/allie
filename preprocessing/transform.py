@@ -58,7 +58,7 @@ sys.argv[4], sys.argv[5], sys.argv[n]
 
 '''
 
-import json, os, sys
+import json, os, sys, time, pickle
 os.system('pip3 install scikit-learn==0.22.2.post1')
 import numpy as np 
 from sklearn import preprocessing
@@ -67,7 +67,6 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 from tqdm import tqdm
-import pickle
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -92,7 +91,7 @@ def prev_dir(directory):
 	# print(dir_)
 	return dir_
 
-def get_classes():
+def get_class_dir():
 	count=4
 	classes=list()
 	while True:
@@ -104,10 +103,22 @@ def get_classes():
 		except:
 			break
 
-	return classes
+	classdirs=list()
+	actualclasses=list()
+	for i in range(len(classes)):
+		if classes[i].count('/') > 0:
+			# a directory 
+			classdirs.append(classes[i])
+			actualclasses.append(classes[i].split('/')[-1])
+		else:
+			classdirs.append(os.getcwd()+'/'+classes[i])
+			actualclasses.append(classes[i])
 
-def get_features(classes, problem_type, settings):
+	return classdirs, actualclasses
 
+def get_features(classdirs, classes, problem_type, settings):
+
+	# initialize lists
 	features=list()
 	feature_labels=list()
 	class_labels=list()
@@ -123,9 +134,9 @@ def get_features(classes, problem_type, settings):
 	defaults=default_audio_features+default_text_features+default_image_features+default_video_features+default_csv_features
 
 	for i in range(len(classes)):
-
+		classname=class_labels
 		print('----------LOADING %s----------'%(classes[i].upper()))
-		os.chdir(curdir+'/'+classes[i])
+		os.chdir(classdirs[i])
 		listdir=os.listdir()
 		jsonfiles=list()
 
@@ -200,8 +211,8 @@ train_type=sys.argv[2] #c = classification, r=regression
 
 if train_type == 'c':
 	common_name=sys.argv[3] #common_name = 'gender'
-	classes=get_classes()
-	features, feature_labels, class_labels = get_features(classes, problem_type, settings)
+	classdirs, classes=get_class_dir()
+	features, feature_labels, class_labels = get_features(classdirs, classes, problem_type, settings)
 	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 	print(features[0])
 	print(feature_labels[0])

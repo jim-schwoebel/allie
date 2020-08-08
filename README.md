@@ -86,7 +86,6 @@ Options:
 ```
 
 For more information on how to use the Allie CLI, check out the [Allie CLI tutorial](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface) or any of the links below:
-- [help](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#help)
 - [annotating files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#annotating-files)
 - [augmenting files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#augmenting-files)
 - [cleaning files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#cleaning-files)

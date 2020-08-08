@@ -52,7 +52,7 @@ After everything is done, you can use the [Allie CLI](https://github.com/jim-sch
 python3 allie.py -h
 ```
 
-Which should output some ways you can use Allie with commands in the API:
+Which should output some ways you can use Allie:
 ```
 Usage: allie.py [options]
 
@@ -85,7 +85,7 @@ Options:
                         '/Users/jim/desktop/allie/train_dir/teens/')
 ```
 
-For more information on how to use the Allie CLI, check out the [Allie CLI tutorial](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface):
+For more information on how to use the Allie CLI, check out the [Allie CLI tutorial](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface) or any of the links below:
 - [help](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#help)
 - [annotating files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#annotating-files)
 - [augmenting files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#augmenting-files)

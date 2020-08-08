@@ -85,7 +85,19 @@ Options:
                         '/Users/jim/desktop/allie/train_dir/teens/')
 ```
 
-For more information on how to use the Allie CLI, check out the [Allie CLI tutorial](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface).
+For more information on how to use the Allie CLI, check out the [Allie CLI tutorial](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface):
+- [help](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#help)
+- [annotating files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#annotating-files)
+- [augmenting files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#augmenting-files)
+- [cleaning files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#cleaning-files)
+- [collecting data](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#collecting-data)
+- [featurizing files](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#featurizing-files)
+- [training models](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#training-models)
+- [model predictions](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#predicting-outputs-from-models)
+- [preprocessing / making transformers](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#preprocessing--making-transformers)
+- [unit tests](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#unit-tests)
+- [visualizing data](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#visualizing-data)
+- [new settings](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface#new-settings)
 
 ## Quick examples
 

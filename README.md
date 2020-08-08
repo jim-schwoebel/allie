@@ -1,5 +1,5 @@
 # Allie 
-[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie,%20an%20awesome%20new%20AutoML%20framework%20@%20https://github.com/jim-schwoebel/allie.&hashtags=machinelearning,automl,deeplearning)
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie,%20an%20awesome%20new%20AutoML%20framework%20@%20https://github.com/jim-schwoebel/allie.&hashtags=machinelearning,automl,deeplearning) [<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=bootstrap&type=star&count=true" frameborder="0" scrolling="0" width="150" height="20" title="GitHub"></iframe>](https://github.com/jim-schwoebel/allie)
 
 Allie is a framework for building machine learning models from audio, text, image, video, or .CSV files. 
 

@@ -69,6 +69,3 @@ Here are the relevant settings in Allie related to preprocessing that you can ch
 | [default_feature_selector](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_select.py) | the default feature selector or set of reature selectors | ["lasso"] | ["lasso", "rfe", "chi", "kbest", "variance"] | 
 | scale_features | if True, scales features via the default_scaler (or set of scalers) | False | True, False | 
 | [default_scaler](https://github.com/jim-schwoebel/allie/blob/master/preprocessing/feature_scale.py) | the default scaler (e.g. StandardScalar) to pre-process data | ["standard_scaler"] | ["binarizer", "one_hot_encoder", "normalize", "power_transformer", "poly", "quantile_transformer", "standard_scaler"]|
-
-## References
-* [sophia](https://github.com/jiankaiwang/sophia) - tutorials in feature preprocessing and ML algorithms

@@ -22,7 +22,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |  | | (_) | (_| |  __/ | | | | || |    _| |_ 
 \_|  |_/\___/ \__,_|\___|_| \_| |_/\_|    \___/ 
 
-Train models using autogbt: https://github.com/flytxtds/AutoGBT
+Train models using autogbt: https://github.com/pfnet-research/autogbt-alt
 
 This is enabled if the default_training_script = ['autogbt']
 '''

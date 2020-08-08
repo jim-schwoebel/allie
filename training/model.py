@@ -180,7 +180,7 @@ def device_info():
 
 	return data
 
-def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data):
+def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data, model_start_time):
 	'''
 	get the metrics associated iwth a classification and regression problem
 	and output a .JSON file with the training session.
@@ -312,6 +312,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		plot_regressor(clf, classes, X_test, y_test)
 
 	data={'sample type': problemtype,
+		  'training time': time.time()-model_start_time,
 		  'created date': str(datetime.datetime.now()),
 		  'device info': device_info(),
 		  'session id': model_session,
@@ -342,6 +343,8 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	basedir=prev_dir(curdir)
 	os.chdir(basedir)
 	os.system('pip3 freeze -> requirements.txt')
+
+	# FUTURE - add in optional copy of cleaning, augmentation, and feature libraries contextually
 	# try:
 	# 	shutil.copytree(prev_dir(prev_dir(basedir))+'/features', basedir+'/features')
 	# except:
@@ -353,6 +356,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	# 	shutil.copytree(prev_dir(prev_dir(basedir))+'/augmentation', basedir+'/augmentation')
 	# except:
 	# 	print('error copying augmentation techniques')
+
 	os.chdir(curdir)
 
 def plot_roc_curve(y_test, probs, clf_names):  
@@ -1350,7 +1354,7 @@ i=0
 for i in tqdm(range(len(default_training_scripts)), desc=default_training_scripts[i]):
 
 	try:
-	
+		model_start_time=time.time()
 		# go to model directory 
 		os.chdir(model_dir)
 
@@ -1530,7 +1534,7 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 			test_data=''
 
 		# now make main .JSON file for the session summary with metrics
-		get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data)
+		get_metrics(clf, problemtype, mtype, default_training_script, common_name, X_test, y_test, classes, modelname, settings, model_session, transformer_name, created_csv_files, test_data, model_start_time)
 		
 		# now move to the proper models directory
 		os.chdir(model_dir)

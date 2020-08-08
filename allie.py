@@ -78,8 +78,8 @@ Options:
                         'male')
   --d=dir, --dir=dir    an array of the target directory (or directories) that
                         contains sample files for the annotation API,
-                        prediction API, features API, augmentation API, and
-                        cleaning API (e.g.
+                        prediction API, features API, augmentation API,
+                        cleaning API, and preprocessing API (e.g.
                         '/Users/jim/desktop/allie/train_dir/teens/')
 			
 If you have any questions or would like to contribute to our community,
@@ -209,7 +209,7 @@ parser.add_option("--i", "--class", dest="class_",
 
 # preprocessing, featurization, cleaning, and augmentation API directories (as an appended list)
 parser.add_option("--d", "--dir", dest="dir",
-                  help="an array of the target directory (or directories) that contains sample files for the annotation API, prediction API, features API, augmentation API, and cleaning API (e.g. '/Users/jim/desktop/allie/train_dir/teens/')", metavar="dir",
+                  help="an array of the target directory (or directories) that contains sample files for the annotation API, prediction API, features API, augmentation API, cleaning API, and preprocessing API (e.g. '/Users/jim/desktop/allie/train_dir/teens/')", metavar="dir",
                   action='append')
 
 # parse arguments
@@ -314,8 +314,11 @@ try:
 			os.chdir(preprocessing_dir)
 			# get first folder 
 			if sampletype in sampletypes and problemtype in problemtypes and str(common_name) != 'None' and str(directory) != 'None' and len(directory) > 1: 
-				# get second folder 
-				os.system('python3 transform.py %s %s %s %s %s'%(sampletype, problemtype, common_name, directory[0], directory[1]))
+				# get to N number of folders
+				command='python3 transform.py %s %s %s'%(sampletype, problemtype, common_name)
+				for i in range(len(directory)):
+					command=command+' '+directory[i]
+				os.system(command)
 				print('your transform can now be found in the ./preprocessing/%s_transforms directory'%(sampletype))
 			else:
 				if str(tdir1) == 'None' or str(tdir2) == 'None':

@@ -239,19 +239,3 @@ Heatmap with removed correlated variables
 
 ### Threshold graph 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds.png)
-
-## References
-* [Feature selection techniques in Python](https://towardsdatascience.com/feature-selection-techniques-in-machine-learning-with-python-f24e7da3f36e)
-* [How to visualize anything in Yellowbrick](https://medium.com/analytics-vidhya/how-to-visualize-anything-in-machine-learning-using-yellowbrick-and-mlxtend-39c45e1e9e9f)
-* [Intro to data visualization in Python](https://gilberttanner.com/blog/introduction-to-data-visualization-inpython)
-* [Matplotlib bar chart](https://pythonspot.com/matplotlib-bar-chart/)
-* [Visualize machine learning Pandas](https://machinelearningmastery.com/visualize-machine-learning-data-python-pandas/)
-* [Top 50 Matplotlib visualizations](https://www.machinelearningplus.com/plots/top-50-matplotlib-visualizations-the-master-plots-python/)
-* [Dimensionality reduction techniques](https://www.analyticsvidhya.com/blog/2018/08/dimensionality-reduction-techniques-python/)
-* [MLXtend](https://github.com/rasbt/mlxtend) - for visualizing models
-* [Plotly learning curves](https://github.com/mitmedialab/vizml/blob/master/notebooks/Plotly%20Performance.ipynb)
-* [Snowflake](https://github.com/doubledherin/Audio_Snowflake) - audio song visualization
-* [Streamit](https://github.com/streamlit/streamlit)
-* [Viola](https://github.com/voila-dashboards/voila)
-* [Voicebook: Chapter 6 Visualization](https://github.com/jim-schwoebel/voicebook/tree/master/chapter_6_visualization)
-* [Yellowbrick](https://www.scikit-yb.org/en/latest/)

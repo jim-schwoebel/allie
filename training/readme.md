@@ -580,7 +580,7 @@ The output .JSON will look something like this:
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 
-Here are some settings that you can modify in the [settings.json file](https://github.com/jim-schwoebel/allie/blob/master/settings.json) related to Allie's Model API and the various options for these settings:
+Here are some settings that you can modify in the [settings.json file](https://github.com/jim-schwoebel/allie/blob/master/settings.json) related to Allie's Model API.
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 

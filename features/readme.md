@@ -153,13 +153,13 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/features/image_features)
 * [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default).
-* [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py) - features extracted with the [Inception model](https://keras.io/api/applications/).
-* [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py) - features extracted with the [ResNet model](https://keras.io/api/applications/).
-* [squeezenet_features](https://github.com/rcmalli/keras-squeezenet) - features extracted with the [Squeezenet model](https://keras.io/api/applications/); this has an efficient memory footprint.
-* [tesseract_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/tesseract_features.py) - features extracted with OCR on images using the pytesseract module.
-* [vgg16_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg16_features.py) - features extracted with hte [VGG16 model](https://keras.io/api/applications/).
-* [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) - features extracted with hte [VGG19 model](https://keras.io/api/applications/).
-* [xception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/xception_features.py) - features extracted with hte [Xception model](https://keras.io/api/applications/).
+* [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py) - features extracted with the [Inception model](https://keras.io/api/applications/inceptionv3/).
+* [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py) - features extracted with the [ResNet model](https://keras.io/api/applications/resnet/#resnet50v2-function).
+* [squeezenet_features](https://github.com/rcmalli/keras-squeezenet) - features extracted with the [Squeezenet model](https://github.com/forresti/SqueezeNet); this has an efficient memory footprint.
+* [tesseract_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/tesseract_features.py) - features extracted with OCR on images using the [pytesseract module](https://pypi.org/project/pytesseract/).
+* [vgg16_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg16_features.py) - features extracted with hte [VGG16 model](https://keras.io/api/applications/vgg/#vgg16-function).
+* [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) - features extracted with hte [VGG19 model](https://keras.io/api/applications/vgg/#vgg19-function).
+* [xception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/xception_features.py) - features extracted with hte [Xception model](https://keras.io/api/applications/xception/).
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/features/vide_features)
 * [video_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/video_features.py) - standard video feature array (default) - extracts acoustic, linguistic, and video features.

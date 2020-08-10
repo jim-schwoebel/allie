@@ -38,8 +38,8 @@ Note you can extend this to any of the file types. The table below overviews how
 ## Implemented
 
 ### Implemented for all file types 
-* [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_duplicates.py) - deletes duplicate files in the directory 
-* [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
+* [delete_duplicates](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean.py#L357) - deletes duplicate files in the directory 
+* [delete_json](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean.py#L381) - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning)
 * [clean_getfirst3secs](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_getfirst3secs.py) - gets the first 3 seconds of the audio file

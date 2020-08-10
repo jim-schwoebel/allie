@@ -46,4 +46,4 @@ def augment_pitch(filename):
   os.system('sox %s %s pitch %s'%(filename, basefile+'_freq_1.wav', str(randint)))
   randint=random.randint(300,600)
   os.system('sox %s %s pitch -%s'%(filename, , str(randint)))
-  return [basefile+'_freq_1.wav',basefile+'_freq_2.wav']
+  return [filename, basefile+'_freq_1.wav',basefile+'_freq_2.wav']

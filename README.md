@@ -40,7 +40,7 @@ python3 -m pip install --user virtualenv
 python3 -m venv env
 source env/bin/activate
 ```
-Now install required dependencies and perform unit tests to make sure everything works:
+Now install required dependencies and perform [unit tests](https://github.com/jim-schwoebel/allie/tree/master/tests) to make sure everything works:
 ```
 python3 setup.py
 ```

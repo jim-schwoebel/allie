@@ -42,4 +42,4 @@ def augment_time(filename):
   librosa.output.write_wav(basefile+'_stretch_0.wav', y_fast, sr)
   y_slow = librosa.effects.time_stretch(y, 0.75)
   librosa.output.write_wav(basefile+'_stretch_2.wav', y_slow, sr)
-  return [basefile+'_stretch_0.wav', basefile+'_stretch_2.wav']
+  return [filename, basefile+'_stretch_0.wav', basefile+'_stretch_2.wav']

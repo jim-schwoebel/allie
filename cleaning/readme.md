@@ -60,9 +60,9 @@ Note you can extend this to any of the file types. The table below overviews how
 * [clean_textacy]() - removes punctuation and a variety of other operations to clean a text (uses [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html))
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning)
-* [clean_extractfaces]() - extract faces from an image
-* [clean_greyscale]() - make all images greyscale 
-* [clean_jpg2png]() - make images from jpg to png to standardize image formats
+* [clean_extractfaces](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_extractfaces.py) - extract faces from an image
+* [clean_greyscale](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_greyscale.py) - make all images greyscale 
+* [clean_jpg2png](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_jpg2png.py) - make images from jpg to png to standardize image formats
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning)
 * [clean_alignfaces]() - takes out faces from a video frame and keeps the video for an added label

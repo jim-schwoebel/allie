@@ -42,18 +42,18 @@ Note you can extend this to any of the file types. The table below overviews how
 * [delete_json](https://github.com/jim-schwoebel/allie/blob/master/datasets/cleaning/delete_json.py) - deletes all .JSON files in the directory (this is to clean the featurizations) 
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/cleaning/audio_cleaning)
-* [clean_getfirst3secs]() - gets the first 3 seconds of the audio file
-* [clean_keyword]() - keeps only keywords that are spoken based on a transcript (from the default_audio_transcriber)
-* [clean_mono16hz]() - converts all audio to mono 16000 Hz for analysis (helps prepare for many preprocessing techniques)
-* [clean_towav]() - converts all audio files to wav files
-* [clean_multispeaker]() - deletes audio files from a dataset that have been identified as having multiple speakers from a deep learning model
-* [clean_normalizevolume]() - normalizes the volume of all audio files using peak normalization methods from ffmpeg-normalize
-* [clean_opus]() - converts an audio file to .OPUS audio file format then back to wav (a lossy conversion) - narrowing in more on voice signals over noise signals.
-* [clean_random20secsplice]() - take a random splice (time specified in the script) from the audio file.
-* [clean_removenoise]() - removes noise from the audio file using SoX program and noise floors.
-* [clean_removesilence]() - removes silence from an audio file using voice activity detectors.
-* [clean_rename]() - renames all the audio files in the current directory with a new UUID
-* [clean_utterances]() - converts all audio files into unique utterances (1 .WAV file --> many .WAV file utterances) for futher analysis.
+* [clean_getfirst3secs](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_getfirst3secs.py) - gets the first 3 seconds of the audio file
+* [clean_keyword](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_keyword.py) - keeps only keywords that are spoken based on a transcript (from the default_audio_transcriber)
+* [clean_mono16hz](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_mono16hz.py) - converts all audio to mono 16000 Hz for analysis (helps prepare for many preprocessing techniques)
+* [clean_towav](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_towav.py) - converts all audio files to wav files
+* [clean_multispeaker](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_multispeaker.py) - deletes audio files from a dataset that have been identified as having multiple speakers from a deep learning model
+* [clean_normalizevolume](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_normalizevolume.py) - normalizes the volume of all audio files using peak normalization methods from ffmpeg-normalize
+* [clean_opus](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_opus.py) - converts an audio file to .OPUS audio file format then back to wav (a lossy conversion) - narrowing in more on voice signals over noise signals.
+* [clean_randomplice](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_randomsplice.py) - take a random splice (time specified in the script) from the audio file.
+* [clean_removenoise](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_removenoise.py) - removes noise from the audio file using SoX program and noise floors.
+* [clean_removesilence](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_removesilence.py) - removes silence from an audio file using voice activity detectors.
+* [clean_rename](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_rename.py) - renames all the audio files in the current directory with a new UUID
+* [clean_utterances](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_utterances.py) - converts all audio files into unique utterances (1 .WAV file --> many .WAV file utterances) for futher analysis.
 
 ### [Text](https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning)
 * [clean_summary](https://github.com/jim-schwoebel/allie/blob/master/cleaning/text_cleaning/clean_summary.py) - extracts a 100 word summary of a long piece of text and deletes the original work (using [Text rank summarization](https://github.com/davidadamojr/TextRank))

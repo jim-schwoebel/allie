@@ -8,4 +8,4 @@ python3 augment.py /Users/jimschwoebel/allie/load_dir
 ```
 
 ### Text
-* [augment_textacy]()
+* [augment_textacy](https://github.com/jim-schwoebel/allie/blob/master/augmentation/text_augmentation/augment_textacy.py) - uses [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) to augment text files.

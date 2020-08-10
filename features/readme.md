@@ -167,9 +167,9 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 
 ### CSV 
 
-.CSV can include numerical data, categorical data, audio files (./audio.wav), image files (.png), video files (./video.mp4), text files ('.txt' or text column), or other .CSV files. 
+.CSV can include numerical data, categorical data, audio files (./audio.wav), image files (.png), video files (./video.mp4), text files ('.txt' or text column), or other .CSV files. This scope of a table feature is inspired by [D3M schema design proposed by the MIT data lab](https://github.com/mitll/d3m-schema/blob/master/documentation/datasetSchema.md).
 
-* [csv_features](https://github.com/jim-schwoebel/allie/blob/master/features/csv_features/csv_features.py) - standard CSV feature array
+* [featurize_csv_regression](https://github.com/jim-schwoebel/allie/blob/master/features/csv_features/featurize_csv_regression.py) - standard CSV feature array that can accomodate audio, image, video, text, and numerical data formats.
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 

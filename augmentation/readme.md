@@ -48,7 +48,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 ![](https://github.com/AgaMiko/data-augmentation-review/raw/master/images/da_diagram_v2.png)
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation)
-* [augment_tsaug](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_tsaug.py) - adds noise and various shifts to audio files, addes 2x more data; see tutorial [here]((https://tsaug.readthedocs.io/en/stable/).
+* [augment_tsaug](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_tsaug.py) - adds noise and various shifts to audio files, addes 2x more data; see tutorial [here](https://tsaug.readthedocs.io/en/stable/).
 * [augment_addnoise](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_addnoise.py) - adds noise to an audio file.
 * [augment_noise](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_noise.py) - removes noise from audio files randomly.
 * [augment_pitch](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_pitch.py) - shifts pitch up and down to correct for gender differences. 

@@ -129,7 +129,7 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 * [praat_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/praat_features.py) - extracts features from the parselmouth.praat library.
 * [prosody_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/prosody_features.py) - prosody using Google's VAD - including pause length, total number of pauses, and pause variability.
 * [pspeech_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pspeech_features.py) - extracts features with the [python_speech features library](https://github.com/jameslyons/python_speech_features).
-* [pyaudio_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyaudio_features.py) - extract features withh the [pyaudioanalysis])(https://github.com/tyiannak/pyAudioAnalysis) library.
+* [pyaudio_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyaudio_features.py) - extract features withh the [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) library.
 * [pyaudiolex_features](https://github.com/tyiannak/pyAudioAnalysis) - time series features extracted with the [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) library.
 * [pyworld_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyworld_features.py) - f0 and and spectrogram features.
 * [sa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sa_features.py) - some additional features extracted using the [SignalAnalysis](https://brookemosby.github.io/Signal_Analysis/Signal_Analysis.features.html#module-Signal_Analysis.features.signal) library.

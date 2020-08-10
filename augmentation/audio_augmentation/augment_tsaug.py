@@ -66,4 +66,4 @@ def augment_tsaug(filename):
         y_aug = my_augmenter.augment(y)
         newfile='tsaug_'+filename
         sf.write(newfile, y_aug.T, sr)
-        return [newfile]
+        return [filename, newfile]

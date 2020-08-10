@@ -8,7 +8,7 @@ python3 featurize.py [folder] [featuretype]
 ### Audio
 * [audioset_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audioset_features.py) - 
 simple script to extract features using the VGGish model released by Google.
-* [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py) - Featurizes data with text feautures extracted from the transcript.
+* [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py) - featurizes data with text feautures extracted from the transcript.
 * [librosa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/librosa_features.py) - 
 extracts acoustic features using the [LibROSA library](https://librosa.org/).
 * [loudness_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/loudness_features.py) - extracts loudness features using the [pyloudnorm](https://github.com/csteinmetz1/pyloudnorm) library.

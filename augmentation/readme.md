@@ -48,7 +48,7 @@ Note you can extend this to any of the augmentation types. The table below overv
 ![](https://github.com/AgaMiko/data-augmentation-review/raw/master/images/da_diagram_v2.png)
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation)
-* [augment_tsaug](https://tsaug.readthedocs.io/en/stable/) - see tutorial here.
+* [augment_tsaug]) - ; see tutorial [here]((https://tsaug.readthedocs.io/en/stable/).
 * [augment_addnoise]()
 * [augment_noise]()
 * [augment_pitch]()

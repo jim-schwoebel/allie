@@ -65,11 +65,11 @@ Note you can extend this to any of the file types. The table below overviews how
 * [clean_jpg2png](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_jpg2png.py) - make images from jpg to png to standardize image formats
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning)
-* [clean_alignfaces]() - takes out faces from a video frame and keeps the video for an added label
-* [clean_videostabilize]() - stabilizes a video frame using [vidgear](https://github.com/abhiTronix/vidgear) (note this is a WIP)
+* [clean_alignfaces](https://github.com/jim-schwoebel/allie/blob/master/cleaning/video_cleaning/clean_alignfaces.py) - takes out faces from a video frame and keeps the video for an added label
+* [clean_videostabilize](https://github.com/jim-schwoebel/allie/blob/master/cleaning/video_cleaning/clean_videostabilize.py) - stabilizes a video frame using [vidgear](https://github.com/abhiTronix/vidgear) (note this is a WIP)
 
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
-* [clean_csv]() - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
+* [clean_csv](https://github.com/jim-schwoebel/allie/blob/master/cleaning/csv_cleaning/clean_csv.py) - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 

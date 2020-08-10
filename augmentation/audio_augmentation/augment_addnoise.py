@@ -67,4 +67,4 @@ def augment_addnoise(filename,curdir, noisedir):
     newfile=filename[0:-4]+'_noise.wav'
     os.system('ffmpeg -i %s -i %s -filter_complex "[0:a][1:a]join=inputs=2:channel_layout=stereo[a]" -map "[a]" %s'%(filename, 'noise.wav',newfile))
     os.remove('noise.wav')
-    return [newfile]
+    return [filename, newfile]

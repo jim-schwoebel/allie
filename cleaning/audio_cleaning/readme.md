@@ -16,7 +16,7 @@ python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 * [clean_multispeaker](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_multispeaker.py) - deletes audio files from a dataset that have been identified as having multiple speakers from a deep learning model
 * [clean_normalizevolume](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_normalizevolume.py) - normalizes the volume of all audio files using peak normalization methods from ffmpeg-normalize
 * [clean_opus](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_opus.py) - converts an audio file to .OPUS audio file format then back to wav (a lossy conversion) - narrowing in more on voice signals over noise signals.
-* [clean_randomplice](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_randomsplice.py) - take a random splice (time specified in the script) from the audio file.
+* [clean_randomsplice](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_randomsplice.py) - take a random splice (time specified in the script) from the audio file.
 * [clean_removenoise](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_removenoise.py) - removes noise from the audio file using SoX program and noise floors.
 * [clean_removesilence](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_removesilence.py) - removes silence from an audio file using voice activity detectors.
 * [clean_rename](https://github.com/jim-schwoebel/allie/blob/master/cleaning/audio_cleaning/clean_rename.py) - renames all the audio files in the current directory with a new UUID

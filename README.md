@@ -712,23 +712,23 @@ Here are some settings that you can modify in this settings.json file and the va
 | transcribe_video | a setting to define whether or not to transcribe video files during featurization and model training via the default_video_transcriber | True | True, False | 
 | [visualize_data](https://github.com/jim-schwoebel/allie/tree/master/visualize) | a setting to define whether or not to visualize features during the model training process via [Allie's visualization API](https://github.com/jim-schwoebel/allie/tree/master/visualize) | False | True, False | 
 
-## License
+## [License](https://www.apache.org/licenses/LICENSE-2.0)
 This repository is licensed under an [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). 
 
-## Feedback
+## [Feedback](https://github.com/jim-schwoebel/Allie/issues)
 Any feedback on this repository is greatly appreciated. 
 * If you find something that is missing or doesn't work, please consider opening a [GitHub issue](https://github.com/jim-schwoebel/Allie/issues).
 * If you'd like to be mentored by someone on our team, check out the [Innovation Fellows Program](http://neurolex.ai/research).
 * If you want to learn more about voice computing, check out [Voice Computing in Python](https://github.com/jim-schwoebel/voicebook) book.
 * If you want to talk to me directly, please send me an email @ js@neurolex.co.
 
-## Contribute
+## [Contribute](https://github.com/jim-schwoebel/allie/projects)
 
 We have built this machine learning framework to be quite agile to fit many purposes and needs, and we're excited to see how the open source community uses it. Forks and PRs are encouraged! 
 
 If you want to be a contributer, check out the [active projects](https://github.com/jim-schwoebel/allie/projects). There are many components of Allie that are expanding including the Annotation API, Visualization API, Features API, Modeling API, Cleaning API, and Augmentation API. If you are interested to contribute, please send me an email @ js@neurolex.co specifying the project you'd like to be a part of and I'll plug you in with the right team.
 
-## Additional resources
+## [Additional resources](https://github.com/jim-schwoebel/allie/wiki)
 
 You may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.
 

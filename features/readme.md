@@ -163,7 +163,7 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/features/vide_features)
 * [video_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/video_features.py) - standard video feature array (default) - extracts acoustic, linguistic, and video features.
-* [y8m_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/y8m_features.py) - extracts acoustic, linguistic, and video features usin the Y8M model.
+* [y8m_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/y8m_features.py) - extracts acoustic, linguistic, and video features using the Y8M model.
 
 ### CSV 
 

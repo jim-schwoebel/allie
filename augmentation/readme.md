@@ -48,23 +48,23 @@ Note you can extend this to any of the augmentation types. The table below overv
 ![](https://github.com/AgaMiko/data-augmentation-review/raw/master/images/da_diagram_v2.png)
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation)
-* [augment_tsaug]) - ; see tutorial [here]((https://tsaug.readthedocs.io/en/stable/).
-* [augment_addnoise]()
-* [augment_noise]()
-* [augment_pitch]()
-* [augment_randomsplice]()
-* [augment_silence]()
-* [augment_time]()
-* [augment_volume]()
+* [augment_tsaug](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_tsaug.py) - adds noise and various shifts to audio files, addes 2x more data; see tutorial [here]((https://tsaug.readthedocs.io/en/stable/).
+* [augment_addnoise](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_addnoise.py) - adds noise to an audio file.
+* [augment_noise](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_noise.py) - removes noise from audio files randomly.
+* [augment_pitch](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_pitch.py) - shifts pitch up and down to correct for gender differences. 
+* [augment_randomsplice](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_randomsplice.py) - randomly splice an audio file to generate more data.
+* [augment_silence](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_silence.py) - add silence to an audio file to augment a dataset.
+* [augment_time](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_time.py) - change time duration for a variety of audio files through making new files.
+* [augment_volume](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_volume.py) - change volume randomly (helps to mitigate effects of microphohne distance on a model).
 
 ### [Text](https://github.com/jim-schwoebel/allie/tree/master/augmentation/text_augmentation)
-* [augment_textacy]()
+* [augment_textacy](https://github.com/jim-schwoebel/allie/blob/master/augmentation/text_augmentation/augment_textacy.py) - uses [textacy](https://chartbeat-labs.github.io/textacy/build/html/index.html) to augment text files.
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation)
-* [augment_imaug]()
+* [augment_imaug](https://github.com/jim-schwoebel/allie/blob/master/augmentation/image_augmentation/augment_image.py) - uses [imaug](https://github.com/aleju/imgaug) to augment image files (random transformations).
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/augmentation/video_augmentation)
-* [augment_vidaug]()
+* [augment_vidaug](https://github.com/jim-schwoebel/allie/blob/master/augmentation/video_augmentation/augment_vidaug.py) - uses [vidaug](https://github.com/okankop/vidaug) to augment video files (random transformations).
 
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/augmentation/csv_augmentation)
 * [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.

@@ -56,8 +56,8 @@ Note you can extend this to any of the file types. The table below overviews how
 * [clean_utterances]() - converts all audio files into unique utterances (1 .WAV file --> many .WAV file utterances) for futher analysis.
 
 ### [Text](https://github.com/jim-schwoebel/allie/tree/master/cleaning/text_cleaning)
-* [clean_summary]() - extracts a 100 word summary of a long piece of text and deletes the original work (using [Text rank summarization](https://github.com/davidadamojr/TextRank))
-* [clean_textacy]() - removes punctuation and a variety of other operations to clean a text (uses [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html))
+* [clean_summary](https://github.com/jim-schwoebel/allie/blob/master/cleaning/text_cleaning/clean_summary.py) - extracts a 100 word summary of a long piece of text and deletes the original work (using [Text rank summarization](https://github.com/davidadamojr/TextRank))
+* [clean_textacy](https://github.com/jim-schwoebel/allie/blob/master/cleaning/text_cleaning/clean_textacy.py) - removes punctuation and a variety of other operations to clean a text (uses [Textacy](https://chartbeat-labs.github.io/textacy/build/html/api_reference/text_processing.html))
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning)
 * [clean_extractfaces](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_extractfaces.py) - extract faces from an image

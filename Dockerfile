@@ -10,7 +10,7 @@ RUN apt-get update \
   && pip3 install --upgrade pip \
   && apt-get install -y tree \
   && apt-get install -y libsm6 \ 
-  && apt-get install libsndfile1
+  && apt-get install libsndfile1 -y
 
 RUN     python setup.py
 RUN		tree

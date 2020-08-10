@@ -17,7 +17,7 @@ python3 augment.py /Users/jimschwoebel/allie/load_dir
 * [augment_time](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_time.py) - change time duration for a variety of audio files through making new files.
 * [augment_volume](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_volume.py) - change volume randomly (helps to mitigate effects of microphohne distance on a model).
 
-## Settings
+## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |

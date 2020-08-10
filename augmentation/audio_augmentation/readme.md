@@ -16,3 +16,9 @@ python3 augment.py /Users/jimschwoebel/allie/load_dir
 * [augment_silence](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_silence.py) - add silence to an audio file to augment a dataset.
 * [augment_time](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_time.py) - change time duration for a variety of audio files through making new files.
 * [augment_volume](https://github.com/jim-schwoebel/allie/blob/master/augmentation/audio_augmentation/augment_volume.py) - change volume randomly (helps to mitigate effects of microphohne distance on a model).
+
+## Settings
+| setting | description | default setting | all options | 
+|------|------|------|------| 
+| augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |
+| [default_audio_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/audio_augmentation) | the default augmentation strategies used during audio modeling if augment_data == True | ["augment_tsaug"] | ["augment_tsaug", "augment_addnoise", "augment_noise", "augment_pitch", "augment_randomsplice", "augment_silence", "augment_time", "augment_volume"] | 

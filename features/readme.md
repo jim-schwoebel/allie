@@ -114,7 +114,7 @@ Click the .GIF below to follow along this example in a video format:
 
 ## Implemented Features
 
-Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs (they are provided here for reference).
+Note that all scripts implemented have features and their corresponding labels. It is important to provide labels to understand what the features correspond to. It's also to keep in mind the relative speeds of featurization to optimize server costs.
 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/features/audio_features)
 * [audioset_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audioset_features.py) - 

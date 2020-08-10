@@ -60,7 +60,7 @@ def augment_imaug(imagefile):
 
     # print("Augmented:")
     # ia.imshow(ia.draw_grid(images_aug, cols=4, rows=2))
-    files=list()
+    files=[imagefile]
     for i in range(len(images_aug)):
         filename='augmented_%s'%(str(i))+imagefile
         plt.imsave(filename, images_aug[i])

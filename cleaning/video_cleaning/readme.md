@@ -9,8 +9,8 @@ python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/cleaning/video_cleaning)
-* [clean_alignfaces]() - takes out faces from a video frame and keeps the video for an added label
-* [clean_videostabilize]() - stabilizes a video frame using [vidgear](https://github.com/abhiTronix/vidgear) (note this is a WIP)
+* [clean_alignfaces](https://github.com/jim-schwoebel/allie/blob/master/cleaning/video_cleaning/clean_alignfaces.py) - takes out faces from a video frame and keeps the video for an added label
+* [clean_videostabilize](https://github.com/jim-schwoebel/allie/blob/master/cleaning/video_cleaning/clean_videostabilize.py) - stabilizes a video frame using [vidgear](https://github.com/abhiTronix/vidgear) (note this is a WIP)
 
 ### Settings
 

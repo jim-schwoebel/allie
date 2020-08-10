@@ -145,7 +145,7 @@ extracts acoustic features using the [LibROSA library](https://librosa.org/).
 * [bert features](https://github.com/UKPLab/sentence-transformers) - extract BERT-related features from sentences (note shorter sentences run faster here, and long text can lead to long featurization times).
 * [fast_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/fast_features.py) - features extracted using the [FastText model](https://fasttext.cc/).
 * [glove_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/glove_features.py) - features extracted using the [GloVe model](https://nlp.stanford.edu/projects/glove/).
-* [grammar_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/grammar_features.py) - 85k+ grammar features (memory intensive)
+* [grammar_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/grammar_features.py) - 85k+ grammar features (memory intensive).
 * [nltk_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/nltk_features.py) - standard text feature array (default).
 * [spacy_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/spacy_features.py) - feature extracted with the [SpaCy library](https://spacy.io/).
 * [textacy_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/textacy_features.py) - a variety of document classification and topic modeling features.

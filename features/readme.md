@@ -119,12 +119,13 @@ Note that all scripts implemented have features and their corresponding labels. 
 ### [Audio](https://github.com/jim-schwoebel/allie/tree/master/features/audio_features)
 * [audioset_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audioset_features.py) - 
 simple script to extract features using the VGGish model released by Google.
-* [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py) - Featurizes data with text feautures extracted from the transcript.
+* [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py) - featurizes data with text feautures extracted from the transcript.
 * [librosa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/librosa_features.py) - 
-Extracts acoustic features using the [LibROSA library](https://librosa.org/).
-* [loudness_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/loudness_features.py) - extracts loudness features.
+extracts acoustic features using the [LibROSA library](https://librosa.org/).
+* [loudness_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/loudness_features.py) - extracts loudness features using the [pyloudnorm](https://github.com/csteinmetz1/pyloudnorm) library.
 * [meta_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/meta_features.py) - extracts meta features from models trained on the audioset dataset.
 * [mixed_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/mixed_features.py) - random combinations of audio and text features (via ratios).
+* [multispeaker_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/multispeaker_features.py) - detect number of speakers in audio files using the [CountNet](https://github.com/faroit/CountNet) deep learning model.
 * [opensmile_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/opensmile_features.py) - 14 embeddings with [OpenSMILE](https://www.audeering.com/opensmile/) possible here; defaults to GeMAPSv01a.conf.
 * [praat_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/praat_features.py) - extracts features from the [parselmouth.praat library](https://pypi.org/project/praat-parselmouth/).
 * [prosody_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/prosody_features.py) - prosody using Google's VAD - including pause length, total number of pauses, and pause variability.
@@ -134,7 +135,7 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 * [pyworld_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyworld_features.py) - f0 and and spectrogram features.
 * [sa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sa_features.py) - some additional features extracted using the [SignalAnalysis](https://brookemosby.github.io/Signal_Analysis/Signal_Analysis.features.html#module-Signal_Analysis.features.signal) library.
 * [sox_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/sox_features.py) - features extracted from the [sox](http://sox.sourceforge.net/sox.html) command line interface.
-* [speechmetrics_features](https://github.com/aliutkus/speechmetrics) - features that estimate speech quality without references.
+* [speechmetrics_features](https://github.com/aliutkus/speechmetrics) - extracts features that estimate speech quality without references using the [speechmetrics](https://github.com/aliutkus/speechmetrics) library.
 * [specimage_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/specimage_features.py) - image-based features from spectrograms.
 * [specimage2_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/specimage2_features.py) - image-based features from spectrograms (alternative).
 * [spectrogram_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/spectrogram_features.py) - spectrogram-based features.

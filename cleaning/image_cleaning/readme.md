@@ -9,9 +9,9 @@ python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/cleaning/image_cleaning)
-* [clean_extractfaces]() - extract faces from an image
-* [clean_greyscale]() - make all images greyscale 
-* [clean_jpg2png]() - make images from jpg to png to standardize image formats
+* [clean_extractfaces](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_extractfaces.py) - extract faces from an image
+* [clean_greyscale](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_greyscale.py) - make all images greyscale 
+* [clean_jpg2png](https://github.com/jim-schwoebel/allie/blob/master/cleaning/image_cleaning/clean_jpg2png.py) - make images from jpg to png to standardize image formats
 
 ### Settings
 

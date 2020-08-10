@@ -9,7 +9,7 @@ python3 cleaning.py /Users/jimschwoebel/allie/load_dir
 ```
 
 ### [CSV](https://github.com/jim-schwoebel/allie/tree/master/cleaning/csv_cleaning)
-* [clean_csv]() - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
+* [clean_csv](https://github.com/jim-schwoebel/allie/blob/master/cleaning/csv_cleaning/clean_csv.py) - uses [datacleaner](https://github.com/rhiever/datacleaner), a standard excel sheet cleaning script that imputes missing values and prepares CSV spreadsheets for machine learning
 
 ### Settings
 

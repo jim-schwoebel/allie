@@ -48,4 +48,4 @@ def augment_randomsplice(filename):
   endframe=samplerate*endsec
   newfile='snipped%s_'%(str(slicenum))+file
   sf.write(newfile, data[int(startframe):int(endframe)], samplerate)
-  return [newfile]
+  return [filename, newfile]

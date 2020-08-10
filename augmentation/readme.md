@@ -6,9 +6,7 @@ This part of Allie's skills relates to data augmentation.
 
 Data augmentation is used to expand the training dataset in order to improve the performance and ability of a machine learning model to generalize. For example, you may want to shift, flip, brightness, and zoom on images to augment datasets to make models perform better in noisy environments indicative of real-world use. Data augmentation is especially useful when you don't have that much data, as it can greatly expand the amount of training data that you have for machine learning. 
 
-Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. This is what they did in Tacotron2 architecture. 
-
-You can read more about data augmentation [here](https://github.com/AgaMiko/data-augmentation-review).
+Typical augmentation scheme is to take 50% of the data and augment it and leave the rest the same. You can read more about data augmentation [here](https://github.com/AgaMiko/data-augmentation-review).
 
 ## Getting started
 
@@ -82,8 +80,3 @@ Here are some settings that can be customized for Allie's augmentation API. Sett
 | [default_image_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation) | the default augmentation techniques used for images if augment_data == True as a part of model training. | ["augment_imaug"] | ["augment_imaug"]  | 
 | [default_text_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/text_augmentation) | the default augmentation strategies used during model training for text data if augment_data == True | ["augment_textacy"] | ["augment_textacy", "augment_summary"]  | 
 | [default_video_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/video_augmentation) | the default augmentation strategies used for videos during model training if augment_data == True | ["augment_vidaug"] | ["augment_vidaug"] | 
-
-## References
-* [Review of data augmentation strategies](https://github.com/AgaMiko/data-augmentation-reviewc)
-* [1000x Faster Data Augmentation](https://towardsdatascience.com/1000x-faster-data-augmentation-b91bafee896c)
-

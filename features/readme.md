@@ -174,9 +174,7 @@ extracts acoustic features using the [LibROSA library](https://librosa.org/).
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 
-Here are some features settings that can be customized with Allie's API. Settings can be modified in the [settings.json](https://github.com/jim-schwoebel/allie/blob/master/settings.json) file. 
-
-Here are some settings that you can modify in this settings.json file and the various options for these settings:
+Here are some settings that you can modify in this [settings.json file](https://github.com/jim-schwoebel/allie/blob/master/settings.json) and the various featurization options for these settings:
 
 | setting | description | default setting | all options | 
 |------|------|------|------| 

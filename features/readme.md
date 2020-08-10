@@ -125,8 +125,8 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 * [loudness_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/loudness_features.py) - extracts loudness features.
 * [meta_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/meta_features.py) - extracts meta features from models trained on the audioset dataset.
 * [mixed_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/mixed_features.py) - random combinations of audio and text features (via ratios).
-* [opensmile_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/opensmile_features.py) - 14 embeddings with OpenSMILE possible here; defaults to GeMAPSv01a.conf.
-* [praat_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/praat_features.py) - extracts features from the parselmouth.praat library.
+* [opensmile_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/opensmile_features.py) - 14 embeddings with [OpenSMILE](https://www.audeering.com/opensmile/) possible here; defaults to GeMAPSv01a.conf.
+* [praat_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/praat_features.py) - extracts features from the [parselmouth.praat library](https://pypi.org/project/praat-parselmouth/).
 * [prosody_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/prosody_features.py) - prosody using Google's VAD - including pause length, total number of pauses, and pause variability.
 * [pspeech_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pspeech_features.py) - extracts features with the [python_speech features library](https://github.com/jameslyons/python_speech_features).
 * [pyaudio_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/pyaudio_features.py) - extract features withh the [pyaudioanalysis](https://github.com/tyiannak/pyAudioAnalysis) library.
@@ -152,14 +152,14 @@ Extracts acoustic features using the [LibROSA library](https://librosa.org/).
 * [w2v_features](https://github.com/jim-schwoebel/allie/blob/master/features/text_features/w2vec_features.py) - note this is the largest model from Google and may crash your computer if you don't have enough memory. I'd recommend fast_features if you're looking for a pre-trained embedding.
 
 ### [Image](https://github.com/jim-schwoebel/allie/tree/master/features/image_features)
-* [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default)
-* [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py) - features extracted with the Inception model.
-* [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py) - features extracted with teh ResNet model.
-* [squeezenet_features](https://github.com/rcmalli/keras-squeezenet) - features extracted with teh Squeezenet model; this has an efficient memory footprint.
+* [image_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/image_features.py) - standard image feature array (default).
+* [inception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/inception_features.py) - features extracted with the [Inception model](https://keras.io/api/applications/).
+* [resnet_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/resnet_features.py) - features extracted with the [ResNet model](https://keras.io/api/applications/).
+* [squeezenet_features](https://github.com/rcmalli/keras-squeezenet) - features extracted with the [Squeezenet model](https://keras.io/api/applications/); this has an efficient memory footprint.
 * [tesseract_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/tesseract_features.py) - features extracted with OCR on images using the pytesseract module.
-* [vgg16_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg16_features.py) - features extracted with hte VGG16 model.
-* [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) - features extracted with hte VGG19 model.
-* [xception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/xception_features.py) - features extracted with hte Xception model.
+* [vgg16_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg16_features.py) - features extracted with hte [VGG16 model](https://keras.io/api/applications/).
+* [vgg19_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/vgg19_features.py) - features extracted with hte [VGG19 model](https://keras.io/api/applications/).
+* [xception_features](https://github.com/jim-schwoebel/allie/blob/master/features/image_features/xception_features.py) - features extracted with hte [Xception model](https://keras.io/api/applications/).
 
 ### [Video](https://github.com/jim-schwoebel/allie/tree/master/features/vide_features)
 * [video_features](https://github.com/jim-schwoebel/allie/blob/master/features/video_features/video_features.py) - standard video feature array (default) - extracts acoustic, linguistic, and video features.

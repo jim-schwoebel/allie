@@ -742,3 +742,4 @@ You may want to read through [the wiki](https://github.com/jim-schwoebel/allie/w
 * [3.2. Data preprocessing](https://github.com/jim-schwoebel/allie/wiki/3.2.-Data-preprocessing)
 * [3.3. Data visualization](https://github.com/jim-schwoebel/allie/wiki/3.3.-Data-visualization)
 * [4. Model predictions](https://github.com/jim-schwoebel/allie/wiki/4.-Model-predictions)
+* [5. Command Line Interface](https://github.com/jim-schwoebel/allie/wiki/5.-Command-Line-Interface)

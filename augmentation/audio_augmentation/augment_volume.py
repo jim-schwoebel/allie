@@ -57,7 +57,7 @@ def augment_volume(filename):
     # using peak normalization
     os.system('ffmpeg-normalize %s -nt peak -t 0 -o %s_peak_normalized.wav'%(filename, basefile))
     
-    filenames=list()
+    filenames=[filename]
     # increase volume by 2x 
     new_file=change_volume(filename, 3)
     filenames.append(new_file)

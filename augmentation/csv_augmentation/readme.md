@@ -11,7 +11,7 @@ python3 augment.py /Users/jimschwoebel/allie/load_dir
 * [augment_tgan_classification](https://github.com/sdv-dev/TGAN) - generative adverserial examples - can be done on class targets / problems.
 * [augment_ctgan_regression]() - generative adverserial example on regression problems / targets.
 
-## Settings
+## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |

@@ -11,7 +11,7 @@ simple script to extract features using the VGGish model released by Google.
 * [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py) - Featurizes data with text feautures extracted from the transcript.
 * [librosa_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/librosa_features.py) - 
 Extracts acoustic features using the [LibROSA library](https://librosa.org/).
-* [loudness_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/loudness_features.py) - extracts loudness features.
+* [loudness_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/loudness_features.py) - extracts loudness features using the [pyloudnorm](https://github.com/csteinmetz1/pyloudnorm) library.
 * [meta_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/meta_features.py) - extracts meta features from models trained on the audioset dataset.
 * [mixed_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/mixed_features.py) - random combinations of audio and text features (via ratios).
 * [multispeaker_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/multispeaker_features.py) - detect number of speakers in audio files using the [CountNet](https://github.com/faroit/CountNet) deep learning model.

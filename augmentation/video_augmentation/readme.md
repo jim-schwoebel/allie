@@ -8,4 +8,4 @@ python3 augment.py /Users/jimschwoebel/allie/load_dir
 ```
 
 ### Video
-* [augment_vidaug]()
+* [augment_vidaug](https://github.com/jim-schwoebel/allie/blob/master/augmentation/video_augmentation/augment_vidaug.py) - uses [vidaug](https://github.com/okankop/vidaug) to augment video files (random transformations).

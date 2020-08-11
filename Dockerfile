@@ -63,6 +63,7 @@ RUN	export PATH=/usr/local/opensmile-2.3.0/inst/bin:$PATH
 # install requirements
 RUN	pip3 install -r requirements.txt
 
+# order matters here for OpenCV and a few of the dependencies below
 # custom pip3 installations across all operating systems
 RUN	pip3 install --upgrade mxnet pytest==5.4.3 scipy==1.4.1 scikit-learn==0.22.2.post1 \
   && git clone https://github.com/awslabs/autogluon \

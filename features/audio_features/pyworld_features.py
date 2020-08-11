@@ -39,7 +39,12 @@ For more information, check out hte documentation: https://github.com/JeremyCCHs
 '''
 import scipy.io.wavfile as wav
 import numpy as np
-import pyworld as pw
+# adding this in because some installations may not have pyworld features installed
+try:
+	import pyworld as pw
+except:
+	os.system('pip3 install pyworld==0.2.10')
+	import pyworld as pw
 import os, sys
 import numpy as np
 

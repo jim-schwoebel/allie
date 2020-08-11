@@ -83,7 +83,7 @@ RUN	pip3 install opencv-python==3.4.2.17
 RUN	pip3 install opencv-contrib-python==3.4.2.17
 RUN	pip3 install nltk==3.4.5
 RUN	python3 -m spacy download en
-RUN	python3 -m spacy download 'en_core_web_sm
+RUN	python3 -m spacy download 'en_core_web_sm'
 
 # install hyperopt-sklearn
 WORKDIR /usr/src/app/training/helpers/hyperopt-sklearn

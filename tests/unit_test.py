@@ -50,7 +50,7 @@ in settings.json are tested. This makes it easy to quickly test whether or not y
 current computer and operating system can handle new settings that you specify within 
 Allie's core API.
 '''
-import unittest, os, shutil, time, uuid, random, json, markovify, pickle
+import unittest, os, shutil, time, uuid, random, json, pickle
 import numpy as np
 import pandas as pd 
 

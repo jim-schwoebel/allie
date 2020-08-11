@@ -50,5 +50,6 @@ os.chdir(curdir+'/training/helpers/keras_compressor')
 os.system('pip3 install .')
 
 # now go setup tests
+os.chdir(curdir)
 os.chdir('tests')
 os.system('python3 test.py')

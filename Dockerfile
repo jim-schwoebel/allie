@@ -1,3 +1,8 @@
+# Build image with: 
+# -> docker build -t allie_image .
+# read more @ https://github.com/jim-schwoebel/allie/wiki/6.-Using-Allie-and-Docker
+
+# get Ubuntu base image
 FROM	ubuntu:16.04 AS base
 MAINTAINER Jim Schwoebel <jim.schwoebel@gmail.com>
 
@@ -59,19 +64,20 @@ RUN	export PATH=/usr/local/opensmile-2.3.0/inst/bin:$PATH
 RUN	pip3 install -r requirements.txt
 
 # custom pip3 installations across all operating systems
+RUN	pip3 install --upgrade mxnet
+RUN	git clone https://github.com/awslabs/autogluon
+RUN	cd autogluon && python setup.py develop
 RUN	pip3 install git+https://github.com/detly/gammatone.git
 RUN	pip3 install https://github.com/vBaiCai/python-pesq/archive/master.zip
-RUN	pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]
-RUN	pip3 install markovify==0.8.3
+# RUN	pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]
 RUN	pip3 install tsaug==0.2.1
-RUN	pip3 install seaborn==0.10.1
 RUN	pip3 install psutil==5.7.2
 RUN	pip3 install pyfiglet==0.8.post1
 RUN	pip3 install gensim==3.8.3
 RUN	pip3 install wget==3.2
 RUN	pip3 install textblob==0.15.3
 RUN	pip3 install moviepy==1.0.3
-RUN	pip3 install textacy==0.10.0
+RUN	pip3 install textacy==0.8.0
 RUN	pip3 install SpeechRecognition==3.8.1
 RUN	pip3 install pytesseract==0.3.4
 RUN	pip3 install pydub==0.24.1
@@ -82,7 +88,7 @@ RUN	pip3 install sk-video==1.1.10
 RUN	pip3 install opencv-python==3.4.2.17
 RUN	pip3 install opencv-contrib-python==3.4.2.17
 RUN	pip3 install nltk==3.4.5
-RUN	python3 -m spacy download en
+RUN	python3 -m spacy download 'en'
 RUN	python3 -m spacy download 'en_core_web_sm'
 
 # install hyperopt-sklearn
@@ -96,4 +102,10 @@ RUN	pip3 install .
 # now run unit tests
 RUN	cd /usr/src/app
 WORKDIR	/usr/src/app
-RUN     python3 setup.py
+
+# now download required NLTK dependencies and run
+# unit tests
+RUN     python3 docker.py
+
+# now open up CLI with 
+# docker run -it --entrypoint=/bin/bash allie_image

@@ -7,6 +7,8 @@
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)](https://github.com/jim-schwoebel/allie/projects)
 [![License](https://img.shields.io/badge/license-Apache%202-blue)](https://www.apache.org/licenses/LICENSE-2.0.html)
 
+<iframe src="https://ghbtns.com/github-btn.html?user=twbs&repo=jim-schwoebel/allie&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+
 # Allie 
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=Check%20out%20Allie,%20an%20awesome%20new%20AutoML%20framework%20@%20https://github.com/jim-schwoebel/allie.&hashtags=machinelearning,automl,deeplearning) 
 

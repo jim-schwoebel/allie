@@ -87,6 +87,7 @@ RUN	pip3 install --upgrade mxnet pytest==5.4.3 scipy==1.4.1 scikit-learn==0.22.2
   && pip3 install opencv-python==3.4.2.17 \
   && pip3 install opencv-contrib-python==3.4.2.17 \
   && pip3 install nltk==3.4.5 \
+  && pip3 install umap-learn==0.4.6 \
   && python3 -m spacy download 'en' \
   && python3 -m spacy download 'en_core_web_sm'
 

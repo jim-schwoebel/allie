@@ -45,7 +45,7 @@ Now install required dependencies and perform [unit tests](https://github.com/ji
 python3 setup.py
 ```
 
-Note the installatin process and unit tests above takes roughly ~10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
+Note the installation process and unit tests above takes roughly ~10-15 minutes to complete and makes sure that you can featurize, model, and load model files (to make predictions) via your default featurizers and modeling techniques. It may be best to go grab lunch or coffee while waiting. :-)
 
 After everything is done, you can use the [Allie CLI](https://github.com/jim-schwoebel/allie/blob/master/allie.py) by typing in:
 ```

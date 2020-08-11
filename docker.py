@@ -1,5 +1,5 @@
 '''
-Custom setup script for all operating systems.
+Custom setup script for docker installations.
 '''
 import os, json, sys, nltk
 

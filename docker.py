@@ -39,6 +39,16 @@ nltk.download('punkt')
 nltk.download('averaged_perceptron_tagger')
 nltk.download('wordnet')
 
+# install hyperopt-sklearn
+curdir=os.getcwd()
+os.chdir(curdir+'/training/helpers/hyperopt-sklearn')
+os.system('pip3 install -e .')
+
+# install keras-compressor
+os.chdir(curdir)
+os.chdir(curdir+'/training/helpers/keras_compressor')
+os.system('pip3 install .')
+
 # now go setup tests
 os.chdir('tests')
 os.system('python3 test.py')

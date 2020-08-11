@@ -39,8 +39,19 @@ are no audio file references necessary to extract these metrics.
 
 taken from https://github.com/aliutkus/speechmetrics
 '''
-import speechmetrics
-
+import os
+# adding this in because some installations may not include speechmetrics
+try:
+    import speechmetrics
+except:
+    curdir=os.getcwd()
+    os.system('pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu]')
+    os.system('git clone https://github.com/jfsantos/SRMRpy')
+    os.chdir('SRMRpy')
+    os.system('python3 setup.py install')
+    os.chdir(curdir)
+    import speechmetrics
+    
 def speechmetrics_featurize(wavfile):
     window_length = 5 # seconds
     metrics = speechmetrics.load('absolute', window_length)

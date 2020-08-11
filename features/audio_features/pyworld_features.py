@@ -113,12 +113,3 @@ def pyworld_featurize(audiofile):
 	labels=labels_0+labels_1+labels_2+labels_3
 
 	return features, labels
-
-# file_name = sys.argv[1]
-# features, labels = pyworld_featurize(file_name)
-# print(features)
-# print(labels)
-# print(features)
-# print(labels)
-# print(len(features))
-# print(len(labels))

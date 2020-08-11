@@ -17,6 +17,20 @@
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
 Custom setup script for docker installations.
+
+To start, you need to download docker for you computer:
+https://www.docker.com/get-started
+
+Now you go to the Allie repository and build the image:
+-> git clone git@github.com:jim-schwoebel/allie.git
+-> cd allie 
+-> docker build -t allie_image .
+
+Then you can use the terminal to use the Docker container as if it were your own computer:
+-> docker run -it --entrypoint=/bin/bash allie_image
+
+To learn more about how to use Allie and Docker, visit
+https://github.com/jim-schwoebel/allie/wiki/6.-Using-Allie-and-Docker
 '''
 import os, json, sys, nltk
 

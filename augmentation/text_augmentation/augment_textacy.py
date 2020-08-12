@@ -32,7 +32,12 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | || |    _| |_   _    | |  __/>  <| |_ 
 \_| |_/\_|    \___/  (_)   \_/\___/_/\_\\__|
 '''
-import os, sys, shutil, textacy
+import os, sys, shutil
+try:
+  import textacy
+except:
+  os.system('pip3 install textacy==0.8.0')
+  import textacy
 import textacy.augmentation.transforms as transforms
 
 def augment_textacy(textfile, basedir):

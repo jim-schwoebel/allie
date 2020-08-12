@@ -204,11 +204,11 @@ Easily plots the top 20 features via violin plots (to spot distributions).
 ### Lasso plot (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso3.png)
 
-### Heatmaps (top 20 features)
+### Heatmap (top 20 features)
 Heatmap with correlated variables
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap3.png)
 
-Heatmap with removed correlated variables 
+### Heatmap with removed correlated variables (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean3.png)
 
 ### Pearson ranking plot (top 20 features)

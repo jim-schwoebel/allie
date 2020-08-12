@@ -62,6 +62,8 @@ from yellowbrick.cluster import intercluster_distance
 from sklearn.metrics import auc, roc_curve
 from yellowbrick.classifier.rocauc import roc_auc
 from yellowbrick.regressor import cooks_distance
+from yellowbrick.features import RadViz
+from yellowbrick.target.feature_correlation import feature_correlation
 import seaborn as sns
 import umap
 from sklearn.model_selection import train_test_split
@@ -212,8 +214,6 @@ def plot_roc_curve(y_test, probs, clf_names):
 	cycol = cycle('bgrcmyk')
 
 	for i in range(len(probs)):
-		print(y_test)
-		print(probs[i])
 		try:
 			fper, tper, thresholds = roc_curve(y_test, probs[i]) 
 			plt.plot(fper, tper, color=next(cycol), label=clf_names[i]+' = %s'%(str(round(metrics.auc(fper, tper), 2))))
@@ -228,13 +228,41 @@ def plot_roc_curve(y_test, probs, clf_names):
 	plt.savefig('roc_curve.png')
 	plt.close()
 
+def get_indices(selectedlabels, labels):
+	'''
+	takes in an list of labels and gets back indices for these labels; useful to restructure
+	arrays around the right features for heatmaps.
+
+	selectedfeatures = string of selected features from univariate feature selection
+	labels = string of all potential labels in right order
+	'''
+	indices=list()
+	for i in range(len(selectedlabels)):
+		indices.append(labels.index(selectedlabels[i]))
+	return indices 
+
+def restructure_features(selectedlabels, features, labels):
+	# get top 20 features instead of all features for the heatmaps
+	# get top 20 feature indices
+	indices=get_indices(selectedlabels, labels)
+
+	# now that we have the indices, only select these indices in all numpy array features
+	newfeatures=list()
+	for i in range(len(features)):
+		feature=dict()
+		for j in range(len(indices)):
+			feature[selectedlabels[j]]=features[i][indices[j]]
+		newfeatures.append(feature)
+	newfeatures=pd.DataFrame(newfeatures)
+	newfeatures.to_csv('data.csv',index=False)
+	return newfeatures, selectedlabels
+
 def visualize_features(classes, problem_type, curdir, default_features, balance_data, test_size):
 
 	# make features into label encoder here
 	features, feature_labels, class_labels = get_features(classes, problem_type, default_features, balance_data)
 
 	# now preprocess features for all the other plots
-	print(features)
 	os.chdir(curdir)
 	le = preprocessing.LabelEncoder()
 	le.fit(class_labels)
@@ -301,9 +329,12 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	plt.savefig('classes.png')
 	plt.close()
 
-	##################################
-	# CLUSTERING!!!
-	##################################
+	# set current directory
+	curdir=os.getcwd()
+
+	# ##################################
+	# # CLUSTERING!!!
+	# ##################################
 
 	##################################
 	# Manifold type options 
@@ -326,7 +357,6 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 		"tsne" (default)
 		t-SNE: converts the similarity of points into probabilities then uses those probabilities to create an embedding.
 	'''
-	curdir=os.getcwd()
 	os.mkdir('clustering')
 	os.chdir('clustering')
 
@@ -427,72 +457,72 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	os.mkdir('feature_ranking')
 	os.chdir('feature_ranking')
 
-	# Shapiro rank algorithm (1D)
-	plt.figure()
-	visualizer = Rank1D(algorithm='shapiro', classes=set(classes))
-	visualizer.fit(np.array(features), tclass_labels)
-	visualizer.transform(np.array(features))
-	# plt.tight_layout()
-	visualizer.poof(outpath="shapiro.png")
-	plt.close()
-	# os.system('open shapiro.png')
-	# visualizer.show()   
-
-	# pearson ranking algorithm (2D)
-	plt.figure()
-	visualizer = Rank2D(algorithm='pearson', classes=set(classes))
-	visualizer.fit(np.array(features), tclass_labels)
-	visualizer.transform(np.array(features))
-	plt.tight_layout()
-	visualizer.poof(outpath="pearson.png")
-	plt.close()
-	# os.system('open pearson.png')
-	# visualizer.show()   
-
 	# You can get the feature importance of each feature of your dataset 
 	# by using the feature importance property of the model.
-	plt.figure()
+	plt.figure(figsize=(12,12))
 	model = ExtraTreesClassifier()
 	model.fit(np.array(features),tclass_labels)
 	# print(model.feature_importances_)
 	feat_importances = pd.Series(model.feature_importances_, index=feature_labels[0])
 	feat_importances.nlargest(20).plot(kind='barh')
-	plt.title('Feature importances')
+	plt.title('Feature importances (ExtraTrees)', size=16)
 	plt.title('Feature importances with %s features'%(str(len(features[0]))))
 	plt.tight_layout()
 	plt.savefig('feature_importance.png')
 	plt.close()
 	# os.system('open feature_importance.png')
 
-	# now do feature importances with lasso
-	plt.figure()
-	viz = FeatureImportances(Lasso())
-	viz.fit(np.array(features), tclass_labels)
+	# get selected labels for top 20 features
+	selectedlabels=list(dict(feat_importances.nlargest(20)))
+	new_features, new_labels = restructure_features(selectedlabels, t_features, feature_labels[0])
+	new_features_, new_labels_ = restructure_features(selectedlabels, features, feature_labels[0])
+
+	# Shapiro rank algorithm (1D)
+	plt.figure(figsize=(28,12))
+	visualizer = Rank1D(algorithm='shapiro', classes=set(classes), features=new_labels)
+	visualizer.fit(np.array(new_features), tclass_labels)
+	visualizer.transform(np.array(new_features))
+	# plt.tight_layout()
+	visualizer.poof(outpath="shapiro.png")
+	plt.title('Shapiro plot (top 20 features)', size=16)
+	plt.close()
+	# os.system('open shapiro.png')
+	# visualizer.show()   
+
+	# pearson ranking algorithm (2D)
+	plt.figure(figsize=(12,12))
+	visualizer = Rank2D(algorithm='pearson', classes=set(classes), features=new_labels)
+	visualizer.fit(np.array(new_features), tclass_labels)
+	visualizer.transform(np.array(new_features))
+	plt.tight_layout()
+	visualizer.poof(outpath="pearson.png")
+	plt.title('Pearson ranking plot (top 20 features)', size=16)
+	plt.close()
+	# os.system('open pearson.png')
+	# visualizer.show()   
+
+	# feature importances with top 20 features for Lasso
+	plt.figure(figsize=(12,12))
+	viz = FeatureImportances(Lasso(), labels=new_labels)
+	viz.fit(np.array(new_features), tclass_labels)
 	plt.tight_layout()
 	viz.poof(outpath="lasso.png")
 	plt.close()
 
 	# correlation plots with feature removal if corr > 0.90
 	# https://towardsdatascience.com/feature-selection-correlation-and-p-value-da8921bfb3cf
-	pfeatures=dict()
-	for i in range(len(feature_labels[0])):
-		feature=list()
-		for j in range(len(features)):
-			feature.append(features[j][i])
-
-		# print(feature_labels[0][i])
-		# print(feature)
-		pfeatures[feature_labels[0][i]]=feature
-
-	data=pd.DataFrame(pfeatures)
-	newdata=data
 
 	# now remove correlated features
+	# --> p values
+	# --> https://towardsdatascience.com/the-next-level-of-data-visualization-in-python-dd6e99039d5e / https://github.com/WillKoehrsen/Data-Analysis/blob/master/plotly/Plotly%20Whirlwind%20Introduction.ipynb- plotly for correlation heatmap and scatterplot matrix
+	# --> https://seaborn.pydata.org/tutorial/distributions.html
+	data=new_features
 	corr = data.corr()
 
+	plt.figure(figsize=(12,12))
 	fig=sns.heatmap(corr)
 	fig = fig.get_figure()
-	plt.title('Heatmap with correlated features')
+	plt.title('Heatmap with correlated features (top 20 features)', size=16)
 	fig.tight_layout()
 	fig.savefig('heatmap.png')
 	plt.close(fig)
@@ -507,28 +537,58 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	data = data[selected_columns]
 	corr=data.corr()
 
+	plt.figure(figsize=(12,12))
 	fig=sns.heatmap(corr)
 	fig = fig.get_figure()
-	plt.title('Heatmap without correlated features')
+	plt.title('Heatmap without correlated features (top 20 features)', size=16)
 	fig.tight_layout()
 	fig.savefig('heatmap_clean.png')
 	plt.close(fig)
 
-	# --> p values
-	# --> https://towardsdatascience.com/the-next-level-of-data-visualization-in-python-dd6e99039d5e / https://github.com/WillKoehrsen/Data-Analysis/blob/master/plotly/Plotly%20Whirlwind%20Introduction.ipynb- plotly for correlation heatmap and scatterplot matrix
-	# --> https://seaborn.pydata.org/tutorial/distributions.html
+	# radviz
+	# Instantiate the visualizer
+	plt.figure(figsize=(12,12))
+	visualizer = RadViz(classes=classes, features=new_labels)
+	visualizer.fit(np.array(new_features), tclass_labels)           
+	visualizer.transform(np.array(new_features))  
+	visualizer.poof(outpath="radviz.png")     
+	visualizer.show()         
+	plt.close()     
+
+	# feature correlation plot
+	plt.figure(figsize=(28,12))
+	visualizer = feature_correlation(np.array(new_features), tclass_labels, labels=new_labels)
+	visualizer.poof(outpath="correlation.png") 
+	visualizer.show()
+	plt.tight_layout()
+	plt.close()
+
 	os.mkdir('feature_plots')
 	os.chdir('feature_plots')
 
+	newdata=new_features_
 	newdata['classes']=class_labels
 
-	for j in range(len(feature_labels[0])):
-		fig=sns.violinplot(x=newdata.classes, y=newdata[feature_labels[0][j]])
+	for j in range(len(new_labels_)):
+		fig=sns.violinplot(x=newdata['classes'], y=newdata[new_labels_[j]])
 		fig = fig.get_figure()
 		fig.tight_layout()
 		fig.savefig('%s_%s.png'%(str(j), feature_labels[0][j]))
 		plt.close(fig)
 
+	os.mkdir('feature_plots_transformed')
+	os.chdir('feature_plots_transformed')
+
+	newdata=new_features
+	newdata['classes']=class_labels
+
+	for j in range(len(new_labels)):
+		fig=sns.violinplot(x=newdata['classes'], y=newdata[new_labels[j]])
+		fig = fig.get_figure()
+		fig.tight_layout()
+		fig.savefig('%s_%s.png'%(str(j), feature_labels[0][j]))
+		plt.close(fig)
+		
 	##################################################
 	# PRECISION-RECALL CURVES
 	##################################################

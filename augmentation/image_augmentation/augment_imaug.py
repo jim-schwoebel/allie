@@ -38,8 +38,7 @@ https://nbviewer.jupyter.org/github/aleju/imgaug-doc/blob/master/notebooks/A01%2
 import os
 
 try:
-    import helpers.imgaug.augmenters as iaa
-    import helpers.imgaug as ia
+    import imaug.augmenters as iaa
 except:
     os.system('pip3 install git+https://github.com/aleju/imgaug.git')
     import imaug.augmenters as iaa

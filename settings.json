@@ -13,7 +13,7 @@
  "default_csv_transcriber": ["raw text"], 
  "default_dimensionality_reducer": ["pca"], 
  "default_feature_selector": ["rfe"], 
- "default_image_augmenters": ["augment_imaug"], 
+ "default_image_augmenters": ["augment_imgaug"], 
  "default_image_cleaners": ["clean_greyscale"], 
  "default_image_features": ["image_features"], 
  "default_image_transcriber": ["tesseract"], 

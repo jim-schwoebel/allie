@@ -14,4 +14,4 @@ python3 augment.py /Users/jimschwoebel/allie/load_dir
 | setting | description | default setting | all options | 
 |------|------|------|------| 
 | augment_data | whether or not to implement data augmentation policies during the model training process via default augmentation scripts. | True | True, False |
-| [default_image_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation) | the default augmentation techniques used for images if augment_data == True as a part of model training. | ["augment_imaug"] | ["augment_imaug"]  | 
+| [default_image_augmenters](https://github.com/jim-schwoebel/allie/tree/master/augmentation/image_augmentation) | the default augmentation techniques used for images if augment_data == True as a part of model training. | ["augment_imgaug"] | ["augment_imgaug"]  | 

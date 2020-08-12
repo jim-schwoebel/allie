@@ -40,6 +40,7 @@ try:
     import datacleaner
 except:
     os.system('pip3 install datacleaner==0.1.5')
+    import datacleaner
 
 def clean_csv(csvfile, basedir):
     '''

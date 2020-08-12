@@ -30,7 +30,6 @@ This then generates a tree structure of graphs, for example below:
 │   ├── pca.png
 │   ├── spectral.png
 │   ├── tsne.png
-│   └── umap.png
 ├── feature_ranking
 │   ├── feature_importance.png
 │   ├── feature_plots

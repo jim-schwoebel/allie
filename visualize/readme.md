@@ -217,6 +217,12 @@ Heatmap with removed correlated variables
 ### Shapiro plot 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro3.png)
 
+### RadViz plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/radviz3.png)
+
+### Feature correlation plot
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/correlation.png)
+
 ## Modeling graphs
 
 ```

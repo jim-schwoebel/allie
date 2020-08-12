@@ -101,7 +101,7 @@ Note that this script considers whether or not to balance datasets (e.g. "balanc
   "visualize_data": true
 }
 ```
-### numbers in each class
+### Numbers in each class
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)
 
 ## Clustering
@@ -115,7 +115,6 @@ Quickly iterate and see which cluster method works best with your dataset.
 │   ├── pca.png
 │   ├── spectral.png
 │   ├── tsne.png
-│   └── umap.png
 ```
 
 ### Isomap embedding
@@ -132,8 +131,6 @@ Quickly iterate and see which cluster method works best with your dataset.
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/spectral.png)
 ### tSNE embedding
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/tsne.png)
-### UMAP embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/umap.png)
 
 ## Feature ranking
 
@@ -234,7 +231,7 @@ Heatmap with removed correlated variables
 ### ROC curve_test
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve.png)
 
-### siloutte graph
+### Siloutte graph
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/siloutte.png)
 
 ### Threshold graph 

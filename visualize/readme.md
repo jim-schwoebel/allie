@@ -197,30 +197,30 @@ Quickly iterate and see which cluster method works best with your dataset.
 ### Feature importances (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance3.png)
 
-### Feature_plots
+### Feature_plots (top 20 features)
 Easily plots the top 20 features via violin plots (to spot distributions).
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/0_F0semitoneFrom27.5Hz_sma3nz_amean.png)
 
-### Lasso plot 
+### Lasso plot (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso3.png)
 
-### Heatmaps
+### Heatmaps (top 20 features)
 Heatmap with correlated variables
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap3.png)
 
 Heatmap with removed correlated variables 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean3.png)
 
-### Pearson ranking plot
+### Pearson ranking plot (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/pearson3.png)
 
-### Shapiro plot 
+### Shapiro plot (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro3.png)
 
-### RadViz plot
+### RadViz plot (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/radviz3.png)
 
-### Feature correlation plot
+### Feature correlation plot (top 20 features)
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/correlation3.png)
 
 ## Modeling graphs

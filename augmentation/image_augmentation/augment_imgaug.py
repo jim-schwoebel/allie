@@ -46,7 +46,7 @@ except:
 import imageio
 import matplotlib.pyplot as plt
 
-def augment_imaug(imagefile):
+def augment_imgaug(imagefile):
     image = imageio.imread(imagefile)
 
     seq = iaa.Sequential([

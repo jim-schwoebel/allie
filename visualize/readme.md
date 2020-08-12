@@ -198,8 +198,8 @@ Quickly iterate and see which cluster method works best with your dataset.
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance3.png)
 
 ### Feature_plots
-Easily plots all the features via violin plots (to spot distributions).
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/326_meanF0.png)
+Easily plots the top 20 features via violin plots (to spot distributions).
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/0_F0semitoneFrom27.5Hz_sma3nz_amean.png)
 
 ### Lasso plot 
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso3.png)

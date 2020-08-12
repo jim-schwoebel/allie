@@ -146,6 +146,8 @@ Note that this script considers whether or not to balance datasets (e.g. "balanc
 ### Numbers in each class
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/classes.png)
 
+You can also view the [raw data](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/data3.csv) in the visualization session.
+
 ## Clustering
 Quickly iterate and see which cluster method works best with your dataset.
 ```

@@ -30,16 +30,58 @@ This then generates a tree structure of graphs, for example below:
 │   ├── pca.png
 │   ├── spectral.png
 │   ├── tsne.png
-|   └── umap.png
+│   └── umap.png
 ├── feature_ranking
+│   ├── correlation.png
+│   ├── data.csv
 │   ├── feature_importance.png
 │   ├── feature_plots
-│   │   └── 128_mfcc_10_std.png
-            ... [all feature plots (many files)]
+│   │   ├── 0_F0semitoneFrom27.5Hz_sma3nz_amean.png
+│   │   ├── 10_loudness_sma3_amean.png
+│   │   ├── 11_loudness_sma3_stddevNorm.png
+│   │   ├── 12_loudness_sma3_percentile20.0.png
+│   │   ├── 13_loudness_sma3_percentile50.0.png
+│   │   ├── 14_loudness_sma3_percentile80.0.png
+│   │   ├── 15_loudness_sma3_pctlrange0-2.png
+│   │   ├── 16_loudness_sma3_meanRisingSlope.png
+│   │   ├── 17_loudness_sma3_stddevRisingSlope.png
+│   │   ├── 18_loudness_sma3_meanFallingSlope.png
+│   │   ├── 19_loudness_sma3_stddevFallingSlope.png
+│   │   ├── 1_F0semitoneFrom27.5Hz_sma3nz_stddevNorm.png
+│   │   ├── 2_F0semitoneFrom27.5Hz_sma3nz_percentile20.0.png
+│   │   ├── 3_F0semitoneFrom27.5Hz_sma3nz_percentile50.0.png
+│   │   ├── 4_F0semitoneFrom27.5Hz_sma3nz_percentile80.0.png
+│   │   ├── 5_F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2.png
+│   │   ├── 6_F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope.png
+│   │   ├── 7_F0semitoneFrom27.5Hz_sma3nz_stddevRisingSlope.png
+│   │   ├── 8_F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope.png
+│   │   ├── 9_F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope.png
+│   │   └── feature_plots_transformed
+│   │       ├── 0_F0semitoneFrom27.5Hz_sma3nz_amean.png
+│   │       ├── 10_loudness_sma3_amean.png
+│   │       ├── 11_loudness_sma3_stddevNorm.png
+│   │       ├── 12_loudness_sma3_percentile20.0.png
+│   │       ├── 13_loudness_sma3_percentile50.0.png
+│   │       ├── 14_loudness_sma3_percentile80.0.png
+│   │       ├── 15_loudness_sma3_pctlrange0-2.png
+│   │       ├── 16_loudness_sma3_meanRisingSlope.png
+│   │       ├── 17_loudness_sma3_stddevRisingSlope.png
+│   │       ├── 18_loudness_sma3_meanFallingSlope.png
+│   │       ├── 19_loudness_sma3_stddevFallingSlope.png
+│   │       ├── 1_F0semitoneFrom27.5Hz_sma3nz_stddevNorm.png
+│   │       ├── 2_F0semitoneFrom27.5Hz_sma3nz_percentile20.0.png
+│   │       ├── 3_F0semitoneFrom27.5Hz_sma3nz_percentile50.0.png
+│   │       ├── 4_F0semitoneFrom27.5Hz_sma3nz_percentile80.0.png
+│   │       ├── 5_F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2.png
+│   │       ├── 6_F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope.png
+│   │       ├── 7_F0semitoneFrom27.5Hz_sma3nz_stddevRisingSlope.png
+│   │       ├── 8_F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope.png
+│   │       └── 9_F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope.png
 │   ├── heatmap.png
 │   ├── heatmap_clean.png
 │   ├── lasso.png
 │   ├── pearson.png
+│   ├── radviz.png
 │   └── shapiro.png
 └── model_selection
     ├── calibration.png
@@ -73,7 +115,7 @@ Note that this script considers whether or not to balance datasets (e.g. "balanc
   "clean_data": false,
   "create_YAML": true,
   "create_csv": true,
-  "default_audio_features": [ "pspeech_features", "praat_features", "sox_features" ],
+  "default_audio_features": [ "opensmile_features" ],
   "default_audio_transcriber": ["deepspeech_dict"],
   "default_csv_features": [ "csv_features" ],
   "default_csv_transcriber": ["raw text"],
@@ -119,21 +161,21 @@ Quickly iterate and see which cluster method works best with your dataset.
 ```
 
 ### Isomap embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/isomap.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/isomap3.png)
 ### LLE embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/lle.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/lle3.png)
 ### MDS embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/mds.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/mds3.png)
 ### Modified embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/modified.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/modified3.png)
 ### PCA embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/pca.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/pca3.png)
 ### Spectral embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/spectral.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/spectral3.png)
 ### tSNE embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/tsne.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/tsne3.png)
 ### UMAP embedding
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/umap.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/umap3.png)
 
 ## Feature ranking
 
@@ -151,28 +193,27 @@ Quickly iterate and see which cluster method works best with your dataset.
 ```
 
 ### Feature importances (top 20 features)
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance2.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_importance3.png)
 
 ### Feature_plots
 Easily plots all the features via violin plots (to spot distributions).
-
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/326_meanF0.png)
 
 ### Lasso plot 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso2.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso3.png)
 
 ### Heatmaps
 Heatmap with correlated variables
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap2.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap3.png)
 
 Heatmap with removed correlated variables 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean2.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/heatmap_clean3.png)
 
 ### Pearson ranking plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/pearson2.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/pearson3.png)
 
 ### Shapiro plot 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro2.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/shapiro3.png)
 
 ## Modeling graphs
 
@@ -196,46 +237,46 @@ Heatmap with removed correlated variables
 ```
 
 ### Calibration plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/calibration.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/calibration3.png)
 
 ### Cluster distance 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/cluster_distance.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/cluster_distance3.png)
 
 ### Elbow plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/elbow.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/elbow3.png)
 
 ### KS stat plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/ks.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/ks3.png)
 
 ### Learning curve
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/learning_curve.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/learning_curve3.png)
 
 ### logr percentile plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/logr_percentile_plot.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/logr_percentile_plot3.png)
 
 ### Outlier detection 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/outliers.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/outliers3.png)
 
 ### PCA explained variance plot
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/pca_explained_variance.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/pca_explained_variance3.png)
 
 ### Precision/recall graphs 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/precision-recall.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/precision-recall3.png)
 
 ### Prediction error graphs
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/prediction_error.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/prediction_error3.png)
 
 ### Residuals 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/residuals.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/residuals3.png)
 
 ### ROC curve_train
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve_train.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve_train3.png)
 
 ### ROC curve_test
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/roc_curve3.png)
 
 ### Siloutte graph
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/siloutte.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/siloutte3.png)
 
 ### Threshold graph 
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/modeling/thresholds3.png)

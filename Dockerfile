@@ -79,7 +79,7 @@ RUN	pip3 install --upgrade mxnet pytest==5.4.3 scipy==1.4.1 scikit-learn==0.22.2
   && pip3 install wget==3.2 \
   && pip3 install textblob==0.15.3 \
   && pip3 install moviepy==1.0.3 \
-  && pip3 install textacy==0.8.0 \
+  && pip3 install textacy==0.10.0 \
   && pip3 install SpeechRecognition==3.8.1 \
   && pip3 install pytesseract==0.3.4 \
   && pip3 install pydub==0.24.1 \
@@ -90,6 +90,7 @@ RUN	pip3 install --upgrade mxnet pytest==5.4.3 scipy==1.4.1 scikit-learn==0.22.2
   && pip3 install opencv-contrib-python==3.4.2.17 \
   && pip3 install nltk==3.4.5 \
   && pip3 install umap-learn==0.4.6 \
+  && pip3 install numba==0.48 \
   && python3 -m spacy download 'en' \
   && python3 -m spacy download 'en_core_web_sm'
 

@@ -202,7 +202,7 @@ Easily plots the top 20 features via violin plots (to spot distributions).
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/feature_plots/0_F0semitoneFrom27.5Hz_sma3nz_amean.png)
 
 ### Lasso plot (top 20 features)
-![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso3.png)
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/feature_ranking/lasso4.png)
 
 ### Heatmap (top 20 features)
 Heatmap with correlated variables

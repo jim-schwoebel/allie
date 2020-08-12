@@ -46,7 +46,7 @@ from sklearn.ensemble import ExtraTreesClassifier
 import matplotlib.pyplot as plt
 from sklearn import preprocessing
 import numpy as np
-from yellowbrick.text import UMAPVisualizer
+# from yellowbrick.text import UMAPVisualizer
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.naive_bayes import GaussianNB
@@ -404,11 +404,11 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 	plt.close()
 
 	# UMAP embedding
-	plt.figure()
-	umap = UMAPVisualizer(metric='cosine', classes=set(classes), title="UMAP embedding")
-	umap.fit_transform(np.array(features), class_labels)
-	umap.poof(outpath="umap.png") 
-	plt.close()
+	# plt.figure()
+	# umap = UMAPVisualizer(metric='cosine', classes=set(classes), title="UMAP embedding")
+	# umap.fit_transform(np.array(features), class_labels)
+	# umap.poof(outpath="umap.png") 
+	# plt.close()
 
 	# alternative UMAP
 	# import umap.plot

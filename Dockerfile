@@ -3,7 +3,7 @@
 # read more @ https://github.com/jim-schwoebel/allie/wiki/6.-Using-Allie-and-Docker
 
 # get Ubuntu base image
-FROM	ubuntu:16.04 AS base
+FROM	ubuntu:18.04 AS base
 MAINTAINER Jim Schwoebel <jim.schwoebel@gmail.com>
 
 # set working directory
@@ -15,7 +15,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # now run sudo apt update commands
 RUN apt-get update \
-  && apt-get install -y python3-pip python3-dev \
+  && apt-get install -y python3-pip python3 \
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
   && pip3 install --upgrade pip \
@@ -55,6 +55,7 @@ RUN apt-get update \
 RUN	wget https://www.audeering.com/download/opensmile-2-3-0-tar-gz/\?wpdmdl\=4782 -O opensmile-2.3.0.tar.gz&& \
 	tar -xf opensmile-2.3.0.tar.gz -C /usr/local 
 RUN    cd /usr/local/opensmile-2.3.0/ && \
+	sed -i '117s/(char)/(unsigned char)/g' src/include/core/vectorTransform.hpp && \
 	./buildWithPortAudio.sh -o /usr/local/lib && \
 	./buildStandalone.sh -o /usr/local/lib
 RUN	chmod 777 /usr/local/opensmile-2.3.0 

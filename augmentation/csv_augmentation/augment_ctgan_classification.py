@@ -31,7 +31,12 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\_|    \___/  (_)  \____/\____/  \___/ 
                                               
 '''
-from ctgan import CTGANSynthesizer
+import os
+try:
+    from ctgan import CTGANSynthesizer
+except:
+    os.system('pip3 install ctgan==0.2.1')
+    from ctgan import CTGANSynthesizer
 import time, random
 import pandas as pd
 import numpy as np

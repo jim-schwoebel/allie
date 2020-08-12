@@ -503,8 +503,8 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 
 	# feature importances with top 20 features for Lasso
 	plt.figure(figsize=(12,12))
-	viz = FeatureImportances(Lasso(), labels=new_labels)
-	viz.fit(np.array(new_features), tclass_labels)
+	viz = FeatureImportances(Lasso(), labels=new_labels_)
+	viz.fit(np.array(new_features_), tclass_labels)
 	plt.tight_layout()
 	viz.poof(outpath="lasso.png")
 	plt.close()

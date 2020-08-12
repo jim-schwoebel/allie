@@ -30,6 +30,7 @@ This then generates a tree structure of graphs, for example below:
 │   ├── pca.png
 │   ├── spectral.png
 │   ├── tsne.png
+|   └── umap.png
 ├── feature_ranking
 │   ├── feature_importance.png
 │   ├── feature_plots
@@ -114,6 +115,7 @@ Quickly iterate and see which cluster method works best with your dataset.
 │   ├── pca.png
 │   ├── spectral.png
 │   ├── tsne.png
+|   └── umap.png
 ```
 
 ### Isomap embedding
@@ -130,6 +132,8 @@ Quickly iterate and see which cluster method works best with your dataset.
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/spectral.png)
 ### tSNE embedding
 ![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/tsne.png)
+### UMAP embedding
+![](https://github.com/jim-schwoebel/allie/blob/master/visualize/data/clustering/umap.png)
 
 ## Feature ranking
 

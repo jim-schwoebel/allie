@@ -83,7 +83,7 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 	
 	os.mkdir(basedir+'/train_dir/'+folder)
 	for i in range(len(filepaths)):
-		shutil.copy(filepaths[i], directory)
+		shutil.copy(filepaths[i], directory+'/'+filepaths[i].split('/')[-1])
 
 	# featurize the files in the folder 
 	os.chdir(basedir+'/features/%s_features/'%(sampletype))
@@ -199,11 +199,11 @@ def typedtext_featurize_columns(columns, directory, settings, basedir):
 	default_features=settings['default_text_features']
 	filepaths=list()
 	curdir=os.getcwd()
-	folder=str('temp-'+uuid.uuid1())
+	folder=str('temp-'+str(uuid.uuid1()))
 	os.mkdir(folder)
 	os.chdir(folder)
 	for i in range(len(columns)):
-		file=str(uuid.uuid1())
+		file=str(uuid.uuid1())+'.txt'
 		textfile=open(file,'w')
 		textfile.write(columns[i])
 		textfile.close()

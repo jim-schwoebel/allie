@@ -183,14 +183,56 @@ Quickly iterate and see which cluster method works best with your dataset.
 
 ```
 ├── feature_ranking
+│   ├── correlation.png
+│   ├── data.csv
 │   ├── feature_importance.png
 │   ├── feature_plots
-│   │   └── 128_mfcc_10_std.png
-            ... [all feature plots (many files)]
+│   │   ├── 0_F0semitoneFrom27.5Hz_sma3nz_amean.png
+│   │   ├── 10_loudness_sma3_amean.png
+│   │   ├── 11_loudness_sma3_stddevNorm.png
+│   │   ├── 12_loudness_sma3_percentile20.0.png
+│   │   ├── 13_loudness_sma3_percentile50.0.png
+│   │   ├── 14_loudness_sma3_percentile80.0.png
+│   │   ├── 15_loudness_sma3_pctlrange0-2.png
+│   │   ├── 16_loudness_sma3_meanRisingSlope.png
+│   │   ├── 17_loudness_sma3_stddevRisingSlope.png
+│   │   ├── 18_loudness_sma3_meanFallingSlope.png
+│   │   ├── 19_loudness_sma3_stddevFallingSlope.png
+│   │   ├── 1_F0semitoneFrom27.5Hz_sma3nz_stddevNorm.png
+│   │   ├── 2_F0semitoneFrom27.5Hz_sma3nz_percentile20.0.png
+│   │   ├── 3_F0semitoneFrom27.5Hz_sma3nz_percentile50.0.png
+│   │   ├── 4_F0semitoneFrom27.5Hz_sma3nz_percentile80.0.png
+│   │   ├── 5_F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2.png
+│   │   ├── 6_F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope.png
+│   │   ├── 7_F0semitoneFrom27.5Hz_sma3nz_stddevRisingSlope.png
+│   │   ├── 8_F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope.png
+│   │   ├── 9_F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope.png
+│   │   └── feature_plots_transformed
+│   │       ├── 0_F0semitoneFrom27.5Hz_sma3nz_amean.png
+│   │       ├── 10_loudness_sma3_amean.png
+│   │       ├── 11_loudness_sma3_stddevNorm.png
+│   │       ├── 12_loudness_sma3_percentile20.0.png
+│   │       ├── 13_loudness_sma3_percentile50.0.png
+│   │       ├── 14_loudness_sma3_percentile80.0.png
+│   │       ├── 15_loudness_sma3_pctlrange0-2.png
+│   │       ├── 16_loudness_sma3_meanRisingSlope.png
+│   │       ├── 17_loudness_sma3_stddevRisingSlope.png
+│   │       ├── 18_loudness_sma3_meanFallingSlope.png
+│   │       ├── 19_loudness_sma3_stddevFallingSlope.png
+│   │       ├── 1_F0semitoneFrom27.5Hz_sma3nz_stddevNorm.png
+│   │       ├── 2_F0semitoneFrom27.5Hz_sma3nz_percentile20.0.png
+│   │       ├── 3_F0semitoneFrom27.5Hz_sma3nz_percentile50.0.png
+│   │       ├── 4_F0semitoneFrom27.5Hz_sma3nz_percentile80.0.png
+│   │       ├── 5_F0semitoneFrom27.5Hz_sma3nz_pctlrange0-2.png
+│   │       ├── 6_F0semitoneFrom27.5Hz_sma3nz_meanRisingSlope.png
+│   │       ├── 7_F0semitoneFrom27.5Hz_sma3nz_stddevRisingSlope.png
+│   │       ├── 8_F0semitoneFrom27.5Hz_sma3nz_meanFallingSlope.png
+│   │       └── 9_F0semitoneFrom27.5Hz_sma3nz_stddevFallingSlope.png
 │   ├── heatmap.png
 │   ├── heatmap_clean.png
 │   ├── lasso.png
 │   ├── pearson.png
+│   ├── radviz.png
 │   └── shapiro.png
 ```
 

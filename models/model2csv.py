@@ -69,20 +69,51 @@ def id_folder():
 
 	return metrics_list, model_names
 
+curdir=os.getcwd()
 metrics_list, model_names=id_folder()
+
+# regression models
+meanabsolute_errors=list()
+meansquared_errors=list()
+median_errors=list()
+r2_scores=list()
+regression_models=list()
+
+for i in range(len(model_names)):
+	try: 
+		meanabsolute_errors.append(metrics_list[i]['mean_absolute_error'])
+		meansquared_errors.append(metrics_list[i]['mean_squared_error'])
+		median_errors.append(metrics_list[i]['median_absolute_error'])
+		r2_scores.append(metrics_list[i]['r2_score'])
+		regression_models.append(model_names[i])
+	except:
+		pass
+
+# classification models 
 accuracies=list()
 roc_curve=list()
+classification_models=list()
+
 for i in range(len(model_names)):
-	accuracies.append(metrics_list[i]['accuracy'])
-	roc_curve.append(metrics_list[i]['roc_auc'])
+	try:
+		accuracies.append(metrics_list[i]['accuracy'])
+		roc_curve.append(metrics_list[i]['roc_auc'])
+		classification_models.append(model_names[i])
+	except:
+		pass
 
-data={'model names': model_names,
-	  'accuracies': accuracies,
-	  'roc_auc': roc_curve}
+classification_data={'model names': classification_models,
+					  'accuracies': accuracies,
+					  'roc_auc': roc_curve}
 
-print(model_names)
-print(accuracies)
-print(roc_curve)
+regression_data={'model_names': regression_models,
+				'mean_absolute_errors': meanabsolute_errors,
+				'mean_squared_errors': meansquared_errors,
+				'r2_scores': r2_scores}
 
-df=pd.DataFrame.from_dict(data)
-df.to_csv('models.csv')
+os.chdir(curdir)
+df=pd.DataFrame.from_dict(classification_data)
+df.to_csv('classification_models.csv', index=False)
+
+df=pd.DataFrame.from_dict(regression_data)
+df.to_csv('regression_models.csv', index=False)

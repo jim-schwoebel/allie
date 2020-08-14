@@ -105,7 +105,6 @@ def opensmile_featurize(audiofile, basedir, feature_extractor):
 
         # remove temporary arff_file
         os.remove(arff_file)
-        os.remove(audiofile)
         os.chdir(curdir)
 
         return features, labels

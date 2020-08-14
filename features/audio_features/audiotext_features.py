@@ -66,16 +66,17 @@ import text_features as tfea
 def audiotext_featurize(wavfile, transcript):
 
     # get features 
-    # librosa_features, librosa_labels=lf.librosa_featurize(wavfile, False)
     nltk_features, nltk_labels=nf.nltk_featurize(transcript)
     textacy_features, textacy_labels=tfe.textacy_featurize(transcript)
     spacy_features, spacy_labels=spf.spacy_featurize(transcript)
     text_features,text_labels=tfea.text_featurize(transcript)
-
-    # features=np.append(np.array(librosa_features), np.array(nltk_features))
+    
+    # concatenate feature arrays 
     features=np.append(np.array(nltk_features),np.array(textacy_features))
     features=np.append(features,np.array(spacy_features))
-    labels=nltk_labels+textacy_labels+spacy_labels
-    # labels=librosa_labels+nltk_labels+textacy_labels+spacy_features
+    features=np.append(features, np.array(text_features))
+    
+    # concatenate labels
+    labels=nltk_labels+textacy_labels+spacy_labels+text_labels
 
     return features, labels 

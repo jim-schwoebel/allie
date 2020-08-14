@@ -573,7 +573,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 		fig=sns.violinplot(x=newdata['classes'], y=newdata[new_labels_[j]])
 		fig = fig.get_figure()
 		fig.tight_layout()
-		fig.savefig('%s_%s.png'%(str(j), feature_labels[0][j]))
+		fig.savefig('%s_%s.png'%(str(j), new_labels_[j]))
 		plt.close(fig)
 
 	os.mkdir('feature_plots_transformed')
@@ -586,7 +586,7 @@ def visualize_features(classes, problem_type, curdir, default_features, balance_
 		fig=sns.violinplot(x=newdata['classes'], y=newdata[new_labels[j]])
 		fig = fig.get_figure()
 		fig.tight_layout()
-		fig.savefig('%s_%s.png'%(str(j), feature_labels[0][j]))
+		fig.savefig('%s_%s.png'%(str(j), new_labels[j]))
 		plt.close(fig)
 		
 	##################################################

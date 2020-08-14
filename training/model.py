@@ -505,6 +505,8 @@ try:
 		for i in range(int(classnum)):
 			classes.append(sys.argv[i+5])
 	else:
+
+		classnum=1
 		mtype=sys.argv[1]
 		csvfile=sys.argv[2]
 		classes=[sys.argv[3]]

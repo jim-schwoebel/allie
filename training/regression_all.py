@@ -1,3 +1,33 @@
+'''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+                                                                             
+|  \/  |         | |    | |  / _ \ | ___ \_   _|
+| .  . | ___   __| | ___| | / /_\ \| |_/ / | |  
+| |\/| |/ _ \ / _` |/ _ \ | |  _  ||  __/  | |  
+| |  | | (_) | (_| |  __/ | | | | || |    _| |_ 
+\_|  |_/\___/ \__,_|\___|_| \_| |_/\_|    \___/ 
+
+Builds many regression models based on .CSV files located in the train_dir.
+
+Relies on this script: https://github.com/jim-schwoebel/allie/blob/master/train_dir/make_csv_regression.py
+
+Note this is for single target regression problems only.
+'''
 import os
 
 def prev_dir(directory):

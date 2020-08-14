@@ -83,7 +83,10 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 	
 	os.mkdir(basedir+'/train_dir/'+folder)
 	for i in range(len(filepaths)):
-		shutil.copy(filepaths[i], directory+'/'+filepaths[i].split('/')[-1])
+		try:
+			shutil.copy(filepaths[i], directory+'/'+filepaths[i].split('/')[-1])
+		except:
+			pass
 		try:
 			shutil.copy(filepaths[i][0:-4]+'.json',  directory+'/'+filepaths[i].split('/')[-1][0:-4]+'.json')
 		except:

@@ -497,13 +497,18 @@ for i in range(len(folders)):
 # go through asking user for the proper parameters 
 try:
 	problemtype=sys.argv[1]
-	classnum=sys.argv[2]
 	mtype=sys.argv[3]
-	common_name=sys.argv[4]
-	classes=list()
-	for i in range(int(classnum)):
-		classes.append(sys.argv[i+5])
-
+	if mtype == 'c':
+		classnum=sys.argv[2]
+		common_name=sys.argv[4]
+		classes=list()
+		for i in range(int(classnum)):
+			classes.append(sys.argv[i+5])
+	else:
+		mtype=sys.argv[1]
+		csvfile=sys.argv[2]
+		classes=[sys.argv[3]]
+		common_name=classes[0]
 except:
 	# now ask user what type of problem they are trying to solve 
 	mtype=input('is this a classification (c) or regression (r) problem? \n')

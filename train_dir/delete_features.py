@@ -1,21 +1,21 @@
 '''
-               AAA               lllllll lllllll   iiii                      
-              A:::A              l:::::l l:::::l  i::::i                     
-             A:::::A             l:::::l l:::::l   iiii                      
-            A:::::::A            l:::::l l:::::l                             
-           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
    A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
   A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
-                                                                             
+																			 
 |  \/  |         | |    | |  / _ \ | ___ \_   _|
 | .  . | ___   __| | ___| | / /_\ \| |_/ / | |  
 | |\/| |/ _ \ / _` |/ _ \ | |  _  ||  __/  | |  
@@ -46,16 +46,19 @@ print(folders)
 # remove all json files
 curdir=os.getcwd()
 for i in tqdm(range(len(folders))):
-        os.chdir(curdir)
-        os.chdir(folders[i])
-        listdir=os.listdir()
-        for i in range(len(listdir)):
+		os.chdir(curdir)
+		os.chdir(folders[i])
+		listdir=os.listdir()
+		for i in range(len(listdir)):
 
-                if listdir[i].endswith('.json'):
-                        # print(listdir[i])
-                        # os.remove(listdir[i])
-                        data=json.load(open(listdir[i]))
-                        del data['features'][sampletype][feature_set]
-                        jsonfile=open(listdir[i],'w')
-                        json.dump(data,jsonfile)
-                        jsonfile.close()
+				if listdir[i].endswith('.json'):
+						# print(listdir[i])
+						# os.remove(listdir[i])
+						try:
+							data=json.load(open(listdir[i]))
+							del data['features'][sampletype][feature_set]
+							jsonfile=open(listdir[i],'w')
+							json.dump(data,jsonfile)
+							jsonfile.close()
+						except:
+							pass

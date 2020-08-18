@@ -29,7 +29,7 @@ Usage: python3 delete_features.py [sampletype] [feature_set]
 
 Example: python3 delete_features.py audio librosa_features
 '''
-import os, json
+import os, json, sys
 from tqdm import tqdm
 
 sampletype=sys.argv[1]

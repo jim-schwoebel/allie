@@ -507,6 +507,7 @@ try:
 	else:
 
 		classnum=1
+		problemtype='csv'
 		mtype=sys.argv[1]
 		csvfile=sys.argv[2]
 		classes=[sys.argv[3]]

@@ -28,7 +28,8 @@ Relies on this script: https://github.com/jim-schwoebel/allie/blob/master/train_
 
 Note this is for single target regression problems only.
 '''
-import os
+import os, shutil
+import pandas as pd
 
 def prev_dir(directory):
 	g=directory.split('/')
@@ -56,4 +57,26 @@ for i in range(len(listdir)):
 os.chdir(curdir)
 
 for i in range(len(csvfiles)):
-	os.system('python3 model.py r %s %s'%(csvfiles[i], csvfiles[i][0:-4]))
+	os.chdir(train_dir)
+	data=pd.read_csv(csvfiles[i])
+	class_=list(data)[1]
+	os.chdir(curdir)
+
+	# make regression model
+	os.system('python3 model.py r "%s" "%s"'%(csvfiles[i], class_))
+	os.chdir(prevdir+'/train_dir/')
+	
+	# make classification model (allows for visualizations and averages around mean)
+	os.system('python3 create_dataset.py "%s" "%s"'%(csvfiles[i], class_))
+	os.chdir(curdir)
+	os.system('python3 model.py audio 2 c "%s" "%s" "%s"'%(class_, class_+'_above', class_+'_below'))
+
+	# remove temporary directories for classification model training
+	try:
+		shutil.rmtree(prevdir+'/train_dir/'+class_+'_above')
+	except:
+		pass
+	try:
+		shutil.rmtree(prevdir+'/train_dir/'+class_+'_below')
+	except:
+		pass

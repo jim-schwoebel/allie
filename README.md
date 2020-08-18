@@ -715,7 +715,7 @@ Here are some settings that you can modify in this settings.json file and the va
 ## [License](https://www.apache.org/licenses/LICENSE-2.0)
 This repository is licensed under an [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). 
 
-The logo and gif is created and owned by [Tony Babel](https://dribbble.com/shots/5058273-The-Incredible-Mr-Robot).
+The logo gif is created and owned by [Tony Babel](https://dribbble.com/shots/5058273-The-Incredible-Mr-Robot).
 
 ## [Feedback](https://github.com/jim-schwoebel/Allie/issues)
 Any feedback on this repository is greatly appreciated. 

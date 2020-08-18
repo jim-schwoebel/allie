@@ -103,16 +103,19 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 
 	# go through all featurized .JSON files and read them and establish a feature array
 	for i in range(len(filepaths)):
-		jsonfile=filepaths[i].split('/')[-1][0:-4]+'.json'
-		g=json.load(open(directory+'/'+jsonfile))
-		feature=[]
-		label=[]
-		for j in range(len(default_features)):
-			array_=g['features'][sampletype][default_features[j]]
-			feature=feature+array_['features']
-			label=label+array_['labels']			
-			features.append(feature)
-			labels.append(label)
+		try:
+			jsonfile=filepaths[i].split('/')[-1][0:-4]+'.json'
+			g=json.load(open(directory+'/'+jsonfile))
+			feature=[]
+			label=[]
+			for j in range(len(default_features)):
+				array_=g['features'][sampletype][default_features[j]]
+				feature=feature+array_['features']
+				label=label+array_['labels']			
+				features.append(feature)
+				labels.append(label)
+		except:
+			pass
 	
 	# remove the temporary directory
 	os.chdir(train_dir)

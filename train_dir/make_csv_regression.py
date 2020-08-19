@@ -29,7 +29,25 @@ good to combine with https://github.com/jim-schwoebel/allie/blob/master/training
 import os
 import pandas as pd
 
-data=pd.read_csv('new.csv')
+def replace_nonstrings(string_):
+	# alphabet to keep characters
+	alphabet=['a','b','c','d','e','f','g','h','i','j',
+			  'k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z',' ','_',
+			  '1','2','3','4','5','6','7','8','9','0']
+	string_=string_.lower().replace(' ','_')
+	newstring=''
+	for j in range(len(string_)):
+		if string_[j] not in alphabet:
+			pass
+		else:
+			newstring=newstring+string_[j]
+
+	if len(newstring) > 50:
+		newstring=newstring[0:50]
+		
+	return newstring
+
+data=pd.read_csv('new3.csv')
 cols=list(data)
 
 for i in range(len(cols)-1):
@@ -43,4 +61,5 @@ for i in range(len(cols)-1):
 			delcols.append(cols[j])
 	print(delcols)
 	newdata=data.drop(delcols, axis=1)
-	newdata.to_csv(cols[i+1]+'.csv', index=False)
+	newstring=replace_nonstrings(cols[i+1])
+	newdata.to_csv(newstring+'.csv', index=False)

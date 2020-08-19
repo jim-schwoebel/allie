@@ -108,11 +108,11 @@ for i in range(len(csvfiles)):
 	common_name=replace_nonstrings(class_)
 
 	# make regression model (if doesn't already exist)
-	model_exists, model_listdir = pursue_modeling('r', model_dir, problemtype, default_training_script, common_name)
-	if model_exists == False:
-		os.system('python3 model.py r "%s" "%s" "%s"'%(csvfiles[i], class_, common_name))
-	else:
-		print('skipping - %s'%(common_name+'_tpot_regression'))
+	# model_exists, model_listdir = pursue_modeling('r', model_dir, problemtype, default_training_script, common_name)
+	# if model_exists == False:
+	# 	os.system('python3 model.py r "%s" "%s" "%s"'%(csvfiles[i], class_, common_name))
+	# else:
+	# 	print('skipping - %s'%(common_name+'_tpot_regression'))
 
 	os.chdir(prevdir+'/train_dir/')
 	

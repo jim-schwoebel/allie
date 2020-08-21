@@ -25,6 +25,11 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 Make many CSV files for modeling,
 good to combine with https://github.com/jim-schwoebel/allie/blob/master/training/regression_all.py
 
+Usage: python3 make_csv_regression.py [csvfile] [targetcol]
+
+Example: python3 make_csv_regression.py test2.csv urls
+--> creates many spreadsheets in the ./train_dir for regression modeling
+
 '''
 import os, sys
 import pandas as pd

@@ -23,7 +23,10 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_|  |_/\___/ \__,_|\___|_| \_| |_/\_|    \___/ 
 			       
 			       
-How to use:
+Usage: python3 create_csv.py [folderpathA] [folderpathB] [folderpath...N]	
+
+Example: python3 create_csv.py /Users/jim/desktop/allie/train_dir/males
+--> creates a file output.csv in ./train_dir
 '''
 import os, sys, time
 import pandas as pd

@@ -22,13 +22,27 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |  | | (_) | (_| |  __/ | | | | || |    _| |_ 
 \_|  |_/\___/ \__,_|\___|_| \_| |_/\_|    \___/ 
 
+Usage: python3 make_new.py [csvfile] [newdir] [targetvar]
+
+Example: python3 make_new.py new.csv /Users/jim/desktop/train_dir/one url
 '''
 import pandas as pd
+import os
 
-data=pd.read_csv('new2.csv')
-urls=data['url']
+csvfile=sys.argv[1]
+newdir=sys.argv[2]
+curdir=os.getcwd()
+try:
+	os.chdir(newdir)
+except:
+	os.mkdir(newdir)
+os.chdir(curdir)
+target=sys.argv[3]
+
+data=pd.read_csv(csvfile)
+urls=data[target]
 newurls=list()
 for i in range(len(urls)):
-	newurls.append('/mnt/c/users/jimsc/desktop/voiceome_analysis/allie/train_dir/audio-features-6535df16-e0f2-11ea-9425-380025122270/'+urls[i].split('/')[-1])
-data['url']=newurls
-data.to_csv('new3.csv', index=False)
+	newurls.append(newdir+'/'+target[i].split('/')[-1])
+data[target]=newurls
+data.to_csv('new.csv', index=False)

@@ -393,6 +393,7 @@ There are a few other scripts in this folder. The table below describes what eac
 
 | Script name | What it does | How to call  | Example  | 
 | ------------- |-------------| -------------| -------------| 
+| [create_csv.py](https://github.com/jim-schwoebel/allie/blob/master/models/create_csv.py) | Creates a nicely formatted .CSV file with the file paths and class labels for regression modeling | ```python3 create_csv.py [folderpathA] [folderpathB] [folderpath...N]``` | 
 | [delete_features.py](https://github.com/jim-schwoebel/allie/blob/master/train_dir/delete_features.py) | Deletes a specified set of features from a .JSON file (in all folders in train_dir), as specified by the user. | ```python3 delete_features.py [sampletype] [feature_set]``` | ```python3 delete_features.py audio librosa_features``` |  
 | [delete_json.py](https://github.com/jim-schwoebel/allie/blob/master/train_dir/delete_json.py) | Deletes all .JSON files from all folders in the train_dir (useful to re-featurize sets of files). | ```python3 delete_json.py``` | ```python3 delete_json.py``` | 
 | [rename.py](https://github.com/jim-schwoebel/allie/blob/master/train_dir/rename.py) | Renames all the files in a particular directory (both audio files and .JSON files). Note you can manually change this to other file types | ```python3 rename_files.py [folder]``` | ```python3 rename.py /Users/jim/desktop/allie/train_dir/males``` |

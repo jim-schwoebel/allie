@@ -26,7 +26,7 @@ Make many CSV files for modeling,
 good to combine with https://github.com/jim-schwoebel/allie/blob/master/training/regression_all.py
 
 '''
-import os
+import os, sys
 import pandas as pd
 
 def replace_nonstrings(string_):
@@ -47,11 +47,13 @@ def replace_nonstrings(string_):
 		
 	return newstring
 
-data=pd.read_csv('new3.csv')
+csvfile=sys.argv[1]
+target=sys.argv[2]
+data=pd.read_csv(csvfile)
 cols=list(data)
 
 for i in range(len(cols)-1):
-	ind1=cols.index('url')
+	ind1=cols.index(target)
 	ind2=cols.index(cols[i+1])
 	delcols=list()
 	for j in range(len(cols)):

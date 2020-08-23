@@ -43,10 +43,11 @@ can be found @ https://github.com/mitll/d3m-schema/blob/master/documentation/dat
 #########################################
 
 import pandas as pd
-import os, json, uuid, shutil, time
+import os, json, uuid, shutil, time, random
 from optparse import OptionParser
 from sklearn import preprocessing
 import pandas as pd
+import numpy as np
 
 #########################################
 ## 			HELPER FUNCTIONS		   ##
@@ -112,10 +113,11 @@ def element_featurize(sampletype, default_features, filepaths, directory):
 				array_=g['features'][sampletype][default_features[j]]
 				feature=feature+array_['features']
 				label=label+array_['labels']			
-				features.append(feature)
-				labels.append(label)
+			features.append(feature)
+			labels.append(label)
 		except:
-			pass
+			features.append(np.zeros(len(features[0])))
+			labels.append(random.choice(labels))
 	
 	# remove the temporary directory
 	os.chdir(train_dir)
@@ -354,30 +356,30 @@ def csv_featurize(csvfile, outfile, settings, target):
 		for i in range(len(old_column_labels)):
 			column=old_column_labels[i]
 			for j in range(len(new_column_labels[0])):
-				print(column)
+				# print(column)
 
 				for k in range(len(new_column_labels[i][j])):
-					print(new_column_labels[i][j][k])
+					# print(new_column_labels[i][j][k])
 					newcolumn=new_column_labels[i][j][k]
 					if newcolumn not in columns:
 						if column != target:
-							print(str(column)+'_'+str(new_column_labels[i][j][k]))
+							# print(str(column)+'_'+str(new_column_labels[i][j][k]))
 							labels.append(str(column)+'_'+str(new_column_labels[i][j][k]))
 						else:
-							print(str(column)+'_'+str(new_column_labels[i][j][k]))
+							# print(str(column)+'_'+str(new_column_labels[i][j][k]))
 							labels.append(str(column))							
 					else:
-						print(str(column))
+						# print(str(column))
 						labels.append(str(column))
 					features_=list()
 					for l in range(len(new_column_labels[i])):
 						features_.append(new_column_values[i][l][k])
-					print(features_)
+					# print(features_)
 					features.append(features_)
 				break
 
 		newdict=dict(zip(labels, features))
-		print(newdict)
+		# print(newdict)
 		df = pd.DataFrame(newdict)
 		df.to_csv(outfile,index=False)
 

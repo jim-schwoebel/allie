@@ -274,7 +274,7 @@ def audio_featurize(feature_set, audiofile, transcript):
 	elif feature_set == 'librosa_features':
 		features, labels = librosa_features.librosa_featurize(audiofile, False)
 	elif feature_set == 'loudness_features':
-		features, labels = loudness_features.loudness.featurize(audiofile)
+		features, labels = loudness_features.loudness_featurize(audiofile)
 	elif feature_set == 'meta_features':
 		features, labels = meta_features.meta_featurize(audiofile, cur_dir, help_dir)
 	elif feature_set == 'mixed_features':

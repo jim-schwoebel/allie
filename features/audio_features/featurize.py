@@ -112,7 +112,7 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 
 		# download models if not in helper directory
 		if 'deepspeech-0.7.0-models.pbmm' not in listdir:
-			os.system('wget https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.pbmm')
+			os.system('wget https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.pbmm --no-check-certificate')
 
 		# initialize filenames
 		textfile=file[0:-4]+'.txt'
@@ -146,9 +146,9 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 
 		# download models if not in helper directory
 		if 'deepspeech-0.7.0-models.pbmm' not in listdir:
-			os.system('wget https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.pbmm')
+			os.system('wget https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.pbmm --no-check-certificate')
 		if 'deepspeech-0.7.0-models.scorer' not in listdir:
-			os.system('wget https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.scorer')
+			os.system('wget https://github.com/mozilla/DeepSpeech/releases/download/v0.7.0/deepspeech-0.7.0-models.scorer --no-check-certificate')
 
 		# initialize filenames
 		textfile=file[0:-4]+'.txt'

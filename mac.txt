@@ -7,7 +7,7 @@ attrs==19.3.0
 audiolazy==0.6
 audioread==2.1.8
 autogbt @ git+https://github.com/pfnet-research/autogbt-alt.git@57f7ae1bce2923d11f73c3631e34be49c7dd25da
-autogluon==0.0.6
+autogluon==0.0.14
 autokeras==1.0.2
 backcall==0.2.0
 bcrypt==3.1.7

@@ -5,6 +5,7 @@ arrow==0.15.5
 astor==0.8.1
 attrs==19.3.0
 audioread==2.1.8
+autogluon==0.0.14
 backcall==0.1.0
 beautifulsoup4==4.8.2
 beautifultable==0.8.0

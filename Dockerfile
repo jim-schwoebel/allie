@@ -67,8 +67,6 @@ RUN	pip3 install -r requirements.txt
 # order matters here for OpenCV and a few of the dependencies below
 # custom pip3 installations across all operating systems
 RUN	pip3 install --upgrade mxnet pytest==5.4.3 scipy==1.4.1 scikit-learn==0.22.2.post1 \
-  && git clone https://github.com/awslabs/autogluon \
-  && cd autogluon && python setup.py develop \
   && pip3 install git+https://github.com/detly/gammatone.git \
   && pip3 install https://github.com/vBaiCai/python-pesq/archive/master.zip \
   # && pip3 install git+https://github.com/aliutkus/speechmetrics#egg=speechmetrics[cpu] \

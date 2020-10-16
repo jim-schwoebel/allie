@@ -62,6 +62,7 @@ RUN	chmod 777 /usr/local/opensmile-2.3.0
 RUN	export PATH=/usr/local/opensmile-2.3.0/inst/bin:$PATH
 
 # install requirements
+RUN	pip3 install numpy==1.18.2
 RUN	pip3 install -r requirements.txt
 
 # order matters here for OpenCV and a few of the dependencies below

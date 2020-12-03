@@ -32,10 +32,9 @@ ______         _                          ___  ______ _____
   \_/\___/_/\_\\__|
                    
 		   
-Featurize folders of text files if default_text_features = ['glove_features']
+Featurize folders of text files if default_text_features = ['blabla_features']
 
-This uses a GloVE embedding with 100 dimensions:
-https://machinelearningmastery.com/develop-word-embeddings-python-gensim/
+Learn more with the documenation - https://github.com/novoic/blabla
 '''
 import os, uuid
 import numpy as np

@@ -1,0 +1,113 @@
+#!/usr/bin/env python
+
+from blabla.document_processor import DocumentProcessor
+import argparse
+import json
+import yaml
+import os
+from jsonschema import validate
+import pandas as pd
+from tqdm import tqdm
+
+features_json_schema = {
+	'type': 'object',
+	'properties': {'language': {'type': 'string'}, 'features': {'type': 'array'},},
+}
+
+
+def validate_features_json(features_json):
+	"""Validate the input json structure that contains the list of features
+			Args:
+				features_json (json): The json content that contains the language and the list of features
+			Returns:
+				None:
+	"""
+	validate(features_json, features_json_schema)
+
+
+def compute_features(features_yaml_path, stanza_config_file_path, input_dir_path, output_file_path, input_format):
+	"""Convert an input json to a list of sentences
+
+			Args:
+				features_yaml_path (str): The path to the YAML file specifying the language and feature set
+				input_file_path (str): The path to the input file path containg the text
+				output_file_path (str): The path to the output csv file that will contain the features
+				input_format (str): The format of the input (string / json)
+
+			Returns:
+				None:
+	"""
+	output_file = open(output_file_path, 'w')
+	features_json = yaml.load(open(features_yaml_path, 'r'))
+	features = features_json["features"]
+	df = pd.DataFrame(columns=features)
+	try:
+		validate_features_json(features_json)
+	except:
+		raise Exception(
+			'The features yaml file is not in the correct format. Please check the format.'
+		)
+	with DocumentProcessor(
+		stanza_config_file_path, features_json['language']
+	) as doc_proc:
+		for input_fp in tqdm(os.listdir(input_dir_path)):
+			with open(os.path.join(input_dir_path, input_fp)) as f:
+				content = f.read()
+			doc = doc_proc.analyze(content, input_format)
+			res_json = doc.compute_features(features_json['features'])
+			res = {}
+			res = {key: [val] for key, val in res_json.items()}
+			df = df.append(pd.DataFrame.from_dict(res))
+		df.to_csv(output_file_path, index=False)
+
+
+if __name__ == "__main__":
+	"""The main Command Line Interface to BlaBla. We provide the path to the features YAML file, path to the
+			input file and a path to the output csv file that will contain the output features. We also
+			specify the input format which is either a string or a json.
+
+			Args:
+				F (str): The path to the YAML file specifying the language and feature set
+				S (str): The path to the stanza config file
+				i (str): The path to the input file path containg the text
+				o (str): The path to the output csv file that will contain the features
+				format (str): The format of the input (string / json)
+
+			Returns:
+				None:
+	"""
+	parser = argparse.ArgumentParser()
+	parser.add_argument('functionality', type=str,
+						help='The functionality to be run. Currently include: compute-features')
+	parser.add_argument(
+		'-F', required="True", help='Path to the features yaml file'
+	)
+	parser.add_argument(
+		'-S', required='True', help='Path to the stanza config file'
+	)
+	parser.add_argument(
+		'-i', required="True", help='Path to the directory that contains the input files to be processed',
+	)
+	parser.add_argument(
+		'-o',
+		required='True',
+		help='Path to the output csv file that will contain the output features',
+	)
+	parser.add_argument(
+		'-format',
+		required='True',
+		choices=['json', 'string'],
+		help='The input format (json|string)',
+	)
+	args = parser.parse_args()
+
+	if args.functionality == 'compute-features':
+		compute_features(
+			args.F,
+			args.S,
+			args.i,
+			args.o,
+			args.format,
+		)
+	else:
+		raise Exception("Please mention one of the following options for the functionality: ['compute-features']")

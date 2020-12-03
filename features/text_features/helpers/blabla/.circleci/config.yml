@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.6.6
+    steps:
+      - checkout
+      - run: pip3 install . --user
+      - run: bash ./setup_corenlp.sh

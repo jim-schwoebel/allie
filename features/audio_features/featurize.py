@@ -261,16 +261,12 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 def audio_featurize(feature_set, audiofile, transcript):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
-	if feature_set == 'audioset_features':
+	if feature_set == 'allosaurus_features':
+		features, labels = allosaurus_features.allosaurus_featurize(audiofile)
+	elif feature_set == 'audioset_features':
 		features, labels = audioset_features.audioset_featurize(audiofile, basedir, foldername)
 	elif feature_set == 'audiotext_features':
 		features, labels = audiotext_features.audiotext_featurize(audiofile, transcript)
-	elif feature_set == 'sox_features':
-		features, labels = sox_features.sox_featurize(audiofile)
-	elif feature_set == 'sa_features':
-		features, labels = sa_features.sa_featurize(audiofile)
-	elif feature_set == 'pyaudio_features':
-		features, labels = pyaudio_features.pyaudio_featurize(audiofile, basedir)
 	elif feature_set == 'librosa_features':
 		features, labels = librosa_features.librosa_featurize(audiofile, False)
 	elif feature_set == 'loudness_features':
@@ -295,11 +291,17 @@ def audio_featurize(feature_set, audiofile, transcript):
 	elif feature_set == 'pspeech_features':
 		features, labels = pspeech_features.pspeech_featurize(audiofile)
 	elif feature_set == 'pspeechtime_features':
-                features, labels = pspeechtime_features.pspeech_featurize(audiofile)
+		features, labels = pspeechtime_features.pspeech_featurize(audiofile)
+	elif feature_set == 'pyaudio_features':
+		features, labels = pyaudio_features.pyaudio_featurize(audiofile, basedir)
 	elif feature_set == 'pyaudiolex_features':
 		features, labels = pyaudiolex_features.pyaudiolex_featurize(audiofile)
 	elif feature_set == 'pyworld_features':
 		features, labels = pyworld_features.pyworld_featurize(audiofile)
+	elif feature_set == 'sa_features':
+		features, labels = sa_features.sa_featurize(audiofile)
+	elif feature_set == 'sox_features':
+		features, labels = sox_features.sox_featurize(audiofile)
 	elif feature_set == 'specimage_features':
 		features, labels = specimage_features.specimage_featurize(audiofile,cur_dir, haar_dir)
 	elif feature_set == 'specimage2_features':
@@ -310,6 +312,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels=speechmetrics_features.speechmetrics_featurize(audiofile)
 	elif feature_set == 'standard_features':
 		features, labels = standard_features.standard_featurize(audiofile)
+	elif feature_set == 'surfboard_features':
+		features, labels = surfboard_features.surfboard_featurize(audiofile, help_dir)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))
@@ -342,14 +346,12 @@ except:
 ################################################
 
 # only load the relevant featuresets for featurization to save memory
+if 'allosaurus_features' in feature_sets:
+	import allosaurus_features
 if 'audioset_features' in feature_sets:
 	import audioset_features
 if 'audiotext_features' in feature_sets:
 	import audiotext_features
-if 'sox_features' in feature_sets:
-	import sox_features
-if 'pyaudio_features' in feature_sets:
-	import pyaudio_features
 if 'librosa_features' in feature_sets:
 	import librosa_features
 if 'loudness_features' in feature_sets:
@@ -366,6 +368,8 @@ if 'myprosody_features' in feature_sets:
 	# import myprosody_features as mpf
 if 'opensmile_features' in feature_sets:
 	import opensmile_features
+if 'pyaudio_features' in feature_sets:
+	import pyaudio_features
 if 'pyaudiolex_features' in feature_sets:
 	import pyaudiolex_features
 if 'praat_features' in feature_sets:
@@ -380,6 +384,8 @@ if 'pyworld_features' in feature_sets:
 	import pyworld_features
 if 'sa_features' in feature_sets:
 	import sa_features
+if 'sox_features' in feature_sets:
+	import sox_features
 if 'specimage_features' in feature_sets:
 	import specimage_features
 if 'specimage2_features' in feature_sets:
@@ -390,6 +396,8 @@ if 'speechmetrics_features' in feature_sets:
 	import speechmetrics_features
 if 'standard_features' in feature_sets:
 	import standard_features
+if 'surfboard_features' in feature_sets:
+	import surfboard_features
 
 ################################################
 ##	   		Get featurization folder     	  ##

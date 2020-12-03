@@ -1,0 +1,36 @@
+annotators = tokenize, ssplit, pos, lemma, ner, depparse, parse, coref
+
+outputFormat = json
+
+
+tokenize.language = en
+
+# Some other annotators are also available for English and can be optionally loaded, e.g.:
+# annotators = tokenize, ssplit, pos, lemma, truecase
+
+# This is an example of the "full" pipeline, though there are even more annotators than this:
+# annotators = tokenize,cleanxml,ssplit,pos,lemma,ner,parse,depparse,coref,natlog,openie,kbp,entitylink,sentiment,quote
+
+# Options like the ones below are being set as defaults in code
+
+pos.model = edu/stanford/nlp/models/pos-tagger/english-caseless-left3words-distsim.tagger
+
+# ner.model = edu/stanford/nlp/models/ner/english.all.3class.distsim.crf.ser.gz,\
+#             edu/stanford/nlp/models/ner/english.muc.7class.distsim.crf.ser.gz,\
+#             edu/stanford/nlp/models/ner/english.conll.4class.distsim.crf.ser.gz
+
+# sutime.rules = edu/stanford/nlp/models/sutime/defs.sutime.txt,edu/stanford/nlp/models/sutime/english.sutime.txt,\
+# edu/stanford/nlp/models/sutime/english.holidays.sutime.txt
+
+# ner.fine.regexner.mapping =
+# "ignorecase=true,validpospattern=^(NN|JJ).*,edu/stanford/nlp/models/kbp/regexner_caseless.tab;\
+#  edu/stanford/nlp/models/kbp/regexner_cased.tab"
+# ner.fine.regexner.noDefaultOverwriteLabels = CITY
+
+parse.model = edu/stanford/nlp/models/lexparser/englishPCFG.caseless.ser.gz
+
+# depparse.model = edu/stanford/nlp/models/parser/nndep/english_UD.gz
+
+# coref.algorithm = statistical
+# coref.md.type = dependency
+# coref.statistical.rankingModel = edu/stanford/nlp/models/coref/statistical/ranking_model.ser.gz

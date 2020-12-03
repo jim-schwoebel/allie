@@ -87,6 +87,8 @@ def text_featurize(feature_set, transcript, glovemodel, w2vmodel, fastmodel, ber
 		features, labels=grammarf.grammar_featurize(transcript)
 	elif feature_set == 'bert_features':
 		features, labels=bertf.bert_featurize(transcript, bert_model)
+	elif feature_set == 'blabla_feature':
+		features, labels=bbf.blabla_featurize(transcript)
 	
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))
@@ -132,7 +134,9 @@ except:
 default_text_transcribers=settings['default_text_transcriber']
 text_transcribe=settings['transcribe_text']
 
-# contextually load repositories heere
+# contextually load repositories here
+if 'blabla_features' in feature_sets:
+	import blabla_features as bbf
 if 'nltk_features' in feature_sets:
 	import nltk_features as nf
 if 'spacy_features' in feature_sets:

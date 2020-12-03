@@ -81,6 +81,6 @@ def blabla_featurize(transcript):
 
     return features, labels 
 
-features, labels = blabla_featurize('This is the coolest transcript ever. This is the coolest transcript ever.')
-print(features)
-print(labels)
+# features, labels = blabla_featurize('This is the coolest transcript ever. This is the coolest transcript ever.')
+# print(features)
+# print(labels)

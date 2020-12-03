@@ -6,7 +6,7 @@ python3 featurize.py [folder] [featuretype]
 ```
 
 ### Audio
-* [allosaurus_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/allosaurus_features.py) - extracts phoneme-based features using the [allosaurus library](https://github.com/xinjli/allosaurus)
+* [allosaurus_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/allosaurus_features.py) - extracts phoneme-based features using the [allosaurus library](https://github.com/xinjli/allosaurus).
 * [audioset_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audioset_features.py) - 
 simple script to extract features using the VGGish model released by Google.
 * [audiotext_features](https://github.com/jim-schwoebel/allie/blob/master/features/audio_features/audiotext_features.py) - featurizes data with text feautures extracted from the transcript.

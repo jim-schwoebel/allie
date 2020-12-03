@@ -31,16 +31,14 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
                            
-This will featurize folders of audio files if the default_audio_features = ['librosa_features']
+This will featurize folders of audio files if the default_audio_features = ['surfboard_features']
 
-Extracts acoustic features using the LibROSA library;
-saves them as mean, standard devaition, amx, min, and median
-in different classes: onset, rhythm, spectral, and power categories.
+Extracts acoustic features using the Surfboard library.
 
 Note this is quite a powerful audio feature set that can be used
 for a variety of purposes. 
 
-For more information, check out libROSA's documentation: https://librosa.org/
+For more information, check out Surfboard's documentation: https://github.com/novoic/surfboard
 '''
 import os, pandas
 import numpy as np 

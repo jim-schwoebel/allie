@@ -42,7 +42,10 @@ for a variety of purposes.
 
 For more information, check out libROSA's documentation: https://librosa.org/
 '''
-import librosa
+import librosa, os
+if librosa.__version__ != '0.6.2':
+    os.system('pip3 install librosa==0.6.2')
+    import librosa
 import numpy as np 
 
 # get statistical features in numpy

@@ -474,6 +474,13 @@ def pursue_modeling(mtype, model_dir, problemtype, default_training_script,commo
 
 	return model_exists, model_listdir
 	
+def get_csvfiles(listdir):
+	csvfiles=list()
+	for i in range(len(listdir)):
+		if listdir[i].endswith('.csv'):
+			csvfiles.append(listdir[i])
+	return csvfiles
+
 ###############################################################
 ##                    LOADING SETTINGS                       ##
 ###############################################################
@@ -498,6 +505,7 @@ os.chdir(prevdir+'/train_dir')
 data_dir=os.getcwd()
 listdir=os.listdir()
 folders=get_folders(listdir)
+csvfiles=get_csvfiles(listdir)
 
 # now assess folders by content type 
 data=dict()
@@ -555,48 +563,61 @@ except:
 		elif problemtype=='5':
 			problemtype='csv'
 
-		print('\n OK cool, we got you modeling %s files \n'%(problemtype))
-		count=0
-		availableclasses=list()
-		for i in range(len(folders)):
-			if data[folders[i]]==problemtype:
-				availableclasses.append(folders[i])
-				count=count+1
+		if problemtype != 'csv':
 
-		classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
-		print('these are the available classes: ')
-		print(availableclasses)
-		# get all if all (good for many classes)
-		classes=list()
-		if classnum=='all':
-			for i in range(len(availableclasses)):
-				classes.append(availableclasses[i])
-		else:
-					
-			stillavailable=list()
-			for i in range(int(classnum)):
-				class_=input('what is class #%s \n'%(str(i+1)))
+			print('\n OK cool, we got you modeling %s files \n'%(problemtype))
+			count=0
+			availableclasses=list()
+			for i in range(len(folders)):
+				if data[folders[i]]==problemtype:
+					availableclasses.append(folders[i])
+					count=count+1
 
-				while class_ not in availableclasses and class_ not in '' or class_ in classes:
-					print('\n')
-					print('------------------ERROR------------------')
-					print('the input class does not exist (for %s files).'%(problemtype))
-					print('these are the available classes: ')
-					if len(stillavailable)==0:
-						print(availableclasses)
-					else:
-						print(stillavailable)
-					print('------------------------------------')
+			classnum=input('how many classes would you like to model? (%s available) \n'%(str(count)))
+			print('these are the available classes: ')
+			print(availableclasses)
+			# get all if all (good for many classes)
+			classes=list()
+			if classnum=='all':
+				for i in range(len(availableclasses)):
+					classes.append(availableclasses[i])
+			else:
+						
+				stillavailable=list()
+				for i in range(int(classnum)):
 					class_=input('what is class #%s \n'%(str(i+1)))
-				for j in range(len(availableclasses)):
-					stillavailable=list()
-					if availableclasses[j] not in classes:
-						stillavailable.append(availableclasses[j])
-				if class_ == '':
-					class_=stillavailable[0]
 
-				classes.append(class_)
+					while class_ not in availableclasses and class_ not in '' or class_ in classes:
+						print('\n')
+						print('------------------ERROR------------------')
+						print('the input class does not exist (for %s files).'%(problemtype))
+						print('these are the available classes: ')
+						if len(stillavailable)==0:
+							print(availableclasses)
+						else:
+							print(stillavailable)
+						print('------------------------------------')
+						class_=input('what is class #%s \n'%(str(i+1)))
+					for j in range(len(availableclasses)):
+						stillavailable=list()
+						if availableclasses[j] not in classes:
+							stillavailable.append(availableclasses[j])
+					if class_ == '':
+						class_=stillavailable[0]
 
+					classes.append(class_)
+
+		elif problemtype == 'csv':
+			print('\n OK cool, we got you modeling %s files \n'%(problemtype))
+			print('csv file options are: %s \n'%(csvfiles))
+			csvfile=input('which csvfile would you like to use for classification? \n')
+			g=pd.read_csv(csvfile)
+			columns=list(g)
+			print('potential targets include: %s'%(columns))
+			target=input('what target would you like to use? \n')
+			csv_labels=g[target]
+			csv_features=g.drop([target], axis=1)
+			
 	elif mtype =='r':
 		# for regression problems we need a target column to predict / classes from a .CSV 
 		problemtype='csv'
@@ -789,56 +810,76 @@ if mtype == 'c':
 	print('-----------------------------------')
 	print(f.renderText('FEATURIZING DATA'))
 	print('-----------------------------------')
-	for i in range(len(classes)):
-		class_type=classes[i]
-		if problemtype == 'audio':
-			# featurize audio 
-			os.chdir(prevdir+'/features/audio_features')
-			default_features=default_audio_features
-		elif problemtype == 'text':
-			# featurize text
-			os.chdir(prevdir+'/features/text_features')
-			default_features=default_text_features
-		elif problemtype == 'image':
-			# featurize images
-			os.chdir(prevdir+'/features/image_features')
-			default_features=default_image_features
-		elif problemtype == 'video':
-			# featurize video 
-			os.chdir(prevdir+'/features/video_features')
-			default_features=default_video_features
-		elif problemtype == 'csv':
-			# featurize .CSV 
-			os.chdir(prevdir+'/features/csv_features')
-			default_features=default_csv_features
 
-		print('-----------------------------------')
-		print('           FEATURIZING %s'%(classes[i].upper()))
-		print('-----------------------------------')
-		
-		os.system('python3 featurize.py "%s"'%(data_dir+'/'+classes[i]))
-		os.chdir(data_dir+'/'+classes[i])
-		# load audio features 
-		listdir=os.listdir()
-		feature_list=list()
-		label_list=list()
-		for j in range(len(listdir)):
-			if listdir[j][-5:]=='.json':
-				try:
-					g=json.load(open(listdir[j]))
-					# consolidate all features into one array (if featurizing with multiple featurizers)
-					default_feature=list()
-					default_label=list()
-					for k in range(len(default_features)):
-						default_feature=default_feature+g['features'][problemtype][default_features[k]]['features']
-						default_label=default_label+g['features'][problemtype][default_features[k]]['labels']
+	if problemtype == 'csv':
+		# csv features should have already been defined
+		# need to separate into number of unique classes
+		csv_labels=g[target]
+		csv_features=g.drop([target], axis=1)
+		csv_feature_labels=list(csv_features)
+		classes=list(set(list(csv_labels)))
+		for i in range(len(classes)):
+			class_type = classes[i]
 
-					feature_list.append(default_feature)
-					label_list.append(default_label)
-				except:
-					print('ERROR - skipping ' + listdir[j])
-		
-		data[class_type]=feature_list
+			feature_list=list()
+			label_list=list()
+			
+			for i in range(len(csv_features)):
+				if csv_labels[i] == class_type:
+					feature_list.append(list(csv_features.iloc[i,:]))
+					label_list.append(csv_feature_labels)
+
+			data[class_type]=feature_list
+	else:
+		# 
+		for i in range(len(classes)):
+			class_type=classes[i]
+			if problemtype == 'audio':
+				# featurize audio 
+				os.chdir(prevdir+'/features/audio_features')
+				default_features=default_audio_features
+			elif problemtype == 'text':
+				# featurize text
+				os.chdir(prevdir+'/features/text_features')
+				default_features=default_text_features
+			elif problemtype == 'image':
+				# featurize images
+				os.chdir(prevdir+'/features/image_features')
+				default_features=default_image_features
+			elif problemtype == 'video':
+				# featurize video 
+				os.chdir(prevdir+'/features/video_features')
+				default_features=default_video_features
+
+			print('-----------------------------------')
+			print('           FEATURIZING %s'%(classes[i].upper()))
+			print('-----------------------------------')
+			
+			os.system('python3 featurize.py "%s"'%(data_dir+'/'+classes[i]))
+			os.chdir(data_dir+'/'+classes[i])
+			# load audio features 
+			listdir=os.listdir()
+			feature_list=list()
+			label_list=list()
+			for j in range(len(listdir)):
+				if listdir[j][-5:]=='.json':
+					try:
+						g=json.load(open(listdir[j]))
+						# consolidate all features into one array (if featurizing with multiple featurizers)
+						default_feature=list()
+						default_label=list()
+						for k in range(len(default_features)):
+							default_feature=default_feature+g['features'][problemtype][default_features[k]]['features']
+							default_label=default_label+g['features'][problemtype][default_features[k]]['labels']
+
+						feature_list.append(default_feature)
+						label_list.append(default_label)
+					except:
+						print('ERROR - skipping ' + listdir[j])
+			
+			data[class_type]=feature_list
+
+
 elif mtype == 'r':
 	# featurize .CSV 
 	os.chdir(prevdir+'/features/csv_features')
@@ -864,58 +905,96 @@ remove_outliers=settings['remove_outliers']
 outlier_types=settings['default_outlier_detector']
 
 if mtype == 'c':
-	jsonfile=''
-	for i in range(len(classes)):
-		if i==0:
-			jsonfile=classes[i]
-		else:
-			jsonfile=jsonfile+'_'+classes[i]
 
-	jsonfile=jsonfile+'.json'
+	if problemtype != 'csv':
+		jsonfile=''
+		for i in range(len(classes)):
+			if i==0:
+				jsonfile=classes[i]
+			else:
+				jsonfile=jsonfile+'_'+classes[i]
 
-	#try:
-	g=data
-	alldata=list()
-	labels=list()
-	lengths=list()
+		jsonfile=jsonfile+'.json'
 
-	# check to see all classes are same length and reshape if necessary
-	for i in range(len(classes)):
-		class_=g[classes[i]]
-		lengths.append(len(class_))
+		#try:
+		g=data
+		alldata=list()
+		labels=list()
+		lengths=list()
 
-	lengths=np.array(lengths)
-	minlength=np.amin(lengths)
+		# check to see all classes are same length and reshape if necessary
+		for i in range(len(classes)):
+			class_=g[classes[i]]
+			lengths.append(len(class_))
 
-	# now load all the classes
-	for i in range(len(classes)):
-		class_=g[classes[i]]
-		random.shuffle(class_)
+		lengths=np.array(lengths)
+		minlength=np.amin(lengths)
 
-		# only balance if specified in settings
-		if balance==True:
-			if len(class_) > minlength:
-				print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
-				class_=class_[0:minlength]
+		# now load all the classes
+		for i in range(len(classes)):
+			class_=g[classes[i]]
+			random.shuffle(class_)
 
-		for j in range(len(class_)):
-			alldata.append(class_[j])
-			labels.append(i)
+			# only balance if specified in settings
+			if balance==True:
+				if len(class_) > minlength:
+					print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
+					class_=class_[0:minlength]
 
-	# load features file and get feature labels by loading in classes
-	labels_dir=prevdir+'/train_dir/'+classes[0]
-	os.chdir(labels_dir)
-	listdir=os.listdir()
-	features_file=''
-	for i in range(len(listdir)):
-		if listdir[i].endswith('.json'):
-			features_file=listdir[i]
+			for j in range(len(class_)):
+				alldata.append(class_[j])
+				labels.append(i)
 
-	labels_=list()
+		# load features file and get feature labels by loading in classes
+		labels_dir=prevdir+'/train_dir/'+classes[0]
+		os.chdir(labels_dir)
+		listdir=os.listdir()
+		features_file=''
+		for i in range(len(listdir)):
+			if listdir[i].endswith('.json'):
+				features_file=listdir[i]
 
-	for i in range(len(default_features)):
-		tlabel=json.load(open(features_file))['features'][problemtype][default_features[i]]['labels']
-		labels_=labels_+tlabel
+		labels_=list()
+
+		for i in range(len(default_features)):
+			tlabel=json.load(open(features_file))['features'][problemtype][default_features[i]]['labels']
+			labels_=labels_+tlabel
+
+	elif problemtype == 'csv':
+		# format data appropriately 
+		jsonfile=target+'.json'
+
+		#try:
+		g=data
+		alldata=list()
+		labels=list()
+		lengths=list()
+
+		# check to see all classes are same length and reshape if necessary
+		for i in range(len(classes)):
+			class_=g[classes[i]]
+			lengths.append(len(class_))
+
+		lengths=np.array(lengths)
+		minlength=np.amin(lengths)
+
+		# now load all the classes
+		for i in range(len(classes)):
+			class_=g[classes[i]]
+			random.shuffle(class_)
+
+			# only balance if specified in settings
+			if balance==True:
+				if len(class_) > minlength:
+					print('%s greater than minlength (%s) by %s, equalizing...'%(classes[i], str(minlength), str(len(class_)-minlength)))
+					class_=class_[0:minlength]
+
+			for j in range(len(class_)):
+				alldata.append(class_[j])
+				labels.append(i)
+
+		# load features file and get feature labels by loading in classes
+		labels_=csv_feature_labels
 
 elif mtype == 'r':
 	regression_data=pd.read_csv(prevdir+'/train_dir/'+csvfile)
@@ -1147,8 +1226,11 @@ default_selectors=settings['default_feature_selector']
 
 # get command for terminal
 transform_command=''
-for i in range(len(classes)):
-	transform_command=transform_command+' "'+classes[i]+'"'
+if problemtype == 'csv' and mtype == 'c':
+	transform_command=transform_command+' "'+'Class'+'"'
+else:
+	for i in range(len(classes)):
+		transform_command=transform_command+' "'+classes[i]+'"'
 
 # get filename / create a unique file name
 if mtype=='r':
@@ -1363,11 +1445,15 @@ default_training_scripts=settings['default_training_script']
 model_compress=settings['model_compress']
 default_featurenames=''
 
-for i in range(len(default_features)):
-	if i ==0:
-		default_featurenames=default_features[i]
-	else:
-		default_featurenames=default_featurenames+'_|_'+default_features[i] 
+if problemtype != 'csv' and mtype == 'c':
+	for i in range(len(default_features)):
+		if i ==0:
+			default_featurenames=default_features[i]
+		else:
+			default_featurenames=default_featurenames+'_|_'+default_features[i] 
+
+else:
+	default_featurenames='csv_classification'
 
 # just move all created .csv files into model_session directory
 os.chdir(model_dir)

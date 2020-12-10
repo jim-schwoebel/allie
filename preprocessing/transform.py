@@ -211,8 +211,24 @@ train_type=sys.argv[2] #c = classification, r=regression
 
 if train_type == 'c':
 	common_name=sys.argv[3] #common_name = 'gender'
-	classdirs, classes=get_class_dir()
-	features, feature_labels, class_labels = get_features(classdirs, classes, problem_type, settings)
+	if problem_type != 'csv':
+		classdirs, classes=get_class_dir()
+		features, feature_labels, class_labels = get_features(classdirs, classes, problem_type, settings)
+	elif problem_type == 'csv':
+		class_='class_'
+		classes=['class_']
+		os.chdir(basedir+'/models/')
+		g=pd.read_csv(common_name+'_all.csv')
+		features=g.drop(['class_'], axis=1)
+		feature_labels=list(features)
+		features_=list()
+		for i in range(len(features)):
+			features_.append(list(features.iloc[i,:]))
+		features=features_
+		class_labels=list()
+		for i in range(len(features)):
+			class_labels.append(class_)
+		os.chdir(curdir)
 	X_train, X_test, y_train, y_test = train_test_split(features, class_labels, train_size=0.90, test_size=0.10)
 	print(features[0])
 	print(feature_labels[0])

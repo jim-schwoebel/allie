@@ -40,7 +40,7 @@ This is using OpenSMILE's new python library: https://github.com/audeering/opens
 
 import opensmile, json
 
-def featurize_opensmile(wav_file):
+def featurize_gemaps_time(wav_file):
 
 	# initialize features and labels
 	labels=list()

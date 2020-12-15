@@ -42,7 +42,7 @@ from parselmouth.praat import call
 import numpy as np
 
 
-def praat_featurize(wav_file):
+def praat_time_featurize(wav_file):
     voiceID = wav_file
     sound = parselmouth.Sound(voiceID)  # read the sound
     broad_pitch = call(sound, "To Pitch", 0.0, 50, 600)  # create a praat pitch object

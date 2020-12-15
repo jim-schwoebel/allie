@@ -1,3 +1,43 @@
+'''
+               AAA               lllllll lllllll   iiii                      
+              A:::A              l:::::l l:::::l  i::::i                     
+             A:::::A             l:::::l l:::::l   iiii                      
+            A:::::::A            l:::::l l:::::l                             
+           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+ A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
+AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
+
+
+|  ___|       | |                        / _ \ | ___ \_   _|  _ 
+| |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
+|  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
+| ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
+\_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
+                                                                
+                                                                
+  ___            _ _       
+ / _ \          | (_)      
+/ /_\ \_   _  __| |_  ___  
+|  _  | | | |/ _` | |/ _ \ 
+| | | | |_| | (_| | | (_) |
+\_| |_/\__,_|\__,_|_|\___/ 
+                           
+This will featurize folders of audio files if the default_audio_features = ['gemaps_time_features']
+
+This is the time series features for GeMAPS.
+
+This is using OpenSMILE's new python library: https://github.com/audeering/opensmile-python
+'''
+
 import opensmile, json
 
 def featurize_opensmile(wav_file):
@@ -48,17 +88,3 @@ def featurize_opensmile(wav_file):
 		labels.append(labels_y_functionals[i])
 
 	return features, labels
-
-# features, labels = featurize_opensmile('test.wav')
-
-# print(labels)
-# data=dict()
-# for i in range(len(labels)):
-# 	data[labels[i]]=features[i]
-
-# g=open('test.json','w')
-# json.dump(data,g)
-# g.close()
-
-# print(features)
-# print(labels)

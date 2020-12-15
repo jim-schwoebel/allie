@@ -29,7 +29,10 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/
 
-This will featurize folders of audio files if the default_audio_features = ['praat_features']
+This will featurize folders of audio files if the default_audio_features = ['praat_time_features']
+
+These are the time series features for Praat here.
+
 Inspired by https://github.com/drfeinberg/genderless -
 Praat features that are not affected by changing genders.
 '''

@@ -15,8 +15,6 @@
   A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
-
-
 |  ___|       | |                        / _ \ | ___ \_   _|  _ 
 | |_ ___  __ _| |_ _   _ _ __ ___  ___  / /_\ \| |_/ / | |   (_)
 |  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
@@ -32,8 +30,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 This will featurize folders of audio files if the default_audio_features = ['gemaps_time_features']
-
-This is the time series features for GeMAPS.
+This is the time series features for eGeMAPS.
 
 This is using OpenSMILE's new python library: https://github.com/audeering/opensmile-python
 '''
@@ -48,7 +45,7 @@ def gemaps_time_featurize(wav_file):
 
 	# extract LLD 
 	smile_LLD = opensmile.Smile(
-	    feature_set=opensmile.FeatureSet.GeMAPSv01b,
+	    feature_set=opensmile.FeatureSet.eGeMAPSv01b,
 	    feature_level=opensmile.FeatureLevel.LowLevelDescriptors,
 	)
 
@@ -61,7 +58,7 @@ def gemaps_time_featurize(wav_file):
 		labels.append(labels_LLD[i])
 
 	smile_LLD_deltas = opensmile.Smile(
-	    feature_set=opensmile.FeatureSet.GeMAPSv01b,
+	    feature_set=opensmile.FeatureSet.eGeMAPSv01b,
 	    feature_level=opensmile.FeatureLevel.LowLevelDescriptors_Deltas,
 
 	)
@@ -75,7 +72,7 @@ def gemaps_time_featurize(wav_file):
 		labels.append(labels_LLD_deltas[i])
 
 	smile_functionals = opensmile.Smile(
-	    feature_set=opensmile.FeatureSet.GeMAPSv01b,
+	    feature_set=opensmile.FeatureSet.eGeMAPSv01b,
 	    feature_level=opensmile.FeatureLevel.Functionals,
 	)
 
@@ -88,3 +85,17 @@ def gemaps_time_featurize(wav_file):
 		labels.append(labels_y_functionals[i])
 
 	return features, labels
+
+# features, labels = gemaps_time_featurize('test.wav')
+
+# print(labels)
+# data=dict()
+# for i in range(len(labels)):
+# 	data[labels[i]]=features[i]
+
+# g=open('test.json','w')
+# json.dump(data,g)
+# g.close()
+
+# print(features)
+# print(labels)

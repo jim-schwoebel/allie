@@ -38,7 +38,11 @@ This is from the BERT Model. Read more about the BERT model embedding @
 https://github.com/UKPLab/sentence-transformers
 
 '''
-from sentence_transformers import SentenceTransformer
+import os
+try:
+  from sentence_transformers import SentenceTransformer
+except:
+  os.system("pip3 install sentence_transformers==0.4.1.2")
 import numpy as np
 
 def bert_featurize(sentence,model):

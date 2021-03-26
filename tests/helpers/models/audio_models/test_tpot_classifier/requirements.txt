@@ -294,7 +294,7 @@ python-speech-features==0.6
 pytz==2020.1
 pyvad==0.1.1
 PyWavelets==1.1.1
-PyYAML==5.3.1
+PyYAML==5.4
 pyzmq==19.0.1
 qtconsole==4.7.5
 QtPy==1.9.0

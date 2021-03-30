@@ -133,7 +133,7 @@ pydot-ng==2.0.0
 pydub==0.23.1
 pyfolio==0.9.2
 PyGetWindow==0.0.8
-Pygments==2.6.1
+Pygments==2.7.4
 pymongo==3.10.1
 PyMsgBox==1.0.7
 pyparsing==2.4.6

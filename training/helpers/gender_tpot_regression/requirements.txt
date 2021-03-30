@@ -163,7 +163,7 @@ pycparser==2.20
 pydub==0.24.1
 pyemd==0.5.1
 pyfiglet==0.8.post1
-Pygments==2.6.1
+Pygments==2.7.4
 pyloudnorm==0.1.0
 PyNaCl==1.4.0
 pyobjc==6.1

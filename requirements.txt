@@ -80,7 +80,7 @@ kiwisolver==1.1.0
 librosa==0.6.2
 llvmlite==0.31.0
 ludwig==0.2.2.3
-lxml==4.2.4
+lxml==4.6.3
 Markdown==3.2.1
 markovify==0.8.0
 MarkupSafe==1.1.1

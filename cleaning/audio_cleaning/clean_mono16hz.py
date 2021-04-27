@@ -45,11 +45,14 @@ import soundfile as sf
 
 def clean_mono16hz(audiofile):
     # replace wavfile with a version that is 16000 Hz mono audio
-    if audiofile.endswith('.wav'):
-        os.system('ffmpeg -i "%s" -ar 16000 -ac 1 "%s" -y'%(audiofile,audiofile[0:-4]+'_cleaned.wav'))
-        os.remove(audiofile)
-        return [audiofile[0:-4]+'_cleaned.wav']
-    elif audiofile.endswith('.mp3'):
-        os.system('ffmpeg -i "%s" -ar 16000 -ac 1 "%s" -y'%(audiofile,audiofile[0:-4]+'.wav'))
-        os.remove(audiofile)
-        return [audiofile[0:-4]+'.wav']
+    if audiofile.find('cleaned') > 0:
+    	return [audiofile]
+    else:
+    	if audiofile.endswith('.wav'):
+	        os.system('ffmpeg -i "%s" -ar 16000 -ac 1 "%s" -y'%(audiofile,audiofile[0:-4]+'_cleaned.wav'))
+	        os.remove(audiofile)
+	        return [audiofile[0:-4]+'_cleaned.wav']
+    	elif audiofile.endswith('.mp3') or audiofile.endswith('.m4a'):
+        	os.system('ffmpeg -i "%s" -ar 16000 -ac 1 "%s" -y'%(audiofile,audiofile[0:-4]+'_cleaned.wav'))
+       		os.remove(audiofile)
+        	return [audiofile[0:-4]+'.wav']

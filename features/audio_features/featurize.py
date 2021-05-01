@@ -285,7 +285,7 @@ def audio_featurize(feature_set, audiofile, transcript):
 	elif feature_set == 'opensmile_features':
 		features, labels = opensmile_features.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
 	elif feature_set == 'pause_features':
-		features, labels = pause_features.pause_featurize(audiofile)
+		features, labels = pause_features.pause_featurize(audiofile, transcript)
 	elif feature_set == 'praat_features':
 		features, labels = praat_features.praat_featurize(audiofile)
 	elif feature_set == 'prosody_features':

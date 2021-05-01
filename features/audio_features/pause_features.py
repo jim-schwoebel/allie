@@ -97,9 +97,9 @@ def pause_featurize(wavfile, transcript):
     words=transcript.lower().split()
     
     if len(utterances)-1 != -1:
-        features = [utterances, pauses, len(utterances), len(pauses), average_pause, std_pause, first_phonation, last_phonation, (len(utterances)/duration)*60, (len(words)/duration))*60, duration]
+        features = [utterances, pauses, len(utterances), len(pauses), average_pause, std_pause, first_phonation, last_phonation, (len(utterances)/duration)*60, (len(words)/duration)*60, duration]
     else:
-        features = [utterances, pauses, len(utterances), 0, 0, 0, first_phonation, last_phonation, (len(utterances)/duration)*60, (len(words)/duration))*60, duration]
+        features = [utterances, pauses, len(utterances), 0, 0, 0, first_phonation, last_phonation, (len(utterances)/duration)*60, (len(words)/duration)*60, duration]
         
     labels = ['UtteranceTimes', 'PauseTimes', 'UtteranceNumber', 'PauseNumber', 'AveragePauseLength', 'StdPauseLength', 'TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin', 'WordsPerMin', 'Duration']
 

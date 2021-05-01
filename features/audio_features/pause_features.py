@@ -84,8 +84,8 @@ def pause_featurize(wavfile):
         pause_lengths.append(pause_length)
     
     # get descriptive stats of pause leengths
-    average_pause = np.mean(np.array(pauses))
-    std_pause = np.std(np.array(pauses))
+    average_pause = np.mean(np.array(pause_lengths))
+    std_pause = np.std(np.array(pause_lengths))
     
     if len(utterances) > 0:
         first_phonation=utterances[0][0]

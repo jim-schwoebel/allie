@@ -7,7 +7,7 @@ import numpy as np
 # make sure the right version of numba is installed
 os.system('pip3 install numba==0.48')
 
-def calculate_pauses(wavfile):
+def pause_features(wavfile):
     '''
     taken from https://github.com/F-Tag/python-vad/blob/master/example.ipynb
     '''

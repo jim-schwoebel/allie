@@ -44,7 +44,7 @@ import numpy as np
 # make sure the right version of numba is installed
 os.system('pip3 install numba==0.48')
 
-def pause_features(wavfile):
+def pause_featurize(wavfile):
     '''
     taken from https://github.com/F-Tag/python-vad/blob/master/example.ipynb
     '''

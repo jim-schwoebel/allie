@@ -79,8 +79,8 @@ def pause_featurize(wavfile):
     pauses=list()
     pause_lengths=list()
     for i in range(len(utterances)-1):
-        pauses.append([utteraces[i+1][0], utterances[i][1]])
-        pause_length=utteraces[i+1][0] - utterances[i][1]
+        pauses.append([utterances[i+1][0], utterances[i][1]])
+        pause_length=utterances[i+1][0] - utterances[i][1]
         pause_lengths.append(pause_length)
     
     # get descriptive stats of pause leengths

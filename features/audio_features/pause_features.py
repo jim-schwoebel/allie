@@ -75,6 +75,17 @@ def pause_featurize(wavfile):
                 # this means it is end 
                 end = i
                 utterances.append([start/fs,end/fs])
+                
+    pauses=list()
+    pause_lengths=list()
+    for i in range(len(utterances)-1):
+        pauses.append([utteraces[i+1][0], utterances[i][1]])
+        pause_length=utteraces[i+1][0] - utterances[i][1]
+        pause_lengths.append(pause_length)
+    
+    # get descriptive stats of pause leengths
+    average_pause = np.mean(np.array(pauses))
+    std_pause = np.std(np.array(pauses))
     
     if len(utterances) > 0:
         first_phonation=utterances[0][0]
@@ -84,11 +95,11 @@ def pause_featurize(wavfile):
         last_phonation=0
 
     if len(utterances)-1 != -1:
-        features = [utterances, len(utterances), len(utterances)-1, first_phonation, last_phonation, (len(utterances)/duration)/60]
+        features = [utterances, pauses, len(utterances), len(pauses), average_pause, std_pause, first_phonation, last_phonation, (len(utterances)/duration)/60]
     else:
-        features = [utterances, len(utterances), 0, first_phonation, last_phonation, (len(utterances)/duration)/60]
+        features = [utterances, pauses, len(utterances), 0, 0, 0, first_phonation, last_phonation, (len(utterances)/duration)/60]
         
-    labels = ['UtteranceTimes', 'UtteranceNumber', 'PauseNumber','TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin']
+    labels = ['UtteranceTimes', 'PauseTimes', 'UtteranceNumber', 'PauseNumber', 'AveragePauseLength', 'StdPauseLength', 'TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin']
 
     print(features)
     print(labels)

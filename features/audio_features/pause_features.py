@@ -49,6 +49,7 @@ def pause_featurize(wavfile):
     taken from https://github.com/F-Tag/python-vad/blob/master/example.ipynb
     '''
     data, fs = librosa.core.load(wavfile)
+    duration=librosa.get_duration(y=data, sr=fs)
     time = np.linspace(0, len(data)/fs, len(data))
     newdata=list()
     for i in range(len(data)):
@@ -83,11 +84,11 @@ def pause_featurize(wavfile):
         last_phonation=0
 
     if len(utterances)-1 != -1:
-        features = [utterances, len(utterances), len(utterances)-1, first_phonation, last_phonation]
+        features = [utterances, len(utterances), len(utterances)-1, first_phonation, (last_phonation/duration)/60]
     else:
-        features = [utterances, len(utterances), 0, first_phonation, last_phonation]
+        features = [utterances, len(utterances), 0, first_phonation, last_phonation, (len(utterances)/duration)/60]
         
-    labels = ['UtteranceTimes', 'UtteranceNumber', 'PauseNumber','TimeToFirstPhonation','TimeToLastPhonation']
+    labels = ['UtteranceTimes', 'UtteranceNumber', 'PauseNumber','TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin']
 
     print(features)
     print(labels)

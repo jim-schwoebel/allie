@@ -37,7 +37,7 @@ Usage: python3 featurize.py [folder] [featuretype]
 
 All featuretype options include:
 ["audioset_features", "audiotext_features", "librosa_features", "meta_features", 
-"mixed_features", "opensmile_features", "praat_features", "prosody_features", 
+"mixed_features", "opensmile_features", "pause_features, "praat_features", "prosody_features", 
 "pspeech_features", "pyaudio_features", "pyaudiolex_features", "sa_features", 
 "sox_features", "specimage_features", "specimage2_features", "spectrogram_features", 
 "speechmetrics_features", "standard_features"]
@@ -284,6 +284,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = nltk_features.nltk_featurize(transcript)
 	elif feature_set == 'opensmile_features':
 		features, labels = opensmile_features.opensmile_featurize(audiofile, basedir, 'GeMAPSv01a.conf')
+	elif feature_set == 'pause_features':
+		features, labels = pause_features.pause_featurize(audiofile)
 	elif feature_set == 'praat_features':
 		features, labels = praat_features.praat_featurize(audiofile)
 	elif feature_set == 'prosody_features':
@@ -368,6 +370,8 @@ if 'myprosody_features' in feature_sets:
 	# import myprosody_features as mpf
 if 'opensmile_features' in feature_sets:
 	import opensmile_features
+if 'pause_features' in feature_sets:
+	import pause_features
 if 'pyaudio_features' in feature_sets:
 	import pyaudio_features
 if 'pyaudiolex_features' in feature_sets:

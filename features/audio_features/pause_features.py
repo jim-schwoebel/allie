@@ -50,7 +50,16 @@ def pause_featurize(wavfile):
     '''
     data, fs = librosa.core.load(wavfile)
     time = np.linspace(0, len(data)/fs, len(data))
-    vact = vad(data, fs, fs_vad = 16000, hop_length = 30, vad_mode=2)
+    newdata=list()
+    for i in range(len(data)):
+        if data[i] > 1:
+            newdata.append(1.0)
+        elif data[i] < -1:
+            newdata.append(-1.0)
+        else:
+            newdata.append(data[i])
+
+    vact = vad(np.array(newdata), fs, fs_vad = 16000, hop_length = 30, vad_mode=2)
     vact = list(vact)
     while len(time) > len(vact):
         vact.append(0.0)

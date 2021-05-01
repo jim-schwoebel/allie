@@ -84,7 +84,7 @@ def pause_featurize(wavfile):
         last_phonation=0
 
     if len(utterances)-1 != -1:
-        features = [utterances, len(utterances), len(utterances)-1, first_phonation, (last_phonation/duration)/60]
+        features = [utterances, len(utterances), len(utterances)-1, first_phonation, last_phonation, (len(utterances)/duration)/60]
     else:
         features = [utterances, len(utterances), 0, first_phonation, last_phonation, (len(utterances)/duration)/60]
         

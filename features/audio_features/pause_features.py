@@ -44,7 +44,7 @@ import numpy as np
 # make sure the right version of numba is installed
 os.system('pip3 install numba==0.48')
 
-def pause_featurize(wavfile):
+def pause_featurize(wavfile, transcript):
     '''
     taken from https://github.com/F-Tag/python-vad/blob/master/example.ipynb
     '''
@@ -93,13 +93,15 @@ def pause_featurize(wavfile):
     else:
         first_phonation=0
         last_phonation=0
-
-    if len(utterances)-1 != -1:
-        features = [utterances, pauses, len(utterances), len(pauses), average_pause, std_pause, first_phonation, last_phonation, (len(utterances)/duration)*60, duration]
-    else:
-        features = [utterances, pauses, len(utterances), 0, 0, 0, first_phonation, last_phonation, (len(utterances)/duration)*60, duration]
         
-    labels = ['UtteranceTimes', 'PauseTimes', 'UtteranceNumber', 'PauseNumber', 'AveragePauseLength', 'StdPauseLength', 'TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin', 'Duration']
+    words=transcript.lower().split()
+    
+    if len(utterances)-1 != -1:
+        features = [utterances, pauses, len(utterances), len(pauses), average_pause, std_pause, first_phonation, last_phonation, (len(utterances)/duration)*60, (len(words)/duration))*60, duration]
+    else:
+        features = [utterances, pauses, len(utterances), 0, 0, 0, first_phonation, last_phonation, (len(utterances)/duration)*60, (len(words)/duration))*60, duration]
+        
+    labels = ['UtteranceTimes', 'PauseTimes', 'UtteranceNumber', 'PauseNumber', 'AveragePauseLength', 'StdPauseLength', 'TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin', 'WordsPerMin', 'Duration']
 
     # print(features)
     # print(labels)

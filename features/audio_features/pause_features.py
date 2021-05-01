@@ -101,7 +101,7 @@ def pause_featurize(wavfile):
         
     labels = ['UtteranceTimes', 'PauseTimes', 'UtteranceNumber', 'PauseNumber', 'AveragePauseLength', 'StdPauseLength', 'TimeToFirstPhonation','TimeToLastPhonation', 'UtterancePerMin']
 
-    print(features)
-    print(labels)
+    # print(features)
+    # print(labels)
     
     return features, labels

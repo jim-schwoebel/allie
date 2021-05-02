@@ -56,7 +56,10 @@ def describe_text(jsonfile):
 
 def get_descriptive_statistics(dict_, labels_):
 	for j in range(len(labels_)):
-		dict_[labels[j]]=str(np.mean(np.array(dict_[labels[j]])))+' (+/- '+str(np.std(np.array(dict_[labels[j]])))+')'
+		try:
+			dict_[labels[j]]=str(np.mean(np.array(dict_[labels[j]])))+' (+/- '+str(np.std(np.array(dict_[labels[j]])))+')'
+		except:
+			dict_[labels[j]]='ERROR'
 	return dict_
 
 # go to the right folder

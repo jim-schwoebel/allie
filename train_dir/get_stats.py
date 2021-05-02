@@ -51,7 +51,10 @@ def describe_text(jsonfile):
 		rename_labels=list()
 		temp_labels=features[featuretypes[j]]['labels']
 		for k in range(len(temp_labels)):
-			rename_labels.append(temp_labels[k]+' (%s)'%(featuretypes[j]))
+			if featuretypes[j] == 'pause2_features':
+				rename_labels.append(temp_labels[k]+ ' (pause_features)')
+			else:
+				rename_labels.append(temp_labels[k]+' (%s)'%(featuretypes[j]))
 		try:
 			features_=features_+features[featuretypes[j]]['features']
 		except:
@@ -67,7 +70,7 @@ def get_descriptive_statistics(dict_, labels_):
 		try:
 			dict_[labels[j]]=str(np.mean(np.array(dict_[labels[j]])))+' (+/- '+str(np.std(np.array(dict_[labels[j]])))+')'
 		except:
-			dict_[labels[j]]='ERROR'
+			dict_.pop(labels[j])
 			
 	return dict_
 
@@ -123,6 +126,6 @@ for index, stat_item in enumerate(text_stats.items()):
 	row = table.rows[index]
 	row.cells[0].text = str(stat_name)
 	row.cells[1].text = str(stat_result)
-word_document.add_page_break()
+# word_document.add_page_break()
 
 word_document.save(directory + '.docx')

@@ -48,11 +48,15 @@ def describe_text(jsonfile):
 	features_=list()
 	labels_=list()
 	for j in range(len(featuretypes)):
+		rename_labels=list()
+		temp_labels=features[featuretypes[j]]['labels']
+		for k in range(len(temp_labels)):
+			rename_labels.append(temp_labels[k]+' (%s)'%(featuretypes[j]))
 		try:
 			features_=features_+features[featuretypes[j]]['features']
 		except:
 			features_=features_+[0]
-		labels_=labels_+features[featuretypes[j]]['labels']
+		labels_=labels_+rename_labels
 
 	description=dict(zip(labels_,features_))
 	

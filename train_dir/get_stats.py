@@ -22,7 +22,8 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |  | | (_) | (_| |  __/ | | | | || |    _| |_ 
 \_|  |_/\___/ \__,_|\___|_| \_| |_/\_|    \___/ 
 						   
-Makes a table in microsoft word for all the audio features present in a file in a particular folder.
+Makes a table in Microsoft Word for all the audio features present in a file in a particular folder.
+This is useful for peer-reviewed publications (for supplementary tables).
 
 Usage: python3 get_stats.py [folder]
 

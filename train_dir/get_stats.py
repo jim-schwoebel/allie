@@ -35,7 +35,7 @@ Following this tutorial with modifications: https://towardsdatascience.com/how-t
 from docx import Document
 from docx.shared import Cm, Pt
 import numpy as np
-import os, json, time
+import os, json, time, sys
 
 def describe_text(jsonfile):
 

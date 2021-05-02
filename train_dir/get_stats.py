@@ -90,7 +90,7 @@ text_stats = dict(sorted(text_stats.items()))
 
 # customizing the table
 word_document = Document()
-document_name = 'news-article-stats'
+document_name = directory
 table = word_document.add_table(0, 0) # we add rows iteratively
 table.style = 'TableGrid'
 first_column_width = 5
@@ -106,4 +106,4 @@ for index, stat_item in enumerate(text_stats.items()):
 	row.cells[1].text = str(stat_result)
 word_document.add_page_break()
 
-word_document.save(document_name + '.docx')
+word_document.save(directory + '.docx')

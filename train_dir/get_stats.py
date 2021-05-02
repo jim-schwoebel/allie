@@ -27,6 +27,8 @@ Makes a table in microsoft word for all the audio features present in a file in 
 Usage: python3 get_stats.py [folder]
 
 Example: python3 get_stats.py females
+
+Following this tutorial with modifications: https://towardsdatascience.com/how-to-generate-ms-word-tables-with-python-6ca584df350e
 '''
 
 from docx import Document

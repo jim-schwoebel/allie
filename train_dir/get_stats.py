@@ -44,10 +44,14 @@ def describe_text(jsonfile):
 	features=g['features']['audio']
 	featuretypes=list(features)
 
+	print(featuretypes)
 	features_=list()
 	labels_=list()
 	for j in range(len(featuretypes)):
-		features_=features_+features[featuretypes[j]]['features']
+		try:
+			features_=features_+features[featuretypes[j]]['features']
+		except:
+			features_=features_+[0]
 		labels_=labels_+features[featuretypes[j]]['labels']
 
 	description=dict(zip(labels_,features_))
@@ -60,6 +64,7 @@ def get_descriptive_statistics(dict_, labels_):
 			dict_[labels[j]]=str(np.mean(np.array(dict_[labels[j]])))+' (+/- '+str(np.std(np.array(dict_[labels[j]])))+')'
 		except:
 			dict_[labels[j]]='ERROR'
+			
 	return dict_
 
 # go to the right folder
@@ -72,6 +77,7 @@ for i in range(len(listdir)):
 		jsonfiles.append(listdir[i])
 
 # got all the jsonfiles, now add to each feature 
+print(jsonfiles)
 description=describe_text(jsonfiles[0])
 labels=list(description)
 
@@ -84,7 +90,10 @@ for i in range(len(jsonfiles)):
 	stats=describe_text(jsonfiles[i])
 	print(stats)
 	for j in range(len(labels)):
-		dict_[labels[j]]=dict_[labels[j]]+[stats[labels[j]]]
+		try:
+			dict_[labels[j]]=dict_[labels[j]]+[stats[labels[j]]]
+		except:
+			pass
 
 dict_=get_descriptive_statistics(dict_, labels)
 

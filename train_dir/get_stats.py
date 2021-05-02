@@ -57,7 +57,8 @@ def get_descriptive_statistics(dict_, labels_):
 	return dict_
 
 # go to the right folder
-os.chdir(sys.argv[1])
+directory=sys.argv[1]
+os.chdir(directory)
 listdir=os.listdir()
 jsonfiles=list()
 for i in range(len(listdir)):

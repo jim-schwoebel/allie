@@ -87,7 +87,7 @@ dict_=get_descriptive_statistics(dict_, labels)
 text_stats=dict_
 
 # make the table! (alphabetized)
-text_stats['A_Title']='TITLE'
+text_stats['A_Feature']='Average (+/- standard deviation)'
 text_stats = dict(sorted(text_stats.items()))
 
 # customizing the table

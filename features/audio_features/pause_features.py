@@ -74,7 +74,10 @@ def pause_featurize(wavfile, transcript):
             else:
                 # this means it is end 
                 end = i
-                utterances.append([start/fs,end/fs])
+                try:
+                    utterances.append([start/fs,end/fs])
+                except:
+                    pass
                 
     pauses=list()
     pause_lengths=list()

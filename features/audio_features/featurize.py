@@ -205,15 +205,43 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 
 	elif transcript_engine == 'azure':
 
-		# recognize speech using Microsoft Azure Speech
-		AZURE_SPEECH_KEY = os.environ['AZURE_SPEECH_KEY']
-		print(AZURE_SPEECH_KEY)
-		try:
-			transcript=r.recognize_azure(audio, key=AZURE_SPEECH_KEY)
-		except sr.UnknownValueError:
-			transcript=''
-		except sr.RequestError as e:
-			transcript=''
+	    """performs continuous speech recognition with input from an audio file"""
+	    # <SpeechContinuousRecognitionWithFile>
+	    speech_config = speechsdk.SpeechConfig(subscription=os.environ['AZURE_SPEECH_KEY'], region=os.environ['AZURE_REGION'])
+	    audio_config = speechsdk.audio.AudioConfig(filename=file)
+	    speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
+
+	    done = False
+	    text=''
+
+	    def stop_cb(evt):
+	        """callback that signals to stop continuous recognition upon receiving an event `evt`"""
+	        print('CLOSING on {}'.format(evt))
+	        nonlocal done
+	        done = True
+
+	    def continue_transcribe(event):
+	    	nonlocal transcript
+	    	text=text+event.get()
+
+	    # Connect callbacks to the events fired by the speech recognizer
+	    speech_recognizer.recognizing.connect(lambda evt: print('RECOGNIZING: {}'.format(evt)))
+	    speech_recognizer.recognized.connect(lambda evt: print('RECOGNIZED: {}'.format(evt)))
+	    speech_recognizer.session_started.connect(lambda evt: print('SESSION STARTED: {}'.format(evt)))
+	    speech_recognizer.recognizing.connect(continue_transcribe)
+	    speech_recognizer.session_stopped.connect(lambda evt: print('SESSION STOPPED {}'.format(evt)))
+	    speech_recognizer.canceled.connect(lambda evt: print('CANCELED {}'.format(evt)))
+	    # stop continuous recognition on either session stopped or canceled events
+	    speech_recognizer.session_stopped.connect(stop_cb)
+	    speech_recognizer.canceled.connect(stop_cb)
+
+	    # Start continuous speech recognition
+	    speech_recognizer.start_continuous_recognition()
+	    while not done:
+	        time.sleep(.5)
+	    speech_recognizer.stop_continuous_recognition()
+	    # get transcript 
+	    transcript=text
 
 	elif transcript_engine == 'bing':
 		# recognize speech using Microsoft Bing Voice Recognition

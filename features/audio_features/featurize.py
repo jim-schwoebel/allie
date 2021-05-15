@@ -53,7 +53,28 @@ import numpy as np
 import helpers.transcribe as ts
 import speech_recognition as sr
 from tqdm import tqdm
+from typing import Tuple
+import wave
 
+def read_wav_file(filename) -> Tuple[bytes, int]:
+	# from transcription docs: 
+	# --> https://colab.research.google.com/github/scgupta/yearn2learn/blob/master/speech/asr/python_speech_recognition_notebook.ipynb#scrollTo=Ujeuvj35Ksv8
+	with wave.open(filename, 'rb') as w:
+		rate = w.getframerate()
+		frames = w.getnframes()
+		buffer = w.readframes(frames)
+
+	return buffer, rate
+
+def simulate_stream(buffer: bytes, batch_size: int = 4096):
+	buffer_len = len(buffer)
+	offset = 0
+	while offset < buffer_len:
+		end_offset = offset + batch_size
+		buf = buffer[offset:end_offset]
+		yield buf
+		offset = end_offset
+		
 def prev_dir(directory):
 	g=directory.split('/')
 	dir_=''
@@ -204,44 +225,54 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 			transcript=''
 
 	elif transcript_engine == 'azure':
+		# https://colab.research.google.com/github/scgupta/yearn2learn/blob/master/speech/asr/python_speech_recognition_notebook.ipynb#scrollTo=IzfBW4kczY9l
 
-	    """performs continuous speech recognition with input from an audio file"""
-	    # <SpeechContinuousRecognitionWithFile>
-	    speech_config = speechsdk.SpeechConfig(subscription=os.environ['AZURE_SPEECH_KEY'], region=os.environ['AZURE_REGION'])
-	    audio_config = speechsdk.audio.AudioConfig(filename=file)
-	    speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
+		"""performs continuous speech recognition with input from an audio file"""
+		# <SpeechContinuousRecognitionWithFile>
+		transcript=''
+		done=False 
 
-	    done = False
-	    text=''
+		def stop_cb(evt):
+			print('CLOSING on {}'.format(evt))
+			nonlocal done
+			done = True
 
-	    def stop_cb(evt):
-	        """callback that signals to stop continuous recognition upon receiving an event `evt`"""
-	        print('CLOSING on {}'.format(evt))
-	        nonlocal done
-	        done = True
+		def get_val(evt):
+			nonlocal transcript 
+			transcript = transcript+ ' ' +evt.result.text
+			return transcript
 
-	    def continue_transcribe(event):
-	    	nonlocal transcript
-	    	text=text+event.get()
+		speech_config = speechsdk.SpeechConfig(subscription=os.environ['AZURE_SPEECH_KEY'], region=os.environ['AZURE_REGION'])
+		speech_config.speech_recognition_language=os.environ['AZURE_SPEECH_RECOGNITION_LANGUAGE']
+		audio_config = speechsdk.audio.AudioConfig(filename=file)
+		speech_recognizer = speechsdk.SpeechRecognizer(speech_config=speech_config, audio_config=audio_config)
+		stream = speechsdk.audio.PushAudioInputStream()
 
-	    # Connect callbacks to the events fired by the speech recognizer
-	    speech_recognizer.recognizing.connect(lambda evt: print('RECOGNIZING: {}'.format(evt)))
-	    speech_recognizer.recognized.connect(lambda evt: print('RECOGNIZED: {}'.format(evt)))
-	    speech_recognizer.session_started.connect(lambda evt: print('SESSION STARTED: {}'.format(evt)))
-	    speech_recognizer.recognizing.connect(continue_transcribe)
-	    speech_recognizer.session_stopped.connect(lambda evt: print('SESSION STOPPED {}'.format(evt)))
-	    speech_recognizer.canceled.connect(lambda evt: print('CANCELED {}'.format(evt)))
-	    # stop continuous recognition on either session stopped or canceled events
-	    speech_recognizer.session_stopped.connect(stop_cb)
-	    speech_recognizer.canceled.connect(stop_cb)
+		# Connect callbacks to the events fired by the speech recognizer
+		speech_recognizer.recognizing.connect(lambda evt: print('interim text: "{}"'.format(evt.result.text)))
+		speech_recognizer.recognized.connect(lambda evt:  print('azure-streaming-stt: "{}"'.format(get_val(evt))))
+		speech_recognizer.session_stopped.connect(lambda evt: print('SESSION STOPPED {}'.format(evt)))
+		speech_recognizer.canceled.connect(lambda evt: print('CANCELED {}'.format(evt)))
+		speech_recognizer.session_stopped.connect(stop_cb)
+		speech_recognizer.canceled.connect(stop_cb)
 
-	    # Start continuous speech recognition
-	    speech_recognizer.start_continuous_recognition()
-	    while not done:
-	        time.sleep(.5)
-	    speech_recognizer.stop_continuous_recognition()
-	    # get transcript 
-	    transcript=text
+		# start continuous speech recognition
+		speech_recognizer.start_continuous_recognition()
+
+		# push buffer chunks to stream
+		buffer, rate = read_wav_file(file)
+		audio_generator = simulate_stream(buffer)
+		for chunk in audio_generator:
+		  stream.write(chunk)
+		  time.sleep(0.1)  # to give callback a chance against this fast loop
+
+		# stop continuous speech recognition
+		stream.close()
+		while not done:
+			time.sleep(0.5)
+
+		speech_recognizer.stop_continuous_recognition()
+		time.sleep(0.5)  # Let all callback run
 
 	elif transcript_engine == 'bing':
 		# recognize speech using Microsoft Bing Voice Recognition

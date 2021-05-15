@@ -431,6 +431,10 @@ if 'standard_features' in feature_sets:
 if 'surfboard_features' in feature_sets:
 	import surfboard_features
 
+# transcription imports
+if 'azure' in default_audio_transcribers:
+	import azure.cognitiveservices.speech as speechsdk
+	
 ################################################
 ##	   		Get featurization folder     	  ##
 ################################################

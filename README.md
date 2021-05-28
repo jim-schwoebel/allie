@@ -733,8 +733,9 @@ If you want to be a contributer, check out the [active projects](https://github.
 ## [Citation](https://github.com/jim-schwoebel/allie)
 Feel free to cite our work using:
 ```
-Allie [Computer software]. (2020). Retrieved from https://github.com/jim-schwoebel/allie
+Schwoebel, James. (2020). Allie [Computer software]. Retrieved from https://github.com/jim-schwoebel/allie
 ```
+Esolang, A. N. (2014). Obscure Reference Generator [Computer software]. Washington, DC: E & K Press.
 
 ## [Additional resources](https://github.com/jim-schwoebel/allie/wiki)
 

@@ -730,6 +730,12 @@ We have built this machine learning framework to be quite agile to fit many purp
 
 If you want to be a contributer, check out the [active projects](https://github.com/jim-schwoebel/allie/projects). There are many components of Allie that are expanding including the Annotation API, Visualization API, Features API, Modeling API, Cleaning API, and Augmentation API. If you are interested to contribute, please send me an email @ js@neurolex.co specifying the project you'd like to be a part of and I'll plug you in with the right team.
 
+## [Citation](https://github.com/jim-schwoebel/allie)
+Feel free to cite our work using:
+```
+Allie [Computer software]. (2020). Retrieved from https://github.com/jim-schwoebel/allie
+```
+
 ## [Additional resources](https://github.com/jim-schwoebel/allie/wiki)
 
 You may want to read through [the wiki](https://github.com/jim-schwoebel/allie/wiki) for additional documentation.

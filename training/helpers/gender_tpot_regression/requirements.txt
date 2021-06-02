@@ -366,7 +366,7 @@ umap==0.1.1
 umap-learn==0.4.4
 Unidecode==1.1.1
 update-checker==0.17
-urllib3==1.25.9
+urllib3==1.26.5
 vidgear==0.1.8
 virtualenv==20.0.23
 wasabi==0.7.0

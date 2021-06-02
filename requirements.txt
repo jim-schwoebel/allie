@@ -197,7 +197,7 @@ typing-extensions==3.7.4.1
 umap-learn==0.4.2
 Unidecode==1.1.1
 update-checker==0.16
-urllib3==1.25.8
+urllib3==1.26.5
 uuid==1.30
 umap==0.1.1
 umap-learn==0.4.2

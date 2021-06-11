@@ -1,16 +1,16 @@
 '''
-               AAA               lllllll lllllll   iiii                      
-              A:::A              l:::::l l:::::l  i::::i                     
-             A:::::A             l:::::l l:::::l   iiii                      
-            A:::::::A            l:::::l l:::::l                             
-           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
    A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
   A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
@@ -22,15 +22,15 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
 | ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
 \_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
-                                                                
-                                                                
+																
+																
   ___            _ _       
  / _ \          | (_)      
 / /_\ \_   _  __| |_  ___  
 |  _  | | | |/ _` | |/ _ \ 
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
-                           
+						   
 Featurize folders of audio files with the default_audio_features.
 
 Usage: python3 featurize.py [folder] [featuretype]
@@ -102,8 +102,7 @@ os.chdir(directory)
 ################################################
 ##	    		Helper functions      		  ##
 ################################################
-
-def transcribe(file, default_audio_transcriber, settingsdir):
+def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, model):
 	# create all transcription methods here
 	print('%s transcribing: %s'%(default_audio_transcriber, file))
 
@@ -194,6 +193,17 @@ def transcribe(file, default_audio_transcriber, settingsdir):
 		os.remove(textfile)
 		os.remove(newaudio)
 
+	elif transcript_engine == 'wav2vec':
+
+		# load pretrained model
+		audio_input, _ = sf.read(file)
+
+		# transcribe
+		input_values = tokenizer(audio_input, return_tensors="pt").input_values
+		logits = model(input_values).logits
+		predicted_ids = torch.argmax(logits, dim=-1)
+		transcript = tokenizer.batch_decode(predicted_ids)[0].lower()
+	
 	elif transcript_engine == 'google':
 
 		# recognize speech using Google Speech Recognition
@@ -442,7 +452,7 @@ if 'prosody_features' in feature_sets:
 if 'pspeech_features' in feature_sets:
 	import pspeech_features
 if 'pspeechtime_features' in feature_sets:
-        import pspeechtime_features
+		import pspeechtime_features
 if 'pyworld_features' in feature_sets:
 	import pyworld_features
 if 'sa_features' in feature_sets:
@@ -465,6 +475,15 @@ if 'surfboard_features' in feature_sets:
 # transcription imports
 if 'azure' in default_audio_transcribers:
 	import azure.cognitiveservices.speech as speechsdk
+if 'wav2vec' in default_audio_transcribers:
+	import os, pandas as pd, soundfile as sf, torch, glob
+	from pathlib import Path
+	from transformers import Wav2Vec2ForMaskedLM, Wav2Vec2Tokenizer
+	tokenizer = Wav2Vec2Tokenizer.from_pretrained("facebook/wav2vec2-base-960h")
+	model = Wav2Vec2ForMaskedLM.from_pretrained("facebook/wav2vec2-base-960h")
+else:
+	tokenizer=''
+	model=''
 	
 ################################################
 ##	   		Get featurization folder     	  ##
@@ -510,7 +529,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				if audio_transcribe==True:
 					for j in range(len(default_audio_transcribers)):
 						default_audio_transcriber=default_audio_transcribers[j]
-						transcript = transcribe(filename, default_audio_transcriber, settingsdir)
+						transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, model)
 						transcript_list=basearray['transcripts']
 						transcript_list['audio'][default_audio_transcriber]=transcript 
 						basearray['transcripts']=transcript_list
@@ -552,7 +571,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 						default_audio_transcriber=default_audio_transcribers[j]
 
 						if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-							transcript = transcribe(filename, default_audio_transcriber, settingsdir)
+							transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, model)
 							transcript_list['audio'][default_audio_transcriber]=transcript 
 							basearray['transcripts']=transcript_list
 						elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):

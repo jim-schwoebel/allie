@@ -67,6 +67,7 @@ ts.n_unique_words
 '''
 import textacy, os
 import numpy as np 
+import spacy
 
 def stats(matrix):
     mean=np.mean(matrix)
@@ -83,10 +84,12 @@ def textacy_featurize(transcript):
 
     # use Spacy doc
     try:
-        doc = textacy.make_spacy_doc(transcript)
+        nlp=spacy.load('en_core_web_sm')
+        doc = nlp(transcript)
     except:
-        os.system('python3 -m spacy download en')
-        doc = textacy.make_spacy_doc(transcript)
+        os.system('python3 -m spacy download en_core_web_sm')
+        nlp=spacy.load('en_core_web_sm')
+        doc = nlp(transcript)
     
     ts = textacy.TextStats(doc)
     uniquewords=ts.n_unique_words

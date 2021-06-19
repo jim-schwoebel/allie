@@ -4,7 +4,7 @@ from transformers import Wav2Vec2Processor, HubertForCTC
 import soundfile as sf
 import numpy as np
 
-def featurize_hubert(file, model, size):
+def hubert_featurize(file, model, size):
     audio_input, _ = sf.read(file)
     input_values = processor(audio_input, return_tensors="pt", sampling_rate=16000).input_values  # Batch size 1
     logits = model(input_values).logits

@@ -1,18 +1,18 @@
 '''
-               AAA               lllllll lllllll   iiii                      
-              A:::A              l:::::l l:::::l  i::::i                     
-             A:::::A             l:::::l l:::::l   iiii                      
-            A:::::::A            l:::::l l:::::l                             
-           A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-          A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-         A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-        A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-       A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-      A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-     A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-    A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
-   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
-  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+							 AAA               lllllll lllllll   iiii                      
+							A:::A              l:::::l l:::::l  i::::i                     
+						 A:::::A             l:::::l l:::::l   iiii                      
+						A:::::::A            l:::::l l:::::l                             
+					 A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+					A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+				 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+				A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+			 A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+			A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+		 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+		A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+	 A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+	A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
@@ -22,16 +22,16 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 |  _/ _ \/ _` | __| | | | '__/ _ \/ __| |  _  ||  __/  | |      
 | ||  __/ (_| | |_| |_| | | |  __/\__ \ | | | || |    _| |_   _ 
 \_| \___|\__,_|\__|\__,_|_|  \___||___/ \_| |_/\_|    \___/  (_)
-                                                                
-                                                                
-  ___            _ _       
+																																
+																																
+	___            _ _       
  / _ \          | (_)      
 / /_\ \_   _  __| |_  ___  
 |  _  | | | |/ _` | |/ _ \ 
 | | | | |_| | (_| | | (_) |
 \_| |_/\__,_|\__,_|_|\___/ 
 
-						   
+							 
 Featurize folders of audio files with the default_audio_features.
 
 Usage: python3 featurize.py [folder] [featuretype]
@@ -282,8 +282,8 @@ def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, wav_mode
 		buffer, rate = read_wav_file(file)
 		audio_generator = simulate_stream(buffer)
 		for chunk in audio_generator:
-		  stream.write(chunk)
-		  time.sleep(0.1)  # to give callback a chance against this fast loop
+			stream.write(chunk)
+			time.sleep(0.1)  # to give callback a chance against this fast loop
 
 		# stop continuous speech recognition
 		stream.close()
@@ -435,7 +435,11 @@ if 'audioset_features' in feature_sets:
 if 'audiotext_features' in feature_sets:
 	import audiotext_features
 if 'hubert_features' in feature_sets:
-	import hubert_features 
+	import hubert_features
+	import torch
+	from transformers import HubertModel, HubertConfig
+	from transformers import Wav2Vec2Processor, HubertForCTC
+	import soundfile as sf
 	hubert_model = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
 else:
 	hubert_model = ''
@@ -571,10 +575,10 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 					features, labels = audio_featurize(feature_set, filename, transcript, hubert_model)
 					try:
 						data={'features':features.tolist(),
-							  'labels': labels}
+								'labels': labels}
 					except:
 						data={'features':features,
-							  'labels': labels}
+								'labels': labels}
 					print(features)
 					audio_features=basearray['features']['audio']
 					audio_features[feature_set]=data
@@ -618,10 +622,10 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 						print(features)
 						try:
 							data={'features':features.tolist(),
-								  'labels': labels}
+									'labels': labels}
 						except:
 							data={'features':features,
-								  'labels': labels}
+									'labels': labels}
 						
 						basearray['features']['audio'][feature_set]=data
 

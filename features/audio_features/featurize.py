@@ -1,18 +1,18 @@
 '''
-							 AAA               lllllll lllllll   iiii                      
-							A:::A              l:::::l l:::::l  i::::i                     
-						 A:::::A             l:::::l l:::::l   iiii                      
-						A:::::::A            l:::::l l:::::l                             
-					 A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
-					A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
-				 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
-				A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
-			 A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
-			A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
-		 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
-		A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
-	 A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
-	A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
+			   AAA               lllllll lllllll   iiii                      
+			  A:::A              l:::::l l:::::l  i::::i                     
+			 A:::::A             l:::::l l:::::l   iiii                      
+			A:::::::A            l:::::l l:::::l                             
+		   A:::::::::A            l::::l  l::::l iiiiiii     eeeeeeeeeeee    
+		  A:::::A:::::A           l::::l  l::::l i:::::i   ee::::::::::::ee  
+		 A:::::A A:::::A          l::::l  l::::l  i::::i  e::::::eeeee:::::ee
+		A:::::A   A:::::A         l::::l  l::::l  i::::i e::::::e     e:::::e
+	   A:::::A     A:::::A        l::::l  l::::l  i::::i e:::::::eeeee::::::e
+	  A:::::AAAAAAAAA:::::A       l::::l  l::::l  i::::i e:::::::::::::::::e 
+	 A:::::::::::::::::::::A      l::::l  l::::l  i::::i e::::::eeeeeeeeeee  
+	A:::::AAAAAAAAAAAAA:::::A     l::::l  l::::l  i::::i e:::::::e           
+   A:::::A             A:::::A   l::::::ll::::::li::::::ie::::::::e          
+  A:::::A               A:::::A  l::::::ll::::::li::::::i e::::::::eeeeeeee  
  A:::::A                 A:::::A l::::::ll::::::li::::::i  ee:::::::::::::e  
 AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee  
 
@@ -336,7 +336,7 @@ def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, wav_mode
 
 	return transcript 
 
-def audio_featurize(feature_set, audiofile, transcript, model):
+def audio_featurize(feature_set, audiofile, transcript, hubert_processor, hubert_model):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
 	if feature_set == 'allosaurus_features':
@@ -346,7 +346,7 @@ def audio_featurize(feature_set, audiofile, transcript, model):
 	elif feature_set == 'audiotext_features':
 		features, labels = audiotext_features.audiotext_featurize(audiofile, transcript)
 	elif feature_set == 'hubert_features':
-		features, labels = hubert_features.hubert_featurize(audiofile, model, 500)
+		features, labels = hubert_features.hubert_featurize(audiofile, hubert_model, hubert_processor, 500)
 	elif feature_set == 'librosa_features':
 		features, labels = librosa_features.librosa_featurize(audiofile, False)
 	elif feature_set == 'loudness_features':
@@ -440,9 +440,11 @@ if 'hubert_features' in feature_sets:
 	from transformers import HubertModel, HubertConfig
 	from transformers import Wav2Vec2Processor, HubertForCTC
 	import soundfile as sf
-	hubert_model = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
+	hubert_processor_ = Wav2Vec2Processor.from_pretrained("facebook/hubert-large-ls960-ft")
+	hubert_model_ = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
 else:
-	hubert_model = ''
+	hubert_model_ = ''
+	hubert_processor_ =''
 if 'librosa_features' in feature_sets:
 	import librosa_features
 if 'loudness_features' in feature_sets:
@@ -504,19 +506,19 @@ if 'wav2vec' in default_audio_transcribers:
 else:
 	tokenizer=''
 	wav_model=''
-if 'hubert' in default_audio_transcribers:
+if 'hubert' in default_audio_transcribers and 'hubert_features' not in feature_sets:
 	import torch
 	from transformers import HubertModel, HubertConfig
 	from transformers import Wav2Vec2Processor, HubertForCTC
 	import soundfile as sf
 
 	# Hubert transcript
-	processor = Wav2Vec2Processor.from_pretrained("facebook/hubert-large-ls960-ft")
-	hubert_model = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
+	hubert_processor_ = Wav2Vec2Processor.from_pretrained("facebook/hubert-large-ls960-ft")
+	hubert_model_ = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
 
 else:
-	processor=''
-	hubert_model=''
+	hubert_processor_=''
+	hubert_model_=''
 	
 ################################################
 ##	   		Get featurization folder     	  ##
@@ -562,7 +564,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				if audio_transcribe==True:
 					for j in range(len(default_audio_transcribers)):
 						default_audio_transcriber=default_audio_transcribers[j]
-						transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, wav_model, processor, hubert_model)
+						transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, wav_model, hubert_processor_, hubert_model_)
 						transcript_list=basearray['transcripts']
 						transcript_list['audio'][default_audio_transcriber]=transcript 
 						basearray['transcripts']=transcript_list
@@ -572,7 +574,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				# featurize the audio file 
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]
-					features, labels = audio_featurize(feature_set, filename, transcript, hubert_model)
+					features, labels = audio_featurize(feature_set, filename, transcript, hubert_processor_, hubert_model_)
 					try:
 						data={'features':features.tolist(),
 								'labels': labels}
@@ -604,7 +606,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 						default_audio_transcriber=default_audio_transcribers[j]
 
 						if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-							transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, wav_model, processor, hubert_model)
+							transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, wav_model, hubert_processor_, hubert_model_)
 							transcript_list['audio'][default_audio_transcriber]=transcript 
 							basearray['transcripts']=transcript_list
 						elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):
@@ -618,7 +620,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]
 					if feature_set not in list(basearray['features']['audio']):
-						features, labels = audio_featurize(feature_set, filename, transcript, hubert_model)
+						features, labels = audio_featurize(feature_set, filename, transcript, hubert_processor_, hubert_model_)
 						print(features)
 						try:
 							data={'features':features.tolist(),

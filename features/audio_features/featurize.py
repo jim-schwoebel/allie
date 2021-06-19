@@ -207,7 +207,7 @@ def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, wav_mode
 
 	elif transcript_engine == 'hubert':
 		
-		audio_input, _ = sf.read('mono.wav')
+		audio_input, _ = sf.read(file)
 		input_values = processor(audio_input, return_tensors="pt", sampling_rate=16000).input_values  # Batch size 1
 		logits = hubert_model(input_values).logits
 		predicted_ids = torch.argmax(logits, dim=-1)

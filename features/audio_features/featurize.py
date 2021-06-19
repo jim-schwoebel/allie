@@ -336,7 +336,7 @@ def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, wav_mode
 
 	return transcript 
 
-def audio_featurize(feature_set, audiofile, transcript):
+def audio_featurize(feature_set, audiofile, transcript, model):
 
 	# long conditional on all the types of features that can happen and featurizes accordingly.
 	if feature_set == 'allosaurus_features':
@@ -345,6 +345,8 @@ def audio_featurize(feature_set, audiofile, transcript):
 		features, labels = audioset_features.audioset_featurize(audiofile, basedir, foldername)
 	elif feature_set == 'audiotext_features':
 		features, labels = audiotext_features.audiotext_featurize(audiofile, transcript)
+	elif feature_set == 'hubert_features':
+		features, labels = hubert_features.hubert_featurize(audiofile, model, 500)
 	elif feature_set == 'librosa_features':
 		features, labels = librosa_features.librosa_featurize(audiofile, False)
 	elif feature_set == 'loudness_features':
@@ -432,6 +434,11 @@ if 'audioset_features' in feature_sets:
 	import audioset_features
 if 'audiotext_features' in feature_sets:
 	import audiotext_features
+if 'hubert_features' in feature_sets:
+	import hubert_features 
+	hubert_model = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
+else:
+	hubert_model = ''
 if 'librosa_features' in feature_sets:
 	import librosa_features
 if 'loudness_features' in feature_sets:
@@ -461,7 +468,7 @@ if 'prosody_features' in feature_sets:
 if 'pspeech_features' in feature_sets:
 	import pspeech_features
 if 'pspeechtime_features' in feature_sets:
-		import pspeechtime_features
+	import pspeechtime_features
 if 'pyworld_features' in feature_sets:
 	import pyworld_features
 if 'sa_features' in feature_sets:
@@ -561,7 +568,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				# featurize the audio file 
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]
-					features, labels = audio_featurize(feature_set, filename, transcript)
+					features, labels = audio_featurize(feature_set, filename, transcript, hubert_model)
 					try:
 						data={'features':features.tolist(),
 							  'labels': labels}
@@ -607,7 +614,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				for j in range(len(feature_sets)):
 					feature_set=feature_sets[j]
 					if feature_set not in list(basearray['features']['audio']):
-						features, labels = audio_featurize(feature_set, filename, transcript)
+						features, labels = audio_featurize(feature_set, filename, transcript, hubert_model)
 						print(features)
 						try:
 							data={'features':features.tolist(),

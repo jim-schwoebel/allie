@@ -103,7 +103,7 @@ os.chdir(directory)
 ################################################
 ##	    		Helper functions      		  ##
 ################################################
-def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, model):
+def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, wav_model, processor, hubert_model):
 	# create all transcription methods here
 	print('%s transcribing: %s'%(default_audio_transcriber, file))
 
@@ -201,10 +201,18 @@ def transcribe(file, default_audio_transcriber, settingsdir, tokenizer, model):
 
 		# transcribe
 		input_values = tokenizer(audio_input, return_tensors="pt").input_values
-		logits = model(input_values).logits
+		logits = wav_model(input_values).logits
 		predicted_ids = torch.argmax(logits, dim=-1)
 		transcript = tokenizer.batch_decode(predicted_ids)[0].lower()
-	
+
+	elif transcript_engine == 'hubert':
+		
+		audio_input, _ = sf.read('mono.wav')
+		input_values = processor(audio_input, return_tensors="pt", sampling_rate=16000).input_values  # Batch size 1
+		logits = hubert_model(input_values).logits
+		predicted_ids = torch.argmax(logits, dim=-1)
+		transcript = processor.decode(predicted_ids[0]).lower()
+
 	elif transcript_engine == 'google':
 
 		# recognize speech using Google Speech Recognition
@@ -481,10 +489,23 @@ if 'wav2vec' in default_audio_transcribers:
 	from pathlib import Path
 	from transformers import Wav2Vec2ForMaskedLM, Wav2Vec2Tokenizer
 	tokenizer = Wav2Vec2Tokenizer.from_pretrained("facebook/wav2vec2-base-960h")
-	model = Wav2Vec2ForMaskedLM.from_pretrained("facebook/wav2vec2-base-960h")
+	wav_model = Wav2Vec2ForMaskedLM.from_pretrained("facebook/wav2vec2-base-960h")
 else:
 	tokenizer=''
-	model=''
+	wav_model=''
+if 'hubert' in default_audio_transcribers:
+	import torch
+	from transformers import HubertModel, HubertConfig
+	from transformers import Wav2Vec2Processor, HubertForCTC
+	import soundfile as sf
+
+	# Hubert transcript
+	processor = Wav2Vec2Processor.from_pretrained("facebook/hubert-large-ls960-ft")
+	hubert_model = HubertForCTC.from_pretrained("facebook/hubert-large-ls960-ft")
+
+else:
+	processor=''
+	hubert_model=''
 	
 ################################################
 ##	   		Get featurization folder     	  ##
@@ -530,7 +551,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 				if audio_transcribe==True:
 					for j in range(len(default_audio_transcribers)):
 						default_audio_transcriber=default_audio_transcribers[j]
-						transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, model)
+						transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, wav_model, processor, hubert_model)
 						transcript_list=basearray['transcripts']
 						transcript_list['audio'][default_audio_transcriber]=transcript 
 						basearray['transcripts']=transcript_list
@@ -572,7 +593,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 						default_audio_transcriber=default_audio_transcribers[j]
 
 						if audio_transcribe==True and default_audio_transcriber not in list(transcript_list['audio']):
-							transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, model)
+							transcript = transcribe(filename, default_audio_transcriber, settingsdir, tokenizer, wav_model, processor, hubert_model)
 							transcript_list['audio'][default_audio_transcriber]=transcript 
 							basearray['transcripts']=transcript_list
 						elif audio_transcribe==True and default_audio_transcriber in list(transcript_list['audio']):

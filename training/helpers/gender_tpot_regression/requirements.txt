@@ -119,7 +119,7 @@ nbformat==5.0.7
 networkx==2.4
 nltk==3.5
 nose==1.3.7
-notebook==6.0.3
+notebook==6.4.1
 numba==0.48.0
 numpy==1.18.4
 oauthlib==3.1.0

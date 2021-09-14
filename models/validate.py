@@ -61,7 +61,8 @@ for i in tqdm(range(len(jsonfiles))):
 	except:
 		print('error')
 
-print('females')
-print(predictions.count('female'))
-print('males')
-print(predictions.count('male'))
+unique_names=list(set(predictions))
+
+for i in range(len(unique_names)):
+	print(unique_names[i])
+	print(predictions.count(unique_names[i]))

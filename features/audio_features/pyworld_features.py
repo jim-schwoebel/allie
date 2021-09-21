@@ -37,6 +37,7 @@ Extracts a range of pitch-based features.
 
 For more information, check out hte documentation: https://github.com/JeremyCCHsu/Python-Wrapper-for-World-Vocoder
 '''
+import os, sys
 import scipy.io.wavfile as wav
 import numpy as np
 # adding this in because some installations may not have pyworld features installed
@@ -45,7 +46,6 @@ try:
 except:
 	os.system('pip3 install pyworld==0.2.10')
 	import pyworld as pw
-import os, sys
 import numpy as np
 
 # get statistical features in numpy

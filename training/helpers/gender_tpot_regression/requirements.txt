@@ -123,7 +123,7 @@ notebook==6.0.3
 numba==0.48.0
 numpy==1.18.4
 oauthlib==3.1.0
-opencv-contrib-python==3.4.2.16
+opencv-contrib-python==4.2.0.32
 opencv-python==3.4.2.16
 opencv-python-headless==4.3.0.36
 opt-einsum==3.2.1

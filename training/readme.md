@@ -95,7 +95,7 @@ The resulting model will have the following data:
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/regression.gif)](https://drive.google.com/file/d/1PQwBABSRKrzS67IrlgvFSjuRBKFFx-XX/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/regression.gif)](https://www.youtube.com/watch?v=8jIOD2lVTiA&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=8)
 
 ### classification model example 
 To now model both males and females as a binary gender classification problem, type this into the terminal:

@@ -110,7 +110,7 @@ What results are featurized audio files in .JSON format, following the [standard
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.gif)](https://drive.google.com/file/d/1YQXgnAvKHVjSgYteIFz-9H0znr1UKCLl/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.gif)](https://www.youtube.com/watch?v=0ZEEz3WeBHA&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=5)
 
 ## Implemented Features
 

@@ -136,7 +136,7 @@ delete_features.py	featurize_csv.py	males
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://drive.google.com/file/d/1YYniwEJWZFpxTFNwJSGYGP0eeCAgxcvU/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://www.youtube.com/watch?v=ywW30KasZ_0&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=1)
 
 ### [Annotating data](https://github.com/jim-schwoebel/allie/tree/master/annotation)
 
@@ -164,7 +164,7 @@ python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c m
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://www.youtube.com/watch?v=CbcMts9f5XI&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=2)
 
 ### [Augmenting data](https://github.com/jim-schwoebel/allie/tree/master/augmentation)
 
@@ -183,7 +183,7 @@ You should now have 2x the data in each folder. Here is a sample audio file and 
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.gif)](https://drive.google.com/file/d/1j-rGRCgVDifIzoPx3YNuux_k9H-Gb-TD/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.gif)](https://www.youtube.com/watch?v=G6w3sHh-Shc&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=3)
 
 ### [Cleaning data](https://github.com/jim-schwoebel/allie/tree/master/cleaning)
 
@@ -198,7 +198,7 @@ python3 clean.py /Users/jim/desktop/allie/train_dir/females/
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://www.youtube.com/watch?v=iXSE2vE6XV8&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=4)
 
 ### [Featurizing data](https://github.com/jim-schwoebel/allie/tree/master/features)
 
@@ -217,7 +217,7 @@ What results are featurized audio files in .JSON format, following the [standard
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.gif)](https://drive.google.com/file/d/1YQXgnAvKHVjSgYteIFz-9H0znr1UKCLl/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/featurize.gif)](https://www.youtube.com/watch?v=0ZEEz3WeBHA&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=5)
 
 ### [Transforming data](https://github.com/jim-schwoebel/allie/tree/master/preprocessing)
 
@@ -236,7 +236,7 @@ What results are a few files, with a summary .JSON file (c_gender_standard_scale
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/transform.gif)](https://drive.google.com/file/d/1wV-yeM9FTRKrGAebhREXpY4gfWPmcL0U/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/transform.gif)](https://www.youtube.com/watch?v=w5ekGiUpLjg&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=6)
 
 ### [Modeling data](https://github.com/jim-schwoebel/allie/tree/master/training)
 #### classification problem
@@ -563,7 +563,7 @@ The result will be a [GitHub repo like this](https://github.com/jim-schwoebel/al
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://www.youtube.com/watch?v=xfGgCgC9-wA&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=7)
 
 #### regression problem
 
@@ -640,7 +640,7 @@ What results is featurized folders with model predictions in .JSON format follow
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/load.gif)](https://drive.google.com/file/d/1-iN3wOjWGCiqlTKjQgtVoxfpJSmiDsCQ/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/load.gif)](https://www.youtube.com/watch?v=UsifvwC-NcQ&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=8)
 
 ### [Visualizing data](https://github.com/jim-schwoebel/allie/tree/master/visualize)
 To visualize multiple folders of featurized files (in this case males and females folders of audio files in the ./train_dir), type this into the terminal:
@@ -655,7 +655,7 @@ Note that visualization capabilities are restricted to classification problems f
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/visualize.gif)](https://drive.google.com/file/d/11GSJpE9ASp1AEl89CjVHRnEd2Yutg3Ki/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/visualize.gif)](https://www.youtube.com/watch?v=VGdQ5R3DWpQ&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=9)
 
 ## [Settings](https://github.com/jim-schwoebel/allie/blob/master/settings.json)
 

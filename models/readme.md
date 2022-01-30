@@ -23,7 +23,7 @@ What results is featurized folders with model predictions in .JSON format follow
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/load.gif)](https://drive.google.com/file/d/1-iN3wOjWGCiqlTKjQgtVoxfpJSmiDsCQ/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/load.gif)](https://www.youtube.com/watch?v=UsifvwC-NcQ&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=9)
 
 ## Supported file formats
 

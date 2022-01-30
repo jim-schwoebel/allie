@@ -12,7 +12,7 @@ An exhaustive list of all the audio, text, image, and video datasets are listed 
 
 You can also search for more datasets using Google DataSet search @ https://toolbox.google.com/datasetsearch or Kaggle @ https://www.kaggle.com/datasets.
 
-You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180), [YouTube Scrape](https://github.com/jim-schwoebel/youtube_scrape/tree/b030d65277626ee01bea0fd98cee2d1ffafee8bb), and/or [SurveyLex](https://surveylex.com) as well.
+You can always create datasets with [mTurk](https://towardsdatascience.com/how-i-created-a-40-000-labeled-audio-dataset-in-4-hours-of-work-and-500-17ad9951b180) and [YouTube Scrape](https://github.com/jim-schwoebel/youtube_scrape/tree/b030d65277626ee01bea0fd98cee2d1ffafee8bb).
 
 ## Standard feature dictionary 
 
@@ -95,7 +95,7 @@ delete_features.py	featurize_csv.py	males
 
 Click the .GIF below for a quick tutorial and example.
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://drive.google.com/file/d/1YYniwEJWZFpxTFNwJSGYGP0eeCAgxcvU/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/collecting.gif)](https://www.youtube.com/watch?v=ywW30KasZ_0&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=1)
 
 ## Audio datasets 
 There are two main types of audio datasets: speech datasets and audio event/music datasets. 

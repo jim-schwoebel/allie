@@ -25,7 +25,7 @@ What results are a few files, with a summary .JSON file (c_gender_standard_scale
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/transform.gif)](https://drive.google.com/file/d/1wV-yeM9FTRKrGAebhREXpY4gfWPmcL0U/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/transform.gif)](https://www.youtube.com/watch?v=w5ekGiUpLjg&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=7)
 
 The code above will transform all the featurized text files (in .JSON files, folder MALES and folder FEMALES) via a classification script (c) with a common name GENDER. For clarity, the command line arguments are further elaborated upon below along with all possible options to help you use the transformers API. Note that folder ONE and folder TWO are assumed to be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir).
 

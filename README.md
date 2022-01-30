@@ -621,7 +621,7 @@ It will then output the regression model in the proper folder ([like this](https
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/regression.gif)](https://drive.google.com/file/d/1PQwBABSRKrzS67IrlgvFSjuRBKFFx-XX/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/regression.gif)](https://www.youtube.com/watch?v=8jIOD2lVTiA&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=8)
 
 ### [Making predictions](https://github.com/jim-schwoebel/allie/tree/master/training)
 To make predictions using the machine learning model that you just trained, type this into the terminal:

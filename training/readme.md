@@ -420,7 +420,7 @@ The result will be a [GitHub repo like this](https://github.com/jim-schwoebel/al
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://drive.google.com/file/d/1x6gGl6Ag4HjT3MKs6kwz_0gq-Kk8peZA/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/classification.gif)](https://www.youtube.com/watch?v=xfGgCgC9-wA&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=7)
 
 After this, the model will be trained and placed in the models/[sampletype_models] directory. For example, if you trained an audio model with TPOT, the model will be placed in the allie/models/audio_models/ directory. 
 

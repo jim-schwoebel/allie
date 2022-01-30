@@ -19,7 +19,7 @@ python3 clean.py /Users/jim/desktop/allie/train_dir/females/
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://drive.google.com/file/d/1gqEHb_3WYFZNnBYdiwJZL--1Aw5KYLUR/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/clean.gif)](https://www.youtube.com/watch?v=iXSE2vE6XV8&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=5)
 
 The code above will featurize all the audio files in the folderpath via the default_cleaner specified in the settings.json file (e.g. 'clean_mono16hz'). 
 

@@ -27,7 +27,7 @@ You should now have 2x the data in each folder. Here is a sample audio file and 
 
 Click the .GIF below to follow along this example in a video format:
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.gif)](https://drive.google.com/file/d/1j-rGRCgVDifIzoPx3YNuux_k9H-Gb-TD/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/augment.gif)](https://www.youtube.com/watch?v=G6w3sHh-Shc&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=3)
 
 ## Expanding to other file types
 

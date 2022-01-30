@@ -26,7 +26,7 @@ python3 create_csv.py -d /Users/jim/desktop/allie/train_dir/males/ -s audio -c m
 
 Click the .GIF below for a quick tutorial and example.
 
-[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://drive.google.com/file/d/1Xn7A61XWY8oCAfMmjSMpwEjvItiNp5ev/view?usp=sharing)
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/annotation.gif)](https://www.youtube.com/watch?v=CbcMts9f5XI&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=2)
 
 For more information on data annotation, check out [this repository](https://github.com/heartexlabs/awesome-data-labeling).
 

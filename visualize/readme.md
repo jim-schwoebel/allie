@@ -6,6 +6,10 @@ This is a univeral visualizer for all types of data as a part of model training.
 
 Note that [this is a setting](https://github.com/jim-schwoebel/allie/blob/master/settings.json) in the Allie Framework (e.g. "visualize_data": true). 
 
+Click the .GIF below to follow along this example in a video format:
+
+[![](https://github.com/jim-schwoebel/allie/blob/master/annotation/helpers/assets/visualize.gif)](https://www.youtube.com/watch?v=VGdQ5R3DWpQ&list=PL_D3Oayw4KAqvwWGxE0VWA9-r3LNKrUrU&index=9)
+
 ## Getting started
 To get started, you first need to featurize some data using featurizations scripts. This data must be in the [train_dir folder](https://github.com/jim-schwoebel/allie/tree/master/train_dir) in the form of directories. To read more about featurization, [see this page](https://github.com/jim-schwoebel/allie/tree/master/features).
 

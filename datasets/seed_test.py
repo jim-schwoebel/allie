@@ -42,7 +42,7 @@ def prev_dir(directory):
 
 listdir=os.listdir()
 if 'sample_voice_data' not in listdir:
-	os.system('git clone git@github.com:jim-schwoebel/sample_voice_data.git')
+	os.system('git clone https://github.com/jim-schwoebel/sample_voice_data.git')
 else:
 	pass
 

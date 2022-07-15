@@ -43,7 +43,7 @@ deepspeech==0.7.4
 defusedxml==0.6.0
 deprecation==2.1.0
 distlib==0.3.0
-distributed==2.6.0
+distributed==2021.10.0
 docutils==0.15.2
 editdistance==0.4
 en-core-web-lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-2.3.0/en_core_web_lg-2.3.0.tar.gz

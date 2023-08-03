@@ -132,7 +132,7 @@ packaging==20.4
 pafy==0.5.5
 pandas==0.25.3
 pandocfilters==1.4.2
-paramiko==2.7.1
+paramiko==2.10.1
 parso==0.7.0
 patsy==0.5.1
 pbr==5.4.5

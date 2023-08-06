@@ -22,12 +22,11 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 | |  | | (_) | (_| |  __/ \__ \
 \_|  |_/\___/ \__,_|\___|_|___/
 
-Can be useful to count the number of model predictions in a certain class after prediction 
-is complete to get an intuition of accuracy of model on new datasets. 
+Sort audio in load_dir based on model predictions.
 
 Note you currently have to manually edit this file for it to be useful.
 
-Usage: python3 validate.py
+Usage: python3 sort.py
 '''
 import os,json, shutil
 from tqdm import tqdm

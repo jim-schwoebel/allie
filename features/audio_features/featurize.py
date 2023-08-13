@@ -391,6 +391,8 @@ def audio_featurize(feature_set, audiofile, transcript, hubert_processor, hubert
 		features, labels = standard_features.standard_featurize(audiofile)
 	elif feature_set == 'surfboard_features':
 		features, labels = surfboard_features.surfboard_featurize(audiofile, help_dir)
+	elif feature_set == 'voxceleb_features':
+		features, labels = voxceleb_features.voxceleb_featurize(audiofile)
 	elif feature_set == 'yamnet_features':
 		features, labels = yamnet_features.yamnet_featurize(audiofile)
 
@@ -490,6 +492,10 @@ if 'standard_features' in feature_sets:
 	import standard_features
 if 'surfboard_features' in feature_sets:
 	import surfboard_features
+if 'voxceleb_features' in feature_sets:
+	import voxceleb_features
+if 'yamnet_features' in feature_sets:
+	import yamnet_features
 
 # transcription imports
 if 'azure' in default_audio_transcribers:

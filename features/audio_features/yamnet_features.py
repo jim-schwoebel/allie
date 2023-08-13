@@ -67,7 +67,7 @@ def get_labels(vector, label, label2):
 
     return sample_list
 
-def audioset_featurize(wavfile):
+def yamnet_featurize(wavfile):
     file_path = wavfile
     audio_data, sample_rate = sf.read(file_path)
     waveform = audio_data
@@ -97,8 +97,5 @@ def audioset_featurize(wavfile):
     for i in range(len(class_names)):
         labels.append(class_names[i]+'_medians')
 
-    print(len(features))
-    print(len(labels))
     return features, labels
 
-audioset_featurize('test.wav')

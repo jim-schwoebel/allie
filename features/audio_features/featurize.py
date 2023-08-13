@@ -93,11 +93,6 @@ directory=os.getcwd()
 prevdir=prev_dir(directory)
 sys.path.append(prevdir)
 from standard_array import make_features
-sys.path.append(prevdir+'/image_features')
-haar_dir=prevdir+'/image_features/helpers/haarcascades'
-import image_features as imf
-sys.path.append(prevdir+'/text_features')
-import nltk_features as nf 
 os.chdir(directory)
 
 ################################################
@@ -396,6 +391,8 @@ def audio_featurize(feature_set, audiofile, transcript, hubert_processor, hubert
 		features, labels = standard_features.standard_featurize(audiofile)
 	elif feature_set == 'surfboard_features':
 		features, labels = surfboard_features.surfboard_featurize(audiofile, help_dir)
+	elif feature_set == 'yamnet_features':
+		features, labels = yamnet_features.yamnet_featurize(audiofile)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))
@@ -581,7 +578,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 					except:
 						data={'features':features,
 								'labels': labels}
-					print(features)
+					# print(features)
 					audio_features=basearray['features']['audio']
 					audio_features[feature_set]=data
 					basearray['features']['audio']=audio_features
@@ -621,7 +618,7 @@ for i in tqdm(range(len(listdir)), desc=labelname):
 					feature_set=feature_sets[j]
 					if feature_set not in list(basearray['features']['audio']):
 						features, labels = audio_featurize(feature_set, filename, transcript, hubert_processor_, hubert_model_)
-						print(features)
+						# print(features)
 						try:
 							data={'features':features.tolist(),
 									'labels': labels}

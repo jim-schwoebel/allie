@@ -48,9 +48,6 @@ from tqdm import tqdm
 '''
 https://tfhub.dev/google/yamnet/1
 '''
-# Load the model.
-model = hub.load('helpers/yamnet_1')
-
 # Find the name of the class with the top score when mean-aggregated across frames.
 def class_names_from_csv(class_map_csv_text):
     """Returns list of class names corresponding to score vector."""
@@ -67,7 +64,8 @@ def get_labels(vector, label, label2):
 
     return sample_list
 
-def yamnet_featurize(wavfile, model=model):
+def yamnet_featurize(wavfile, help_dir):
+    model = hub.load(help_dir+'/yamnet_1')
     file_path = wavfile
     audio_data, sample_rate = sf.read(file_path)
     waveform = audio_data

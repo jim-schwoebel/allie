@@ -80,24 +80,24 @@ def pspeech_featurize(file):
 
     six_=np.mean(fbank_feat, axis=0)
     six=get_labels(six_, 'fbank_', 'means')
-    seven_=np.mean(fbank_feat, axis=0)
+    seven_=np.std(fbank_feat, axis=0)
     seven=get_labels(six_, 'fbank_', 'stds')
-    eight_=np.mean(fbank_feat, axis=0)
+    eight_=np.amax(fbank_feat, axis=0)
     eight=get_labels(six_, 'fbank_', 'max')
-    nine_=np.mean(fbank_feat, axis=0)
+    nine_=np.amin(fbank_feat, axis=0)
     nine=get_labels(six_, 'fbank_', 'min')
-    ten_=np.mean(fbank_feat, axis=0)
+    ten_=np.median(fbank_feat, axis=0)
     ten=get_labels(six_, 'fbank_', 'medians')
 
     eleven_=np.mean(ssc_feat, axis=0)
     eleven=get_labels(eleven_, 'spectral_centroid_', 'means')
-    twelve_=np.mean(ssc_feat, axis=0)
+    twelve_=np.std(ssc_feat, axis=0)
     twelve=get_labels(eleven_, 'spectral_centroid_', 'stds')
-    thirteen_=np.mean(ssc_feat, axis=0)
+    thirteen_=np.amax(ssc_feat, axis=0)
     thirteen=get_labels(eleven_, 'spectral_centroid_', 'max')
-    fourteen_=np.mean(ssc_feat, axis=0)
+    fourteen_=np.amin(ssc_feat, axis=0)
     fourteen=get_labels(eleven_, 'spectral_centroid_', 'min')
-    fifteen_=np.mean(ssc_feat, axis=0)
+    fifteen_=np.median(ssc_feat, axis=0)
     fifteen=get_labels(eleven_, 'spectral_centroid_', 'medians')
 
     labels=one+two+three+four+five+six+seven+eight+nine+ten+eleven+twelve+thirteen+fourteen+fifteen
@@ -119,7 +119,7 @@ def pspeech_featurize(file):
     if convert==True:
         os.remove(file)
 
-    print(features.shape)
-    print(len(labels))
+    # print(features.shape)
+    # print(len(labels))
     
     return features, labels 

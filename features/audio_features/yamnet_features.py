@@ -31,7 +31,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 
-This will featurize folders of audio files if the default_audio_features = ['pspeech_features']
+This will featurize folders of audio files if the default_audio_features = ['yamnet_features']
 
 Python Speech Features is a library for fast extraction of speech features like mfcc coefficients and 
 log filter bank energies. Note that this library is much faster than LibROSA and other libraries, 

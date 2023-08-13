@@ -33,11 +33,7 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 
 This will featurize folders of audio files if the default_audio_features = ['yamnet_features']
 
-Python Speech Features is a library for fast extraction of speech features like mfcc coefficients and 
-log filter bank energies. Note that this library is much faster than LibROSA and other libraries, 
-so it is useful to featurize very large datasets.
-
-For more information, check out the documentation: https://github.com/jameslyons/python_speech_features
+Read more about the yamnet model here: https://tfhub.dev/google/yamnet/1
 '''
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -45,9 +41,7 @@ import numpy as np
 import io, os, shutil, csv, pyaudio, wave
 import soundfile as sf
 from tqdm import tqdm
-'''
-https://tfhub.dev/google/yamnet/1
-'''
+
 # Load the model.
 model = hub.load('./helpers/yamnet_1')
 

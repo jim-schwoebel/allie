@@ -394,7 +394,7 @@ def audio_featurize(feature_set, audiofile, transcript, hubert_processor, hubert
 	elif feature_set == 'voxceleb_features':
 		features, labels = voxceleb_features.voxceleb_featurize(audiofile)
 	elif feature_set == 'yamnet_features':
-		features, labels = yamnet_features.yamnet_featurize(audiofile)
+		features, labels = yamnet_features.yamnet_featurize(audiofile, help_dir)
 
 	# make sure all the features do not have any infinity or NaN
 	features=np.nan_to_num(np.array(features))

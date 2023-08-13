@@ -31,9 +31,13 @@ AAAAAAA                   AAAAAAAlllllllllllllllliiiiiiii    eeeeeeeeeeeeee
 \_| |_/\__,_|\__,_|_|\___/ 
                            
 
-This will featurize folders of audio files if the default_audio_features = ['yamnet_features']
+This will featurize folders of audio files if the default_audio_features = ['pspeech_features']
 
-Read more about the yamnet model here: https://tfhub.dev/google/yamnet/1
+Python Speech Features is a library for fast extraction of speech features like mfcc coefficients and 
+log filter bank energies. Note that this library is much faster than LibROSA and other libraries, 
+so it is useful to featurize very large datasets.
+
+For more information, check out the documentation: https://github.com/jameslyons/python_speech_features
 '''
 import tensorflow as tf
 import tensorflow_hub as hub
@@ -41,9 +45,11 @@ import numpy as np
 import io, os, shutil, csv, pyaudio, wave
 import soundfile as sf
 from tqdm import tqdm
-
+'''
+https://tfhub.dev/google/yamnet/1
+'''
 # Load the model.
-model = hub.load('./helpers/yamnet_1')
+model = hub.load('helpers/yamnet_1')
 
 # Find the name of the class with the top score when mean-aggregated across frames.
 def class_names_from_csv(class_map_csv_text):
@@ -61,7 +67,7 @@ def get_labels(vector, label, label2):
 
     return sample_list
 
-def yamnet_featurize(wavfile):
+def yamnet_featurize(wavfile, model=model):
     file_path = wavfile
     audio_data, sample_rate = sf.read(file_path)
     waveform = audio_data

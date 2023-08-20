@@ -210,6 +210,7 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		y_pred=clf.predict(test_data)
 	elif default_training_script == 'autokeras':
 		y_pred=clf.predict(X_test).flatten()
+		y_pred=np.rint(y_pred)
 	elif default_training_script == 'autopytorch':
 		y_pred=clf.predict(X_test).flatten()
 	elif default_training_script == 'atm':

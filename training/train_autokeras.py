@@ -27,9 +27,6 @@ Train models using autokeras: https://github.com/keras-team/autokeras
 This is enabled if the default_training_script = ['autokeras']
 '''
 import os, pickle, json, shutil
-print('installing package')
-os.system('pip3 install tensorflow==2.1')
-os.system('pip3 install autokeras==1.0.2')
 import autokeras as ak
 import tensorflow as tf
 import numpy as np
@@ -43,7 +40,7 @@ def train_autokeras(X_train,X_test,y_train,y_test,mtype,common_name_model,proble
 
 	# create file names
 	files=list()
-	model_name=common_name_model+'.pickle'
+	model_name=common_name_model
 
 	# remove folder if it exists
 	if mtype=='c':
@@ -63,10 +60,11 @@ def train_autokeras(X_train,X_test,y_train,y_test,mtype,common_name_model,proble
 	predictions=model.predict(X_test).flatten()	
 	print(predictions)
 
-	# pickle the model
-	picklefile= open(common_name_model+'.pickle','wb')
-	pickle.dump(model, picklefile)
-	picklefile.close()
+	model = model.export_model()
+	print(type(model))  # <class 'tensorflow.python.keras.engine.training.Model'>
+
+	model.save(model_name+".h5")
+	model_name=model_name+".h5"
 
 	# get variables
 	files.append(model_name)

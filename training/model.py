@@ -243,8 +243,14 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 	if mtype in ['c', 'classification']:
 		# now get all classification metrics
 		mtype='classification'
-		metrics_['accuracy']=metrics.accuracy_score(y_true, y_pred)
-		metrics_['balanced_accuracy']=metrics.balanced_accuracy_score(y_true, y_pred)
+		try:
+			metrics_['accuracy']=metrics.accuracy_score(y_true, y_pred)
+		except:
+			metrics_['accuracy']='n/a'
+		try:
+			metrics_['balanced_accuracy']=metrics.balanced_accuracy_score(y_true, y_pred)
+		except:
+			metrics_['balanced_accuracy']='n/a'
 		try:
 			metrics_['precision']=metrics.precision_score(y_true, y_pred)
 		except:
@@ -277,11 +283,19 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 			metrics_['roc_auc_macro']=metrics.roc_auc_score(y_true, y_pred, average='macro')
 		except:
 			metrics_['roc_auc_micro']='n/a'
-	
-		metrics_['confusion_matrix']=metrics.confusion_matrix(y_true, y_pred).tolist()
-		metrics_['classification_report']=metrics.classification_report(y_true, y_pred, target_names=classes)
-
-		plot_confusion_matrix(np.array(metrics_['confusion_matrix']), classes)
+		
+		try:
+			metrics_['confusion_matrix']=metrics.confusion_matrix(y_true, y_pred).tolist()
+		except:
+			metrics_['confusion_matrix']='n/a'
+		try:
+			metrics_['classification_report']=metrics.classification_report(y_true, y_pred, target_names=classes)
+		except:
+			metrics_['classification_report']='n/a'
+		try:
+			plot_confusion_matrix(np.array(metrics_['confusion_matrix']), classes)
+		except:
+			print('error potting confusion matrix')
 		try:
 			# predict_proba only works for or log loss and modified Huber loss.
 			# https://stackoverflow.com/questions/47788981/sgdclassifier-with-predict-proba
@@ -718,7 +732,6 @@ print('          LOADING MODULES          ')
 print('-----------------------------------')
 # upgrade to have the proper scikit-learn version later
 os.chdir(cur_dir)
-os.system('python3 upgrade.py')
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from tqdm import tqdm
@@ -1262,7 +1275,6 @@ if scale_features == True or reduce_dimensions == True or select_features == Tru
 		os.mkdir(problemtype+'_transformer')
 		os.chdir(problemtype+'_transformer')
 	# train transformer if it doesn't already exist
-	os.system('pip3 install scikit-learn==0.22.2.post1')
 	if transform_file in os.listdir():
 		# remove file if in listdir to avoid conflicts with naming
 		os.remove(transform_file)
@@ -1632,7 +1644,8 @@ for i in tqdm(range(len(default_training_scripts)), desc=default_training_script
 			elif default_training_script == 'autokeras':
 				import tensorflow as tf
 				import autokeras as ak
-				clf = pickle.load(open(modelname, 'rb'))
+				from tensorflow.keras.models import load_model
+				clf = load_model(modelname, custom_objects=ak.CUSTOM_OBJECTS)
 			elif default_training_script=='autopytorch':
 				import torch
 				clf=torch.load(modelname)

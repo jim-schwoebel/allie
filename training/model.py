@@ -209,8 +209,13 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		test_data=test_data.drop(labels=['class'],axis=1)
 		y_pred=clf.predict(test_data)
 	elif default_training_script == 'autokeras':
-		y_pred=clf.predict(X_test).flatten()
-		y_pred=np.rint(y_pred)
+		y_pred=clf.predict(X_test)
+		new_y_pred=[]
+		for i in range(len(y_pred)):
+			maxval=max(y_pred[i])
+			index_=list(y_pred[i]).index(maxval)
+			new_y_pred.append(index_)
+		y_pred=new_y_pred
 	elif default_training_script == 'autopytorch':
 		y_pred=clf.predict(X_test).flatten()
 	elif default_training_script == 'atm':
@@ -237,8 +242,6 @@ def get_metrics(clf, problemtype, mtype, default_training_script, common_name, X
 		# have to make into a pandas dataframe
 		test_data=pd.read_csv('test.csv').drop(columns=['class_'], axis=1)
 		y_pred=clf.predict(test_data)
-	
-	print(y_pred)
 	
 	# get classification or regression metrics
 	if mtype in ['c', 'classification']:

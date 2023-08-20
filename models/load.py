@@ -632,39 +632,28 @@ for i in range(len(model_dirs)):
 
 # now model everything
 for i in range(len(model_dirs)):
-	# try:
-	if model_dirs[i].split('_')[0] in filetypes:
+	try:
+		if model_dirs[i].split('_')[0] in filetypes:
 
-		print('-----------------------')
-		print('MODELING %s'%(model_dirs[i].upper()))
-		print('-----------------------')
-		os.chdir(model_dir)
-		os.chdir(model_dirs[i])
-		models_=models[model_dirs[i]]
-
-		# get default features
-		print(model_dirs[i])
-		if model_dirs[i] == 'audio_models':
-			default_features =default_audio_features
-		elif model_dirs[i] == 'text_models':
-			default_features = default_text_features
-		elif model_dirs[i] == 'image_models':
-			default_features = default_image_features
-		elif model_dirs[i] == 'video_models':
-			default_features = default_video_features
-		elif model_dirs[i] == 'csv_models':
-			default_features = default_csv_features
-
-		# loop through models
-		for j in range(len(models_)):
+			print('-----------------------')
+			print('MODELING %s'%(model_dirs[i].upper()))
+			print('-----------------------')
 			os.chdir(model_dir)
 			os.chdir(model_dirs[i])
-			print('--> predicting %s'%(models_[j]))
-			os.chdir(models_[j])
-			os.chdir('model')
-			transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
-			os.chdir(load_dir)
-			jsonfiles, csvfiles=find_files(model_dirs[i])
-			make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, csvfiles, default_features, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
-	# except:
-		# print('error')
+			models_=models[model_dirs[i]]
+			print(model_dirs[i])
+
+			# loop through models
+			for j in range(len(models_)):
+				os.chdir(model_dir)
+				os.chdir(model_dirs[i])
+				print('--> predicting %s'%(models_[j]))
+				os.chdir(models_[j])
+				os.chdir('model')
+				transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
+				default_features_model=json.load(open(models_[j]+'.json'))['settings']["default_"+model_dirs[i].split('_')[0]+"_features"]
+				os.chdir(load_dir)
+				jsonfiles, csvfiles=find_files(model_dirs[i])
+				make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, csvfiles, default_features_model, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
+	except:
+		print('error')

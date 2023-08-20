@@ -253,6 +253,7 @@ def make_predictions(sampletype, transformer, clf, modeltype, jsonfiles, csvfile
 						os.chdir(model_dir+'/model')
 						print(os.getcwd())
 						y_pred=clf.predict(features).flatten()
+						y_pred=np.rint(y_pred)
 						os.chdir(curdir)
 				elif modeltype == 'autopytorch':
 						y_pred=clf.predict(features).flatten()
@@ -475,7 +476,7 @@ def load_model(folder_name):
 	# g['model type']
 
 	# load model for getting metrics
-	if model_type not in ['alphapy', 'atm', 'autokeras', 'autopytorch', 'ludwig', 'keras', 'devol']:
+	if model_type not in ['alphapy', 'atm', 'autopytorch', 'autokeras', 'ludwig', 'keras', 'devol']:
 		loadmodel=open(modelname, 'rb')
 		clf=pickle.load(loadmodel)
 		loadmodel.close()
@@ -485,7 +486,9 @@ def load_model(folder_name):
 	elif model_type == 'autokeras':
 		import tensorflow as tf
 		import autokeras as ak
-		clf = pickle.load(open(modelname, 'rb'))
+		from tensorflow.keras.models import load_model
+		print(modelname)
+		clf = load_model(modelname, custom_objects=ak.CUSTOM_OBJECTS)
 	elif model_type=='autopytorch':
 		import torch
 		clf=torch.load(modelname)
@@ -632,28 +635,28 @@ for i in range(len(model_dirs)):
 
 # now model everything
 for i in range(len(model_dirs)):
-	try:
-		if model_dirs[i].split('_')[0] in filetypes:
+	# try:
+	if model_dirs[i].split('_')[0] in filetypes:
 
-			print('-----------------------')
-			print('MODELING %s'%(model_dirs[i].upper()))
-			print('-----------------------')
+		print('-----------------------')
+		print('MODELING %s'%(model_dirs[i].upper()))
+		print('-----------------------')
+		os.chdir(model_dir)
+		os.chdir(model_dirs[i])
+		models_=models[model_dirs[i]]
+		print(model_dirs[i])
+
+		# loop through models
+		for j in range(len(models_)):
 			os.chdir(model_dir)
 			os.chdir(model_dirs[i])
-			models_=models[model_dirs[i]]
-			print(model_dirs[i])
-
-			# loop through models
-			for j in range(len(models_)):
-				os.chdir(model_dir)
-				os.chdir(model_dirs[i])
-				print('--> predicting %s'%(models_[j]))
-				os.chdir(models_[j])
-				os.chdir('model')
-				transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
-				default_features_model=json.load(open(models_[j]+'.json'))['settings']["default_"+model_dirs[i].split('_')[0]+"_features"]
-				os.chdir(load_dir)
-				jsonfiles, csvfiles=find_files(model_dirs[i])
-				make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, csvfiles, default_features_model, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
-	except:
-		print('error')
+			print('--> predicting %s'%(models_[j]))
+			os.chdir(models_[j])
+			os.chdir('model')
+			transformer, clf, modeltype, classes, modeldata = load_model(models_[j])
+			default_features_model=json.load(open(models_[j]+'.json'))['settings']["default_"+model_dirs[i].split('_')[0]+"_features"]
+			os.chdir(load_dir)
+			jsonfiles, csvfiles=find_files(model_dirs[i])
+			make_predictions(model_dirs[i], transformer, clf, modeltype, jsonfiles, csvfiles, default_features_model, classes, modeldata, model_dir+'/'+model_dirs[i]+'/'+models_[j])
+	# except:
+	#	print('error')

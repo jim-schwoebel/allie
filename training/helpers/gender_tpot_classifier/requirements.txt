@@ -29,7 +29,7 @@ cmd2==1.1.0
 colorama==0.4.3
 colorlog==4.0.2
 ConfigSpace==0.4.10
-cryptography==2.9.2
+cryptography==39.0.1
 ctgan==0.2.1
 cycler==0.10.0
 cymem==2.0.3
